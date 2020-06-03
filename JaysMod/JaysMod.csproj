@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATC.cs" />
     <Compile Include="Charter.cs" />
     <Compile Include="Drive.cs" />
     <Compile Include="JaysMod.cs" />

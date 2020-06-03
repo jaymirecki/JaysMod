@@ -230,6 +230,8 @@ namespace JaysMod
 
             UIMenuItem charterMenu = new UIMenuItem("Charter Flights (v0.1)");
             submenu.AddItem(charterMenu);
+            UIMenuItem atc = new UIMenuItem("ATC");
+            submenu.AddItem(atc);
             submenu.RefreshIndex();
 
             submenu.OnItemSelect += (sender, item, index) =>
@@ -259,6 +261,10 @@ namespace JaysMod
                         charter = null;
                         GTA.UI.Notification.Show("Charter Flights Deactivated");
                     }
+                }
+                else if (item == atc)
+                {
+                    ATC.Run();
                 }
             };
         }

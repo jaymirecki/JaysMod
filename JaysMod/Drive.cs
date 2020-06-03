@@ -29,17 +29,17 @@ namespace JaysMod
 
         public Drive()
         {
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "nimbus"), new PlaneSpeed { Taxi = 15, Ground = 100, Air = 607 });
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "volatol"), new PlaneSpeed { Taxi = 15, Ground = 100, Air = 150 });
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "titan"), new PlaneSpeed { Taxi = 15, Ground = 100, Air = 87 });
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "tula"), new PlaneSpeed { Taxi = 15, Ground = 100, Air = 110 });
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "pyro"), new PlaneSpeed { Taxi = 15, Ground = 100, Air = 150 });
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "besra"), new PlaneSpeed { Taxi = 10, Ground = 100, Air = 150 });
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "lazer"), new PlaneSpeed { Taxi = 10, Ground = 60, Air = 150 });
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "strikeforce"), new PlaneSpeed { Taxi = 10, Ground = 100, Air = 150 });
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "miljet"), new PlaneSpeed { Taxi = 10, Ground = 100, Air = 150 });
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "cuban800"), new PlaneSpeed { Taxi = 15, Ground = 70, Air = 150 });
-            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "hydra"), new PlaneSpeed { Taxi = 10, Ground = 60, Air = 150 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "nimbus"), new PlaneSpeed { Taxi = 20, Ground = 100, Air = 150 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "volatol"), new PlaneSpeed { Taxi = 20, Ground = 100, Air = 150 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "titan"), new PlaneSpeed { Taxi = 20, Ground = 100, Air = 87 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "tula"), new PlaneSpeed { Taxi = 20, Ground = 100, Air = 110 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "pyro"), new PlaneSpeed { Taxi = 20, Ground = 100, Air = 150 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "besra"), new PlaneSpeed { Taxi = 20, Ground = 100, Air = 150 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "lazer"), new PlaneSpeed { Taxi = 20, Ground = 60, Air = 150 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "strikeforce"), new PlaneSpeed { Taxi = 20, Ground = 100, Air = 150 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "miljet"), new PlaneSpeed { Taxi = 20, Ground = 100, Air = 150 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "cuban800"), new PlaneSpeed { Taxi = 20, Ground = 70, Air = 150 });
+            PlaneSpeeds.Add(Function.Call<int>(Hash.GET_HASH_KEY, "hydra"), new PlaneSpeed { Taxi = 20, Ground = 60, Air = 150 });
             Runways[(int)RunwayID.SSRA27] = new Runway
             {
                 Start = new Vector3(1554, 3210, 41),
@@ -101,6 +101,21 @@ namespace JaysMod
             GTA.UI.Notification.Show("Drive normal to " + destination.ToString());
             DriveToCoord(driver, vehicle, destination, speed, DrivingStyle.Normal);
             while (vehicle.Position.DistanceTo2D(destination) > 5) Yield();
+        }
+
+        public static void PlaneTaxi(Ped pilot, Vehicle plane, Vector3 destination)
+        {
+            while (plane.Position.DistanceTo2D(destination) > 30)
+            {
+                DriveToCoord(pilot, plane, destination, PlaneSpeeds[plane.Model.Hash].Taxi, DrivingStyle.Normal);
+                Yield();
+            }
+            JaysMod.Debug("Close Taxiing");
+            while (plane.Position.DistanceTo2D(destination) > 5)
+            {
+                DriveToCoord(pilot, plane, destination, PlaneSpeeds[plane.Model.Hash].Taxi / 2, DrivingStyle.Normal);
+                Yield();
+            }
         }
 
         public static void PlaneTakeoff(Ped pilot, Vehicle plane, RunwayID runwayID)
@@ -174,13 +189,13 @@ namespace JaysMod
             start.Z = start.Z + 30;
 
             KeyValuePair<Vector3, Vector3> approach = calculateApproach(runway.Start, runway.End);
-            GTA.UI.Screen.FadeOut(2000);
-            Wait(2000);
+            //GTA.UI.Screen.FadeOut(2000);
+            //Wait(2000);
             plane.Position = approach.Key;
             plane.Speed = 180;
             plane.Heading = runway.Heading;
             PlaneFlySlow(pilot, plane, approach.Value, 20f);
-            GTA.UI.Screen.FadeIn(2000);
+            //GTA.UI.Screen.FadeIn(2000);
             plane.LandingGearState = VehicleLandingGearState.Deploying;
             pilot.Task.LandPlane(runway.Start, runway.End, plane);
             while(plane.WheelSpeed == 0)
