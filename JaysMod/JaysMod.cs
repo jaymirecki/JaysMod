@@ -72,6 +72,9 @@ namespace JaysMod
             Outfits.setOutfits();
             
             GameLoaded = false;
+            new GTA.UI.ContainerElement(new PointF(), new SizeF(100, 100), Color.Black, true);
+
+            Script.InstantiateScript<HUD>();
 
             Tick += onTick;
             KeyDown += onKeyDown;
@@ -96,7 +99,6 @@ namespace JaysMod
                     World.CurrentDate = World.CurrentDate.AddMinutes(1);
                     Minutes = DateTime.Now.Minute;
                 }
-                Outfits.OnTick();
             }
             if (modMenuPool != null)
                 modMenuPool.ProcessMenus();

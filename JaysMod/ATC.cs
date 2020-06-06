@@ -31,8 +31,8 @@ namespace JaysMod
             taxi12 = new Vector3(1480.10f, 3122.45f, 41);
             taxi13 = new Vector3(1519.33f, 3133.06f, 41);
 
-            string model = "volatol";
-            plane1 = Maps.Functions.SpawnVehicle(model, taxi1, 314.79f, (int)VehicleColor.PureWhite, (int)VehicleColor.MatteDarkRed, 0);
+            string model = "cuban800";
+            plane1 = Maps.Functions.SpawnVehicle(model, taxi1, 314.79f, (int)VehicleColor.MatteWhite, (int)VehicleColor.MatteDarkRed, 0);
             //plane2 = Maps.Functions.SpawnVehicle(model, taxi2, 314.79f, 0, 0, 0);
             //plane3 = Maps.Functions.SpawnVehicle(model, taxi4, 30.035f, 0, 0, 0);
             //plane4 = Maps.Functions.SpawnVehicle(model, taxi6, 105.28f, 0, 0, 0);
@@ -43,12 +43,11 @@ namespace JaysMod
             //plane9 = Maps.Functions.SpawnVehicle(model, taxi11, 285.21f, 0, 0, 0);
             //plane10 = Maps.Functions.SpawnVehicle(model, taxi12, 285.21f, 0, 0, 0);
             //plane11 = Maps.Functions.SpawnVehicle(model, taxi13, 285.21f, 0, 0, 0);
-
-            pilot = Maps.Functions.SpawnPed("s_m_m_pilot_01", new Vector3(1536.25f, 3161.26f, 41), 0f);
         }
 
         static public void Run()
         {
+            pilot = Maps.Functions.SpawnPed("s_m_m_pilot_01", new Vector3(1536.25f, 3161.26f, 41), 0f);
             pilot.Task.WarpIntoVehicle(plane1, VehicleSeat.Driver);
             Game.Player.Character.Task.WarpIntoVehicle(plane1, VehicleSeat.Passenger);
             while (!pilot.IsSittingInVehicle()) Yield();

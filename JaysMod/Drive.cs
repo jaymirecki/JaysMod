@@ -90,6 +90,16 @@ namespace JaysMod
             };
         }
 
+        public static float ToMPH(float mps)
+        {
+            return mps / 0.44704f;
+        }
+
+        public static float ToMPS(float mph)
+        {
+            return mph * 0.44704f;
+        }
+
         public static void DriveToCoord(Ped driver, Vehicle vehicle, Vector3 destination, float speed, DrivingStyle drivingStyle)
         {
             Function.Call(Hash.TASK_VEHICLE_DRIVE_TO_COORD, driver, vehicle,
