@@ -4,11 +4,78 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GTA;
+using GTA.Native;
 
 namespace JaysMod
 {
-    static class Loadout
+    [ScriptAttributes(NoDefaultInstance = true)]
+    class Loadout : Script
     {
+        Ped Ped;
+        public Loadout()
+        {
+
+        }
+        public void FromIni(ScriptSettings ini, Ped ped)
+        {
+            Ped = ped;
+            WeaponCollection loadout = Ped.Weapons;
+            loadout.RemoveAll();
+            foreach (WeaponHash weapon in Enum.GetValues(typeof(WeaponHash)))
+            {
+                string name = Enum.GetName(typeof(WeaponHash), weapon);
+                if (ini.GetValue<bool>("Save", name, false))
+                {
+                    int ammo = ini.GetValue<int>("Save", name + "ammo", 0);
+                    var curr = loadout.Give(weapon, ammo, false, true);
+                    curr.Tint = (WeaponTint)ini.GetValue<int>("Save", name + "tint", 0);
+                    var components = curr.Components;
+
+                    if (weapon != WeaponHash.Unarmed && weapon != WeaponHash.Parachute)
+                    {
+
+                        for (int i = 0; i < components.ClipVariationsCount; i++)
+                            components.GetClipComponent(i).Active = ini.GetValue<bool>("Save", name + "clip" + i.ToString(), false);
+
+                        if (Loadout.HasFlashLight(weapon))
+                            components.GetFlashLightComponent().Active = ini.GetValue<bool>("Save", name + "light", false);
+
+                        for (int i = 0; i < components.ScopeVariationsCount; i++)
+                            components.GetScopeComponent(i).Active = ini.GetValue<bool>("Save", name + "scope" + i.ToString(), false);
+
+                        if (Loadout.HasSuppressor(weapon))
+                            components.GetSuppressorComponent().Active = ini.GetValue<bool>("Save", name + "suppressor", false);
+                    }
+                }
+            }
+        }
+        public void ToIni(ScriptSettings ini)
+        {
+            WeaponCollection loadout = Ped.Weapons;
+            foreach (WeaponHash weapon in Enum.GetValues(typeof(WeaponHash)))
+            {
+                if (loadout.HasWeapon(weapon))
+                {
+                    string name = Enum.GetName(typeof(WeaponHash), weapon);
+                    ini.SetValue<bool>("Save", name, true);
+                    ini.SetValue<int>("Save", name + "ammo", loadout[weapon].Ammo);
+                    ini.SetValue<int>("Save", name + "tint", (int)loadout[weapon].Tint);
+                    var components = loadout[weapon].Components;
+                    for (int i = 0; i < components.ClipVariationsCount; i++)
+                    {
+                        ini.SetValue<bool>("Save", name + "clip" + i.ToString(), components.GetClipComponent(i).Active);
+                    }
+                    if (Loadout.HasFlashLight(weapon))
+                        ini.SetValue<bool>("Save", name + "light", components.GetFlashLightComponent().Active);
+                    for (int i = 0; i < components.ScopeVariationsCount; i++)
+                        ini.SetValue<bool>("Save", name + "scope" + i.ToString(), components.GetScopeComponent(i).Active);
+                    if (Loadout.HasSuppressor(weapon))
+                        ini.SetValue<bool>("Save", name + "suppressor", components.GetSuppressorComponent().Active);
+                }
+                else
+                    ini.SetValue<bool>("Save", Enum.GetName(typeof(WeaponHash), weapon), false);
+            }
+        }
         public enum LoadoutID { Clean, LSPDPatrol, EchoAssault }
 
         public static void setLoadout(Ped ped, LoadoutID loadout)

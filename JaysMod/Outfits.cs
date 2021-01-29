@@ -7,14 +7,19 @@ using System.Threading.Tasks;
 using GTA;
 using GTA.Native;
 using NativeUI;
+using System.Diagnostics;
 
 namespace JaysMod
 {
-    static partial class Outfits
+    [ScriptAttributes(NoDefaultInstance = true)]
+    partial class Outfits : Script
     {
-        private static bool activated;
-        private static int currentHat, currentHatColor;
-        public enum OutfitID {Casual, Formal, Combat, Bike, Beach, Scuba, NavyAtEase, NavyCombat, PilotInformal, Extra}
+        public Ped Ped;
+        private int currentHat, currentHatColor;
+        public enum HeadOverlay { Blemishes = 0, FacialHair = 1, Eyebrows = 2 };
+        public enum OutfitComponent { Beard = 1, Hair = 2, Upper = 3, Lower = 4, Hands = 5, Shoes = 6, AccOne = 8, AccTwo = 9, Shirt = 11 };
+        public enum Prop { Hat = 0, Glasses = 1, Ears = 2, Watch = 3 };
+        public enum OutfitID { Casual, Formal, Combat, Bike, Beach, Scuba, NavyAtEase, NavyCombat, PilotInformal, TestPilot, Extra }
         private struct Outfit {
             public int Beard, BeardColor,
                 Hair, HairColor,
@@ -70,21 +75,147 @@ namespace JaysMod
         }
         public enum FatigueColor { Navy }
 
-        public static OutfitID CurrentOutfit;
+        public OutfitID CurrentOutfit;
 
-        private static Outfit[] AllOutfits;
+        private Outfit[] AllOutfits;
 
         private static int palette = 0;
 
-        public static void setOutfits()
+        public Outfits()
         {
             currentHat = -1;
             currentHatColor = 0;
-            AllOutfits = new Outfit[10];
+            AllOutfits = new Outfit[Enum.GetValues(typeof(OutfitID)).Length];
+            setOutfits(0, 0);
+        }
+        public void FromIni(ScriptSettings ini, Ped ped)
+        {
+            Ped = ped;
+            CurrentOutfit = ini.GetValue<OutfitID>("Save", "outfit", OutfitID.Casual);
+            JaysMod.Debug<OutfitID>(CurrentOutfit);
+            LoadOutfit(CurrentOutfit);
 
+            int beard = ini.GetValue<int>("Save", "beard", GetComponent(Ped, OutfitComponent.Beard));
+            int hair = ini.GetValue<int>("Save", "hair", GetComponent(Ped, OutfitComponent.Hair));
+            int upper = ini.GetValue<int>("Save", "upper", GetComponent(Ped, OutfitComponent.Upper));
+            int lower = ini.GetValue<int>("Save", "lower", GetComponent(Ped, OutfitComponent.Lower));
+            int hands = ini.GetValue<int>("Save", "hands", GetComponent(Ped, OutfitComponent.Hands));
+            int shoes = ini.GetValue<int>("Save", "shoes", GetComponent(Ped, OutfitComponent.Shoes));
+            int accone = ini.GetValue<int>("Save", "accone", GetComponent(Ped, OutfitComponent.AccOne));
+            int acctwo = ini.GetValue<int>("Save", "acctwo", GetComponent(Ped, OutfitComponent.AccTwo));
+            int shirt = ini.GetValue<int>("Save", "shirt", GetComponent(Ped, OutfitComponent.Shirt));
+            SetComponent(Ped, OutfitComponent.Beard, beard);
+            SetComponent(Ped, OutfitComponent.Hair, hair);
+            SetComponent(Ped, OutfitComponent.Upper, upper);
+            SetComponent(Ped, OutfitComponent.Lower, lower);
+            SetComponent(Ped, OutfitComponent.Hands, hands);
+            SetComponent(Ped, OutfitComponent.Shoes, shoes);
+            SetComponent(Ped, OutfitComponent.AccOne, accone);
+            SetComponent(Ped, OutfitComponent.AccTwo, acctwo);
+            SetComponent(Ped, OutfitComponent.Shirt, shirt);
+
+            int beardColor = ini.GetValue<int>("Save", "beardcolor", GetComponentColor(Ped, OutfitComponent.Beard));
+            int hairColor = ini.GetValue<int>("Save", "haircolor", GetComponentColor(Ped, OutfitComponent.Hair));
+            int upperColor = ini.GetValue<int>("Save", "uppercolor", GetComponentColor(Ped, OutfitComponent.Upper));
+            int lowerColor = ini.GetValue<int>("Save", "lowercolor", GetComponentColor(Ped, OutfitComponent.Lower));
+            int handsColor = ini.GetValue<int>("Save", "handscolor", GetComponentColor(Ped, OutfitComponent.Hands));
+            int shoesColor = ini.GetValue<int>("Save", "shoescolor", GetComponentColor(Ped, OutfitComponent.Shoes));
+            int accOneColor = ini.GetValue<int>("Save", "acconecolor", GetComponentColor(Ped, OutfitComponent.AccOne));
+            int accTwoColor = ini.GetValue<int>("Save", "acctwocolor", GetComponentColor(Ped, OutfitComponent.AccTwo));
+            int shirtColor = ini.GetValue<int>("Save", "shirtcolor", GetComponentColor(Ped, OutfitComponent.Shirt));
+            SetComponentColor(Ped, OutfitComponent.Beard, beardColor);
+            SetComponentColor(Ped, OutfitComponent.Hair, hairColor);
+            SetComponentColor(Ped, OutfitComponent.Upper, upperColor);
+            SetComponentColor(Ped, OutfitComponent.Lower, lowerColor);
+            SetComponentColor(Ped, OutfitComponent.Hands, handsColor);
+            SetComponentColor(Ped, OutfitComponent.Shoes, shoesColor);
+            SetComponentColor(Ped, OutfitComponent.AccOne, accOneColor);
+            SetComponentColor(Ped, OutfitComponent.AccTwo, accTwoColor);
+            SetComponentColor(Ped, OutfitComponent.Shirt, shirtColor);
+
+            setOutfits(hair, hairColor);
+
+            int hat = ini.GetValue<int>("Save", "hat", GetProp(Ped, Prop.Hat));
+            int glasses = ini.GetValue<int>("Save", "glasses", GetProp(Ped, Prop.Glasses));
+            int ears = ini.GetValue<int>("Save", "ears", GetProp(Ped, Prop.Ears));
+            int watch = ini.GetValue<int>("Save", "watch", GetProp(Ped, Prop.Watch));
+            SetProp(Ped, Prop.Hat, hat);
+            SetProp(Ped, Prop.Glasses, glasses);
+            SetProp(Ped, Prop.Ears, ears);
+            SetProp(Ped, Prop.Watch, watch);
+
+            int hatColor = ini.GetValue<int>("Save", "hatcolor", GetPropColor(Ped, Prop.Hat));
+            int glassesColor = ini.GetValue<int>("Save", "glassescolor", GetPropColor(Ped, Prop.Glasses));
+            int earsColor = ini.GetValue<int>("Save", "earscolor", GetPropColor(Ped, Prop.Ears));
+            int watchColor = ini.GetValue<int>("Save", "watchcolor", GetPropColor(Ped, Prop.Watch));
+            SetPropColor(Ped, Prop.Hat, hatColor);
+            SetPropColor(Ped, Prop.Glasses, glassesColor);
+            SetPropColor(Ped, Prop.Ears, earsColor);
+            SetPropColor(Ped, Prop.Watch, watchColor);
+
+            int color = 9;
+            SetOverlay(Ped, HeadOverlay.FacialHair, 10, color);
+            SetHair(Ped, 19, color);
+        }
+        public void ToIni(ScriptSettings ini)
+        {
+            ini.SetValue<int>("Save", "model", Ped.Model.Hash);
+            ini.SetValue<int>("Save", "beard", GetComponent(Ped, OutfitComponent.Beard));
+            ini.SetValue<int>("Save", "hair", GetComponent(Ped, OutfitComponent.Hair));
+            ini.SetValue<int>("Save", "upper", GetComponent(Ped, OutfitComponent.Upper));
+            ini.SetValue<int>("Save", "lower", GetComponent(Ped, OutfitComponent.Lower));
+            ini.SetValue<int>("Save", "hands", GetComponent(Ped, OutfitComponent.Hands));
+            ini.SetValue<int>("Save", "shoes", GetComponent(Ped, OutfitComponent.Shoes));
+            ini.SetValue<int>("Save", "accone", GetComponent(Ped, OutfitComponent.AccOne));
+            ini.SetValue<int>("Save", "acctwo", GetComponent(Ped, OutfitComponent.AccTwo));
+            ini.SetValue<int>("Save", "shirt", GetComponent(Ped, OutfitComponent.Shirt));
+
+            ini.SetValue<int>("Save", "beardcolor", GetComponentColor(Ped, OutfitComponent.Beard));
+            ini.SetValue<int>("Save", "haircolor", GetComponentColor(Ped, OutfitComponent.Hair));
+            ini.SetValue<int>("Save", "uppercolor", GetComponentColor(Ped, OutfitComponent.Upper));
+            ini.SetValue<int>("Save", "lowercolor", GetComponentColor(Ped, OutfitComponent.Lower));
+            ini.SetValue<int>("Save", "handscolor", GetComponentColor(Ped, OutfitComponent.Hands));
+            ini.SetValue<int>("Save", "shoescolor", GetComponentColor(Ped, OutfitComponent.Shoes));
+            ini.SetValue<int>("Save", "acconecolor", GetComponentColor(Ped, OutfitComponent.AccOne));
+            ini.SetValue<int>("Save", "acctwocolor", GetComponentColor(Ped, OutfitComponent.AccTwo));
+            ini.SetValue<int>("Save", "shirtcolor", GetComponentColor(Ped, OutfitComponent.Shirt));
+
+            ini.SetValue<int>("Save", "hat", GetProp(Ped, Prop.Hat));
+            ini.SetValue<int>("Save", "glasses", GetProp(Ped, Prop.Glasses));
+            ini.SetValue<int>("Save", "ears", GetProp(Ped, Prop.Ears));
+            ini.SetValue<int>("Save", "watch", GetProp(Ped, Prop.Watch));
+
+            ini.SetValue<int>("Save", "hatcolor", GetPropColor(Ped, Prop.Hat));
+            ini.SetValue<int>("Save", "glassescolor", GetPropColor(Ped, Prop.Glasses));
+            ini.SetValue<int>("Save", "earscolor", GetPropColor(Ped, Prop.Ears));
+            ini.SetValue<int>("Save", "watchcolor", GetPropColor(Ped, Prop.Watch));
+        }
+        public static void SetOverlay(Ped ped, HeadOverlay overlay, int index, int color)
+        {
+            Function.Call(Hash.SET_PED_HEAD_BLEND_DATA, ped.Handle, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, true);
+            Function.Call(Hash.SET_PED_HEAD_OVERLAY, ped.Handle, (int)overlay, index, 1f);
+            Function.Call(Hash._SET_PED_HEAD_OVERLAY_COLOR, ped.Handle, (int)overlay, 1, color, color);
+        }
+        public static void SetHair(Ped ped, int index, int color)
+        {
+            SetComponent(ped, OutfitComponent.Hair, index);
+            Function.Call(Hash._SET_PED_HAIR_COLOR, ped, color, color);
+        }
+        public static int GetOverlay(Ped ped, HeadOverlay overlay)
+        {
+            return Function.Call<int>(Hash._GET_PED_HEAD_OVERLAY_VALUE, ped, (int)overlay);
+        }
+        public void SetPed(Ped ped)
+        {
+            Ped = ped;
+            setOutfits(0, 0);
+        }
+
+        public void setOutfits(int hairIndex, int hairColor)
+        {
             Outfit casual = blankOutfit();
-            casual.Hair = 19;
-            casual.HairColor = 1;
+            casual.Hair = hairIndex;
+            casual.HairColor = hairColor;
             casual.Lower = 10;
             casual.Shoes = 1;
             casual.AccOne = 15;
@@ -95,8 +226,8 @@ namespace JaysMod
             AllOutfits[(int)OutfitID.Casual] = casual;
 
             Outfit formal = blankOutfit();
-            formal.Hair = 19;
-            formal.HairColor = 1;
+            formal.Hair = hairIndex;
+            formal.HairColor = hairColor;
             formal.Upper = 1;
             formal.Lower = 28;
             formal.LowerColor = 8;
@@ -122,8 +253,8 @@ namespace JaysMod
             AllOutfits[(int)OutfitID.Combat] = combat;
 
             Outfit bike = blankOutfit();
-            bike.Hair = 19;
-            bike.HairColor = 1;
+            bike.Hair = hairIndex;
+            bike.HairColor = hairColor;
             bike.Beard = 0;
             bike.Upper = 31;
             bike.Lower = 4;
@@ -147,8 +278,8 @@ namespace JaysMod
             AllOutfits[(int)OutfitID.Scuba] = scuba;
 
             Outfit beach = blankOutfit();
-            beach.Hair = 19;
-            beach.HairColor = 1;
+            beach.Hair = hairIndex;
+            beach.HairColor = hairColor;
             beach.Upper = 15;
             beach.Lower = 6;
             beach.LowerColor = 1;
@@ -158,8 +289,8 @@ namespace JaysMod
             AllOutfits[(int)OutfitID.Beach] = beach;
 
             Outfit navyAtEase = blankOutfit();
-            navyAtEase.Hair = 19;
-            navyAtEase.HairColor = 1;
+            navyAtEase.Hair = hairIndex;
+            navyAtEase.HairColor = hairColor;
             navyAtEase.Upper = 11;
             navyAtEase.Lower = 87;
             navyAtEase.Shoes = 35;
@@ -177,6 +308,21 @@ namespace JaysMod
             navyCombat.HatColor = 18;
             AllOutfits[(int)OutfitID.NavyCombat] = navyCombat;
 
+            Outfit testPilot = new Outfit();
+            testPilot.Beard = 122;
+            testPilot.Upper = 165;
+            testPilot.UpperColor = 3;
+            testPilot.Lower = 92;
+            testPilot.LowerColor = 1;
+            testPilot.Shoes = 87;
+            testPilot.ShoesColor = 3;
+            testPilot.AccOne = 15;
+            testPilot.Shirt = 228;
+            testPilot.ShirtColor = 1;
+            testPilot.Hat = 111;
+            testPilot.HatColor = 5;
+            AllOutfits[(int)OutfitID.TestPilot] = testPilot;
+
             Outfit pilotInformal = new Outfit(navyAtEase);
             pilotInformal.Lower = 10;
             pilotInformal.Shoes = 10;
@@ -187,40 +333,39 @@ namespace JaysMod
             AllOutfits[(int)OutfitID.PilotInformal] = pilotInformal;
             
             CurrentOutfit = OutfitID.Casual;
-            activated = false;
         }
 
-        public static void OnTick()
+        public void OnTick(object sender, EventArgs e)
         {
             Ped player = Game.Player.Character;
             if (CurrentOutfit == OutfitID.Scuba)
             {
-                if (GetAccOneComponent(player) != AllOutfits[(int)OutfitID.Scuba].AccOne)
+                if (GetComponent(player, OutfitComponent.AccOne) != AllOutfits[(int)OutfitID.Scuba].AccOne)
                 {
-                    SetAccOneComponent(player, AllOutfits[(int)OutfitID.Casual].AccOne);
-                    SetShoesComponent(player, AllOutfits[(int)OutfitID.Scuba].Shoes + 2);
+                    SetComponent(player, OutfitComponent.AccOne, AllOutfits[(int)OutfitID.Casual].AccOne);
+                    SetComponent(player, OutfitComponent.Shoes, AllOutfits[(int)OutfitID.Scuba].Shoes + 2);
                 }
             }
         }
 
-        public static void OnKeyDown(Keys k)
+        public void OnKeyDown(object sender, KeyEventArgs e)
         {
-            if (k == Keys.NumPad7)
+            if (e.KeyCode == Keys.NumPad7)
             {
                 RaiseLowerVisor();
             }
-            else if (k == Keys.NumPad8)
+            else if (e.KeyCode == Keys.NumPad8)
             {
                 AddRemoveHelmet();
             }
         }
 
-        public static void OutfitsMenu(UIMenu outfitMenu)
+        public void OutfitsMenu(UIMenu outfitMenu)
         {
 
             List<dynamic> outfitList = new List<dynamic>() {
                 "Casual", "Formal", "Combat", "Bike", "Beach", "Scuba",
-                "Navy, At Ease", "Navy, Combat", "Pilot, Informal" };
+                "Navy, At Ease", "Navy, Combat", "Pilot, Informal", "Test Pilot" };
             UIMenuListItem outfit = new UIMenuListItem("Outfit", outfitList, 0);
             outfitMenu.AddItem(outfit);
 
@@ -231,7 +376,7 @@ namespace JaysMod
             };
         }
 
-        public static void RaiseLowerVisor()
+        public void RaiseLowerVisor()
         {
             int helmet = Function.Call<int>(Hash.GET_PED_PROP_INDEX, Game.Player.Character, 0);
             int helmetColor = Function.Call<int>(Hash.GET_PED_PROP_TEXTURE_INDEX, Game.Player.Character, 0);
@@ -241,271 +386,84 @@ namespace JaysMod
                 case -1:
                     return;
                 case 70:
-                    SetHatProp(player, 52);
-                    SetHatPropColor(player, helmetColor);
+                    SetProp(player, Prop.Hat, 52);
+                    SetPropColor(player, Prop.Hat, helmetColor);
                     return;
                 case 52:
-                    SetHatProp(player, 70);
-                    SetHatPropColor(player, helmetColor);
+                    SetProp(player, Prop.Hat, 70);
+                    SetPropColor(player, Prop.Hat, helmetColor);
                     return;
                 case 91:
-                    Function.Call(Hash.SET_PED_PROP_INDEX,
-                            Game.Player.Character,
-                            0, 92, 5, 2);
+                    SetProp(player, Prop.Hat, 92);
+                    SetPropColor(player, Prop.Hat, helmetColor);
                     return;
                 case 92:
-                    Function.Call(Hash.SET_PED_PROP_INDEX,
-                            Game.Player.Character,
-                            0, 91, 5, 2);
+                    SetProp(player, Prop.Hat, 91);
+                    SetPropColor(player, Prop.Hat, helmetColor);
                     return;
                 case 116:
-                    Function.Call(Hash.SET_PED_PROP_INDEX,
-                            Game.Player.Character,
-                            0, 117, helmetColor, 2);
+                    SetProp(player, Prop.Hat, 117);
+                    SetPropColor(player, Prop.Hat, helmetColor);
                     Function.Call(Hash.SET_NIGHTVISION, false);
                     return;
                 case 117:
-                    Function.Call(Hash.SET_PED_PROP_INDEX,
-                            Game.Player.Character,
-                            0, 116, helmetColor, 2);
+                    SetProp(player, Prop.Hat, 116);
+                    SetPropColor(player, Prop.Hat, helmetColor);
                     Function.Call(Hash.SET_NIGHTVISION, true);
                     return;
             }
         }
 
-        public static void AddRemoveHelmet()
+        public void AddRemoveHelmet()
         {
-            int helmet = GetHatProp(Game.Player.Character);
+            int helmet = GetProp(Ped, Prop.Hat);
             if (helmet == -1) {
-                SetHatProp(Game.Player.Character, currentHat);
-                SetHatPropColor(Game.Player.Character, currentHatColor);
+                SetProp(Ped, Prop.Hat, currentHat);
+                SetPropColor(Ped, Prop.Hat, currentHatColor);
                 return;
             }
-            currentHat = GetHatProp(Game.Player.Character);
-            currentHatColor = GetHatPropColor(Game.Player.Character);
-            int glasses = Function.Call<int>(Hash.GET_PED_PROP_INDEX, Game.Player.Character, 1);
-            int ears = Function.Call<int>(Hash.GET_PED_PROP_INDEX, Game.Player.Character, 2);
-            int watch = Function.Call<int>(Hash.GET_PED_PROP_INDEX, Game.Player.Character, 3);
+            currentHat = GetProp(Ped, Prop.Hat);
+            currentHatColor = GetPropColor(Ped, Prop.Hat);
+            int glasses = GetProp(Ped, Prop.Glasses);
+            int ears = GetProp(Ped, Prop.Ears);
+            int watch = GetProp(Ped, Prop.Watch);
             // Clear props
             Function.Call(Hash.CLEAR_ALL_PED_PROPS,
-                    Game.Player.Character);
+                    Ped);
             Function.Call(Hash.SET_NIGHTVISION, false);
-            Function.Call(Hash.SET_PED_PROP_INDEX,
-                    Game.Player.Character, 1, glasses, 0, 2);
-            Function.Call(Hash.SET_PED_PROP_INDEX,
-                    Game.Player.Character, 2, ears, 0, 2);
-            Function.Call(Hash.SET_PED_PROP_INDEX,
-                    Game.Player.Character, 3, watch, 0, 2);
+            SetProp(Ped, Prop.Glasses, glasses);
+            SetProp(Ped, Prop.Ears, ears);
+            SetProp(Ped, Prop.Watch, watch);
             return;
-        }
-        
-        public static void LoadOutfit(OutfitID Outfit)
-        {
-            Ped player = Game.Player.Character;
-            LoadOutfit(player, Outfit);
-        }
-
-        private static void SetComponentAndColor(Ped ped, int componentId, int component, int color)
-        {
-            if (Function.Call<bool>(Hash.IS_PED_COMPONENT_VARIATION_VALID, ped, componentId, component, color, palette))
-                Function.Call(Hash.SET_PED_COMPONENT_VARIATION, ped, componentId, component, color, palette);
         }
 
         ///////////////////////////////////////////////////////////////////////
         //                      Set and Get Components                       //
         ///////////////////////////////////////////////////////////////////////
         #region
-
-        private static void SetComponent(Ped ped, int componentId, int component)
+        private static void SetComponentAndColor(Ped ped, OutfitComponent componentId, int component, int color)
         {
-            int color = Function.Call<int>(Hash.GET_PED_TEXTURE_VARIATION, ped, componentId);
+            if (Function.Call<bool>(Hash.IS_PED_COMPONENT_VARIATION_VALID, ped, (int)componentId, component, color, palette))
+                Function.Call(Hash.SET_PED_COMPONENT_VARIATION, ped, (int)componentId, component, color, palette);
+        }
+        private static void SetComponent(Ped ped, OutfitComponent componentId, int component)
+        {
+            int color = GetComponentColor(ped, componentId);
             SetComponentAndColor(ped, componentId, component, color);
         }
 
-        public static int GetBeardComponent(Ped ped)
+        private static int GetComponent(Ped ped, OutfitComponent componentId)
         {
-            int beard = Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, 1);
-            return beard;
+            return Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, (int)componentId);
         }
-
-        public static void SetBeardComponent(Ped ped, int component)
+        private static int GetComponentColor(Ped ped, OutfitComponent componentId)
         {
-            SetComponent(ped, 1, component);
+            return Function.Call<int>(Hash.GET_PED_TEXTURE_VARIATION, ped, (int)componentId);
         }
-
-        public static int GetHairComponent(Ped ped)
-        {
-            int hair = Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, 2);
-            return hair;
-        }
-
-        public static void SetHairComponent(Ped ped, int component)
-        {
-            SetComponent(ped, 2, component);
-        }
-
-        public static int GetUpperComponent(Ped ped)
-        {
-            int upper = Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, 3);
-            return upper;
-        }
-
-        public static void SetUpperComponent(Ped ped, int component)
-        {
-            SetComponent(ped, 3, component);
-        }
-
-        public static int GetLowerComponent(Ped ped)
-        {
-            int lower = Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, 4);
-            return lower;
-        }
-
-        public static void SetLowerComponent(Ped ped, int component)
-        {
-            SetComponent(ped, 4, component);
-        }
-
-        public static int GetHandsComponent(Ped ped)
-        {
-            int hands = Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, 5);
-            return hands;
-        }
-
-        public static void SetHandsComponent(Ped ped, int component)
-        {
-            SetComponent(ped, 5, component);
-        }
-
-        public static int GetShoesComponent(Ped ped)
-        {
-            int shoes = Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, 6);
-            return shoes;
-        }
-
-        public static void SetShoesComponent(Ped ped, int component)
-        {
-            SetComponent(ped, 6, component);
-        }
-
-        public static int GetAccOneComponent(Ped ped)
-        {
-            int acc = Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, 8);
-            return acc;
-        }
-
-        public static void SetAccOneComponent(Ped ped, int component)
-        {
-            SetComponent(ped, 8, component);
-        }
-
-        public static int GetAccTwoComponent(Ped ped)
-        {
-            int acc = Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, 9);
-            return acc;
-        }
-
-        public static void SetAccTwoComponent(Ped ped, int component)
-        {
-            SetComponent(ped, 9, component);
-        }
-
-        public static int GetShirtComponent(Ped ped)
-        {
-            int shirt = Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, 11);
-            return shirt;
-        }
-
-        public static void SetShirtComponent(Ped ped, int component)
-        {
-            SetComponent(ped, 11, component);
-        }
-        #endregion
-
-        ///////////////////////////////////////////////////////////////////////
-        //                        Component Colors                           //
-        ///////////////////////////////////////////////////////////////////////
-        #region
-        private static int GetComponentColor(Ped ped, int componentId)
-        {
-            return Function.Call<int>(Hash.GET_PED_TEXTURE_VARIATION, ped, componentId);
-        }
-        private static void SetComponentColor(Ped ped, int componentId, int color)
+        private static void SetComponentColor(Ped ped, OutfitComponent componentId, int color)
         {
             int component = Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, componentId);
             SetComponentAndColor(ped, componentId, component, color);
-        }
-        public static void SetBeardComponentColor(Ped ped, int color)
-        {
-            SetComponentColor(ped, 1, color);
-        }
-        public static int GetBeardComponentColor(Ped ped)
-        {
-            return GetComponentColor(ped, 1);
-        }
-        public static void SetHairComponentColor(Ped ped, int color)
-        {
-            SetComponentColor(ped, 2, color);
-        }
-        public static int GetHairComponentColor(Ped ped)
-        {
-            return GetComponentColor(ped, 2);
-        }
-        public static void SetUpperComponentColor(Ped ped, int color)
-        {
-            SetComponentColor(ped, 3, color);
-        }
-        public static int GetUpperComponentColor(Ped ped)
-        {
-            return GetComponentColor(ped, 3);
-        }
-        public static void SetLowerComponentColor(Ped ped, int color)
-        {
-            SetComponentColor(ped, 4, color);
-        }
-        public static int GetLowerComponentColor(Ped ped)
-        {
-            return GetComponentColor(ped, 4);
-        }
-        public static void SetHandsComponentColor(Ped ped, int color)
-        {
-            SetComponentColor(ped, 5, color);
-        }
-        public static int GetHandsComponentColor(Ped ped)
-        {
-            return GetComponentColor(ped, 5);
-        }
-        public static void SetShoesComponentColor(Ped ped, int color)
-        {
-            SetComponentColor(ped, 6, color);
-        }
-        public static int GetShoesComponentColor(Ped ped)
-        {
-            return GetComponentColor(ped, 6);
-        }
-        public static void SetAccOneComponentColor(Ped ped, int color)
-        {
-            SetComponentColor(ped, 8, color);
-        }
-        public static int GetAccOneComponentColor(Ped ped)
-        {
-            return GetComponentColor(ped, 8);
-        }
-        public static void SetAccTwoComponentColor(Ped ped, int color)
-        {
-            SetComponentColor(ped, 9, color);
-        }
-        public static int GetAccTwoComponentColor(Ped ped)
-        {
-            return GetComponentColor(ped, 9);
-        }
-        public static void SetShirtComponentColor(Ped ped, int color)
-        {
-            SetComponentColor(ped, 11, color);
-        }
-        public static int GetShirtComponentColor(Ped ped)
-        {
-            return GetComponentColor(ped, 11);
         }
         #endregion
 
@@ -513,142 +471,76 @@ namespace JaysMod
         //                        Set and Get Props                          //
         ///////////////////////////////////////////////////////////////////////
         #region
-        private static void SetPropAndColor(Ped ped, int propId, int prop, int color)
+        private static void SetPropAndColor(Ped ped, Prop propId, int propIndex, int color)
         {
             Function.Call(Hash.SET_PED_PROP_INDEX,
-                    ped, propId, prop, color, 0);
+                    ped, (int)propId, propIndex, color, 0);
         }
-        private static int GetProp(Ped ped, int propId)
+        private static int GetProp(Ped ped, Prop propId)
         {
-            return Function.Call<int>(Hash.GET_PED_PROP_INDEX, ped, propId);
+            return Function.Call<int>(Hash.GET_PED_PROP_INDEX, ped, (int)propId);
         }
-        private static int GetPropColor(Ped ped, int propId)
+        private static int GetPropColor(Ped ped, Prop propId)
         {
-            int color = Function.Call<int>(Hash.GET_PED_PROP_TEXTURE_INDEX, ped, propId);
+            int color = Function.Call<int>(Hash.GET_PED_PROP_TEXTURE_INDEX, ped, (int)propId);
             return Math.Max(color, 0);
         }
-        private static void SetProp(Ped ped, int propId, int prop)
+        private static void SetProp(Ped ped, Prop propId, int propIndex)
         {
-            SetPropAndColor(ped, propId, prop, GetPropColor(ped, propId));
+            SetPropAndColor(ped, propId, propIndex, GetPropColor(ped, propId));
         }
-        private static void SetPropColor(Ped ped, int propId, int color)
+        private static void SetPropColor(Ped ped, Prop propId, int color)
         {
             SetPropAndColor(ped, propId, GetProp(ped, propId), color);
         }
-        public static void SetHatProp(Ped ped, int prop)
-        {
-            SetProp(ped, 0, prop);
-        }
-        public static int GetHatProp(Ped ped)
-        {
-            return GetProp(ped, 0);
-        }
-        public static void SetHatPropColor(Ped ped, int color)
-        {
-            SetPropColor(ped, 0, color);
-        }
-        public static int GetHatPropColor(Ped ped)
-        {
-            return GetPropColor(ped, 0);
-        }
-        public static void SetGlassesProp(Ped ped, int prop)
-        {
-            SetProp(ped, 1, prop);
-        }
-        public static int GetGlassesProp(Ped ped)
-        {
-            return GetProp(ped, 1);
-        }
-        public static void SetGlassesPropColor(Ped ped, int color)
-        {
-            SetPropColor(ped, 1, color);
-        }
-        public static int GetGlassesPropColor(Ped ped)
-        {
-            return GetPropColor(ped, 1);
-        }
-        public static void SetEarProp(Ped ped, int prop)
-        {
-            SetProp(ped, 2, prop);
-        }
-        public static int GetEarProp(Ped ped)
-        {
-            return GetProp(ped, 2);
-        }
-        public static void SetEarPropColor(Ped ped, int color)
-        {
-            SetPropColor(ped, 2, color);
-        }
-        public static int GetEarPropColor(Ped ped)
-        {
-            return GetPropColor(ped, 2);
-        }
-        public static void SetWatchProp(Ped ped, int prop)
-        {
-            SetProp(ped, 3, prop);
-        }
-        public static int GetWatchProp(Ped ped)
-        {
-            return GetProp(ped, 3);
-        }
-        public static void SetWatchPropColor(Ped ped, int color)
-        {
-            SetPropColor(ped, 3, color);
-        }
-        public static int GetWatchPropColor(Ped ped)
-        {
-            return GetPropColor(ped, 3);
-        }
         #endregion
 
-        public static void LoadOutfit(Ped ped, OutfitID Outfit) {
+        public void LoadOutfit(OutfitID Outfit) {
             CurrentOutfit = Outfit;
             Outfit outfit = AllOutfits[(int)CurrentOutfit];
             // Beard
             Function.Call(Hash.SET_PED_COMPONENT_VARIATION,
-                        ped, 1, outfit.Beard, outfit.BeardColor, 2);
+                        Ped, 1, outfit.Beard, outfit.BeardColor, 2);
             // Hair
             Function.Call(Hash.SET_PED_COMPONENT_VARIATION,
-                        ped, 2, outfit.Hair, outfit.HairColor, 2);
+                        Ped, 2, outfit.Hair, outfit.HairColor, 2);
             // Upper
             Function.Call(Hash.SET_PED_COMPONENT_VARIATION,
-                        ped, 3, outfit.Upper, outfit.UpperColor, 2);
+                        Ped, 3, outfit.Upper, outfit.UpperColor, 2);
             // Lower
             Function.Call(Hash.SET_PED_COMPONENT_VARIATION,
-                        ped, 4, outfit.Lower, outfit.LowerColor, 2);
+                        Ped, 4, outfit.Lower, outfit.LowerColor, 2);
             // Hands
             Function.Call(Hash.SET_PED_COMPONENT_VARIATION,
-                        ped, 5, outfit.Hands, outfit.HandsColor, 2);
+                        Ped, 5, outfit.Hands, outfit.HandsColor, 2);
             // Shoes
             Function.Call(Hash.SET_PED_COMPONENT_VARIATION,
-                        ped, 6, outfit.Shoes, outfit.ShoesColor, 2);
+                        Ped, 6, outfit.Shoes, outfit.ShoesColor, 2);
             // AccOne
             Function.Call(Hash.SET_PED_COMPONENT_VARIATION,
-                        ped, 8, outfit.AccOne, outfit.AccOneColor, 2);
+                        Ped, 8, outfit.AccOne, outfit.AccOneColor, 2);
             // AccTwo
             Function.Call(Hash.SET_PED_COMPONENT_VARIATION,
-                        ped, 9, outfit.AccTwo, outfit.AccTwoColor, 2);
+                        Ped, 9, outfit.AccTwo, outfit.AccTwoColor, 2);
             // Shirt
             Function.Call(Hash.SET_PED_COMPONENT_VARIATION,
-                        ped, 11, outfit.Shirt, outfit.ShirtColor, 2);
+                        Ped, 11, outfit.Shirt, outfit.ShirtColor, 2);
             // Clear props
             Function.Call(Hash.CLEAR_ALL_PED_PROPS,
-                    ped);
+                    Ped);
             Function.Call(Hash.SET_NIGHTVISION, false);
             // Hat
             Function.Call(Hash.SET_PED_PROP_INDEX,
-                    ped, 0, outfit.Hat, outfit.HatColor, 2);
+                    Ped, 0, outfit.Hat, outfit.HatColor, 2);
             // Glasses
             Function.Call(Hash.SET_PED_PROP_INDEX,
-                    ped, 1, outfit.Glasses, outfit.GlassesColor, 2);
+                    Ped, 1, outfit.Glasses, outfit.GlassesColor, 2);
             // Ears
             Function.Call(Hash.SET_PED_PROP_INDEX,
-                    ped, 2, outfit.Ears, outfit.EarsColor, 2);
+                    Ped, 2, outfit.Ears, outfit.EarsColor, 2);
             // Watch
             Function.Call(Hash.SET_PED_PROP_INDEX,
-                    ped, 3, outfit.Watch, outfit.WatchColor, 2);
-
-            activated = true;
+                    Ped, 3, outfit.Watch, outfit.WatchColor, 2);
         }
     }
 }

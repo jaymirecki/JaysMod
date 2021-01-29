@@ -102,7 +102,7 @@ namespace JaysMod
 
         public static void DriveToCoord(Ped driver, Vehicle vehicle, Vector3 destination, float speed, DrivingStyle drivingStyle)
         {
-            Function.Call(Hash.TASK_VEHICLE_DRIVE_TO_COORD, driver, vehicle,
+            Function.Call(Hash.TASK_VEHICLE_DRIVE_TO_COORD, driver, vehicle.BaseVehicle,
                           destination.X, destination.Y, destination.Z, speed * 0.44704f, 5f, vehicle.GetHashCode(), drivingStyle, 1f, true);
         }
 
@@ -187,7 +187,7 @@ namespace JaysMod
         {
             Vector3 destination = new Vector3(-7000, 600, 2250);
             float speed = 500;
-            Function.Call(Hash.TASK_VEHICLE_DRIVE_TO_COORD, pilot, plane, destination.X, destination.Y, destination.Z, speed * 0.44704f, 5f, plane.GetHashCode(), 16777216, 1f, true);
+            Function.Call(Hash.TASK_VEHICLE_DRIVE_TO_COORD, pilot, plane.BaseVehicle, destination.X, destination.Y, destination.Z, speed * 0.44704f, 5f, plane.GetHashCode(), 16777216, 1f, true);
             while (plane.Position.DistanceTo(destination) > 25f) Wait(100);
         }
 

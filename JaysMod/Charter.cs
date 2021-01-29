@@ -74,7 +74,7 @@ namespace JaysMod
             Drive.PlaneLand(pilot, plane, destination);
 
             // Taxi
-            pilot.Task.LeaveVehicle(plane, false);
+            pilot.Task.LeaveVehicle(plane.BaseVehicle, false);
             while (plane.Speed > 0) Yield();
             plane.IsTaxiLightOn = false;
             plane.IsEngineRunning = false;
@@ -86,15 +86,15 @@ namespace JaysMod
         {
             Ped player = Game.Player.Character;
 
-            while (!player.IsInVehicle(plane))
+            while (!player.IsInVehicle(plane.BaseVehicle))
                 Yield();
-            player.Task.WarpIntoVehicle(plane, VehicleSeat.ExtraSeat4);
+            player.Task.WarpIntoVehicle(plane.BaseVehicle, VehicleSeat.ExtraSeat4);
             Wait(1000);
-            pilot.Task.EnterVehicle(plane, VehicleSeat.Driver);
-            while (!pilot.IsInVehicle(plane)) Yield();
+            pilot.Task.EnterVehicle(plane.BaseVehicle, VehicleSeat.Driver);
+            while (!pilot.IsInVehicle(plane.BaseVehicle)) Yield();
             plane.Doors[VehicleDoorIndex.FrontLeftDoor].Close();
             plane.IsTaxiLightOn = true;
-            Function.Call(Hash._SET_VEHICLE_DESIRED_VERTICAL_FLIGHT_PHASE, plane, 0);
+            Function.Call(Hash._SET_VEHICLE_DESIRED_VERTICAL_FLIGHT_PHASE, plane.BaseVehicle, 0);
             plane.IsEngineRunning = true;
             Wait(5000);
         }
@@ -116,7 +116,7 @@ namespace JaysMod
             Ped player = GTA.Game.Player.Character;
             if (e.KeyCode == Keys.G && player.Position.DistanceTo(pilot.Position) < 5f)
             {
-                player.Task.EnterVehicle(plane, VehicleSeat.ExtraSeat4, 5000, 1f, EnterVehicleFlags.None);
+                player.Task.EnterVehicle(plane.BaseVehicle, VehicleSeat.ExtraSeat4, 5000, 1f, EnterVehicleFlags.None);
                 charter(RunwayID.LSIA30);
             }
         }
@@ -136,13 +136,13 @@ namespace JaysMod
             if (pilot != null)
                 Maps.Functions.DeletePed(pilot);
             if (plane != null)
-                Maps.Functions.DeleteVehicle(plane);
+                Maps.Functions.DeleteVehicle(plane.BaseVehicle);
         }
 
         private bool canAsk()
         {
             Ped player = Game.Player.Character;
-            return !asked && player.Position.DistanceTo(pilot.Position) < 5f && !player.IsInVehicle() && !pilot.IsInVehicle(plane);
+            return !asked && player.Position.DistanceTo(pilot.Position) < 5f && !player.IsInVehicle() && !pilot.IsInVehicle(plane.BaseVehicle);
         }
 
     }

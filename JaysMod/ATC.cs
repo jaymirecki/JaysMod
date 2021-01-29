@@ -32,7 +32,7 @@ namespace JaysMod
             taxi13 = new Vector3(1519.33f, 3133.06f, 41);
 
             string model = "cuban800";
-            plane1 = Maps.Functions.SpawnVehicle(model, taxi1, 314.79f, (int)VehicleColor.MatteWhite, (int)VehicleColor.MatteDarkRed, 0);
+            plane1 = (Vehicle)Maps.Functions.SpawnVehicle(model, taxi1, 314.79f, (int)VehicleColor.MatteWhite, (int)VehicleColor.MatteDarkRed, 0);
             //plane2 = Maps.Functions.SpawnVehicle(model, taxi2, 314.79f, 0, 0, 0);
             //plane3 = Maps.Functions.SpawnVehicle(model, taxi4, 30.035f, 0, 0, 0);
             //plane4 = Maps.Functions.SpawnVehicle(model, taxi6, 105.28f, 0, 0, 0);

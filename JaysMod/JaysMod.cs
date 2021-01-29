@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 using GTA;
 using GTA.Native;
 using GTA.Math;
@@ -12,72 +8,69 @@ using NativeUI;
 
 namespace JaysMod
 {
+    [ScriptAttributes(NoDefaultInstance = true)]
     public partial class JaysMod : Script
     {
         private MenuPool modMenuPool;
-        private UIMenu mainMenu;
+        private UIMenu planeMenu;
+
         private Dictionary<Vehicle, bool> sirens;
         private ScriptSettings ini;
 
-        private int OriginalModel;
-        private Vector3 OriginalPosition;
-        private float OriginalHeading;
-        private DateTime OriginalDateTime;
-
-        Charter charter;
+        private HUD hud;
+        private Charter charter;
+        private Outfits playerOutfit;
+        private Vehicle playerPlane;
+        private Loadout playerLoadout;
         
         private int Minutes;
-
-        private bool GameLoaded;
 
         private static bool DEBUG = true;
 
         public JaysMod()
         {
-            World.PauseClock(false);
-            sirens = new Dictionary<Vehicle, bool>();
-            setupIni();
-
-            //GTA.UI.Screen.ShowHelpTextThisFrame("Starting");
+            //World.PauseClock(false);
             modMenuPool = new MenuPool();
-            mainMenu = new UIMenu("Jay's Mod", "SELECT AN OPTION");
-            modMenuPool.Add(mainMenu);
-            UIMenuItem save = new UIMenuItem("Save Game");
-            UIMenuItem load = new UIMenuItem("Load Game");
-            UIMenuItem quit = new UIMenuItem("Quit Game");
-            mainMenu.AddItem(save);
-            mainMenu.AddItem(load);
-            mainMenu.AddItem(quit);
-            mainMenu.OnItemSelect += (sender, item, index) =>
-            {
-                if (item == save)
-                    SaveGame();
-                else if (item == load)
-                {
-                    if (!GameLoaded)
-                    {
-                        OriginalModel = Game.Player.Character.Model.Hash;
-                        OriginalPosition = Game.Player.Character.Position;
-                        OriginalHeading = Game.Player.Character.Heading;
-                        OriginalDateTime = World.CurrentDate;
-                    }
-                    LoadGame();
-                }
-                else if (item == quit)
-                    QuitGame();
-            };
-            Modules();
-            Debug();
-            mainMenu.RefreshIndex();
-            Outfits.setOutfits();
-            
-            GameLoaded = false;
-            new GTA.UI.ContainerElement(new PointF(), new SizeF(100, 100), Color.Black, true);
+            sirens = new Dictionary<Vehicle, bool>();
 
-            Script.InstantiateScript<HUD>();
+            hud = Script.InstantiateScript<HUD>();
+            playerOutfit = InstantiateScript<Outfits>();
+            playerLoadout = InstantiateScript<Loadout>();
+
+            //charter = InstantiateScript<Charter>();
+            //playerOutfit = InstantiateScript<Outfits>();
+            //playerOutfit.SetPed(Game.Player.Character);
+            //playerPlane = null;
 
             Tick += onTick;
             KeyDown += onKeyDown;
+        }
+
+        public void Load()
+        {
+            setupIni();
+            LoadGame();
+        }
+
+        public void Unload()
+        {
+            hud.Abort();
+            hud = null;
+
+            //charter.Abort();
+            //charter = null;
+
+            //playerOutfit.Abort();
+            //playerOutfit = null;
+
+            //Maps.Functions.DeleteVehicle(playerPlane);
+            //playerPlane = null;
+
+            World.PauseClock(false);
+        }
+        public void Save()
+        {
+            SaveGame();
         }
 
         public static void Debug(string message)
@@ -92,27 +85,21 @@ namespace JaysMod
 
         void onTick(object sender, EventArgs e)
         {
-            if (GameLoaded)
+            Ped player = Game.Player.Character;
+            if (DateTime.Now.Minute != Minutes)
             {
-                if (DateTime.Now.Minute != Minutes)
-                {
-                    World.CurrentDate = World.CurrentDate.AddMinutes(1);
-                    Minutes = DateTime.Now.Minute;
-                }
+                World.CurrentDate = World.CurrentDate.AddMinutes(1);
+                Minutes = DateTime.Now.Minute;
             }
             if (modMenuPool != null)
                 modMenuPool.ProcessMenus();
-            if ((Game.Player.IsDead || Game.Player.Character.Health == 0) &&
-                Game.Player.Character.Model.Hash != Function.Call<int>(Hash.GET_HASH_KEY, "player_zero") &&
-                Game.Player.Character.Model.Hash != Function.Call<int>(Hash.GET_HASH_KEY, "player_one") &&
-                Game.Player.Character.Model.Hash != Function.Call<int>(Hash.GET_HASH_KEY, "player_two"))
+            if ((Game.Player.IsDead || player.Health == 0 || player.IsDead))
             {
                 Respawn();
             }
         }
         private void Respawn()
         {
-            DateTime time = World.CurrentDate;
             // Prevent default death behavior
             Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "respawn_controller");
             Ped playerPed = Game.Player.Character;
@@ -125,7 +112,7 @@ namespace JaysMod
             // Custom death behavior
             Function.Call(Hash._RESET_LOCALPLAYER_STATE);
             Function.Call(Hash.RESET_PLAYER_ARREST_STATE, playerPed);
-            playerPed.Ragdoll();
+            //playerPed.Ragdoll();
             Wait(5000);
 
             // Fade and respawn
@@ -136,45 +123,31 @@ namespace JaysMod
             Function.Call(Hash.DISPLAY_HUD, true);
             Function.Call(Hash.DISPLAY_RADAR, true);
             GTA.Game.TimeScale = 1f;
-            if (GameLoaded)
-                LoadGame();
-            else
-                World.CurrentDate = time;
+            LoadGame();
             Wait(2000);
             playerPed.IsInvincible = false;
             GTA.UI.Screen.FadeIn(2000);
         }
-        private void QuitGame()
-        {
-            LoadModel(OriginalModel);
-            Game.Player.Character.Position = OriginalPosition;
-            Game.Player.Character.Heading = OriginalHeading;
-            World.CurrentDate = OriginalDateTime;
-            GameLoaded = false;
-            World.PauseClock(false);
-        }
         private void setupIni()
         {
-            const string nodefstr = "nodef3490457439";
-            const int nodefint = 439579345;
             ini = ScriptSettings.Load("JaysMod.ini");
 
-            if (ini.GetValue<string>("General", "name", nodefstr) == nodefstr)
-                ini.SetValue<string>("General", "name", "player");
-            if (ini.GetValue<int>("General", "funds", nodefint) == nodefint)
-                ini.SetValue<int>("General", "funds", 0);
-            if (ini.GetValue<int>("General", "outfit", nodefint) == nodefint)
-                ini.SetValue<int>("General", "outfit", (int)Outfits.OutfitID.Casual);
+            //if (ini.GetValue<string>("General", "name", nodefstr) == nodefstr)
+            //    ini.SetValue<string>("General", "name", "player");
+            //if (ini.GetValue<int>("General", "funds", nodefint) == nodefint)
+            //    ini.SetValue<int>("General", "funds", 0);
+            //if (ini.GetValue<int>("General", "outfit", nodefint) == nodefint)
+            //    ini.SetValue<int>("General", "outfit", (int)Outfits.OutfitID.Casual);
 
             ini.Save();
         }
 
-        void LoadModel(string ModelName) {
+        public static void LoadModel(string ModelName) {
             int modelHash = Function.Call<int>(Hash.GET_HASH_KEY, ModelName);
             LoadModel(modelHash);
         }
 
-        void LoadModel(int ModelHash)
+        public static void LoadModel(int ModelHash)
         {
             var characterModel = new Model(ModelHash);
             characterModel.Request(500);
@@ -192,15 +165,12 @@ namespace JaysMod
 
         void onKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F5 && !modMenuPool.IsAnyMenuOpen())
-                mainMenu.Visible = !mainMenu.Visible;
-            else if (e.KeyCode == Keys.F5)
-                modMenuPool.CloseAllMenus();
-            else if (e.KeyCode == Keys.J)
+            Ped player = Game.Player.Character;
+            if (e.KeyCode == Keys.J)
             {
-                if (Game.Player.Character.IsInVehicle())
+                if (player.IsInVehicle())
                 {
-                    Vehicle vehicle = Game.Player.Character.CurrentVehicle;
+                    Vehicle vehicle = new Vehicle(player.CurrentVehicle);
                     if (vehicle.HasSiren && sirens.ContainsKey(vehicle))
                     {
                         bool silent;
@@ -217,66 +187,64 @@ namespace JaysMod
                     }
                 }
             }
-            else
+            else if (e.KeyCode == Keys.E)
             {
-                Outfits.OnKeyDown(e.KeyCode);
+                if (player.IsInVehicle() && 
+                    player.CurrentVehicle == playerPlane.BaseVehicle && 
+                    !modMenuPool.IsAnyMenuOpen())
+                {
+                    planeMenu.Visible = true;
+                }
             }
         }
 
-        void Modules()
-        {
-            UIMenu submenu = modMenuPool.AddSubMenu(mainMenu, "Modules");
+        //void Modules()
+        //{
+        //    UIMenu submenu = modMenuPool.AddSubMenu(mainMenu, "Modules");
 
-            OutfitsMenu(submenu);
-            LoadoutsMenu(submenu);
+        //    //OutfitsMenu(submenu);
+        //    LoadoutsMenu(submenu);
 
-            UIMenuItem charterMenu = new UIMenuItem("Charter Flights (v0.1)");
-            submenu.AddItem(charterMenu);
-            UIMenuItem atc = new UIMenuItem("ATC");
-            submenu.AddItem(atc);
-            submenu.RefreshIndex();
+        //    UIMenuItem charterMenu = new UIMenuItem("Charter Flights (v0.1)");
+        //    submenu.AddItem(charterMenu);
+        //    UIMenuItem atc = new UIMenuItem("ATC");
+        //    submenu.AddItem(atc);
+        //    submenu.RefreshIndex();
 
-            submenu.OnItemSelect += (sender, item, index) =>
-            {
-                if (item == charterMenu) {
-                    if (charter == null) {
-                        float pilot_heading = 43.63f;
-                        float plane_heading = 315.443f;
-                        Vector3 pilot_spawn = new Vector3(1503.31f, 3104.58f, 41f);
-                        Vector3 plane_spawn = new Vector3(1500.399f, 3099.608f, 42.69702f);
-                        Ped pilot = Maps.Functions.SpawnPed("s_m_m_pilot_01", pilot_spawn, pilot_heading);
-                        Vehicle plane = Maps.Functions.SpawnVehicle("nimbus", plane_spawn, plane_heading, 112, 40, -1);
-                        while(!plane.Exists() || !pilot.Exists())
-                        {
-                            Debug("not loaded");
-                            Yield();
-                        }
-                        Debug(plane.Position);
-                        Debug(pilot.Position);
-                        //new Charter();
-                        charter = InstantiateScript<Charter>();
-                        charter.Load(plane, pilot);
-                        GTA.UI.Notification.Show("Charter Flights Activated");
-                    } else {
-                        charter.Unload();
-                        charter.Abort();
-                        charter = null;
-                        GTA.UI.Notification.Show("Charter Flights Deactivated");
-                    }
-                }
-                else if (item == atc)
-                {
-                    ATC.Run();
-                }
-            };
-        }
-
-        void OutfitsMenu(UIMenu submenu)
-        {
-            UIMenu outfitMenu = modMenuPool.AddSubMenu(submenu, "Outfits");
-
-            Outfits.OutfitsMenu(outfitMenu);
-        }
+        //    submenu.OnItemSelect += (sender, item, index) =>
+        //    {
+        //        if (item == charterMenu) {
+        //            if (charter == null) {
+        //                float pilot_heading = 43.63f;
+        //                float plane_heading = 315.443f;
+        //                Vector3 pilot_spawn = new Vector3(1503.31f, 3104.58f, 41f);
+        //                Vector3 plane_spawn = new Vector3(1500.399f, 3099.608f, 42.69702f);
+        //                Ped pilot = Maps.Functions.SpawnPed("s_m_m_pilot_01", pilot_spawn, pilot_heading);
+        //                Vehicle plane = Maps.Functions.SpawnVehicle("nimbus", plane_spawn, plane_heading, 112, 40, -1);
+        //                while(!plane.Exists() || !pilot.Exists())
+        //                {
+        //                    Debug("not loaded");
+        //                    Yield();
+        //                }
+        //                Debug(plane.Position);
+        //                Debug(pilot.Position);
+        //                //new Charter();
+        //                charter = InstantiateScript<Charter>();
+        //                charter.Load(plane, pilot);
+        //                GTA.UI.Notification.Show("Charter Flights Activated");
+        //            } else {
+        //                charter.Unload();
+        //                charter.Abort();
+        //                charter = null;
+        //                GTA.UI.Notification.Show("Charter Flights Deactivated");
+        //            }
+        //        }
+        //        else if (item == atc)
+        //        {
+        //            ATC.Run();
+        //        }
+        //    };
+        //}
 
         void LoadoutsMenu(UIMenu submenu)
         {
@@ -310,26 +278,14 @@ namespace JaysMod
             };
         }
 
-        void Debug()
+        void createPlaneMenu()
         {
-            UIMenu submenu = modMenuPool.AddSubMenu(mainMenu, "Debug");
-            UIMenuItem currPos = new UIMenuItem("Current Position");
-            submenu.AddItem(currPos);
-            UIMenuItem vehPos = new UIMenuItem("Vehicle Position");
-            submenu.AddItem(vehPos);
-            UIMenuItem vehName = new UIMenuItem("Vehicle Model Name");
-            submenu.AddItem(vehName);
-            submenu.RefreshIndex();
+            planeMenu = new UIMenu("Private Plane", "SELECT AN OPTION");
 
-            submenu.OnItemSelect += (sender, item, index) =>
-            {
-                if (item == currPos)
-                    GTA.UI.Screen.ShowHelpTextThisFrame("Current Position: " + Game.Player.Character.Position.ToString() + " H:" + Game.Player.Character.Heading.ToString());
-                else if (item == vehPos)
-                    GTA.UI.Screen.ShowHelpTextThisFrame("Vehicle Position: " + Game.Player.Character.CurrentVehicle.Position.ToString() + " H:" + Game.Player.Character.CurrentVehicle.Heading.ToString());
-                else if (item == vehName)
-                    GTA.UI.Screen.ShowHelpTextThisFrame("Vehicle Name: " + Game.Player.Character.CurrentVehicle.Model.ToString());
-            };
+            UIMenu outfitMenu = modMenuPool.AddSubMenu(planeMenu, "Outfits");
+            playerOutfit.OutfitsMenu(outfitMenu);
+
+            modMenuPool.Add(planeMenu);
         }
     }
 }
