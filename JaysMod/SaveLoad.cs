@@ -35,10 +35,10 @@ namespace JaysMod
             playerOutfit.FromIni(ini, Game.Player.Character);
             playerLoadout.FromIni(ini, Game.Player.Character);
 
-            //playerPlane = Maps.Functions.SpawnVehicle("nimbus", new Vector3(1506, 3107, 41), 318, (int)VehicleColor.MatteWhite, (int)VehicleColor.MatteDarkRed, 0);
-            //Blip blip = playerPlane.AddBlip();
-            //blip.Sprite = BlipSprite.Plane;
-            //blip.Name = "Private Plane";
+            playerPlane = Maps.Functions.SpawnVehicle("nimbus", new Vector3(1506, 3107, 41), 318, (int)VehicleColor.MatteWhite, (int)VehicleColor.MatteDarkRed, 0);
+            Blip blip = playerPlane.AddBlip();
+            blip.Sprite = BlipSprite.Plane;
+            blip.Name = "Private Plane";
             //LoadOutfit();
             //LoadLoadout();
 

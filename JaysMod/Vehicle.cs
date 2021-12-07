@@ -16,7 +16,27 @@ namespace JaysMod
     {
         public GVehicle BaseVehicle { get; }
 
-        public string ID { get; }
+        internal string ID { get; }
+        private static Dictionary<string, Vehicle> vehicles;
+
+        private static void Add(Vehicle vehicle)
+        {
+            if (vehicles is null)
+            {
+                vehicles = new Dictionary<string, Vehicle>();
+            }
+            vehicles.Add(vehicle.ID, vehicle);
+        }
+
+        public static void SaveAll(ScriptSettings ini, string savePrefix)
+        {
+            string ids = "";
+            foreach (Vehicle vehicle in vehicles.Values)
+            {
+                ids += vehicle.ID;
+                vehicle.Save(ini, savePrefix);
+            }
+        }
 
         #region Vehicle Properties
         public VehicleDoorCollection Doors
@@ -158,7 +178,7 @@ namespace JaysMod
         public void Save(ScriptSettings ini, string savePrefix)
         {
             string section = "Save-" + savePrefix;
-            ini.SetValue(section, Prefix(Pref.Model), Model.ToString());
+            ini.SetValue(section, Prefix(Pref.Model), Model.Hash);
             ini.SetValue(section, Prefix(Pref.Position), Position);
             ini.SetValue(section, Prefix(Pref.Heading), Heading);
             ini.SetValue(section, Prefix(Pref.PrimaryColor), PrimaryColor);
@@ -168,9 +188,9 @@ namespace JaysMod
         public void Load(ScriptSettings ini, string savePrefix)
         {
             string section = "Save-" + savePrefix;
-            Model model = ini.GetValue(section, Prefix(Pref.Model), "seminole");
-            Vector3 position = ini.GetValue(section, Prefix(Pref.Position), new Vector3());
-            float heading = ini.GetValue(section, Prefix(Pref.Heading), 0);
+            Model model = new Model(ini.GetValue(section, Prefix(Pref.Model), VehicleHash.Seminole));
+            Vector3 position = ini.GetValue(section, Prefix(Pref.Position), new Vector3(6, 9, 70.5f));
+            float heading = ini.GetValue(section, Prefix(Pref.Heading), 251);
             World.CreateVehicle(model, position, heading);
 
             PrimaryColor = ini.GetValue(section, Prefix(Pref.PrimaryColor), VehicleColor.Blue);
