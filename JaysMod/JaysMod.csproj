@@ -102,9 +102,10 @@
     <Compile Include="Loadout.cs" />
     <Compile Include="MaleCloset.cs" />
     <Compile Include="mapfunctions.cs" />
-    <Compile Include="Outfits.cs" />
+    <Compile Include="NPC.cs" />
+    <Compile Include="Outfit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SaveLoad.cs" />
+    <Compile Include="SaveAndLoad.cs" />
     <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>

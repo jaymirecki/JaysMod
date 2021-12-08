@@ -89,14 +89,14 @@ namespace JaysMod
             while (!player.IsInVehicle(plane.BaseVehicle))
                 Yield();
             player.Task.WarpIntoVehicle(plane.BaseVehicle, VehicleSeat.ExtraSeat4);
-            Wait(1000);
+            //Wait(1000);
             pilot.Task.EnterVehicle(plane.BaseVehicle, VehicleSeat.Driver);
             while (!pilot.IsInVehicle(plane.BaseVehicle)) Yield();
             plane.Doors[VehicleDoorIndex.FrontLeftDoor].Close();
             plane.IsTaxiLightOn = true;
             Function.Call(Hash._SET_VEHICLE_DESIRED_VERTICAL_FLIGHT_PHASE, plane.BaseVehicle, 0);
             plane.IsEngineRunning = true;
-            Wait(5000);
+            //Wait(5000);
         }
 
         void onTick(object sender, EventArgs e)

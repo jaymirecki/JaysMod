@@ -13,13 +13,20 @@ namespace JaysMod
     {
         private MenuPool modMenuPool;
         private UIMenu planeMenu;
+        SaveAndLoad SaverLoader;
+        private string SaveId;
 
         private Dictionary<Vehicle, bool> sirens;
-        private ScriptSettings ini;
+        private ScriptSettings Ini;
 
         private HUD hud;
         private Charter charter;
-        private Outfits playerOutfit;
+        private NPC PlayerNPC;
+        private Weather Weather
+        {
+            get { return GTA.World.Weather; }
+            set { GTA.World.Weather = value; }
+        }
         private Vehicle playerPlane;
         private Loadout playerLoadout;
         
@@ -33,23 +40,46 @@ namespace JaysMod
             modMenuPool = new MenuPool();
             sirens = new Dictionary<Vehicle, bool>();
 
-            hud = Script.InstantiateScript<HUD>();
-            playerOutfit = InstantiateScript<Outfits>();
-            playerLoadout = InstantiateScript<Loadout>();
+            hud = InstantiateScript<HUD>();
+            //playerLoadout = InstantiateScript<Loadout>();
 
-            //charter = InstantiateScript<Charter>();
-            //playerOutfit = InstantiateScript<Outfits>();
-            //playerOutfit.SetPed(Game.Player.Character);
-            //playerPlane = null;
 
             Tick += onTick;
             KeyDown += onKeyDown;
         }
 
+        public void Load(string saveId)
+        {
+            OutfitTemplates.SetupOutfits();
+            SaverLoader = new SaveAndLoad("JaysMod.ini");
+            LoadModel(1885233650);
+            PlayerNPC = new NPC("player", Game.Player.Character);
+            SaveId = saveId;
+            PlayerNPC.Load(SaverLoader, SaveId, "player");
+            World.CurrentDate = new DateTime(SaverLoader.Load(SaveId, "time", 432500000000));
+        }
         public void Load()
         {
-            setupIni();
-            LoadGame();
+            Load(SaveId);
+        }
+        public void New(string saveId)
+        {
+            Debug(saveId);
+            OutfitTemplates.SetupOutfits();
+            SaverLoader = new SaveAndLoad("JaysMod.ini");
+            LoadModel(1885233650);
+            PlayerNPC = new NPC("player", Game.Player.Character);
+            SaveId = saveId;
+            PlayerNPC.Outfit = OutfitTemplates.Combat;
+            World.CurrentDate = new DateTime(432500000000);
+            Weather = Weather.ExtraSunny;
+        }
+        public void Save()
+        {
+            PlayerNPC.Save(SaverLoader, SaveId, "player");
+            SaverLoader.Save(SaveId, "time", GTA.World.CurrentDate.Ticks);
+
+            SaverLoader.Save();
         }
 
         public void Unload()
@@ -57,20 +87,7 @@ namespace JaysMod
             hud.Abort();
             hud = null;
 
-            //charter.Abort();
-            //charter = null;
-
-            //playerOutfit.Abort();
-            //playerOutfit = null;
-
-            //Maps.Functions.DeleteVehicle(playerPlane);
-            //playerPlane = null;
-
             World.PauseClock(false);
-        }
-        public void Save()
-        {
-            SaveGame();
         }
 
         public static void Debug(string message)
@@ -82,10 +99,8 @@ namespace JaysMod
         {
             Debug(message.ToString());
         }
-
         void onTick(object sender, EventArgs e)
         {
-            Ped player = Game.Player.Character;
             if (DateTime.Now.Minute != Minutes)
             {
                 World.CurrentDate = World.CurrentDate.AddMinutes(1);
@@ -93,7 +108,7 @@ namespace JaysMod
             }
             if (modMenuPool != null)
                 modMenuPool.ProcessMenus();
-            if ((Game.Player.IsDead || player.Health == 0 || player.IsDead))
+            if ((Game.Player.IsDead || PlayerNPC.Health == 0 || PlayerNPC.IsDead))
             {
                 Respawn();
             }
@@ -123,23 +138,10 @@ namespace JaysMod
             Function.Call(Hash.DISPLAY_HUD, true);
             Function.Call(Hash.DISPLAY_RADAR, true);
             GTA.Game.TimeScale = 1f;
-            LoadGame();
+            Load();
             Wait(2000);
             playerPed.IsInvincible = false;
             GTA.UI.Screen.FadeIn(2000);
-        }
-        private void setupIni()
-        {
-            ini = ScriptSettings.Load("JaysMod.ini");
-
-            //if (ini.GetValue<string>("General", "name", nodefstr) == nodefstr)
-            //    ini.SetValue<string>("General", "name", "player");
-            //if (ini.GetValue<int>("General", "funds", nodefint) == nodefint)
-            //    ini.SetValue<int>("General", "funds", 0);
-            //if (ini.GetValue<int>("General", "outfit", nodefint) == nodefint)
-            //    ini.SetValue<int>("General", "outfit", (int)Outfits.OutfitID.Casual);
-
-            ini.Save();
         }
 
         public static void LoadModel(string ModelName) {
@@ -283,7 +285,7 @@ namespace JaysMod
             planeMenu = new UIMenu("Private Plane", "SELECT AN OPTION");
 
             UIMenu outfitMenu = modMenuPool.AddSubMenu(planeMenu, "Outfits");
-            playerOutfit.OutfitsMenu(outfitMenu);
+            //playerOutfit.OutfitsMenu(outfitMenu);
 
             modMenuPool.Add(planeMenu);
         }

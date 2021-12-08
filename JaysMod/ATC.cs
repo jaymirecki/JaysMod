@@ -17,22 +17,22 @@ namespace JaysMod
         static Ped pilot;
         public ATC()
         {
-            taxi1 = new Vector3(1553.52f, 3152.32f, 41);
-            taxi2 = new Vector3(1581.87f, 3180.46f, 41);
-            taxi3 = new Vector3(1597.28f, 3195.98f, 41);
-            taxi4 = new Vector3(1589.36f, 3209.58f, 41);
-            taxi5 = new Vector3(1584.29f, 3217.86f, 41);
-            taxi6 = new Vector3(1557.37f, 3210.96f, 41);
-            taxi7 = new Vector3(1093.63f, 3086.28f, 41);
-            taxi8 = new Vector3(1076.24f, 3068.01f, 41);
-            taxi9 = new Vector3(1072.58f, 3043.75f, 41);
-            taxi10 = new Vector3(1089.83f, 3026.19f, 41);
-            taxi11 = new Vector3(1117.68f, 3025.00f, 41);
-            taxi12 = new Vector3(1480.10f, 3122.45f, 41);
-            taxi13 = new Vector3(1519.33f, 3133.06f, 41);
+            //taxi1 = new Vector3(1553.52f, 3152.32f, 41);
+            //taxi2 = new Vector3(1581.87f, 3180.46f, 41);
+            //taxi3 = new Vector3(1597.28f, 3195.98f, 41);
+            //taxi4 = new Vector3(1589.36f, 3209.58f, 41);
+            //taxi5 = new Vector3(1584.29f, 3217.86f, 41);
+            //taxi6 = new Vector3(1557.37f, 3210.96f, 41);
+            //taxi7 = new Vector3(1093.63f, 3086.28f, 41);
+            //taxi8 = new Vector3(1076.24f, 3068.01f, 41);
+            //taxi9 = new Vector3(1072.58f, 3043.75f, 41);
+            //taxi10 = new Vector3(1089.83f, 3026.19f, 41);
+            //taxi11 = new Vector3(1117.68f, 3025.00f, 41);
+            //taxi12 = new Vector3(1480.10f, 3122.45f, 41);
+            //taxi13 = new Vector3(1519.33f, 3133.06f, 41);
 
-            string model = "cuban800";
-            plane1 = (Vehicle)Maps.Functions.SpawnVehicle(model, taxi1, 314.79f, (int)VehicleColor.MatteWhite, (int)VehicleColor.MatteDarkRed, 0);
+            //string model = "cuban800";
+            //plane1 = (Vehicle)Maps.Functions.SpawnVehicle(model, taxi1, 314.79f, (int)VehicleColor.MatteWhite, (int)VehicleColor.MatteDarkRed, 0);
             //plane2 = Maps.Functions.SpawnVehicle(model, taxi2, 314.79f, 0, 0, 0);
             //plane3 = Maps.Functions.SpawnVehicle(model, taxi4, 30.035f, 0, 0, 0);
             //plane4 = Maps.Functions.SpawnVehicle(model, taxi6, 105.28f, 0, 0, 0);
