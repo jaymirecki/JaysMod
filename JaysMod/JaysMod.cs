@@ -36,13 +36,12 @@ namespace JaysMod
 
         public JaysMod()
         {
-            //World.PauseClock(false);
+            World.PauseClock(true);
             modMenuPool = new MenuPool();
             sirens = new Dictionary<Vehicle, bool>();
 
             hud = InstantiateScript<HUD>();
             //playerLoadout = InstantiateScript<Loadout>();
-
 
             Tick += onTick;
             KeyDown += onKeyDown;
