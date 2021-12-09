@@ -94,7 +94,7 @@ namespace JaysMod
             while (!pilot.IsInVehicle(plane.BaseVehicle)) Yield();
             plane.Doors[VehicleDoorIndex.FrontLeftDoor].Close();
             plane.IsTaxiLightOn = true;
-            Function.Call(Hash._SET_VEHICLE_DESIRED_VERTICAL_FLIGHT_PHASE, plane.BaseVehicle, 0);
+            //Function.Call(Hash._SET_VEHICLE_DESIRED_VERTICAL_FLIGHT_PHASE, plane.BaseVehicle, 0);
             plane.IsEngineRunning = true;
             //Wait(5000);
         }

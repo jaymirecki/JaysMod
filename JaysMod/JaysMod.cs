@@ -11,24 +11,20 @@ namespace JaysMod
     [ScriptAttributes(NoDefaultInstance = true)]
     public partial class JaysMod : Script
     {
-        private MenuPool modMenuPool;
+        private MenuPool ModMenuPool;
         private UIMenu planeMenu;
         SaveAndLoad SaverLoader;
         private string SaveId;
 
-        private Dictionary<Vehicle, bool> sirens;
-        private ScriptSettings Ini;
+        private Dictionary<Vehicle, bool> Sirens;
 
-        private HUD hud;
-        private Charter charter;
+        private HUD Hud;
         private NPC PlayerNPC;
         private Weather Weather
         {
             get { return GTA.World.Weather; }
             set { GTA.World.Weather = value; }
         }
-        private Vehicle playerPlane;
-        private Loadout playerLoadout;
         
         private int Minutes;
 
@@ -36,12 +32,10 @@ namespace JaysMod
 
         public JaysMod()
         {
-            World.PauseClock(true);
-            modMenuPool = new MenuPool();
-            sirens = new Dictionary<Vehicle, bool>();
+            ModMenuPool = new MenuPool();
+            Sirens = new Dictionary<Vehicle, bool>();
 
-            hud = InstantiateScript<HUD>();
-            //playerLoadout = InstantiateScript<Loadout>();
+            Hud = InstantiateScript<HUD>();
 
             Tick += onTick;
             KeyDown += onKeyDown;
@@ -49,10 +43,7 @@ namespace JaysMod
 
         public void Load(string saveId)
         {
-            OutfitTemplates.SetupOutfits();
-            SaverLoader = new SaveAndLoad("JaysMod.ini");
-            LoadModel(1885233650);
-            PlayerNPC = new NPC("player", Game.Player.Character);
+            SetupGame();
             SaveId = saveId;
             PlayerNPC.Load(SaverLoader, SaveId, "player");
             World.CurrentDate = new DateTime(SaverLoader.Load(SaveId, "time", 432500000000));
@@ -61,17 +52,21 @@ namespace JaysMod
         {
             Load(SaveId);
         }
-        public void New(string saveId)
+        private void SetupGame()
         {
-            Debug(saveId);
+            World.IsClockPaused = true;
             OutfitTemplates.SetupOutfits();
             SaverLoader = new SaveAndLoad("JaysMod.ini");
             LoadModel(1885233650);
             PlayerNPC = new NPC("player", Game.Player.Character);
-            SaveId = saveId;
-            PlayerNPC.Outfit = OutfitTemplates.Combat;
-            World.CurrentDate = new DateTime(432500000000);
             Weather = Weather.ExtraSunny;
+        }
+        public void New(string saveId)
+        {
+            SetupGame();
+            SaveId = saveId;
+            PlayerNPC.Outfit = OutfitTemplates.FatiguesCombat;
+            World.CurrentDate = new DateTime(432500000000);
         }
         public void Save()
         {
@@ -83,10 +78,10 @@ namespace JaysMod
 
         public void Unload()
         {
-            hud.Abort();
-            hud = null;
+            Hud.Abort();
+            Hud = null;
 
-            World.PauseClock(false);
+            World.IsClockPaused = false;
         }
 
         public static void Debug(string message)
@@ -105,8 +100,8 @@ namespace JaysMod
                 World.CurrentDate = World.CurrentDate.AddMinutes(1);
                 Minutes = DateTime.Now.Minute;
             }
-            if (modMenuPool != null)
-                modMenuPool.ProcessMenus();
+            if (ModMenuPool != null)
+                ModMenuPool.ProcessMenus();
             if ((Game.Player.IsDead || PlayerNPC.Health == 0 || PlayerNPC.IsDead))
             {
                 Respawn();
@@ -124,7 +119,7 @@ namespace JaysMod
             GTA.UI.Screen.StopEffects();
 
             // Custom death behavior
-            Function.Call(Hash._RESET_LOCALPLAYER_STATE);
+            //Function.Call(Hash._RESET_LOCALPLAYER_STATE);
             Function.Call(Hash.RESET_PLAYER_ARREST_STATE, playerPed);
             //playerPed.Ragdoll();
             Wait(5000);
@@ -172,30 +167,30 @@ namespace JaysMod
                 if (player.IsInVehicle())
                 {
                     Vehicle vehicle = new Vehicle(player.CurrentVehicle);
-                    if (vehicle.HasSiren && sirens.ContainsKey(vehicle))
+                    if (vehicle.HasSiren && Sirens.ContainsKey(vehicle))
                     {
                         bool silent;
-                        sirens.TryGetValue(vehicle, out silent);
+                        Sirens.TryGetValue(vehicle, out silent);
                         vehicle.IsSirenSilent = !silent;
-                        sirens.Remove(vehicle);
-                        sirens.Add(vehicle, !silent);
+                        Sirens.Remove(vehicle);
+                        Sirens.Add(vehicle, !silent);
                     }
                     else if (vehicle.HasSiren)
                     {
                         bool silent = true;
                         vehicle.IsSirenSilent = silent;
-                        sirens.Add(vehicle, silent);
+                        Sirens.Add(vehicle, silent);
                     }
                 }
             }
             else if (e.KeyCode == Keys.E)
             {
-                if (player.IsInVehicle() && 
-                    player.CurrentVehicle == playerPlane.BaseVehicle && 
-                    !modMenuPool.IsAnyMenuOpen())
-                {
-                    planeMenu.Visible = true;
-                }
+                //if (player.IsInVehicle() && 
+                //    player.CurrentVehicle == playerPlane.BaseVehicle && 
+                //    !ModMenuPool.IsAnyMenuOpen())
+                //{
+                //    planeMenu.Visible = true;
+                //}
             }
         }
 
@@ -249,7 +244,7 @@ namespace JaysMod
 
         void LoadoutsMenu(UIMenu submenu)
         {
-            UIMenu menu = modMenuPool.AddSubMenu(submenu, "Loadouts");
+            UIMenu menu = ModMenuPool.AddSubMenu(submenu, "Loadouts");
 
             UIMenuItem clean = new UIMenuItem("Clean");
             UIMenuItem echoAssault = new UIMenuItem("Echo Assault");
@@ -283,10 +278,10 @@ namespace JaysMod
         {
             planeMenu = new UIMenu("Private Plane", "SELECT AN OPTION");
 
-            UIMenu outfitMenu = modMenuPool.AddSubMenu(planeMenu, "Outfits");
+            UIMenu outfitMenu = ModMenuPool.AddSubMenu(planeMenu, "Outfits");
             //playerOutfit.OutfitsMenu(outfitMenu);
 
-            modMenuPool.Add(planeMenu);
+            ModMenuPool.Add(planeMenu);
         }
     }
 }

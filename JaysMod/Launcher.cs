@@ -11,7 +11,7 @@ namespace JaysMod
     class Launcher : Script
     {
         private MenuPool modMenuPool;
-        private UIMenu mainMenu;
+        private UIMenu MainMenu;
         private JaysMod mod;
 
         private int originalModel;
@@ -24,61 +24,80 @@ namespace JaysMod
             mod = null;
 
             modMenuPool = new MenuPool();
-            mainMenu = new UIMenu("Jay's Mod", "SELECT AN OPTION");
-            modMenuPool.Add(mainMenu);
+            MainMenu = new UIMenu("Jay's Mod", "SELECT AN OPTION");
+            modMenuPool.Add(MainMenu);
 
-            SaveAndLoad saverLoader = new SaveAndLoad("JaysMod.ini");
-            List<object> games = new List<object>(saverLoader.AllSaves());
-
+            KeyDown += onKeyDown;
+            Tick += onTick;
+        }
+        private void BuildMenu()
+        {
             UIMenuItem save = new UIMenuItem("Save Game");
-            UIMenuItem load = new UIMenuItem("Load Game");
             UIMenuItem newGame = new UIMenuItem("New Game");
             UIMenuItem quit = new UIMenuItem("Quit Game");
 
-            save.Enabled = false;
-            load.Enabled = games.Count > 0;
-            quit.Enabled = false;
+            MainMenu.Clear();
 
-            UIMenuListItem gameSelect = null;
+            NewMenu(mod != null);
+            LoadMenu(mod != null);
+            MainMenu.AddItem(save);
+            MainMenu.AddItem(quit);
+            MainMenu.RefreshIndex();
 
-            if (games.Count > 0)
-            {
-                gameSelect = new UIMenuListItem("Games:", games, 0);
-                mainMenu.AddItem(gameSelect);
-            }
-
-            mainMenu.AddItem(newGame);
-            mainMenu.AddItem(save);
-            mainMenu.AddItem(load);
-            mainMenu.AddItem(quit);
-            mainMenu.RefreshIndex();
-
-            mainMenu.OnItemSelect += (sender, item, index) =>
+            MainMenu.OnItemSelect += (sender, item, index) =>
             {
                 if (item == save)
                 {
                     SaveGame();
                 }
-                else if (item == load && gameSelect != null)
-                {
-                    if (mod == null)
-                    {
-                        originalModel = Game.Player.Character.Model.Hash;
-                        originalPosition = Game.Player.Character.Position;
-                        originalHeading = Game.Player.Character.Heading;
-                        originalDateTime = World.CurrentDate;
-                    }
-                    LoadGame((string)games[gameSelect.Index]);
-                    quit.Enabled = true;
-                    save.Enabled = true;
-                }
                 else if (item == quit)
                 {
                     QuitGame();
-                    quit.Enabled = false;
-                    save.Enabled = false;
                 }
-                else if (item == newGame)
+            };
+
+            Debug();
+        }
+        private void LoadMenu(bool modEnabled)
+        {
+            SaveAndLoad saverLoader = new SaveAndLoad("JaysMod.ini");
+            List<object> games = new List<object>(saverLoader.AllSaves());
+
+            string description = "There are no saved games to load.";
+            if (games.Count > 0)
+            {
+                description = "Choose a game to load.";
+            }
+
+            UIMenu loadMenu = modMenuPool.AddSubMenu(MainMenu, "Load Game", description);
+
+            if (games.Count > 0)
+            {
+                UIMenuListItem gameSelect = new UIMenuListItem("Games:", games, 0);
+                UIMenuItem loadButton = new UIMenuItem("Load", "Load the selected game");
+
+                loadMenu.AddItem(gameSelect);
+                loadMenu.AddItem(loadButton);
+
+                loadMenu.OnItemSelect += (sender, item, index) =>
+                {
+                    if (item == loadButton)
+                    {
+                        LoadGame((string)games[gameSelect.Index]);
+                    }
+                };
+            }
+        }
+        private void NewMenu(bool modEnabled)
+        {
+            SaveAndLoad saverLoader = new SaveAndLoad("JaysMod.ini");
+            List<object> games = new List<object>(saverLoader.AllSaves());
+            UIMenuItem newButton = new UIMenuItem("New Game", "Start a new game");
+            MainMenu.AddItem(newButton);
+
+            MainMenu.OnItemSelect += (sender, item, index) =>
+            {
+                if (item == newButton)
                 {
                     string saveId = "SAVE 01";
                     int counter = 1;
@@ -88,20 +107,16 @@ namespace JaysMod
                         saveId = "SAVE " + counter.ToString("D2");
                     }
                     NewGame(saveId);
-                    quit.Enabled = true;
-                    save.Enabled = true;
                 }
             };
-
-            Debug();
-
-            KeyDown += onKeyDown;
-            Tick += onTick;
         }
         void onKeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F5 && !modMenuPool.IsAnyMenuOpen())
-                mainMenu.Visible = !mainMenu.Visible;
+            {
+                BuildMenu();
+                MainMenu.Visible = !MainMenu.Visible;
+            }
             else if (e.KeyCode == Keys.F5)
                 modMenuPool.CloseAllMenus();
         }
@@ -122,6 +137,7 @@ namespace JaysMod
             {
                 QuitGame();
             }
+            SaveOriginalState();
             mod = InstantiateScript<JaysMod>();
             mod.Load(saveId);
         }
@@ -131,8 +147,17 @@ namespace JaysMod
             {
                 QuitGame();
             }
+            SaveOriginalState();
             mod = InstantiateScript<JaysMod>();
             mod.New(saveId);
+        }
+        private void SaveOriginalState()
+        {
+            Ped playerPed = Game.Player.Character;
+            originalModel = playerPed.Model;
+            originalPosition = playerPed.Position;
+            originalHeading = playerPed.Heading;
+            originalDateTime = World.CurrentDate;
         }
         public void QuitGame()
         {
@@ -149,7 +174,7 @@ namespace JaysMod
         }
         void Debug()
         {
-            UIMenu submenu = modMenuPool.AddSubMenu(mainMenu, "Debug");
+            UIMenu submenu = modMenuPool.AddSubMenu(MainMenu, "Debug");
             UIMenuItem currPos = new UIMenuItem("Current Position");
             submenu.AddItem(currPos);
             UIMenuItem vehPos = new UIMenuItem("Vehicle Position");

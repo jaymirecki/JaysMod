@@ -57,7 +57,6 @@ namespace JaysMod
         Beach = 6,
         Fatigues = 87,
         TestPilot = 92,
-        PilotCasual = 10,
     }
     enum Hands
     {
@@ -84,13 +83,12 @@ namespace JaysMod
         Combat = 15,
         Bike = 142,
         Scuba = 123,
-        Fatigues = 15,
     }
     enum AccTwo
     {
         Default = 0,
-        Combat = 11,
-        FatiguesCombat = 126,
+        CombatVest = 11,
+        MilitaryVest = 26,
     }
     enum Shirts
     {
@@ -110,10 +108,9 @@ namespace JaysMod
     enum Hats
     {
         Default = -1,
-        Combat = 117,
+        CombatHelmetVisorUp = 117,
         Bike = 70,
         FatiguesCasual = 107,
-        FatiguesCombat = 117,
         TestPilot = 111,
     }
     enum Glasses
@@ -229,10 +226,9 @@ namespace JaysMod
             }
 
             // Set components
-            JaysMod.Debug(Shirt);
             SetComponent(ped, OutfitComponents.Beard, (int)Beard, BeardColor);
-            SetComponent(ped, OutfitComponents.Hair, (int)Hair, HairColor);
-            SetHairColor(ped, HairColor);
+            SetComponent(ped, OutfitComponents.Hair, (int)hair, hairColor);
+            SetHairColor(ped, hairColor);
             SetComponent(ped, OutfitComponents.Upper, (int)Upper, UpperColor);
             SetComponent(ped, OutfitComponents.Lower, (int)Lower, LowerColor);
             SetComponent(ped, OutfitComponents.Hands, (int)Hands, HandsColor);
@@ -253,64 +249,86 @@ namespace JaysMod
         }
         public void Save(SaveAndLoad save, string saveId, string prefix)
         {
-            string myPrefix = prefix + "_outfit";
-            save.Save(saveId, myPrefix + "_beard", Beard);
-            save.Save(saveId, myPrefix + "_hair", Hair);
-            save.Save(saveId, myPrefix + "_upper", Upper);
-            save.Save(saveId, myPrefix + "_lower", Lower);
-            save.Save(saveId, myPrefix + "_hands", Hands);
-            save.Save(saveId, myPrefix + "_shoes", Shoes);
-            save.Save(saveId, myPrefix + "_accone", AccOne);
-            save.Save(saveId, myPrefix + "_acctwo", AccTwo);
-            save.Save(saveId, myPrefix + "_shirt", Shirt);
-            save.Save(saveId, myPrefix + "_hat", Hat);
-            save.Save(saveId, myPrefix + "_glasses", Glasses);
-            save.Save(saveId, myPrefix + "_ears", Ears);
-            save.Save(saveId, myPrefix + "_watch", Watch);
-            save.Save(saveId, myPrefix + "_beardColor", BeardColor);
-            save.Save(saveId, myPrefix + "_hairColor", HairColor);
-            save.Save(saveId, myPrefix + "_upperColor", UpperColor);
-            save.Save(saveId, myPrefix + "_lowerColor", LowerColor);
-            save.Save(saveId, myPrefix + "_handsColor", HandsColor);
-            save.Save(saveId, myPrefix + "_shoesColor", ShoesColor);
-            save.Save(saveId, myPrefix + "_acconeColor", AccOneColor);
-            save.Save(saveId, myPrefix + "_acctwoColor", AccTwoColor);
-            save.Save(saveId, myPrefix + "_shirtColor", ShirtColor);
-            save.Save(saveId, myPrefix + "_hatColor", HatColor);
-            save.Save(saveId, myPrefix + "_glassesColor", GlassesColor);
-            save.Save(saveId, myPrefix + "_earsColor", EarsColor);
-            save.Save(saveId, myPrefix + "_watchColor", WatchColor);
+            save.Save(saveId, prefix + "_outfit", ToString());
+        }
+        public override string ToString()
+        {
+            string str =
+                ((int)Beard).ToString() + "," +
+                ((int)Hair).ToString() + "," +
+                ((int)Upper).ToString() + "," +
+                ((int)Lower).ToString() + "," +
+                ((int)Hands).ToString() + "," +
+                ((int)Shoes).ToString() + "," +
+                ((int)AccOne).ToString() + "," +
+                ((int)AccTwo).ToString() + "," +
+                ((int)Shirt).ToString() + "," +
+                ((int)Hat).ToString() + "," +
+                ((int)Glasses).ToString() + "," +
+                ((int)Ears).ToString() + "," +
+                ((int)Watch).ToString() + "," +
+                BeardColor.ToString() + "," +
+                HairColor.ToString() + "," +
+                UpperColor.ToString() + "," +
+                LowerColor.ToString() + "," +
+                HandsColor.ToString() + "," +
+                ShoesColor.ToString() + "," +
+                AccOneColor.ToString() + "," +
+                AccTwoColor.ToString() + "," +
+                ShirtColor.ToString() + "," +
+                HatColor.ToString() + "," +
+                GlassesColor.ToString() + "," +
+                EarsColor.ToString() + "," +
+                WatchColor.ToString();
+
+            return str;
+        }
+
+        private void FromString(string str)
+        {
+            string[] pieces = str.Split(',');
+            Beard = ParseEnumOrDefault(pieces[0], Beards.Default);
+            Hair = ParseEnumOrDefault(pieces[1], Hair.Default);
+            Upper = ParseEnumOrDefault(pieces[2], Uppers.Default);
+            Lower = ParseEnumOrDefault(pieces[3], Lowers.Default);
+            Hands = ParseEnumOrDefault(pieces[4], Hands.Default);
+            Shoes = ParseEnumOrDefault(pieces[5], Shoes.Default);
+            AccOne = ParseEnumOrDefault(pieces[6], AccOne.Default);
+            AccTwo = ParseEnumOrDefault(pieces[7], AccTwo.Default);
+            Shirt = ParseEnumOrDefault(pieces[8], Shirts.Default);
+            Hat = ParseEnumOrDefault(pieces[9], Hats.Default);
+            Glasses = ParseEnumOrDefault(pieces[10], Glasses.Default);
+            Ears = ParseEnumOrDefault(pieces[11], Ears.Default);
+            Watch = ParseEnumOrDefault(pieces[12], Watches.Default);
+            BeardColor = int.Parse(pieces[13]);
+            HairColor = int.Parse(pieces[14]);
+            UpperColor = int.Parse(pieces[15]);
+            LowerColor = int.Parse(pieces[16]);
+            HandsColor = int.Parse(pieces[17]);
+            ShoesColor = int.Parse(pieces[18]);
+            AccOneColor = int.Parse(pieces[19]);
+            AccTwoColor = int.Parse(pieces[20]);
+            ShirtColor = int.Parse(pieces[21]);
+            HatColor = int.Parse(pieces[22]);
+            GlassesColor = int.Parse(pieces[23]);
+            EarsColor = int.Parse(pieces[24]);
+            WatchColor = int.Parse(pieces[25]);
+        }
+
+        private TEnum ParseEnumOrDefault<TEnum>(string str, TEnum def) where TEnum : struct
+        {
+            TEnum result;
+            if (Enum.TryParse(str, out result))
+            {
+                return result;
+            }
+            return def;
         }
 
         public void Load(SaveAndLoad load, string saveId, string prefix)
         {
-            string myPrefix = prefix + "_outfit";
-            Beard = load.Load(saveId, myPrefix + "_beard", Beard);
-            Hair = load.Load(saveId, myPrefix + "_hair", Hair);
-            Upper = load.Load(saveId, myPrefix + "_upper", Upper);
-            Lower = load.Load(saveId, myPrefix + "_lower", Lower);
-            Hands = load.Load(saveId, myPrefix + "_hands", Hands);
-            Shoes = load.Load(saveId, myPrefix + "_shoes", Shoes);
-            AccOne = load.Load(saveId, myPrefix + "_accone", AccOne);
-            AccTwo = load.Load(saveId, myPrefix + "_acctwo", AccTwo);
-            Shirt = load.Load(saveId, myPrefix + "_shirt", Shirt);
-            Hat = load.Load(saveId, myPrefix + "_hat", Hat);
-            Glasses = load.Load(saveId, myPrefix + "_glasses", Glasses);
-            Ears = load.Load(saveId, myPrefix + "_ears", Ears);
-            Watch = load.Load(saveId, myPrefix + "_watch", Watch);
-            BeardColor = load.Load(saveId, myPrefix + "_beardColor", BeardColor);
-            HairColor = load.Load(saveId, myPrefix + "_hairColor", HairColor);
-            UpperColor = load.Load(saveId, myPrefix + "_upperColor", UpperColor);
-            LowerColor = load.Load(saveId, myPrefix + "_lowerColor", LowerColor);
-            HandsColor = load.Load(saveId, myPrefix + "_handsColor", HandsColor);
-            ShoesColor = load.Load(saveId, myPrefix + "_shoesColor", ShoesColor);
-            AccOneColor = load.Load(saveId, myPrefix + "_acconeColor", AccOneColor);
-            AccTwoColor = load.Load(saveId, myPrefix + "_acctwoColor", AccTwoColor);
-            ShirtColor = load.Load(saveId, myPrefix + "_shirtColor", ShirtColor);
-            HatColor = load.Load(saveId, myPrefix + "_hatColor", HatColor);
-            GlassesColor = load.Load(saveId, myPrefix + "_glassesColor", GlassesColor);
-            EarsColor = load.Load(saveId, myPrefix + "_earsColor", EarsColor);
-            WatchColor = load.Load(saveId, myPrefix + "_watchColor", WatchColor);
+            string str = load.Load<string>(saveId, prefix + "_outfit");
+            FromString(str);
         }
 
         #region Set/Get Components
@@ -383,10 +401,10 @@ namespace JaysMod
             Combat.Lower = Lowers.Combat;
             Combat.Shoes = Shoes.Combat;
             Combat.AccOne = AccOne.Combat;
-            Combat.AccTwo = AccTwo.Combat;
+            Combat.AccTwo = AccTwo.CombatVest;
             Combat.AccTwoColor = 1;
             Combat.Shirt = Shirts.Combat;
-            Combat.Hat = Hats.Combat;
+            Combat.Hat = Hats.CombatHelmetVisorUp;
 
             Bike.Upper = Uppers.Bike;
             Bike.Lower = Lowers.Bike;
@@ -409,22 +427,22 @@ namespace JaysMod
             Beach.Lower = Lowers.Beach;
             Beach.LowerColor = 1;
             Beach.Shoes = Shoes.Beach;
-            Beach.AccOne = AccOne.Fatigues;
+            Beach.AccOne = AccOne.Casual;
             Beach.Shirt = Shirts.Beach;
 
             FatiguesCasual.Upper = Uppers.FatiguesCasual;
             FatiguesCasual.Lower = Lowers.Fatigues;
             FatiguesCasual.Shoes = Shoes.Fatigues;
-            FatiguesCasual.AccOne = AccOne.Fatigues;
+            FatiguesCasual.AccOne = AccOne.Casual;
             FatiguesCasual.Shirt = Shirts.FatiguesCasual;
             FatiguesCasual.Hat = Hats.FatiguesCasual;
 
             FatiguesCombat = FatiguesCasual.Copy();
             FatiguesCombat.Upper = Uppers.FatiguesCombat;
-            FatiguesCombat.AccTwo = AccTwo.FatiguesCombat;
+            FatiguesCombat.AccTwo = AccTwo.MilitaryVest;
             FatiguesCombat.AccTwoColor = 5;
             FatiguesCombat.Shirt = Shirts.FatiguesCombat;
-            FatiguesCombat.Hat = Hats.FatiguesCombat;
+            FatiguesCombat.Hat = Hats.CombatHelmetVisorUp;
             FatiguesCombat.HatColor = 18;
 
             TestPilot.Beard = Beards.Scuba;
@@ -434,14 +452,14 @@ namespace JaysMod
             TestPilot.LowerColor = 1;
             TestPilot.Shoes = Shoes.TestPilot;
             TestPilot.ShoesColor = 3;
-            TestPilot.AccOne = AccOne.Fatigues;
+            TestPilot.AccOne = AccOne.Casual;
             TestPilot.Shirt = Shirts.TestPilot;
             TestPilot.ShirtColor = 1;
             TestPilot.Hat = Hats.TestPilot;
             TestPilot.HatColor = 5;
 
             PilotCasual = FatiguesCasual.Copy();
-            PilotCasual.Lower = Lowers.PilotCasual;
+            PilotCasual.Lower = Lowers.Casual;
             PilotCasual.Shoes = Shoes.PilotCasual;
             //PilotCasual.Teeth = Lowers.PilotCasual;
             PilotCasual.Shirt = Shirts.PilotCasual;

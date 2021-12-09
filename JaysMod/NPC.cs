@@ -41,7 +41,8 @@ namespace JaysMod
         public Outfit Outfit
         {
             get { return _outfit; }
-            set { 
+            set {
+                JaysMod.Debug(value.Shirt);
                 value.ApplyToPed(BasePed, true);
                 _outfit = value;
             }
@@ -56,6 +57,7 @@ namespace JaysMod
             ID = "null";
             BasePed = ped;
             Outfit = OutfitTemplates.Casual;
+            Outfit.ApplyToPed(BasePed, false);
         }
 
         public void Save(SaveAndLoad save, string saveId, string prefix)
@@ -72,8 +74,8 @@ namespace JaysMod
             Position = load.LoadVector(saveId, myPrefix);
             Heading = load.Load(saveId, myPrefix + "_heading", 0);
             Health = load.Load(saveId, myPrefix + "_health", MaxHealth);
-            //Outfit.Load(load, saveId, myPrefix);
-            Outfit = OutfitTemplates.Casual.Copy();
+            Outfit.Load(load, saveId, myPrefix);
+            Outfit.ApplyToPed(BasePed, false);
         }
     }
 }
