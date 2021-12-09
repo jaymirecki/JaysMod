@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JaysMod
+namespace JaysMod.Framework
 {
     #region HeadOverlay
     enum Blemishes
@@ -371,8 +371,8 @@ namespace JaysMod
         public static Outfit Bike = new Outfit();
         public static Outfit Scuba = new Outfit();
         public static Outfit Beach = new Outfit();
-        public static Outfit FatiguesCasual = new Outfit();
-        public static Outfit FatiguesCombat = new Outfit();
+        public static Outfit NavyCasual = new Outfit();
+        public static Outfit NavyCombat = new Outfit();
         public static Outfit TestPilot = new Outfit();
         public static Outfit PilotCasual = new Outfit();
 
@@ -430,20 +430,20 @@ namespace JaysMod
             Beach.AccOne = AccOne.Casual;
             Beach.Shirt = Shirts.Beach;
 
-            FatiguesCasual.Upper = Uppers.FatiguesCasual;
-            FatiguesCasual.Lower = Lowers.Fatigues;
-            FatiguesCasual.Shoes = Shoes.Fatigues;
-            FatiguesCasual.AccOne = AccOne.Casual;
-            FatiguesCasual.Shirt = Shirts.FatiguesCasual;
-            FatiguesCasual.Hat = Hats.FatiguesCasual;
+            NavyCasual.Upper = Uppers.FatiguesCasual;
+            NavyCasual.Lower = Lowers.Fatigues;
+            NavyCasual.Shoes = Shoes.Fatigues;
+            NavyCasual.AccOne = AccOne.Casual;
+            NavyCasual.Shirt = Shirts.FatiguesCasual;
+            NavyCasual.Hat = Hats.FatiguesCasual;
 
-            FatiguesCombat = FatiguesCasual.Copy();
-            FatiguesCombat.Upper = Uppers.FatiguesCombat;
-            FatiguesCombat.AccTwo = AccTwo.MilitaryVest;
-            FatiguesCombat.AccTwoColor = 5;
-            FatiguesCombat.Shirt = Shirts.FatiguesCombat;
-            FatiguesCombat.Hat = Hats.CombatHelmetVisorUp;
-            FatiguesCombat.HatColor = 18;
+            NavyCombat = NavyCasual.Copy();
+            NavyCombat.Upper = Uppers.FatiguesCombat;
+            NavyCombat.AccTwo = AccTwo.MilitaryVest;
+            NavyCombat.AccTwoColor = 5;
+            NavyCombat.Shirt = Shirts.FatiguesCombat;
+            NavyCombat.Hat = Hats.CombatHelmetVisorUp;
+            NavyCombat.HatColor = 18;
 
             TestPilot.Beard = Beards.Scuba;
             TestPilot.Upper = Uppers.TestPilot;
@@ -458,7 +458,7 @@ namespace JaysMod
             TestPilot.Hat = Hats.TestPilot;
             TestPilot.HatColor = 5;
 
-            PilotCasual = FatiguesCasual.Copy();
+            PilotCasual = NavyCasual.Copy();
             PilotCasual.Lower = Lowers.Casual;
             PilotCasual.Shoes = Shoes.PilotCasual;
             //PilotCasual.Teeth = Lowers.PilotCasual;

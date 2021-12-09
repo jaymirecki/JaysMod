@@ -5,6 +5,7 @@ using GTA;
 using GTA.Native;
 using GTA.Math;
 using NativeUI;
+using JaysMod.Framework;
 
 namespace JaysMod
 {
@@ -65,7 +66,7 @@ namespace JaysMod
         {
             SetupGame();
             SaveId = saveId;
-            PlayerNPC.Outfit = OutfitTemplates.FatiguesCombat;
+            PlayerNPC.Outfit = OutfitTemplates.NavyCombat;
             World.CurrentDate = new DateTime(432500000000);
         }
         public void Save()

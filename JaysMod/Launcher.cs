@@ -5,6 +5,7 @@ using GTA.Native;
 using GTA.Math;
 using NativeUI;
 using System.Collections.Generic;
+using JaysMod.Framework;
 
 namespace JaysMod
 {
