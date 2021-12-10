@@ -182,6 +182,8 @@ namespace JaysMod
             submenu.AddItem(vehPos);
             UIMenuItem vehName = new UIMenuItem("Vehicle Model Name");
             submenu.AddItem(vehName);
+            UIMenuItem zoneId = new UIMenuItem("Zone ID");
+            submenu.AddItem(zoneId);
             submenu.RefreshIndex();
 
             submenu.OnItemSelect += (sender, item, index) =>
