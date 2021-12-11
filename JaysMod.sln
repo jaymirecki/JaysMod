@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JaysMod", "JaysMod\JaysMod.csproj", "{495DAB6A-D263-4CFD-9081-B02AC914543C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JaysModFramework", "JaysModFramework\JaysModFramework.csproj", "{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{495DAB6A-D263-4CFD-9081-B02AC914543C}.Release|x64.Build.0 = Release|x64
 		{495DAB6A-D263-4CFD-9081-B02AC914543C}.Release|x86.ActiveCfg = Release|x86
 		{495DAB6A-D263-4CFD-9081-B02AC914543C}.Release|x86.Build.0 = Release|x86
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Debug|x64.Build.0 = Debug|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Debug|x86.Build.0 = Debug|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Release|x64.ActiveCfg = Release|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Release|x64.Build.0 = Release|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Release|x86.ActiveCfg = Release|Any CPU
+		{EB875A17-FDF2-4B61-AD7E-C927FB029CEC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

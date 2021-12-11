@@ -55,12 +55,14 @@ namespace JaysMod
         }
         private void SetupGame()
         {
+            Minutes = DateTime.Now.Minute;
             World.IsClockPaused = true;
             OutfitTemplates.SetupOutfits();
             SaverLoader = new SaveAndLoad("JaysMod.ini");
             LoadModel(1885233650);
             PlayerNPC = new NPC("player", Game.Player.Character);
             Weather = Weather.ExtraSunny;
+            JaysModFramework.RestrictedAreas.SetEnabledFortZancudo(false);
         }
         public void New(string saveId)
         {
@@ -81,6 +83,7 @@ namespace JaysMod
         {
             Hud.Abort();
             Hud = null;
+            JaysModFramework.RestrictedAreas.SetEnabledFortZancudo(true);
 
             World.IsClockPaused = false;
         }

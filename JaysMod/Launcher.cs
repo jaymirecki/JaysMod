@@ -195,6 +195,19 @@ namespace JaysMod
                     JaysMod.Debug("Vehicle Position: " + player.CurrentVehicle.Position.ToString() + " H:" + player.CurrentVehicle.Heading.ToString());
                 else if (item == vehName)
                     JaysMod.Debug("Vehicle Name: " + player.CurrentVehicle.Model.ToString());
+                else if (item == zoneId)
+                {
+                    Vector3 position = Game.Player.Character.Position;
+                    int zone = Function.Call<int>(Hash.GET_ZONE_AT_COORDS, position.X, position.Y, position.Z);
+                    Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "am_armybase");
+                    Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "restrictedareas");
+                    Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "re_armybase");
+                    Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "re_lossantosintl");
+                    Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "re_prison");
+                    Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "re_prisonvanbreak");
+                    Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "am_doors");
+                    Function.Call(Hash._REMOVE_AIR_DEFENSE_ZONE, zone);
+                }
             };
         }
     }
