@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JaysMod.Framework
+namespace JaysModFramework
 {
-    class NPC
+    public class NPC
     {
         private Ped BasePed;
         public string ID;
@@ -42,7 +42,6 @@ namespace JaysMod.Framework
         {
             get { return _outfit; }
             set {
-                JaysMod.Debug(value.Shirt);
                 value.ApplyToPed(BasePed, true);
                 _outfit = value;
             }
@@ -56,7 +55,7 @@ namespace JaysMod.Framework
         {
             ID = "null";
             BasePed = ped;
-            Outfit = OutfitTemplates.Casual;
+            Outfit = MaleOutfitTemplates.Casual;
             Outfit.ApplyToPed(BasePed, false);
         }
 

@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JaysMod.Framework
+namespace JaysModFramework
 {
-    class SaveAndLoad
+    public class SaveAndLoad
     {
         private ScriptSettings Ini;
         private string IniFile;
