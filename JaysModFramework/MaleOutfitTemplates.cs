@@ -19,98 +19,108 @@ namespace JaysModFramework
         public static Outfit Beach = new Outfit();
         public static Outfit NavyCasual = new Outfit();
         public static Outfit NavyCombat = new Outfit();
+        public static Outfit ArmyCasual = new Outfit();
+        public static Outfit ArmyCombat = new Outfit();
         public static Outfit TestPilot = new Outfit();
         public static Outfit PilotCasual = new Outfit();
 
         public static void SetupOutfits()
         {
-            Casual.Lower = Lowers.Casual;
-            Casual.Shoes = Shoes.Casual;
-            Casual.AccOne = AccOne.Casual;
-            Casual.Shirt = Shirts.Casual;
+            Casual.SetLower(Lowers.Casual);
+            Casual.SetShoes(Shoes.Casual);
+            Casual.SetAccOne(AccOne.Casual);
+            Casual.SetShirt(Shirts.Casual);
             Casual.ShirtColor = 1;
-            Casual.Ears = Ears.Casual;
-            Casual.Watch = Watches.Casual;
+            Casual.SetEars(Ears.Casual);
+            Casual.SetWatch(Watches.Casual);
 
-            Formal.Upper = Uppers.Formal;
-            Formal.Lower = Lowers.Formal;
+            Formal.SetUpper(Uppers.Formal);
+            Formal.SetLower(Lowers.Formal);
             Formal.LowerColor = 8;
-            Formal.Shoes = Shoes.Formal;
-            Formal.AccOne = AccOne.Formal;
+            Formal.SetShoes(Shoes.Formal);
+            Formal.SetAccOne(AccOne.Formal);
             Formal.AccOneColor = 1;
-            Formal.Shirt = Shirts.Formal;
+            Formal.SetShirt(Shirts.Formal);
             Formal.ShirtColor = 1;
-            Formal.Ears = Ears.Casual;
+            Formal.SetEars(Ears.Casual);
 
-            Combat.Beard = Beards.Combat;
-            Combat.Upper = Uppers.Combat;
-            Combat.Lower = Lowers.Combat;
-            Combat.Shoes = Shoes.Combat;
-            Combat.AccOne = AccOne.Combat;
-            Combat.AccTwo = AccTwo.CombatVest;
+            Combat.SetBeard(Beards.Combat);
+            Combat.SetUpper(Uppers.Combat);
+            Combat.SetLower(Lowers.Combat);
+            Combat.SetShoes(Shoes.Combat);
+            Combat.SetAccOne(AccOne.Combat);
+            Combat.SetAccTwo(AccTwo.CombatVest);
             Combat.AccTwoColor = 1;
-            Combat.Shirt = Shirts.Combat;
-            Combat.Hat = Hats.CombatHelmetVisorUp;
+            Combat.SetShirt(Shirts.Combat);
+            Combat.SetHat(Hats.CombatHelmetVisorUp);
 
-            Bike.Upper = Uppers.Bike;
-            Bike.Lower = Lowers.Bike;
+            Bike.SetUpper(Uppers.Bike);
+            Bike.SetLower(Lowers.Bike);
             Bike.LowerColor = 4;
-            Bike.Shoes = Shoes.Bike;
+            Bike.SetShoes(Shoes.Bike);
             Bike.ShoesColor = 2;
-            Bike.AccOne = AccOne.Bike;
-            Bike.Shirt = Shirts.Bike;
-            Bike.Hat = Hats.Bike;
+            Bike.SetAccOne(AccOne.Bike);
+            Bike.SetShirt(Shirts.Bike);
+            Bike.SetHat(Hats.Bike);
 
-            Scuba.Beard = Beards.Scuba;
-            Scuba.Upper = Uppers.Scuba;
-            Scuba.Lower = Lowers.Scuba;
-            Scuba.Shoes = Shoes.Scuba;
-            Scuba.AccOne = AccOne.Scuba;
-            Scuba.Shirt = Shirts.Combat;
-            Scuba.Glasses = Glasses.Scuba;
+            Scuba.SetBeard(Beards.Scuba);
+            Scuba.SetUpper(Uppers.Scuba);
+            Scuba.SetLower(Lowers.Scuba);
+            Scuba.SetShoes(Shoes.Scuba);
+            Scuba.SetAccOne(AccOne.Scuba);
+            Scuba.SetShirt(Shirts.Combat);
+            Scuba.SetGlasses(Glasses.Scuba);
 
-            Beach.Upper = Uppers.Beach;
-            Beach.Lower = Lowers.Beach;
+            Beach.SetUpper(Uppers.Beach);
+            Beach.SetLower(Lowers.Beach);
             Beach.LowerColor = 1;
-            Beach.Shoes = Shoes.Beach;
-            Beach.AccOne = AccOne.Casual;
-            Beach.Shirt = Shirts.Beach;
+            Beach.SetShoes(Shoes.Beach);
+            Beach.SetAccOne(AccOne.Casual);
+            Beach.SetShirt(Shirts.Beach);
 
-            NavyCasual.Upper = Uppers.FatiguesCasual;
-            NavyCasual.Lower = Lowers.Fatigues;
-            NavyCasual.Shoes = Shoes.Fatigues;
-            NavyCasual.AccOne = AccOne.Casual;
-            NavyCasual.Shirt = Shirts.FatiguesCasual;
-            NavyCasual.Hat = Hats.FatiguesCasual;
+            NavyCasual.SetUpper(Uppers.FatiguesCasual);
+            NavyCasual.SetLower(Lowers.Fatigues);
+            NavyCasual.SetShoes(Shoes.Fatigues);
+            NavyCasual.SetAccOne(AccOne.Casual);
+            NavyCasual.SetShirt(Shirts.FatiguesCasual);
+            NavyCasual.SetHat(Hats.FatiguesCasual);
 
             NavyCombat = NavyCasual.Copy();
-            NavyCombat.Upper = Uppers.FatiguesCombat;
-            NavyCombat.AccTwo = AccTwo.MilitaryVest;
+            NavyCombat.SetUpper(Uppers.FatiguesCombat);
+            NavyCombat.SetAccTwo(AccTwo.MilitaryVest);
             NavyCombat.AccTwoColor = 5;
-            NavyCombat.Shirt = Shirts.FatiguesCombat;
-            NavyCombat.Hat = Hats.CombatHelmetVisorUp;
+            NavyCombat.SetShirt(Shirts.FatiguesCombat);
+            NavyCombat.SetHat(Hats.CombatHelmetVisorUp);
             NavyCombat.HatColor = 18;
 
-            TestPilot.Beard = Beards.Scuba;
-            TestPilot.Upper = Uppers.TestPilot;
+            ArmyCasual = NavyCasual.Copy();
+            ArmyCasual.UpperColor = ArmyCasual.LowerColor = ArmyCasual.ShirtColor = ArmyCasual.HatColor = 3;
+
+            ArmyCombat = NavyCombat.Copy();
+            ArmyCombat.UpperColor = ArmyCombat.LowerColor = ArmyCombat.ShirtColor = 3;
+            ArmyCombat.AccTwoColor = 5;
+            ArmyCombat.HatColor = 23;
+
+            TestPilot.SetBeard(Beards.Scuba);
+            TestPilot.SetUpper(Uppers.TestPilot);
             TestPilot.UpperColor = 3;
-            TestPilot.Lower = Lowers.TestPilot;
+            TestPilot.SetLower(Lowers.TestPilot);
             TestPilot.LowerColor = 1;
-            TestPilot.Shoes = Shoes.TestPilot;
+            TestPilot.SetShoes(Shoes.TestPilot);
             TestPilot.ShoesColor = 3;
-            TestPilot.AccOne = AccOne.Casual;
-            TestPilot.Shirt = Shirts.TestPilot;
+            TestPilot.SetAccOne(AccOne.Casual);
+            TestPilot.SetShirt(Shirts.TestPilot);
             TestPilot.ShirtColor = 1;
-            TestPilot.Hat = Hats.TestPilot;
+            TestPilot.SetHat(Hats.TestPilot);
             TestPilot.HatColor = 5;
 
             PilotCasual = NavyCasual.Copy();
-            PilotCasual.Lower = Lowers.Casual;
-            PilotCasual.Shoes = Shoes.PilotCasual;
+            PilotCasual.SetLower(Lowers.Casual);
+            PilotCasual.SetShoes(Shoes.PilotCasual);
             //PilotCasual.Teeth = Lowers.PilotCasual;
-            PilotCasual.Shirt = Shirts.PilotCasual;
+            PilotCasual.SetShirt(Shirts.PilotCasual);
             PilotCasual.ShirtColor = 5;
-            PilotCasual.Watch = Watches.PilotCasual;
+            PilotCasual.SetWatch(Watches.PilotCasual);
         }
     }
 }

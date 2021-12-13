@@ -26,7 +26,6 @@ namespace JaysModFramework
                 Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "re_armybase");
                 Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "restrictedareas");
                 Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "am_doors");
-                Debug.Log("disabling zancudo");
             }
             if (LSIADisabled)
             {
@@ -60,7 +59,6 @@ namespace JaysModFramework
         public static void SetEnabledFortZancudo(bool enabled)
         {
             ZancudoDisabled = !enabled;
-            Debug.Log("Zancudo enabled: " + enabled.ToString());
         }
         public static void SetEnabledLSIA(bool enabled)
         {

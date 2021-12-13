@@ -20,18 +20,29 @@ namespace JaysModFramework
         public int FacialHair = (int)MaleOutfitPieces.FacialHair.Default;
         public int Eyebrows = (int)MaleOutfitPieces.Eyebrows.Default;
         public int Beard = (int)MaleOutfitPieces.Beards.Default;
+        public void SetBeard(MaleOutfitPieces.Beards beard) { Beard = (int)beard; }
         public int Hair = (int)MaleOutfitPieces.Hair.Default;
         public int Upper = (int)MaleOutfitPieces.Uppers.Default;
+        public void SetUpper(MaleOutfitPieces.Uppers upper) { Upper = (int)upper; }
         public int Lower = (int)MaleOutfitPieces.Lowers.Default;
+        public void SetLower(MaleOutfitPieces.Lowers lower) { Lower = (int)lower; }
         public int Hands = (int)MaleOutfitPieces.Hands.Default;
         public int Shoes = (int)MaleOutfitPieces.Shoes.Default;
+        public void SetShoes(MaleOutfitPieces.Shoes shoes) { Shoes = (int)shoes; }
         public int AccOne = (int)MaleOutfitPieces.AccOne.Default;
+        public void SetAccOne(MaleOutfitPieces.AccOne accOne) { AccOne = (int)accOne; }
         public int AccTwo = (int)MaleOutfitPieces.AccTwo.Default;
+        public void SetAccTwo(MaleOutfitPieces.AccTwo accTwo) { AccTwo = (int)accTwo; }
         public int Shirt = (int)MaleOutfitPieces.Shirts.Default;
+        public void SetShirt(MaleOutfitPieces.Shirts shirt) { Shirt = (int)shirt; }
         public int Hat = (int)MaleOutfitPieces.Hats.Default;
+        public void SetHat(MaleOutfitPieces.Hats hat) { Hat = (int)hat; }
         public int Glasses = (int)MaleOutfitPieces.Glasses.Default;
+        public void SetGlasses(MaleOutfitPieces.Glasses glasses) { Glasses = (int)glasses; }
         public int Ears = (int)MaleOutfitPieces.Ears.Default;
+        public void SetEars(MaleOutfitPieces.Ears ears) { Ears = (int)ears; }
         public int Watch = (int)MaleOutfitPieces.Watches.Default;
+        public void SetWatch(MaleOutfitPieces.Watches watch) { Watch = (int)watch; }
         public int BeardColor = 0;
         public int HairColor = 1;
         public int UpperColor = 0;
@@ -46,7 +57,9 @@ namespace JaysModFramework
         public int EarsColor = 0;
         public int WatchColor = 0;
 
-        public Outfit() { }
+        public Outfit() {
+
+        }
         public Outfit(
             Beards beard, int beardColor, Hair hair, int hairColor, Uppers upper, int upperColor,
             Lowers lower, int lowerColor, Hands hands, int handsColor, Shoes shoes, int shoesColor,
@@ -111,10 +124,10 @@ namespace JaysModFramework
             int hairColor = HairColor;
             if (preserveHair)
             {
-                hair = GetComponent<int>(ped, OutfitComponents.Hair);
+                hair = GetComponent(ped, OutfitComponents.Hair);
                 hairColor = GetComponentColor(ped, OutfitComponents.Hair);
             }
-
+            Debug.Log(Upper);
             // Set components
             SetComponent(ped, OutfitComponents.Beard, Beard, BeardColor);
             SetComponent(ped, OutfitComponents.Hair, hair, hairColor);
@@ -136,6 +149,36 @@ namespace JaysModFramework
             SetProp(ped, Props.Glasses, Glasses, GlassesColor);
             SetProp(ped, Props.Ears, Ears, EarsColor);
             SetProp(ped, Props.Watch, Watch, WatchColor);
+        }
+        public void FromPed(Ped ped)
+        {
+            Beard = GetComponent(ped, OutfitComponents.Beard);
+            Hair = GetComponent(ped, OutfitComponents.Hair);
+            Upper = GetComponent(ped, OutfitComponents.Upper);
+            Lower = GetComponent(ped, OutfitComponents.Lower);
+            Hands = GetComponent(ped, OutfitComponents.Hands);
+            Shoes = GetComponent(ped, OutfitComponents.Shoes);
+            AccOne = GetComponent(ped, OutfitComponents.AccOne);
+            AccTwo = GetComponent(ped, OutfitComponents.AccTwo);
+            Shirt = GetComponent(ped, OutfitComponents.Shirt);
+            Hat = GetProp(ped, Props.Hat);
+            Glasses = GetProp(ped, Props.Glasses);
+            Ears = GetProp(ped, Props.Ears);
+            Watch = GetProp(ped, Props.Watch);
+
+            BeardColor = GetComponentColor(ped, OutfitComponents.Beard);
+            HairColor = GetComponentColor(ped, OutfitComponents.Hair);
+            UpperColor = GetComponentColor(ped, OutfitComponents.Upper);
+            LowerColor = GetComponentColor(ped, OutfitComponents.Lower);
+            HandsColor = GetComponentColor(ped, OutfitComponents.Hands);
+            ShoesColor = GetComponentColor(ped, OutfitComponents.Shoes);
+            AccOneColor = GetComponentColor(ped, OutfitComponents.AccOne);
+            AccTwoColor = GetComponentColor(ped, OutfitComponents.AccTwo);
+            ShirtColor = GetComponentColor(ped, OutfitComponents.Shirt);
+            HatColor = GetPropColor(ped, Props.Hat);
+            GlassesColor = GetPropColor(ped, Props.Glasses);
+            EarsColor = GetPropColor(ped, Props.Ears);
+            WatchColor = GetPropColor(ped, Props.Watch);
         }
         public void Save(SaveAndLoad save, string saveId, string prefix)
         {
@@ -244,9 +287,9 @@ namespace JaysModFramework
         {
             Function.Call(Hash._SET_PED_HAIR_COLOR, ped, color, color);
         }
-        private static T GetComponent<T>(Ped ped, OutfitComponents componentId)
+        private static int GetComponent(Ped ped, OutfitComponents componentId)
         {
-            return Function.Call<T>(Hash.GET_PED_DRAWABLE_VARIATION, ped, (int)componentId);
+            return Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, (int)componentId);
         }
         private static int GetComponentColor(Ped ped, OutfitComponents componentId)
         {
@@ -259,9 +302,13 @@ namespace JaysModFramework
             Function.Call(Hash.SET_PED_PROP_INDEX,
                     ped, propId, prop, color, 2);
         }
-        private static T GetProp<T>(Ped ped, Props propId)
+        private static int GetProp(Ped ped, Props propId)
         {
-            return Function.Call<T>(Hash.GET_PED_PROP_INDEX, ped, (int)propId);
+            return Function.Call<int>(Hash.GET_PED_PROP_INDEX, ped, (int)propId);
+        }
+        private static int GetPropColor(Ped ped, Props propId)
+        {
+            return Function.Call<int>(Hash.GET_PED_PROP_TEXTURE_INDEX, ped, (int)propId);
         }
         #endregion Set/Get Props
     }

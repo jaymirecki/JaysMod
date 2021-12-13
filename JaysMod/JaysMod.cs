@@ -27,7 +27,7 @@ namespace JaysMod
             set { GTA.World.Weather = value; }
         }
         
-        private int Minutes;
+        private int Minutes = 0;
 
         private static bool DEBUG = true;
 
@@ -38,43 +38,47 @@ namespace JaysMod
 
             Hud = InstantiateScript<HUD>();
 
-            Tick += onTick;
-            KeyDown += onKeyDown;
+            Tick += OnTick;
+            KeyDown += OnKeyDown;
         }
 
         public void Load(string saveId)
         {
-            SetupGame();
             SaveId = saveId;
+            SetupGame(SaverLoader.Load(SaveId, "time", 432500000000));
             PlayerNPC.Load(SaverLoader, SaveId, "player");
-            World.CurrentDate = new DateTime(SaverLoader.Load(SaveId, "time", 432500000000));
+            RespawnManager.Activate(PlayerNPC);
         }
         public void Load()
         {
             Load(SaveId);
         }
-        private void SetupGame()
+        private void SetupGame(long time)
         {
+            Function.Call(Hash.SET_MINIMAP_HIDE_FOW, true);
             Minutes = DateTime.Now.Minute;
+            World.CurrentDate = new DateTime(time);
             World.IsClockPaused = true;
             MaleOutfitTemplates.SetupOutfits();
             SaverLoader = new SaveAndLoad("JaysMod.ini");
             LoadModel(1885233650);
             PlayerNPC = new NPC("player", Game.Player.Character);
             Weather = Weather.ExtraSunny;
-            JaysModFramework.RestrictedAreas.SetEnabledFortZancudo(false);
+            RestrictedAreas.SetEnabledFortZancudo(false);
+            RealTimeDuration.Activate();
         }
         public void New(string saveId)
         {
-            SetupGame();
             SaveId = saveId;
-            PlayerNPC.Outfit = MaleOutfitTemplates.NavyCombat;
-            World.CurrentDate = new DateTime(432500000000);
+            SetupGame(432500000000);
+            PlayerNPC.Position = new Vector3(0, 0, 72);
+            PlayerNPC.Outfit = MaleOutfitTemplates.ArmyCombat;
+            RespawnManager.Activate(PlayerNPC);
         }
         public void Save()
         {
             PlayerNPC.Save(SaverLoader, SaveId, "player");
-            SaverLoader.Save(SaveId, "time", GTA.World.CurrentDate.Ticks);
+            SaverLoader.Save(SaveId, "time", World.CurrentDate.Ticks);
 
             SaverLoader.Save();
         }
@@ -83,7 +87,10 @@ namespace JaysMod
         {
             Hud.Abort();
             Hud = null;
-            JaysModFramework.RestrictedAreas.SetEnabledFortZancudo(true);
+            Function.Call(Hash.SET_MINIMAP_HIDE_FOW, false);
+            RestrictedAreas.SetEnabledFortZancudo(true);
+            RealTimeDuration.Deactivate();
+            RespawnManager.Deactivate();
 
             World.IsClockPaused = false;
         }
@@ -97,49 +104,14 @@ namespace JaysMod
         {
             Debug(message.ToString());
         }
-        void onTick(object sender, EventArgs e)
+        void OnTick(object sender, EventArgs e)
         {
-            if (DateTime.Now.Minute != Minutes)
-            {
-                World.CurrentDate = World.CurrentDate.AddMinutes(1);
-                Minutes = DateTime.Now.Minute;
-            }
             if (ModMenuPool != null)
                 ModMenuPool.ProcessMenus();
-            if ((Game.Player.IsDead || PlayerNPC.Health == 0 || PlayerNPC.IsDead))
-            {
-                Respawn();
-            }
-        }
-        private void Respawn()
-        {
-            // Prevent default death behavior
-            Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "respawn_controller");
-            Ped playerPed = Game.Player.Character;
-            Function.Call(Hash.NETWORK_REQUEST_CONTROL_OF_ENTITY, playerPed);
-            Function.Call(Hash.NETWORK_RESURRECT_LOCAL_PLAYER, playerPed.Position.X, playerPed.Position.Y, playerPed.Position.Z, 0f, 0f, 0f);
-            playerPed.IsInvincible = true;
-            Function.Call(Hash.IGNORE_NEXT_RESTART, true);
-            GTA.UI.Screen.StopEffects();
-
-            // Custom death behavior
-            //Function.Call(Hash._RESET_LOCALPLAYER_STATE);
-            Function.Call(Hash.RESET_PLAYER_ARREST_STATE, playerPed);
-            //playerPed.Ragdoll();
-            Wait(5000);
-
-            // Fade and respawn
-            GTA.UI.Screen.FadeOut(2000);
-            while (!GTA.UI.Screen.IsFadedOut)
-                Yield();
-            playerPed.CancelRagdoll();
-            Function.Call(Hash.DISPLAY_HUD, true);
-            Function.Call(Hash.DISPLAY_RADAR, true);
-            GTA.Game.TimeScale = 1f;
-            Load();
-            Wait(2000);
-            playerPed.IsInvincible = false;
-            GTA.UI.Screen.FadeIn(2000);
+            Function.Call(Hash.SET_RADAR_AS_INTERIOR_THIS_FRAME, -1827983545, -2250f, 3100f, 0, 0);
+            //Function.Call(Hash.SET_RADAR_AS_INTERIOR_THIS_FRAME, 1076883030, 1700f, 2580f, 0, 0);
+            //Function.Call(Hash.SET_RADAR_AS_INTERIOR_THIS_FRAME, -1827983545, 0, 0, 0, 0);
+            Function.Call(Hash.SET_RADAR_AS_EXTERIOR_THIS_FRAME);
         }
 
         public static void LoadModel(string ModelName) {
@@ -163,7 +135,7 @@ namespace JaysMod
             }
         }
 
-        void onKeyDown(object sender, KeyEventArgs e)
+        void OnKeyDown(object sender, KeyEventArgs e)
         {
             Ped player = Game.Player.Character;
             if (e.KeyCode == Keys.J)
