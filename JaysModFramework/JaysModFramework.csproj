@@ -32,11 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NativeUI">
+      <HintPath>..\JaysMod\References\NativeUI.dll</HintPath>
+    </Reference>
     <Reference Include="ScriptHookVDotNet3">
       <HintPath>..\JaysMod\References\ScriptHookVDotNet3.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Closet.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="RealTimeDuration.cs" />
     <Compile Include="RespawnManager.cs" />
