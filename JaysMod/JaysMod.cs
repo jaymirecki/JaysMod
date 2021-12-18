@@ -14,6 +14,7 @@ namespace JaysMod
     {
         private MenuPool ModMenuPool;
         private UIMenu planeMenu;
+        private UIMenu ClosetMenu;
         SaveAndLoad SaverLoader;
         private string SaveId;
 
@@ -66,6 +67,8 @@ namespace JaysMod
             Weather = Weather.ExtraSunny;
             RestrictedAreas.SetEnabledFortZancudo(false);
             RealTimeDuration.Activate();
+            ClosetMenu = Closet.Menu(PlayerNPC, ModMenuPool);
+            ModMenuPool.Add(ClosetMenu);
         }
         public void New(string saveId)
         {
@@ -167,6 +170,17 @@ namespace JaysMod
                 //{
                 //    planeMenu.Visible = true;
                 //}
+            }
+            else if (e.KeyCode == Keys.F6)
+            {
+                if (ModMenuPool.IsAnyMenuOpen())
+                {
+                    ModMenuPool.CloseAllMenus();
+                }
+                else
+                {
+                    ClosetMenu.Visible = true;
+                }
             }
         }
 

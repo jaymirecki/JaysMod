@@ -28,7 +28,7 @@ namespace JaysMod
             MainMenu = new UIMenu("Jay's Mod", "SELECT AN OPTION");
             modMenuPool.Add(MainMenu);
 
-            KeyDown += onKeyDown;
+            KeyDown += OnKeyDown;
             Tick += onTick;
         }
         private void BuildMenu()
@@ -111,7 +111,7 @@ namespace JaysMod
                 }
             };
         }
-        void onKeyDown(object sender, KeyEventArgs e)
+        void OnKeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F5 && !modMenuPool.IsAnyMenuOpen())
             {

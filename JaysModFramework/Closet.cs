@@ -11,47 +11,27 @@ namespace JaysModFramework
     public static class Closet
     {
         private const string Title = "Closet";
-        private const string Description = "Choose an outfit";
+        private const string Description = "Manage your outfit";
         private static Outfit DefaultOutfit;
-        public static UIMenu Menu(NPC player)
+        private static UIMenu OutfitMenu;
+        public static UIMenu Menu(NPC player, MenuPool menuPool)
         {
             UIMenu closetMenu = new UIMenu(Title, Description);
-            AddMenuItems(closetMenu, player);
+            AddMenuItems(closetMenu, player, menuPool);
 
             return closetMenu;
         }
         public static void SubMenu(NPC player, MenuPool menuPool, UIMenu menu)
         {
             UIMenu closetMenu = menuPool.AddSubMenu(menu, Title, Description);
-            AddMenuItems(closetMenu, player);
+            AddMenuItems(closetMenu, player, menuPool);
         }
-        private static void AddMenuItems(UIMenu menu, NPC player)
+        private static void AddMenuItems(UIMenu menu, NPC player, MenuPool menuPool)
         {
-            List<Outfit> outfits = new List<Outfit>() { 
-                MaleOutfitTemplates.Casual, 
-                MaleOutfitTemplates.Formal,
-                MaleOutfitTemplates.Combat,
-                MaleOutfitTemplates.Scuba,
-                MaleOutfitTemplates.Beach,
-                MaleOutfitTemplates.Bike,
-                MaleOutfitTemplates.NavyCasual,
-                MaleOutfitTemplates.NavyCombat,
-                MaleOutfitTemplates.TestPilot,
-            };
-            List<object> outfitNames = new List<object>() { 
-                "Casual", "Formal", "Combat", "Scuba", "Beach", "Bike", "Navy Casual", "Navy Combat", "Test Pilot",
-            };
-            UIMenuListItem outfitList = new UIMenuListItem("Outfits", outfitNames, 0);
-            player.Outfit = outfits[0].Copy();
-            outfitList.OnListChanged += (UIMenuListItem sender, int newIndex) =>
-            {
-                player.Outfit = outfits[newIndex].Copy();
-            };
+            AddOutfitMenu(menu, player, menuPool);
 
-            UIMenuItem accept = new UIMenuItem("Accept", "Save outfit changes");
-            UIMenuItem cancel = new UIMenuItem("Cancel", "Discard outfit changes");
-
-            menu.AddItem(outfitList);
+            UIMenuItem accept = new UIMenuItem("Accept", "Save the current outfit");
+            UIMenuItem cancel = new UIMenuItem("Cancel", "Cancel outfit changes");
             menu.AddItem(accept);
             menu.AddItem(cancel);
 
@@ -59,17 +39,73 @@ namespace JaysModFramework
             {
                 if (selectedItem == accept)
                 {
-                    DefaultOutfit = player.Outfit;
+                    AcceptOutfit(player);
                 }
-                else if (selectedItem == cancel && DefaultOutfit != null)
+                else if (selectedItem == cancel)
                 {
-                    player.Outfit = DefaultOutfit;
+                    CancelOutfit(player);
                 }
             };
 
             menu.OnMenuOpen += (UIMenu sender) =>
             {
-                DefaultOutfit = player.Outfit;
+                if (DefaultOutfit == null)
+                {
+                    AcceptOutfit(player);
+                }
+            };
+
+            menu.OnMenuClose += (UIMenu sender) =>
+            {
+                OnClose(player);
+            };
+        }
+        private static void OnClose(NPC player)
+        {
+            if (!AreAnyMenusOpen())
+            {
+                CancelOutfit(player);
+            }
+        }
+        private static bool AreAnyMenusOpen()
+        {
+            return OutfitMenu != null && OutfitMenu.Visible;
+        }
+        private static void AcceptOutfit(NPC player)
+        {
+            DefaultOutfit = player.Outfit.Copy();
+        }
+        private static void CancelOutfit(NPC player)
+        {
+            player.Outfit = DefaultOutfit.Copy();
+        }
+        private static void AddOutfitMenu(UIMenu superMenu, NPC player, MenuPool menuPool)
+        {
+            Dictionary<string,Outfit> outfitMap = new Dictionary<string, Outfit>();
+            outfitMap.Add("Casual", MaleOutfitTemplates.Casual);
+            outfitMap.Add("Formal", MaleOutfitTemplates.Formal);
+            outfitMap.Add("Combat", MaleOutfitTemplates.Combat);
+            outfitMap.Add("Scuba", MaleOutfitTemplates.Scuba);
+            outfitMap.Add("Beach", MaleOutfitTemplates.Beach);
+            outfitMap.Add("Bike", MaleOutfitTemplates.Bike);
+            outfitMap.Add("Navy Casual", MaleOutfitTemplates.NavyCasual);
+            outfitMap.Add("Navy Combat", MaleOutfitTemplates.NavyCombat);
+            outfitMap.Add("Test Pilot", MaleOutfitTemplates.TestPilot);
+
+            UIMenu OutfitMenu = menuPool.AddSubMenu(superMenu, "Outfits", "Choose an outfit");
+            foreach(string name in outfitMap.Keys)
+            {
+                OutfitMenu.AddItem(new UIMenuItem(name));
+            }
+
+            OutfitMenu.OnItemSelect += (UIMenu sender, UIMenuItem selectedItem, int index) =>
+            {
+                player.Outfit = outfitMap.Values.ToArray()[index].Copy();
+            };
+
+            OutfitMenu.OnMenuClose += (UIMenu sender) =>
+            {
+                OnClose(player);
             };
         }
     }
