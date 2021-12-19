@@ -35,6 +35,7 @@ namespace JaysMod
         public JaysMod()
         {
             ModMenuPool = new MenuPool();
+            ModMenuPool.ResetCursorOnOpen = true;
             Sirens = new Dictionary<Vehicle, bool>();
 
             Hud = InstantiateScript<HUD>();
@@ -49,6 +50,8 @@ namespace JaysMod
             SetupGame(SaverLoader.Load(SaveId, "time", 432500000000));
             PlayerNPC.Load(SaverLoader, SaveId, "player");
             RespawnManager.Activate(PlayerNPC);
+            VisorManager.Activate(PlayerNPC);
+            ScubaManager.Activate(PlayerNPC);
         }
         public void Load()
         {
@@ -62,7 +65,7 @@ namespace JaysMod
             World.IsClockPaused = true;
             MaleOutfitTemplates.SetupOutfits();
             SaverLoader = new SaveAndLoad("JaysMod.ini");
-            LoadModel(1885233650);
+            LoadModel("mp_m_freemode_01");
             PlayerNPC = new NPC("player", Game.Player.Character);
             Weather = Weather.ExtraSunny;
             RestrictedAreas.SetEnabledFortZancudo(false);
@@ -77,6 +80,8 @@ namespace JaysMod
             PlayerNPC.Position = new Vector3(0, 0, 72);
             PlayerNPC.Outfit = MaleOutfitTemplates.ArmyCombat;
             RespawnManager.Activate(PlayerNPC);
+            VisorManager.Activate(PlayerNPC);
+            ScubaManager.Activate(PlayerNPC);
         }
         public void Save()
         {
@@ -94,18 +99,10 @@ namespace JaysMod
             RestrictedAreas.SetEnabledFortZancudo(true);
             RealTimeDuration.Deactivate();
             RespawnManager.Deactivate();
+            VisorManager.Deactivate();
+            ScubaManager.Deactivate();
 
             World.IsClockPaused = false;
-        }
-
-        public static void Debug(string message)
-        {
-            if (DEBUG)
-                GTA.UI.Notification.Show(message);
-        }
-        public static void Debug<T>(T message)
-        {
-            Debug(message.ToString());
         }
         void OnTick(object sender, EventArgs e)
         {

@@ -1,12 +1,4 @@
-﻿using GTA;
-using GTA.Native;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JaysModFramework.MaleOutfitPieces
+﻿namespace JaysModFramework.MaleOutfitPieces
 {
     #region HeadOverlay
     public enum Blemishes
@@ -27,7 +19,7 @@ namespace JaysModFramework.MaleOutfitPieces
     {
         Default = 0,
         Combat = 35,
-        Scuba = 122,
+        ScubaHood = 122,
     }
     public enum Hair
     {
@@ -68,7 +60,8 @@ namespace JaysModFramework.MaleOutfitPieces
         Formal = 3,
         Combat = 24,
         Bike = 4,
-        Scuba = 67,
+        ScubaFlippers = 67,
+        ScubaShoes = 69,
         Beach = 34,
         Fatigues = 35,
         TestPilot = 87,
@@ -81,7 +74,7 @@ namespace JaysModFramework.MaleOutfitPieces
         Formal = 73,
         Combat = 15,
         Bike = 142,
-        Scuba = 123,
+        ScubaTank = 123,
     }
     public enum AccTwo
     {
@@ -107,15 +100,17 @@ namespace JaysModFramework.MaleOutfitPieces
     public enum Hats
     {
         Default = -1,
+        CombatHelmetVisorDown = 116,
         CombatHelmetVisorUp = 117,
-        Bike = 70,
+        MotorcycleVisorDown = 62,
+        MotorcycleVisorUp = 72,
         FatiguesCasual = 107,
         TestPilot = 111,
     }
     public enum Glasses
     {
         Default = -1,
-        Scuba = 26,
+        ScubaMask = 26,
     }
     public enum Ears
     {

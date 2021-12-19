@@ -1,5 +1,6 @@
 ﻿using GTA;
 using GTA.Math;
+using GTA.Native;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,16 +38,33 @@ namespace JaysModFramework
         {
             get { return BasePed.IsDead; }
         }
+        public float HeightAboveGround
+        {
+            get { return BasePed.HeightAboveGround; }
+        }
         #endregion Base Values
         public Outfit Outfit
         {
-            get { return _outfit; }
+            get {
+                Outfit outfit = new Outfit();
+                outfit.FromPed(BasePed);
+                return outfit; }
             set {
-                value.ApplyToPed(BasePed, true);
-                _outfit = value;
+                value.Hair = Hair;
+                value.HairColor = HairColor;
+                value.ApplyToPed(BasePed, false);
             }
         }
-        private Outfit _outfit;
+        public bool IsScuba
+        {
+            get { return Outfit.GetComponent(BasePed, OutfitComponents.AccOne) == (int)MaleOutfitPieces.AccOne.ScubaTank; }
+        }
+        public bool IsAccOneDefaulted
+        {
+            get { return Outfit.GetComponent(BasePed, OutfitComponents.AccOne) == 0; }
+        }
+        public int Hair = 19;
+        public int HairColor = 1;
         public NPC(string id, Ped ped): this(ped)
         {
             ID = id;

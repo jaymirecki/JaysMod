@@ -16,6 +16,7 @@ namespace JaysModFramework
         public static Outfit Combat = new Outfit();
         public static Outfit Bike = new Outfit();
         public static Outfit Scuba = new Outfit();
+        public static Outfit ScubaLand = new Outfit();
         public static Outfit Beach = new Outfit();
         public static Outfit NavyCasual = new Outfit();
         public static Outfit NavyCombat = new Outfit();
@@ -61,15 +62,21 @@ namespace JaysModFramework
             Bike.ShoesColor = 2;
             Bike.SetAccOne(AccOne.Bike);
             Bike.SetShirt(Shirts.Bike);
-            Bike.SetHat(Hats.Bike);
+            Bike.SetHat(Hats.MotorcycleVisorUp);
+            Bike.HatColor = 9;
 
-            Scuba.SetBeard(Beards.Scuba);
+            Scuba.SetBeard(Beards.ScubaHood);
             Scuba.SetUpper(Uppers.Scuba);
             Scuba.SetLower(Lowers.Scuba);
-            Scuba.SetShoes(Shoes.Scuba);
-            Scuba.SetAccOne(AccOne.Scuba);
+            Scuba.SetShoes(Shoes.ScubaFlippers);
+            Scuba.SetAccOne(AccOne.ScubaTank);
             Scuba.SetShirt(Shirts.Combat);
-            Scuba.SetGlasses(Glasses.Scuba);
+            Scuba.SetGlasses(Glasses.ScubaMask);
+
+            ScubaLand = Scuba.Copy();
+            ScubaLand.SetAccOne(AccOne.Casual);
+            ScubaLand.SetShoes(Shoes.ScubaShoes);
+            ScubaLand.SetGlasses(Glasses.Default);
 
             Beach.SetUpper(Uppers.Beach);
             Beach.SetLower(Lowers.Beach);
@@ -101,7 +108,7 @@ namespace JaysModFramework
             ArmyCombat.AccTwoColor = 5;
             ArmyCombat.HatColor = 23;
 
-            TestPilot.SetBeard(Beards.Scuba);
+            TestPilot.SetBeard(Beards.ScubaHood);
             TestPilot.SetUpper(Uppers.TestPilot);
             TestPilot.UpperColor = 3;
             TestPilot.SetLower(Lowers.TestPilot);

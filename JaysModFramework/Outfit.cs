@@ -76,7 +76,7 @@ namespace JaysModFramework
             int lower, int lowerColor, int hands, int handsColor, int shoes, int shoesColor,
             int accOne, int accOneColor, int accTwo, int accTwoColor, int shirt, int shirtColor,
             int hat, int hatColor, int glasses, int glassesColor, int ears, int earsColor, int watch, int watchColor
-            )
+            ): this()
         {
             Beard = beard;
             Hair = hair;
@@ -127,7 +127,10 @@ namespace JaysModFramework
                 hair = GetComponent(ped, OutfitComponents.Hair);
                 hairColor = GetComponentColor(ped, OutfitComponents.Hair);
             }
-            Debug.Log(Upper);
+            if (Beard == (int)Beards.ScubaHood)
+            {
+                hair = 0;
+            }
             // Set components
             SetComponent(ped, OutfitComponents.Beard, Beard, BeardColor);
             SetComponent(ped, OutfitComponents.Hair, hair, hairColor);
@@ -287,7 +290,7 @@ namespace JaysModFramework
         {
             Function.Call(Hash._SET_PED_HAIR_COLOR, ped, color, color);
         }
-        private static int GetComponent(Ped ped, OutfitComponents componentId)
+        internal static int GetComponent(Ped ped, OutfitComponents componentId)
         {
             return Function.Call<int>(Hash.GET_PED_DRAWABLE_VARIATION, ped, (int)componentId);
         }

@@ -57,7 +57,7 @@ namespace JaysMod
                 }
             };
 
-            Debug();
+            DebugMenu();
         }
         private void LoadMenu(bool modEnabled)
         {
@@ -173,7 +173,7 @@ namespace JaysMod
                 World.CurrentDate = originalDateTime;
             }
         }
-        void Debug()
+        void DebugMenu()
         {
             UIMenu submenu = modMenuPool.AddSubMenu(MainMenu, "Debug");
             UIMenuItem currPos = new UIMenuItem("Current Position");
@@ -190,11 +190,11 @@ namespace JaysMod
             {
                 Ped player = Game.Player.Character;
                 if (item == currPos)
-                    JaysMod.Debug("Current Position: " + player.Position.ToString() + " H:" + player.Heading.ToString());
+                    Debug.Log("Current Position: " + player.Position.ToString() + " H:" + player.Heading.ToString());
                 else if (item == vehPos)
-                    JaysMod.Debug("Vehicle Position: " + player.CurrentVehicle.Position.ToString() + " H:" + player.CurrentVehicle.Heading.ToString());
+                    Debug.Log("Vehicle Position: " + player.CurrentVehicle.Position.ToString() + " H:" + player.CurrentVehicle.Heading.ToString());
                 else if (item == vehName)
-                    JaysMod.Debug("Vehicle Name: " + player.CurrentVehicle.Model.ToString());
+                    Debug.Log("Vehicle Name: " + player.CurrentVehicle.Model.ToString());
                 else if (item == zoneId)
                 {
                     Vector3 position = Game.Player.Character.Position;

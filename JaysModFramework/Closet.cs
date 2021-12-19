@@ -13,18 +13,19 @@ namespace JaysModFramework
         private const string Title = "Closet";
         private const string Description = "Manage your outfit";
         private static Outfit DefaultOutfit;
+        private static UIMenu ClosetMenu;
         private static UIMenu OutfitMenu;
         public static UIMenu Menu(NPC player, MenuPool menuPool)
         {
-            UIMenu closetMenu = new UIMenu(Title, Description);
-            AddMenuItems(closetMenu, player, menuPool);
+            ClosetMenu = new UIMenu(Title, Description);
+            AddMenuItems(ClosetMenu, player, menuPool);
 
-            return closetMenu;
+            return ClosetMenu;
         }
         public static void SubMenu(NPC player, MenuPool menuPool, UIMenu menu)
         {
-            UIMenu closetMenu = menuPool.AddSubMenu(menu, Title, Description);
-            AddMenuItems(closetMenu, player, menuPool);
+            ClosetMenu = menuPool.AddSubMenu(menu, Title, Description);
+            AddMenuItems(ClosetMenu, player, menuPool);
         }
         private static void AddMenuItems(UIMenu menu, NPC player, MenuPool menuPool)
         {
@@ -69,7 +70,8 @@ namespace JaysModFramework
         }
         private static bool AreAnyMenusOpen()
         {
-            return OutfitMenu != null && OutfitMenu.Visible;
+            return (ClosetMenu != null && ClosetMenu.Visible) ||
+                (OutfitMenu != null && OutfitMenu.Visible);
         }
         private static void AcceptOutfit(NPC player)
         {
@@ -92,7 +94,8 @@ namespace JaysModFramework
             outfitMap.Add("Navy Combat", MaleOutfitTemplates.NavyCombat);
             outfitMap.Add("Test Pilot", MaleOutfitTemplates.TestPilot);
 
-            UIMenu OutfitMenu = menuPool.AddSubMenu(superMenu, "Outfits", "Choose an outfit");
+            OutfitMenu = menuPool.AddSubMenu(superMenu, "Outfits", "Choose an outfit");
+
             foreach(string name in outfitMap.Keys)
             {
                 OutfitMenu.AddItem(new UIMenuItem(name));

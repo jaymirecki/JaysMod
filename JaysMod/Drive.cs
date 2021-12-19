@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GTA;
 using GTA.Native;
 using GTA.Math;
+using JaysModFramework;
 
 namespace JaysMod
 {
@@ -120,7 +121,7 @@ namespace JaysMod
                 DriveToCoord(pilot, plane, destination, PlaneSpeeds[plane.Model.Hash].Taxi, DrivingStyle.Normal);
                 Yield();
             }
-            JaysMod.Debug("Close Taxiing");
+            Debug.Log("Close Taxiing");
             while (plane.Position.DistanceTo2D(destination) > 5)
             {
                 DriveToCoord(pilot, plane, destination, PlaneSpeeds[plane.Model.Hash].Taxi / 2, DrivingStyle.Normal);
