@@ -6,9 +6,13 @@ using GTA.Native;
 using GTA.Math;
 using NativeUI;
 using JaysModFramework;
+using System.IO;
 
 namespace JaysMod
 {
+    using Vector3 = JaysModFramework.Vector3;
+    using Vehicle = JaysModFramework.Vehicle;
+
     [ScriptAttributes(NoDefaultInstance = true)]
     public partial class JaysMod : Script
     {
@@ -17,8 +21,6 @@ namespace JaysMod
         private UIMenu ClosetMenu;
         SaveAndLoad SaverLoader;
         private string SaveId;
-
-        private Dictionary<Vehicle, bool> Sirens;
 
         private HUD Hud;
         private NPC PlayerNPC;
@@ -36,7 +38,6 @@ namespace JaysMod
         {
             ModMenuPool = new MenuPool();
             ModMenuPool.ResetCursorOnOpen = true;
-            Sirens = new Dictionary<Vehicle, bool>();
 
             Hud = InstantiateScript<HUD>();
 
@@ -47,48 +48,62 @@ namespace JaysMod
         public void Load(string saveId)
         {
             SaveId = saveId;
-            SetupGame(SaverLoader.Load(SaveId, "time", 432500000000));
-            PlayerNPC.Load(SaverLoader, SaveId, "player");
-            RespawnManager.Activate(PlayerNPC);
-            VisorManager.Activate(PlayerNPC);
-            ScubaManager.Activate(PlayerNPC);
+            SetupGame();
         }
         public void Load()
         {
             Load(SaveId);
         }
-        private void SetupGame(long time)
+        private void SetupGame()
         {
             Function.Call(Hash.SET_MINIMAP_HIDE_FOW, true);
             Minutes = DateTime.Now.Minute;
-            World.CurrentDate = new DateTime(time);
             World.IsClockPaused = true;
             MaleOutfitTemplates.SetupOutfits();
-            SaverLoader = new SaveAndLoad("JaysMod.ini");
             LoadModel("mp_m_freemode_01");
-            PlayerNPC = new NPC("player", Game.Player.Character);
-            Weather = Weather.ExtraSunny;
-            RestrictedAreas.SetEnabledFortZancudo(false);
-            RealTimeDuration.Activate();
+            TextReader reader = new StreamReader("./scripts/JMF/Saves/test1.xml");
+            new State().DeserializeFromXML(reader);
+            PlayerNPC = NPC.PlayerNPC;
+            RestrictedAreas.DisableAll();
+            ActivateManagers();
             ClosetMenu = Closet.Menu(PlayerNPC, ModMenuPool);
             ModMenuPool.Add(ClosetMenu);
+            SpawnCarrier();
         }
-        public void New(string saveId)
+        private void ActivateManagers()
         {
-            SaveId = saveId;
-            SetupGame(432500000000);
-            PlayerNPC.Position = new Vector3(0, 0, 72);
-            PlayerNPC.Outfit = MaleOutfitTemplates.ArmyCombat;
+            RealTimeDuration.Activate();
+            BigMapManager.Activate();
+            SirenManager.Activate();
             RespawnManager.Activate(PlayerNPC);
             VisorManager.Activate(PlayerNPC);
             ScubaManager.Activate(PlayerNPC);
         }
+        private void DeactivateManagers()
+        {
+            RealTimeDuration.Deactivate();
+            BigMapManager.Deactivate();
+            SirenManager.Deactivate();
+            RespawnManager.Deactivate();
+            VisorManager.Deactivate();
+            ScubaManager.Deactivate();
+        }
+
+        private void SpawnCarrier()
+        {
+            IPLLoader.Load(IPL.AircraftCarrier);
+            IPLLoader.Load(IPL.DiamondCasino);
+        }
+        public void New(string saveId)
+        {
+            SaveId = saveId;
+            SetupGame();
+            //Vehicle.SpawnVehicle(VehicleHash.Nimbus, new Vector3(1544.28f, 3143.25f, 41.5f), 313.05f);
+        }
         public void Save()
         {
-            PlayerNPC.Save(SaverLoader, SaveId, "player");
-            SaverLoader.Save(SaveId, "time", World.CurrentDate.Ticks);
-
-            SaverLoader.Save();
+            TextWriter writer = new StreamWriter("./scripts/JMF/Saves/test1.xml");
+            new State().SerializeToXml(writer);
         }
 
         public void Unload()
@@ -96,21 +111,18 @@ namespace JaysMod
             Hud.Abort();
             Hud = null;
             Function.Call(Hash.SET_MINIMAP_HIDE_FOW, false);
-            RestrictedAreas.SetEnabledFortZancudo(true);
-            RealTimeDuration.Deactivate();
-            RespawnManager.Deactivate();
-            VisorManager.Deactivate();
-            ScubaManager.Deactivate();
+            RestrictedAreas.EnableAll();
+            DeactivateManagers();
 
             World.IsClockPaused = false;
+            IPLLoader.UnloadAll();
         }
         void OnTick(object sender, EventArgs e)
         {
             if (ModMenuPool != null)
                 ModMenuPool.ProcessMenus();
-            Function.Call(Hash.SET_RADAR_AS_INTERIOR_THIS_FRAME, -1827983545, -2250f, 3100f, 0, 0);
-            //Function.Call(Hash.SET_RADAR_AS_INTERIOR_THIS_FRAME, 1076883030, 1700f, 2580f, 0, 0);
-            //Function.Call(Hash.SET_RADAR_AS_INTERIOR_THIS_FRAME, -1827983545, 0, 0, 0, 0);
+            Function.Call(Hash.SET_RADAR_AS_INTERIOR_THIS_FRAME, 1076883030, 1700f, 2580f, 0, 0); // Show Prison Map
+            Function.Call(Hash.SET_RADAR_AS_INTERIOR_THIS_FRAME, -1827983545, -2250f, 3100f, 0, 0); // Show Fort Zancudo Map
             Function.Call(Hash.SET_RADAR_AS_EXTERIOR_THIS_FRAME);
         }
 
@@ -138,28 +150,7 @@ namespace JaysMod
         void OnKeyDown(object sender, KeyEventArgs e)
         {
             Ped player = Game.Player.Character;
-            if (e.KeyCode == Keys.J)
-            {
-                if (player.IsInVehicle())
-                {
-                    Vehicle vehicle = new Vehicle(player.CurrentVehicle);
-                    if (vehicle.HasSiren && Sirens.ContainsKey(vehicle))
-                    {
-                        bool silent;
-                        Sirens.TryGetValue(vehicle, out silent);
-                        vehicle.IsSirenSilent = !silent;
-                        Sirens.Remove(vehicle);
-                        Sirens.Add(vehicle, !silent);
-                    }
-                    else if (vehicle.HasSiren)
-                    {
-                        bool silent = true;
-                        vehicle.IsSirenSilent = silent;
-                        Sirens.Add(vehicle, silent);
-                    }
-                }
-            }
-            else if (e.KeyCode == Keys.E)
+            if (e.KeyCode == Keys.E)
             {
                 //if (player.IsInVehicle() && 
                 //    player.CurrentVehicle == playerPlane.BaseVehicle && 

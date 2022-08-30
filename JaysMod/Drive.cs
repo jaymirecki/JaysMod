@@ -10,6 +10,8 @@ using JaysModFramework;
 
 namespace JaysMod
 {
+    using JMF = JaysModFramework;
+    using Vector3 = JaysModFramework.Vector3;
     public struct PlaneSpeed
     {
         public float Taxi, Ground, Air;
@@ -101,20 +103,20 @@ namespace JaysMod
             return mph * 0.44704f;
         }
 
-        public static void DriveToCoord(Ped driver, Vehicle vehicle, Vector3 destination, float speed, DrivingStyle drivingStyle)
+        public static void DriveToCoord(Ped driver, JMF.Vehicle vehicle, Vector3 destination, float speed, DrivingStyle drivingStyle)
         {
             Function.Call(Hash.TASK_VEHICLE_DRIVE_TO_COORD, driver, vehicle.BaseVehicle,
                           destination.X, destination.Y, destination.Z, speed * 0.44704f, 5f, vehicle.GetHashCode(), drivingStyle, 1f, true);
         }
 
-        public static void Normal(Ped driver, Vehicle vehicle, Vector3 destination, float speed)
+        public static void Normal(Ped driver, JMF.Vehicle vehicle, Vector3 destination, float speed)
         {
             GTA.UI.Notification.Show("Drive normal to " + destination.ToString());
             DriveToCoord(driver, vehicle, destination, speed, DrivingStyle.Normal);
             while (vehicle.Position.DistanceTo2D(destination) > 5) Yield();
         }
 
-        public static void PlaneTaxi(Ped pilot, Vehicle plane, Vector3 destination)
+        public static void PlaneTaxi(Ped pilot, JMF.Vehicle plane, Vector3 destination)
         {
             while (plane.Position.DistanceTo2D(destination) > 30)
             {
@@ -129,7 +131,7 @@ namespace JaysMod
             }
         }
 
-        public static void PlaneTakeoff(Ped pilot, Vehicle plane, RunwayID runwayID)
+        public static void PlaneTakeoff(Ped pilot, JMF.Vehicle plane, RunwayID runwayID)
         {
             Runway runway = Runways[(int)runwayID];
             Vector3 start = plane.Position;
@@ -159,7 +161,7 @@ namespace JaysMod
             plane.LandingGearState = VehicleLandingGearState.Retracting;
         }
 
-        public static void PlaneFly(Ped pilot, Vehicle plane, Vector3 destination)
+        public static void PlaneFly(Ped pilot, JMF.Vehicle plane, Vector3 destination)
         {
             PlaneSpeed planeSpeed;
             PlaneSpeeds.TryGetValue(plane.Model.Hash, out planeSpeed);
@@ -168,7 +170,7 @@ namespace JaysMod
             while (plane.Position.DistanceTo(destination) > 10f) Yield();
         }
         
-        public static void PlaneFlySlow(Ped pilot, Vehicle plane, Vector3 destination, float proximity)
+        public static void PlaneFlySlow(Ped pilot, JMF.Vehicle plane, Vector3 destination, float proximity)
         {
             PlaneSpeed planeSpeed;
             PlaneSpeeds.TryGetValue(plane.Model.Hash, out planeSpeed);
@@ -184,7 +186,7 @@ namespace JaysMod
             }
         }
 
-        public static void PlaneFlyWarp(Ped pilot, Vehicle plane)
+        public static void PlaneFlyWarp(Ped pilot, JMF.Vehicle plane)
         {
             Vector3 destination = new Vector3(-7000, 600, 2250);
             float speed = 500;
@@ -192,7 +194,7 @@ namespace JaysMod
             //while (plane.Position.DistanceTo(destination) > 25f) Wait(100);
         }
 
-        public static void PlaneLand(Ped pilot, Vehicle plane, RunwayID runwayId)
+        public static void PlaneLand(Ped pilot, JMF.Vehicle plane, RunwayID runwayId)
         {
             Runway runway = Runways[(int)runwayId];
             Vector3 touchdown = (runway.Start + runway.End) / 2;
@@ -208,7 +210,7 @@ namespace JaysMod
             PlaneFlySlow(pilot, plane, approach.Value, 20f);
             //GTA.UI.Screen.FadeIn(2000);
             plane.LandingGearState = VehicleLandingGearState.Deploying;
-            pilot.Task.LandPlane(runway.Start, runway.End, plane);
+            pilot.Task.LandPlane(runway.Start.BaseVector, runway.End.BaseVector, plane);
             while(plane.WheelSpeed == 0)
             {
                 Yield();

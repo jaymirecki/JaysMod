@@ -61,6 +61,7 @@ namespace JaysModFramework
         {
             Enabled = false;
             PlayerNPC = null;
+            Game.IsNightVisionActive = false;
         }
     }
 }

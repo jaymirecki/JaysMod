@@ -131,7 +131,6 @@
     <Compile Include="MaleCloset.cs" />
     <Compile Include="mapfunctions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="References\" />
