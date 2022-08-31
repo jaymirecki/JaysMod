@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 using GTA;
 using GTA.Math;
 using GTA.Native;
@@ -14,9 +15,20 @@ namespace JaysModFramework
 {
     public class Vehicle: IEquatable<Vehicle>, IXmlSerializable
     {
+        [XmlIgnore]
         public GVehicle BaseVehicle { get; set; }
-
-        internal string ID { get; set; }
+        [XmlAttribute]
+        public string ID
+        {
+            get { return _id; }
+            set
+            {
+                SpawnedVehicles.TryRemove(_id);
+                SpawnedVehicles.TryAdd(value, this);
+                _id = value;
+            }
+        }
+        private string _id;
         internal static XmlDictionary<string, Vehicle> SpawnedVehicles = new XmlDictionary<string, Vehicle>();
         #region Helpers
         public static Vehicle SpawnVehicle(VehicleHash modelHash, Vector3 position, float heading)

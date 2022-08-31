@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace JaysModFramework
 {
     using GVector3 = GTA.Math.Vector3;
     public struct Vector3: IXmlSerializable
     {
+        [XmlIgnore]
         public GVector3 BaseVector;
         #region BaseProperties
         public float X

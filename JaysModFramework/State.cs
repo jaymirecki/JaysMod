@@ -23,31 +23,149 @@ namespace JaysModFramework
         }
         private XmlDictionary<string, Vehicle> Vehicles { get { return Vehicle.SpawnedVehicles; } }
         private XmlDictionary<string, NPC> NPCs { get { return NPC.SpawnedNPCs; } }
+        private readonly XmlSerializer StateSerializer = new XmlSerializer(typeof(State));
+        private readonly XmlSerializer NPCSerializer = new XmlSerializer(typeof(NPC));
+        private readonly XmlSerializer VehicleSerializer = new XmlSerializer(typeof(Vehicle));
         #endregion
         #region Constructors
         public State()
         {
         }
         #endregion
-        #region XMLSerialization
-        public void SerializeToXml(TextWriter stream)
+        #region Save
+        public void Save(string saveId)
         {
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.Indent = true;
-            settings.NewLineHandling = NewLineHandling.Entitize;
-            XmlWriter writer = XmlWriter.Create(stream, settings);
-            writer.WriteStartElement("State");
-            WriteXml(writer);
-            writer.WriteEndElement();
+            string saveDirectory = CreateSaveDirectory(saveId);
+            string stateFile = saveDirectory + "state.xml";
+            TextWriter writer = new StreamWriter(stateFile);
+            StateSerializer.Serialize(writer, this);
             writer.Close();
+            SaveNPCs(saveDirectory);
+            SaveVehicles(saveDirectory);
         }
-        public void WriteXml(XmlWriter writer)
+        private static string CreateSaveDirectory(string saveId)
         {
-            XmlSerialization.WriteElement(writer, "Date", Date);
-            XmlSerialization.WriteElement(writer, "Weather", Weather.ToString());
-            XmlSerialization.WriteComplexElement(writer, "Vehicles", Vehicles);
-            XmlSerialization.WriteComplexElement(writer, "NPCs", NPCs);
+            const string directory = "./scripts/JMF/Saves/";
+            EnsureDirectory("./scripts");
+            EnsureDirectory("./scripts/JMF");
+            EnsureDirectory("./scripts/JMF/Saves");
+
+            string saveDirectory = directory + saveId + "/";
+            EnsureDirectory(saveDirectory);
+            EnsureDirectory(saveDirectory + "NPCs");
+            EnsureDirectory(saveDirectory + "Vehicles");
+
+            return saveDirectory;
         }
+        private static void EnsureDirectory(string path)
+        {
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+        }
+        private void SaveNPCs(string saveDirectory)
+        {
+            string npcDirectory = saveDirectory + "NPCs/";
+            foreach (NPC npc in NPCs.Values)
+            {
+                string npcFile = npcDirectory + npc.ID + ".xml";
+                TextWriter writer = new StreamWriter(npcFile);
+                NPCSerializer.Serialize(writer, npc);
+                writer.Close();
+            }
+        }
+        private void SaveVehicles(string saveDirectory)
+        {
+            string vehicleDirectory = saveDirectory + "Vehicles/";
+            Debug.Log(vehicleDirectory);
+            foreach (Vehicle vehicle in Vehicles.Values)
+            {
+                Debug.Log(vehicle.ID);
+                string vehicleFile = vehicleDirectory + vehicle.ID + ".xml";
+                TextWriter writer = new StreamWriter(vehicleFile);
+                VehicleSerializer.Serialize(writer, vehicle);
+                writer.Close();
+            }
+        }
+        #endregion
+        #region Load
+        public bool Load(string saveId)
+        {
+            const string directory = "./scripts/JMF/Saves/";
+            string saveDirectory = directory + saveId + "/";
+            string stateFile = saveDirectory + "state.xml";
+            if (!ValidateDirectories(saveDirectory))
+            {
+                return false;
+            }
+            TextReader reader = new StreamReader(stateFile);
+            State other = (State)StateSerializer.Deserialize(reader);
+            Date = other.Date;
+            Weather = other.Weather;
+            reader.Close();
+            LoadNPCs(saveDirectory);
+            //LoadVehicles(saveDirectory);
+            return true;
+        }
+        public bool ValidateDirectories(string saveDirectory)
+        {
+            if (!Directory.Exists(saveDirectory))
+            {
+                return false;
+            }
+            if (!Directory.Exists(saveDirectory + "NPCs"))
+            {
+                return false;
+            }
+            if (!Directory.Exists(saveDirectory + "Vehicles"))
+            {
+                return false;
+            }
+            return true;
+        }
+        private void LoadNPCs(string saveDirectory)
+        {
+            NPC.DeleteAllNPCs();
+            Debug.Log(NPCs.Count, true);
+            string npcDirectory = saveDirectory + "NPCs/";
+            foreach (string npcFile in Directory.GetFiles(npcDirectory))
+            {
+                TextReader reader = new StreamReader(npcFile);
+                NPC npc = (NPC)NPCSerializer.Deserialize(reader);
+                reader.Close();
+            }
+        }
+        private void LoadVehicles(string saveDirectory)
+        {
+            string vehicleDirectory = saveDirectory + "Vehicles/";
+            foreach (string vehicleFile in Directory.GetFiles(vehicleDirectory))
+            {
+                TextReader reader = new StreamReader(vehicleFile);
+                Vehicle vehicle = (Vehicle)NPCSerializer.Deserialize(reader);
+                reader.Close();
+            }
+        }
+        #endregion
+        #region XMLSerialization
+        //public void SerializeToXml(TextWriter stream)
+        //{
+        //    XmlWriterSettings settings = new XmlWriterSettings();
+        //    settings.Indent = true;
+        //    settings.NewLineHandling = NewLineHandling.Entitize;
+        //    XmlWriter writer = XmlWriter.Create(stream, settings);
+        //    writer.WriteStartElement("State");
+        //    WriteXml(writer);
+        //    writer.WriteEndElement();
+        //    writer.Close();
+        //}
+        //public void WriteXml(XmlWriter writer)
+        //{
+        //    XmlSerialization.WriteElement(writer, "Date", Date);
+        //    XmlSerialization.WriteElement(writer, "Weather", Weather.ToString());
+        //    XmlSerialization.WriteComplexElement(writer, "Vehicles", Vehicles);
+        //    XmlSerialization.WriteComplexElement(writer, "NPCs", NPCs);
+        //}
         #endregion
         #region XMLDeserialization
         public void DeserializeFromXML(TextReader stream)

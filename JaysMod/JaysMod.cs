@@ -61,8 +61,9 @@ namespace JaysMod
             World.IsClockPaused = true;
             MaleOutfitTemplates.SetupOutfits();
             LoadModel("mp_m_freemode_01");
-            TextReader reader = new StreamReader("./scripts/JMF/Saves/test1.xml");
-            new State().DeserializeFromXML(reader);
+            //TextReader reader = new StreamReader("./scripts/JMF/Saves/test1.xml");
+            //new State().DeserializeFromXML(reader);
+            new State().Load("Test Read");
             PlayerNPC = NPC.PlayerNPC;
             RestrictedAreas.DisableAll();
             ActivateManagers();
@@ -102,8 +103,7 @@ namespace JaysMod
         }
         public void Save()
         {
-            TextWriter writer = new StreamWriter("./scripts/JMF/Saves/test1.xml");
-            new State().SerializeToXml(writer);
+            new State().Save("Test Write");
         }
 
         public void Unload()
