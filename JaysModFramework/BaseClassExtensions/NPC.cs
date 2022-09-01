@@ -144,8 +144,6 @@ namespace JaysModFramework
             {
                 if (value != BasePed.Gender)
                 {
-                    Debug.DEBUG = true;
-                    Debug.Log(ID + value);
                     if (value == Gender.Male)
                     {
                         SwapGender(PedHash.FreemodeMale01);

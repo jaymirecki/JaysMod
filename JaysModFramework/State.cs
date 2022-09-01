@@ -78,10 +78,8 @@ namespace JaysModFramework
         private void SaveVehicles(string saveDirectory)
         {
             string vehicleDirectory = saveDirectory + "Vehicles/";
-            Debug.Log(vehicleDirectory);
             foreach (Vehicle vehicle in Vehicles.Values)
             {
-                Debug.Log(vehicle.ID);
                 string vehicleFile = vehicleDirectory + vehicle.ID + ".xml";
                 TextWriter writer = new StreamWriter(vehicleFile);
                 VehicleSerializer.Serialize(writer, vehicle);
@@ -104,7 +102,7 @@ namespace JaysModFramework
             Weather = other.Weather;
             reader.Close();
             LoadNPCs(saveDirectory);
-            //LoadVehicles(saveDirectory);
+            LoadVehicles(saveDirectory);
             return true;
         }
         public bool ValidateDirectories(string saveDirectory)
@@ -126,7 +124,6 @@ namespace JaysModFramework
         private void LoadNPCs(string saveDirectory)
         {
             NPC.DeleteAllNPCs();
-            Debug.Log(NPCs.Count, true);
             string npcDirectory = saveDirectory + "NPCs/";
             foreach (string npcFile in Directory.GetFiles(npcDirectory))
             {
@@ -141,7 +138,7 @@ namespace JaysModFramework
             foreach (string vehicleFile in Directory.GetFiles(vehicleDirectory))
             {
                 TextReader reader = new StreamReader(vehicleFile);
-                Vehicle vehicle = (Vehicle)NPCSerializer.Deserialize(reader);
+                Vehicle vehicle = (Vehicle)VehicleSerializer.Deserialize(reader);
                 reader.Close();
             }
         }
