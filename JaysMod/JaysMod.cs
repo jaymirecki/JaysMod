@@ -62,7 +62,7 @@ namespace JaysMod
             //new State().DeserializeFromXML(reader);
             new State().Load("Test Read");
             PlayerNPC = NPC.PlayerNPC;
-            RestrictedAreas.DisableAll();
+            RestrictedAreasManager.DisableAll();
             ActivateManagers();
             ClosetMenu = Closet.Menu(PlayerNPC, ModMenuPool);
             ModMenuPool.Add(ClosetMenu);
@@ -70,7 +70,7 @@ namespace JaysMod
         }
         private void ActivateManagers()
         {
-            RealTimeDuration.Activate();
+            RealTimeDurationManager.Activate();
             BigMapManager.Activate();
             SirenManager.Activate();
             RespawnManager.Activate(PlayerNPC);
@@ -79,7 +79,7 @@ namespace JaysMod
         }
         private void DeactivateManagers()
         {
-            RealTimeDuration.Deactivate();
+            RealTimeDurationManager.Deactivate();
             BigMapManager.Deactivate();
             SirenManager.Deactivate();
             RespawnManager.Deactivate();
@@ -108,7 +108,7 @@ namespace JaysMod
             Hud.Abort();
             Hud = null;
             Function.Call(Hash.SET_MINIMAP_HIDE_FOW, false);
-            RestrictedAreas.EnableAll();
+            RestrictedAreasManager.EnableAll();
             DeactivateManagers();
 
             World.IsClockPaused = false;

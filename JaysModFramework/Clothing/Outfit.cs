@@ -15,7 +15,7 @@ namespace JaysModFramework
     public enum OutfitComponents { Beard = 1, Hair = 2, Upper = 3, Lower = 4, Hands = 5, Shoes = 6, AccOne = 8, AccTwo = 9, Shirt = 11 };
     public enum Props { Hat = 0, Glasses = 1, Ears = 2, Watch = 3 };
     #endregion SlotEnums
-    public class Outfit: IXmlSerializable
+    public class Outfit
     {
         #region Properties
         public MaleOutfitTemplateIDs Template;
@@ -222,7 +222,7 @@ namespace JaysModFramework
         }
         #endregion
         #region String Management
-        public override string ToString()
+        public string ToString()
         {
             string str =
                 Beard.ToString() + "," +
@@ -343,73 +343,6 @@ namespace JaysModFramework
         }
         #endregion Set/Get Props
         #region XML
-        public void WriteXml(XmlWriter writer)
-        {
-            //XmlSerialization.WriteEnumElement(writer, "Beard", (Beards)Beard);
-            //XmlSerialization.WriteEnumElement(writer, "Hair", (Hair)Hair);
-            //XmlSerialization.WriteEnumElement(writer, "Upper", (Uppers)Upper);
-            //XmlSerialization.WriteEnumElement(writer, "Lower", (Lowers)Lower);
-            //XmlSerialization.WriteEnumElement(writer, "Hands", (Hands)Hands);
-            //XmlSerialization.WriteEnumElement(writer, "Shoes", (Shoes)Shoes);
-            //XmlSerialization.WriteEnumElement(writer, "AccOne", (AccOne)AccOne);
-            //XmlSerialization.WriteEnumElement(writer, "AccTwo", (AccTwo)AccTwo);
-            //XmlSerialization.WriteEnumElement(writer, "Shirt", (Shirts)Shirt);
-            //XmlSerialization.WriteEnumElement(writer, "Hat", (Hats)Hat);
-            //XmlSerialization.WriteEnumElement(writer, "Glasses", (Glasses)Glasses);
-            //XmlSerialization.WriteEnumElement(writer, "Ears", (Ears)Ears);
-            //XmlSerialization.WriteEnumElement(writer, "Watch", (Watches)Watch);
-            //XmlSerialization.WriteElement(writer, "BeardColor", BeardColor);
-            //XmlSerialization.WriteElement(writer, "HairColor", HairColor);
-            //XmlSerialization.WriteElement(writer, "UpperColor", UpperColor);
-            //XmlSerialization.WriteElement(writer, "LowerColor", LowerColor);
-            //XmlSerialization.WriteElement(writer, "HandsColor", HandsColor);
-            //XmlSerialization.WriteElement(writer, "ShoesColor", ShoesColor);
-            //XmlSerialization.WriteElement(writer, "AccOneColor", AccOneColor);
-            //XmlSerialization.WriteElement(writer, "AccTwoColor", AccTwoColor);
-            //XmlSerialization.WriteElement(writer, "ShirtColor", ShirtColor);
-            //XmlSerialization.WriteElement(writer, "HatColor", HatColor);
-            //XmlSerialization.WriteElement(writer, "GlassesColor", GlassesColor);
-            //XmlSerialization.WriteElement(writer, "EarsColor", EarsColor);
-            //XmlSerialization.WriteElement(writer, "WatchColor", WatchColor);
-            XmlSerialization.WriteEnumElement(writer, "Template", Template);
-        }
-        public void ReadXml(XmlReader reader)
-        {
-            //Debug.Log("reading outfit");
-            //reader.ReadStartElement("OutfitString");
-            //FromString(reader.ReadContentAsString());
-            //reader.ReadEndElement();
-            //Debug.Log("outfit read");
-
-            //SetBeard(XmlSerialization.ReadEnumElement<Beards>(reader, "Beard"));
-            //SetHair(XmlSerialization.ReadEnumElement<Hair>(reader, "Hair"));
-            //SetUpper(XmlSerialization.ReadEnumElement<Uppers>(reader, "Upper"));
-            //SetLower(XmlSerialization.ReadEnumElement<Lowers>(reader, "Lower"));
-            //SetHands(XmlSerialization.ReadEnumElement<Hands>(reader, "Hands"));
-            //SetShoes(XmlSerialization.ReadEnumElement<Shoes>(reader, "Shoes"));
-            //SetAccOne(XmlSerialization.ReadEnumElement<AccOne>(reader, "AccOne"));
-            //SetAccTwo(XmlSerialization.ReadEnumElement<AccTwo>(reader, "AccTwo"));
-            //SetShirt(XmlSerialization.ReadEnumElement<Shirts>(reader, "Shirt"));
-            //SetHat(XmlSerialization.ReadEnumElement<Hats>(reader, "Hat"));
-            //SetGlasses(XmlSerialization.ReadEnumElement<Glasses>(reader, "Glasses"));
-            //SetEars(XmlSerialization.ReadEnumElement<Ears>(reader, "Ears"));
-            //SetWatch(XmlSerialization.ReadEnumElement<Watches>(reader, "Watch"));
-            //BeardColor = XmlSerialization.ReadElement<int>(reader, "BeardColor");
-            //HairColor = XmlSerialization.ReadElement<int>(reader, "HairColor");
-            //UpperColor = XmlSerialization.ReadElement<int>(reader, "UpperColor");
-            //LowerColor = XmlSerialization.ReadElement<int>(reader, "LowerColor");
-            //HandsColor = XmlSerialization.ReadElement<int>(reader, "HandsColor");
-            //ShoesColor = XmlSerialization.ReadElement<int>(reader, "ShoesColor");
-            //AccOneColor = XmlSerialization.ReadElement<int>(reader, "AccOneColor");
-            //AccTwoColor = XmlSerialization.ReadElement<int>(reader, "AccTwoColor");
-            //ShirtColor = XmlSerialization.ReadElement<int>(reader, "ShirtColor");
-            //HatColor = XmlSerialization.ReadElement<int>(reader, "HatColor");
-            //GlassesColor = XmlSerialization.ReadElement<int>(reader, "GlassesColor");
-            //EarsColor = XmlSerialization.ReadElement<int>(reader, "EarsColor");
-            //WatchColor = XmlSerialization.ReadElement<int>(reader, "WatchColor");
-            Template = XmlSerialization.ReadEnumElement<MaleOutfitTemplateIDs>(reader, "Template");
-            SetFromTemplate(Template);
-        }
         private void SetFromTemplate(MaleOutfitTemplateIDs template)
         {
             switch (template)

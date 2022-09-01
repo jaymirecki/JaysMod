@@ -72,8 +72,7 @@
     <Compile Include="State.cs" />
     <Compile Include="BaseClassExtensions\Vehicle.cs" />
     <Compile Include="Managers\VisorManager.cs" />
-    <Compile Include="XmlDictionary.cs" />
-    <Compile Include="XmlSerialization.cs" />
+    <Compile Include="JMFDictionary.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
