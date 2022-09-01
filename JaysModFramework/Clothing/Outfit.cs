@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace JaysModFramework
 {
@@ -16,23 +17,27 @@ namespace JaysModFramework
     #endregion SlotEnums
     public class Outfit
     {
+        #region Properties
+        public MaleOutfitTemplateIDs Template;
         public int Blemishes = (int)MaleOutfitPieces.Blemishes.Default;
         public int FacialHair = (int)MaleOutfitPieces.FacialHair.Default;
         public int Eyebrows = (int)MaleOutfitPieces.Eyebrows.Default;
-        public int Beard = (int)MaleOutfitPieces.Beards.Default;
-        public void SetBeard(MaleOutfitPieces.Beards beard) { Beard = (int)beard; }
+        public int Beard = (int)MaleOutfitPieces.Masks.Default;
+        public void SetBeard(MaleOutfitPieces.Masks beard) { Beard = (int)beard; }
         public int Hair = (int)MaleOutfitPieces.Hair.Default;
-        public int Upper = (int)MaleOutfitPieces.Uppers.Default;
-        public void SetUpper(MaleOutfitPieces.Uppers upper) { Upper = (int)upper; }
-        public int Lower = (int)MaleOutfitPieces.Lowers.Default;
-        public void SetLower(MaleOutfitPieces.Lowers lower) { Lower = (int)lower; }
-        public int Hands = (int)MaleOutfitPieces.Hands.Default;
+        public void SetHair(Hair hair) { Hair = (int)hair; }
+        public int Upper = (int)MaleOutfitPieces.Torsos.Default;
+        public void SetUpper(MaleOutfitPieces.Torsos upper) { Upper = (int)upper; }
+        public int Lower = (int)MaleOutfitPieces.Legs.Default;
+        public void SetLower(MaleOutfitPieces.Legs lower) { Lower = (int)lower; }
+        public int Hands = (int)MaleOutfitPieces.Bags.Default;
+        public void SetHands(Bags hands) { Hands = (int)hands; }
         public int Shoes = (int)MaleOutfitPieces.Shoes.Default;
         public void SetShoes(MaleOutfitPieces.Shoes shoes) { Shoes = (int)shoes; }
-        public int AccOne = (int)MaleOutfitPieces.AccOne.Default;
-        public void SetAccOne(MaleOutfitPieces.AccOne accOne) { AccOne = (int)accOne; }
-        public int AccTwo = (int)MaleOutfitPieces.AccTwo.Default;
-        public void SetAccTwo(MaleOutfitPieces.AccTwo accTwo) { AccTwo = (int)accTwo; }
+        public int AccOne = (int)MaleOutfitPieces.Undershirts.Default;
+        public void SetAccOne(MaleOutfitPieces.Undershirts accOne) { AccOne = (int)accOne; }
+        public int AccTwo = (int)MaleOutfitPieces.Armors.Default;
+        public void SetAccTwo(MaleOutfitPieces.Armors accTwo) { AccTwo = (int)accTwo; }
         public int Shirt = (int)MaleOutfitPieces.Shirts.Default;
         public void SetShirt(MaleOutfitPieces.Shirts shirt) { Shirt = (int)shirt; }
         public int Hat = (int)MaleOutfitPieces.Hats.Default;
@@ -43,6 +48,8 @@ namespace JaysModFramework
         public void SetEars(MaleOutfitPieces.Ears ears) { Ears = (int)ears; }
         public int Watch = (int)MaleOutfitPieces.Watches.Default;
         public void SetWatch(MaleOutfitPieces.Watches watch) { Watch = (int)watch; }
+        #endregion
+        #region Colors
         public int BeardColor = 0;
         public int HairColor = 1;
         public int UpperColor = 0;
@@ -56,14 +63,15 @@ namespace JaysModFramework
         public int GlassesColor = 0;
         public int EarsColor = 0;
         public int WatchColor = 0;
-
+        #endregion
+        #region Constructors
         public Outfit() {
 
         }
         public Outfit(
-            Beards beard, int beardColor, Hair hair, int hairColor, Uppers upper, int upperColor,
-            Lowers lower, int lowerColor, Hands hands, int handsColor, Shoes shoes, int shoesColor,
-            AccOne accOne, int accOneColor, AccTwo accTwo, int accTwoColor, Shirts shirt, int shirtColor,
+            Masks beard, int beardColor, Hair hair, int hairColor, Torsos upper, int upperColor,
+            Legs lower, int lowerColor, Bags hands, int handsColor, Shoes shoes, int shoesColor,
+            Undershirts accOne, int accOneColor, Armors accTwo, int accTwoColor, Shirts shirt, int shirtColor,
             Hats hat, int hatColor, Glasses glasses, int glassesColor, Ears ears, int earsColor, Watches watch, int watchColor
             ):this(
                 (int)beard, beardColor, (int)hair, hairColor, (int)upper, upperColor,
@@ -106,7 +114,7 @@ namespace JaysModFramework
             EarsColor = earsColor;
             WatchColor = watchColor;
         }
-
+        #endregion
         public Outfit Copy()
         {
             Outfit copy = 
@@ -117,7 +125,36 @@ namespace JaysModFramework
                     Hat, HatColor, Glasses, GlassesColor, Ears, EarsColor, Watch, WatchColor);
             return copy;
         }
-
+        private void CopyFrom(Outfit other)
+        {
+            Beard = other.Beard;
+            BeardColor = other.BeardColor;
+            Hair = other.Hair;
+            HairColor = other.HairColor;
+            Upper = other.Upper;
+            UpperColor = other.UpperColor;
+            Lower = other.Lower;
+            LowerColor = other.LowerColor;
+            Hands = other.Hands;
+            HandsColor = other.HandsColor;
+            Shoes = other.Shoes;
+            ShoesColor = other.ShoesColor;
+            AccOne = other.AccOne;
+            AccOneColor = other.AccOneColor;
+            AccTwo = other.AccTwo;
+            AccTwoColor = other.AccTwoColor;
+            Shirt = other.Shirt;
+            ShirtColor = other.ShirtColor;
+            Hat = other.Hat;
+            HatColor = other.HatColor;
+            Glasses = other.Glasses;
+            GlassesColor = other.GlassesColor;
+            Ears = other.Ears;
+            EarsColor = other.EarsColor;
+            Watch = other.Watch;
+            WatchColor = other.WatchColor;
+        }
+        #region Ped Management
         public void ApplyToPed(Ped ped, bool preserveHair)
         {
             int hair = Hair;
@@ -127,7 +164,7 @@ namespace JaysModFramework
                 hair = GetComponent(ped, OutfitComponents.Hair);
                 hairColor = GetComponentColor(ped, OutfitComponents.Hair);
             }
-            if (Beard == (int)Beards.ScubaHood)
+            if (Beard == (int)Masks.ScubaHood)
             {
                 hair = 0;
             }
@@ -183,11 +220,9 @@ namespace JaysModFramework
             EarsColor = GetPropColor(ped, Props.Ears);
             WatchColor = GetPropColor(ped, Props.Watch);
         }
-        public void Save(SaveAndLoad save, string saveId, string prefix)
-        {
-            save.Save(saveId, prefix + "_outfit", ToString());
-        }
-        public override string ToString()
+        #endregion
+        #region String Management
+        public string ToString()
         {
             string str =
                 Beard.ToString() + "," +
@@ -223,14 +258,14 @@ namespace JaysModFramework
         private void FromString(string str)
         {
             string[] pieces = str.Split(',');
-            Beard = ParseNumOrDefault(pieces[0], Beards.Default);
+            Beard = ParseNumOrDefault(pieces[0], Masks.Default);
             Hair = ParseNumOrDefault(pieces[1], MaleOutfitPieces.Hair.Default);
-            Upper = ParseNumOrDefault(pieces[2], Uppers.Default);
-            Lower = ParseNumOrDefault(pieces[3], Lowers.Default);
-            Hands = ParseNumOrDefault(pieces[4], MaleOutfitPieces.Hands.Default);
+            Upper = ParseNumOrDefault(pieces[2], Torsos.Default);
+            Lower = ParseNumOrDefault(pieces[3], Legs.Default);
+            Hands = ParseNumOrDefault(pieces[4], MaleOutfitPieces.Bags.Default);
             Shoes = ParseNumOrDefault(pieces[5], MaleOutfitPieces.Shoes.Default);
-            AccOne = ParseNumOrDefault(pieces[6], MaleOutfitPieces.AccOne.Default);
-            AccTwo = ParseNumOrDefault(pieces[7], MaleOutfitPieces.AccTwo.Default);
+            AccOne = ParseNumOrDefault(pieces[6], MaleOutfitPieces.Undershirts.Default);
+            AccTwo = ParseNumOrDefault(pieces[7], MaleOutfitPieces.Armors.Default);
             Shirt = ParseNumOrDefault(pieces[8], Shirts.Default);
             Hat = ParseNumOrDefault(pieces[9], Hats.Default);
             Glasses = ParseNumOrDefault(pieces[10], MaleOutfitPieces.Glasses.Default);
@@ -250,7 +285,6 @@ namespace JaysModFramework
             EarsColor = int.Parse(pieces[24]);
             WatchColor = int.Parse(pieces[25]);
         }
-
         private TEnum ParseEnumOrDefault<TEnum>(string str, TEnum def) where TEnum : struct
         {
             TEnum result;
@@ -273,13 +307,7 @@ namespace JaysModFramework
         {
             return ParseNumOrDefault(str, (int)(object)def);
         }
-
-        public void Load(SaveAndLoad load, string saveId, string prefix)
-        {
-            string str = load.Load<string>(saveId, prefix + "_outfit");
-            FromString(str);
-        }
-
+        #endregion
         #region Set/Get Components
         private static void SetComponent(Ped ped, OutfitComponents slot, int component, int color)
         {
@@ -314,5 +342,55 @@ namespace JaysModFramework
             return Function.Call<int>(Hash.GET_PED_PROP_TEXTURE_INDEX, ped, (int)propId);
         }
         #endregion Set/Get Props
+        #region XML
+        private void SetFromTemplate(MaleOutfitTemplateIDs template)
+        {
+            switch (template)
+            {
+                case MaleOutfitTemplateIDs.Casual:
+                    CopyFrom(MaleOutfitTemplates.Casual);
+                    break;
+                case MaleOutfitTemplateIDs.Formal:
+                    CopyFrom(MaleOutfitTemplates.Formal);
+                    break;
+                case MaleOutfitTemplateIDs.Combat:
+                    CopyFrom(MaleOutfitTemplates.Combat);
+                    break;
+                case MaleOutfitTemplateIDs.Bike:
+                    CopyFrom(MaleOutfitTemplates.Bike);
+                    break;
+                case MaleOutfitTemplateIDs.Scuba:
+                    CopyFrom(MaleOutfitTemplates.Scuba);
+                    break;
+                case MaleOutfitTemplateIDs.ScubaLand:
+                    CopyFrom(MaleOutfitTemplates.ScubaLand);
+                    break;
+                case MaleOutfitTemplateIDs.Beach:
+                    CopyFrom(MaleOutfitTemplates.Beach);
+                    break;
+                case MaleOutfitTemplateIDs.NavyCasual:
+                    CopyFrom(MaleOutfitTemplates.NavyCasual);
+                    break;
+                case MaleOutfitTemplateIDs.NavyCombat:
+                    CopyFrom(MaleOutfitTemplates.NavyCombat);
+                    break;
+                case MaleOutfitTemplateIDs.ArmyCasual:
+                    CopyFrom(MaleOutfitTemplates.ArmyCasual);
+                    break;
+                case MaleOutfitTemplateIDs.ArmyCombat:
+                    CopyFrom(MaleOutfitTemplates.ArmyCombat);
+                    break;
+                case MaleOutfitTemplateIDs.TestPilot:
+                    CopyFrom(MaleOutfitTemplates.TestPilot);
+                    break;
+                case MaleOutfitTemplateIDs.PilotCasual:
+                    CopyFrom(MaleOutfitTemplates.PilotCasual);
+                    break;
+                default:
+                    CopyFrom(MaleOutfitTemplates.Casual);
+                    break;
+            }
+        }
+        #endregion
     }
 }

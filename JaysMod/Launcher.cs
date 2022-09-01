@@ -2,10 +2,10 @@
 using System.Windows.Forms;
 using GTA;
 using GTA.Native;
-using GTA.Math;
 using NativeUI;
 using System.Collections.Generic;
 using JaysModFramework;
+using System.Collections;
 
 namespace JaysMod
 {
@@ -61,8 +61,7 @@ namespace JaysMod
         }
         private void LoadMenu(bool modEnabled)
         {
-            SaveAndLoad saverLoader = new SaveAndLoad("JaysMod.ini");
-            List<object> games = new List<object>(saverLoader.AllSaves());
+            List<object> games = new State().FindSaves();
 
             string description = "There are no saved games to load.";
             if (games.Count > 0)
@@ -91,8 +90,7 @@ namespace JaysMod
         }
         private void NewMenu(bool modEnabled)
         {
-            SaveAndLoad saverLoader = new SaveAndLoad("JaysMod.ini");
-            List<object> games = new List<object>(saverLoader.AllSaves());
+            List<object> games = new State().FindSaves();
             UIMenuItem newButton = new UIMenuItem("New Game", "Start a new game");
             MainMenu.AddItem(newButton);
 
@@ -156,7 +154,7 @@ namespace JaysMod
         {
             Ped playerPed = Game.Player.Character;
             originalModel = playerPed.Model;
-            originalPosition = playerPed.Position;
+            originalPosition = new Vector3(playerPed.Position);
             originalHeading = playerPed.Heading;
             originalDateTime = World.CurrentDate;
         }
@@ -168,7 +166,7 @@ namespace JaysMod
                 mod.Abort();
                 mod = null;
                 JaysMod.LoadModel(originalModel);
-                Game.Player.Character.Position = originalPosition;
+                Game.Player.Character.Position = originalPosition.BaseVector;
                 Game.Player.Character.Heading = originalHeading;
                 World.CurrentDate = originalDateTime;
             }
@@ -190,14 +188,14 @@ namespace JaysMod
             {
                 Ped player = Game.Player.Character;
                 if (item == currPos)
-                    Debug.Log("Current Position: " + player.Position.ToString() + " H:" + player.Heading.ToString());
+                    Debug.Log("Current Position: " + player.Position.ToString() + " H:" + player.Heading.ToString(), true);
                 else if (item == vehPos)
-                    Debug.Log("Vehicle Position: " + player.CurrentVehicle.Position.ToString() + " H:" + player.CurrentVehicle.Heading.ToString());
+                    Debug.Log("Vehicle Position: " + player.CurrentVehicle.Position.ToString() + " H:" + player.CurrentVehicle.Heading.ToString(), true);
                 else if (item == vehName)
-                    Debug.Log("Vehicle Name: " + player.CurrentVehicle.Model.ToString());
+                    Debug.Log("Vehicle Name: " + player.CurrentVehicle.Model.ToString(), true);
                 else if (item == zoneId)
                 {
-                    Vector3 position = Game.Player.Character.Position;
+                    Vector3 position = new Vector3(Game.Player.Character.Position);
                     int zone = Function.Call<int>(Hash.GET_ZONE_AT_COORDS, position.X, position.Y, position.Z);
                     Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "am_armybase");
                     Function.Call(Hash.TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME, "restrictedareas");

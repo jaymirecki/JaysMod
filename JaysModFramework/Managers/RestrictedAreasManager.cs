@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace JaysModFramework
 {
-    public class RestrictedAreas: Script
+    public class RestrictedAreasManager: Script
     {
         private static bool ZancudoDisabled, LSIADisabled, PrisonDisabled, MerryweatherDisabled;
 
-        public RestrictedAreas()
+        public RestrictedAreasManager()
         {
             EnableAll();
 

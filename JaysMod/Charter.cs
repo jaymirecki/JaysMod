@@ -7,18 +7,19 @@ using System.Windows.Forms;
 using System.Drawing;
 using GTA;
 using GTA.Native;
-using GTA.Math;
 using NativeUI;
+using JaysModFramework;
 
 namespace JaysMod
 {
+    using JMF = JaysModFramework;
     [ScriptAttributes(NoDefaultInstance = true)]
     class Charter : Script
     {
         bool asked;
         Vector3 taxi1, taxi2, taxi3;
         Ped pilot;
-        Vehicle plane;
+        JMF.Vehicle plane;
 
         public Charter()
         {
@@ -121,7 +122,7 @@ namespace JaysMod
             }
         }
 
-        public void Load(Vehicle plane, Ped pilot)
+        public void Load(JMF.Vehicle plane, Ped pilot)
         {
             this.plane = plane;
             this.pilot = pilot;

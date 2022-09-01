@@ -8,13 +8,17 @@ namespace JaysModFramework
 {
     public static class Debug
     {
-        public static void Log(string value)
+        public static bool DEBUG = false;
+        private static void Log(string value, bool overrideDebugFlag = false)
         {
-            GTA.UI.Notification.Show(value);
+            if (DEBUG || overrideDebugFlag)
+            {
+                GTA.UI.Notification.Show(value);
+            }
         }
-        public static void Log<T>(T value)
+        public static void Log<T>(T value, bool overrideDebugFlag = false)
         {
-            Log(value.ToString());
+            Log(value.ToString(), overrideDebugFlag);
         }
     }
 }

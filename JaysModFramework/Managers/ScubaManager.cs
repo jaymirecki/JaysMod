@@ -32,7 +32,7 @@ namespace JaysModFramework
                 //        IsScuba = false;
                 //    }
                 //}
-                if (IsScuba && PlayerNPC.Outfit.AccOne != (int)AccOne.ScubaTank)
+                if (IsScuba && PlayerNPC.Outfit.AccOne != (int)Undershirts.ScubaTank)
                 {
                     Debug.Log("notisscuba");
                     SetScubaLand();

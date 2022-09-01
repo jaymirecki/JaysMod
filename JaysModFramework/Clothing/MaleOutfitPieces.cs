@@ -15,7 +15,7 @@
     }
     #endregion HeadOverlay
     #region OutfitComponents
-    public enum Beards
+    public enum Masks
     {
         Default = 0,
         Combat = 35,
@@ -23,9 +23,17 @@
     }
     public enum Hair
     {
+        Bald = 0,
+        Buzzed = 1,
+        Fohawk = 2,
+        Alleys = 5,
+        Ponytail = 7,
+        Dreads = 8,
+        SlickedBack = 10,
+        Closecut = 12,
         Default = 19,
     }
-    public enum Uppers
+    public enum Torsos
     {
         Default = 0,
         Formal = 1,
@@ -37,7 +45,7 @@
         FatiguesCombat = 152,
         TestPilot = 165,
     }
-    public enum Lowers
+    public enum Legs
     {
         Default = 0,
         Casual = 10,
@@ -49,7 +57,7 @@
         Fatigues = 87,
         TestPilot = 92,
     }
-    public enum Hands
+    public enum Bags
     {
         Default = 0,
     }
@@ -67,16 +75,16 @@
         TestPilot = 87,
         PilotCasual = 10,
     }
-    public enum AccOne
+    public enum Undershirts
     {
         Default = 0,
         Casual = 15,
         Formal = 73,
         Combat = 15,
         Bike = 142,
-        ScubaTank = 123,
+        ScubaTank = 151,//123,
     }
-    public enum AccTwo
+    public enum Armors
     {
         Default = 0,
         CombatVest = 11,
