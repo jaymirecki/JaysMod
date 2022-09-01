@@ -52,20 +52,20 @@
   <ItemGroup>
     <Compile Include="BaseClassExtensions\VehicleDoor.cs" />
     <Compile Include="BaseClassExtensions\Vector3.cs" />
-    <Compile Include="Closet.cs" />
+    <Compile Include="Clothes\Closet.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="IDGenerator.cs" />
     <Compile Include="IPLs\IPLDetails.cs" />
     <Compile Include="IPLs\IPLLoader.cs" />
     <Compile Include="Managers\HelmetManager.cs" />
-    <Compile Include="RealTimeDuration.cs" />
+    <Compile Include="Managers\RealTimeDurationManager.cs" />
     <Compile Include="Managers\RespawnManager.cs" />
-    <Compile Include="RestrictedAreas.cs" />
+    <Compile Include="Managers\RestrictedAreasManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseClassExtensions\NPC.cs" />
-    <Compile Include="Outfit.cs" />
-    <Compile Include="MaleOutfitPieces.cs" />
-    <Compile Include="MaleOutfitTemplates.cs" />
+    <Compile Include="Clothes\Outfit.cs" />
+    <Compile Include="Clothes\MaleOutfitPieces.cs" />
+    <Compile Include="Clothes\MaleOutfitTemplates.cs" />
     <Compile Include="Managers\ScubaManager.cs" />
     <Compile Include="Managers\BigMapManager.cs" />
     <Compile Include="Managers\SirenManager.cs" />
