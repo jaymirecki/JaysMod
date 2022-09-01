@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace JaysModFramework
 {
     using GVector3 = GTA.Math.Vector3;
-    public struct Vector3: IXmlSerializable
+    public struct Vector3
     {
+        [XmlIgnore]
         public GVector3 BaseVector;
         #region BaseProperties
         public float X
@@ -68,20 +70,6 @@ namespace JaysModFramework
         public Vector3(float X, float Y, float Z)
         {
             BaseVector = new GVector3(X, Y, Z);
-        }
-        #endregion
-        #region XmlSerialization
-        public void WriteXml(XmlWriter writer)
-        {
-            XmlSerialization.WriteElement(writer, "X", X);
-            XmlSerialization.WriteElement(writer, "Y", Y);
-            XmlSerialization.WriteElement(writer, "Z", Z);
-        }
-        public void ReadXml(XmlReader reader)
-        {
-            X = XmlSerialization.ReadElement<float>(reader, "X");
-            Y = XmlSerialization.ReadElement<float>(reader, "Y");
-            Z = XmlSerialization.ReadElement<float>(reader, "Z");
         }
         #endregion
     }

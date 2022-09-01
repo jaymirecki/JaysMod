@@ -18,7 +18,7 @@ namespace JaysModFramework
         }
         public static void Log<T>(T value, bool overrideDebugFlag = false)
         {
-            Log(value.ToString());
+            Log(value.ToString(), overrideDebugFlag);
         }
     }
 }

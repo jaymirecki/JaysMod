@@ -1,14 +1,18 @@
 ﻿using GTA;
 using GTA.Native;
+using System;
+using System.Collections.Generic;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace JaysModFramework
 {
-    public class NPC: IXmlSerializable
+    public class NPC
     {
-        internal static XmlDictionary<string,NPC> SpawnedNPCs = new XmlDictionary<string,NPC>();
+        internal static JMFDictionary<string,NPC> SpawnedNPCs = new JMFDictionary<string,NPC>();
         private Ped BasePed;
         private const string PlayerID = "JMFNPCPlayer";
+        #region Helpers
         public static NPC PlayerNPC
         {
             get
@@ -23,8 +27,72 @@ namespace JaysModFramework
         }
         public static void ClearPlayerNPC()
         {
-            SpawnedNPCs.Remove(PlayerID);
+            SpawnedNPCs.TryRemove(PlayerID);
         }
+        public static void DeleteAllNPCs()
+        {
+            List<string> npcs = new List<string>(SpawnedNPCs.Keys);
+            foreach(string targetId in npcs)
+            {
+                DeleteNPC(targetId);
+            }
+        }
+        public static void DeleteNPC(Ped target, bool tryDeleteNPC = true)
+        {
+            NPC targetNPC = null;
+            foreach (NPC npc in SpawnedNPCs.Values)
+            {
+                if (npc.BasePed == target)
+                {
+                    targetNPC = npc;
+                    break;
+                }
+            }
+            if (targetNPC is null && target.Exists())
+            {
+                target.Delete();
+                return;
+            }
+            DeleteNPC(targetNPC);
+        }
+        public static void DeleteNPC(NPC target)
+        {
+            DeleteNPC(target.ID);
+            HardDeleteNPC(target);
+        }
+        public static void DeleteNPC(string targetId)
+        {
+            if (SpawnedNPCs.TryGetValue(targetId, out NPC target))
+            {
+                HardDeleteNPC(target);
+                SpawnedNPCs.TryRemove(targetId);
+            }
+
+        }
+        private static void HardDeleteNPC(NPC target)
+        {
+            if (target.BasePed is null)
+            {
+                return;
+            }
+            if (target.BasePed.Exists())
+            {
+                target.BasePed.Delete();
+            }
+        }
+        private static void CopyPedValues(Ped source, Ped destination)
+        {
+            destination.Position = source.Position;
+            destination.Heading = source.Heading;
+            destination.Health = source.Health;
+            destination.MaxHealth = source.MaxHealth;
+            destination.Armor = source.Armor;
+        }
+        private static Ped SpawnPed(PedHash ped, Vector3 position = new Vector3(), float heading = 0)
+        {
+            return World.CreatePed(new Model(ped), position.BaseVector, heading);
+        }
+        #endregion
         #region Base Values
         public Vector3 Position
         {
@@ -72,20 +140,39 @@ namespace JaysModFramework
         public Gender Gender
         {
             get { return BasePed.Gender; }
-            //set 
-            //{
-            //    if (value != BasePed.Gender) {
-            //        if (value == Gender.Male)
-            //        {
-            //            BasePed.Delete();.Model = new Model(PedHash.FreemodeMale01);
-            //        }
-            //        else
-            //        {
-
-            //        }
-            //    }
-            //}
+            set
+            {
+                if (value != BasePed.Gender)
+                {
+                    if (value == Gender.Male)
+                    {
+                        SwapGender(PedHash.FreemodeMale01);
+                    }
+                    else
+                    {
+                        SwapGender(PedHash.FreemodeFemale01);
+                    }
+                }
+            }
         }
+        private void SwapGender(PedHash model)
+        {
+            Ped newPed = SpawnPed(model);
+            newPed.Position = BasePed.Position;
+            CopyPedValues(BasePed, newPed);
+            if (IsPlayer)
+            {
+                BasePed = newPed;
+                SwapPlayerPedToBasePed();
+            }
+            else
+            {
+                BasePed.Delete();
+                BasePed = newPed;
+            }
+        }
+        [XmlIgnore]
+        public Model Model { get { return BasePed.Model; } }
         #endregion Base Values
         #region BaseMethods
         public bool IsInVehicle()
@@ -94,15 +181,32 @@ namespace JaysModFramework
         }
         #endregion
         #region Extension Values
+        [XmlAttribute]
         public string ID
         {
             get { return _id; }
-            set 
-            { 
+            set
+            {
+                if (value == _id)
+                {
+                    return;
+                }
+                if (value == PlayerID)
+                {
+                    SwapPlayerPedToBasePed();
+                }
                 SpawnedNPCs.TryRemove(_id);
+                DeleteNPC(value);
                 SpawnedNPCs.TryAdd(value, this);
                 _id = value;
             }
+        }
+        private void SwapPlayerPedToBasePed()
+        {
+            Game.Player.ChangeModel(new Model(Model.Hash));
+            CopyPedValues(BasePed, Game.Player.Character);
+            BasePed.Delete();
+            BasePed = Game.Player.Character;
         }
         private string _id;
         public string Name;
@@ -149,58 +253,13 @@ namespace JaysModFramework
             {
                 ID = IDGenerator.NPCID(this);
             }
-            if (!SpawnedNPCs.TryAdd(ID, this))
-            {
-                BasePed.Delete();
-            }
         }
         public NPC()
         {
+            BasePed = SpawnPed(PedHash.FreemodeMale01);
+            Name = "Generic";
+            _id = IDGenerator.NPCID(this);
         }
         #endregion
-        #region XMLSerialization
-        public void WriteXml(XmlWriter writer)
-        {
-            //writer.WriteAttributeString("ID", ID);
-            XmlSerialization.WriteElement(writer, "ID", ID);
-            XmlSerialization.WriteComplexElement(writer, "Position", Position);
-            XmlSerialization.WriteElement(writer, "Heading", Heading);
-            XmlSerialization.WriteElement(writer, "Health", Health);
-            XmlSerialization.WriteElement(writer, "MaxHealth", MaxHealth);
-            XmlSerialization.WriteElement(writer, "IsDead", IsDead);
-            XmlSerialization.WriteComplexElement(writer, "Outfit", Outfit);
-        }
-        public void ReadXml(XmlReader reader)
-        {
-            //ID = reader.GetAttribute("ID");
-            ID = XmlSerialization.ReadElement<string>(reader, "ID");
-            SetModelBasedOnId();
-            Position = XmlSerialization.ReadComplexElement<Vector3>(reader, "Position");
-            Heading = XmlSerialization.ReadElement<float>(reader, "Heading");
-            Health = XmlSerialization.ReadElement<int>(reader, "Health");
-            MaxHealth = XmlSerialization.ReadElement<int>(reader, "MaxHealth");
-            IsDead = XmlSerialization.ReadElement<bool>(reader, "IsDead");
-            Outfit = XmlSerialization.ReadComplexElement<Outfit>(reader, "Outfit");
-        }
-        private void SetModelBasedOnId()
-        {
-            //Debug.Log(ID);
-            if (ID == PlayerID)
-            {
-                BasePed = Game.Player.Character;
-            }
-            else
-            {
-                int modelHash = Function.Call<int>(Hash.GET_HASH_KEY, "mp_m_freemode_01");
-                //Model newModel = new Model(PedHash.FreemodeFemale01);
-                //BasePed = World.CreatePed(newModel, new GTA.Math.Vector3());
-                BasePed = SpawnPed(PedHash.FreemodeFemale01, new Vector3(), 0f);
-            }
-        }
-        #endregion
-        private Ped SpawnPed(PedHash ped, Vector3 position, float heading)
-        {
-            return World.CreatePed(new Model(ped), position.BaseVector, heading);
-        }
     }
 }

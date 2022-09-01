@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace JaysModFramework
 {
-    public class RealTimeDuration: Script
+    public class RealTimeDurationManager: Script
     {
         private static int Minutes = 0;
         private static bool Activated = false;
 
-        public RealTimeDuration()
+        public RealTimeDurationManager()
         {
             Tick += OnTick;
         }

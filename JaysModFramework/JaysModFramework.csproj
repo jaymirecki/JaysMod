@@ -64,7 +64,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseClassExtensions\NPC.cs" />
     <Compile Include="Outfit.cs" />
-    <Compile Include="SaveAndLoad.cs" />
     <Compile Include="MaleOutfitPieces.cs" />
     <Compile Include="MaleOutfitTemplates.cs" />
     <Compile Include="Managers\ScubaManager.cs" />
@@ -73,8 +72,7 @@
     <Compile Include="State.cs" />
     <Compile Include="BaseClassExtensions\Vehicle.cs" />
     <Compile Include="Managers\VisorManager.cs" />
-    <Compile Include="XmlDictionary.cs" />
-    <Compile Include="XmlSerialization.cs" />
+    <Compile Include="JMFDictionary.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

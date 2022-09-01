@@ -19,7 +19,6 @@ namespace JaysMod
         private MenuPool ModMenuPool;
         private UIMenu planeMenu;
         private UIMenu ClosetMenu;
-        SaveAndLoad SaverLoader;
         private string SaveId;
 
         private HUD Hud;
@@ -31,8 +30,6 @@ namespace JaysMod
         }
         
         private int Minutes = 0;
-
-        private static bool DEBUG = true;
 
         public JaysMod()
         {
@@ -61,10 +58,11 @@ namespace JaysMod
             World.IsClockPaused = true;
             MaleOutfitTemplates.SetupOutfits();
             LoadModel("mp_m_freemode_01");
-            TextReader reader = new StreamReader("./scripts/JMF/Saves/test1.xml");
-            new State().DeserializeFromXML(reader);
+            //TextReader reader = new StreamReader("./scripts/JMF/Saves/test1.xml");
+            //new State().DeserializeFromXML(reader);
+            new State().Load("Test Read");
             PlayerNPC = NPC.PlayerNPC;
-            RestrictedAreas.DisableAll();
+            RestrictedAreasManager.DisableAll();
             ActivateManagers();
             ClosetMenu = Closet.Menu(PlayerNPC, ModMenuPool);
             ModMenuPool.Add(ClosetMenu);
@@ -72,7 +70,7 @@ namespace JaysMod
         }
         private void ActivateManagers()
         {
-            RealTimeDuration.Activate();
+            RealTimeDurationManager.Activate();
             BigMapManager.Activate();
             SirenManager.Activate();
             RespawnManager.Activate(PlayerNPC);
@@ -81,7 +79,7 @@ namespace JaysMod
         }
         private void DeactivateManagers()
         {
-            RealTimeDuration.Deactivate();
+            RealTimeDurationManager.Deactivate();
             BigMapManager.Deactivate();
             SirenManager.Deactivate();
             RespawnManager.Deactivate();
@@ -102,8 +100,7 @@ namespace JaysMod
         }
         public void Save()
         {
-            TextWriter writer = new StreamWriter("./scripts/JMF/Saves/test1.xml");
-            new State().SerializeToXml(writer);
+            new State().Save("Test Write");
         }
 
         public void Unload()
@@ -111,7 +108,7 @@ namespace JaysMod
             Hud.Abort();
             Hud = null;
             Function.Call(Hash.SET_MINIMAP_HIDE_FOW, false);
-            RestrictedAreas.EnableAll();
+            RestrictedAreasManager.EnableAll();
             DeactivateManagers();
 
             World.IsClockPaused = false;

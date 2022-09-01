@@ -19,9 +19,7 @@ namespace JaysModFramework
         }
         internal static string VehicleID(Vehicle vehicle)
         {
-            Debug.Log("Getting modelName");
             string baseId = vehicle.ModelName;
-            Debug.Log("modelName is " + baseId);
             return GenerateID("Vehicle", Vehicle.SpawnedVehicles.Keys, baseId);
         }
         private static string GenerateID<TVal>(string type, Dictionary<string,TVal>.KeyCollection collisions, string baseId = "")

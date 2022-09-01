@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 using GTA;
 using GTA.Math;
 using GTA.Native;
@@ -12,12 +13,23 @@ using GVehicle = GTA.Vehicle;
 
 namespace JaysModFramework
 {
-    public class Vehicle: IEquatable<Vehicle>, IXmlSerializable
+    public class Vehicle: IEquatable<Vehicle>
     {
+        [XmlIgnore]
         public GVehicle BaseVehicle { get; set; }
-
-        internal string ID { get; set; }
-        internal static XmlDictionary<string, Vehicle> SpawnedVehicles = new XmlDictionary<string, Vehicle>();
+        [XmlAttribute]
+        public string ID
+        {
+            get { return _id; }
+            set
+            {
+                SpawnedVehicles.TryRemove(_id);
+                SpawnedVehicles.TryAdd(value, this);
+                _id = value;
+            }
+        }
+        private string _id;
+        internal static JMFDictionary<string, Vehicle> SpawnedVehicles = new JMFDictionary<string, Vehicle>();
         #region Helpers
         public static Vehicle SpawnVehicle(VehicleHash modelHash, Vector3 position, float heading)
         {
@@ -26,13 +38,12 @@ namespace JaysModFramework
             vehicle.Heading = heading;
             return vehicle;
         }
-        private static GVehicle SpawnVehicle(VehicleHash modelHash, Vector3 position)
+        private static GVehicle SpawnVehicle(VehicleHash modelHash, Vector3 position = new Vector3())
         {
             Model model = new Model(modelHash);
             GVehicle[] vehicles = GTA.World.GetNearbyVehicles(position.BaseVector, 3f, model);
             if (vehicles.Length > 0)
             {
-                Debug.Log("Delete " + vehicles.Length + " vehicles");
                 for (int i = 0; i < vehicles.Length; i++)
                 {
                     DeleteVehicle(vehicles[i]);
@@ -84,12 +95,51 @@ namespace JaysModFramework
             }
             return false;
         }
+        private static void CopyVehicle(GVehicle source, GVehicle destination)
+        {
+            destination.Heading = source.Heading;
+            destination.IsEngineRunning = source.IsEngineRunning;
+            destination.IsSirenActive = source.IsSirenActive;
+            destination.IsSirenSilent = Function.Call<bool>((Hash)0xB5CC40FBCB586380, source);
+            destination.IsTaxiLightOn = source.IsTaxiLightOn;
+            destination.LandingGearState = source.LandingGearState;
+            destination.Position = source.Position;
+            destination.Speed = source.Speed;
+            destination.Health = source.Health;
+            destination.MaxHealth = source.MaxHealth;
+            destination.DirtLevel = source.DirtLevel;
+            destination.Mods.PrimaryColor = source.Mods.PrimaryColor;
+            destination.Mods.SecondaryColor = source.Mods.SecondaryColor;
+            SetDoorOpenStatus(destination.Doors, VehicleDoorIndex.FrontLeftDoor, GetDoorOpenStatus(source.Doors, VehicleDoorIndex.FrontLeftDoor));
+            SetDoorOpenStatus(destination.Doors, VehicleDoorIndex.FrontRightDoor, GetDoorOpenStatus(source.Doors, VehicleDoorIndex.FrontRightDoor));
+            SetDoorOpenStatus(destination.Doors, VehicleDoorIndex.BackLeftDoor, GetDoorOpenStatus(source.Doors, VehicleDoorIndex.BackLeftDoor));
+            SetDoorOpenStatus(destination.Doors, VehicleDoorIndex.BackRightDoor, GetDoorOpenStatus(source.Doors, VehicleDoorIndex.BackRightDoor));
+            SetDoorOpenStatus(destination.Doors, VehicleDoorIndex.Trunk, GetDoorOpenStatus(source.Doors, VehicleDoorIndex.Trunk));
+        }
+        private static bool GetDoorOpenStatus(VehicleDoorCollection doorCollection, VehicleDoorIndex door)
+        {
+            if (doorCollection.Contains(door))
+            {
+                return doorCollection[door].IsOpen;
+            }
+            return false;
+        }
+        private static void SetDoorOpenStatus(VehicleDoorCollection doorCollection, VehicleDoorIndex door, bool isOpen)
+        {
+            if (doorCollection.Contains(door))
+            {
+                if (isOpen)
+                {
+                    doorCollection[door].Open();
+                }
+                else
+                {
+                    doorCollection[door].Close();
+                }
+            }
+        }
         #endregion
         #region Base Properties
-        public VehicleDoorCollection Doors
-        {
-            get { return BaseVehicle.Doors; }
-        }
         public bool HasSiren
         {
             get { return BaseVehicle.HasSiren; }
@@ -133,6 +183,7 @@ namespace JaysModFramework
             get { return new Vector3(BaseVehicle.Position); }
             set { BaseVehicle.Position = value.BaseVector; }
         }
+        [XmlIgnore]
         public Vector3 Rotation
         {
             get { return new Vector3(BaseVehicle.Rotation); }
@@ -162,6 +213,49 @@ namespace JaysModFramework
             get { return BaseVehicle.DirtLevel; }
             set { BaseVehicle.DirtLevel = value; }
         }
+        public VehicleHash Hash
+        {
+            get {
+                return (VehicleHash)BaseVehicle.Model.Hash; }
+            set
+            {
+                GVehicle newVehicle = SpawnVehicle(value, new Vector3(BaseVehicle.Position));
+                CopyVehicle(BaseVehicle, newVehicle);
+                BaseVehicle.Delete();
+                BaseVehicle = newVehicle;
+            }
+        }
+        #region Doors
+        public VehicleDoorCollection Doors
+        {
+            get { return BaseVehicle.Doors; }
+        }
+        public bool FrontLeftDoorOpen
+        {
+            get { return GetDoorOpenStatus(Doors, VehicleDoorIndex.FrontLeftDoor); }
+            set { SetDoorOpenStatus(Doors, VehicleDoorIndex.FrontLeftDoor, value); }
+        }
+        public bool FrontRightDoorOpen
+        {
+            get { return GetDoorOpenStatus(Doors, VehicleDoorIndex.FrontRightDoor); }
+            set { SetDoorOpenStatus(Doors, VehicleDoorIndex.FrontRightDoor, value); }
+        }
+        public bool BackLeftDoorOpen
+        {
+            get { return GetDoorOpenStatus(Doors, VehicleDoorIndex.BackLeftDoor); }
+            set { SetDoorOpenStatus(Doors, VehicleDoorIndex.BackLeftDoor, value); }
+        }
+        public bool BackRightDoorOpen
+        {
+            get { return GetDoorOpenStatus(Doors, VehicleDoorIndex.BackRightDoor); }
+            set { SetDoorOpenStatus(Doors, VehicleDoorIndex.BackRightDoor, value); }
+        }
+        public bool TrunkOpen
+        {
+            get { return GetDoorOpenStatus(Doors, VehicleDoorIndex.Trunk); }
+            set { SetDoorOpenStatus(Doors, VehicleDoorIndex.Trunk, value); }
+        }
+        #endregion Doors
         #endregion BaseVehicleProperties
         #region Base Vehicle Mods
         public VehicleModCollection Mods
@@ -202,7 +296,9 @@ namespace JaysModFramework
         }
         public Vehicle()
         {
-
+            BaseVehicle = SpawnVehicle(VehicleHash.Akuma, new Vector3());
+            Name = "Generic";
+            ID = IDGenerator.VehicleID(this);
         }
         #endregion Constructors
         #region Operators
@@ -233,35 +329,5 @@ namespace JaysModFramework
         public static implicit operator GVehicle(Vehicle v) => v.BaseVehicle;
         public static explicit operator Vehicle(GVehicle v) => new Vehicle(v);
         #endregion Operators
-        #region XML
-        public void WriteXml(XmlWriter writer)
-        {
-            XmlSerialization.WriteElement(writer, "ID", ID);
-            XmlSerialization.WriteElement(writer, "ModelHash", Model.Hash);
-            XmlSerialization.WriteComplexElement(writer, "Position", Position);
-            XmlSerialization.WriteElement(writer, "Heading", Heading);
-            XmlSerialization.WriteElement(writer, "Health", Health);
-            XmlSerialization.WriteElement(writer, "MaxHealth", MaxHealth);
-            XmlSerialization.WriteEnumElement(writer, "PrimaryColor", PrimaryColor);
-            XmlSerialization.WriteEnumElement(writer, "SecondaryColor", SecondaryColor);
-            XmlSerialization.WriteElement(writer, "DirtLevel", DirtLevel);
-            XmlSerialization.WriteElement(writer, "IsEngineRunning", IsEngineRunning);
-        }
-        public void ReadXml(XmlReader reader)
-        {
-            Debug.DEBUG = true;
-            ID = XmlSerialization.ReadElement<string>(reader, "ID");
-            int modelHash = XmlSerialization.ReadElement<int>(reader, "ModelHash");
-            Vector3 position = XmlSerialization.ReadComplexElement<Vector3>(reader, "Position");
-            BaseVehicle = SpawnVehicle(new Model(modelHash), position);
-            Heading = XmlSerialization.ReadElement<float>(reader, "Heading");
-            Health = XmlSerialization.ReadElement<int>(reader, "Health");
-            MaxHealth = XmlSerialization.ReadElement<int>(reader, "MaxHealth");
-            PrimaryColor = XmlSerialization.ReadEnumElement<VehicleColor>(reader, "PrimaryColor");
-            SecondaryColor = XmlSerialization.ReadEnumElement<VehicleColor>(reader, "SecondaryColor");
-            DirtLevel = XmlSerialization.ReadElement<float>(reader, "DirtLevel");
-            IsEngineRunning = XmlSerialization.ReadElement<bool>(reader, "IsEngineRunning");
-        }
-        #endregion
     }
 }
