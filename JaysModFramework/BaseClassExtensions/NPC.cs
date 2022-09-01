@@ -67,7 +67,6 @@ namespace JaysModFramework
                 HardDeleteNPC(target);
                 SpawnedNPCs.TryRemove(targetId);
             }
-
         }
         private static void HardDeleteNPC(NPC target)
         {

@@ -222,7 +222,7 @@ namespace JaysModFramework
         }
         #endregion
         #region String Management
-        public string ToString()
+        public override string ToString()
         {
             string str =
                 Beard.ToString() + "," +

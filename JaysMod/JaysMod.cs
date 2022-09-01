@@ -23,13 +23,7 @@ namespace JaysMod
 
         private HUD Hud;
         private NPC PlayerNPC;
-        private Weather Weather
-        {
-            get { return GTA.World.Weather; }
-            set { GTA.World.Weather = value; }
-        }
-        
-        private int Minutes = 0;
+        private State State;
 
         public JaysMod()
         {
@@ -37,6 +31,7 @@ namespace JaysMod
             ModMenuPool.ResetCursorOnOpen = true;
 
             Hud = InstantiateScript<HUD>();
+            State = new State();
 
             Tick += OnTick;
             KeyDown += OnKeyDown;
@@ -54,15 +49,10 @@ namespace JaysMod
         private void SetupGame()
         {
             Function.Call(Hash.SET_MINIMAP_HIDE_FOW, true);
-            Minutes = DateTime.Now.Minute;
             World.IsClockPaused = true;
             MaleOutfitTemplates.SetupOutfits();
-            LoadModel("mp_m_freemode_01");
-            //TextReader reader = new StreamReader("./scripts/JMF/Saves/test1.xml");
-            //new State().DeserializeFromXML(reader);
-            new State().Load("Test Read");
+            State.Load("Test Read");
             PlayerNPC = NPC.PlayerNPC;
-            RestrictedAreasManager.DisableAll();
             ActivateManagers();
             ClosetMenu = Closet.Menu(PlayerNPC, ModMenuPool);
             ModMenuPool.Add(ClosetMenu);
@@ -76,6 +66,7 @@ namespace JaysMod
             RespawnManager.Activate(PlayerNPC);
             VisorManager.Activate(PlayerNPC);
             ScubaManager.Activate(PlayerNPC);
+            RestrictedAreasManager.DisableAll();
         }
         private void DeactivateManagers()
         {
@@ -85,6 +76,7 @@ namespace JaysMod
             RespawnManager.Deactivate();
             VisorManager.Deactivate();
             ScubaManager.Deactivate();
+            RestrictedAreasManager.EnableAll();
         }
 
         private void SpawnCarrier()
@@ -96,19 +88,18 @@ namespace JaysMod
         {
             SaveId = saveId;
             SetupGame();
-            //Vehicle.SpawnVehicle(VehicleHash.Nimbus, new Vector3(1544.28f, 3143.25f, 41.5f), 313.05f);
         }
         public void Save()
         {
-            new State().Save("Test Write");
+            State.Save("Test Write");
         }
 
         public void Unload()
         {
+            State.Unload();
             Hud.Abort();
             Hud = null;
             Function.Call(Hash.SET_MINIMAP_HIDE_FOW, false);
-            RestrictedAreasManager.EnableAll();
             DeactivateManagers();
 
             World.IsClockPaused = false;

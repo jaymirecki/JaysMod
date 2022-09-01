@@ -21,10 +21,13 @@ namespace JaysModFramework
         }
         private JMFDictionary<string, Vehicle> Vehicles { get { return Vehicle.SpawnedVehicles; } }
         private JMFDictionary<string, NPC> NPCs { get { return NPC.SpawnedNPCs; } }
-        private readonly XmlSerializer StateSerializer = new XmlSerializer(typeof(State));
-        private readonly XmlSerializer NPCSerializer = new XmlSerializer(typeof(NPC));
-        private readonly XmlSerializer VehicleSerializer = new XmlSerializer(typeof(Vehicle));
+        private static readonly XmlSerializer StateSerializer = new XmlSerializer(typeof(State));
+        private static readonly XmlSerializer NPCSerializer = new XmlSerializer(typeof(NPC));
+        private static readonly XmlSerializer VehicleSerializer = new XmlSerializer(typeof(Vehicle));
         private const string SourceDirectory = "./scripts/JMF/Saves/";
+        private PedHash revertPed;
+        private Vector3 revertPosition;
+        private float revertHeading;
         #endregion
         #region Constructors
         public State()
@@ -94,6 +97,16 @@ namespace JaysModFramework
             {
                 return false;
             }
+
+            ClearPreviousState();
+            StoreState();
+
+            Load(stateFile, saveDirectory);
+
+            return true;
+        }
+        private void Load(string stateFile, string saveDirectory)
+        {
             TextReader reader = new StreamReader(stateFile);
             State other = (State)StateSerializer.Deserialize(reader);
             Date = other.Date;
@@ -101,7 +114,6 @@ namespace JaysModFramework
             reader.Close();
             LoadNPCs(saveDirectory);
             LoadVehicles(saveDirectory);
-            return true;
         }
         public bool ValidateDirectories(string saveDirectory)
         {
@@ -132,6 +144,7 @@ namespace JaysModFramework
         }
         private void LoadVehicles(string saveDirectory)
         {
+            Vehicle.DeleteAllVehicles();
             string vehicleDirectory = saveDirectory + "Vehicles/";
             foreach (string vehicleFile in Directory.GetFiles(vehicleDirectory))
             {
@@ -151,6 +164,32 @@ namespace JaysModFramework
         {
             return (object)s;
         }
-        #endregion
+        #endregion Load
+        #region Unload
+        public void Unload()
+        {
+            RevertState();
+
+            ClearPreviousState();
+        }
+        private void ClearPreviousState()
+        {
+            NPC.DeleteAllNPCs();
+            Vehicle.DeleteAllVehicles();
+        }
+        private void RevertState()
+        {
+            Game.Player.ChangeModel(new Model(revertPed));
+            Game.Player.Character.Position = revertPosition.BaseVector;
+            Game.Player.Character.Heading = revertHeading;
+        }
+        private void StoreState()
+        {
+            Ped player = Game.Player.Character;
+            revertPed = (PedHash)player.Model.Hash;
+            revertPosition = new Vector3(player.Position);
+            revertHeading = player.Heading;
+        }
+        #endregion Unload
     }
 }

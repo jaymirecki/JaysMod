@@ -52,18 +52,22 @@ namespace JaysModFramework
 
             return GTA.World.CreateVehicle(model, position.BaseVector);
         }
-        public static bool DeleteVehicle(string id)
+        public static bool DeleteVehicle(string targetId)
         {
-            Vehicle target = SpawnedVehicles[id];
-            return HardDeleteVehicle(target);
+            if (SpawnedVehicles.TryGetValue(targetId, out Vehicle target))
+            {
+                SpawnedVehicles.TryRemove(targetId);
+                return HardDeleteVehicle(target);
+            }
+            return false;
         }
         public static bool DeleteVehicle(Vehicle target)
         {
-            return DeleteVehicle(target.ID);
+            return DeleteVehicle(target.ID) || HardDeleteVehicle(target);
         }
-        public static bool DeleteVehicle(GVehicle target)
+        public static bool DeleteVehicle(GVehicle target, bool tryDeleteNPC = true)
         {
-            Vehicle vehicle = null;
+            Vehicle targetVehicle = null;
             if (target == null)
             {
                 return false;
@@ -72,28 +76,37 @@ namespace JaysModFramework
             {
                 if (v.BaseVehicle != null && v.BaseVehicle == target)
                 {
-                    vehicle = v;
+                    targetVehicle = v;
+                    break;
                 }
             }
-            if (vehicle != null)
-            {
-                //return DeleteVehicle(vehicle);
-            }
-            return DeleteGTAVehicle(target);
-        }
-        private static bool HardDeleteVehicle(Vehicle vehicle)
-        {
-            vehicle.BaseVehicle.Delete();
-            return true;
-        }
-        private static bool DeleteGTAVehicle(GVehicle target)
-        {
-            if (target.Exists())
+            if (targetVehicle is null)
             {
                 target.Delete();
                 return true;
             }
+            return DeleteVehicle(targetVehicle);
+        }
+        private static bool HardDeleteVehicle(Vehicle target)
+        {
+            if (target.BaseVehicle is null)
+            {
+                return false;
+            }
+            if (target.BaseVehicle.Exists())
+            {
+                target.BaseVehicle.Delete();
+                return true;
+            }
             return false;
+        }
+        public static void DeleteAllVehicles()
+        {
+            List<string> npcs = new List<string>(SpawnedVehicles.Keys);
+            foreach (string targetId in npcs)
+            {
+                DeleteVehicle(targetId);
+            }
         }
         private static void CopyVehicle(GVehicle source, GVehicle destination)
         {
