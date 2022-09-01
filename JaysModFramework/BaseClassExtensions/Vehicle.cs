@@ -13,7 +13,7 @@ using GVehicle = GTA.Vehicle;
 
 namespace JaysModFramework
 {
-    public class Vehicle: IEquatable<Vehicle>, IXmlSerializable
+    public class Vehicle: IEquatable<Vehicle>
     {
         [XmlIgnore]
         public GVehicle BaseVehicle { get; set; }
@@ -29,7 +29,7 @@ namespace JaysModFramework
             }
         }
         private string _id;
-        internal static XmlDictionary<string, Vehicle> SpawnedVehicles = new XmlDictionary<string, Vehicle>();
+        internal static JMFDictionary<string, Vehicle> SpawnedVehicles = new JMFDictionary<string, Vehicle>();
         #region Helpers
         public static Vehicle SpawnVehicle(VehicleHash modelHash, Vector3 position, float heading)
         {
@@ -245,35 +245,5 @@ namespace JaysModFramework
         public static implicit operator GVehicle(Vehicle v) => v.BaseVehicle;
         public static explicit operator Vehicle(GVehicle v) => new Vehicle(v);
         #endregion Operators
-        #region XML
-        public void WriteXml(XmlWriter writer)
-        {
-            XmlSerialization.WriteElement(writer, "ID", ID);
-            XmlSerialization.WriteElement(writer, "ModelHash", Model.Hash);
-            XmlSerialization.WriteComplexElement(writer, "Position", Position);
-            XmlSerialization.WriteElement(writer, "Heading", Heading);
-            XmlSerialization.WriteElement(writer, "Health", Health);
-            XmlSerialization.WriteElement(writer, "MaxHealth", MaxHealth);
-            XmlSerialization.WriteEnumElement(writer, "PrimaryColor", PrimaryColor);
-            XmlSerialization.WriteEnumElement(writer, "SecondaryColor", SecondaryColor);
-            XmlSerialization.WriteElement(writer, "DirtLevel", DirtLevel);
-            XmlSerialization.WriteElement(writer, "IsEngineRunning", IsEngineRunning);
-        }
-        public void ReadXml(XmlReader reader)
-        {
-            Debug.DEBUG = true;
-            ID = XmlSerialization.ReadElement<string>(reader, "ID");
-            int modelHash = XmlSerialization.ReadElement<int>(reader, "ModelHash");
-            Vector3 position = XmlSerialization.ReadComplexElement<Vector3>(reader, "Position");
-            BaseVehicle = SpawnVehicle(new Model(modelHash), position);
-            Heading = XmlSerialization.ReadElement<float>(reader, "Heading");
-            Health = XmlSerialization.ReadElement<int>(reader, "Health");
-            MaxHealth = XmlSerialization.ReadElement<int>(reader, "MaxHealth");
-            PrimaryColor = XmlSerialization.ReadEnumElement<VehicleColor>(reader, "PrimaryColor");
-            SecondaryColor = XmlSerialization.ReadEnumElement<VehicleColor>(reader, "SecondaryColor");
-            DirtLevel = XmlSerialization.ReadElement<float>(reader, "DirtLevel");
-            IsEngineRunning = XmlSerialization.ReadElement<bool>(reader, "IsEngineRunning");
-        }
-        #endregion
     }
 }

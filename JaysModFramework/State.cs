@@ -21,8 +21,8 @@ namespace JaysModFramework
             get { return World.Weather; }
             set { World.Weather = value; }
         }
-        private XmlDictionary<string, Vehicle> Vehicles { get { return Vehicle.SpawnedVehicles; } }
-        private XmlDictionary<string, NPC> NPCs { get { return NPC.SpawnedNPCs; } }
+        private JMFDictionary<string, Vehicle> Vehicles { get { return Vehicle.SpawnedVehicles; } }
+        private JMFDictionary<string, NPC> NPCs { get { return NPC.SpawnedNPCs; } }
         private readonly XmlSerializer StateSerializer = new XmlSerializer(typeof(State));
         private readonly XmlSerializer NPCSerializer = new XmlSerializer(typeof(NPC));
         private readonly XmlSerializer VehicleSerializer = new XmlSerializer(typeof(Vehicle));
@@ -145,46 +145,6 @@ namespace JaysModFramework
                 Vehicle vehicle = (Vehicle)NPCSerializer.Deserialize(reader);
                 reader.Close();
             }
-        }
-        #endregion
-        #region XMLSerialization
-        //public void SerializeToXml(TextWriter stream)
-        //{
-        //    XmlWriterSettings settings = new XmlWriterSettings();
-        //    settings.Indent = true;
-        //    settings.NewLineHandling = NewLineHandling.Entitize;
-        //    XmlWriter writer = XmlWriter.Create(stream, settings);
-        //    writer.WriteStartElement("State");
-        //    WriteXml(writer);
-        //    writer.WriteEndElement();
-        //    writer.Close();
-        //}
-        //public void WriteXml(XmlWriter writer)
-        //{
-        //    XmlSerialization.WriteElement(writer, "Date", Date);
-        //    XmlSerialization.WriteElement(writer, "Weather", Weather.ToString());
-        //    XmlSerialization.WriteComplexElement(writer, "Vehicles", Vehicles);
-        //    XmlSerialization.WriteComplexElement(writer, "NPCs", NPCs);
-        //}
-        #endregion
-        #region XMLDeserialization
-        public void DeserializeFromXML(TextReader stream)
-        {
-            NPC.ClearPlayerNPC();
-            XmlReaderSettings settings = new XmlReaderSettings();
-            settings.IgnoreWhitespace = true;
-            XmlReader reader = XmlReader.Create(stream, settings);
-            reader.ReadStartElement("State");
-            ReadXml(reader);
-            reader.ReadEndElement();
-            reader.Close();
-        }
-        public void ReadXml(XmlReader reader)
-        {
-            Date = XmlSerialization.ReadElement<DateTime>(reader, "Date");
-            Weather = XmlSerialization.ReadEnumElement<Weather>(reader, "Weather");
-            XmlSerialization.ReadComplexElement<XmlDictionary<string, Vehicle>>(reader, "Vehicles");
-            XmlSerialization.ReadComplexElement<XmlDictionary<string, NPC>>(reader, "NPCs");
         }
         #endregion
     }

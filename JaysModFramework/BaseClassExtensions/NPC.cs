@@ -7,9 +7,9 @@ using System.Xml.Serialization;
 
 namespace JaysModFramework
 {
-    public class NPC: IXmlSerializable
+    public class NPC
     {
-        internal static XmlDictionary<string,NPC> SpawnedNPCs = new XmlDictionary<string,NPC>();
+        internal static JMFDictionary<string,NPC> SpawnedNPCs = new JMFDictionary<string,NPC>();
         private Ped BasePed;
         private const string PlayerID = "JMFNPCPlayer";
         #region Helpers
@@ -87,6 +87,10 @@ namespace JaysModFramework
             destination.Health = source.Health;
             destination.MaxHealth = source.MaxHealth;
             destination.Armor = source.Armor;
+        }
+        private static Ped SpawnPed(PedHash ped, Vector3 position = new Vector3(), float heading = 0)
+        {
+            return World.CreatePed(new Model(ped), position.BaseVector, heading);
         }
         #endregion
         #region Base Values
@@ -259,49 +263,5 @@ namespace JaysModFramework
             _id = IDGenerator.NPCID(this);
         }
         #endregion
-        #region XMLSerialization
-        public void WriteXml(XmlWriter writer)
-        {
-            //writer.WriteAttributeString("ID", ID);
-            XmlSerialization.WriteElement(writer, "ID", ID);
-            XmlSerialization.WriteComplexElement(writer, "Position", Position);
-            XmlSerialization.WriteElement(writer, "Heading", Heading);
-            XmlSerialization.WriteElement(writer, "Health", Health);
-            XmlSerialization.WriteElement(writer, "MaxHealth", MaxHealth);
-            XmlSerialization.WriteElement(writer, "IsDead", IsDead);
-            XmlSerialization.WriteComplexElement(writer, "Outfit", Outfit);
-        }
-        public void ReadXml(XmlReader reader)
-        {
-            //ID = reader.GetAttribute("ID");
-            ID = XmlSerialization.ReadElement<string>(reader, "ID");
-            SetModelBasedOnId();
-            Position = XmlSerialization.ReadComplexElement<Vector3>(reader, "Position");
-            Heading = XmlSerialization.ReadElement<float>(reader, "Heading");
-            Health = XmlSerialization.ReadElement<int>(reader, "Health");
-            MaxHealth = XmlSerialization.ReadElement<int>(reader, "MaxHealth");
-            IsDead = XmlSerialization.ReadElement<bool>(reader, "IsDead");
-            Outfit = XmlSerialization.ReadComplexElement<Outfit>(reader, "Outfit");
-        }
-        private void SetModelBasedOnId()
-        {
-            //Debug.Log(ID);
-            if (ID == PlayerID)
-            {
-                BasePed = Game.Player.Character;
-            }
-            else
-            {
-                int modelHash = Function.Call<int>(Hash.GET_HASH_KEY, "mp_m_freemode_01");
-                //Model newModel = new Model(PedHash.FreemodeFemale01);
-                //BasePed = World.CreatePed(newModel, new GTA.Math.Vector3());
-                BasePed = SpawnPed(PedHash.FreemodeFemale01, new Vector3(), 0f);
-            }
-        }
-        #endregion
-        private Ped SpawnPed(PedHash ped, Vector3 position = new Vector3(), float heading = 0)
-        {
-            return World.CreatePed(new Model(ped), position.BaseVector, heading);
-        }
     }
 }
