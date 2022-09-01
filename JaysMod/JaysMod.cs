@@ -19,7 +19,6 @@ namespace JaysMod
         private MenuPool ModMenuPool;
         private UIMenu planeMenu;
         private UIMenu ClosetMenu;
-        SaveAndLoad SaverLoader;
         private string SaveId;
 
         private HUD Hud;
@@ -31,8 +30,6 @@ namespace JaysMod
         }
         
         private int Minutes = 0;
-
-        private static bool DEBUG = true;
 
         public JaysMod()
         {

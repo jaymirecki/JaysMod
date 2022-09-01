@@ -5,6 +5,7 @@ using GTA.Native;
 using NativeUI;
 using System.Collections.Generic;
 using JaysModFramework;
+using System.Collections;
 
 namespace JaysMod
 {
@@ -60,8 +61,7 @@ namespace JaysMod
         }
         private void LoadMenu(bool modEnabled)
         {
-            SaveAndLoad saverLoader = new SaveAndLoad("JaysMod.ini");
-            List<object> games = new List<object>(saverLoader.AllSaves());
+            List<object> games = new State().FindSaves();
 
             string description = "There are no saved games to load.";
             if (games.Count > 0)
@@ -90,8 +90,7 @@ namespace JaysMod
         }
         private void NewMenu(bool modEnabled)
         {
-            SaveAndLoad saverLoader = new SaveAndLoad("JaysMod.ini");
-            List<object> games = new List<object>(saverLoader.AllSaves());
+            List<object> games = new State().FindSaves();
             UIMenuItem newButton = new UIMenuItem("New Game", "Start a new game");
             MainMenu.AddItem(newButton);
 

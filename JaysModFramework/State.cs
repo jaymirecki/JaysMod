@@ -26,6 +26,7 @@ namespace JaysModFramework
         private readonly XmlSerializer StateSerializer = new XmlSerializer(typeof(State));
         private readonly XmlSerializer NPCSerializer = new XmlSerializer(typeof(NPC));
         private readonly XmlSerializer VehicleSerializer = new XmlSerializer(typeof(Vehicle));
+        private const string SourceDirectory = "./scripts/JMF/Saves/";
         #endregion
         #region Constructors
         public State()
@@ -45,12 +46,11 @@ namespace JaysModFramework
         }
         private static string CreateSaveDirectory(string saveId)
         {
-            const string directory = "./scripts/JMF/Saves/";
             EnsureDirectory("./scripts");
             EnsureDirectory("./scripts/JMF");
             EnsureDirectory("./scripts/JMF/Saves");
 
-            string saveDirectory = directory + saveId + "/";
+            string saveDirectory = SourceDirectory + saveId + "/";
             EnsureDirectory(saveDirectory);
             EnsureDirectory(saveDirectory + "NPCs");
             EnsureDirectory(saveDirectory + "Vehicles");
@@ -92,8 +92,7 @@ namespace JaysModFramework
         #region Load
         public bool Load(string saveId)
         {
-            const string directory = "./scripts/JMF/Saves/";
-            string saveDirectory = directory + saveId + "/";
+            string saveDirectory = SourceDirectory + saveId + "/";
             string stateFile = saveDirectory + "state.xml";
             if (!ValidateDirectories(saveDirectory))
             {
@@ -145,6 +144,17 @@ namespace JaysModFramework
                 Vehicle vehicle = (Vehicle)NPCSerializer.Deserialize(reader);
                 reader.Close();
             }
+        }
+        public List<object> FindSaves()
+        {
+            List<string> stringList = new List<string>(Directory.EnumerateDirectories(SourceDirectory));
+            List<object> objectList;
+            objectList = stringList.ConvertAll(new Converter<string, object>(StringToObject));
+            return objectList;
+        }
+        private static object StringToObject(string s)
+        {
+            return (object)s;
         }
         #endregion
     }
