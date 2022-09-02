@@ -112,8 +112,8 @@ namespace JaysModFramework
             Date = other.Date;
             Weather = other.Weather;
             reader.Close();
-            LoadNPCs(saveDirectory);
             LoadVehicles(saveDirectory);
+            LoadNPCs(saveDirectory);
         }
         public bool ValidateDirectories(string saveDirectory)
         {

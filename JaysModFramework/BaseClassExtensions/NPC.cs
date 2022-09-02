@@ -224,7 +224,46 @@ namespace JaysModFramework
                 value.ApplyToPed(BasePed, false);
             }
         }
-        #endregion
+        #region Vehicle
+        public string VehicleId
+        {
+            get { return IsInVehicle() ? Vehicle().ID : ""; }
+            set
+            {
+                _vehicleId = value;
+                SetIntoVehicle();
+            }
+        }
+        public VehicleSeat VehicleSeat
+        {
+            get
+            {
+                if (IsInVehicle())
+                {
+                    return BasePed.SeatIndex;
+                }
+                return VehicleSeat.None;
+            }
+            set
+            {
+                _vehicleSeat = value;
+                SetIntoVehicle();
+            }
+        }
+        private string _vehicleId = "";
+        private VehicleSeat _vehicleSeat = VehicleSeat.None;
+        private void SetIntoVehicle()
+        {
+            if (_vehicleId != null && _vehicleSeat != VehicleSeat.None)
+            {
+                if (JaysModFramework.Vehicle.SpawnedVehicles.TryGetValue(_vehicleId, out Vehicle v))
+                {
+                    BasePed.SetIntoVehicle(v, _vehicleSeat);
+                }
+            }
+        }
+        #endregion Vehicle
+        #endregion Extension Values
         #region ExtensionMethods
         public bool IsScuba
         {
@@ -233,6 +272,21 @@ namespace JaysModFramework
         public bool IsAccOneDefaulted
         {
             get { return Outfit.GetComponent(BasePed, OutfitComponents.AccOne) == 0; }
+        }
+        public Vehicle Vehicle()
+        {
+            if (IsInVehicle())
+            {
+                foreach (Vehicle v in JaysModFramework.Vehicle.SpawnedVehicles.Values)
+                {
+                    if (v == BasePed.CurrentVehicle)
+                    {
+                        return v;
+                    }
+                }
+                new Vehicle(BasePed.CurrentVehicle);
+            }
+            return null;
         }
         #endregion
         public int Hair = 19;

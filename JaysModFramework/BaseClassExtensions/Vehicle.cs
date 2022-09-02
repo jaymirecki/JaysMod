@@ -165,7 +165,17 @@ namespace JaysModFramework
         public bool IsEngineRunning
         {
             get { return BaseVehicle.IsEngineRunning; }
-            set { BaseVehicle.IsEngineRunning = value; }
+            set {
+                Debug.DEBUG = true;
+                Debug.Log("Before: " + BaseVehicle.IsEngineRunning);
+                BaseVehicle.IsEngineRunning = value;
+                if (value)
+                {
+                    //Debug.Log("Jet Engine");
+                    //Function.Call(GTA.Native.Hash._SET_VEHICLE_JET_ENGINE_ON, BaseVehicle.Handle, value);
+                }
+                Debug.Log("After: " + BaseVehicle.IsEngineRunning);
+            }
         }
         public bool IsSirenActive
         {
@@ -286,6 +296,9 @@ namespace JaysModFramework
             set { Mods.SecondaryColor = value; }
         }
         #endregion BaseVehicleMods
+        #region Base Methods
+        
+        #endregion Base Methods
         #region Extension Properties
         public string ModelName { get { return BaseVehicle.LocalizedName; } }
         public string Name;
