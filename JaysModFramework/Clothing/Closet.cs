@@ -50,10 +50,10 @@ namespace JaysModFramework
 
             menu.OnMenuOpen += (UIMenu sender) =>
             {
-                if (DefaultOutfit == null)
-                {
-                    AcceptOutfit(player);
-                }
+                //if (DefaultOutfit == null)
+                //{
+                //    AcceptOutfit(player);
+                //}
             };
 
             menu.OnMenuClose += (UIMenu sender) =>
@@ -75,11 +75,11 @@ namespace JaysModFramework
         }
         private static void AcceptOutfit(NPC player)
         {
-            DefaultOutfit = player.Outfit.Copy();
+            DefaultOutfit = player.Outfit;
         }
         private static void CancelOutfit(NPC player)
         {
-            player.Outfit = DefaultOutfit.Copy();
+            player.Outfit = DefaultOutfit;
         }
         private static void AddOutfitMenu(UIMenu superMenu, NPC player, MenuPool menuPool)
         {
@@ -103,7 +103,7 @@ namespace JaysModFramework
 
             OutfitMenu.OnItemSelect += (UIMenu sender, UIMenuItem selectedItem, int index) =>
             {
-                player.Outfit = outfitMap.Values.ToArray()[index].Copy();
+                player.Outfit = outfitMap.Values.ToArray()[index];
             };
 
             OutfitMenu.OnMenuClose += (UIMenu sender) =>

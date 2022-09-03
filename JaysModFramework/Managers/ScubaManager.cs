@@ -32,28 +32,28 @@ namespace JaysModFramework
                 //        IsScuba = false;
                 //    }
                 //}
-                if (IsScuba && PlayerNPC.Outfit.AccOne != (int)Undershirts.ScubaTank)
-                {
-                    Debug.Log("notisscuba");
-                    SetScubaLand();
-                    IsScuba = false;
-                }
-                else if (!IsScuba && PlayerNPC.IsScuba)
-                {
-                    Debug.Log("isscuba");
-                    IsScuba = true;
-                }
+                //if (IsScuba && PlayerNPC.Outfit.AccOne != (int)Undershirts.ScubaTank)
+                //{
+                //    Debug.Log("notisscuba");
+                //    SetScubaLand();
+                //    IsScuba = false;
+                //}
+                //else if (!IsScuba && PlayerNPC.IsScuba)
+                //{
+                //    Debug.Log("isscuba");
+                //    IsScuba = true;
+                //}
             }
         }
 
         private void ResetScuba()
         {
             Debug.Log("resetscuba");
-            PlayerNPC.Outfit = MaleOutfitTemplates.Scuba.Copy();
+            //PlayerNPC.Outfit = MaleOutfitTemplates.Scuba.Copy();
         }
         private void SetScubaLand()
         {
-            PlayerNPC.Outfit = MaleOutfitTemplates.ScubaLand.Copy();
+            //PlayerNPC.Outfit = MaleOutfitTemplates.ScubaLand.Copy();
         }
         public static void Activate(NPC playerNPC)
         {

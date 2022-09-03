@@ -10,7 +10,7 @@ namespace JaysModFramework
         private static NPC PlayerNPC;
         private static bool WearingHat;
         private static int Hat;
-        private static int DefaultHat = (int)Hats.Default;
+        //private static int DefaultHat = (int)Hats.Default;
         public HelmetManager()
         {
             Tick += OnTick;
@@ -34,25 +34,25 @@ namespace JaysModFramework
         }
         private static void SwitchHat()
         {
-            Outfit newOutfit = PlayerNPC.Outfit.Copy();
-            if (newOutfit.Hat != DefaultHat)
-            {
-                Hat = newOutfit.Hat;
-                newOutfit.SetHat((Hats)DefaultHat);
-                PlayerNPC.Outfit = newOutfit;
-            }
-            else if (Hat != DefaultHat)
-            {
-                newOutfit.SetHat((Hats)DefaultHat);
-                PlayerNPC.Outfit = newOutfit;
-            }
+            //Outfit newOutfit = PlayerNPC.Outfit.Copy();
+            //if (newOutfit.Hat != DefaultHat)
+            //{
+            //    Hat = newOutfit.Hat;
+            //    newOutfit.SetHat((Hats)DefaultHat);
+            //    PlayerNPC.Outfit = newOutfit;
+            //}
+            //else if (Hat != DefaultHat)
+            //{
+            //    newOutfit.SetHat((Hats)DefaultHat);
+            //    PlayerNPC.Outfit = newOutfit;
+            //}
         }
         public static void Activate(NPC targetNPC)
         {
             Enabled = true;
             PlayerNPC = targetNPC;
-            WearingHat = PlayerNPC.Outfit.Hat != DefaultHat;
-            Hat = PlayerNPC.Outfit.Hat;
+            //WearingHat = PlayerNPC.Outfit.Hat != DefaultHat;
+            //Hat = PlayerNPC.Outfit.Hat;
         }
         public static void Deactivate()
         {

@@ -53,6 +53,7 @@ namespace JaysMod
             MaleOutfitTemplates.SetupOutfits();
             State.Load("Test Read");
             PlayerNPC = NPC.PlayerNPC;
+            new Outfit(JaysModFramework.Clothing.Shirts.Combat, "Black").ApplyToPed(PlayerNPC.BasePed, true);
             ActivateManagers();
             ClosetMenu = Closet.Menu(PlayerNPC, ModMenuPool);
             ModMenuPool.Add(ClosetMenu);
