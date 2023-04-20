@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using JaysModFramework.Clothing;
 using JaysModFramework.Clothing.Components;
 using JaysModFramework;
+using System.Xml.Serialization;
 
 namespace JaysMod
 {
@@ -40,6 +41,8 @@ namespace JaysMod
             {
                 ReplacePlayerPed(PedHash.FreemodeMale01);
                 Outfit outfit = MaleOutfits.Combat;
+                JaysModFramework.Persistence.Save.SaveItem("Presets", "Mask", MaleMasks.Combat);
+                outfit.Mask = new Presets().MaleMasks.GetValue("Pig");
                 outfit.ToPed(Game.Player.Character);
             }
             else if (e.KeyCode == Keys.H)

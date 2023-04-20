@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using JaysModFramework.Persistence;
+using System.Collections.Generic;
 
 namespace JaysModFramework.Clothing.Components
 {
@@ -9,16 +10,23 @@ namespace JaysModFramework.Clothing.Components
     {
         Default,
     }
-    public class BaseOutfitPiece
+    public class BaseOutfitPiece : IJMFDatabaseItem
     {
         // The name of the outfit piece
-        public readonly string Name = "Default Name";
+        public string Name = "Default Name";
         protected static readonly string defaultName = "Default Name";
+        public string ID
+        {
+            get
+            {
+                return Name;
+            }
+        }
         // The ID of the outfit piece (0 indexed for components)
-        public readonly int ID = 0;
+        public int Index = 0;
         protected static readonly int defaultID = 0;
         // The available colors (0 indexed for components)
-        public readonly string[] Colors = new string[] { "Default Color", };
+        public string[] Colors = new string[] { "Default Color", };
         protected static readonly string[] defaultColors = new string[] { "Default Color", };
         // The currently selected color (must be in the range of Colors)
         private int _currentColor = 0;
@@ -38,17 +46,17 @@ namespace JaysModFramework.Clothing.Components
             }
         }
         public BaseOutfitPiece() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public BaseOutfitPiece(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public BaseOutfitPiece(string name, int id, string[] colors, int currentColor)
+        public BaseOutfitPiece(string name, int index, string[] colors) : this(name, index, colors, defaultCurrentColor) { }
+        public BaseOutfitPiece(string name, int index, string[] colors, int currentColor)
         {
             Name = name;
-            ID = id;
+            Index = index;
             Colors = colors;
             CurrentColor = currentColor;
         }
         public BaseOutfitPiece Copy()
         {
-            return new BaseOutfitPiece(Name, ID, Colors, CurrentColor);
+            return new BaseOutfitPiece(Name, Index, Colors, CurrentColor);
         }
     }
     public class BaseComponent : BaseOutfitPiece
@@ -59,7 +67,7 @@ namespace JaysModFramework.Clothing.Components
         public BaseComponent(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor) { }
         public override string ToString()
         {
-            return "{ " + Name + "; " + ID.ToString() + "; " + ComponentSlot + "; " + CurrentColor.ToString() + "; }";
+            return "{ " + Name + "; " + Index.ToString() + "; " + ComponentSlot + "; " + CurrentColor.ToString() + "; }";
         }
     }
     public class BaseProp : BaseOutfitPiece
@@ -71,7 +79,7 @@ namespace JaysModFramework.Clothing.Components
         public BaseProp(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor) { }
         public override string ToString()
         {
-            return "{ " + Name + "; " + ID.ToString() + "; " + ComponentSlot + "; " + CurrentColor.ToString() + "; }";
+            return "{ " + Name + "; " + Index.ToString() + "; " + ComponentSlot + "; " + CurrentColor.ToString() + "; }";
         }
     }
     //public class BaseSkintoneComponent : BaseComponent

@@ -65,6 +65,7 @@
     <Compile Include="Clothing\Components\MaleShirtOverlays.cs" />
     <Compile Include="Clothing\Components\Components.cs" />
     <Compile Include="Clothing\Closet.cs" />
+    <Compile Include="Clothing\Presets.cs" />
     <Compile Include="Clothing\Outfit.cs" />
     <Compile Include="Clothing\MaleOutfitPieces.cs" />
     <Compile Include="Debug.cs" />
@@ -75,6 +76,9 @@
     <Compile Include="Managers\RealTimeDurationManager.cs" />
     <Compile Include="Managers\RespawnManager.cs" />
     <Compile Include="Managers\RestrictedAreasManager.cs" />
+    <Compile Include="Persistence\JMFDatabase.cs" />
+    <Compile Include="Persistence\Load.cs" />
+    <Compile Include="Persistence\Save.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseClassExtensions\NPC.cs" />
     <Compile Include="Managers\ScubaManager.cs" />
