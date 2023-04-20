@@ -126,15 +126,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ATC.cs" />
-    <Compile Include="Charter.cs" />
-    <Compile Include="Drive.cs" />
-    <Compile Include="HUD.cs" />
     <Compile Include="JaysMod.cs" />
-    <Compile Include="Launcher.cs" />
-    <Compile Include="Loadout.cs" />
-    <Compile Include="MaleCloset.cs" />
-    <Compile Include="mapfunctions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

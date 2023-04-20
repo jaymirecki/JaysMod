@@ -52,10 +52,12 @@
   <ItemGroup>
     <Compile Include="BaseClassExtensions\VehicleDoor.cs" />
     <Compile Include="BaseClassExtensions\Vector3.cs" />
+    <Compile Include="Clothing\Components\ComponentFunctions.cs" />
+    <Compile Include="Clothing\Components\MaleMasks.cs" />
+    <Compile Include="Clothing\Components\Components.cs" />
     <Compile Include="Clothing\Closet.cs" />
-    <Compile Include="Clothing\MaleOutfitPieces.cs" />
-    <Compile Include="Clothing\MaleOutfitTemplates.cs" />
     <Compile Include="Clothing\Outfit.cs" />
+    <Compile Include="Clothing\MaleOutfitPieces.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="IDGenerator.cs" />
     <Compile Include="IPLs\IPLDetails.cs" />

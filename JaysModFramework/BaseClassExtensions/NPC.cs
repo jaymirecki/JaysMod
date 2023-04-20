@@ -1,5 +1,6 @@
 ﻿using GTA;
 using GTA.Native;
+using JaysModFramework.Clothing;
 using System;
 using System.Collections.Generic;
 using System.Xml;
@@ -9,7 +10,7 @@ namespace JaysModFramework
 {
     public class NPC
     {
-        internal static JMFDictionary<string,NPC> SpawnedNPCs = new JMFDictionary<string,NPC>();
+        internal static JMFDictionary<string, NPC> SpawnedNPCs = new JMFDictionary<string, NPC>();
         private Ped BasePed;
         private const string PlayerID = "JMFNPCPlayer";
         #region Helpers
@@ -32,7 +33,7 @@ namespace JaysModFramework
         public static void DeleteAllNPCs()
         {
             List<string> npcs = new List<string>(SpawnedNPCs.Keys);
-            foreach(string targetId in npcs)
+            foreach (string targetId in npcs)
             {
                 DeleteNPC(targetId);
             }
@@ -219,9 +220,9 @@ namespace JaysModFramework
             }
             set
             {
-                value.Hair = Hair;
-                value.HairColor = HairColor;
-                value.ApplyToPed(BasePed, false);
+                //value.Hair = Hair;
+                //value.HairColor = HairColor;
+                value.ToPed(BasePed, false);
             }
         }
         #region Vehicle
@@ -265,14 +266,14 @@ namespace JaysModFramework
         #endregion Vehicle
         #endregion Extension Values
         #region ExtensionMethods
-        public bool IsScuba
-        {
-            get { return Outfit.GetComponent(BasePed, OutfitComponents.AccOne) == (int)MaleOutfitPieces.Undershirts.ScubaTank; }
-        }
-        public bool IsAccOneDefaulted
-        {
-            get { return Outfit.GetComponent(BasePed, OutfitComponents.AccOne) == 0; }
-        }
+        //public bool IsScuba
+        //{
+        //    get { return Outfit.GetComponent(BasePed, OutfitComponents.AccOne) == (int)MaleOutfitPieces.Undershirts.ScubaTank; }
+        //}
+        //public bool IsAccOneDefaulted
+        //{
+        //    get { return Outfit.GetComponent(BasePed, OutfitComponents.AccOne) == 0; }
+        //}
         public Vehicle Vehicle()
         {
             if (IsInVehicle())
@@ -292,11 +293,11 @@ namespace JaysModFramework
         public int Hair = 19;
         public int HairColor = 1;
         #region Constructors
-        public NPC(Ped ped): this()
+        public NPC(Ped ped) : this()
         {
             BasePed = ped;
-            Outfit = MaleOutfitTemplates.Casual;
-            Outfit.ApplyToPed(BasePed, false);
+            //Outfit = MaleOutfitTemplates.Casual;
+            //Outfit.ApplyToPed(BasePed, false);
 
             if (IsPlayer)
             {

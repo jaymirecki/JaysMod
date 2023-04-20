@@ -317,14 +317,14 @@ namespace JaysModFramework
         {
             this.BaseVehicle = baseVehicle;
             Name = "";
-            ID = IDGenerator.VehicleID(this);
+            ID = "";// IDGenerator.VehicleID(this);
             SpawnedVehicles.TryAdd(ID, this);
         }
         public Vehicle()
         {
             BaseVehicle = SpawnVehicle(VehicleHash.Akuma, new Vector3());
             Name = "Generic";
-            ID = IDGenerator.VehicleID(this);
+            ID = "";//IDGenerator.VehicleID(this);
         }
         #endregion Constructors
         #region Operators

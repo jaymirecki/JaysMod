@@ -22,7 +22,7 @@ namespace JaysModFramework
             string baseId = vehicle.ModelName;
             return GenerateID("Vehicle", Vehicle.SpawnedVehicles.Keys, baseId);
         }
-        private static string GenerateID<TVal>(string type, Dictionary<string,TVal>.KeyCollection collisions, string baseId = "")
+        private static string GenerateID<TVal>(string type, Dictionary<string, TVal>.KeyCollection collisions, string baseId = "")
         {
             int counter = 1;
             string ID = "JMF" + type;
@@ -30,7 +30,8 @@ namespace JaysModFramework
             {
                 return ID + baseId;
             }
-            while (!IsValidID(IDPlusCounter(ID, counter), collisions)){
+            while (!IsValidID(IDPlusCounter(ID, counter), collisions))
+            {
                 counter++;
             }
             return ID + counter.ToString("D8");
