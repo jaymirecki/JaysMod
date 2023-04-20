@@ -9,16 +9,6 @@ namespace JaysModFramework.Clothing.Components
     {
         Default,
     }
-    public class OutfitColor
-    {
-        public readonly string Name;
-        public readonly int ID;
-        public OutfitColor(string name, int id)
-        {
-            Name = name;
-            ID = id;
-        }
-    }
     public class BaseOutfitPiece
     {
         // The name of the outfit piece
@@ -28,8 +18,8 @@ namespace JaysModFramework.Clothing.Components
         public readonly int ID = 0;
         protected static readonly int defaultID = 0;
         // The available colors (0 indexed for components)
-        public readonly OutfitColor[] Colors = new OutfitColor[] { new OutfitColor("Default Color", 0) };
-        protected static readonly OutfitColor[] defaultColors = new OutfitColor[] { new OutfitColor("Default Color", 0) };
+        public readonly string[] Colors = new string[] { "Default Color", };
+        protected static readonly string[] defaultColors = new string[] { "Default Color", };
         // The currently selected color (must be in the range of Colors)
         private int _currentColor = 0;
         protected static readonly int defaultCurrentColor = 0;
@@ -48,8 +38,8 @@ namespace JaysModFramework.Clothing.Components
             }
         }
         public BaseOutfitPiece() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public BaseOutfitPiece(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public BaseOutfitPiece(string name, int id, OutfitColor[] colors, int currentColor)
+        public BaseOutfitPiece(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public BaseOutfitPiece(string name, int id, string[] colors, int currentColor)
         {
             Name = name;
             ID = id;
@@ -65,22 +55,23 @@ namespace JaysModFramework.Clothing.Components
     {
         internal OutfitComponents ComponentSlot = OutfitComponents.Mask;
         public BaseComponent() : base() { }
-        public BaseComponent(string name, int id, OutfitColor[] colors) : base(name, id, colors) { }
-        public BaseComponent(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor) { }
+        public BaseComponent(string name, int id, string[] colors) : base(name, id, colors) { }
+        public BaseComponent(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor) { }
         public override string ToString()
         {
-            return "{ " + Name + "; " + ID.ToString() + "; " + ComponentSlot + "; }";
+            return "{ " + Name + "; " + ID.ToString() + "; " + ComponentSlot + "; " + CurrentColor.ToString() + "; }";
         }
     }
     public class BaseProp : BaseOutfitPiece
     {
+        protected static new readonly int defaultID = -1;
         internal Props ComponentSlot = Props.Hat;
         public BaseProp() : base() { }
-        public BaseProp(string name, int id, OutfitColor[] colors) : base(name, id, colors) { }
-        public BaseProp(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor) { }
+        public BaseProp(string name, int id, string[] colors) : base(name, id, colors) { }
+        public BaseProp(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor) { }
         public override string ToString()
         {
-            return "{ " + Name + "; " + ID.ToString() + "; " + ComponentSlot + "; }";
+            return "{ " + Name + "; " + ID.ToString() + "; " + ComponentSlot + "; " + CurrentColor.ToString() + "; }";
         }
     }
     //public class BaseSkintoneComponent : BaseComponent
@@ -95,8 +86,8 @@ namespace JaysModFramework.Clothing.Components
     public class Mask : BaseComponent
     {
         public Mask() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Mask(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Mask(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Mask(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Mask(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = OutfitComponents.Mask;
         }
@@ -105,8 +96,8 @@ namespace JaysModFramework.Clothing.Components
     public class Hands : BaseComponent
     {
         public Hands() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Hands(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Hands(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Hands(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Hands(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = OutfitComponents.Hands;
         }
@@ -114,8 +105,8 @@ namespace JaysModFramework.Clothing.Components
     public class Lower : BaseComponent
     {
         public Lower() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Lower(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Lower(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Lower(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Lower(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = OutfitComponents.Lower;
         }
@@ -124,8 +115,8 @@ namespace JaysModFramework.Clothing.Components
     public class Parachute : BaseComponent
     {
         public Parachute() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Parachute(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Parachute(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Parachute(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Parachute(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = OutfitComponents.Parachute;
         }
@@ -133,8 +124,8 @@ namespace JaysModFramework.Clothing.Components
     public class Shoes : BaseComponent
     {
         public Shoes() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Shoes(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Shoes(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Shoes(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Shoes(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = OutfitComponents.Shoes;
         }
@@ -143,8 +134,8 @@ namespace JaysModFramework.Clothing.Components
     public class Neck : BaseComponent
     {
         public Neck() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Neck(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Neck(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Neck(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Neck(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = OutfitComponents.Neck;
         }
@@ -152,8 +143,8 @@ namespace JaysModFramework.Clothing.Components
     public class Accessory : BaseComponent
     {
         public Accessory() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Accessory(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Accessory(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Accessory(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Accessory(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = OutfitComponents.Accessory;
         }
@@ -162,8 +153,8 @@ namespace JaysModFramework.Clothing.Components
     public class Vest : BaseComponent
     {
         public Vest() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Vest(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Vest(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Vest(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Vest(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = OutfitComponents.Vest;
         }
@@ -171,8 +162,8 @@ namespace JaysModFramework.Clothing.Components
     public class ShirtOverlay : BaseComponent
     {
         public ShirtOverlay() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public ShirtOverlay(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public ShirtOverlay(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public ShirtOverlay(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public ShirtOverlay(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = OutfitComponents.ShirtOverlay;
         }
@@ -180,8 +171,8 @@ namespace JaysModFramework.Clothing.Components
     public class Hat : BaseProp
     {
         public Hat() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Hat(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Hat(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Hat(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Hat(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = Props.Hat;
         }
@@ -189,8 +180,8 @@ namespace JaysModFramework.Clothing.Components
     public class Glasses : BaseProp
     {
         public Glasses() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Glasses(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Glasses(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Glasses(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Glasses(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = Props.Glasses;
         }
@@ -199,8 +190,8 @@ namespace JaysModFramework.Clothing.Components
     public class Ears : BaseProp
     {
         public Ears() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Ears(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Ears(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Ears(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Ears(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = Props.Ears;
         }
@@ -208,8 +199,8 @@ namespace JaysModFramework.Clothing.Components
     public class Watch : BaseProp
     {
         public Watch() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
-        public Watch(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
-        public Watch(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        public Watch(string name, int id, string[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Watch(string name, int id, string[] colors, int currentColor) : base(name, id, colors, currentColor)
         {
             ComponentSlot = Props.Watch;
         }
