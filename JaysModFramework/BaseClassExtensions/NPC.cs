@@ -210,21 +210,21 @@ namespace JaysModFramework
         }
         private string _id;
         public string Name;
-        public Outfit Outfit
-        {
-            get
-            {
-                Outfit outfit = new Outfit();
-                outfit.FromPed(BasePed);
-                return outfit;
-            }
-            set
-            {
-                //value.Hair = Hair;
-                //value.HairColor = HairColor;
-                value.ToPed(BasePed, false);
-            }
-        }
+        //public Outfit Outfit
+        //{
+        //    get
+        //    {
+        //        Outfit outfit = new Outfit();
+        //        outfit.FromPed(BasePed);
+        //        return outfit;
+        //    }
+        //    set
+        //    {
+        //        //value.Hair = Hair;
+        //        //value.HairColor = HairColor;
+        //        value.ToPed(BasePed, false);
+        //    }
+        //}
         #region Vehicle
         public string VehicleId
         {

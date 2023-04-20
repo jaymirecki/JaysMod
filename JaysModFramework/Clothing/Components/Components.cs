@@ -2,11 +2,14 @@
 
 namespace JaysModFramework.Clothing.Components
 {
+    internal enum HeadOverlays { Blemishes = 0, FacialHair = 1, Eyebrows = 2 };
+    internal enum OutfitComponents { Mask = 1, Hair = 2, Hands = 3, Lower = 4, Parachute = 5, Shoes = 6, Neck = 7, Accessory = 8, Vest = 9, ShirtOverlay = 11 };
+    internal enum Props { Hat = 0, Glasses = 1, Ears = 2, Watch = 3 };
     public enum SkinTones
     {
-
+        Default,
     }
-    public struct OutfitColor
+    public class OutfitColor
     {
         public readonly string Name;
         public readonly int ID;
@@ -16,100 +19,199 @@ namespace JaysModFramework.Clothing.Components
             ID = id;
         }
     }
-    // Corresponds with Beard slot
-    public struct Mask
+    public class BaseOutfitPiece
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly OutfitColor[] Colors;
-        public Mask(string name, int id, OutfitColor[] colors)
+        // The name of the outfit piece
+        public readonly string Name = "Default Name";
+        protected static readonly string defaultName = "Default Name";
+        // The ID of the outfit piece (0 indexed for components)
+        public readonly int ID = 0;
+        protected static readonly int defaultID = 0;
+        // The available colors (0 indexed for components)
+        public readonly OutfitColor[] Colors = new OutfitColor[] { new OutfitColor("Default Color", 0) };
+        protected static readonly OutfitColor[] defaultColors = new OutfitColor[] { new OutfitColor("Default Color", 0) };
+        // The currently selected color (must be in the range of Colors)
+        private int _currentColor = 0;
+        protected static readonly int defaultCurrentColor = 0;
+        public int CurrentColor
+        {
+            get
+            {
+                return _currentColor;
+            }
+            set
+            {
+                if (value < Colors.Length || value == 0)
+                {
+                    _currentColor = value;
+                }
+            }
+        }
+        public BaseOutfitPiece() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public BaseOutfitPiece(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public BaseOutfitPiece(string name, int id, OutfitColor[] colors, int currentColor)
         {
             Name = name;
             ID = id;
             Colors = colors;
+            CurrentColor = currentColor;
         }
+        public BaseOutfitPiece Copy()
+        {
+            return new BaseOutfitPiece(Name, ID, Colors, CurrentColor);
+        }
+    }
+    public class BaseComponent : BaseOutfitPiece
+    {
+        internal OutfitComponents ComponentSlot = OutfitComponents.Mask;
+        public BaseComponent() : base() { }
+        public BaseComponent(string name, int id, OutfitColor[] colors) : base(name, id, colors) { }
+        public BaseComponent(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor) { }
         public override string ToString()
         {
-            return Name;
+            return "{ " + Name + "; " + ID.ToString() + "; " + ComponentSlot + "; }";
         }
     }
-    public struct Upper
+    public class BaseProp : BaseOutfitPiece
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
-        public readonly SkinTones SkinTone;
+        internal Props ComponentSlot = Props.Hat;
+        public BaseProp() : base() { }
+        public BaseProp(string name, int id, OutfitColor[] colors) : base(name, id, colors) { }
+        public BaseProp(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor) { }
+        public override string ToString()
+        {
+            return "{ " + Name + "; " + ID.ToString() + "; " + ComponentSlot + "; }";
+        }
     }
-    public struct Lower
+    //public class BaseSkintoneComponent : BaseComponent
+    //{
+    //    public readonly SkinTones SkinTone = SkinTones.Default;
+    //    public new BaseSkintoneComponent Copy()
+    //    {
+    //        return (BaseSkintoneComponent)base.Copy();
+    //    }
+    //}
+    // Corresponds with Beard slot
+    public class Mask : BaseComponent
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
+        public Mask() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Mask(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Mask(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = OutfitComponents.Mask;
+        }
+    }
+    // Corresponds with the Upper slot
+    public class Hands : BaseComponent
+    {
+        public Hands() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Hands(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Hands(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = OutfitComponents.Hands;
+        }
+    }
+    public class Lower : BaseComponent
+    {
+        public Lower() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Lower(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Lower(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = OutfitComponents.Lower;
+        }
     }
     // Corresponds with Hands slot
-    public struct Parachute
+    public class Parachute : BaseComponent
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
+        public Parachute() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Parachute(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Parachute(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = OutfitComponents.Parachute;
+        }
     }
-    public struct Shoes
+    public class Shoes : BaseComponent
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
-        public readonly SkinTones SkinTone;
+        public Shoes() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Shoes(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Shoes(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = OutfitComponents.Shoes;
+        }
     }
     // Corresponds with Teeth slot
-    public struct Neck
+    public class Neck : BaseComponent
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
+        public Neck() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Neck(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Neck(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = OutfitComponents.Neck;
+        }
     }
-    public struct Accessory
+    public class Accessory : BaseComponent
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
+        public Accessory() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Accessory(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Accessory(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = OutfitComponents.Accessory;
+        }
     }
-    // 
     // Corresponds with Accessory2 slot
-    public struct Vest
+    public class Vest : BaseComponent
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
+        public Vest() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Vest(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Vest(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = OutfitComponents.Vest;
+        }
     }
-    public struct ShirtOverlay
+    public class ShirtOverlay : BaseComponent
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
+        public ShirtOverlay() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public ShirtOverlay(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public ShirtOverlay(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = OutfitComponents.ShirtOverlay;
+        }
     }
-    public struct Hat
+    public class Hat : BaseProp
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
+        public Hat() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Hat(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Hat(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = Props.Hat;
+        }
     }
-    public struct Glasses
+    public class Glasses : BaseProp
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
+        public Glasses() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Glasses(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Glasses(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = Props.Glasses;
+        }
     }
     // Corresponds with Misc slot
-    public struct Ears
+    public class Ears : BaseProp
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
+        public Ears() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Ears(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Ears(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = Props.Ears;
+        }
     }
-    public struct Watch
+    public class Watch : BaseProp
     {
-        public readonly string Name;
-        public readonly int ID;
-        public readonly List<OutfitColor> Colors;
+        public Watch() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
+        public Watch(string name, int id, OutfitColor[] colors) : this(name, id, colors, defaultCurrentColor) { }
+        public Watch(string name, int id, OutfitColor[] colors, int currentColor) : base(name, id, colors, currentColor)
+        {
+            ComponentSlot = Props.Watch;
+        }
     }
 }

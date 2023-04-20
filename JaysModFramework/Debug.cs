@@ -20,5 +20,9 @@ namespace JaysModFramework
         {
             Log(value.ToString(), overrideDebugFlag);
         }
+        public static void Log<T>(string label, T value, bool overrideDebugFlag = false)
+        {
+            Log(label + ": " + value.ToString(), overrideDebugFlag);
+        }
     }
 }
