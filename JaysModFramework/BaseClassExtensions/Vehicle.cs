@@ -166,7 +166,6 @@ namespace JaysModFramework
         {
             get { return BaseVehicle.IsEngineRunning; }
             set {
-                Debug.DEBUG = true;
                 Debug.Log("Before: " + BaseVehicle.IsEngineRunning);
                 BaseVehicle.IsEngineRunning = value;
                 if (value)
