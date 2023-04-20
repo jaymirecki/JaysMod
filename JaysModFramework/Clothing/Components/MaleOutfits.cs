@@ -11,7 +11,11 @@
             MaleAccessories.Combat, 
             MaleVests.Combat, 
             MaleNecks.Default, 
-            MaleShirtOverlays.Combat
+            MaleShirtOverlays.Combat,
+            new Hat(),
+            new Glasses(),
+            new Ears(),
+            new Watch()
             );
     }
 }

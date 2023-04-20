@@ -54,6 +54,7 @@
     <Compile Include="BaseClassExtensions\Vector3.cs" />
     <Compile Include="Clothing\Components\ComponentFunctions.cs" />
     <Compile Include="Clothing\Components\MaleMasks.cs" />
+    <Compile Include="Clothing\Components\MaleOutfits.cs" />
     <Compile Include="Clothing\Components\MaleVests.cs" />
     <Compile Include="Clothing\Components\MaleAccessories.cs" />
     <Compile Include="Clothing\Components\MaleNecks.cs" />
