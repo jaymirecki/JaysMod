@@ -39,9 +39,7 @@ namespace JaysMod
             if (e.KeyCode == Keys.G)
             {
                 ReplacePlayerPed(PedHash.FreemodeMale01);
-                Outfit outfit = new Outfit(MaleMasks.Combat, MaleMasks.Combat.Colors[0]);
-                Debug.Log("Add outfit", true);
-                Debug.Log(outfit.Mask, true);
+                Outfit outfit = MaleOutfits.Combat;
                 outfit.ToPed(Game.Player.Character);
             }
             else if (e.KeyCode == Keys.H)
