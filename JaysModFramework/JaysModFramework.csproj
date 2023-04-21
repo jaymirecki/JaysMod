@@ -58,6 +58,7 @@
     <Compile Include="Clothing\Presets.cs" />
     <Compile Include="Clothing\Outfit.cs" />
     <Compile Include="Clothing\MaleOutfitPieces.cs" />
+    <Compile Include="Global.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="IDGenerator.cs" />
     <Compile Include="IPLs\IPLDetails.cs" />

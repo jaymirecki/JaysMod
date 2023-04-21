@@ -53,5 +53,36 @@ namespace JaysModFramework.Clothing
             MaleWatches = new JMFDatabase<int, Watch>(DIRECTORY, MALEWATCHES);
             MaleOutfits = new JMFDatabase<string, Outfit>(DIRECTORY, MALEOUTFITS);
         }
+        public void Reload()
+        {
+            MaleAccessories.Clear();
+            MaleAccessories.LoadFromFile(DIRECTORY, MALEACCESSORIES);
+            MaleHands.Clear();
+            MaleHands.LoadFromFile(DIRECTORY, MALEHANDS);
+            MaleLowers.Clear();
+            MaleLowers.LoadFromFile(DIRECTORY, MALELOWERS);
+            MaleMasks.Clear();
+            MaleMasks.LoadFromFile(DIRECTORY, MALEMASKS);
+            MaleNecks.Clear();
+            MaleNecks.LoadFromFile(DIRECTORY, MALENECKS);
+            MaleParachutes.Clear();
+            MaleParachutes.LoadFromFile(DIRECTORY, MALEPARACHUTES);
+            MaleShirtOverlays.Clear();
+            MaleShirtOverlays.LoadFromFile(DIRECTORY, MALESHIRTOVERLAYS);
+            MaleShoes.Clear();
+            MaleShoes.LoadFromFile(DIRECTORY, MALESHOES);
+            MaleVests.Clear();
+            MaleVests.LoadFromFile(DIRECTORY, MALEVESTS);
+            MaleHats.Clear();
+            MaleHats.LoadFromFile(DIRECTORY, MALEHATS);
+            MaleGlasses.Clear();
+            MaleGlasses.LoadFromFile(DIRECTORY, MALEGLASSES);
+            MaleEars.Clear();
+            MaleEars.LoadFromFile(DIRECTORY, MALEEARS);
+            MaleWatches.Clear();
+            MaleWatches.LoadFromFile(DIRECTORY, MALEWATCHES);
+            MaleOutfits.Clear();
+            MaleOutfits.LoadFromFile(DIRECTORY, MALEOUTFITS);
+        }
     }
 }
