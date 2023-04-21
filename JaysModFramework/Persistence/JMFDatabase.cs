@@ -10,7 +10,7 @@ namespace JaysModFramework.Persistence
     {
         TKey ID { get; }
     }
-    public class JMFDatabase<TKey, TValue> where TValue : IJMFDatabaseItem<TKey>
+    public class JMFDatabase<TKey, TValue> where TValue : IJMFDatabaseItem<TKey>, new()
     {
         #region Properties
         private JMFDictionary<TKey, TValue> Dictionary;
@@ -40,36 +40,41 @@ namespace JaysModFramework.Persistence
         #region Load
         public void LoadFromFile(string directory, string filename)
         {
-            try
+            if (!CheckLoadFile(directory, filename, out string filepath)) return;
+            Dictionary = new JMFDictionary<TKey, TValue>();
+            TValue[] valueArray = ReadFromFile<TValue[]>(filepath);
+            if (valueArray == null) return;
+            foreach (TValue value in valueArray)
             {
-                string filepath = CheckLoadFile(directory, filename);
-                Dictionary = new JMFDictionary<TKey, TValue>();
-                TValue[] valueArray = ReadFromFile<TValue[]>(filepath);
-                foreach (TValue value in valueArray)
+                if (value != null)
                 {
-                    if (value != null)
-                    {
-                        Dictionary.TryAdd(value.ID, value);
-                    }
+                    Dictionary.TryAdd(value.ID, value);
                 }
             }
-            catch { }
         }
-        private static string CheckLoadFile(string directory, string filename)
+        private static bool CheckLoadFile(string directory, string filename, out string filepath)
         {
-            string filepath = directory + filename;
+            filepath = directory + filename;
             if (File.Exists(filepath))
             {
-                return filepath;
+                return true;
             }
 
-            throw new Exception("Invalid Directory");
+            return false;
         }
         private static T ReadFromFile<T>(string filepath)
         {
             TextReader reader = new StreamReader(filepath);
             XmlSerializer ItemSerializer = new XmlSerializer(typeof(T));
-            T item = (T)ItemSerializer.Deserialize(reader);
+            T item;
+            try
+            {
+                item = (T)ItemSerializer.Deserialize(reader);
+            }
+            catch
+            {
+                item = default(T);
+            }
             reader.Close();
             return item;
         }
@@ -111,8 +116,10 @@ namespace JaysModFramework.Persistence
         }
         public TValue GetValue(TKey ID)
         {
-            TValue value = default(TValue);
-            TryGetValue(ID, out value);
+            if (TryGetValue(ID, out TValue value))
+            {
+                return value;
+            }
             return value;
         }
         #endregion Get
@@ -126,5 +133,9 @@ namespace JaysModFramework.Persistence
             TryAddValue(ID, value);
         }
         #endregion AddValue
+        public void Clear()
+        {
+            Dictionary.Clear();
+        }
     }
 }

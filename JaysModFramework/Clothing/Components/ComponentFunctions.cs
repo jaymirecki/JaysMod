@@ -12,7 +12,6 @@ namespace JaysModFramework.Clothing.Components
         }
         public static void SetComponent<T>(Ped ped, T component) where T: BaseComponent
         {
-            Debug.Log(component, true);
             SetComponent(ped, component.ComponentSlot, component.Index, component.CurrentColor);
         }
         private static void SetProp(Ped ped, Props slot, int propId, int propColorId)

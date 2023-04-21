@@ -7,7 +7,6 @@ namespace JaysModFramework.Clothing
 {
     public class Outfit: IJMFDatabaseItem<string>
     {
-        private static readonly Presets Presets = new Presets();
         [XmlIgnore]
         public Mask Mask;
         public ComponentKey MaskKey
@@ -15,7 +14,11 @@ namespace JaysModFramework.Clothing
             get { return new ComponentKey().FromComponent(Mask); }
             set
             {
-                Mask = Presets.MaleMasks[value.ID];
+                Mask = Global.Presets.MaleMasks[value.ID];
+                if (Mask == null)
+                {
+                    Mask = new Mask(value.ID, value.CurrentColor);
+                }
                 Mask.CurrentColor = value.CurrentColor;
             }
         }
@@ -26,7 +29,11 @@ namespace JaysModFramework.Clothing
             get { return new ComponentKey().FromComponent(Hands); }
             set
             {
-                Hands = Presets.MaleHands[value.ID];
+                Hands = Global.Presets.MaleHands[value.ID];
+                if (Hands == null)
+                {
+                    Hands = new Hands(value.ID, value.CurrentColor);
+                }
                 Hands.CurrentColor = value.CurrentColor;
             }
         }
@@ -37,7 +44,11 @@ namespace JaysModFramework.Clothing
             get { return new ComponentKey().FromComponent(Lower); }
             set
             {
-                Lower = Presets.MaleLowers[value.ID];
+                Lower = Global.Presets.MaleLowers[value.ID];
+                if (Lower == null)
+                {
+                    Lower = new Lower(value.ID, value.CurrentColor);
+                }
                 Lower.CurrentColor = value.CurrentColor;
             }
         }
@@ -48,7 +59,11 @@ namespace JaysModFramework.Clothing
             get { return new ComponentKey().FromComponent(Parachute); }
             set
             {
-                Parachute = Presets.MaleParachutes[value.ID];
+                Parachute = Global.Presets.MaleParachutes[value.ID];
+                if (Parachute == null)
+                {
+                    Parachute = new Parachute(value.ID, value.CurrentColor);
+                }
                 Parachute.CurrentColor = value.CurrentColor;
             }
         }
@@ -59,7 +74,12 @@ namespace JaysModFramework.Clothing
             get { return new ComponentKey().FromComponent(Shoes); }
             set
             {
-                Shoes = Presets.MaleShoes[value.ID];
+                Shoes shoes = Global.Presets.MaleShoes[value.ID];
+                if (shoes == null)
+                {
+                    shoes = new Shoes(value.ID, value.CurrentColor);
+                }
+                Shoes = shoes;
                 Shoes.CurrentColor = value.CurrentColor;
             }
         }
@@ -70,7 +90,12 @@ namespace JaysModFramework.Clothing
             get { return new ComponentKey().FromComponent(Accessory); }
             set
             {
-                Accessory = Presets.MaleAccessories[value.ID];
+                Accessory accessories = Global.Presets.MaleAccessories[value.ID];
+                if (accessories == null)
+                {
+                    accessories = new Accessory(value.ID, value.CurrentColor);
+                }
+                Accessory = accessories;
                 Accessory.CurrentColor = value.CurrentColor;
             }
         }
@@ -81,7 +106,12 @@ namespace JaysModFramework.Clothing
             get { return new ComponentKey().FromComponent(Vest); }
             set
             {
-                Vest = Presets.MaleVests[value.ID];
+                Vest vest = Global.Presets.MaleVests[value.ID];
+                if (vest == null)
+                {
+                    vest = new Vest(value.ID, value.CurrentColor);
+                }
+                Vest = vest;
                 Vest.CurrentColor = value.CurrentColor;
             }
         }
@@ -92,7 +122,12 @@ namespace JaysModFramework.Clothing
             get { return new ComponentKey().FromComponent(Neck); }
             set
             {
-                Neck = Presets.MaleNecks[value.ID];
+                Neck neck = Global.Presets.MaleNecks[value.ID];
+                if (neck == null)
+                {
+                    neck = new Neck(value.ID, value.CurrentColor);
+                }
+                Neck = neck;
                 Neck.CurrentColor = value.CurrentColor;
             }
         }
@@ -103,54 +138,79 @@ namespace JaysModFramework.Clothing
             get { return new ComponentKey().FromComponent(ShirtOverlay); }
             set
             {
-                ShirtOverlay = Presets.MaleShirtOverlays[value.ID];
+                ShirtOverlay shirtOverlay = Global.Presets.MaleShirtOverlays[value.ID];
+                if (shirtOverlay == null)
+                {
+                    shirtOverlay = new ShirtOverlay(value.ID, value.CurrentColor);
+                }
+                ShirtOverlay = shirtOverlay;
                 ShirtOverlay.CurrentColor = value.CurrentColor;
             }
         }
         [XmlIgnore]
         public Hat Hat;
-        //public ComponentKey HatKey
-        //{
-        //    get { return new ComponentKey().FromComponent(Hat); }
-        //    set
-        //    {
-        //        Hat = Presets.MaleHats[value.ID];
-        //        Hat.CurrentColor = value.CurrentColor;
-        //    }
-        //}
+        public ComponentKey HatKey
+        {
+            get { return new ComponentKey().FromComponent(Hat); }
+            set
+            {
+                Hat hat = Global.Presets.MaleHats[value.ID];
+                if (hat == null)
+                {
+                    hat = new Hat(value.ID, value.CurrentColor);
+                }
+                Hat = hat;
+                Hat.CurrentColor = value.CurrentColor;
+            }
+        }
         [XmlIgnore]
         public Glasses Glasses;
-        //public ComponentKey GlassesKey
-        //{
-        //    get { return new ComponentKey().FromComponent(Glasses); }
-        //    set
-        //    {
-        //        Glasses = Presets.MaleGlasses[value.ID];
-        //        Glasses.CurrentColor = value.CurrentColor;
-        //    }
-        //}
+        public ComponentKey GlassesKey
+        {
+            get { return new ComponentKey().FromComponent(Glasses); }
+            set
+            {
+                Glasses glasses = Global.Presets.MaleGlasses[value.ID];
+                if (glasses == null)
+                {
+                    glasses = new Glasses(value.ID, value.CurrentColor);
+                }
+                Glasses = glasses;
+                Glasses.CurrentColor = value.CurrentColor;
+            }
+        }
         [XmlIgnore]
         public Ears Ears;
-        //public ComponentKey EarsKey
-        //{
-        //    get { return new ComponentKey().FromComponent(Ears); }
-        //    set
-        //    {
-        //        Ears = Presets.MaleEars[value.ID];
-        //        Ears.CurrentColor = value.CurrentColor;
-        //    }
-        //}
+        public ComponentKey EarsKey
+        {
+            get { return new ComponentKey().FromComponent(Ears); }
+            set
+            {
+                Ears ears = Global.Presets.MaleEars[value.ID];
+                if (ears == null)
+                {
+                    ears = new Ears(value.ID, value.CurrentColor);
+                }
+                Ears = ears;
+                Ears.CurrentColor = value.CurrentColor;
+            }
+        }
         [XmlIgnore]
         public Watch Watch;
-        //public ComponentKey WatchKey
-        //{
-        //    get { return new ComponentKey().FromComponent(Watch); }
-        //    set
-        //    {
-        //        Watch = Presets.MaleWatches[value.ID];
-        //        Watch.CurrentColor = value.CurrentColor;
-        //    }
-        //}
+        public ComponentKey WatchKey
+        {
+            get { return new ComponentKey().FromComponent(Watch); }
+            set
+            {
+                Watch watch = Global.Presets.MaleWatches[value.ID];
+                if (watch == null)
+                {
+                    watch = new Watch(value.ID, value.CurrentColor);
+                }
+                Watch = watch;
+                Watch.CurrentColor = value.CurrentColor;
+            }
+        }
         public string ID
         {
             get { return Mask.Name; }
