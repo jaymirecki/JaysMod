@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml;
 
-namespace JaysModFramework
+namespace JaysModFramework.Persistence
 {
     internal class JMFDictionary<TKey, TVal>: Dictionary<TKey, TVal>
     {

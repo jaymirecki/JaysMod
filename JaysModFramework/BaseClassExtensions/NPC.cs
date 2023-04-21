@@ -1,7 +1,5 @@
 ﻿using GTA;
-using GTA.Native;
-using JaysModFramework.Clothing;
-using System;
+using JaysModFramework.Persistence;
 using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Serialization;
