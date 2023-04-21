@@ -16,6 +16,10 @@ namespace JaysModFramework.Clothing
         private static readonly string MALESHIRTOVERLAYS = "MaleShirtOverlays.xml";
         private static readonly string MALESHOES = "MaleShoes.xml";
         private static readonly string MALEVESTS = "MaleVests.xml";
+        private static readonly string MALEHATS = "MaleHats.xml";
+        private static readonly string MALEGLASSES = "MaleGlasses.xml";
+        private static readonly string MALEEARS = "MaleEars.xml";
+        private static readonly string MALEWATCHES = "MaleWatches.xml";
         private static readonly string MALEOUTFITS = "MaleOutfits.xml";
 
         public JMFDatabase<int, Accessory> MaleAccessories { get; }
@@ -27,6 +31,10 @@ namespace JaysModFramework.Clothing
         public JMFDatabase<int, ShirtOverlay> MaleShirtOverlays { get; }
         public JMFDatabase<int, Shoes> MaleShoes { get; }
         public JMFDatabase<int, Vest> MaleVests { get; }
+        public JMFDatabase<int, Hat> MaleHats { get; }
+        public JMFDatabase<int, Glasses> MaleGlasses { get; }
+        public JMFDatabase<int, Ears> MaleEars { get; }
+        public JMFDatabase<int, Watch> MaleWatches { get; }
         public JMFDatabase<string, Outfit> MaleOutfits { get; }
         public Presets()
         {
@@ -39,6 +47,10 @@ namespace JaysModFramework.Clothing
             MaleShirtOverlays = new JMFDatabase<int, ShirtOverlay>(DIRECTORY, MALESHIRTOVERLAYS);
             MaleShoes = new JMFDatabase<int, Shoes>(DIRECTORY, MALESHOES);
             MaleVests = new JMFDatabase<int, Vest>(DIRECTORY, MALEVESTS);
+            MaleHats = new JMFDatabase<int, Hat>(DIRECTORY, MALEHATS);
+            MaleGlasses = new JMFDatabase<int, Glasses>(DIRECTORY, MALEGLASSES);
+            MaleEars = new JMFDatabase<int, Ears>(DIRECTORY, MALEEARS);
+            MaleWatches = new JMFDatabase<int, Watch>(DIRECTORY, MALEWATCHES);
             MaleOutfits = new JMFDatabase<string, Outfit>(DIRECTORY, MALEOUTFITS);
         }
     }

@@ -42,7 +42,24 @@ namespace JaysMod
                 ReplacePlayerPed(PedHash.FreemodeMale01);
                 Presets presets = new Presets();
                 Outfit outfit = presets.MaleOutfits["Combat"];
+                //Outfit outfit = new Outfit(
+                //    presets.MaleMasks[35],
+                //    presets.MaleHands[17],
+                //    presets.MaleLowers[33],
+                //    presets.MaleParachutes[0],
+                //    presets.MaleShoes[24],
+                //    presets.MaleAccessories[15],
+                //    presets.MaleVests[11],
+                //    presets.MaleNecks[0],
+                //    presets.MaleShirtOverlays[49],
+                //    new Hat(),
+                //    new Glasses(),
+                //    new Ears(),
+                //    new Watch()
+                //);
                 outfit.ToPed(Game.Player.Character);
+                //presets.MaleOutfits["Combat"] = outfit;
+                //presets.MaleOutfits.SaveToFile("./scripts/JMF/Presets/Clothing/", "MaleOutfits.xml");
             }
             else if (e.KeyCode == Keys.H)
             {
