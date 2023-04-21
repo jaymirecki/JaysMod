@@ -5,6 +5,15 @@ namespace JaysModFramework
 {
     internal class JMFDictionary<TKey, TVal>: Dictionary<TKey, TVal>
     {
+        public TVal[] ValueArray
+        {
+            get
+            {
+                TVal[] values = new TVal[Values.Count];
+                Values.CopyTo(values, 0);
+                return values;
+            }
+        }
         public bool TryAdd(TKey key, TVal value)
         {
             try

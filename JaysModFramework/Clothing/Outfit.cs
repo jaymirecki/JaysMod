@@ -43,7 +43,9 @@ namespace JaysModFramework.Clothing
         }
         public void ToPed(Ped ped, bool preserveHair = true)
         {
+            Debug.Log("set mask", true);
             Components.Components.SetComponent(ped, Mask);
+            Debug.Log("set upper", true);
             Components.Components.SetComponent(ped, Upper);
             Components.Components.SetComponent(ped, Lower);
             Components.Components.SetComponent(ped, Parachute);
