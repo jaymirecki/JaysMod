@@ -7,6 +7,7 @@ namespace JaysModFramework.Clothing
 {
     public class Outfit: IJMFDatabaseItem<string>
     {
+        public string Name;
         [XmlIgnore]
         public Mask Mask;
         public ComponentKey MaskKey
@@ -213,10 +214,11 @@ namespace JaysModFramework.Clothing
         }
         public string ID
         {
-            get { return Mask.Name; }
+            get { return Name; }
         }
         public Outfit()
         {
+            Name = "Default Name";
             Mask = new Mask();
             Hands = new Hands();
             Lower = new Lower();
@@ -233,8 +235,9 @@ namespace JaysModFramework.Clothing
             Ears = new Ears();
             Watch = new Watch();
         }
-        public Outfit(Mask mask, Hands upper, Lower lower, Parachute parachute, Shoes shoes, Accessory accessory, Vest vest, Neck neck, ShirtOverlay shirtOverlay, Hat hat, Glasses glasses, Ears ears, Watch watch)
+        public Outfit(string name, Mask mask, Hands upper, Lower lower, Parachute parachute, Shoes shoes, Accessory accessory, Vest vest, Neck neck, ShirtOverlay shirtOverlay, Hat hat, Glasses glasses, Ears ears, Watch watch)
         {
+            Name = name;
             Mask = mask;
             Hands = upper;
             Lower = lower;

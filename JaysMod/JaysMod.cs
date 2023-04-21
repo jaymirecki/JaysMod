@@ -41,7 +41,7 @@ namespace JaysMod
             {
                 ReplacePlayerPed(PedHash.FreemodeMale01);
                 Global.Presets.Reload();
-                Outfit outfit = Global.Presets.MaleOutfits["Combat"];
+                Outfit outfit = Global.Presets.MaleOutfits["Swim"];
                 outfit.ToPed(Game.Player.Character);
             }
             else if (e.KeyCode == Keys.H)
