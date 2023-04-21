@@ -204,6 +204,9 @@ namespace JaysModFramework.Clothing.Components
     }
     public class Hat : BaseProp
     {
+        public string VisorDownIndex = "";
+        public string VisorUpIndex = "";
+        public bool HasNightVision = false;
         public Hat() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
         public Hat(int index) : this(defaultName, index, defaultColors, defaultCurrentColor) { }
         public Hat(int index, int currentColor) : this(defaultName, index, defaultColors, currentColor) { }
