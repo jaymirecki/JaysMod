@@ -3,6 +3,20 @@ using System.Collections.Generic;
 
 namespace JaysModFramework.Clothing.Components
 {
+    public struct ComponentKey
+    {
+        public int ID;
+        public int CurrentColor;
+        public ComponentKey(int id, int currentColor)
+        {
+            ID = id;
+            CurrentColor = currentColor;
+        }
+        public ComponentKey FromComponent<T>(T component) where T: BaseOutfitPiece
+        {
+            return new ComponentKey(component.ID, component.CurrentColor);
+        }
+    }
     internal enum HeadOverlays { Blemishes = 0, FacialHair = 1, Eyebrows = 2 };
     internal enum OutfitComponents { Mask = 1, Hair = 2, Hands = 3, Lower = 4, Parachute = 5, Shoes = 6, Neck = 7, Accessory = 8, Vest = 9, ShirtOverlay = 11 };
     internal enum Props { Hat = 0, Glasses = 1, Ears = 2, Watch = 3 };
