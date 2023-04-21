@@ -40,13 +40,8 @@ namespace JaysMod
             if (e.KeyCode == Keys.G)
             {
                 ReplacePlayerPed(PedHash.FreemodeMale01);
-                Outfit outfit = MaleOutfits.Combat;
-                JaysModFramework.Persistence.Save.SaveItem("Presets", "Mask", MaleMasks.Combat);
                 Presets presets = new Presets();
-                Mask mask = presets.MaleMasks.GetValue(1);
-                Debug.Log(presets.MaleMasks.Count, true);
-                Debug.Log(mask, true);
-                outfit.Mask = mask;
+                Outfit outfit = presets.MaleOutfits["Combat"];
                 outfit.ToPed(Game.Player.Character);
             }
             else if (e.KeyCode == Keys.H)

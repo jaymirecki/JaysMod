@@ -21,6 +21,11 @@ namespace JaysModFramework.Persistence
                 return Dictionary.Count;
             }
         }
+        public TValue this[TKey key]
+        {
+            get { return GetValue(key); }
+            set { AddValue(key, value); }
+        }
         #endregion
         #region Constructors
         public JMFDatabase()
@@ -111,5 +116,15 @@ namespace JaysModFramework.Persistence
             return value;
         }
         #endregion Get
+        #region AddValue
+        public bool TryAddValue(TKey ID, TValue value)
+        {
+            return Dictionary.TryAdd(ID, value);
+        }
+        public void AddValue(TKey ID, TValue value)
+        {
+            TryAddValue(ID, value);
+        }
+        #endregion AddValue
     }
 }
