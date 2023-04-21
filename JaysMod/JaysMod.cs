@@ -42,7 +42,11 @@ namespace JaysMod
                 ReplacePlayerPed(PedHash.FreemodeMale01);
                 Outfit outfit = MaleOutfits.Combat;
                 JaysModFramework.Persistence.Save.SaveItem("Presets", "Mask", MaleMasks.Combat);
-                outfit.Mask = new Presets().MaleMasks.GetValue("Pig");
+                Presets presets = new Presets();
+                Mask mask = presets.MaleMasks.GetValue(1);
+                Debug.Log(presets.MaleMasks.Count, true);
+                Debug.Log(mask, true);
+                outfit.Mask = mask;
                 outfit.ToPed(Game.Player.Character);
             }
             else if (e.KeyCode == Keys.H)

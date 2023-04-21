@@ -10,16 +10,16 @@ namespace JaysModFramework.Clothing.Components
     {
         Default,
     }
-    public class BaseOutfitPiece : IJMFDatabaseItem
+    public class BaseOutfitPiece : IJMFDatabaseItem<int>
     {
         // The name of the outfit piece
         public string Name = "Default Name";
         protected static readonly string defaultName = "Default Name";
-        public string ID
+        public int ID
         {
             get
             {
-                return Name;
+                return Index;
             }
         }
         // The ID of the outfit piece (0 indexed for components)

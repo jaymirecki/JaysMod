@@ -6,12 +6,13 @@ namespace JaysModFramework.Clothing
 {
     public class Presets
     {
-        private static readonly string DIRECTORY = "./scripts/JMF/Presets/Clothing";
+        private static readonly string DIRECTORY = "./scripts/JMF/Presets/Clothing/";
         
-        public JMFDatabase<Mask> MaleMasks { get; }
+        public JMFDatabase<int, Mask> MaleMasks { get; }
         public Presets()
         {
-            MaleMasks = new JMFDatabase<Mask>(DIRECTORY + "/MaleMasks/");
+            MaleMasks = new JMFDatabase<int, Mask>(DIRECTORY, "MaleMasks.xml");
+            MaleMasks.SaveToFile(DIRECTORY, "MaleMasks.xml");
         }
     }
 }

@@ -6,50 +6,53 @@ using System.Xml.Serialization;
 
 namespace JaysModFramework.Persistence
 {
-    public interface IJMFDatabaseItem
+    public interface IJMFDatabaseItem<TKey>
     {
-        string ID { get; }
+        TKey ID { get; }
     }
-    public class JMFDatabase<TValue> where TValue : IJMFDatabaseItem
+    public class JMFDatabase<TKey, TValue> where TValue : IJMFDatabaseItem<TKey>
     {
         #region Properties
-        private JMFDictionary<string, TValue> Dictionary;
+        private JMFDictionary<TKey, TValue> Dictionary;
+        public int Count
+        {
+            get
+            {
+                return Dictionary.Count;
+            }
+        }
         #endregion
         #region Constructors
         public JMFDatabase()
         {
-            Dictionary = new JMFDictionary<string, TValue>();
+            Dictionary = new JMFDictionary<TKey, TValue>();
         }
-        public JMFDatabase(string directory):this()
+        public JMFDatabase(string directory, string filename):this()
         {
-            LoadFromFile(directory);
+            LoadFromFile(directory, filename);
         }
         #endregion Constructors
         #region Load
-        public void LoadFromFile(string directory)
+        public void LoadFromFile(string directory, string filename)
         {
-            Dictionary = new JMFDictionary<string, TValue>();
-            string[] files = Directory.GetFiles(directory);
-            foreach (string file in files)
-            {
-                TValue item = LoadItem<TValue>(directory, file);
-                Dictionary.Add(item.ID, item);
-            }
-        }
-        private static T LoadItem<T>(string directory, string file)
-        {
-            string loadFile;
-            T item = default(T);
             try
             {
-                loadFile = CheckLoadFile(file);
-                ReadFromFile(loadFile, out item);
+                string filepath = CheckLoadFile(directory, filename);
+                Dictionary = new JMFDictionary<TKey, TValue>();
+                TValue[] valueArray = ReadFromFile<TValue[]>(filepath);
+                foreach (TValue value in valueArray)
+                {
+                    if (value != null)
+                    {
+                        Dictionary.TryAdd(value.ID, value);
+                    }
+                }
             }
             catch { }
-            return item;
         }
-        private static string CheckLoadFile(string filepath)
+        private static string CheckLoadFile(string directory, string filename)
         {
+            string filepath = directory + filename;
             if (File.Exists(filepath))
             {
                 return filepath;
@@ -57,28 +60,20 @@ namespace JaysModFramework.Persistence
 
             throw new Exception("Invalid Directory");
         }
-        private static T ReadFromFile<T>(string filepath, out T item)
+        private static T ReadFromFile<T>(string filepath)
         {
             TextReader reader = new StreamReader(filepath);
             XmlSerializer ItemSerializer = new XmlSerializer(typeof(T));
-            item = (T)ItemSerializer.Deserialize(reader);
+            T item = (T)ItemSerializer.Deserialize(reader);
             reader.Close();
             return item;
         }
         #endregion Load
         #region Save
-        public void SaveToFile(string directory)
+        public void SaveToFile(string directory, string filename)
         {
-            foreach (TValue item in Dictionary.Values)
-            {
-                SaveItem(directory, item);
-            }
-        }
-        private static void SaveItem<T>(string directory, T item) where T: IJMFDatabaseItem
-        {
-            string saveFile = item.ID + ".xml";
-            string filepath = EnsureSaveFile(directory, saveFile);
-            WriteToFile(filepath, item);
+            string filepath = EnsureSaveFile(directory, filename);
+            WriteToFile(filepath, Dictionary.ValueArray);
         }
         private static string EnsureSaveFile(string directory, string file)
         {
@@ -90,7 +85,8 @@ namespace JaysModFramework.Persistence
             }
             if (!File.Exists(filepath))
             {
-                File.Create(filepath);
+                FileStream stream = File.Create(filepath);
+                stream.Close();
             }
 
             return filepath;
@@ -104,11 +100,11 @@ namespace JaysModFramework.Persistence
         }
         #endregion Save
         #region GetValue
-        public bool TryGetValue(string ID, out TValue value)
+        public bool TryGetValue(TKey ID, out TValue value)
         {
             return Dictionary.TryGetValue(ID, out value);
         }
-        public TValue GetValue(string ID)
+        public TValue GetValue(TKey ID)
         {
             TValue value = default(TValue);
             TryGetValue(ID, out value);
