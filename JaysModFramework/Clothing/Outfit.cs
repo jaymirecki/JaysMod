@@ -1,9 +1,10 @@
 ﻿using GTA;
 using JaysModFramework.Clothing.Components;
+using JaysModFramework.Persistence;
 
 namespace JaysModFramework.Clothing
 {
-    public class Outfit
+    public class Outfit: IJMFDatabaseItem<string>
     {
         public Mask Mask;
         public Hands Upper;
@@ -18,6 +19,14 @@ namespace JaysModFramework.Clothing
         public Glasses Glasses;
         public Ears Ears;
         public Watch Watch;
+        public string ID
+        {
+            get { return Mask.Name; }
+        }
+        public Outfit()
+        {
+
+        }
         public Outfit(Mask mask, Hands upper, Lower lower, Parachute parachute, Shoes shoes, Accessory accessory, Vest vest, Neck neck, ShirtOverlay shirtOverlay, Hat hat, Glasses glasses, Ears ears, Watch watch)
         {
             Mask = mask;
@@ -43,9 +52,7 @@ namespace JaysModFramework.Clothing
         }
         public void ToPed(Ped ped, bool preserveHair = true)
         {
-            Debug.Log("set mask", true);
             Components.Components.SetComponent(ped, Mask);
-            Debug.Log("set upper", true);
             Components.Components.SetComponent(ped, Upper);
             Components.Components.SetComponent(ped, Lower);
             Components.Components.SetComponent(ped, Parachute);
