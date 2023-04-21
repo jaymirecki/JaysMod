@@ -40,6 +40,7 @@ namespace JaysModFramework.Persistence
         #region Load
         public void LoadFromFile(string directory, string filename)
         {
+            Clear();
             if (!CheckLoadFile(directory, filename, out string filepath)) return;
             Dictionary = new JMFDictionary<TKey, TValue>();
             TValue[] valueArray = ReadFromFile<TValue[]>(filepath);

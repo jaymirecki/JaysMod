@@ -53,36 +53,44 @@ namespace JaysModFramework.Clothing
             MaleWatches = new JMFDatabase<int, Watch>(DIRECTORY, MALEWATCHES);
             MaleOutfits = new JMFDatabase<string, Outfit>(DIRECTORY, MALEOUTFITS);
         }
-        public void Reload()
+        public void Clear()
         {
             MaleAccessories.Clear();
-            MaleAccessories.LoadFromFile(DIRECTORY, MALEACCESSORIES);
             MaleHands.Clear();
-            MaleHands.LoadFromFile(DIRECTORY, MALEHANDS);
             MaleLowers.Clear();
-            MaleLowers.LoadFromFile(DIRECTORY, MALELOWERS);
             MaleMasks.Clear();
-            MaleMasks.LoadFromFile(DIRECTORY, MALEMASKS);
             MaleNecks.Clear();
-            MaleNecks.LoadFromFile(DIRECTORY, MALENECKS);
             MaleParachutes.Clear();
-            MaleParachutes.LoadFromFile(DIRECTORY, MALEPARACHUTES);
             MaleShirtOverlays.Clear();
-            MaleShirtOverlays.LoadFromFile(DIRECTORY, MALESHIRTOVERLAYS);
             MaleShoes.Clear();
-            MaleShoes.LoadFromFile(DIRECTORY, MALESHOES);
             MaleVests.Clear();
-            MaleVests.LoadFromFile(DIRECTORY, MALEVESTS);
             MaleHats.Clear();
-            MaleHats.LoadFromFile(DIRECTORY, MALEHATS);
             MaleGlasses.Clear();
-            MaleGlasses.LoadFromFile(DIRECTORY, MALEGLASSES);
             MaleEars.Clear();
-            MaleEars.LoadFromFile(DIRECTORY, MALEEARS);
             MaleWatches.Clear();
-            MaleWatches.LoadFromFile(DIRECTORY, MALEWATCHES);
             MaleOutfits.Clear();
+        }
+        public void Load()
+        {
+            MaleAccessories.LoadFromFile(DIRECTORY, MALEACCESSORIES);
+            MaleHands.LoadFromFile(DIRECTORY, MALEHANDS);
+            MaleLowers.LoadFromFile(DIRECTORY, MALELOWERS);
+            MaleMasks.LoadFromFile(DIRECTORY, MALEMASKS);
+            MaleNecks.LoadFromFile(DIRECTORY, MALENECKS);
+            MaleParachutes.LoadFromFile(DIRECTORY, MALEPARACHUTES);
+            MaleShirtOverlays.LoadFromFile(DIRECTORY, MALESHIRTOVERLAYS);
+            MaleShoes.LoadFromFile(DIRECTORY, MALESHOES);
+            MaleVests.LoadFromFile(DIRECTORY, MALEVESTS);
+            MaleHats.LoadFromFile(DIRECTORY, MALEHATS);
+            MaleGlasses.LoadFromFile(DIRECTORY, MALEGLASSES);
+            MaleEars.LoadFromFile(DIRECTORY, MALEEARS);
+            MaleWatches.LoadFromFile(DIRECTORY, MALEWATCHES);
             MaleOutfits.LoadFromFile(DIRECTORY, MALEOUTFITS);
+        }
+        public void Reload()
+        {
+            Clear();
+            Load();
         }
     }
 }

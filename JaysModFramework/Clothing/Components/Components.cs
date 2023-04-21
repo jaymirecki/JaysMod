@@ -100,6 +100,7 @@ namespace JaysModFramework.Clothing.Components
     // Corresponds with Beard slot
     public class Mask : BaseComponent
     {
+        public bool HideHair = false;
         public Mask() : this(defaultName, defaultID, defaultColors, defaultCurrentColor) { }
         public Mask(int index) : this(index, defaultCurrentColor) { }
         public Mask(int index, int currentColor) : this(defaultName, index, defaultColors, currentColor) { }
