@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Vest>
+    <Name>Combat</Name>
+    <Index>11</Index>
+    <Colors>
+      <string>Gray</string>
+      <string>Black</string>
+    </Colors>
+    <CurrentColor>1</CurrentColor>
+  </Vest>
+</ArrayOfVest>

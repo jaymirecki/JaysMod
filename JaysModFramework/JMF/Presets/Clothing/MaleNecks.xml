@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfNeck xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Neck>
+    <Name>Default Name</Name>
+    <Index>0</Index>
+    <Colors>
+      <string>Default Color</string>
+    </Colors>
+    <CurrentColor>0</CurrentColor>
+  </Neck>
+</ArrayOfNeck>
