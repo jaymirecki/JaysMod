@@ -81,6 +81,18 @@
     <Compile Include="Persistence\JMFDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="JMF\Presets\Clothing\MaleAccessories.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleHairs.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleHands.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleHats.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleLowers.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleMasks.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleNecks.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleOutfits.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleParachutes.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleShirtOverlays.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleShoes.xml" />
+    <Content Include="JMF\Presets\Clothing\MaleVests.xml" />
     <Content Include="Snippets\Python Generation\OutfitProperty.py" />
     <Content Include="Snippets\Python Generation\OutfitPiece.py" />
     <Content Include="Snippets\Snippets\OutfitPiece.xml" />
