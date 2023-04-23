@@ -15,9 +15,6 @@ namespace JaysMod
     public partial class JaysMod : Script
     {
         private MenuPool ModMenuPool;
-        private UIMenu planeMenu;
-        private UIMenu ClosetMenu;
-        private string SaveId;
 
         //private NPC PlayerNPC;
         //private State State;

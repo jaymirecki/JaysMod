@@ -10,6 +10,13 @@ namespace JaysModFramework.Clothing
         public string Name;
         private static readonly ComponentKey StaticKey = new ComponentKey();
         [XmlIgnore]
+        public Hair Hair;
+        public ComponentKey HairKey
+        {
+            get { return StaticKey.FromComponent(Hair); }
+            set { Hair = StaticKey.ToComponent(value, Global.Presets.MaleHairs); }
+        }
+        [XmlIgnore]
         public Mask Mask;
         public ComponentKey MaskKey
         {
@@ -149,6 +156,7 @@ namespace JaysModFramework.Clothing
         public void ToPed(Ped ped, bool preserveHair = true)
         {
             Components.Components.SetComponent(ped, Mask);
+            Components.Components.SetComponent(ped, Hair);
             Components.Components.SetComponent(ped, Hands);
             Components.Components.SetComponent(ped, Lower);
             Components.Components.SetComponent(ped, Parachute);
