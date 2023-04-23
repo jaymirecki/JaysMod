@@ -8,209 +8,97 @@ namespace JaysModFramework.Clothing
     public class Outfit: IJMFDatabaseItem<string>
     {
         public string Name;
+        private static readonly ComponentKey StaticKey = new ComponentKey();
         [XmlIgnore]
         public Mask Mask;
         public ComponentKey MaskKey
         {
-            get { return new ComponentKey().FromComponent(Mask); }
-            set
-            {
-                Mask = Global.Presets.MaleMasks[value.ID];
-                if (Mask == null)
-                {
-                    Mask = new Mask(value.ID, value.CurrentColor);
-                }
-                Mask.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Mask); }
+            set { Mask = StaticKey.ToComponent(value, Global.Presets.MaleMasks); }
         }
         [XmlIgnore]
         public Hands Hands;
         public ComponentKey HandsKey
         {
-            get { return new ComponentKey().FromComponent(Hands); }
-            set
-            {
-                Hands = Global.Presets.MaleHands[value.ID];
-                if (Hands == null)
-                {
-                    Hands = new Hands(value.ID, value.CurrentColor);
-                }
-                Hands.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Hands); }
+            set { Hands = StaticKey.ToComponent(value, Global.Presets.MaleHands); }
         }
         [XmlIgnore]
         public Lower Lower;
         public ComponentKey LowerKey
         {
-            get { return new ComponentKey().FromComponent(Lower); }
-            set
-            {
-                Lower = Global.Presets.MaleLowers[value.ID];
-                if (Lower == null)
-                {
-                    Lower = new Lower(value.ID, value.CurrentColor);
-                }
-                Lower.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Lower); }
+            set { Lower = StaticKey.ToComponent(value, Global.Presets.MaleLowers); }
         }
         [XmlIgnore]
         public Parachute Parachute;
         public ComponentKey ParachuteKey
         {
-            get { return new ComponentKey().FromComponent(Parachute); }
-            set
-            {
-                Parachute = Global.Presets.MaleParachutes[value.ID];
-                if (Parachute == null)
-                {
-                    Parachute = new Parachute(value.ID, value.CurrentColor);
-                }
-                Parachute.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Parachute); }
+            set { Parachute = StaticKey.ToComponent(value, Global.Presets.MaleParachutes); }
         }
         [XmlIgnore]
         public Shoes Shoes;
         public ComponentKey ShoesKey
         {
-            get { return new ComponentKey().FromComponent(Shoes); }
-            set
-            {
-                Shoes shoes = Global.Presets.MaleShoes[value.ID];
-                if (shoes == null)
-                {
-                    shoes = new Shoes(value.ID, value.CurrentColor);
-                }
-                Shoes = shoes;
-                Shoes.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Shoes); }
+            set { Shoes = StaticKey.ToComponent(value, Global.Presets.MaleShoes); }
         }
         [XmlIgnore]
         public Accessory Accessory;
         public ComponentKey AccessoryKey
         {
-            get { return new ComponentKey().FromComponent(Accessory); }
-            set
-            {
-                Accessory accessories = Global.Presets.MaleAccessories[value.ID];
-                if (accessories == null)
-                {
-                    accessories = new Accessory(value.ID, value.CurrentColor);
-                }
-                Accessory = accessories;
-                Accessory.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Accessory); }
+            set { Accessory = StaticKey.ToComponent(value, Global.Presets.MaleAccessories); }
         }
         [XmlIgnore]
         public Vest Vest;
         public ComponentKey VestKey
         {
-            get { return new ComponentKey().FromComponent(Vest); }
-            set
-            {
-                Vest vest = Global.Presets.MaleVests[value.ID];
-                if (vest == null)
-                {
-                    vest = new Vest(value.ID, value.CurrentColor);
-                }
-                Vest = vest;
-                Vest.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Vest); }
+            set { Vest = StaticKey.ToComponent(value, Global.Presets.MaleVests); }
         }
         [XmlIgnore]
         public Neck Neck;
         public ComponentKey NeckKey
         {
-            get { return new ComponentKey().FromComponent(Neck); }
-            set
-            {
-                Neck neck = Global.Presets.MaleNecks[value.ID];
-                if (neck == null)
-                {
-                    neck = new Neck(value.ID, value.CurrentColor);
-                }
-                Neck = neck;
-                Neck.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Neck); }
+            set { Neck = StaticKey.ToComponent(value, Global.Presets.MaleNecks); }
         }
         [XmlIgnore]
         public ShirtOverlay ShirtOverlay;
         public ComponentKey ShirtOverlayKey
         {
-            get { return new ComponentKey().FromComponent(ShirtOverlay); }
-            set
-            {
-                ShirtOverlay shirtOverlay = Global.Presets.MaleShirtOverlays[value.ID];
-                if (shirtOverlay == null)
-                {
-                    shirtOverlay = new ShirtOverlay(value.ID, value.CurrentColor);
-                }
-                ShirtOverlay = shirtOverlay;
-                ShirtOverlay.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(ShirtOverlay); }
+            set { ShirtOverlay = StaticKey.ToComponent(value, Global.Presets.MaleShirtOverlays); }
         }
         [XmlIgnore]
         public Hat Hat;
         public ComponentKey HatKey
         {
-            get { return new ComponentKey().FromComponent(Hat); }
-            set
-            {
-                Hat hat = Global.Presets.MaleHats[value.ID];
-                if (hat == null)
-                {
-                    hat = new Hat(value.ID, value.CurrentColor);
-                }
-                Hat = hat;
-                Hat.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Hat); }
+            set { Hat = StaticKey.ToComponent(value, Global.Presets.MaleHats); }
         }
         [XmlIgnore]
         public Glasses Glasses;
         public ComponentKey GlassesKey
         {
-            get { return new ComponentKey().FromComponent(Glasses); }
-            set
-            {
-                Glasses glasses = Global.Presets.MaleGlasses[value.ID];
-                if (glasses == null)
-                {
-                    glasses = new Glasses(value.ID, value.CurrentColor);
-                }
-                Glasses = glasses;
-                Glasses.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Glasses); }
+            set { Glasses = StaticKey.ToComponent(value, Global.Presets.MaleGlasses); }
         }
         [XmlIgnore]
         public Ears Ears;
         public ComponentKey EarsKey
         {
-            get { return new ComponentKey().FromComponent(Ears); }
-            set
-            {
-                Ears ears = Global.Presets.MaleEars[value.ID];
-                if (ears == null)
-                {
-                    ears = new Ears(value.ID, value.CurrentColor);
-                }
-                Ears = ears;
-                Ears.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Ears); }
+            set { Ears = StaticKey.ToComponent(value, Global.Presets.MaleEars); }
         }
         [XmlIgnore]
         public Watch Watch;
         public ComponentKey WatchKey
         {
-            get { return new ComponentKey().FromComponent(Watch); }
-            set
-            {
-                Watch watch = Global.Presets.MaleWatches[value.ID];
-                if (watch == null)
-                {
-                    watch = new Watch(value.ID, value.CurrentColor);
-                }
-                Watch = watch;
-                Watch.CurrentColor = value.CurrentColor;
-            }
+            get { return StaticKey.FromComponent(Watch); }
+            set { Watch = StaticKey.ToComponent(value, Global.Presets.MaleWatches); }
         }
         public string ID
         {
