@@ -8,6 +8,7 @@ namespace JaysModFramework.Clothing
     {
         private static readonly string DIRECTORY = "./scripts/JMF/Presets/Clothing/";
         private static readonly string MALEACCESSORIES = "MaleAccessories.xml";
+        private static readonly string MALEHAIRS = "MaleHairs.xml";
         private static readonly string MALEHANDS = "MaleHands.xml";
         private static readonly string MALELOWERS = "MaleLowers.xml";
         private static readonly string MALEMASKS = "MaleMasks.xml";
@@ -23,6 +24,7 @@ namespace JaysModFramework.Clothing
         private static readonly string MALEOUTFITS = "MaleOutfits.xml";
 
         public JMFDatabase<int, Accessory> MaleAccessories { get; }
+        public JMFDatabase<int, Hair> MaleHairs { get; }
         public JMFDatabase<int, Hands> MaleHands { get; }
         public JMFDatabase<int, Lower> MaleLowers { get; }
         public JMFDatabase<int, Mask> MaleMasks { get; }
@@ -39,6 +41,7 @@ namespace JaysModFramework.Clothing
         public Presets()
         {
             MaleAccessories = new JMFDatabase<int, Accessory>(DIRECTORY, MALEACCESSORIES);
+            MaleHairs = new JMFDatabase<int, Hair>(DIRECTORY, MALEHAIRS);
             MaleHands = new JMFDatabase<int, Hands>(DIRECTORY, MALEHANDS);
             MaleLowers = new JMFDatabase<int, Lower>(DIRECTORY, MALELOWERS);
             MaleMasks = new JMFDatabase<int, Mask>(DIRECTORY, MALEMASKS);
@@ -56,6 +59,7 @@ namespace JaysModFramework.Clothing
         public void Clear()
         {
             MaleAccessories.Clear();
+            MaleHairs.Clear();
             MaleHands.Clear();
             MaleLowers.Clear();
             MaleMasks.Clear();
@@ -73,6 +77,7 @@ namespace JaysModFramework.Clothing
         public void Load()
         {
             MaleAccessories.LoadFromFile(DIRECTORY, MALEACCESSORIES);
+            MaleHairs.LoadFromFile(DIRECTORY, MALEHAIRS);
             MaleHands.LoadFromFile(DIRECTORY, MALEHANDS);
             MaleLowers.LoadFromFile(DIRECTORY, MALELOWERS);
             MaleMasks.LoadFromFile(DIRECTORY, MALEMASKS);
