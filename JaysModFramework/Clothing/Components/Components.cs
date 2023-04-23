@@ -16,6 +16,18 @@ namespace JaysModFramework.Clothing.Components
         {
             return new ComponentKey(component.ID, component.CurrentColor);
         }
+        public T ToComponent<T>(ComponentKey key, JMFDatabase<int, T> presets) where T: BaseOutfitPiece, new()
+        {
+            T component = presets[key.ID];
+            if (component == null)
+            {
+                component = new T();
+                component.ID = key.ID;
+                component.CurrentColor = key.CurrentColor;
+            }
+            component.CurrentColor = key.CurrentColor;
+            return component;
+        }
     }
     internal enum HeadOverlays { Blemishes = 0, FacialHair = 1, Eyebrows = 2 };
     internal enum OutfitComponents { Mask = 1, Hair = 2, Hands = 3, Lower = 4, Parachute = 5, Shoes = 6, Neck = 7, Accessory = 8, Vest = 9, ShirtOverlay = 11 };
@@ -23,6 +35,13 @@ namespace JaysModFramework.Clothing.Components
     public enum SkinTones
     {
         Default,
+    }
+    public interface IBaseOutfitPiece : IJMFDatabaseItem<int>
+    {
+        string Name { get; set; }
+        int Index { get; set; }
+        string[] Colors { get; set; }
+        int CurrentColor { get; set; }
     }
     public class BaseOutfitPiece : IJMFDatabaseItem<int>
     {
@@ -34,6 +53,10 @@ namespace JaysModFramework.Clothing.Components
             get
             {
                 return Index;
+            }
+            set
+            {
+                Index = value;
             }
         }
         // The ID of the outfit piece (0 indexed for components)
