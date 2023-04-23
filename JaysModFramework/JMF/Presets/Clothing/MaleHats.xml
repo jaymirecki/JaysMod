@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfHat xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Hat>
+    <Name>Combat, Goggles Up</Name>
+    <Index>117</Index>
+    <Colors>
+      <string>Gray</string>
+      <string>Black</string>
+    </Colors>
+    <CurrentColor>0</CurrentColor>
+  </Hat>
+  <Hat>
+    <Name>Combat, Goggles Down</Name>
+    <Index>116</Index>
+    <Colors>
+      <string>Gray</string>
+      <string>Black</string>
+    </Colors>
+    <CurrentColor>0</CurrentColor>
+  </Hat>
+</ArrayOfHat>

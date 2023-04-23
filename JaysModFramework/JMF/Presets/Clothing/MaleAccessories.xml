@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAccessory xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Accessory>
+    <Name>Combat</Name>
+    <Index>15</Index>
+    <Colors>
+      <string>Black</string>
+    </Colors>
+    <CurrentColor>0</CurrentColor>
+  </Accessory>
+</ArrayOfAccessory>
