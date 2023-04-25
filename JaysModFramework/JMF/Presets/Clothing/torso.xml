@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTorso xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Torso>
+    <Name>test</Name>
+    <Model>FreemodeMale01</Model>
+    <Arms>
+      <Index>17</Index>
+      <Colors>
+        <string>Default</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </Arms>
+    <Undershirt>
+      <Index>15</Index>
+      <Colors>
+        <string>Default</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </Undershirt>
+    <Jacket>
+      <Index>49</Index>
+      <Colors>
+        <string>Default</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </Jacket>
+    <Badge>
+      <Index>0</Index>
+      <Colors>
+        <string>Default</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </Badge>
+    <ParachuteIndex>0</ParachuteIndex>
+    <Vest>0</Vest>
+  </Torso>
+</ArrayOfTorso>
