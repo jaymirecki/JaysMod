@@ -9,11 +9,4 @@ namespace JaysModFramework.Clothing.Components
     {
         Default,
     }
-    public interface IBaseOutfitPiece : IXMLDatabaseItem<int>
-    {
-        string Name { get; set; }
-        int Index { get; set; }
-        string[] Colors { get; set; }
-        int CurrentColor { get; set; }
-    }
 }
