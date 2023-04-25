@@ -1,10 +1,5 @@
-﻿using GTA;
-using JaysModFramework.Clothing.Components;
-using JaysModFramework.Persistence;
-using System.Xml.Serialization;
+﻿using System;
 using System.Text.Json;
-using System.IO;
-using System;
 
 namespace JaysModFramework.Clothing
 {

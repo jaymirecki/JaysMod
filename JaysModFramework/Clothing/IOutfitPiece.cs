@@ -1,7 +1,5 @@
 ﻿using GTA;
-using JaysModFramework.Clothing.Components;
 using JaysModFramework.Persistence;
-using System.Xml.Serialization;
 
 namespace JaysModFramework.Clothing
 {
@@ -9,5 +7,6 @@ namespace JaysModFramework.Clothing
     {
         void SetToNPC(NPC npc);
         string Name { get; }
+        Gender Sex { get; }
     }
 }
