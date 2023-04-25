@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfMask xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Mask>
+    <Name>Combat</Name>
+    <Model>FreemodeMale01</Model>
+    <MaskComponent>
+      <Index>35</Index>
+      <Colors>
+        <string>Black</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </MaskComponent>
+  </Mask>
+</ArrayOfMask>

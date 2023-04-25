@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfTorso xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Torso>
-    <Name>test</Name>
+    <Name>Combat</Name>
     <Model>FreemodeMale01</Model>
     <Arms>
       <Index>17</Index>
@@ -36,6 +36,6 @@
       <HasColor>false</HasColor>
     </Badge>
     <ParachuteIndex>0</ParachuteIndex>
-    <Vest>0</Vest>
+    <Vest>11</Vest>
   </Torso>
 </ArrayOfTorso>

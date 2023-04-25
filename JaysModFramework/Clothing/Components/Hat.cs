@@ -15,11 +15,13 @@ namespace JaysModFramework.Clothing.Components
         #endregion Components
         #endregion Properties
         #region Constructors
-        public Hat(string id, string name, PedHash model, OutfitComponent hatComponent)
+        public Hat(string id, string name, PedHash model, OutfitComponent hatComponent, string visorID = "", bool nightVision = false)
         {
             Name = name;
             Model = model;
             HatComponent = hatComponent;
+            VisorID = visorID;
+            NightVision = nightVision;
         }
         #endregion Constructors
         public void SetToPed(Ped ped)
