@@ -19,9 +19,9 @@ namespace JaysModFramework.Clothing.Components
             Function.Call(Hash.SET_PED_PROP_INDEX,
                     ped, slot, propId, propColorId, 2);
         }
-        //public static void SetProp<T>(Ped ped, T prop) where T: BaseProp
-        //{
-        //    SetProp(ped, prop.ComponentSlot, prop.Index, prop.CurrentColor);
-        //}
+        public static void SetProp(Ped ped, OutfitComponent prop, Props slot)
+        {
+            SetProp(ped, slot, prop.Index, prop.CurrentColor);
+        }
     }
 }

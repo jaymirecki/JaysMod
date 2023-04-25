@@ -47,6 +47,10 @@
     <Compile Include="Clothing\Components\ComponentFunctions.cs" />
     <Compile Include="Clothing\Components\Components.cs" />
     <Compile Include="Clothing\Closet.cs" />
+    <Compile Include="Clothing\Components\Accessory.cs" />
+    <Compile Include="Clothing\Components\Hat.cs" />
+    <Compile Include="Clothing\Components\Parachute.cs" />
+    <Compile Include="Clothing\Components\Mask.cs" />
     <Compile Include="Clothing\Components\OutfitComponent.cs" />
     <Compile Include="Clothing\Components\Legs.cs" />
     <Compile Include="Clothing\Components\Torso.cs" />
