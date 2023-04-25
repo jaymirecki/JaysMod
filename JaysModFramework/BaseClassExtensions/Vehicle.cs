@@ -1,6 +1,6 @@
 ﻿using GTA;
 using GTA.Native;
-using JaysModFramework.Persistence;
+using OOD.Collections;
 using System;
 using System.Collections.Generic;
 using System.Xml;
@@ -25,7 +25,7 @@ namespace JaysModFramework
             }
         }
         private string _id;
-        internal static JMFDictionary<string, Vehicle> SpawnedVehicles = new JMFDictionary<string, Vehicle>();
+        internal static OOD.Collections.Dictionary<string, Vehicle> SpawnedVehicles = new OOD.Collections.Dictionary<string, Vehicle>();
         #region Helpers
         public static Vehicle SpawnVehicle(VehicleHash modelHash, Vector3 position, float heading)
         {

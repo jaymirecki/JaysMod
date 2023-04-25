@@ -140,6 +140,10 @@
       <Project>{eb875a17-fdf2-4b61-ad7e-c927fb029cec}</Project>
       <Name>JaysModFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OOD.Collections\OOD.Collections.csproj">
+      <Project>{F8FDFF28-A1E4-4B60-BD56-FD76E0541688}</Project>
+      <Name>OOD.Collections</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

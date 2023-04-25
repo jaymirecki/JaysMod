@@ -1,11 +1,11 @@
 ﻿using GTA;
 using JaysModFramework.Clothing.Components;
-using JaysModFramework.Persistence;
+using OOD.Collections;
 using System.Xml.Serialization;
 
 namespace JaysModFramework.Clothing
 {
-    public class Outfit: IJMFDatabaseItem<string>
+    public class Outfit: IXMLDatabaseItem<string>
     {
         public string Name;
         private static readonly ComponentKey StaticKey = new ComponentKey();

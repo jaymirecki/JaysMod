@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace OOD.Collections
 {
-    internal class Dictionary<TKey, TVal>: System.Collections.Generic.Dictionary<TKey, TVal>
+    public class Dictionary<TKey, TVal>: System.Collections.Generic.Dictionary<TKey, TVal>
     {
         public TVal[] ValueArray
         {
