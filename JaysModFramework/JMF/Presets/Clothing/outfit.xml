@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfOutfit xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Outfit>
+    <Name>Combat</Name>
+    <Model>FreemodeMale01</Model>
+    <MaskID>Combat</MaskID>
+    <TorsoID>Combat</TorsoID>
+    <LegsID>Combat</LegsID>
+    <AccessoryID>Default</AccessoryID>
+    <VestColor>1</VestColor>
+    <ParachuteID>Default</ParachuteID>
+  </Outfit>
+</ArrayOfOutfit>

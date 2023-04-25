@@ -73,27 +73,27 @@ namespace OOD.Collections
         private void Load()
         {
             _values.Clear();
-            if (!File.Exists(Filepath)) return;
+            //if (!File.Exists(Filepath)) return;
             _values = new Dictionary<TKey, TValue>();
             using (TextReader reader = new StreamReader(Filepath))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(TValue[]));
                 TValue[] valueArray;
-                try
-                {
+                //try
+                //{
                     valueArray = (TValue[])serializer.Deserialize(reader);
-                }
-                catch
-                {
-                    valueArray = null;
-                }
-                if (valueArray == null) return;
+                //}
+                //catch
+                //{
+                //    valueArray = null;
+                //}
+                //if (valueArray == null) return;
                 foreach (TValue value in valueArray)
                 {
-                    if (value != null)
-                    {
+                    //if (value != null)
+                    //{
                         _values.TryAdd(value.ID, value);
-                    }
+                    //}
                 }
             }
         }

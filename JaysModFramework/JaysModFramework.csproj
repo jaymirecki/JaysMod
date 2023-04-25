@@ -78,6 +78,18 @@
     <Compile Include="Managers\VisorManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="JMF\Presets\Clothing\parachute.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMF\Presets\Clothing\outfit.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMF\Presets\Clothing\accessory.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMF\Presets\Clothing\mask.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="JMF\Presets\Clothing\legs.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -95,4 +107,9 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy JaysModFramework.dll "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts"
+copy OOD.Collections.dll "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts"
+xcopy /Y /I /S "JMF\*"  "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts\JMF"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

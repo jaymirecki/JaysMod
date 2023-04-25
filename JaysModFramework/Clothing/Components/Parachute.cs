@@ -32,7 +32,7 @@ namespace JaysModFramework.Clothing.Components
         {
             OutfitComponent temp = ParachuteComponent;
             temp.Index = ParachuteComponent.Index + torsoParachuteIndex;
-            Components.SetComponent(ped, temp, OutfitComponents.Mask);
+            Components.SetComponent(ped, temp, OutfitComponents.Parachute);
         }
     }
 }

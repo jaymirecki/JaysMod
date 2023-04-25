@@ -36,12 +36,10 @@ namespace JaysMod
             if (e.KeyCode == Keys.G)
             {
                 ReplacePlayerPed(PedHash.FreemodeMale01);
-                //Global.Database.ClearCache();
-                //Global.Database.Torsos.AddValue(new Torso("test", "test", PedHash.FreemodeMale01, new OutfitComponent(), new OutfitComponent(), new OutfitComponent(), new OutfitComponent(), 0, 0));
                 Global.Database.ClearCache();
-                Torso torso = Global.Database.Torsos["test"];
-                torso.SetToPed(Game.Player.Character);
-                Global.Database.Legs["test"].SetToPed(Game.Player.Character);
+                Debug.Notify(Global.Database.Outfits.Count, true);
+                Outfit outfit = Global.Database.Outfits["Combat"];
+                outfit.SetToPed(Game.Player.Character);
             }
             else if (e.KeyCode == Keys.H)
             {

@@ -22,7 +22,7 @@ namespace JaysModFramework.Clothing.Components
         #endregion Constructors
         public void SetToPed(Ped ped)
         {
-            Components.SetComponent(ped, AccessoryComponent, OutfitComponents.Mask);
+            Components.SetComponent(ped, AccessoryComponent, OutfitComponents.Accessory);
         }
     }
 }
