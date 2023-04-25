@@ -1,7 +1,5 @@
 ﻿using GTA;
 using GTA.Native;
-using JaysModFramework.MaleOutfitPieces;
-using System;
 using System.Windows.Forms;
 
 namespace JaysModFramework

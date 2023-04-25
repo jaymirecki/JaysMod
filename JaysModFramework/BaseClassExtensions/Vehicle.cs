@@ -1,19 +1,14 @@
 ﻿using GTA;
 using GTA.Native;
-using OOD.Collections;
 using System;
 using System.Collections.Generic;
-using System.Xml;
-using System.Xml.Serialization;
 using GVehicle = GTA.Vehicle;
 
 namespace JaysModFramework
 {
     public class Vehicle: IEquatable<Vehicle>
     {
-        [XmlIgnore]
         public GVehicle BaseVehicle { get; set; }
-        [XmlAttribute]
         public string ID
         {
             get { return _id; }
@@ -162,14 +157,14 @@ namespace JaysModFramework
         {
             get { return BaseVehicle.IsEngineRunning; }
             set {
-                Debug.Log("Before: " + BaseVehicle.IsEngineRunning);
+                Debug.Notify("Before: " + BaseVehicle.IsEngineRunning);
                 BaseVehicle.IsEngineRunning = value;
                 if (value)
                 {
                     //Debug.Log("Jet Engine");
                     //Function.Call(GTA.Native.Hash._SET_VEHICLE_JET_ENGINE_ON, BaseVehicle.Handle, value);
                 }
-                Debug.Log("After: " + BaseVehicle.IsEngineRunning);
+                Debug.Notify("After: " + BaseVehicle.IsEngineRunning);
             }
         }
         public bool IsSirenActive
@@ -201,7 +196,6 @@ namespace JaysModFramework
             get { return new Vector3(BaseVehicle.Position); }
             set { BaseVehicle.Position = value.BaseVector; }
         }
-        [XmlIgnore]
         public Vector3 Rotation
         {
             get { return new Vector3(BaseVehicle.Rotation); }

@@ -1,8 +1,5 @@
 ﻿using GTA;
-using OOD.Collections;
 using System.Collections.Generic;
-using System.Xml;
-using System.Xml.Serialization;
 
 namespace JaysModFramework
 {
@@ -169,7 +166,6 @@ namespace JaysModFramework
                 BasePed = newPed;
             }
         }
-        [XmlIgnore]
         public Model Model { get { return BasePed.Model; } }
         #endregion Base Values
         #region BaseMethods
@@ -179,7 +175,6 @@ namespace JaysModFramework
         }
         #endregion
         #region Extension Values
-        [XmlAttribute]
         public string ID
         {
             get { return _id; }
