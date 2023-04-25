@@ -7,6 +7,6 @@ namespace JaysModFramework.Clothing
     {
         void SetToNPC(NPC npc);
         string Name { get; }
-        Gender Sex { get; }
+        PedHash Model { get; }
     }
 }
