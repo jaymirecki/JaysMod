@@ -10,12 +10,14 @@ namespace OOD.Collections
         private Dictionary<TKey, TValue> _values = new Dictionary<TKey, TValue>();
         public override int Count { get { return _values.Count; } }
         private string _filepath { get { return Path.Combine(Directory, TableName + ".xml"); } }
+        public override bool ReadOnly { get; }
         #endregion
         #region Constructors
-        public MemoryXMLDatabaseTable(string directory, string tableName)
+        public MemoryXMLDatabaseTable(string directory, string tableName, bool readOnly = false)
         {
             Directory = directory;
             TableName = tableName;
+            ReadOnly = readOnly;
             Load();
         }
         #endregion Constructors
@@ -40,6 +42,7 @@ namespace OOD.Collections
         #region AddValue
         public override bool TryAddValue(TValue value)
         {
+            if (ReadOnly) return false;
             if (_values.TryAdd(value.ID, value))
             {
                 Save();
@@ -49,6 +52,7 @@ namespace OOD.Collections
         }
         public override bool TryUpdateValue(TValue value)
         {
+            if (ReadOnly) return false;
             if (Contains(value.ID)) return false;
             RemoveValue(value.ID);
             AddValue(value);
@@ -58,6 +62,7 @@ namespace OOD.Collections
         #region RemoveValue
         public override bool TryRemoveValue(TKey id)
         {
+            if (ReadOnly) return false;
             return _values.TryRemove(id);
         }
         #endregion RemoveValue

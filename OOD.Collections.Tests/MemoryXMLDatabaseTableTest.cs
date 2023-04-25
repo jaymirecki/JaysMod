@@ -40,5 +40,12 @@ namespace OOD.Collections.Tests
             table.ClearCache();
             Assert.IsTrue(table.TryGetValue(new TestItem().ID, out TestItem value));
         }
+        [TestMethod]
+        public void TestReadOnly()
+        {
+            Table table = new Table(DIRECTORY, "read", true);
+            table.AddValue(new TestItem());
+            Assert.IsFalse(table.TryRemoveValue(new TestItem().ID));
+        }
     }
 }
