@@ -9,7 +9,7 @@ namespace JaysModFramework.Clothing
         #region Properties
         public string ID { get; }
         public string Name { get; }
-        public Gender Sex { get; }
+        public PedHash Model { get; }
         #region Components
         private OutfitComponent _arms;
         private string _armsString
@@ -40,11 +40,11 @@ namespace JaysModFramework.Clothing
         #endregion Components
         #endregion Properties
         #region Constructors
-        public Torso(string id, string name, Gender sex, OutfitComponent arms, OutfitComponent undershirt, OutfitComponent jacket, OutfitComponent badge, int parachuteIndex, int vest)
+        public Torso(string id, string name, PedHash model, OutfitComponent arms, OutfitComponent undershirt, OutfitComponent jacket, OutfitComponent badge, int parachuteIndex, int vest)
         {
             ID = id;
             Name = name;
-            Sex = sex;
+            Model = model;
             _arms = arms;
             _undershirt = undershirt;
             _jacket = jacket;
