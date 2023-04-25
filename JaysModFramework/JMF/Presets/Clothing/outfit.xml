@@ -3,11 +3,11 @@
   <Outfit>
     <Name>Combat</Name>
     <Model>FreemodeMale01</Model>
-    <MaskID>Combat</MaskID>
-    <TorsoID>Combat</TorsoID>
-    <LegsID>Combat</LegsID>
-    <AccessoryID>Default</AccessoryID>
+    <MaskID>CombatFreemodeMale01</MaskID>
+    <TorsoID>CombatFreemodeMale01</TorsoID>
+    <LegsID>CombatFreemodeMale01</LegsID>
+    <AccessoryID>DefaultFreemodeMale01</AccessoryID>
     <VestColor>1</VestColor>
-    <ParachuteID>Default</ParachuteID>
+    <ParachuteID>DefaultFreemodeMale01</ParachuteID>
   </Outfit>
 </ArrayOfOutfit>

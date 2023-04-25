@@ -5,7 +5,7 @@ namespace JaysModFramework.Clothing.Components
     public struct Legs: IOutfitPiece
     {
         #region Properties
-        public string ID { get { return Name; } }
+        public string ID { get { return Name + Model.ToString(); } }
         public string Name { get; set; }
         public PedHash Model { get; set; }
         #region Components

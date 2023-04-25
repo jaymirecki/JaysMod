@@ -8,10 +8,7 @@ namespace JaysModFramework.Clothing
     public struct Outfit: IXMLDatabaseItem<string>
     {
         #region Properties
-        public string ID
-        {
-            get { return Name; }
-        }
+        public string ID { get { return Name + Model.ToString(); } }
         public string Name { get; set; }
         public PedHash Model { get; set; }
         #region Components
