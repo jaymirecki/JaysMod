@@ -48,7 +48,10 @@
     <Compile Include="Clothing\Components\Components.cs" />
     <Compile Include="Clothing\Closet.cs" />
     <Compile Include="Clothing\Components\Accessory.cs" />
+    <Compile Include="Clothing\Components\Wrist.cs" />
+    <Compile Include="Clothing\Components\Ears.cs" />
     <Compile Include="Clothing\Components\Hat.cs" />
+    <Compile Include="Clothing\Components\Glasses.cs" />
     <Compile Include="Clothing\Components\Parachute.cs" />
     <Compile Include="Clothing\Components\Mask.cs" />
     <Compile Include="Clothing\Components\OutfitComponent.cs" />
@@ -78,6 +81,18 @@
     <Compile Include="Managers\VisorManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="JMF\Presets\Clothing\wrist.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMF\Presets\Clothing\ears.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMF\Presets\Clothing\glasses.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMF\Presets\Clothing\hat.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="JMF\Presets\Clothing\parachute.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

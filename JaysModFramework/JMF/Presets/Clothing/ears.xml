@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfEars xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Ears>
+    <Name>Default</Name>
+    <Model>FreemodeMale01</Model>
+    <EarsComponent>
+      <Index>0</Index>
+      <Colors>
+        <string>Default</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </EarsComponent>
+  </Ears>
+</ArrayOfEars>

@@ -12,7 +12,6 @@ namespace JaysModFramework.Clothing.Components
         }
         public static void SetComponent(Ped ped, OutfitComponent component, OutfitComponents slot)
         {
-            Debug.Notify(slot.ToString(), component.Index, true);
             SetComponent(ped, slot, component.Index, component.CurrentColor);
         }
         private static void SetProp(Ped ped, Props slot, int propId, int propColorId)
@@ -22,6 +21,7 @@ namespace JaysModFramework.Clothing.Components
         }
         public static void SetProp(Ped ped, OutfitComponent prop, Props slot)
         {
+            Debug.Notify(slot.ToString(), prop.Index, true);
             SetProp(ped, slot, prop.Index, prop.CurrentColor);
         }
     }

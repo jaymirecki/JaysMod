@@ -37,7 +37,6 @@ namespace JaysMod
             {
                 ReplacePlayerPed(PedHash.FreemodeMale01);
                 Global.Database.ClearCache();
-                Debug.Notify(Global.Database.Outfits.Count, true);
                 Outfit outfit = Global.Database.Outfits["CombatFreemodeMale01"];
                 outfit.SetToPed(Game.Player.Character);
             }

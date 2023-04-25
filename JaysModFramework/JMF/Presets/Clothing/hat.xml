@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfHat xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Hat>
+    <Name>Combat</Name>
+    <Model>FreemodeMale01</Model>
+    <HatComponent>
+      <Index>117</Index>
+      <Colors>
+        <string>Black</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </HatComponent>
+    <VisorID>118</VisorID>
+  </Hat>
+  <Hat>
+    <Name>Combat</Name>
+    <Model>FreemodeMale01</Model>
+    <HatComponent>
+      <Index>118</Index>
+      <Colors>
+        <string>Black</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </HatComponent>
+    <VisorID>117</VisorID>
+    <NightVision>true</NightVision>
+  </Hat>
+</ArrayOfHat>

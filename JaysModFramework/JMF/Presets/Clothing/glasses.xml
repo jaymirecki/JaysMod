@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfGlasses xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Glasses>
+    <Name>Default</Name>
+    <Model>FreemodeMale01</Model>
+    <GlassesComponent>
+      <Index>0</Index>
+      <Colors>
+        <string>Default</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </GlassesComponent>
+  </Glasses>
+</ArrayOfGlasses>
