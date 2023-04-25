@@ -35,27 +35,6 @@ namespace JaysMod
         {
             if (e.KeyCode == Keys.G)
             {
-                using (SqliteConnection connection = new SqliteConnection("Data Source=./JMF/Presets.db"))
-                {
-                    connection.Open();
-                    SqliteCommand command = connection.CreateCommand();
-                    command.CommandText =
-                        @"
-                            SELECT name
-                            FROM torso
-                            WHERE id = $id
-                        ";
-                    command.Parameters.AddWithValue("$id", "testid");
-                    using (SqliteDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read()) 
-                        { 
-                            string name = reader.GetString(0);
-                            Debug.Log(name, true);
-                        }
-                    }
-                }
-
                 ReplacePlayerPed(PedHash.FreemodeMale01);
                 Global.Presets.Reload();
                 Outfit outfit = Global.Presets.MaleOutfits["Swim"];
