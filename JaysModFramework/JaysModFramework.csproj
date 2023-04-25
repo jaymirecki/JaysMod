@@ -102,6 +102,8 @@
     <Content Include="Snippets\Python Generation\OutfitPiece.py" />
     <Content Include="Snippets\Snippets\OutfitPiece.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="JMF\Presets.db" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
