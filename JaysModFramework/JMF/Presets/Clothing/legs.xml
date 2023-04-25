@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfLegs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Legs>
+    <Name>test</Name>
+    <Model>FreemodeMale01</Model>
+    <Lower>
+      <Index>33</Index>
+      <Colors>
+        <string>Default</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </Lower>
+    <Shoes>
+      <Index>24</Index>
+      <Colors>
+        <string>Default</string>
+      </Colors>
+      <CurrentColor>0</CurrentColor>
+      <HasColor>false</HasColor>
+    </Shoes>
+  </Legs>
+</ArrayOfLegs>
