@@ -1,10 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace OOD.Collections
+﻿namespace OOD.Collections
 {
     public interface IXMLDatabaseItem<TKey>
     {
@@ -15,6 +9,7 @@ namespace OOD.Collections
         #region Properties
         public string TableName { get; internal set; }
         public string Directory { get; internal set; }
+        public abstract string Filepath { get; }
         public abstract bool ReadOnly { get; }
         public abstract int Count { get; }
         public TValue this[TKey key]

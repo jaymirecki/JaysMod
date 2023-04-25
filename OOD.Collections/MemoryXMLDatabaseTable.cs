@@ -9,7 +9,7 @@ namespace OOD.Collections
         #region Properties
         private Dictionary<TKey, TValue> _values = new Dictionary<TKey, TValue>();
         public override int Count { get { return _values.Count; } }
-        private string _filepath { get { return Path.Combine(Directory, TableName + ".xml"); } }
+        public override string Filepath { get { return Path.Combine(Directory, TableName + ".xml"); } }
         public override bool ReadOnly { get; }
         #endregion
         #region Constructors
@@ -73,9 +73,9 @@ namespace OOD.Collections
         private void Load()
         {
             _values.Clear();
-            if (!File.Exists(_filepath)) return;
+            if (!File.Exists(Filepath)) return;
             _values = new Dictionary<TKey, TValue>();
-            using (TextReader reader = new StreamReader(_filepath))
+            using (TextReader reader = new StreamReader(Filepath))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(TValue[]));
                 TValue[] valueArray;
@@ -100,9 +100,9 @@ namespace OOD.Collections
         private void Save()
         {
             System.IO.Directory.CreateDirectory(Directory);
-            using (FileStream stream = File.Create(_filepath)) { }
+            using (FileStream stream = File.Create(Filepath)) { }
 
-            using (TextWriter writer = new StreamWriter(_filepath))
+            using (TextWriter writer = new StreamWriter(Filepath))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(TValue[]));
                 serializer.Serialize(writer, _values.ValueArray);

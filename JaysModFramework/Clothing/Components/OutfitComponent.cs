@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text.Json;
 
 namespace JaysModFramework.Clothing
 {
@@ -28,23 +27,23 @@ namespace JaysModFramework.Clothing
             CurrentColor = currentColor;
             HasColor = hasColor;
         }
-        public OutfitComponent(string json)
-        {
-            OutfitComponent temp = JsonSerializer.Deserialize<OutfitComponent>(json);
-            Index = temp.Index;
-            _colors = temp.Colors;
-            CurrentColor = temp.CurrentColor;
-            HasColor = temp.HasColor;
-        }
+        //public OutfitComponent(string json)
+        //{
+        //    OutfitComponent temp = JsonSerializer.Deserialize<OutfitComponent>(json);
+        //    Index = temp.Index;
+        //    _colors = temp.Colors;
+        //    CurrentColor = temp.CurrentColor;
+        //    HasColor = temp.HasColor;
+        //}
         #endregion Constructors
-        public override string ToString()
-        {
-            return ToJSON();
-        }
-        public string ToJSON()
-        {
-            return JsonSerializer.Serialize(this);
-        }
+        //public override string ToString()
+        //{
+        //    return ToJSON();
+        //}
+        //public string ToJSON()
+        //{
+        //    return JsonSerializer.Serialize(this);
+        //}
         public override bool Equals(object obj)
         {
             if ((obj == null) || (!this.GetType().Equals(obj.GetType()))) 

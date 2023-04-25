@@ -9,6 +9,6 @@ namespace JaysModFramework
 {
     public static class Global
     {
-        public static readonly Presets Presets = new Presets();
+        public static readonly Database Database = new Database();
     }
 }

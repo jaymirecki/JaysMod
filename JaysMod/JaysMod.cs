@@ -2,10 +2,10 @@
 using GTA.Native;
 using JaysModFramework;
 using JaysModFramework.Clothing;
+using JaysModFramework.Clothing.Components;
 using NativeUI;
 using System;
 using System.Windows.Forms;
-using Microsoft.Data.Sqlite;
 
 namespace JaysMod
 {
@@ -36,9 +36,12 @@ namespace JaysMod
             if (e.KeyCode == Keys.G)
             {
                 ReplacePlayerPed(PedHash.FreemodeMale01);
-                Global.Presets.Reload();
-                Outfit outfit = Global.Presets.MaleOutfits["Swim"];
-                outfit.ToPed(Game.Player.Character);
+                //Global.Database.ClearCache();
+                //Global.Database.Torsos.AddValue(new Torso("test", "test", PedHash.FreemodeMale01, new OutfitComponent(), new OutfitComponent(), new OutfitComponent(), new OutfitComponent(), 0, 0));
+                Global.Database.ClearCache();
+                Torso torso = Global.Database.Torsos["test"];
+                torso.SetToPed(Game.Player.Character);
+                Global.Database.Legs["test"].SetToPed(Game.Player.Character);
             }
             else if (e.KeyCode == Keys.H)
             {

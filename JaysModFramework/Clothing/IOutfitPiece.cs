@@ -5,8 +5,8 @@ namespace JaysModFramework.Clothing
 {
     internal interface IOutfitPiece: IXMLDatabaseItem<string>
     {
-        void SetToNPC(NPC npc);
-        string Name { get; }
-        PedHash Model { get; }
+        void SetToPed(Ped ped);
+        string Name { get; set; }
+        PedHash Model { get; set; }
     }
 }

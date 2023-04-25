@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Serialization;
-
-namespace JaysModFramework
+﻿namespace JaysModFramework
 {
     using GVector3 = GTA.Math.Vector3;
     public struct Vector3
     {
-        [XmlIgnore]
         public GVector3 BaseVector;
         #region BaseProperties
         public float X
