@@ -48,10 +48,38 @@ namespace JaysModFramework.Clothing
             get { return Parachute.ID; }
             set { Parachute = Global.Database.Parachute[value]; }
         }
+        [XmlIgnore]
+        public Hat Hat;
+        public string HatID
+        {
+            get { return Hat.ID; }
+            set { Hat = Global.Database.Hats[value]; }
+        }
+        [XmlIgnore]
+        public Glasses Glasses;
+        public string GlassesID
+        {
+            get { return Glasses.ID; }
+            set { Glasses = Global.Database.Glasses[value]; }
+        }
+        [XmlIgnore]
+        public Ears Ears;
+        public string EarsID
+        {
+            get { return Ears.ID; }
+            set { Ears = Global.Database.Ears[value]; }
+        }
+        [XmlIgnore]
+        public Wrist Wrist;
+        public string WristID
+        {
+            get { return Wrist.ID; }
+            set { Wrist = Global.Database.Wrists[value]; }
+        }
         #endregion Components
         #endregion Properties
         #region Constructors
-        public Outfit(string name, PedHash model, Mask mask, Torso torso, Legs legs, Accessory accessory, int vestColor, Parachute parachute)
+        public Outfit(string name, PedHash model, Mask mask, Torso torso, Legs legs, Accessory accessory, int vestColor, Parachute parachute, Hat hat, Glasses glasses, Ears ears, Wrist wrist)
         {
             Name = name;
             Model = model;
@@ -61,6 +89,10 @@ namespace JaysModFramework.Clothing
             Accessory = accessory;
             VestColor = vestColor;
             Parachute = parachute;
+            Hat = hat;
+            Glasses = glasses;
+            Ears = ears;
+            Wrist = wrist;
         }
         #endregion Constructors
         public void SetToPed(Ped ped)
@@ -74,6 +106,11 @@ namespace JaysModFramework.Clothing
                 Components.Components.SetComponent(ped, new OutfitComponent(Torso.Vest, new string[] { }, VestColor, true), OutfitComponents.Vest);
             }
             Parachute.SetToPed(ped, Torso);
+
+            Hat.SetToPed(ped);
+            Glasses.SetToPed(ped);
+            Ears.SetToPed(ped);
+            Wrist.SetToPed(ped);
         }
     }
 }

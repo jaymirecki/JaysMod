@@ -9,5 +9,9 @@
     <AccessoryID>DefaultFreemodeMale01</AccessoryID>
     <VestColor>1</VestColor>
     <ParachuteID>DefaultFreemodeMale01</ParachuteID>
+    <HatID>CombatFreemodeMale01</HatID>
+    <GlassesID>DefaultFreemodeMale01</GlassesID>
+    <EarsID>DefaultFreemodeMale01</EarsID>
+    <WristID>DefaultFreemodeMale01</WristID>
   </Outfit>
 </ArrayOfOutfit>
