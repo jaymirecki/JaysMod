@@ -1,5 +1,4 @@
-﻿using JaysModFramework.Persistence;
-using System.Collections.Generic;
+﻿using OOD.Collections;
 
 namespace JaysModFramework.Clothing.Components
 {
@@ -16,7 +15,7 @@ namespace JaysModFramework.Clothing.Components
         {
             return new ComponentKey(component.ID, component.CurrentColor);
         }
-        public T ToComponent<T>(ComponentKey key, JMFDatabase<int, T> presets) where T: BaseOutfitPiece, new()
+        public T ToComponent<T>(ComponentKey key, XMLDatabaseTable<int, T> presets) where T: BaseOutfitPiece, new()
         {
             T component = presets[key.ID];
             if (component == null)
@@ -36,14 +35,14 @@ namespace JaysModFramework.Clothing.Components
     {
         Default,
     }
-    public interface IBaseOutfitPiece : IJMFDatabaseItem<int>
+    public interface IBaseOutfitPiece : IXMLDatabaseItem<int>
     {
         string Name { get; set; }
         int Index { get; set; }
         string[] Colors { get; set; }
         int CurrentColor { get; set; }
     }
-    public class BaseOutfitPiece : IJMFDatabaseItem<int>
+    public class BaseOutfitPiece : IXMLDatabaseItem<int>
     {
         // The name of the outfit piece
         public string Name = "Default Name";

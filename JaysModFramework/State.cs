@@ -1,5 +1,5 @@
 ﻿using GTA;
-using JaysModFramework.Persistence;
+using OOD.Collections;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,8 +20,8 @@ namespace JaysModFramework
             get { return World.Weather; }
             set { World.Weather = value; }
         }
-        private JMFDictionary<string, Vehicle> Vehicles { get { return Vehicle.SpawnedVehicles; } }
-        private JMFDictionary<string, NPC> NPCs { get { return NPC.SpawnedNPCs; } }
+        private OOD.Collections.Dictionary<string, Vehicle> Vehicles { get { return Vehicle.SpawnedVehicles; } }
+        private OOD.Collections.Dictionary<string, NPC> NPCs { get { return NPC.SpawnedNPCs; } }
         private static readonly XmlSerializer StateSerializer = new XmlSerializer(typeof(State));
         private static readonly XmlSerializer NPCSerializer = new XmlSerializer(typeof(NPC));
         private static readonly XmlSerializer VehicleSerializer = new XmlSerializer(typeof(Vehicle));

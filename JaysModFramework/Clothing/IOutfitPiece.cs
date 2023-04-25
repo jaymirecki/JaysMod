@@ -1,9 +1,9 @@
 ﻿using GTA;
-using JaysModFramework.Persistence;
+using OOD.Collections;
 
 namespace JaysModFramework.Clothing
 {
-    internal interface IOutfitPiece: IJMFDatabaseItem<string>
+    internal interface IOutfitPiece: IXMLDatabaseItem<string>
     {
         void SetToNPC(NPC npc);
         string Name { get; }

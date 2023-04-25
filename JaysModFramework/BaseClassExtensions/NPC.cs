@@ -1,5 +1,5 @@
 ﻿using GTA;
-using JaysModFramework.Persistence;
+using OOD.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Serialization;
@@ -8,7 +8,7 @@ namespace JaysModFramework
 {
     public class NPC
     {
-        internal static JMFDictionary<string, NPC> SpawnedNPCs = new JMFDictionary<string, NPC>();
+        internal static OOD.Collections.Dictionary<string, NPC> SpawnedNPCs = new OOD.Collections.Dictionary<string, NPC>();
         private Ped BasePed;
         private const string PlayerID = "JMFNPCPlayer";
         #region Helpers

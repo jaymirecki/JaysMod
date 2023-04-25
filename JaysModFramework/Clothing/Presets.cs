@@ -1,6 +1,5 @@
-﻿using GTA;
-using JaysModFramework.Clothing.Components;
-using JaysModFramework.Persistence;
+﻿using JaysModFramework.Clothing.Components;
+using OOD.Collections;
 
 namespace JaysModFramework.Clothing
 {
@@ -23,79 +22,60 @@ namespace JaysModFramework.Clothing
         private static readonly string MALEWATCHES = "MaleWatches.xml";
         private static readonly string MALEOUTFITS = "MaleOutfits.xml";
 
-        public JMFDatabase<int, Accessory> MaleAccessories { get; }
-        public JMFDatabase<int, Hair> MaleHairs { get; }
-        public JMFDatabase<int, Hands> MaleHands { get; }
-        public JMFDatabase<int, Lower> MaleLowers { get; }
-        public JMFDatabase<int, Mask> MaleMasks { get; }
-        public JMFDatabase<int, Neck> MaleNecks { get; }
-        public JMFDatabase<int, Parachute> MaleParachutes { get; }
-        public JMFDatabase<int, ShirtOverlay> MaleShirtOverlays { get; }
-        public JMFDatabase<int, Shoes> MaleShoes { get; }
-        public JMFDatabase<int, Vest> MaleVests { get; }
-        public JMFDatabase<int, Hat> MaleHats { get; }
-        public JMFDatabase<int, Glasses> MaleGlasses { get; }
-        public JMFDatabase<int, Ears> MaleEars { get; }
-        public JMFDatabase<int, Watch> MaleWatches { get; }
-        public JMFDatabase<string, Outfit> MaleOutfits { get; }
+        public XMLDatabaseTable<int, Accessory> MaleAccessories { get; }
+        public XMLDatabaseTable<int, Hair> MaleHairs { get; }
+        public XMLDatabaseTable<int, Hands> MaleHands { get; }
+        public XMLDatabaseTable<int, Lower> MaleLowers { get; }
+        public XMLDatabaseTable<int, Mask> MaleMasks { get; }
+        public XMLDatabaseTable<int, Neck> MaleNecks { get; }
+        public XMLDatabaseTable<int, Parachute> MaleParachutes { get; }
+        public XMLDatabaseTable<int, ShirtOverlay> MaleShirtOverlays { get; }
+        public XMLDatabaseTable<int, Shoes> MaleShoes { get; }
+        public XMLDatabaseTable<int, Vest> MaleVests { get; }
+        public XMLDatabaseTable<int, Hat> MaleHats { get; }
+        public XMLDatabaseTable<int, Glasses> MaleGlasses { get; }
+        public XMLDatabaseTable<int, Ears> MaleEars { get; }
+        public XMLDatabaseTable<int, Watch> MaleWatches { get; }
+        public XMLDatabaseTable<string, Outfit> MaleOutfits { get; }
         public Presets()
         {
-            MaleAccessories = new JMFDatabase<int, Accessory>(DIRECTORY, MALEACCESSORIES);
-            MaleHairs = new JMFDatabase<int, Hair>(DIRECTORY, MALEHAIRS);
-            MaleHands = new JMFDatabase<int, Hands>(DIRECTORY, MALEHANDS);
-            MaleLowers = new JMFDatabase<int, Lower>(DIRECTORY, MALELOWERS);
-            MaleMasks = new JMFDatabase<int, Mask>(DIRECTORY, MALEMASKS);
-            MaleNecks = new JMFDatabase<int, Neck>(DIRECTORY, MALENECKS);
-            MaleParachutes = new JMFDatabase<int, Parachute>(DIRECTORY, MALEPARACHUTES);
-            MaleShirtOverlays = new JMFDatabase<int, ShirtOverlay>(DIRECTORY, MALESHIRTOVERLAYS);
-            MaleShoes = new JMFDatabase<int, Shoes>(DIRECTORY, MALESHOES);
-            MaleVests = new JMFDatabase<int, Vest>(DIRECTORY, MALEVESTS);
-            MaleHats = new JMFDatabase<int, Hat>(DIRECTORY, MALEHATS);
-            MaleGlasses = new JMFDatabase<int, Glasses>(DIRECTORY, MALEGLASSES);
-            MaleEars = new JMFDatabase<int, Ears>(DIRECTORY, MALEEARS);
-            MaleWatches = new JMFDatabase<int, Watch>(DIRECTORY, MALEWATCHES);
-            MaleOutfits = new JMFDatabase<string, Outfit>(DIRECTORY, MALEOUTFITS);
+            MaleAccessories = new MemoryXMLDatabaseTable<int, Accessory>(DIRECTORY, MALEACCESSORIES);
+            MaleHairs = new MemoryXMLDatabaseTable<int, Hair>(DIRECTORY, MALEHAIRS);
+            MaleHands = new MemoryXMLDatabaseTable<int, Hands>(DIRECTORY, MALEHANDS);
+            MaleLowers = new MemoryXMLDatabaseTable<int, Lower>(DIRECTORY, MALELOWERS);
+            MaleMasks = new MemoryXMLDatabaseTable<int, Mask>(DIRECTORY, MALEMASKS);
+            MaleNecks = new MemoryXMLDatabaseTable<int, Neck>(DIRECTORY, MALENECKS);
+            MaleParachutes = new MemoryXMLDatabaseTable<int, Parachute>(DIRECTORY, MALEPARACHUTES);
+            MaleShirtOverlays = new MemoryXMLDatabaseTable<int, ShirtOverlay>(DIRECTORY, MALESHIRTOVERLAYS);
+            MaleShoes = new MemoryXMLDatabaseTable<int, Shoes>(DIRECTORY, MALESHOES);
+            MaleVests = new MemoryXMLDatabaseTable<int, Vest>(DIRECTORY, MALEVESTS);
+            MaleHats = new MemoryXMLDatabaseTable<int, Hat>(DIRECTORY, MALEHATS);
+            MaleGlasses = new MemoryXMLDatabaseTable<int, Glasses>(DIRECTORY, MALEGLASSES);
+            MaleEars = new MemoryXMLDatabaseTable<int, Ears>(DIRECTORY, MALEEARS);
+            MaleWatches = new MemoryXMLDatabaseTable<int, Watch>(DIRECTORY, MALEWATCHES);
+            MaleOutfits = new MemoryXMLDatabaseTable<string, Outfit>(DIRECTORY, MALEOUTFITS);
         }
-        public void Clear()
+        public void ClearCache()
         {
-            MaleAccessories.Clear();
-            MaleHairs.Clear();
-            MaleHands.Clear();
-            MaleLowers.Clear();
-            MaleMasks.Clear();
-            MaleNecks.Clear();
-            MaleParachutes.Clear();
-            MaleShirtOverlays.Clear();
-            MaleShoes.Clear();
-            MaleVests.Clear();
-            MaleHats.Clear();
-            MaleGlasses.Clear();
-            MaleEars.Clear();
-            MaleWatches.Clear();
-            MaleOutfits.Clear();
-        }
-        public void Load()
-        {
-            MaleAccessories.LoadFromFile(DIRECTORY, MALEACCESSORIES);
-            MaleHairs.LoadFromFile(DIRECTORY, MALEHAIRS);
-            MaleHands.LoadFromFile(DIRECTORY, MALEHANDS);
-            MaleLowers.LoadFromFile(DIRECTORY, MALELOWERS);
-            MaleMasks.LoadFromFile(DIRECTORY, MALEMASKS);
-            MaleNecks.LoadFromFile(DIRECTORY, MALENECKS);
-            MaleParachutes.LoadFromFile(DIRECTORY, MALEPARACHUTES);
-            MaleShirtOverlays.LoadFromFile(DIRECTORY, MALESHIRTOVERLAYS);
-            MaleShoes.LoadFromFile(DIRECTORY, MALESHOES);
-            MaleVests.LoadFromFile(DIRECTORY, MALEVESTS);
-            MaleHats.LoadFromFile(DIRECTORY, MALEHATS);
-            MaleGlasses.LoadFromFile(DIRECTORY, MALEGLASSES);
-            MaleEars.LoadFromFile(DIRECTORY, MALEEARS);
-            MaleWatches.LoadFromFile(DIRECTORY, MALEWATCHES);
-            MaleOutfits.LoadFromFile(DIRECTORY, MALEOUTFITS);
+            MaleAccessories.ClearCache();
+            MaleHairs.ClearCache();
+            MaleHands.ClearCache();
+            MaleLowers.ClearCache();
+            MaleMasks.ClearCache();
+            MaleNecks.ClearCache();
+            MaleParachutes.ClearCache();
+            MaleShirtOverlays.ClearCache();
+            MaleShoes.ClearCache();
+            MaleVests.ClearCache();
+            MaleHats.ClearCache();
+            MaleGlasses.ClearCache();
+            MaleEars.ClearCache();
+            MaleWatches.ClearCache();
+            MaleOutfits.ClearCache();
         }
         public void Reload()
         {
-            Clear();
-            Load();
+            ClearCache();
         }
     }
 }
