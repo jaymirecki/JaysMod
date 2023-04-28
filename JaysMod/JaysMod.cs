@@ -3,6 +3,7 @@ using GTA.Native;
 using JaysModFramework;
 using JaysModFramework.Clothing;
 using JaysModFramework.Clothing.Components;
+using JaysModFramework.Managers;
 using NativeUI;
 using System;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace JaysMod
 
         //private NPC PlayerNPC;
         //private State State;
+        private BigMapManager _mapManager = new BigMapManager();
 
         public JaysMod()
         {
@@ -28,9 +30,8 @@ namespace JaysMod
         }
         void OnTick(object sender, EventArgs e)
         {
-
+            _mapManager.OnTick(sender, e);
         }
-
         void OnKeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.G)
@@ -44,6 +45,7 @@ namespace JaysMod
             {
                 ReplacePlayerPed(PedHash.Franklin);
             }
+
         }
 
         private void ReplacePlayerPed(PedHash hash)
