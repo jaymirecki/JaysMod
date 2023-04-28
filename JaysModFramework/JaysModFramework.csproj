@@ -68,6 +68,7 @@
     <Compile Include="IPLs\IPLDetails.cs" />
     <Compile Include="IPLs\IPLLoader.cs" />
     <Compile Include="Managers\HelmetManager.cs" />
+    <Compile Include="Managers\IManager.cs" />
     <Compile Include="Managers\RealTimeDurationManager.cs" />
     <Compile Include="Managers\RespawnManager.cs" />
     <Compile Include="Managers\RestrictedAreasManager.cs" />

@@ -1,33 +1,46 @@
 ﻿using GTA;
 using GTA.Native;
+using System;
 using System.Windows.Forms;
 
-namespace JaysModFramework
+namespace JaysModFramework.Managers
 {
-    public class BigMapManager : Script
+    public class BigMapManager : IManager
     {
-        private static bool Enabled = false;
-        private static bool Active = false;
-        public BigMapManager()
-        {
-            KeyDown += OnKeyDown;
-        }
+        private bool _active = false;
+        private DateTime _controlJustPressed = DateTime.MinValue;
+        public BigMapManager() { }
 
-        private void OnKeyDown(object sender, KeyEventArgs e)
+        public void OnKeyDown(object sender, KeyEventArgs e) { }
+        public void OnTick(object sender, EventArgs e) 
         {
-            if (e.KeyCode == Keys.NumPad1 && Enabled)
+            if (Game.IsControlJustReleased(GTA.Control.MultiplayerInfo))
             {
-                Function.Call(Hash.SET_BIGMAP_ACTIVE, !Active);
-                Active = !Active;
+                TimeSpan duration = DateTime.UtcNow - _controlJustPressed;
+                if (duration.TotalSeconds < 1)
+                {
+                    Function.Call(Hash.SET_BIGMAP_ACTIVE, !_active);
+                    _active = !_active;
+                    _controlJustPressed = DateTime.MinValue;
+                }
+                else
+                {
+                    _controlJustPressed = DateTime.UtcNow;
+                }
             }
         }
-        public static void Activate()
-        {
-            Enabled = true;
-        }
-        public static void Deactivate()
-        {
-            Enabled = false;
-        }
+        //public void Activate()
+        //{
+        //    Enabled = true;
+        //}
+        //public void Deactivate()
+        //{
+        //    Enabled = false;
+        //}
+        //public bool Toggle()
+        //{
+        //    Enabled = !Enabled;
+        //    return Enabled;
+        //}
     }
 }
