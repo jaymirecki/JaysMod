@@ -1,115 +1,43 @@
-﻿//using GTA;
-//using NativeUI;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using GTA;
+using JaysModFramework.Menus;
+using LemonUI;
+using LemonUI.Menus;
 
-//namespace JaysModFramework
-//{
-//    public static class Closet
-//    {
-//        private const string Title = "Closet";
-//        private const string Description = "Manage your outfit";
-//        private static Outfit DefaultOutfit;
-//        private static UIMenu ClosetMenu;
-//        private static UIMenu OutfitMenu;
-//        public static UIMenu Menu(NPC player, MenuPool menuPool)
-//        {
-//            ClosetMenu = new UIMenu(Title, Description);
-//            AddMenuItems(ClosetMenu, player, menuPool);
+namespace JaysModFramework.Clothing
+{
+    //using Menu = JaysModFramework.Menu.Menu;
+    public class Closet
+    {
+        private const string Title = "Closet";
+        private const string Description = "Manage your outfit";
+        private Menu ClosetMenu;
+        private ObjectPool _pool;
+        private Ped _ped;
+        public Menu Menu(Ped ped, ObjectPool pool)
+        {
+            _pool = pool;
+            _ped = ped;
+            ClosetMenu = new Menu(Title, Description, _pool);
+            AddMenuItems();
 
-//            return ClosetMenu;
-//        }
-//        public static void SubMenu(NPC player, MenuPool menuPool, UIMenu menu)
-//        {
-//            ClosetMenu = menuPool.AddSubMenu(menu, Title, Description);
-//            AddMenuItems(ClosetMenu, player, menuPool);
-//        }
-//        private static void AddMenuItems(UIMenu menu, NPC player, MenuPool menuPool)
-//        {
-//            AddOutfitMenu(menu, player, menuPool);
+            return ClosetMenu;
+        }
+        private void AddMenuItems()
+        {
+            ClosetMenu.Add(new MenuItem("Empty Item"));
+            ClosetMenu.Add(OutfitMenu());
+        }
 
-//            UIMenuItem accept = new UIMenuItem("Accept", "Save the current outfit");
-//            UIMenuItem cancel = new UIMenuItem("Cancel", "Cancel outfit changes");
-//            menu.AddItem(accept);
-//            menu.AddItem(cancel);
-
-//            menu.OnItemSelect += (UIMenu sender, UIMenuItem selectedItem, int index) =>
-//            {
-//                if (selectedItem == accept)
-//                {
-//                    AcceptOutfit(player);
-//                }
-//                else if (selectedItem == cancel)
-//                {
-//                    CancelOutfit(player);
-//                }
-//            };
-
-//            menu.OnMenuOpen += (UIMenu sender) =>
-//            {
-//                if (DefaultOutfit == null)
-//                {
-//                    AcceptOutfit(player);
-//                }
-//            };
-
-//            menu.OnMenuClose += (UIMenu sender) =>
-//            {
-//                OnClose(player);
-//            };
-//        }
-//        private static void OnClose(NPC player)
-//        {
-//            if (!AreAnyMenusOpen())
-//            {
-//                CancelOutfit(player);
-//            }
-//        }
-//        private static bool AreAnyMenusOpen()
-//        {
-//            return (ClosetMenu != null && ClosetMenu.Visible) ||
-//                (OutfitMenu != null && OutfitMenu.Visible);
-//        }
-//        private static void AcceptOutfit(NPC player)
-//        {
-//            DefaultOutfit = player.Outfit.Copy();
-//        }
-//        private static void CancelOutfit(NPC player)
-//        {
-//            player.Outfit = DefaultOutfit.Copy();
-//        }
-//        private static void AddOutfitMenu(UIMenu superMenu, NPC player, MenuPool menuPool)
-//        {
-//            Dictionary<string,Outfit> outfitMap = new Dictionary<string, Outfit>();
-//            outfitMap.Add("Casual", MaleOutfitTemplates.Casual);
-//            outfitMap.Add("Formal", MaleOutfitTemplates.Formal);
-//            outfitMap.Add("Combat", MaleOutfitTemplates.Combat);
-//            outfitMap.Add("Scuba", MaleOutfitTemplates.Scuba);
-//            outfitMap.Add("Beach", MaleOutfitTemplates.Beach);
-//            outfitMap.Add("Bike", MaleOutfitTemplates.Bike);
-//            outfitMap.Add("Navy Casual", MaleOutfitTemplates.NavyCasual);
-//            outfitMap.Add("Navy Combat", MaleOutfitTemplates.NavyCombat);
-//            outfitMap.Add("Test Pilot", MaleOutfitTemplates.TestPilot);
-
-//            OutfitMenu = menuPool.AddSubMenu(superMenu, "Outfits", "Choose an outfit");
-
-//            foreach(string name in outfitMap.Keys)
-//            {
-//                OutfitMenu.AddItem(new UIMenuItem(name));
-//            }
-
-//            OutfitMenu.OnItemSelect += (UIMenu sender, UIMenuItem selectedItem, int index) =>
-//            {
-//                player.Outfit = outfitMap.Values.ToArray()[index].Copy();
-//            };
-
-//            OutfitMenu.OnMenuClose += (UIMenu sender) =>
-//            {
-//                OnClose(player);
-//            };
-//        }
-//    }
-//}
+        private Menu OutfitMenu()
+        {
+            Menu outfitMenu = new Menu("Outfits", "subtitle", "description", _pool);
+            foreach (Outfit outfit in Global.Database.Outfits)
+            {
+                MenuItem outfitItem = new MenuItem(outfit.Name);
+                outfitItem.Selected += (sender, args) => outfit.SetToPed(_ped);
+                outfitMenu.Add(outfitItem);
+            }
+            return outfitMenu;
+        }
+    }
+}

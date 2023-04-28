@@ -32,12 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NativeUI">
-      <HintPath>..\JaysMod\References\NativeUI.dll</HintPath>
+    <Reference Include="LemonUI.SHVDN3, Version=1.9.4.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\LemonUI.SHVDN3.1.9.4\lib\net48\LemonUI.SHVDN3.dll</HintPath>
     </Reference>
-    <Reference Include="ScriptHookVDotNet3">
-      <HintPath>..\JaysMod\References\ScriptHookVDotNet3.dll</HintPath>
+    <Reference Include="ScriptHookVDotNet3, Version=3.5.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\ScriptHookVDotNet3.3.5.1\lib\net48\ScriptHookVDotNet3.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -72,6 +73,8 @@
     <Compile Include="Managers\RealTimeDurationManager.cs" />
     <Compile Include="Managers\RespawnManager.cs" />
     <Compile Include="Managers\RestrictedAreasManager.cs" />
+    <Compile Include="Menus\MenuItem.cs" />
+    <Compile Include="Menus\Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseClassExtensions\NPC.cs" />
     <Compile Include="Managers\ScubaManager.cs" />
@@ -122,10 +125,14 @@
       <Name>OOD.Collections</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy JaysModFramework.dll "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts"
 copy OOD.Collections.dll "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts"
+copy LemonUI.SHVDN3.dll "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts"
 xcopy /Y /I /S "JMF\*"  "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts\JMF"</PostBuildEvent>
   </PropertyGroup>
 </Project>
