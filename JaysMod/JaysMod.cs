@@ -13,7 +13,6 @@ namespace JaysMod
     //[ScriptAttributes(NoDefaultInstance = true)]
     public partial class JaysMod : Script
     {
-        private Menu _closet;
         private ObjectPool _pool;
         //private NPC PlayerNPC;
         //private State State;
@@ -45,8 +44,7 @@ namespace JaysMod
             }
             else if (e.KeyCode == Keys.F5)
             {
-                _closet = new Closet().Menu(GTA.Game.Player.Character, _pool);
-                _closet.Visible = true;
+                Debug.Menu(_pool).Visible = true;
             }
         }
 

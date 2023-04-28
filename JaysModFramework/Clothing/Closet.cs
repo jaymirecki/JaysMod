@@ -9,6 +9,7 @@ namespace JaysModFramework.Clothing
     public class Closet
     {
         private const string Title = "Closet";
+        private const string Subtitle = "Closet Menu";
         private const string Description = "Manage your outfit";
         private Menu ClosetMenu;
         private ObjectPool _pool;
@@ -17,7 +18,7 @@ namespace JaysModFramework.Clothing
         {
             _pool = pool;
             _ped = ped;
-            ClosetMenu = new Menu(Title, Description, _pool);
+            ClosetMenu = new Menu(Title, Subtitle, Description, _pool);
             AddMenuItems();
 
             return ClosetMenu;
