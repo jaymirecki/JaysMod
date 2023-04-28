@@ -17,6 +17,7 @@ namespace JaysModFramework.Menus
         {
             _nativeMenu = new NativeMenu(title, subtitle);
             pool.Add(_nativeMenu);
+            Debug.Notify("Native title", _nativeMenu.Title.Text, true);
         }
         public Menu(string title, string subtitle, string description, ObjectPool pool)
         {
@@ -29,7 +30,7 @@ namespace JaysModFramework.Menus
         }
         public void Add(Menu menu)
         {
-            _nativeMenu.Add(menu._nativeMenu);
+            _nativeMenu.AddSubMenu(menu._nativeMenu);
         }
         public bool Visible
         {

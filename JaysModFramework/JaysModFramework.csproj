@@ -63,6 +63,7 @@
     <Compile Include="Clothing\Outfit.cs" />
     <Compile Include="Clothing\MaleOutfitPieces.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="Framework.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="IDGenerator.cs" />
