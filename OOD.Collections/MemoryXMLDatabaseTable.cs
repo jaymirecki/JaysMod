@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections;
+using System.IO;
 using System.Xml.Serialization;
 
 
@@ -66,6 +67,12 @@ namespace OOD.Collections
             return _values.TryRemove(id);
         }
         #endregion RemoveValue
+        #region IEnumerable
+        public override IEnumerator GetEnumerator()
+        {
+            return _values.Values.GetEnumerator();
+        }
+        #endregion IEnumerable
         public override void ClearCache()
         {
             Load();

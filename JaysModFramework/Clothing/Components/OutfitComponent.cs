@@ -44,6 +44,7 @@ namespace JaysModFramework.Clothing
         //{
         //    return JsonSerializer.Serialize(this);
         //}
+        #region IEquatable
         public override bool Equals(object obj)
         {
             if ((obj == null) || (!this.GetType().Equals(obj.GetType()))) 
@@ -71,5 +72,10 @@ namespace JaysModFramework.Clothing
         {
             return !componentA.Equals(componentB);
         }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+        #endregion IEquatable
     }
 }

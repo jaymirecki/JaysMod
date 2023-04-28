@@ -1,10 +1,12 @@
-﻿namespace OOD.Collections
+﻿using System.Collections;
+
+namespace OOD.Collections
 {
     public interface IXMLDatabaseItem<TKey>
     {
         TKey ID { get; }
     }
-    public abstract class XMLDatabaseTable<TKey, TValue> where TValue: IXMLDatabaseItem<TKey>
+    public abstract class XMLDatabaseTable<TKey, TValue> : IEnumerable where TValue: IXMLDatabaseItem<TKey>
     {
         #region Properties
         public string TableName { get; internal set; }
@@ -49,6 +51,7 @@
             TryRemoveValue(id);
         }
         #endregion RemoveValue
+        public abstract IEnumerator GetEnumerator();
         public abstract void ClearCache();
     }
 }

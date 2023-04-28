@@ -2,34 +2,32 @@
 using GTA.Native;
 using JaysModFramework;
 using JaysModFramework.Clothing;
-using JaysModFramework.Clothing.Components;
 using JaysModFramework.Managers;
-using NativeUI;
+using LemonUI;
 using System;
 using System.Windows.Forms;
 
 namespace JaysMod
 {
-
+    using Menu = JaysModFramework.Menus.Menu;
     //[ScriptAttributes(NoDefaultInstance = true)]
     public partial class JaysMod : Script
     {
-        private MenuPool ModMenuPool;
-
+        private Menu _closet;
+        private ObjectPool _pool;
         //private NPC PlayerNPC;
         //private State State;
         private BigMapManager _mapManager = new BigMapManager();
 
         public JaysMod()
         {
-            ModMenuPool = new MenuPool();
-            ModMenuPool.ResetCursorOnOpen = true;
-
+            _pool = new ObjectPool();
             Tick += OnTick;
             KeyDown += OnKeyDown;
         }
         void OnTick(object sender, EventArgs e)
         {
+            _pool.Process();
             _mapManager.OnTick(sender, e);
         }
         void OnKeyDown(object sender, KeyEventArgs e)
@@ -45,7 +43,11 @@ namespace JaysMod
             {
                 ReplacePlayerPed(PedHash.Franklin);
             }
-
+            else if (e.KeyCode == Keys.F5)
+            {
+                _closet = new Closet().Menu(GTA.Game.Player.Character, _pool);
+                _closet.Visible = true;
+            }
         }
 
         private void ReplacePlayerPed(PedHash hash)
