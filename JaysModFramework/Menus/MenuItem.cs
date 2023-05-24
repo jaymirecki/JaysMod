@@ -3,7 +3,13 @@ using System;
 
 namespace JaysModFramework.Menus
 {
-    public class MenuItem
+    interface IMenuItem
+    {
+        event SelectedEventHandler Selected;
+        event EventHandler Activated;
+        bool Enabled { get; set; }
+    }
+    public class MenuItem: IMenuItem
     {
         internal NativeItem _nativeItem;
         public MenuItem(string title)
@@ -27,6 +33,11 @@ namespace JaysModFramework.Menus
         {
             add { _nativeItem.Activated += value; }
             remove { _nativeItem.Activated -= value; }
+        }
+        public bool Enabled
+        {
+            get { return _nativeItem.Enabled; }
+            set { _nativeItem.Enabled = value; }
         }
     }
 }

@@ -157,14 +157,12 @@ namespace JaysModFramework
         {
             get { return BaseVehicle.IsEngineRunning; }
             set {
-                Debug.Notify("Before: " + BaseVehicle.IsEngineRunning);
                 BaseVehicle.IsEngineRunning = value;
                 if (value)
                 {
                     //Debug.Log("Jet Engine");
                     //Function.Call(GTA.Native.Hash._SET_VEHICLE_JET_ENGINE_ON, BaseVehicle.Handle, value);
                 }
-                Debug.Notify("After: " + BaseVehicle.IsEngineRunning);
             }
         }
         public bool IsSirenActive

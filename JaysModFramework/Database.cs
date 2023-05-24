@@ -29,22 +29,31 @@ namespace JaysModFramework
         #endregion Props
         #endregion Outfits
         //public MemoryXMLDatabaseTable<string, Torso> Hair;
-        public Database() { }
+        public Database() 
+        {
+            Outfits = new AlwaysEmptyXMLDatabaseTable<string, Outfit>();
+            Masks = new AlwaysEmptyXMLDatabaseTable<string, Mask>();
+            Torsos = new AlwaysEmptyXMLDatabaseTable<string, Torso>();
+            Legs = new AlwaysEmptyXMLDatabaseTable<string, Legs>();
+            Accessory = new AlwaysEmptyXMLDatabaseTable<string, Accessory>();
+            Parachute = new AlwaysEmptyXMLDatabaseTable<string, Parachute>();
+            Hats = new AlwaysEmptyXMLDatabaseTable<string, Hat>();
+            Glasses = new AlwaysEmptyXMLDatabaseTable<string, Glasses>();
+            Ears = new AlwaysEmptyXMLDatabaseTable<string, Ears>();
+            Wrists = new AlwaysEmptyXMLDatabaseTable<string, Wrist>();
+        }
         public void ClearCache()
         {
-            InitIfNot();
-            Torsos.ClearCache();
-            Legs.ClearCache();
-            //Hair.ClearCache();
+            InitializeIfNot();
         }
-        public void InitIfNot()
+        public void InitializeIfNot()
         {
             if (!_initialized)
             {
-                Init();
+                Initialize();
             }
         }
-        public void Init()
+        public void Initialize()
         {
             InitOutfits();
             //public MemoryXMLDatabaseTable<string, Torso> Hair = new MemoryXMLDatabaseTable<string, Torso>(_clothingDirectory, "hair", true);
@@ -73,6 +82,7 @@ namespace JaysModFramework
 
             // Outfit table needs to load after components, since it is dependent on their IDs
             Outfits = new MemoryXMLDatabaseTable<string, Outfit>(_clothingDirectory, "outfit", true);
+            Debug.Log(DebugSeverity.Info, "Outfits database loaded with " + Outfits.Count + " items");
         }
     }
 }

@@ -38,6 +38,7 @@
     <Reference Include="ScriptHookVDotNet3, Version=3.5.1.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\ScriptHookVDotNet3.3.5.1\lib\net48\ScriptHookVDotNet3.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -69,11 +70,13 @@
     <Compile Include="IDGenerator.cs" />
     <Compile Include="IPLs\IPLDetails.cs" />
     <Compile Include="IPLs\IPLLoader.cs" />
+    <Compile Include="Managers\InteractionMenuManager.cs" />
     <Compile Include="Managers\HelmetManager.cs" />
     <Compile Include="Managers\IManager.cs" />
     <Compile Include="Managers\RealTimeDurationManager.cs" />
     <Compile Include="Managers\RespawnManager.cs" />
     <Compile Include="Managers\RestrictedAreasManager.cs" />
+    <Compile Include="Menus\SubmenuItem.cs" />
     <Compile Include="Menus\MenuItem.cs" />
     <Compile Include="Menus\Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
