@@ -3,16 +3,25 @@ using JaysModFramework.Clothing;
 using JaysModFramework.Menus;
 using LemonUI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace JaysModFramework
 {
+    public enum DebugSeverity
+    {
+        Info = 1,
+        Warning = 2,
+        Error = 3,
+    }
     public static class Debug
     {
+        private const string _logFilePath = ".\\scripts\\JaysModFramework.log";
+        private static readonly FileStream _logStream = new FileStream(_logFilePath, FileMode.OpenOrCreate);
+        private static readonly StreamWriter _logWriter = new StreamWriter(_logStream);
         public static bool DEBUG = false;
+        private static Menu _menu;
+        private static MenuItem _initButton;
+        private static SubmenuItem _closetMenuItem;
         private static void Notify(string value, bool overrideDebugFlag = false)
         {
             if (DEBUG || overrideDebugFlag)
@@ -35,37 +44,63 @@ namespace JaysModFramework
         {
             Notify(label + ": " + value.ToString(), overrideDebugFlag);
         }
-        public static Menu Menu(ObjectPool pool)
+        public static void Log(DebugSeverity severity, string message)
         {
-            Menu menu = new Menu("Debug", "Debug", "JMF Framework Debug Options", pool);
-            AddCommonMenu(menu, pool);
-            if (Framework.Initialized)
+            string logMessage =
+                "[" + DateTime.Now.ToShortTimeString() + "] " +
+                "[" + severity + "]: " +
+                message;
+            _logWriter.WriteLine(logMessage);
+            _logWriter.Flush();
+            if (severity > DebugSeverity.Info)
             {
-                AddInitializedMenu(menu, pool);
+                Notify(logMessage, true);
             }
             else
             {
-                AddUninitializedMenu(menu, pool);
+                Notify(logMessage);
             }
-            return menu;
         }
-        private static void AddCommonMenu(Menu menu, ObjectPool pool)
+        public static Menu Menu(ObjectPool pool)
         {
+            _menu = new Menu("Debug", "Debug", "JMF Framework Debug Options", pool);
 
+            _menu.Add(InitButton(pool));
+            //AddClosetMenu(pool);
+
+            _menu.Opening += Menu_Opening;
+            return _menu;
         }
-        private static void AddInitializedMenu(Menu menu, ObjectPool pool)
+
+        private static void Menu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            menu.Add(new Closet().Menu(Game.Player.Character, pool));
+            CheckInitialization();
         }
-        private static void AddUninitializedMenu(Menu menu, ObjectPool pool)
+        private static void CheckInitialization()
         {
-            MenuItem initButton = new MenuItem("Initialize Framework", "Initialize JMF components");
-            initButton.Activated += (sender, args) =>
+            _initButton.Enabled = !Framework.Initialized;
+            if (Framework.Initialized)
+            {
+                _closetMenuItem.Enabled = true;
+            }
+        }
+
+        private static MenuItem InitButton(ObjectPool pool)
+        {
+            _initButton = new MenuItem("Initialize Framework", "Initialize JMF components");
+            _initButton.Activated += (sender, args) =>
             {
                 Framework.Initialize();
-                pool.HideAll();
+                AddClosetMenu(pool);
+                CheckInitialization();
             };
-            menu.Add(initButton);
+            return _initButton;
+        }
+        private static void AddClosetMenu(ObjectPool pool)
+        {
+            Closet closet = new Closet();
+            Menu closetMenu = closet.Menu(Game.Player.Character, pool);
+            _closetMenuItem = _menu.Add(closetMenu);
         }
     }
 }

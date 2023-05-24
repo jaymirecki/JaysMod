@@ -14,7 +14,7 @@ namespace JaysModFramework.Managers
         public void OnKeyDown(object sender, KeyEventArgs e) { }
         public void OnTick(object sender, EventArgs e) 
         {
-            if (Game.IsControlJustReleased(GTA.Control.MultiplayerInfo))
+            if (Game.IsEnabledControlJustReleased(GTA.Control.MultiplayerInfo))
             {
                 TimeSpan duration = DateTime.UtcNow - _controlJustPressed;
                 if (duration.TotalSeconds < 1)

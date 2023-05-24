@@ -18,6 +18,7 @@ namespace JaysModFramework
         }
         public static void ForceInitialize()
         {
+            Global.Database.InitializeIfNot();
             Initialized = true;
         }
     }

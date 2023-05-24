@@ -1,6 +1,7 @@
 ﻿using LemonUI;
 using LemonUI.Menus;
 using System;
+using System.ComponentModel;
 
 namespace JaysModFramework.Menus
 {
@@ -28,9 +29,18 @@ namespace JaysModFramework.Menus
         {
             _nativeMenu.Add(menuItem._nativeItem);
         }
-        public void Add(Menu menu)
+        public SubmenuItem Add(Menu menu)
         {
-            _nativeMenu.AddSubMenu(menu._nativeMenu);
+            return new SubmenuItem(_nativeMenu.AddSubMenu(menu._nativeMenu));
+        }
+        public void Open()
+        {
+            Visible = true;
+        }
+        public event CancelEventHandler Opening
+        {
+            add { _nativeMenu.Opening += value; }
+            remove { _nativeMenu.Opening -= value; }
         }
         public bool Visible
         {
