@@ -18,6 +18,7 @@ namespace JaysModFramework.Managers
         {
             _pool = new ObjectPool();
             _menu = new Menu("Interactions", _pool);
+            _menu.Add(ModuleManager.ModuleMenu(_pool));
             _menu.Add(Debug.Menu(_pool));
             _controlPressed = DateTime.MaxValue;
         }

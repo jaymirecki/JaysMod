@@ -16,7 +16,6 @@ namespace JaysMod
         private ObjectPool _pool;
         //private NPC PlayerNPC;
         //private State State;
-        private BigMapManager _mapManager = new BigMapManager();
         private InteractionMenuManager _interactionMenuManager = new InteractionMenuManager();
 
         public JaysMod()
@@ -29,7 +28,6 @@ namespace JaysMod
         void OnTick(object sender, EventArgs e)
         {
             _pool.Process();
-            _mapManager.OnTick(sender, e);
             _interactionMenuManager.OnTick(sender, e);
         }
         void OnKeyDown(object sender, KeyEventArgs e)

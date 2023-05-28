@@ -5,14 +5,18 @@ using System.Windows.Forms;
 
 namespace JaysModFramework.Managers
 {
-    public class BigMapManager : IManager
+    public class BigMapModule : Module
     {
         private bool _active = false;
         private DateTime _controlJustPressed = DateTime.MinValue;
-        public BigMapManager() { }
-
+        public BigMapModule(): base() { }
+        protected override void SetModuleSpecifics()
+        {
+            ModuleName = "BigMapModule";
+            ModuleDescription = "Enables use of larger radar from MP";
+        }
         public void OnKeyDown(object sender, KeyEventArgs e) { }
-        public void OnTick(object sender, EventArgs e) 
+        public override void OnTick(object sender, EventArgs e) 
         {
             if (Game.IsEnabledControlJustReleased(GTA.Control.MultiplayerInfo))
             {
@@ -29,18 +33,5 @@ namespace JaysModFramework.Managers
                 }
             }
         }
-        //public void Activate()
-        //{
-        //    Enabled = true;
-        //}
-        //public void Deactivate()
-        //{
-        //    Enabled = false;
-        //}
-        //public bool Toggle()
-        //{
-        //    Enabled = !Enabled;
-        //    return Enabled;
-        //}
     }
 }

@@ -29,6 +29,10 @@ namespace JaysModFramework.Menus
         {
             _nativeMenu.Add(menuItem._nativeItem);
         }
+        public void Add<T>(MenuListItem<T> menuItem)
+        {
+            _nativeMenu.Add(menuItem._nativeItem);
+        }
         public SubmenuItem Add(Menu menu)
         {
             return new SubmenuItem(_nativeMenu.AddSubMenu(menu._nativeMenu));
@@ -36,6 +40,10 @@ namespace JaysModFramework.Menus
         public void Open()
         {
             Visible = true;
+        }
+        public void Clear()
+        {
+            _nativeMenu.Clear();
         }
         public event CancelEventHandler Opening
         {
