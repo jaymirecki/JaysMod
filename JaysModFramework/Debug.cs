@@ -1,7 +1,6 @@
 ﻿using GTA;
 using JaysModFramework.Clothing;
 using JaysModFramework.Menus;
-using LemonUI;
 using System;
 using System.IO;
 

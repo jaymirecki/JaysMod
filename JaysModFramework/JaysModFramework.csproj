@@ -64,6 +64,7 @@
     <Compile Include="Clothing\Outfit.cs" />
     <Compile Include="Clothing\MaleOutfitPieces.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="Menus\Aliases.cs" />
     <Compile Include="Menus\MenuListItem.cs" />
     <Compile Include="ModuleManager.cs" />
     <Compile Include="Module.cs" />

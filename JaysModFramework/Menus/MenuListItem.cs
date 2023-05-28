@@ -21,8 +21,18 @@ namespace JaysModFramework.Menus
         }
         public event SelectedEventHandler Selected
         {
-            add { _nativeItem.Selected += value; }
-            remove { _nativeItem.Selected -= value; }
+            add
+            {
+                _nativeItem.Selected += (
+                    object sender,
+                    LemonUI.Menus.SelectedEventArgs e) => value(sender, new SelectedEventArgs(e.Index, e.OnScreen));
+            }
+            remove
+            {
+                _nativeItem.Selected -= (
+                    object sender,
+                    LemonUI.Menus.SelectedEventArgs e) => value(sender, new SelectedEventArgs(e.Index, e.OnScreen));
+            }
         }
         public event EventHandler Activated
         {
@@ -36,8 +46,18 @@ namespace JaysModFramework.Menus
         }
         public event ItemChangedEventHandler<T> ItemChanged
         {
-            add { _nativeItem.ItemChanged += value; }
-            remove { _nativeItem.ItemChanged -= value; }
+            add
+            {
+                _nativeItem.ItemChanged += (
+                    object sender,
+                    LemonUI.Menus.ItemChangedEventArgs<T> e) => value(sender, new ItemChangedEventArgs<T>(e.Object, e.Index, e.Direction));
+            }
+            remove
+            {
+                _nativeItem.ItemChanged -= (
+                    object sender,
+                    LemonUI.Menus.ItemChangedEventArgs<T> e) => value(sender, new ItemChangedEventArgs<T>(e.Object, e.Index, e.Direction));
+            }
         }
         public T SelectedItem
         {
