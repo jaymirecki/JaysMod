@@ -75,7 +75,7 @@ namespace JaysModFramework
             return _menuItem;
         }
 
-        private static void Selected(object sender, LemonUI.Menus.SelectedEventArgs e)
+        private static void Selected(object sender, SelectedEventArgs e)
         {
             if (IsActive)
             {
@@ -87,7 +87,7 @@ namespace JaysModFramework
             }
         }
 
-        private static void ItemChanged(object sender, LemonUI.Menus.ItemChangedEventArgs<string> e)
+        private static void ItemChanged(object sender, ItemChangedEventArgs<string> e)
         {
             switch (e.Object)
             {

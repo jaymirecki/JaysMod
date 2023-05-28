@@ -76,9 +76,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LemonUI.SHVDN3, Version=1.9.4.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\LemonUI.SHVDN3.1.9.4\lib\net48\LemonUI.SHVDN3.dll</HintPath>
-    </Reference>
+    <Reference Include="LemonUI.SHVDN3, Version=1.9.4.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="ScriptHookVDotNet3, Version=3.5.1.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\ScriptHookVDotNet3.3.5.1\lib\net48\ScriptHookVDotNet3.dll</HintPath>
     </Reference>

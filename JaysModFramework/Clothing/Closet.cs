@@ -1,6 +1,5 @@
 ﻿using GTA;
 using JaysModFramework.Menus;
-using LemonUI;
 
 namespace JaysModFramework.Clothing
 {

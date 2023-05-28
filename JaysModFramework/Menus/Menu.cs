@@ -1,5 +1,4 @@
-﻿using LemonUI;
-using LemonUI.Menus;
+﻿using LemonUI.Menus;
 using System;
 using System.ComponentModel;
 

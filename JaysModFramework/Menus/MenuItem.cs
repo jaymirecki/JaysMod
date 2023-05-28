@@ -26,9 +26,15 @@ namespace JaysModFramework.Menus
         }
         public event SelectedEventHandler Selected
         {
-            add { _nativeItem.Selected += value; }
-            remove { _nativeItem.Selected -= value; }
+            add { _nativeItem.Selected += (object sender, LemonUI.Menus.SelectedEventArgs e) => value(sender, (SelectedEventArgs)e); }
+            remove { _nativeItem.Selected -= (object sender, LemonUI.Menus.SelectedEventArgs e) => value(sender, (SelectedEventArgs)e); }
         }
+
+        private void _nativeItem_Selected(object sender, SelectedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         public event EventHandler Activated
         {
             add { _nativeItem.Activated += value; }
