@@ -2,4 +2,5 @@
 <Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <InteractionMenuModuleEnabled>true</InteractionMenuModuleEnabled>
   <BigMapModuleEnabled>true</BigMapModuleEnabled>
+  <SirenModuleEnabled>true</SirenModuleEnabled>
 </Config>

@@ -14,5 +14,6 @@ namespace JaysModFramework
     {
         public bool InteractionMenuModuleEnabled { get; set; } = false;
         public bool BigMapModuleEnabled { get; set; } = false;
+        public bool SirenModuleEnabled { get; set; } = false;
     }
 }
