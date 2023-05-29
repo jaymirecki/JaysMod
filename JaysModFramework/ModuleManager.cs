@@ -25,7 +25,6 @@ namespace JaysModFramework
         public static void AddModule(Module module)
         {
             _moduleList.Add(module);
-            //_moduleMenuItemList.Add(module.MenuItem);
         }
         private static void RefreshMenu()
         {
@@ -34,6 +33,7 @@ namespace JaysModFramework
                 return;
             }
             _moduleMenu.Clear();
+            Debug.Log(DebugSeverity.Info, _moduleList.Count.ToString());
             _moduleList.Sort(ModuleSorter);
             List<ModuleListItem> itemList = _moduleList.ConvertAll((Module m) => m.MenuItem);
             foreach (ModuleListItem item in itemList)

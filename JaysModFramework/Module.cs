@@ -8,9 +8,10 @@ namespace JaysModFramework
     {
         private const string DeactivatedString = "Deactivated";
         private const string ActivatedString = "Activated";
-        public abstract string ModuleName { get; protected set; }
-        public abstract string ModuleDescription { get; protected set; }
-        public bool IsActive { get; private set; } = false;
+        public abstract string ModuleName { get; }
+        public abstract string ModuleDescription { get; }
+        public bool IsActive { get; private set; }
+        public abstract bool DefaultActivationState { get; }
         private MenuListItem<string> _menuItem;
         public MenuListItem<string> MenuItem
         {
@@ -20,6 +21,7 @@ namespace JaysModFramework
         {
             Tick += Module_Tick;
             ModuleManager.AddModule(this);
+            IsActive = DefaultActivationState;
         }
         private void Module_Tick(object sender, EventArgs e)
         {
@@ -70,6 +72,7 @@ namespace JaysModFramework
             if (_menuItem == null)
             {
                 _menuItem = new MenuListItem<string>(ModuleName, ModuleDescription, DeactivatedString, ActivatedString);
+                _menuItem.SelectedItem = IsActive ? ActivatedString : DeactivatedString;
                 Debug.Log(DebugSeverity.Info, ModuleName);
                 _menuItem.ItemChanged += ItemChanged;
                 _menuItem.Selected += Selected;
