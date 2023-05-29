@@ -64,6 +64,7 @@
     <Compile Include="Clothing\Outfit.cs" />
     <Compile Include="Clothing\MaleOutfitPieces.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="Menus\Aliases.cs" />
     <Compile Include="Menus\MenuListItem.cs" />
     <Compile Include="ModuleManager.cs" />
@@ -74,7 +75,7 @@
     <Compile Include="IDGenerator.cs" />
     <Compile Include="IPLs\IPLDetails.cs" />
     <Compile Include="IPLs\IPLLoader.cs" />
-    <Compile Include="Managers\InteractionMenuManager.cs" />
+    <Compile Include="Modules\InteractionMenuModule.cs" />
     <Compile Include="Managers\HelmetManager.cs" />
     <Compile Include="Managers\IManager.cs" />
     <Compile Include="Managers\RealTimeDurationManager.cs" />
@@ -93,6 +94,9 @@
     <Compile Include="Managers\VisorManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="JMF\config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="JMF\Presets\Clothing\wrist.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

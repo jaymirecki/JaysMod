@@ -7,8 +7,9 @@ namespace JaysModFramework.Managers
 {
     public class BigMapModule : Module
     {
-        public override string ModuleName { get; protected set; } = "BigMapModule";
-        public override string ModuleDescription { get; protected set; } = "Enables use of larger radar from MP";
+        public override string ModuleName { get; } = "BigMapModule";
+        public override string ModuleDescription { get; } = "Enables use of larger radar from MP";
+        public override bool DefaultActivationState { get { return Global.Config.BigMapModuleEnabled; } }
         private bool _active = false;
         private DateTime _controlJustPressed = DateTime.MinValue;
         public BigMapModule(): base() { }
