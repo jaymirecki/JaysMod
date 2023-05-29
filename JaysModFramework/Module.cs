@@ -8,21 +8,19 @@ namespace JaysModFramework
     {
         private const string DeactivatedString = "Deactivated";
         private const string ActivatedString = "Activated";
-        public static string ModuleName { get; protected set; } = "";
-        public static string ModuleDescription { get; protected set; } = "";
-        public static bool IsActive { get; private set; } = false;
-        private static MenuListItem<string> _menuItem;
+        public abstract string ModuleName { get; protected set; }
+        public abstract string ModuleDescription { get; protected set; }
+        public bool IsActive { get; private set; } = false;
+        private MenuListItem<string> _menuItem;
         public MenuListItem<string> MenuItem
         {
             get { return GenerateMenuItem(); }
         }
         public Module()
         {
-            SetModuleSpecifics();
             Tick += Module_Tick;
             ModuleManager.AddModule(this);
         }
-        protected abstract void SetModuleSpecifics();
         private void Module_Tick(object sender, EventArgs e)
         {
             if (IsActive)
@@ -33,7 +31,7 @@ namespace JaysModFramework
 
         public abstract void OnTick(object sender, EventArgs e);
         //public abstract void ControlPressed(Control control);
-        private static void CheckControlPressed()
+        private void CheckControlPressed()
         {
             Control[] controls = (Control[])Enum.GetValues(typeof(Control));
             foreach (Control control in controls)
@@ -44,7 +42,8 @@ namespace JaysModFramework
                 }
             }
         }
-        public static void Activate()
+        #region Activation/Deactivation
+        public void Activate()
         {
             if (!IsActive)
             {
@@ -52,7 +51,7 @@ namespace JaysModFramework
                 IsActive = true;
             }
         }
-        public static void Deactivate()
+        public void Deactivate()
         {
             if (IsActive)
             {
@@ -60,22 +59,25 @@ namespace JaysModFramework
                 IsActive = false;
             }
         }
-        public static void Toggle()
+        public void Toggle()
         {
             IsActive = !IsActive;
         }
-        private static MenuListItem<string> GenerateMenuItem()
+        #endregion Activation/Deactivation
+        #region MenuItem
+        private MenuListItem<string> GenerateMenuItem()
         {
             if (_menuItem == null)
             {
                 _menuItem = new MenuListItem<string>(ModuleName, ModuleDescription, DeactivatedString, ActivatedString);
+                Debug.Log(DebugSeverity.Info, ModuleName);
                 _menuItem.ItemChanged += ItemChanged;
                 _menuItem.Selected += Selected;
             }
             return _menuItem;
         }
 
-        private static void Selected(object sender, SelectedEventArgs e)
+        private void Selected(object sender, SelectedEventArgs e)
         {
             if (IsActive)
             {
@@ -87,7 +89,7 @@ namespace JaysModFramework
             }
         }
 
-        private static void ItemChanged(object sender, ItemChangedEventArgs<string> e)
+        private void ItemChanged(object sender, ItemChangedEventArgs<string> e)
         {
             switch (e.Object)
             {
@@ -101,5 +103,6 @@ namespace JaysModFramework
                     return;
             }
         }
+        #endregion MenuItem
     }
 }
