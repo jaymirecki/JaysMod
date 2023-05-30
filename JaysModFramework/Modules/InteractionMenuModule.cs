@@ -24,24 +24,12 @@ namespace JaysModFramework.Modules
         public override void OnTick() 
         {
             _pool.Process();
-            if (GTA.Game.IsControlPressed(GTA.Control.CharacterWheel))
+        }
+        public override void OnControlHeld(GTA.Control control)
+        {
+            if (control == GTA.Control.CharacterWheel)
             {
-                if (_controlPressed == DateTime.MaxValue)
-                {
-                    _controlPressed = DateTime.UtcNow;
-                }
-                else
-                {
-                    TimeSpan duration = DateTime.UtcNow - _controlPressed;
-                    if (duration.TotalSeconds > 1)
-                    {
-                        _menu.Open();
-                    }
-                }
-            }
-            else if (GTA.Game.IsControlJustReleased(GTA.Control.CharacterWheel))
-            {
-                _controlPressed = DateTime.MaxValue;
+                _menu.Open();
             }
         }
     }
