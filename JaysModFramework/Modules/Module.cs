@@ -19,19 +19,13 @@ namespace JaysModFramework
         }
         public Module()
         {
-            Tick += Module_Tick;
             ModuleManager.AddModule(this);
             IsActive = DefaultActivationState;
         }
-        private void Module_Tick(object sender, EventArgs e)
-        {
-            if (IsActive)
-            {
-                OnTick(sender, e);
-            }
-        }
-
-        public abstract void OnTick(object sender, EventArgs e);
+        public virtual void OnTick() { }
+        public virtual void OnControlReleased(GTA.Control control) { }
+        public virtual void OnControlHeld(GTA.Control control) { }
+        public virtual void OnControlDoublePressed(GTA.Control control) { }
         //public abstract void ControlPressed(Control control);
         private void CheckControlPressed()
         {

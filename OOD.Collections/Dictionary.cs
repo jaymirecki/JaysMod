@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Xml;
-
-namespace OOD.Collections
+﻿namespace OOD.Collections
 {
     public class Dictionary<TKey, TVal>: System.Collections.Generic.Dictionary<TKey, TVal>
     {
@@ -37,6 +34,27 @@ namespace OOD.Collections
             {
                 return false;
             }
+        }
+        public void AddOrUpdateValue(TKey key, TVal value)
+        {
+            TryRemove(key);
+            Add(key, value);
+        }
+        public TVal GetValue(TKey key)
+        {
+            if (TryGetValue(key, out TVal value))
+            {
+                return value;
+            }
+            else
+            {
+                return default(TVal);
+            }
+        }
+        public new TVal this[TKey key]
+        {
+            get { return GetValue(key); }
+            set { AddOrUpdateValue(key, value); }
         }
     }
 }

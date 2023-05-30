@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace JaysModFramework.Managers
+namespace JaysModFramework.Modules
 {
     using Menu = Menus.Menu;
     public class InteractionMenuModule : Module
@@ -21,7 +21,7 @@ namespace JaysModFramework.Managers
         }
 
         public void OnKeyDown(object sender, KeyEventArgs e) { }
-        public override void OnTick(object sender, EventArgs e) 
+        public override void OnTick() 
         {
             _pool.Process();
             if (GTA.Game.IsControlPressed(GTA.Control.CharacterWheel))
