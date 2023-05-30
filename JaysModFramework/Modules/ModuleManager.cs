@@ -80,7 +80,7 @@ namespace JaysModFramework
     public class ModuleScriptRunner : GTA.Script
     {
         private OOD.Collections.Dictionary<GTA.Control, DateTime> _controlJustReleased = new OOD.Collections.Dictionary<GTA.Control, DateTime>();
-        private OOD.Collections.Dictionary<GTA.Control, DateTime> _controlJustPressed = new OOD.Collections.Dictionary<GTA.Control, DateTime>();
+        private OOD.Collections.Dictionary<GTA.Control, DateTime> _controlPressed = new OOD.Collections.Dictionary<GTA.Control, DateTime>();
 
         public ModuleScriptRunner()
         {
@@ -90,7 +90,7 @@ namespace JaysModFramework
             foreach (GTA.Control control in controls)
             {
                 _controlJustReleased.Add(control, DateTime.MinValue);
-                _controlJustPressed.Add(control, DateTime.MaxValue);
+                _controlPressed.Add(control, DateTime.MaxValue);
             }
         }
         private void ModuleRunner_Tick(object sender, EventArgs e)
@@ -115,17 +115,17 @@ namespace JaysModFramework
                         _controlJustReleased[control] = DateTime.UtcNow;
                     }
 
-                    _controlJustPressed[control] = DateTime.MaxValue;
+                    _controlPressed[control] = DateTime.MaxValue;
                 }
-                else if (GTA.Game.IsEnabledControlJustPressed(control))
+                else if (GTA.Game.IsEnabledControlPressed(control))
                 {
-                    if (_controlJustPressed[control] == DateTime.MaxValue)
+                    if (_controlPressed[control] == DateTime.MaxValue)
                     {
-                        _controlJustPressed[control] = DateTime.UtcNow;
+                        _controlPressed[control] = DateTime.UtcNow;
                     }
                     else
                     {
-                        TimeSpan duration = DateTime.UtcNow - _controlJustPressed[control];
+                        TimeSpan duration = DateTime.UtcNow - _controlPressed[control];
                         if (duration.TotalSeconds > 1)
                         {
                             ModuleManager.OnControlHeld(control);
