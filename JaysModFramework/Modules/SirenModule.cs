@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace JaysModFramework
+namespace JaysModFramework.Modules
 {
     public class SirenModule : Module
     {
@@ -17,7 +17,7 @@ namespace JaysModFramework
             KeyDown += OnKeyDown;
         }
 
-        public override void OnTick(object sender, EventArgs e)
+        public override void OnTick()
         {
             
         }

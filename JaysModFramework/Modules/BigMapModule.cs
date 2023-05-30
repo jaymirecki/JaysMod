@@ -3,7 +3,7 @@ using GTA.Native;
 using System;
 using System.Windows.Forms;
 
-namespace JaysModFramework.Managers
+namespace JaysModFramework.Modules
 {
     public class BigMapModule : Module
     {
@@ -14,7 +14,7 @@ namespace JaysModFramework.Managers
         private DateTime _controlJustPressed = DateTime.MinValue;
         public BigMapModule(): base() { }
         public void OnKeyDown(object sender, KeyEventArgs e) { }
-        public override void OnTick(object sender, EventArgs e) 
+        public override void OnTick()
         {
             if (Game.IsEnabledControlJustReleased(GTA.Control.MultiplayerInfo))
             {
