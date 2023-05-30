@@ -126,9 +126,10 @@ namespace JaysModFramework
                     else
                     {
                         TimeSpan duration = DateTime.UtcNow - _controlPressed[control];
-                        if (duration.TotalSeconds > 1)
+                        if (duration.TotalSeconds > 1 && duration.TotalSeconds < 2)
                         {
                             ModuleManager.OnControlHeld(control);
+                            _controlPressed[control] = DateTime.MinValue;
                         }
                     }
                 }

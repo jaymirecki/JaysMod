@@ -12,19 +12,9 @@ namespace JaysModFramework.Modules
         public override string ModuleDescription => "Allows turning off a siren but leaving emergency lights on";
 
         public override bool DefaultActivationState => Global.Config.SirenModuleEnabled;
-        public SirenModule() : base()
+        public override void OnControlHeld(GTA.Control control)
         {
-            KeyDown += OnKeyDown;
-        }
-
-        public override void OnTick()
-        {
-            
-        }
-
-        private void OnKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.J && IsActive && Game.Player.Character.IsInVehicle())
+            if (control == GTA.Control.VehicleRadioWheel)
             {
                 new Vehicle(Game.Player.Character.CurrentVehicle).ToggleSirenNoise();
             }
