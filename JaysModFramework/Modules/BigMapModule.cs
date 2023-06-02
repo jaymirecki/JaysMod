@@ -7,7 +7,7 @@ namespace JaysModFramework.Modules
 {
     public class BigMapModule : Module
     {
-        public override string ModuleName { get; } = "BigMapModule";
+        public override string ModuleName { get; } = "Big Map SP";
         public override string ModuleDescription { get; } = "Enables use of larger radar from MP";
         public override bool DefaultActivationState { get { return Global.Config.BigMapModuleEnabled; } }
         private bool _active = false;
