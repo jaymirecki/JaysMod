@@ -10,11 +10,9 @@ namespace JaysModFramework
         private const string ActivatedString = "Activated";
         public abstract string ModuleName { get; }
         public abstract string ModuleDescription { get; }
-        internal abstract int MajorVersion { get; }
-        internal abstract int MinorVersion { get; }
-        internal abstract int PatchVersion { get; }
+        internal abstract SemanticVersion Version { get; }
 
-        private string _moduleLogName { get => ModuleName + " v" + MajorVersion + "." + MinorVersion + "." + PatchVersion; }
+        private string _moduleLogName { get => ModuleName + Version; }
         public bool IsActive { get; private set; }
         public abstract bool DefaultActivationState { get; }
         public Module()
@@ -135,5 +133,24 @@ namespace JaysModFramework
             return string.Compare(_moduleAlphabetizedName, other._moduleAlphabetizedName);
         }
         #endregion IComparer
+    }
+
+    struct SemanticVersion
+    {
+        public int Major;
+        public int Minor;
+        public int Patch;
+
+        public SemanticVersion(int major = 1, int minor = 0, int patch = 0)
+        {
+            Major = major;
+            Minor = minor;
+            Patch = patch;
+        }
+
+        public override string ToString()
+        {
+            return "v" + Major + "." + Minor + "." + Patch;
+        }
     }
 }
