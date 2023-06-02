@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace JaysModFramework.Modules
 {
-    public class SirenModule : Module
+    public class SilentSirens : Module
     {
 
         public override string ModuleName => "Silent Sirens";
