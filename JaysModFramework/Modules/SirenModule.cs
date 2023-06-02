@@ -7,7 +7,7 @@ namespace JaysModFramework.Modules
     public class SirenModule : Module
     {
 
-        public override string ModuleName => "SirenModule";
+        public override string ModuleName => "Silent Sirens";
 
         public override string ModuleDescription => "Allows turning off a siren but leaving emergency lights on";
 
