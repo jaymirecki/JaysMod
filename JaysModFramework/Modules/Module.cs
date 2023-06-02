@@ -10,12 +10,20 @@ namespace JaysModFramework
         private const string ActivatedString = "Activated";
         public abstract string ModuleName { get; }
         public abstract string ModuleDescription { get; }
+        internal abstract int MajorVersion { get; }
+        internal abstract int MinorVersion { get; }
+        internal abstract int PatchVersion { get; }
+
+        private string _moduleLogName { get => ModuleName + " v" + MajorVersion + "." + MinorVersion + "." + PatchVersion; }
         public bool IsActive { get; private set; }
         public abstract bool DefaultActivationState { get; }
         public Module()
         {
             ModuleManager.AddModule(this);
-            IsActive = DefaultActivationState;
+            if (DefaultActivationState)
+            {
+                Activate();
+            }
         }
         #region Life cycle events
         public virtual void OnTick() { }
@@ -30,7 +38,7 @@ namespace JaysModFramework
         {
             if (!IsActive)
             {
-                Debug.Log(DebugSeverity.Info, ModuleName + " " + ActivatedString.ToLower());
+                Debug.Log(DebugSeverity.Info, _moduleLogName + " " + ActivatedString.ToLower());
                 IsActive = true;
                 OnActivate();
             }
@@ -39,7 +47,7 @@ namespace JaysModFramework
         {
             if (IsActive)
             {
-                Debug.Log(DebugSeverity.Info, ModuleName + " " + DeactivatedString.ToLower());
+                Debug.Log(DebugSeverity.Info, _moduleLogName + " " + DeactivatedString.ToLower());
                 IsActive = false;
                 OnDeactivate();
             }
