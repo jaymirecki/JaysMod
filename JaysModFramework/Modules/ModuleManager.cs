@@ -27,6 +27,7 @@ namespace JaysModFramework
         public static void AddModule(Module module)
         {
             _moduleList.Add(module);
+            _moduleList.Sort();
         }
         private static void RefreshMenu()
         {
@@ -36,7 +37,6 @@ namespace JaysModFramework
             }
             _moduleMenu.Clear();
             Debug.Log(DebugSeverity.Info, _moduleList.Count.ToString());
-            _moduleList.Sort(ModuleSorter);
             List<ModuleListItem> itemList = _moduleList.ConvertAll((Module m) => m.MenuItem);
             foreach (ModuleListItem item in itemList)
             {
@@ -48,6 +48,8 @@ namespace JaysModFramework
             return string.Compare(a.ModuleName, b.ModuleName);
         }
         #endregion Menu
+
+        #region Life cycle events
         public static void OnTick()
         {
             foreach (Module module in _moduleList)
@@ -76,6 +78,7 @@ namespace JaysModFramework
                 module.OnControlDoublePressed(control);
             }
         }
+        #endregion Life cycle events
     }
     public class ModuleScriptRunner : GTA.Script
     {
