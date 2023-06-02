@@ -78,7 +78,7 @@
     <Compile Include="Modules\InteractionMenu.cs" />
     <Compile Include="Managers\HelmetManager.cs" />
     <Compile Include="Managers\IManager.cs" />
-    <Compile Include="Managers\RealTimeDurationManager.cs" />
+    <Compile Include="Modules\MatterOfTime.cs" />
     <Compile Include="Managers\RespawnManager.cs" />
     <Compile Include="Managers\RestrictedAreasManager.cs" />
     <Compile Include="Menus\SubmenuItem.cs" />
