@@ -22,6 +22,8 @@ namespace JaysModFramework
         public virtual void OnControlReleased(GTA.Control control) { }
         public virtual void OnControlHeld(GTA.Control control) { }
         public virtual void OnControlDoublePressed(GTA.Control control) { }
+        public virtual void OnActivate() { }
+        public virtual void OnDeactivate() { }
         #endregion Life cycle events
         #region Activation/Deactivation
         public void Activate()
@@ -30,6 +32,7 @@ namespace JaysModFramework
             {
                 Debug.Log(DebugSeverity.Info, ModuleName + " " + ActivatedString.ToLower());
                 IsActive = true;
+                OnActivate();
             }
         }
         public void Deactivate()
@@ -38,11 +41,19 @@ namespace JaysModFramework
             {
                 Debug.Log(DebugSeverity.Info, ModuleName + " " + DeactivatedString.ToLower());
                 IsActive = false;
+                OnDeactivate();
             }
         }
         public void Toggle()
         {
-            IsActive = !IsActive;
+            if (IsActive)
+            {
+                Deactivate();
+            }
+            else
+            {
+                Activate();
+            }
         }
         #endregion Activation/Deactivation
         #region MenuItem
