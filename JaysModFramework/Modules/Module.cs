@@ -4,7 +4,7 @@ using System;
 
 namespace JaysModFramework
 {
-    public abstract class Module : Script
+    public abstract class Module : Script, IComparable<Module>
     {
         private const string DeactivatedString = "Deactivated";
         private const string ActivatedString = "Activated";
@@ -12,32 +12,17 @@ namespace JaysModFramework
         public abstract string ModuleDescription { get; }
         public bool IsActive { get; private set; }
         public abstract bool DefaultActivationState { get; }
-        private MenuListItem<string> _menuItem;
-        public MenuListItem<string> MenuItem
-        {
-            get { return GenerateMenuItem(); }
-        }
         public Module()
         {
             ModuleManager.AddModule(this);
             IsActive = DefaultActivationState;
         }
+        #region Life cycle events
         public virtual void OnTick() { }
         public virtual void OnControlReleased(GTA.Control control) { }
         public virtual void OnControlHeld(GTA.Control control) { }
         public virtual void OnControlDoublePressed(GTA.Control control) { }
-        //public abstract void ControlPressed(Control control);
-        private void CheckControlPressed()
-        {
-            Control[] controls = (Control[])Enum.GetValues(typeof(Control));
-            foreach (Control control in controls)
-            {
-                if (GTA.Game.IsEnabledControlPressed(control))
-                {
-
-                }
-            }
-        }
+        #endregion Life cycle events
         #region Activation/Deactivation
         public void Activate()
         {
@@ -61,6 +46,11 @@ namespace JaysModFramework
         }
         #endregion Activation/Deactivation
         #region MenuItem
+        private MenuListItem<string> _menuItem;
+        public MenuListItem<string> MenuItem
+        {
+            get { return GenerateMenuItem(); }
+        }
         private MenuListItem<string> GenerateMenuItem()
         {
             if (_menuItem == null)
@@ -101,5 +91,30 @@ namespace JaysModFramework
             }
         }
         #endregion MenuItem
+        #region IComparer
+        private readonly System.Collections.Generic.List<string> _ignoredFirstWords = new System.Collections.Generic.List<string>() { "the", "a" };
+        private string _moduleAlphabetizedName
+        {
+            get
+            {
+                string alphabetizedName = ModuleName;
+                if (string.IsNullOrEmpty(alphabetizedName))
+                {
+                    return alphabetizedName;
+                }
+                while (_ignoredFirstWords.Contains(alphabetizedName.Split(' ')[0].ToLower()))
+                {
+                    string firstWord = alphabetizedName.Split(' ')[0];
+                    string modifiedAlphabetizedName = alphabetizedName.Replace(firstWord, "");
+                    alphabetizedName = modifiedAlphabetizedName.Replace(" ", "");
+                }
+                return alphabetizedName;
+            }
+        }
+        public int CompareTo(Module other)
+        {
+            return string.Compare(_moduleAlphabetizedName, other._moduleAlphabetizedName);
+        }
+        #endregion IComparer
     }
 }
