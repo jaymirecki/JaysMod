@@ -7,6 +7,9 @@ namespace JaysModFramework.Modules
     using Menu = Menus.Menu;
     public class InteractionMenuModule : Module
     {
+        internal override int MajorVersion => 1;
+        internal override int MinorVersion => 0;
+        internal override int PatchVersion => 0;
         public override string ModuleName { get; } = "Interaction Menu for JMF";
         public override string ModuleDescription { get; } = "Creates an Interaction Menu. WARNING: Disabling this module may prevent correct use of other modules.";
         public override bool DefaultActivationState { get { return Global.Config.InteractionMenuModuleEnabled; } }

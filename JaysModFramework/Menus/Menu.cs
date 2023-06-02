@@ -17,7 +17,6 @@ namespace JaysModFramework.Menus
         {
             _nativeMenu = new NativeMenu(title, subtitle);
             pool.Add(_nativeMenu);
-            Debug.Notify("Native title", _nativeMenu.Title.Text, true);
         }
         public Menu(string title, string subtitle, string description, ObjectPool pool)
         {

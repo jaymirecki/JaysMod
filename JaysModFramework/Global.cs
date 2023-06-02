@@ -17,8 +17,11 @@ namespace JaysModFramework
         {
             get
             {
-                if (!File.Exists(ConfigFilepath)) return new Config();
-                Debug.Log(DebugSeverity.Warning, "Could not find config.xml.");
+                if (!File.Exists(ConfigFilepath))
+                {
+                    Debug.Log(DebugSeverity.Warning, "Could not find config.xml.");
+                    return new Config();
+                }
                 using (TextReader reader = new StreamReader(ConfigFilepath))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(Config));
