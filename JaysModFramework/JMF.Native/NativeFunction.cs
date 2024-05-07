@@ -4,7 +4,7 @@ namespace JMF
 {
     namespace Native
     {
-        public static class Function
+        internal static class Function
         {
             public static T Call<T>(Hash hash)
             {
