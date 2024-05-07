@@ -105,49 +105,27 @@
     <Compile Include="State.cs" />
     <Compile Include="Entities\Vehicle\Vehicle.cs" />
     <Compile Include="Managers\VisorManager.cs" />
-    <Compile Include="Utilities\Control.cs" />
+    <Compile Include="JMF\Control.cs" />
     <Compile Include="Entities\Vehicle\VehicleColor.cs" />
     <Compile Include="Entities\Vehicle\VehicleLandingGearState.cs" />
     <Compile Include="Entities\Vehicle\VehicleHash.cs" />
     <Compile Include="Entities\Vehicle\VehicleDoorIndex.cs" />
     <Compile Include="Entities\Vehicle\VehicleSeat.cs" />
-    <Compile Include="Utilities\PedHash.cs" />
-    <Compile Include="Utilities\Gender.cs" />
+    <Compile Include="JMF\PedHash.cs" />
+    <Compile Include="JMF\Gender.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="JMF\config.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JMF\Presets\Clothing\wrist.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JMF\Presets\Clothing\ears.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JMF\Presets\Clothing\glasses.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JMF\Presets\Clothing\hat.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JMF\Presets\Clothing\parachute.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JMF\Presets\Clothing\outfit.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JMF\Presets\Clothing\accessory.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JMF\Presets\Clothing\mask.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JMF\Presets\Clothing\legs.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JMF\Presets\Clothing\torso.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="JMFBin\config.xml" />
+    <Content Include="JMFBin\Presets\Clothing\accessory.xml" />
+    <Content Include="JMFBin\Presets\Clothing\ears.xml" />
+    <Content Include="JMFBin\Presets\Clothing\glasses.xml" />
+    <Content Include="JMFBin\Presets\Clothing\hat.xml" />
+    <Content Include="JMFBin\Presets\Clothing\legs.xml" />
+    <Content Include="JMFBin\Presets\Clothing\mask.xml" />
+    <Content Include="JMFBin\Presets\Clothing\outfit.xml" />
+    <Content Include="JMFBin\Presets\Clothing\parachute.xml" />
+    <Content Include="JMFBin\Presets\Clothing\torso.xml" />
+    <Content Include="JMFBin\Presets\Clothing\wrist.xml" />
     <Content Include="Snippets\Python Generation\OutfitProperty.py" />
     <Content Include="Snippets\Python Generation\OutfitPiece.py" />
     <Content Include="Snippets\Snippets\OutfitPiece.xml" />
@@ -160,6 +138,6 @@
   <PropertyGroup>
     <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\Plugins"
 copy OOD.Collections.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto"
-xcopy /Y /I /S "JMF\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\Plugins\JMF"</PostBuildEvent>
+xcopy /Y /I /S "JMFBin\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\Plugins\JMF"</PostBuildEvent>
   </PropertyGroup>
 </Project>
