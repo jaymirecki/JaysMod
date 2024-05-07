@@ -72,6 +72,7 @@
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\Ped\Ped.cs" />
     <Compile Include="JMF.Game\Game.cs" />
+    <Compile Include="JMF.Game\Clock.cs" />
     <Compile Include="JMF.Game\Player.cs" />
     <Compile Include="JMF.Math\Vector3.cs" />
     <Compile Include="Menus\Aliases.cs" />

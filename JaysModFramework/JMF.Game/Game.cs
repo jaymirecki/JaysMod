@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JMF.Native;
+﻿using JMF.Native;
 
 namespace JMF
 {
@@ -20,6 +15,18 @@ namespace JMF
                     _player = new Player(handle);
                 }
                 return _player;
+            }
+        }
+        private static Clock _clock;
+        public static Clock Clock
+        {
+            get
+            {
+                if (_clock == null)
+                {
+                    _clock = new Clock();
+                }
+                return _clock;
             }
         }
     }
