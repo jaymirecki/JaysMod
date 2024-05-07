@@ -2,7 +2,7 @@
 {
     namespace Native
     {
-        public enum Hash : ulong
+        internal enum Hash : ulong
         {
             GetEntityHeading = 0xE83D4F9BA2A38914,
             SetEntityHeading = 0x8E2530AA8ADA980,
@@ -36,6 +36,8 @@
             GetClockSeconds = 0x494E97C2EF27C470,
             SetClockDate = 0xB096419DF0D06CE7,
             SetClockTime = 0x47C3B5848C3E45D8,
+            EndTextCommandDisplayHelp = 0x238FFE5C7B0498A6,
+            BeginTextCommandDisplayHelp = 0x8509B634FBE7DA11,
         }
     }
 }
