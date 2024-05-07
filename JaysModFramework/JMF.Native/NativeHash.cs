@@ -33,6 +33,15 @@ namespace JMF
             IsPedInAnyVehicle = 0x997ABD671D25CA0B,
             //IsBigmapActive = 0xFFF65C63,
             SetBigmapActive = 0x231C8F89D0539D8F,
+            PauseClock = 0x4055E40BD2DBEC1D,
+            GetClockYear = 0x961777E64BDAF717,
+            GetClockMonth = 0xBBC72712E80257A1,
+            GetClockDayOfMonth = 0x3D10BC92A4DB1D35,
+            GetClockHours = 0x25223CA6B4D20B7F,
+            GetClockMinutes = 0x13D2B8ADD79640F2,
+            GetClockSeconds = 0x494E97C2EF27C470,
+            SetClockDate = 0xB096419DF0D06CE7,
+            SetClockTime = 0x47C3B5848C3E45D8,
         }
     }
 }

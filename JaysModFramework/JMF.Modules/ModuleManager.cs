@@ -195,6 +195,7 @@ namespace JMF
             new InteractionMenu();
             new SilentSirens();
             new BigMap();
+            new MatterOfTime();
             while (true)
             {
                 ModuleManager.Tick();
