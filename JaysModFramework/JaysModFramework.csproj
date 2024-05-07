@@ -113,7 +113,6 @@
     <Compile Include="Entities\Vehicle\VehicleSeat.cs" />
     <Compile Include="Utilities\PedHash.cs" />
     <Compile Include="Utilities\Gender.cs" />
-    <Compile Include="Utilities\Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="JMF\config.xml">

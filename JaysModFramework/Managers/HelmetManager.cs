@@ -1,5 +1,4 @@
-﻿//using Rage;
-//using JaysModFramework.MaleOutfitPieces;
+﻿//using JaysModFramework.MaleOutfitPieces;
 //using System.Windows.Forms;
 
 //namespace JaysModFramework

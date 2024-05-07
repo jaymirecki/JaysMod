@@ -1,7 +1,4 @@
-﻿//using JaysModFramework.Utilities;
-//using Rage;
-//using Rage.Native;
-//using System.Collections.Generic;
+﻿//using System.Collections.Generic;
 
 //namespace JaysModFramework
 //{
