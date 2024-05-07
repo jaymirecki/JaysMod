@@ -1,7 +1,7 @@
 ﻿using LemonUI.Menus;
 using System;
 
-namespace JaysModFramework.Menus
+namespace JMF.Menus
 {
     interface IMenuItem
     {

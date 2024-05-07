@@ -1,4 +1,4 @@
-﻿namespace JaysModFramework
+﻿namespace JMF
 {
     public abstract class InternalModule : Module
     {

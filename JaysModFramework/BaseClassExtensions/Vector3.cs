@@ -1,4 +1,4 @@
-﻿namespace JaysModFramework
+﻿namespace JMF
 {
     using GVector3 = Rage.Vector3;
     public struct Vector3

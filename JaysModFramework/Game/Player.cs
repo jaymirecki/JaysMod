@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JaysModFramework.Native;
+using JMF.Native;
 
-namespace JaysModFramework
+namespace JMF
 {
     public class Player
     {

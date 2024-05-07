@@ -1,6 +1,6 @@
 ﻿using InputArgument = Rage.Native.NativeArgument;
 
-namespace JaysModFramework
+namespace JMF
 {
     namespace Native
     {

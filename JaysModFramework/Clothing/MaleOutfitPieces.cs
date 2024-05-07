@@ -1,4 +1,4 @@
-﻿namespace JaysModFramework.MaleOutfitPieces
+﻿namespace JMF.MaleOutfitPieces
 {
     #region HeadOverlay
     public enum Blemishes

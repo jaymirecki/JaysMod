@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace JaysModFramework.Managers
+namespace JMF.Managers
 {
     internal interface IManager
     {

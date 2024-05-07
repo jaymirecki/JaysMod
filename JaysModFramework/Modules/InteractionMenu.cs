@@ -1,9 +1,9 @@
-﻿using JaysModFramework.Menus;
+﻿using JMF.Menus;
 using System;
 using System.Windows.Forms;
 
 [assembly: Rage.Attributes.Plugin("Interaction Menu for JMF", Description = "Creates an Interaction Menu")]
-namespace JaysModFramework.Modules
+namespace JMF.Modules
 {
     using Menu = Menus.Menu;
     public class InteractionMenu : InternalModule
@@ -26,8 +26,8 @@ namespace JaysModFramework.Modules
             _menu.Add(Debug.Menu(_pool));
         }
 
-        public override void OnControlReleased(Utilities.Control control) {
-            if (control == Utilities.Control.SelectCharacterMultiplayer)
+        public override void OnControlReleased(Control control) {
+            if (control == Control.SelectCharacterMultiplayer)
             {
                 _menu.Open();
             }
@@ -36,9 +36,9 @@ namespace JaysModFramework.Modules
         {
             _pool.Process();
         }
-        public override void OnControlHeld(Utilities.Control control)
+        public override void OnControlHeld(Control control)
         {
-            if (control == Utilities.Control.CharacterWheel)
+            if (control == Control.CharacterWheel)
             {
                 _menu.Open();
             }

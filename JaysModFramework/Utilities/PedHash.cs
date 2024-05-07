@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JaysModFramework.Utilities
+namespace JMF.Utilities
 {
     public enum PedHash : uint
     {

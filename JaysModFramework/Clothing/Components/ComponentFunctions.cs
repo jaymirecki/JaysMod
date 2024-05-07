@@ -1,7 +1,7 @@
 ﻿using Rage;
 using Rage.Native;
 
-namespace JaysModFramework.Clothing.Components
+namespace JMF.Clothing.Components
 {
     internal static partial class Components
     {

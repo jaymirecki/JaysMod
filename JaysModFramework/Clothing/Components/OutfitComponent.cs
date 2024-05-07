@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JaysModFramework.Clothing
+namespace JMF.Clothing
 {
 
     public struct OutfitComponent: IEquatable<OutfitComponent>

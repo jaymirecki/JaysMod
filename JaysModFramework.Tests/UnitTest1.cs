@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace JaysModFramework.Tests
+namespace JMF.Tests
 {
     [TestClass]
     public class UnitTest
