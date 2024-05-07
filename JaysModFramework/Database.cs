@@ -29,7 +29,7 @@ namespace JaysModFramework
         #endregion Props
         #endregion Outfits
         //public MemoryXMLDatabaseTable<string, Torso> Hair;
-        public Database() 
+        public Database()
         {
             Outfits = new AlwaysEmptyXMLDatabaseTable<string, Outfit>();
             Masks = new AlwaysEmptyXMLDatabaseTable<string, Mask>();

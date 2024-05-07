@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JaysModFramework.BaseClassExtensions
+namespace JaysModFramework.Utilities
 {
-    public class VehicleDoor
+    public enum Gender
     {
-
+        Male,
+        Female,
     }
 }

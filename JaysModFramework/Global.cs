@@ -11,8 +11,8 @@ namespace JaysModFramework
 {
     public static class Global
     {
-        private const string ConfigFilepath = ".\\scripts\\JMF\\config.xml";
-        public static readonly Database Database = new Database();
+        private const string ConfigFilepath = ".\\Plugins\\JMF\\config.xml";
+        //public static readonly Database Database = new Database();
         public static Config Config
         {
             get

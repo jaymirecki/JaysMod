@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JaysModFramework
 {
-    public static class Framework
+    public static class NativeHash
     {
         public static bool Initialized { get; private set; }
         public static void Initialize()
@@ -18,7 +18,7 @@ namespace JaysModFramework
         }
         public static void ForceInitialize()
         {
-            Global.Database.InitializeIfNot();
+            //Global.Database.InitializeIfNot();
             Initialized = true;
         }
     }

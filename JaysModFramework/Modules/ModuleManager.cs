@@ -1,14 +1,21 @@
 ﻿using JaysModFramework.Menus;
+using JaysModFramework.Modules;
 using System;
 using System.Collections.Generic;
 
+[assembly: Rage.Attributes.Plugin("JMF Module Manager", Description = "Manages lifecycles for other JMF Modules")]
 namespace JaysModFramework
 {
     using ModuleListItem = MenuListItem<string>;
     public static class ModuleManager
     {
         private static readonly List<Module> _moduleList = new List<Module>();
-        //private static readonly List<ModuleListItem> _moduleMenuItemList = new List<ModuleListItem>();
+        private static readonly List<InternalModule> _internalModuleList = new List<InternalModule>();
+
+        // Properties for managing control cycle
+        private static OOD.Collections.Dictionary<Utilities.Control, DateTime> _controlJustReleased = new OOD.Collections.Dictionary<Utilities.Control, DateTime>();
+        private static OOD.Collections.Dictionary<Utilities.Control, DateTime> _controlPressed = new OOD.Collections.Dictionary<Utilities.Control, DateTime>();
+        private static bool _controlsInitialized = false;
         #region Menu
         private static Menu _moduleMenu;
         public static Menu ModuleMenu(ObjectPool pool)
@@ -29,6 +36,11 @@ namespace JaysModFramework
             _moduleList.Add(module);
             _moduleList.Sort();
         }
+        public static void AddInternalModule(InternalModule module)
+        {
+            _internalModuleList.Add(module);
+            _internalModuleList.Sort();
+        }
         private static void RefreshMenu()
         {
             if (_moduleMenu == null)
@@ -36,7 +48,6 @@ namespace JaysModFramework
                 return;
             }
             _moduleMenu.Clear();
-            Debug.Log(DebugSeverity.Info, _moduleList.Count.ToString());
             List<ModuleListItem> itemList = _moduleList.ConvertAll((Module m) => m.MenuItem);
             foreach (ModuleListItem item in itemList)
             {
@@ -52,90 +63,142 @@ namespace JaysModFramework
         #region Life cycle events
         public static void OnTick()
         {
-            foreach (Module module in _moduleList)
+            foreach (InternalModule module in _internalModuleList)
             {
-                module.OnTick();
+                if (module.IsActive)
+                {
+                    module.OnTick();
+                }
             }
         }
-        public static void OnControlReleased(GTA.Control control)
+        public static void OnControlReleased(Utilities.Control control)
         {
             foreach (Module module in _moduleList)
             {
-                module.OnControlReleased(control);
+                if (module.IsActive)
+                {
+                    module.OnControlReleased(control);
+                }
             }
         }
-        public static void OnControlHeld(GTA.Control control)
+        public static void OnControlHeld(Utilities.Control control)
         {
             foreach (Module module in _moduleList)
             {
-                module.OnControlHeld(control);
+                if (module.IsActive)
+                {
+                    module.OnControlHeld(control);
+                }
             }
         }
-        public static void OnControlDoublePressed(GTA.Control control)
+        public static void OnControlDoublePressed(Utilities.Control control)
         {
             foreach (Module module in _moduleList)
             {
-                module.OnControlDoublePressed(control);
+                if (module.IsActive)
+                {
+                    module.OnControlDoublePressed(control);
+                }
             }
         }
         #endregion Life cycle events
-    }
-    public class ModuleScriptRunner : GTA.Script
-    {
-        private OOD.Collections.Dictionary<GTA.Control, DateTime> _controlJustReleased = new OOD.Collections.Dictionary<GTA.Control, DateTime>();
-        private OOD.Collections.Dictionary<GTA.Control, DateTime> _controlPressed = new OOD.Collections.Dictionary<GTA.Control, DateTime>();
-
-        public ModuleScriptRunner()
-        {
-            Tick += ModuleRunner_Tick;
-
-            GTA.Control[] controls = (GTA.Control[])Enum.GetValues(typeof(GTA.Control));
-            foreach (GTA.Control control in controls)
-            {
-                _controlJustReleased.Add(control, DateTime.MinValue);
-                _controlPressed.Add(control, DateTime.MaxValue);
-            }
-        }
-        private void ModuleRunner_Tick(object sender, EventArgs e)
+        #region Tick cycle
+        internal static void Tick()
         {
             ModuleManager.OnTick();
-
-            GTA.Control[] controls = (GTA.Control[])Enum.GetValues(typeof(GTA.Control));
-            foreach (GTA.Control control in controls)
+            ModuleManager.InitializeControls();
+            Utilities.Control[] controls = (Utilities.Control[])Enum.GetValues(typeof(Utilities.Control));
+            foreach (Utilities.Control control in controls)
             {
-                if (GTA.Game.IsEnabledControlJustReleased(control))
-                {
-                    ModuleManager.OnControlReleased(control);
+                ModuleManager.CheckEnabledControlJustReleased(control);
+                ModuleManager.CheckEnabledControlPressed(control);
+            }
+        }
 
-                    TimeSpan duration = DateTime.UtcNow - _controlJustReleased[control];
-                    if (duration.TotalSeconds < 1)
-                    {
-                        ModuleManager.OnControlDoublePressed(control);
-                        _controlJustReleased[control] = DateTime.MinValue;
-                    }
-                    else
-                    {
-                        _controlJustReleased[control] = DateTime.UtcNow;
-                    }
-
-                    _controlPressed[control] = DateTime.MaxValue;
-                }
-                else if (GTA.Game.IsEnabledControlPressed(control))
+        private static void InitializeControls()
+        {
+            if (!_controlsInitialized)
+            {
+                Utilities.Control[] controls = (Utilities.Control[])Enum.GetValues(typeof(Utilities.Control));
+                foreach (Utilities.Control control in controls)
                 {
-                    if (_controlPressed[control] == DateTime.MaxValue)
+                    _controlJustReleased.Add(control, DateTime.MinValue);
+                    _controlPressed.Add(control, DateTime.MaxValue);
+                }
+                _controlsInitialized = true;
+            }
+        }
+        private static void CheckEnabledControlJustReleased(Utilities.Control control)
+        {
+            if (ModuleManager.IsEnabledControlJustReleased(control))
+            {
+                ModuleManager.OnControlReleased(control);
+
+                TimeSpan duration = DateTime.UtcNow - _controlJustReleased[control];
+                if (duration.TotalSeconds < 1)
+                {
+                    ModuleManager.OnControlDoublePressed(control);
+                    _controlJustReleased[control] = DateTime.MinValue;
+                }
+                else
+                {
+                    _controlJustReleased[control] = DateTime.UtcNow;
+                }
+
+                _controlPressed[control] = DateTime.MaxValue;
+            }
+        }
+        private static void CheckEnabledControlPressed(Utilities.Control control)
+        {
+            if (ModuleManager.IsEnabledControlPressed(control))
+            {
+                if (_controlPressed[control] == DateTime.MaxValue)
+                {
+                    _controlPressed[control] = DateTime.UtcNow;
+                }
+                else
+                {
+                    TimeSpan duration = DateTime.UtcNow - _controlPressed[control];
+                    if (duration.TotalSeconds > 1 && duration.TotalSeconds < 2)
                     {
-                        _controlPressed[control] = DateTime.UtcNow;
-                    }
-                    else
-                    {
-                        TimeSpan duration = DateTime.UtcNow - _controlPressed[control];
-                        if (duration.TotalSeconds > 1 && duration.TotalSeconds < 2)
-                        {
-                            ModuleManager.OnControlHeld(control);
-                            _controlPressed[control] = DateTime.MinValue;
-                        }
+                        ModuleManager.OnControlHeld(control);
+                        _controlPressed[control] = DateTime.MaxValue;
                     }
                 }
+            }
+        }
+        private static bool IsEnabledControlJustReleased(Utilities.Control control)
+        {
+            return
+                Native.Function.Call<bool>(Native.Hash.IsControlEnabled, 0, (int)control) &&
+                Native.Function.Call<bool>(Native.Hash.IsControlJustReleased, 1, (int)control);
+        }
+        private static bool IsEnabledControlJustPressed(Utilities.Control control)
+        {
+            return
+                Native.Function.Call<bool>(Native.Hash.IsControlEnabled, 0, (int)control) &&
+                Native.Function.Call<bool>(Native.Hash.IsControlJustPressed, 1, (int)control);
+        }
+        private static bool IsEnabledControlPressed(Utilities.Control control)
+        {
+            return
+                Native.Function.Call<bool>(Native.Hash.IsControlEnabled, 0, (int)control) &&
+                Native.Function.Call<bool>(Native.Hash.IsControlPressed, 1, (int)control);
+        }
+        #endregion Tick cycle
+    }
+    public class RageModuleScriptRunner
+    {
+
+        public static void Main()
+        {
+            new InteractionMenu();
+            new SilentSirens();
+            new BigMap();
+            while (true)
+            {
+                ModuleManager.Tick();
+                Rage.GameFiber.Yield();
             }
         }
     }
