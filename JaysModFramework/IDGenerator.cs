@@ -8,20 +8,20 @@ namespace JaysModFramework
 {
     internal static class IDGenerator
     {
-        public static string NPCID(NPC npc)
-        {
-            string baseId = "";
-            if (npc.Name != "")
-            {
-                baseId = npc.Name;
-            }
-            return GenerateID("NPC", NPC.SpawnedNPCs.Keys, baseId);
-        }
-        internal static string VehicleID(Vehicle vehicle)
-        {
-            string baseId = vehicle.ModelName;
-            return GenerateID("Vehicle", Vehicle.SpawnedVehicles.Keys, baseId);
-        }
+        //public static string NPCID(NPC npc)
+        //{
+        //    string baseId = "";
+        //    if (npc.Name != "")
+        //    {
+        //        baseId = npc.Name;
+        //    }
+        //    return GenerateID("NPC", NPC.SpawnedNPCs.Keys, baseId);
+        //}
+        //internal static string VehicleID(Vehicle vehicle)
+        //{
+        //    string baseId = vehicle.ModelName;
+        //    return GenerateID("Vehicle", Vehicle.SpawnedVehicles.Keys, baseId);
+        //}
         private static string GenerateID<TVal>(string type, Dictionary<string, TVal>.KeyCollection collisions, string baseId = "")
         {
             int counter = 1;

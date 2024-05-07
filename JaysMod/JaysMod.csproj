@@ -104,8 +104,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy JaysMod.dll "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts"
-copy OOD.Collections.dll "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts"</PostBuildEvent>
+    <PostBuildEvent>copy JaysMod.dll "E:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Plugins"
+copy OOD.Collections.dll "E:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V"</PostBuildEvent>
   </PropertyGroup>
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.6\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.6\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

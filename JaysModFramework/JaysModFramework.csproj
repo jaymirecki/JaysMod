@@ -32,19 +32,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LemonUI.SHVDN3, Version=1.9.4.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\LemonUI.SHVDN3.1.9.4\lib\net48\LemonUI.SHVDN3.dll</HintPath>
+    <Reference Include="LemonUI.RagePluginHook, Version=2.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\LemonUI.RagePluginHook.dll</HintPath>
     </Reference>
-    <Reference Include="ScriptHookVDotNet3, Version=3.5.1.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ScriptHookVDotNet3.3.5.1\lib\net48\ScriptHookVDotNet3.dll</HintPath>
+    <Reference Include="OOD.Collections">
+      <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\OOD.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="RagePluginHookSDK, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\SDK\RagePluginHookSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseClassExtensions\VehicleDoor.cs" />
     <Compile Include="BaseClassExtensions\Vector3.cs" />
     <Compile Include="Clothing\Components\ComponentFunctions.cs" />
     <Compile Include="Clothing\Components\Components.cs" />
@@ -65,8 +70,14 @@
     <Compile Include="Clothing\MaleOutfitPieces.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Ped\Ped.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\Player.cs" />
     <Compile Include="Menus\Aliases.cs" />
     <Compile Include="Menus\MenuListItem.cs" />
+    <Compile Include="Entities\Model.cs" />
+    <Compile Include="Modules\InternalModule.cs" />
     <Compile Include="Modules\ModuleManager.cs" />
     <Compile Include="Modules\Module.cs" />
     <Compile Include="Framework.cs" />
@@ -85,13 +96,24 @@
     <Compile Include="Menus\MenuItem.cs" />
     <Compile Include="Menus\Menu.cs" />
     <Compile Include="Modules\BigMap.cs" />
+    <Compile Include="Natives\NativeFunction.cs" />
+    <Compile Include="Natives\NativeHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseClassExtensions\NPC.cs" />
     <Compile Include="Managers\ScubaManager.cs" />
     <Compile Include="Modules\SilentSirens.cs" />
     <Compile Include="State.cs" />
-    <Compile Include="BaseClassExtensions\Vehicle.cs" />
+    <Compile Include="Entities\Vehicle\Vehicle.cs" />
     <Compile Include="Managers\VisorManager.cs" />
+    <Compile Include="Utilities\Control.cs" />
+    <Compile Include="Entities\Vehicle\VehicleColor.cs" />
+    <Compile Include="Entities\Vehicle\VehicleLandingGearState.cs" />
+    <Compile Include="Entities\Vehicle\VehicleHash.cs" />
+    <Compile Include="Entities\Vehicle\VehicleDoorIndex.cs" />
+    <Compile Include="Entities\Vehicle\VehicleSeat.cs" />
+    <Compile Include="Utilities\PedHash.cs" />
+    <Compile Include="Utilities\Gender.cs" />
+    <Compile Include="Utilities\Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="JMF\config.xml">
@@ -132,19 +154,13 @@
     <Content Include="Snippets\Snippets\OutfitPiece.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OOD.Collections\OOD.Collections.csproj">
-      <Project>{f8fdff28-a1e4-4b60-bd56-fd76e0541688}</Project>
-      <Name>OOD.Collections</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy JaysModFramework.dll "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts"
-copy OOD.Collections.dll "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts"
-copy LemonUI.SHVDN3.dll "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts"
-xcopy /Y /I /S "JMF\*"  "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\scripts\JMF"</PostBuildEvent>
+    <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\Plugins"
+copy OOD.Collections.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto"
+xcopy /Y /I /S "JMF\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\Plugins\JMF"</PostBuildEvent>
   </PropertyGroup>
 </Project>

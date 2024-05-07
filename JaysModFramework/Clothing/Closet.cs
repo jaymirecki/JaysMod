@@ -1,4 +1,4 @@
-﻿using GTA;
+﻿using Rage;
 using JaysModFramework.Menus;
 
 namespace JaysModFramework.Clothing
@@ -30,12 +30,12 @@ namespace JaysModFramework.Clothing
         private Menu OutfitMenu()
         {
             Menu outfitMenu = new Menu("Outfits", "subtitle", "description", _pool);
-            foreach (Outfit outfit in Global.Database.Outfits)
-            {
-                MenuItem outfitItem = new MenuItem(outfit.Name);
-                outfitItem.Selected += (sender, args) => outfit.SetToPed(_ped);
-                outfitMenu.Add(outfitItem);
-            }
+            //foreach (Outfit outfit in Global.Database.Outfits)
+            //{
+            //    MenuItem outfitItem = new MenuItem(outfit.Name);
+            //    outfitItem.Selected += (sender, args) => outfit.SetToPed(_ped);
+            //    outfitMenu.Add(outfitItem);
+            //}
             return outfitMenu;
         }
     }

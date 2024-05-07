@@ -1,5 +1,4 @@
-﻿using OOD.Collections;
-
+﻿
 namespace JaysModFramework.Clothing.Components
 {
     internal enum HeadOverlays { Blemishes = 0, FacialHair = 1, Eyebrows = 2 };

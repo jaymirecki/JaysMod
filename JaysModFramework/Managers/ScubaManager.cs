@@ -1,4 +1,4 @@
-﻿//using GTA;
+﻿//using Rage;
 //using JaysModFramework.MaleOutfitPieces;
 
 //namespace JaysModFramework

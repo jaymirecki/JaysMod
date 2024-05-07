@@ -1,6 +1,6 @@
-﻿//using GTA;
-//using GTA.Math;
-//using GTA.Native;
+﻿//using Rage;
+//using Rage.Math;
+//using Rage.Native;
 //using System;
 //using System.Collections.Generic;
 //using System.Linq;
@@ -36,7 +36,7 @@
 //            Function.Call(Hash.NETWORK_RESURRECT_LOCAL_PLAYER, playerPed.Position.X, playerPed.Position.Y, playerPed.Position.Z, 0f, 0f, 0f);
 //            playerPed.IsInvincible = true;
 //            Function.Call(Hash.IGNORE_NEXT_RESTART, true);
-//            GTA.UI.Screen.StopEffects();
+//            Rage.UI.Screen.StopEffects();
 
 //            // Custom death behavior
 //            Function.Call(Hash.RESET_PLAYER_ARREST_STATE, playerPed);
@@ -44,17 +44,17 @@
 //            Wait(5000);
 
 //            // Fade and respawn
-//            GTA.UI.Screen.FadeOut(2000);
-//            while (!GTA.UI.Screen.IsFadedOut)
+//            Rage.UI.Screen.FadeOut(2000);
+//            while (!Rage.UI.Screen.IsFadedOut)
 //                Yield();
 //            playerPed.CancelRagdoll();
 //            Function.Call(Hash.DISPLAY_HUD, true);
 //            Function.Call(Hash.DISPLAY_RADAR, true);
-//            GTA.Game.TimeScale = 1f;
+//            Rage.Game.TimeScale = 1f;
 //            Load();
 //            Wait(2000);
 //            playerPed.IsInvincible = false;
-//            GTA.UI.Screen.FadeIn(2000);
+//            Rage.UI.Screen.FadeIn(2000);
 //        }
 //        public static void Activate(NPC targetNPC)
 //        {

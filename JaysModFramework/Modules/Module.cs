@@ -1,10 +1,10 @@
-﻿using GTA;
+﻿using Rage;
 using JaysModFramework.Menus;
 using System;
 
 namespace JaysModFramework
 {
-    public abstract class Module : Script, IComparable<Module>
+    public abstract class Module : IComparable<Module>
     {
         private const string DeactivatedString = "Deactivated";
         private const string ActivatedString = "Activated";
@@ -12,7 +12,7 @@ namespace JaysModFramework
         public abstract string ModuleDescription { get; }
         internal abstract SemanticVersion Version { get; }
 
-        private string _moduleLogName { get => ModuleName + Version; }
+        private string _moduleLogName { get => ModuleName + ":" + Version; }
         public bool IsActive { get; private set; }
         public abstract bool DefaultActivationState { get; }
         public Module()
@@ -24,10 +24,18 @@ namespace JaysModFramework
             }
         }
         #region Life cycle events
+        public void Tick()
+        {
+            while (true)
+            {
+                OnTick();
+                GameFiber.Yield();
+            }
+        }
         public virtual void OnTick() { }
-        public virtual void OnControlReleased(GTA.Control control) { }
-        public virtual void OnControlHeld(GTA.Control control) { }
-        public virtual void OnControlDoublePressed(GTA.Control control) { }
+        public virtual void OnControlReleased(Utilities.Control control) { }
+        public virtual void OnControlHeld(Utilities.Control control) { }
+        public virtual void OnControlDoublePressed(Utilities.Control control) { }
         public virtual void OnActivate() { }
         public virtual void OnDeactivate() { }
         #endregion Life cycle events
@@ -74,7 +82,6 @@ namespace JaysModFramework
             {
                 _menuItem = new MenuListItem<string>(ModuleName, ModuleDescription, DeactivatedString, ActivatedString);
                 _menuItem.SelectedItem = IsActive ? ActivatedString : DeactivatedString;
-                Debug.Log(DebugSeverity.Info, ModuleName);
                 _menuItem.ItemChanged += ItemChanged;
                 _menuItem.Selected += Selected;
             }

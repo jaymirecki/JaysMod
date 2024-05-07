@@ -1,4 +1,4 @@
-﻿using GTA;
+﻿using Rage;
 using JaysModFramework.Clothing;
 using JaysModFramework.Menus;
 using System;
@@ -14,8 +14,8 @@ namespace JaysModFramework
     }
     public static class Debug
     {
-        private const string _logFilePath = ".\\scripts\\JaysModFramework.log";
-        private static readonly FileStream _logStream = new FileStream(_logFilePath, FileMode.OpenOrCreate);
+        private const string _logFilePath = ".\\Plugins\\JaysModFramework.log";
+        private static readonly FileStream _logStream = new FileStream(_logFilePath, FileMode.Create);
         private static readonly StreamWriter _logWriter = new StreamWriter(_logStream);
         public static bool DEBUG = false;
         private static Menu _menu;
@@ -25,7 +25,9 @@ namespace JaysModFramework
         {
             if (DEBUG || overrideDebugFlag)
             {
-                GTA.UI.Notification.Show(value);
+                Native.Function.Call(Native.Hash.BeginTextCommandTheFeedPost, "STRING");
+                Native.Function.Call(Native.Hash.AddTextComponentSubstringPlayerName, value);
+                Native.Function.Call(Native.Hash.EndTextCommandThefeedPostTicker, true, true);
             }
         }
         public static void Notify<T>(T value, bool overrideDebugFlag = false)
@@ -77,8 +79,8 @@ namespace JaysModFramework
         }
         private static void CheckInitialization()
         {
-            _initButton.Enabled = !Framework.Initialized;
-            if (Framework.Initialized)
+            _initButton.Enabled = !NativeHash.Initialized;
+            if (NativeHash.Initialized)
             {
                 _closetMenuItem.Enabled = true;
             }
@@ -89,17 +91,17 @@ namespace JaysModFramework
             _initButton = new MenuItem("Initialize Framework", "Initialize JMF components");
             _initButton.Activated += (sender, args) =>
             {
-                Framework.Initialize();
-                AddClosetMenu(pool);
+                NativeHash.Initialize();
+                //AddClosetMenu(pool);
                 CheckInitialization();
             };
             return _initButton;
         }
-        private static void AddClosetMenu(ObjectPool pool)
-        {
-            Closet closet = new Closet();
-            Menu closetMenu = closet.Menu(Game.Player.Character, pool);
-            _closetMenuItem = _menu.Add(closetMenu);
-        }
+        //private static void AddClosetMenu(ObjectPool pool)
+        //{
+        //    Closet closet = new Closet();
+        //    Menu closetMenu = closet.Menu(Game.Player.Character, pool);
+        //    _closetMenuItem = _menu.Add(closetMenu);
+        //}
     }
 }

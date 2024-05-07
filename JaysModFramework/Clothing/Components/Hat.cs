@@ -1,4 +1,5 @@
-﻿using GTA;
+﻿using JaysModFramework.Utilities;
+using Rage;
 
 namespace JaysModFramework.Clothing.Components
 {

@@ -1,6 +1,6 @@
 ﻿namespace JaysModFramework
 {
-    using GVector3 = GTA.Math.Vector3;
+    using GVector3 = Rage.Vector3;
     public struct Vector3
     {
         public GVector3 BaseVector;

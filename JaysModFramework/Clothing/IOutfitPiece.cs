@@ -1,5 +1,6 @@
-﻿using GTA;
+﻿using Rage;
 using OOD.Collections;
+using JaysModFramework.Utilities;
 
 namespace JaysModFramework.Clothing
 {

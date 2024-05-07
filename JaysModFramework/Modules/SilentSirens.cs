@@ -1,21 +1,29 @@
-﻿using GTA;
-using System;
-using System.Windows.Forms;
-
+﻿
 namespace JaysModFramework.Modules
 {
-    public class SilentSirens : Module
+    public class SilentSirens : InternalModule
     {
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         public override string ModuleName => "Silent Sirens";
         public override string ModuleDescription => "Allows turning off a siren but leaving emergency lights on";
         public override bool DefaultActivationState => Global.Config.SirenModuleEnabled;
-        public override void OnControlHeld(GTA.Control control)
+        public override void OnControlReleased(Utilities.Control control)
         {
-            if (control == GTA.Control.VehicleRadioWheel)
+            if (control == Utilities.Control.VehicleRadioWheel)
             {
-                new Vehicle(Game.Player.Character.CurrentVehicle).ToggleSirenNoise();
+                Game.Player.Character.CurrentVehicle.ToggleSirenNoise();
             }
+            else if (control == Utilities.Control.VehicleHorn)
+            {
+                if (!Game.Player.Character.CurrentVehicle.SirenOn)
+                {
+                    Debug.Notify("Siren turned on", true);
+                }
+            }
+        }
+        public override void OnTick()
+        {
+
         }
     }
 }
