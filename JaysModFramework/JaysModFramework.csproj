@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseClassExtensions\Vector3.cs" />
     <Compile Include="Clothing\Components\ComponentFunctions.cs" />
     <Compile Include="Clothing\Components\Components.cs" />
     <Compile Include="Clothing\Closet.cs" />
@@ -74,6 +73,7 @@
     <Compile Include="Entities\Ped\Ped.cs" />
     <Compile Include="JMF.Game\Game.cs" />
     <Compile Include="JMF.Game\Player.cs" />
+    <Compile Include="JMF.Math\Vector3.cs" />
     <Compile Include="Menus\Aliases.cs" />
     <Compile Include="Menus\MenuListItem.cs" />
     <Compile Include="Entities\Model.cs" />
