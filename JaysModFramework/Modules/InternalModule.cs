@@ -1,8 +1,4 @@
-﻿using Rage;
-using JaysModFramework.Menus;
-using System;
-
-namespace JaysModFramework
+﻿namespace JaysModFramework
 {
     public abstract class InternalModule : Module
     {

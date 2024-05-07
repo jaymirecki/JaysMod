@@ -1,6 +1,4 @@
-﻿using Rage;
-using JaysModFramework.Clothing;
-using JaysModFramework.Menus;
+﻿using JaysModFramework.Menus;
 using System;
 using System.IO;
 

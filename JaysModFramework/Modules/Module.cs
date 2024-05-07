@@ -1,5 +1,5 @@
-﻿using Rage;
-using JaysModFramework.Menus;
+﻿using JaysModFramework.Menus;
+using Rage;
 using System;
 
 namespace JaysModFramework
@@ -29,7 +29,7 @@ namespace JaysModFramework
             while (true)
             {
                 OnTick();
-                GameFiber.Yield();
+                Rage.GameFiber.Yield();
             }
         }
         public virtual void OnTick() { }
