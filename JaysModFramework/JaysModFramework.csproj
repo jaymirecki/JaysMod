@@ -115,17 +115,39 @@
     <Compile Include="JMF\Gender.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="JMFBin\config.xml" />
-    <Content Include="JMFBin\Presets\Clothing\accessory.xml" />
-    <Content Include="JMFBin\Presets\Clothing\ears.xml" />
-    <Content Include="JMFBin\Presets\Clothing\glasses.xml" />
-    <Content Include="JMFBin\Presets\Clothing\hat.xml" />
-    <Content Include="JMFBin\Presets\Clothing\legs.xml" />
-    <Content Include="JMFBin\Presets\Clothing\mask.xml" />
-    <Content Include="JMFBin\Presets\Clothing\outfit.xml" />
-    <Content Include="JMFBin\Presets\Clothing\parachute.xml" />
-    <Content Include="JMFBin\Presets\Clothing\torso.xml" />
-    <Content Include="JMFBin\Presets\Clothing\wrist.xml" />
+    <Content Include="JMFBin\config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Presets\Clothing\accessory.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Presets\Clothing\ears.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Presets\Clothing\glasses.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Presets\Clothing\hat.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Presets\Clothing\legs.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Presets\Clothing\mask.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Presets\Clothing\outfit.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Presets\Clothing\parachute.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Presets\Clothing\torso.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Presets\Clothing\wrist.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Snippets\Python Generation\OutfitProperty.py" />
     <Content Include="Snippets\Python Generation\OutfitPiece.py" />
     <Content Include="Snippets\Snippets\OutfitPiece.xml" />
