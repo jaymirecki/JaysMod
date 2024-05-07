@@ -1,8 +1,8 @@
 ﻿using Rage;
 using OOD.Collections;
-using JaysModFramework.Utilities;
+using JMF.Utilities;
 
-namespace JaysModFramework.Clothing
+namespace JMF.Clothing
 {
     internal interface IOutfitPiece: IXMLDatabaseItem<string>
     {

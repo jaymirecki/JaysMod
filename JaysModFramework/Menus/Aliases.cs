@@ -1,6 +1,6 @@
 ﻿using LemonUI.Menus;
 
-namespace JaysModFramework.Menus
+namespace JMF.Menus
 {
     public class ObjectPool : LemonUI.ObjectPool { }
     public delegate void SelectedEventHandler(object sender, SelectedEventArgs e);

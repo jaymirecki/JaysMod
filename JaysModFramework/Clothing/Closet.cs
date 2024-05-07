@@ -1,7 +1,7 @@
 ﻿using Rage;
-using JaysModFramework.Menus;
+using JMF.Menus;
 
-namespace JaysModFramework.Clothing
+namespace JMF.Clothing
 {
     //using Menu = JaysModFramework.Menu.Menu;
     public class Closet

@@ -1,7 +1,7 @@
-﻿using JaysModFramework.Utilities;
+﻿using JMF.Utilities;
 using Rage;
 
-namespace JaysModFramework.Clothing.Components
+namespace JMF.Clothing.Components
 {
     public struct Legs: IOutfitPiece
     {

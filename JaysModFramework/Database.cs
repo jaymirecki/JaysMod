@@ -1,9 +1,9 @@
-﻿using JaysModFramework.Clothing;
-using JaysModFramework.Clothing.Components;
+﻿using JMF.Clothing;
+using JMF.Clothing.Components;
 using OOD.Collections;
 using System.IO;
 
-namespace JaysModFramework
+namespace JMF
 {
     public class Database
     {

@@ -1,8 +1,8 @@
-﻿using JaysModFramework.Menus;
+﻿using JMF.Menus;
 using Rage;
 using System;
 
-namespace JaysModFramework
+namespace JMF
 {
     public abstract class Module : IComparable<Module>
     {
@@ -33,9 +33,9 @@ namespace JaysModFramework
             }
         }
         public virtual void OnTick() { }
-        public virtual void OnControlReleased(Utilities.Control control) { }
-        public virtual void OnControlHeld(Utilities.Control control) { }
-        public virtual void OnControlDoublePressed(Utilities.Control control) { }
+        public virtual void OnControlReleased(Control control) { }
+        public virtual void OnControlHeld(Control control) { }
+        public virtual void OnControlDoublePressed(Control control) { }
         public virtual void OnActivate() { }
         public virtual void OnDeactivate() { }
         #endregion Life cycle events

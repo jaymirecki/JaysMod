@@ -1,7 +1,7 @@
 ﻿using System;
-using JaysModFramework.Native;
+using JMF.Native;
 
-namespace JaysModFramework
+namespace JMF
 {
     public class Ped : Entity, IEquatable<Ped>
     {

@@ -1,8 +1,8 @@
-﻿using JaysModFramework.Menus;
+﻿using JMF.Menus;
 using System;
 using System.IO;
 
-namespace JaysModFramework
+namespace JMF
 {
     public enum DebugSeverity
     {

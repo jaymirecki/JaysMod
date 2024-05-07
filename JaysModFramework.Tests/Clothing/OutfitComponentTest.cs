@@ -1,7 +1,7 @@
-﻿using JaysModFramework.Clothing;
+﻿using JMF.Clothing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace JaysModFramework.Tests
+namespace JMF.Tests
 {
     [TestClass]
     public class OutfitComponentTest

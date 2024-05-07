@@ -1,10 +1,10 @@
-﻿using JaysModFramework.Menus;
-using JaysModFramework.Modules;
+﻿using JMF.Menus;
+using JMF.Modules;
 using System;
 using System.Collections.Generic;
 
 [assembly: Rage.Attributes.Plugin("JMF Module Manager", Description = "Manages lifecycles for other JMF Modules")]
-namespace JaysModFramework
+namespace JMF
 {
     using ModuleListItem = MenuListItem<string>;
     public static class ModuleManager
@@ -13,8 +13,8 @@ namespace JaysModFramework
         private static readonly List<InternalModule> _internalModuleList = new List<InternalModule>();
 
         // Properties for managing control cycle
-        private static OOD.Collections.Dictionary<Utilities.Control, DateTime> _controlJustReleased = new OOD.Collections.Dictionary<Utilities.Control, DateTime>();
-        private static OOD.Collections.Dictionary<Utilities.Control, DateTime> _controlPressed = new OOD.Collections.Dictionary<Utilities.Control, DateTime>();
+        private static OOD.Collections.Dictionary<Control, DateTime> _controlJustReleased = new OOD.Collections.Dictionary<Control, DateTime>();
+        private static OOD.Collections.Dictionary<Control, DateTime> _controlPressed = new OOD.Collections.Dictionary<Control, DateTime>();
         private static bool _controlsInitialized = false;
         #region Menu
         private static Menu _moduleMenu;
@@ -71,7 +71,7 @@ namespace JaysModFramework
                 }
             }
         }
-        public static void OnControlReleased(Utilities.Control control)
+        public static void OnControlReleased(Control control)
         {
             foreach (Module module in _moduleList)
             {
@@ -81,7 +81,7 @@ namespace JaysModFramework
                 }
             }
         }
-        public static void OnControlHeld(Utilities.Control control)
+        public static void OnControlHeld(Control control)
         {
             foreach (Module module in _moduleList)
             {
@@ -91,7 +91,7 @@ namespace JaysModFramework
                 }
             }
         }
-        public static void OnControlDoublePressed(Utilities.Control control)
+        public static void OnControlDoublePressed(Control control)
         {
             foreach (Module module in _moduleList)
             {
@@ -107,8 +107,8 @@ namespace JaysModFramework
         {
             ModuleManager.OnTick();
             ModuleManager.InitializeControls();
-            Utilities.Control[] controls = (Utilities.Control[])Enum.GetValues(typeof(Utilities.Control));
-            foreach (Utilities.Control control in controls)
+            Control[] controls = (Control[])Enum.GetValues(typeof(Control));
+            foreach (Control control in controls)
             {
                 ModuleManager.CheckEnabledControlJustReleased(control);
                 ModuleManager.CheckEnabledControlPressed(control);
@@ -119,8 +119,8 @@ namespace JaysModFramework
         {
             if (!_controlsInitialized)
             {
-                Utilities.Control[] controls = (Utilities.Control[])Enum.GetValues(typeof(Utilities.Control));
-                foreach (Utilities.Control control in controls)
+                Control[] controls = (Control[])Enum.GetValues(typeof(Control));
+                foreach (Control control in controls)
                 {
                     _controlJustReleased.Add(control, DateTime.MinValue);
                     _controlPressed.Add(control, DateTime.MaxValue);
@@ -128,7 +128,7 @@ namespace JaysModFramework
                 _controlsInitialized = true;
             }
         }
-        private static void CheckEnabledControlJustReleased(Utilities.Control control)
+        private static void CheckEnabledControlJustReleased(Control control)
         {
             if (ModuleManager.IsEnabledControlJustReleased(control))
             {
@@ -148,7 +148,7 @@ namespace JaysModFramework
                 _controlPressed[control] = DateTime.MaxValue;
             }
         }
-        private static void CheckEnabledControlPressed(Utilities.Control control)
+        private static void CheckEnabledControlPressed(Control control)
         {
             if (ModuleManager.IsEnabledControlPressed(control))
             {
@@ -167,19 +167,19 @@ namespace JaysModFramework
                 }
             }
         }
-        private static bool IsEnabledControlJustReleased(Utilities.Control control)
+        private static bool IsEnabledControlJustReleased(Control control)
         {
             return
                 Native.Function.Call<bool>(Native.Hash.IsControlEnabled, 0, (int)control) &&
                 Native.Function.Call<bool>(Native.Hash.IsControlJustReleased, 1, (int)control);
         }
-        private static bool IsEnabledControlJustPressed(Utilities.Control control)
+        private static bool IsEnabledControlJustPressed(Control control)
         {
             return
                 Native.Function.Call<bool>(Native.Hash.IsControlEnabled, 0, (int)control) &&
                 Native.Function.Call<bool>(Native.Hash.IsControlJustPressed, 1, (int)control);
         }
-        private static bool IsEnabledControlPressed(Utilities.Control control)
+        private static bool IsEnabledControlPressed(Control control)
         {
             return
                 Native.Function.Call<bool>(Native.Hash.IsControlEnabled, 0, (int)control) &&

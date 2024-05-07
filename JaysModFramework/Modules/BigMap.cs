@@ -1,6 +1,6 @@
-﻿using JaysModFramework.Native;
+﻿using JMF.Native;
 
-namespace JaysModFramework.Modules
+namespace JMF.Modules
 {
     public class BigMap : Module
     {
@@ -10,9 +10,9 @@ namespace JaysModFramework.Modules
         public override bool DefaultActivationState { get { return Global.Config.BigMapModuleEnabled; } }
         private bool _active = false;
         public BigMap() : base() { }
-        public override void OnControlDoublePressed(Utilities.Control control)
+        public override void OnControlDoublePressed(Control control)
         {
-            if (control == Utilities.Control.MultiplayerInfo)
+            if (control == Control.MultiplayerInfo)
             {
                 SetMapActive(!_active);
             }

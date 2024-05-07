@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel;
 
-namespace JaysModFramework.Menus
+namespace JMF.Menus
 {
     public class Menu
     {

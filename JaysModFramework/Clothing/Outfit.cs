@@ -1,10 +1,10 @@
 ﻿using Rage;
-using JaysModFramework.Clothing.Components;
+using JMF.Clothing.Components;
 using OOD.Collections;
 using System.Xml.Serialization;
-using JaysModFramework.Utilities;
+using JMF.Utilities;
 
-namespace JaysModFramework.Clothing
+namespace JMF.Clothing
 {
     public struct Outfit: IXMLDatabaseItem<string>
     {
