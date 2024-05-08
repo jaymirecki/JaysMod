@@ -25,12 +25,34 @@ namespace JMF
         //}
         public Vector3 Position
         {
-            get { return Function.Call<Vector3>(Hash.GetEntityCoords, Handle); }
-            set { Function.Call(Hash.SetEntityCoords, Handle, value.X, value.Y, value.Z); }
+            get 
+            { 
+                return new Vector3(
+                    (Rage.Vector3)Rage.Native.NativeFunction.Call(
+                        (ulong)Hash.GetEntityCoords, 
+                        typeof(Rage.Vector3),
+                        Handle
+                        )
+                    ); 
+            }
+            set { Function.Call(Hash.SetEntityCoordsNoOffset, Handle, value.X, value.Y, value.Z, false, false, true); }
         }
         public Model Model
         {
             get { return new Model(Function.Call<uint>(Hash.GetEntityModel, Handle)); }
+        }
+        public bool IsInvincible
+        {
+            set { Function.Call<bool>(Hash.SetEntityInvincible, Handle, value); }
+        }
+        public bool IsDead
+        {
+            get { return Function.Call<bool>(Hash.IsEntityDead, Handle); }
+        }
+        public int Health
+        {
+            get { return Function.Call<int>(Hash.GetEntityHealth, Handle); }
+            set { Function.Call(Hash.SetEntityHealth, Handle, value); }
         }
         #endregion Properties
 

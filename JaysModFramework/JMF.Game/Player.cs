@@ -22,6 +22,10 @@ namespace JMF
                 return _character;
             }
         }
+        public bool IsDead
+        {
+            get { return Function.Call<bool>(Hash.IsPlayerDead, Handle); }
+        }
         #endregion Properties
         ///////////////////////////////////////////////////////////////////////
         //                            Constructors                           //

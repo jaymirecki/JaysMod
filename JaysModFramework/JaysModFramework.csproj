@@ -70,6 +70,7 @@
     <Compile Include="JMF.Framework\Database.cs" />
     <Compile Include="JMF.Framework\Config.cs" />
     <Compile Include="JMF.Modules\FreemodePlayer.cs" />
+    <Compile Include="JMF.UI\Screen.cs" />
     <Compile Include="JMF.UI\TextInput.cs" />
     <Compile Include="JMF.UI\TextFormat.cs" />
     <Compile Include="JMF.UI\TextColor.cs" />
@@ -77,6 +78,8 @@
     <Compile Include="JMF.UI\Input.cs" />
     <Compile Include="JMF.UI\Help.cs" />
     <Compile Include="JMF\Entities\Entity.cs" />
+    <Compile Include="JMF\Entities\Ped\PedHash.cs" />
+    <Compile Include="JMF\Entities\Thread.cs" />
     <Compile Include="JMF\Entities\Ped\Ped.cs" />
     <Compile Include="JMF.Game\Game.cs" />
     <Compile Include="JMF.Game\Clock.cs" />
@@ -119,7 +122,7 @@
     <Compile Include="JMF\Entities\Vehicle\VehicleHash.cs" />
     <Compile Include="JMF\Entities\Vehicle\VehicleDoorIndex.cs" />
     <Compile Include="JMF\Entities\Vehicle\VehicleSeat.cs" />
-    <Compile Include="JMF\Entities\Ped\PedHash.cs" />
+    <Compile Include="JMF\Entities\Ped\RagdollType.cs" />
     <Compile Include="JMF\Gender.cs" />
   </ItemGroup>
   <ItemGroup>

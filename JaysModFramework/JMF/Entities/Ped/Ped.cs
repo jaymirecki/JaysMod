@@ -68,5 +68,19 @@ namespace JMF
             }
         }
         #endregion Properties
+        ///////////////////////////////////////////////////////////////////////
+        //                              Methods                              //
+        ///////////////////////////////////////////////////////////////////////
+        #region Methods
+        public bool Ragdoll(int duration = -1, RagdollType ragdollType = RagdollType.Relax, bool forceScriptControl = false)
+        {
+            return Function.Call<bool>(Hash.SetPedToRagdoll, Handle, duration, duration, (int)ragdollType, false, false, forceScriptControl);
+        }
+        public bool CancelRagdoll()
+        {
+            int duration = 1;
+            return Function.Call<bool>(Hash.SetPedToRagdoll, Handle, duration, duration, (int)RagdollType.Relax, false, false, false);
+        }
+        #endregion Methods
     }
 }
