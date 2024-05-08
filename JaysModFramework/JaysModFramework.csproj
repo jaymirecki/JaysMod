@@ -69,6 +69,7 @@
     <Compile Include="Clothing\MaleOutfitPieces.cs" />
     <Compile Include="JMF.Framework\Database.cs" />
     <Compile Include="JMF.Framework\Config.cs" />
+    <Compile Include="JMF.Modules\FreemodePlayer.cs" />
     <Compile Include="JMF.UI\TextInput.cs" />
     <Compile Include="JMF.UI\TextFormat.cs" />
     <Compile Include="JMF.UI\TextColor.cs" />
@@ -118,7 +119,7 @@
     <Compile Include="JMF\Entities\Vehicle\VehicleHash.cs" />
     <Compile Include="JMF\Entities\Vehicle\VehicleDoorIndex.cs" />
     <Compile Include="JMF\Entities\Vehicle\VehicleSeat.cs" />
-    <Compile Include="JMF\PedHash.cs" />
+    <Compile Include="JMF\Entities\Ped\PedHash.cs" />
     <Compile Include="JMF\Gender.cs" />
   </ItemGroup>
   <ItemGroup>

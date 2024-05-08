@@ -1,18 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JMF.Native;
 
 namespace JMF
 {
-    public struct Model
+    public class Model
     {
-        public Rage.Model BaseModel { get; }
-
-        public Model(Rage.Model model)
+        public uint Hash { get; }
+        public bool IsLoaded
         {
-            BaseModel = model;
+            get { return Function.Call<bool>(Native.Hash.HasModelLoaded, Hash); }
+        }
+        public Model(uint hash)
+        {
+            Hash = hash;
+        }
+        public bool Request()
+        {
+            if (Function.Call<bool>(Native.Hash.IsModelValid, Hash))
+            {
+                Function.Call(Native.Hash.RequestModel, Hash);
+                while (!IsLoaded)
+                {
+                    Rage.GameFiber.Sleep(100);
+                    Function.Call(Native.Hash.RequestModel, Hash);
+                }
+                return true;
+            }
+            Debug.Log(DebugSeverity.Warning, "Model " + Hash + " is not valid");
+            return false;
         }
     }
 }

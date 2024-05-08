@@ -196,6 +196,7 @@ namespace JMF
             new SilentSirens();
             new BigMap();
             new MatterOfTime();
+            new FreemodePlayer();
             while (true)
             {
                 ModuleManager.Tick();

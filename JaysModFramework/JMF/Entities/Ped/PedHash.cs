@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JMF.Utilities
+namespace JMF
 {
     public enum PedHash : uint
     {
