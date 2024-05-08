@@ -29,5 +29,13 @@ namespace JMF
                 return _clock;
             }
         }
+        public static float TimeScale
+        {
+            set { Function.Call(Hash.SetTimeScale, value); }
+        }
+        public static bool FadeOutAfterDeath
+        {
+            set { Function.Call(Hash.SetFadeOutAfterDeath, value); }
+        }
     }
 }

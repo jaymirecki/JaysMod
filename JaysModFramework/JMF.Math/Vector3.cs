@@ -44,5 +44,15 @@
             return (float)System.Math.Pow(a, b);
         }
         #endregion Math Helpers
+        public override string ToString()
+        {
+            return X + "," + Y + "," + Z;
+        }
+        public Vector3(Rage.Vector3 vector)
+        {
+            X = vector.X;
+            Y = vector.Y;
+            Z = vector.Z;
+        }
     }
 }
