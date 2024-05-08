@@ -28,6 +28,10 @@ namespace JMF
             get { return Function.Call<Vector3>(Hash.GetEntityCoords, Handle); }
             set { Function.Call(Hash.SetEntityCoords, Handle, value.X, value.Y, value.Z); }
         }
+        public Model Model
+        {
+            get { return new Model(Function.Call<uint>(Hash.GetEntityModel, Handle)); }
+        }
         #endregion Properties
 
         //

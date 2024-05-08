@@ -38,6 +38,12 @@
             SetClockTime = 0x47C3B5848C3E45D8,
             EndTextCommandDisplayHelp = 0x238FFE5C7B0498A6,
             BeginTextCommandDisplayHelp = 0x8509B634FBE7DA11,
+            SetPlayerModel = 0x00A1CADD00108836,
+            RequestModel = 0x963D27A58DF860AC,
+            HasModelLoaded = 0x98A4EB5D89A0C952,
+            SetModelAsNoLongerNeeded = 0xE532F5D78798DAAB,
+            IsModelValid = 0xC0296A2EDF545E92,
+            SetPedDefaultComponentVariation = 0x45EEE61580806D63,
         }
     }
 }

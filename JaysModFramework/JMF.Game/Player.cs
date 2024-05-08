@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JMF.Native;
+﻿using JMF.Native;
 
 namespace JMF
 {
@@ -37,5 +32,31 @@ namespace JMF
             Handle = handle;
         }
         #endregion Constructors
+        ///////////////////////////////////////////////////////////////////////
+        //                              Methods                              //
+        ///////////////////////////////////////////////////////////////////////
+        #region Methods
+        public bool SetModel(uint hash)
+        {
+            return SetModel(new Model(hash));
+        }
+        public bool SetModel(Model model)
+        {
+            if (model.Request())
+            {
+                Debug.Notify("model loaded", true);
+                Function.Call(Hash.SetPlayerModel, Handle, model.Hash);
+                Debug.Notify("marking model as not needed. model loaded: " + model.IsLoaded, true);
+                Function.Call(Hash.SetPedDefaultComponentVariation, Character.Handle);
+                Function.Call(Hash.SetModelAsNoLongerNeeded, model.Hash);
+                return true;
+            }
+            return false;
+        }
+        public bool SetModel(PedHash hash)
+        {
+            return SetModel((uint)hash);
+        }
+        #endregion Methods
     }
 }
