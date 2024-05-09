@@ -68,6 +68,8 @@
             SetEntityHealth = 0x6B76DC1F3AE6E6A3,
             SetFadeOutAfterDeath = 0x4A18E01DF2C87B86,
             SetEntityCoordsNoOffset = 0x239A3351AC1DA385,
+            EnableSpecialAbility = 0x181EC197DAEFE121,
+            IsSpecialAbilityEnabled = 0xB1D200FE26AEF3CB,
         }
     }
 }

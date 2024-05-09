@@ -26,6 +26,11 @@ namespace JMF
         {
             get { return Function.Call<bool>(Hash.IsPlayerDead, Handle); }
         }
+        public bool SpecialAbilityEnabled
+        {
+            get { return Function.Call<bool>(Hash.IsSpecialAbilityEnabled, Handle); }
+            set { Function.Call(Hash.EnableSpecialAbility, Handle, value); }
+        }
         #endregion Properties
         ///////////////////////////////////////////////////////////////////////
         //                            Constructors                           //

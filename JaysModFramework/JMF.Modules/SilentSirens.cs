@@ -9,7 +9,7 @@ namespace JMF.Modules
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         public override string ModuleName => "Silent Sirens";
         public override string ModuleDescription => "Allows turning off a siren but leaving emergency lights on";
-        public override bool DefaultActivationState => Global.Config.SirenModuleEnabled;
+        public override bool DefaultActivationState => Global.Config.SilentSirensEnabled;
         private bool sirenHelpMessageSent = false;
         public override void OnControlReleased(Control control)
         {

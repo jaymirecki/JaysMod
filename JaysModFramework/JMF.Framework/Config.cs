@@ -3,8 +3,10 @@
     public class Config
 
     {
-        public bool InteractionMenuModuleEnabled { get; set; } = true;
-        public bool BigMapModuleEnabled { get; set; } = false;
-        public bool SirenModuleEnabled { get; set; } = false;
+        public bool InteractionMenuEnabled { get; set; } = true;
+        public bool BigMapEnabled { get; set; } = false;
+        public bool SilentSirensEnabled { get; set; } = false;
+        public bool RespawnerEnabled { get; set; } = false;
+        public bool FreemodePlayerEnabled { get; set; } = false;
     }
 }

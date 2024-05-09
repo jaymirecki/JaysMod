@@ -197,6 +197,7 @@ namespace JMF
             new BigMap();
             new MatterOfTime();
             new FreemodePlayer();
+            new Respawner();
             while (true)
             {
                 ModuleManager.Tick();

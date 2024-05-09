@@ -20,7 +20,7 @@ namespace JMF
                 Function.Call(Native.Hash.RequestModel, Hash);
                 while (!IsLoaded)
                 {
-                    Rage.GameFiber.Sleep(100);
+                    Thread.Sleep(100);
                     Function.Call(Native.Hash.RequestModel, Hash);
                 }
                 return true;
