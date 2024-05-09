@@ -2,7 +2,6 @@
 using System;
 using System.Windows.Forms;
 
-[assembly: Rage.Attributes.Plugin("Interaction Menu for JMF", Description = "Creates an Interaction Menu")]
 namespace JMF.Modules
 {
     using Menu = Menus.Menu;
@@ -11,7 +10,7 @@ namespace JMF.Modules
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         public override string ModuleName { get; } = "Interaction Menu for JMF";
         public override string ModuleDescription { get; } = "Creates an Interaction Menu. WARNING: Disabling this module may prevent correct use of other modules.";
-        public override bool DefaultActivationState { get { return Global.Config.InteractionMenuModuleEnabled; } }
+        public override bool DefaultActivationState { get { return Global.Config.InteractionMenuEnabled; } }
         private ObjectPool _pool = new ObjectPool();
         private Menu _menu;
         public static void Main()

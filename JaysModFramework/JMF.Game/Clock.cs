@@ -14,7 +14,7 @@ namespace JMF
             get
             {
                 int year = Function.Call<int>(Hash.GetClockYear);
-                int month = Function.Call<int>(Hash.GetClockMonth);
+                int month = Function.Call<int>(Hash.GetClockMonth) + 1;
                 int day = Function.Call<int>(Hash.GetClockDayOfMonth);
                 int hour = Function.Call<int>(Hash.GetClockHours);
                 int minute = Function.Call<int>(Hash.GetClockMinutes);
