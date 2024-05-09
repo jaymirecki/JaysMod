@@ -5,12 +5,14 @@ using System;
 
 namespace JMF.Modules
 {
-    public class Respawner : InternalModule
+    public class Respawner : InternalModule<ModuleSettings>
     {
+        const int POSTWAIT = 5000;
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         public override string ModuleName { get; } = "Respawner";
         public override string ModuleDescription { get; } = "Handles the respawn cycle for non-SP peds";
-        public override bool DefaultActivationState { get { return Global.Config.RespawnerEnabled; } }
+        public override ModuleSettings Settings { get { return Global.Config.RespawnerSettings; } }
+        private bool respawning = false;
         public Respawner() : base() { }
         public override void OnTick()
         {
@@ -20,7 +22,7 @@ namespace JMF.Modules
                 return;
             }
             Function.Call(Hash.TerminateAllScriptsWithThisName, "respawn_controller");
-            if (Game.Player.IsDead)
+            if (Game.Player.IsDead && !respawning)
             {
                 Respawn();
             }
@@ -41,6 +43,7 @@ namespace JMF.Modules
         }
         private void Respawn()
         {
+            respawning = true;
             // Prevent default death behavior
             Ped playerPed = Game.Player.Character;
             Function.Call(Hash.NetworkRequestControlOfEntity, playerPed.Handle);
@@ -58,18 +61,22 @@ namespace JMF.Modules
             while (!Screen.IsFadedOut)
                 Thread.Yield();
             Function.Call(Hash.NetworkResurrectLocalPlayer, playerPed.Position.X, playerPed.Position.Y, playerPed.Position.Z, 0f, 0, false);
+            Game.Player.IsInvincible = true;
             playerPed.CancelRagdoll();
             Game.TimeScale = 1f;
-            playerPed.Position = playerPed.Position;
-            playerPed.Heading = playerPed.Heading;
+            Vector3 position = playerPed.Position;
+            position.Z = playerPed.Position.Z - playerPed.HeightAboveGround + 1;
+            playerPed.Position = position;
+            //playerPed.Heading = playerPed.Heading;
             Thread.Sleep(2000);
-            playerPed.IsInvincible = false;
             Screen.FadeIn(2000);
             while (!Screen.IsFadedIn)
                 Thread.Yield();
-            Thread.Sleep(5000);
+            Thread.Sleep(POSTWAIT);
+            Game.Player.IsInvincible = false;
             Function.Call(Hash.DisplayHud, true);
             Function.Call(Hash.DisplayRadar, true);
+            respawning = false;
         }
     }
 }

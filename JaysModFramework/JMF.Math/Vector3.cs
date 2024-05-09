@@ -6,9 +6,9 @@
         //                             Properties                            //
         ///////////////////////////////////////////////////////////////////////
         #region Properties
-        public float X { get; }
-        public float Y { get; }
-        public float Z { get; }
+        public float X { get; set; }
+        public float Y { get; set; }
+        public float Z { get; set; }
         #endregion Properties
         ///////////////////////////////////////////////////////////////////////
         //                            Constructors                           //

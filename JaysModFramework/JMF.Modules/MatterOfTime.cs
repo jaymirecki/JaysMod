@@ -2,7 +2,7 @@
 
 namespace JMF.Modules
 {
-    public class MatterOfTime : InternalModule
+    public class MatterOfTime : InternalModule<ModuleSettings>
     {
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         private int _minutes = 0;
@@ -10,8 +10,7 @@ namespace JMF.Modules
         public override string ModuleName => "A Matter of Time";
 
         public override string ModuleDescription => "Functionality for modifying the flow of time. The Time Stone!";
-
-        public override bool DefaultActivationState => false;
+        public override ModuleSettings Settings { get { return Global.Config.MatterOfTimeSettings; } }
 
         public override void OnActivate()
         {

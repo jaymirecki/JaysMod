@@ -69,6 +69,7 @@
     <Compile Include="Clothing\MaleOutfitPieces.cs" />
     <Compile Include="JMF.Framework\Database.cs" />
     <Compile Include="JMF.Framework\Config.cs" />
+    <Compile Include="JMF.Modules\ModuleSettings.cs" />
     <Compile Include="JMF.Modules\Respawner.cs" />
     <Compile Include="JMF.Modules\FreemodePlayer.cs" />
     <Compile Include="JMF.UI\Screen.cs" />

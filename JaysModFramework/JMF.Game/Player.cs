@@ -31,6 +31,10 @@ namespace JMF
             get { return Function.Call<bool>(Hash.IsSpecialAbilityEnabled, Handle); }
             set { Function.Call(Hash.EnableSpecialAbility, Handle, value); }
         }
+        public bool IsInvincible
+        {
+            set { Function.Call(Hash.SetPlayerInvincible, Handle, value); }
+        }
         #endregion Properties
         ///////////////////////////////////////////////////////////////////////
         //                            Constructors                           //

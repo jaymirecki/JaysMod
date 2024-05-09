@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <InteractionMenuEnabled>true</InteractionMenuEnabled>
-  <BigMapEnabled>true</BigMapEnabled>
-  <SilentSirensEnabled>true</SilentSirensEnabled>
-  <RespawnerEnabled>true</RespawnerEnabled>
-  <FreemodePlayerEnabled>true</FreemodePlayerEnabled>
+  <InteractionMenuSettings>
+    <Enabled>true</Enabled>
+  </InteractionMenuSettings>
+  <BigMapSettings>
+    <Enabled>true</Enabled>
+  </BigMapSettings>
+  <SilentSirensSettings>
+    <Enabled>true</Enabled>
+  </SilentSirensSettings>
+  <RespawnerSettings>
+    <Enabled>true</Enabled>
+  </RespawnerSettings>
+  <FreemodePlayerSettings>
+    <Enabled>false</Enabled>
+  </FreemodePlayerSettings>
 </Config>

@@ -70,6 +70,7 @@
             SetEntityCoordsNoOffset = 0x239A3351AC1DA385,
             EnableSpecialAbility = 0x181EC197DAEFE121,
             IsSpecialAbilityEnabled = 0xB1D200FE26AEF3CB,
+            GetEntityHeightAboveGround = 0x1DD55701034110E5,
         }
     }
 }
