@@ -5,12 +5,12 @@ using System;
 
 namespace JMF.Modules
 {
-    public class FreemodePlayer : InternalModule
+    public class FreemodePlayer : InternalModule<ModuleSettings>
     {
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         public override string ModuleName { get; } = "Freemode Player";
         public override string ModuleDescription { get; } = "Converts the player to male freemode ped";
-        public override bool DefaultActivationState { get { return false; } }
+        public override ModuleSettings Settings { get { return Global.Config.FreemodePlayerSettings; } }
         private Vector3 originalPosition;
         private float originalHeading;
         private DateTime originalTime;

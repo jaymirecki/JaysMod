@@ -2,12 +2,12 @@
 
 namespace JMF.Modules
 {
-    public class BigMap : Module
+    public class BigMap : InternalModule<ModuleSettings>
     {
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         public override string ModuleName { get; } = "Big Map SP";
         public override string ModuleDescription { get; } = "Enables use of larger radar from MP";
-        public override bool DefaultActivationState { get { return Global.Config.BigMapEnabled; } }
+        public override ModuleSettings Settings { get { return Global.Config.BigMapSettings; } }
         private bool _active = false;
         public BigMap() : base() { }
         public override void OnControlDoublePressed(Control control)
@@ -26,5 +26,9 @@ namespace JMF.Modules
         {
             SetMapActive(false);
         }
+    }
+    public class BigMapSettings: ModuleSettings
+    {
+
     }
 }

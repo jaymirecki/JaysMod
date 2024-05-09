@@ -54,6 +54,10 @@ namespace JMF
             get { return Function.Call<int>(Hash.GetEntityHealth, Handle); }
             set { Function.Call(Hash.SetEntityHealth, Handle, value); }
         }
+        public float HeightAboveGround
+        {
+            get { return Function.Call<float>(Hash.GetEntityHeightAboveGround, Handle); }
+        }
         #endregion Properties
 
         //

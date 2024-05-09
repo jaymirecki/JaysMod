@@ -1,4 +1,5 @@
 ﻿using JMF.Menus;
+using JMF.Modules;
 using Rage;
 using System;
 
@@ -14,14 +15,9 @@ namespace JMF
 
         private string _moduleLogName { get => ModuleName + ":" + Version; }
         public bool IsActive { get; private set; }
-        public abstract bool DefaultActivationState { get; }
         public Module()
         {
             ModuleManager.AddModule(this);
-            if (DefaultActivationState)
-            {
-                Activate();
-            }
         }
         #region Life cycle events
         public void Tick()
@@ -140,6 +136,17 @@ namespace JMF
             return string.Compare(_moduleAlphabetizedName, other._moduleAlphabetizedName);
         }
         #endregion IComparer
+    }
+    public abstract class Module<T> : Module where T : IModuleSettings
+    {
+        public virtual T Settings { get; private set; }
+        public Module(): base()
+        {
+            if (Settings.Enabled)
+            {
+                Activate();
+            }
+        }
     }
 
     struct SemanticVersion

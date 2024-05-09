@@ -1,12 +1,15 @@
-﻿namespace JMF
+﻿using JMF.Modules;
+
+namespace JMF
 {
     public class Config
 
     {
-        public bool InteractionMenuEnabled { get; set; } = true;
-        public bool BigMapEnabled { get; set; } = false;
-        public bool SilentSirensEnabled { get; set; } = false;
-        public bool RespawnerEnabled { get; set; } = false;
-        public bool FreemodePlayerEnabled { get; set; } = false;
+        public ModuleSettings InteractionMenuSettings { get; set; } = new ModuleSettings();
+        public ModuleSettings BigMapSettings { get; set; } = new ModuleSettings();
+        public ModuleSettings SilentSirensSettings { get; set; } = new ModuleSettings();
+        public ModuleSettings RespawnerSettings { get; set; } = new ModuleSettings();
+        public ModuleSettings FreemodePlayerSettings { get; set; } = new ModuleSettings();
+        public ModuleSettings MatterOfTimeSettings { get; set; } = new ModuleSettings();
     }
 }
