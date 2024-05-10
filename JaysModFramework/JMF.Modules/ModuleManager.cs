@@ -9,8 +9,12 @@ namespace JMF
     using ModuleListItem = MenuListItem<string>;
     public static class ModuleManager
     {
-        private static readonly List<Module> _moduleList = new List<Module>();
-        private static readonly List<InternalModule> _internalModuleList = new List<InternalModule>();
+        private static readonly List<Module> moduleList = new List<Module>();
+        private static readonly List<InternalModule> internalModuleList = new List<InternalModule>();
+        internal static List<Module> Modules
+        {
+            get { return moduleList; }
+        }
 
         // Properties for managing control cycle
         private static OOD.Collections.Dictionary<Control, DateTime> _controlJustReleased = new OOD.Collections.Dictionary<Control, DateTime>();
@@ -33,13 +37,13 @@ namespace JMF
         }
         public static void AddModule(Module module)
         {
-            _moduleList.Add(module);
-            _moduleList.Sort();
+            moduleList.Add(module);
+            moduleList.Sort();
         }
         public static void AddInternalModule(InternalModule module)
         {
-            _internalModuleList.Add(module);
-            _internalModuleList.Sort();
+            internalModuleList.Add(module);
+            internalModuleList.Sort();
         }
         private static void RefreshMenu()
         {
@@ -48,7 +52,7 @@ namespace JMF
                 return;
             }
             _moduleMenu.Clear();
-            List<ModuleListItem> itemList = _moduleList.ConvertAll((Module m) => m.MenuItem);
+            List<ModuleListItem> itemList = moduleList.ConvertAll((Module m) => m.MenuItem);
             foreach (ModuleListItem item in itemList)
             {
                 _moduleMenu.Add(item);
@@ -63,7 +67,7 @@ namespace JMF
         #region Life cycle events
         public static void OnTick()
         {
-            foreach (InternalModule module in _internalModuleList)
+            foreach (InternalModule module in internalModuleList)
             {
                 if (module.IsActive)
                 {
@@ -73,7 +77,7 @@ namespace JMF
         }
         public static void OnControlReleased(Control control)
         {
-            foreach (Module module in _moduleList)
+            foreach (Module module in moduleList)
             {
                 if (module.IsActive)
                 {
@@ -83,7 +87,7 @@ namespace JMF
         }
         public static void OnControlHeld(Control control)
         {
-            foreach (Module module in _moduleList)
+            foreach (Module module in moduleList)
             {
                 if (module.IsActive)
                 {
@@ -93,7 +97,7 @@ namespace JMF
         }
         public static void OnControlDoublePressed(Control control)
         {
-            foreach (Module module in _moduleList)
+            foreach (Module module in moduleList)
             {
                 if (module.IsActive)
                 {
