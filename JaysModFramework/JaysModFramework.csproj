@@ -171,8 +171,8 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\Plugins"
-copy OOD.Collections.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto"
-xcopy /Y /I /S "JMFBin\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\Plugins\JMF"</PostBuildEvent>
+    <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\Plugins"
+copy OOD.Collections.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto-modding"
+xcopy /Y /I /S "JMFBin\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\Plugins\JMF"</PostBuildEvent>
   </PropertyGroup>
 </Project>
