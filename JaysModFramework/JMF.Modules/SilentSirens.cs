@@ -1,5 +1,4 @@
-﻿
-using JMF.UI;
+﻿using JMF.UI;
 
 namespace JMF.Modules
 {

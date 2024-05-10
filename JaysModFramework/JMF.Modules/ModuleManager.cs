@@ -202,6 +202,7 @@ namespace JMF
             new MatterOfTime();
             new FreemodePlayer();
             new Respawner();
+            new IPLLoader();
             while (true)
             {
                 ModuleManager.Tick();

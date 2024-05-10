@@ -71,6 +71,22 @@
             EnableSpecialAbility = 0x181EC197DAEFE121,
             IsSpecialAbilityEnabled = 0xB1D200FE26AEF3CB,
             GetEntityHeightAboveGround = 0x1DD55701034110E5,
+            RequestIpl = 0x41B4893843BBDB74,
+            OnEnterMp = 0x0888C3502DBBEEF5,
+            RemoveIpl = 0xEE6C5AD3ECE0A82D,
+            SetBlipCategory = 0x234CDD44D996FD9A,
+            SetBlipColour = 0x03D7FB09E75D6B7E,
+            SetBlipDisplay = 0x9029B2F3DA924928,
+            SetBlipSprite = 0xDF735600A4696DAF,
+            BeginTextCommandSetBlipName = 0xF9113A30DE5C6670,
+            EndTextCommandSetBlipName = 0xBC38B49BCB83BC9B,
+            AddBlipForCoord = 0x5A039BB0BCA604B6,
+            AddBlipForEntity = 0x5CDE92C702A8FCE7,
+            GetInteriorAtCoords = 0xB0F7F8663821D9C3,
+            DisableInterior = 0x6170941419D7D8EC,
+            RefreshInterior = 0x41F37C3427C75AE0,
+            ActivateInteriorEntitySet = 0x55E86AF2712B36A1,
+            SetInteriorEntitySetColor = 0xC1F1920BAF281317,
         }
     }
 }
