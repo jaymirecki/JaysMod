@@ -15,4 +15,10 @@
   <FreemodePlayerSettings>
     <Enabled>false</Enabled>
   </FreemodePlayerSettings>
+  <IPLLoaderSettings>
+    <Enabled>true</Enabled>
+    <AircraftCarrierEnabled>true</AircraftCarrierEnabled>
+    <CasinoEnabled>true</CasinoEnabled>
+    <FacilityEnabled>true</FacilityEnabled>
+  </IPLLoaderSettings>
 </Config>
