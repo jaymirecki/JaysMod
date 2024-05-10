@@ -2,6 +2,7 @@
 using JMF.Modules;
 using Rage;
 using System;
+using System.Collections.Generic;
 
 namespace JMF
 {
@@ -15,6 +16,7 @@ namespace JMF
 
         private string _moduleLogName { get => ModuleName + ":" + Version; }
         public bool IsActive { get; private set; }
+        protected List<Type> Dependencies = new List<Type>();
         public Module()
         {
             ModuleManager.AddModule(this);
@@ -38,7 +40,7 @@ namespace JMF
         #region Activation/Deactivation
         public void Activate()
         {
-            if (!IsActive)
+            if (!IsActive && CheckDependencies())
             {
                 Debug.Log(DebugSeverity.Info, _moduleLogName + " " + ActivatedString.ToLower());
                 IsActive = true;
@@ -64,6 +66,32 @@ namespace JMF
             {
                 Activate();
             }
+        }
+        private bool CheckDependencies()
+        {
+            foreach (Type dependency in Dependencies)
+            {
+                bool isFound = false;
+                foreach (Module module in ModuleManager.Modules)
+                {
+                    if (module.GetType() == dependency)
+                    {
+                        if (!module.IsActive)
+                        {
+                            Debug.Log(DebugSeverity.Warning, ModuleName + ": Dependency " + module.ModuleName + " is not active");
+                            return false;
+                        }
+                        isFound = true;
+                        break;
+                    }
+                }
+                if (!isFound)
+                {
+                    Debug.Log(DebugSeverity.Warning, ModuleName + ": Dependency " + dependency.Name + " is not installed");
+                    return false;
+                }
+            }
+            return true;
         }
         #endregion Activation/Deactivation
         #region MenuItem
@@ -108,6 +136,11 @@ namespace JMF
                     break;
                 default:
                     return;
+            }
+            LemonUI.Menus.NativeListItem<string> listItem = sender as LemonUI.Menus.NativeListItem<string>;
+            if (listItem!= null)
+            {
+                listItem.SelectedItem = IsActive ? ActivatedString : DeactivatedString;
             }
         }
         #endregion MenuItem

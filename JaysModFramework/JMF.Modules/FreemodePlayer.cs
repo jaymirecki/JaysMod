@@ -14,7 +14,9 @@ namespace JMF.Modules
         private Vector3 originalPosition;
         private float originalHeading;
         private DateTime originalTime;
-        public FreemodePlayer() : base() { }
+        public FreemodePlayer() : base() {
+            Dependencies.Add(typeof(Respawner));
+        }
         private Model originalModel;
         public override void OnActivate()
         {
