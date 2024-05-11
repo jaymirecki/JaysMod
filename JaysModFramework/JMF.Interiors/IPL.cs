@@ -1,19 +1,24 @@
 ﻿using JMF.Math;
 using JMF.Native;
 using System.Collections.Generic;
+using OOD.Collections;
 
 namespace JMF
 {
     namespace Interiors
     {
-        public class IPL
+        public class IPL: IXMLDatabaseItem<string>
         {
-            public Vector3 Position { get; private set; }
-            private readonly List<string> IPLNames;
-            public bool Loaded { get; private set; }
+            public string ID { get; set; }
+            public Vector3 Position { get; set; }
+            public List<string> IPLNames;
+            [System.Xml.Serialization.XmlIgnoreAttribute]
+            public bool Loaded { get; private set; } = false;
+            public IPL() { }
 
-            public IPL(Vector3 position, List<string> iplNames)
+            public IPL(string id, Vector3 position, List<string> iplNames)
             {
+                ID = id;
                 Position = position;
                 IPLNames = iplNames;
             }

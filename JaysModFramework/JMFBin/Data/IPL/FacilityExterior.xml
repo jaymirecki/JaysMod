@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>FacilityExterior</ID>
+  <IPLNames>
+    <string>xm_hatch_01_cutscene</string>
+    <string>xm_hatch_02_cutscene</string>
+    <string>xm_hatch_03_cutscene</string>
+    <string>xm_hatch_04_cutscene</string>
+    <string>xm_hatch_06_cutscene</string>
+    <string>xm_hatch_07_cutscene</string>
+    <string>xm_hatch_08_cutscene</string>
+    <string>xm_hatch_09_cutscene</string>
+    <string>xm_hatch_10_cutscene</string>
+    <string>xm_hatch_closed</string>
+    <string>xm_siloentranceclosed_x17</string>
+    <string>xm_bunkerentrance_door</string>
+    <string>xm_hatches_terrain</string>
+    <string>xm_hatches_terrain_lod</string>
+  </IPLNames>
+  <Position>
+    <X>345</X>
+    <Y>4842</Y>
+    <Z>-60</Z>
+  </Position>
+</IPL>

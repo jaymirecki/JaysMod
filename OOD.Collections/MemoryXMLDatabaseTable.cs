@@ -8,9 +8,8 @@ namespace OOD.Collections
     public class MemoryXMLDatabaseTable<TKey, TValue>: XMLDatabaseTable<TKey, TValue> where TValue : IXMLDatabaseItem<TKey>
     {
         #region Properties
-        private Dictionary<TKey, TValue> _values = new Dictionary<TKey, TValue>();
-        public override int Count { get { return _values.Count; } }
-        public override string Filepath { get { return Path.Combine(Directory, TableName + ".xml"); } }
+        private Dictionary<TKey, TValue> values = new Dictionary<TKey, TValue>();
+        public override int Count { get { return values.Count; } }
         public override bool ReadOnly { get; }
         #endregion
         #region Constructors
@@ -25,7 +24,7 @@ namespace OOD.Collections
         #region GetValue
         public override bool TryGetValue(TKey ID, out TValue value)
         {
-            return _values.TryGetValue(ID, out value);
+            return values.TryGetValue(ID, out value);
         }
         public override TValue GetValue(TKey ID)
         {
@@ -44,7 +43,7 @@ namespace OOD.Collections
         public override bool TryAddValue(TValue value)
         {
             if (ReadOnly) return false;
-            if (_values.TryAdd(value.ID, value))
+            if (values.TryAdd(value.ID, value))
             {
                 Save();
                 return true;
@@ -64,13 +63,13 @@ namespace OOD.Collections
         public override bool TryRemoveValue(TKey id)
         {
             if (ReadOnly) return false;
-            return _values.TryRemove(id);
+            return values.TryRemove(id);
         }
         #endregion RemoveValue
         #region IEnumerable
         public override IEnumerator GetEnumerator()
         {
-            return _values.Values.GetEnumerator();
+            return values.Values.GetEnumerator();
         }
         #endregion IEnumerable
         public override void ClearCache()
@@ -79,40 +78,33 @@ namespace OOD.Collections
         }
         private void Load()
         {
-            _values.Clear();
-            //if (!File.Exists(Filepath)) return;
-            _values = new Dictionary<TKey, TValue>();
-            using (TextReader reader = new StreamReader(Filepath))
+            values.Clear();
+            values = new Dictionary<TKey, TValue>();
+            string directoryPath = Path.Combine(Directory, TableName);
+            XmlSerializer serializer = new XmlSerializer(typeof(TValue));
+            foreach (string filepath in System.IO.Directory.GetFiles(directoryPath))
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(TValue[]));
-                TValue[] valueArray;
-                //try
-                //{
-                    valueArray = (TValue[])serializer.Deserialize(reader);
-                //}
-                //catch
-                //{
-                //    valueArray = null;
-                //}
-                //if (valueArray == null) return;
-                foreach (TValue value in valueArray)
+                using (TextReader reader = new StreamReader(filepath))
                 {
-                    //if (value != null)
-                    //{
-                        _values.TryAdd(value.ID, value);
-                    //}
+                    TValue val = (TValue)serializer.Deserialize(reader);
+                    values.TryAdd(val.ID, val);
                 }
             }
         }
         private void Save()
         {
-            System.IO.Directory.CreateDirectory(Directory);
-            using (FileStream stream = File.Create(Filepath)) { }
-
-            using (TextWriter writer = new StreamWriter(Filepath))
+            XmlSerializer serializer = new XmlSerializer(typeof(TValue));
+            string directoryPath = Path.Combine(Directory, TableName);
+            System.IO.Directory.CreateDirectory(directoryPath);
+            foreach (TValue val in values.Values)
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(TValue[]));
-                serializer.Serialize(writer, _values.ValueArray);
+                string filepath = Path.Combine(directoryPath, val.ID + ".xml");
+                using (FileStream stream = File.Create(filepath)) { }
+
+                using (TextWriter writer = new StreamWriter(filepath))
+                {
+                    serializer.Serialize(writer, val);
+                }
             }
         }
     }

@@ -36,9 +36,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\LemonUI.RagePluginHook.dll</HintPath>
     </Reference>
-    <Reference Include="OOD.Collections">
-      <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\OOD.Collections.dll</HintPath>
-    </Reference>
     <Reference Include="RagePluginHookSDK, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\SDK\RagePluginHookSDK.dll</HintPath>
@@ -70,10 +67,10 @@
     <Compile Include="JMF.Framework\Database.cs" />
     <Compile Include="JMF.Framework\Config.cs" />
     <Compile Include="JMF.Interiors\IPL.cs" />
-    <Compile Include="JMF.Modules\IPLLoader.cs" />
+    <Compile Include="JMF.Modules\InternalModules\IPLLoader.cs" />
     <Compile Include="JMF.Modules\ModuleSettings.cs" />
-    <Compile Include="JMF.Modules\Respawner.cs" />
-    <Compile Include="JMF.Modules\FreemodePlayer.cs" />
+    <Compile Include="JMF.Modules\InternalModules\Respawner.cs" />
+    <Compile Include="JMF.Modules\InternalModules\FreemodePlayer.cs" />
     <Compile Include="JMF.UI\Screen.cs" />
     <Compile Include="JMF.UI\TextInput.cs" />
     <Compile Include="JMF.UI\TextFormat.cs" />
@@ -102,24 +99,22 @@
     <Compile Include="JMF.Framework\Global.cs" />
     <Compile Include="JMF.Framework\Debug.cs" />
     <Compile Include="JMF.Framework\IDGenerator.cs" />
-    <Compile Include="IPLs\IPLDetails.cs" />
-    <Compile Include="IPLs\IPLLoader.cs" />
-    <Compile Include="JMF.Modules\InteractionMenu.cs" />
+    <Compile Include="JMF.Modules\InternalModules\InteractionMenu.cs" />
     <Compile Include="Managers\HelmetManager.cs" />
     <Compile Include="Managers\IManager.cs" />
-    <Compile Include="JMF.Modules\MatterOfTime.cs" />
+    <Compile Include="JMF.Modules\InternalModules\MatterOfTime.cs" />
     <Compile Include="Managers\RespawnManager.cs" />
     <Compile Include="Managers\RestrictedAreasManager.cs" />
     <Compile Include="Menus\SubmenuItem.cs" />
     <Compile Include="Menus\MenuItem.cs" />
     <Compile Include="Menus\Menu.cs" />
-    <Compile Include="JMF.Modules\BigMap.cs" />
+    <Compile Include="JMF.Modules\InternalModules\BigMap.cs" />
     <Compile Include="JMF.Native\NativeFunction.cs" />
     <Compile Include="JMF.Native\NativeHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseClassExtensions\NPC.cs" />
     <Compile Include="Managers\ScubaManager.cs" />
-    <Compile Include="JMF.Modules\SilentSirens.cs" />
+    <Compile Include="JMF.Modules\InternalModules\SilentSirens.cs" />
     <Compile Include="State.cs" />
     <Compile Include="JMF\Entities\Vehicle\Vehicle.cs" />
     <Compile Include="Managers\VisorManager.cs" />
@@ -134,6 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="JMFBin\config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\AircraftCarrier.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JMFBin\Presets\Clothing\accessory.xml">
@@ -173,11 +171,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\OOD.Collections\OOD.Collections.csproj">
+      <Project>{f8fdff28-a1e4-4b60-bd56-fd76e0541688}</Project>
+      <Name>OOD.Collections</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\Plugins"
-copy OOD.Collections.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto-modding"
+copy OOD.Collections.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding"
 xcopy /Y /I /S "JMFBin\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF"</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -10,7 +10,6 @@ namespace OOD.Collections
         #region Properties
         private Dictionary<TKey, TValue> _values;
         public override int Count { get { return _values.Count; } }
-        public override string Filepath { get { return ""; } }
         public override bool ReadOnly { get; }
         #endregion
         #region Constructors

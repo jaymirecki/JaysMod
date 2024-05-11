@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>AircraftCarrier</ID>
+  <Position>
+    <X>3082.3117</X>
+    <Y>-4717.1191</Y>
+    <Z>15.2622</Z>
+  </Position>
+  <IPLNames>
+    <string>hei_carrier</string>
+    <string>hei_carrier_int1</string>
+    <string>hei_carrier_int1_lod</string>
+    <string>hei_carrier_int2</string>
+    <string>hei_carrier_int2_lod</string>
+    <string>hei_carrier_int3</string>
+    <string>hei_carrier_int3_lod</string>
+    <string>hei_carrier_int4</string>
+    <string>hei_carrier_int4_lod</string>
+    <string>hei_carrier_int5</string>
+    <string>hei_carrier_int5_lod</string>
+    <string>hei_carrier_int6</string>
+    <string>hei_carrier_int6_lod</string>
+    <string>hei_carrier_lod</string>
+    <string>hei_carrier_slod</string>
+  </IPLNames>
+</IPL>

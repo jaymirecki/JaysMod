@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>CargoShip</ID>
+  <IPLNames>
+    <string>m23_2_cargoship﻿</string>
+    <string>m23_2_cargoship_bridge</string>
+  </IPLNames>
+  <Position>
+    <X>-344.4349</X>
+    <Y>-4062.832</Y>
+    <Z>17</Z>
+  </Position>
+</IPL>

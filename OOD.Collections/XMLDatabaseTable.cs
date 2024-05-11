@@ -11,7 +11,6 @@ namespace OOD.Collections
         #region Properties
         public string TableName { get; internal set; }
         public string Directory { get; internal set; }
-        public abstract string Filepath { get; }
         public abstract bool ReadOnly { get; }
         public abstract int Count { get; }
         public TValue this[TKey key]
