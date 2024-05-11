@@ -66,6 +66,8 @@
     <Compile Include="Clothing\MaleOutfitPieces.cs" />
     <Compile Include="JMF.Framework\Database.cs" />
     <Compile Include="JMF.Framework\Config.cs" />
+    <Compile Include="JMF.Interiors\IPLTheme.cs" />
+    <Compile Include="JMF.Interiors\IPLEntitySet.cs" />
     <Compile Include="JMF.Interiors\IPL.cs" />
     <Compile Include="JMF.Modules\InternalModules\IPLLoader.cs" />
     <Compile Include="JMF.Modules\ModuleSettings.cs" />
@@ -129,6 +131,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="JMFBin\config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\CargoShip.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\FacilityInterior.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\FacilityExterior.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\Casino.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JMFBin\Data\IPL\AircraftCarrier.xml">

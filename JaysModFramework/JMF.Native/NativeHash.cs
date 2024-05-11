@@ -87,6 +87,8 @@
             RefreshInterior = 0x41F37C3427C75AE0,
             ActivateInteriorEntitySet = 0x55E86AF2712B36A1,
             SetInteriorEntitySetColor = 0xC1F1920BAF281317,
+            DeactivateInteriorEntitySet = 0x420BD37289EEE162,
+            IsIplActive = 0x88A741E44A2B3495,
         }
     }
 }

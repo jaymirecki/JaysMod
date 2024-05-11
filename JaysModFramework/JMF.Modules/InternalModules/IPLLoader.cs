@@ -19,6 +19,16 @@ namespace JMF
             {
                 Function.Call(Hash.OnEnterMp);
                 IPLs = new MemoryXMLDatabaseTable<string, IPL>(Global.Config.DataPath, "IPL");
+                IPLs.GetValue("FacilityExterior").Load();
+                IPL facility = IPLs.GetValue("FacilityInterior");
+                List<string> entitySets  = new List<string>() { "Shell", "CannonOff", "LoungePrestige" };
+                facility.Load(entitySets, "Utility");
+                //facility.Load(entitySets, "Utility");
+                Vector3 position = facility.Position;
+                //position.Z = position.Z + 1;
+                Game.Player.Character.Position = position;
+                //Thread.Sleep(5000);
+                //Game.Player.Character.Position = position;
             }
             public override void OnDeactivate()
             {

@@ -1,12 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>FacilityInterior</ID>
-  <IPLNames>
-    <string>xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_</string>
-  </IPLNames>
   <Position>
     <X>345</X>
     <Y>4842</Y>
     <Z>-60</Z>
   </Position>
+  <IPLNames>
+    <string>xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_</string>
+  </IPLNames>
+  <EntitySets>
+    <IPLEntitySet>
+      <HumanName>Shell</HumanName>
+      <GameName>set_int_02_shell</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>LoungeUtility</HumanName>
+      <GameName>set_int_02_lounge1</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>LoungePrestige</HumanName>
+      <GameName>set_int_02_lounge2</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>LoungePremier</HumanName>
+      <GameName>set_int_02_lounge3</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>SleepingOff</HumanName>
+      <GameName>set_int_02_no_sleep</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>SleepingUtility</HumanName>
+      <GameName>set_int_02_sleep</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>SleepingPrestige</HumanName>
+      <GameName>set_int_02_sleep2</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>SleepingPremier</HumanName>
+      <GameName>set_int_02_sleep3</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>SecurityOff</HumanName>
+      <GameName>set_int_02_no_security</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>SecurityOn</HumanName>
+      <GameName>set_int_02_security</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>CannonOff</HumanName>
+      <GameName>set_int_02_no_cannon</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>CannonOn</HumanName>
+      <GameName>set_int_02_cannon</GameName>
+    </IPLEntitySet>
+  </EntitySets>
 </IPL>
