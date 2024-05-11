@@ -1,17 +1,11 @@
-﻿using JMF.Clothing;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Xml.Serialization;
 
 namespace JMF
 {
     public static class Global
     {
-        private const string ConfigFilepath = ".\\Plugins\\JMF\\config.xml";
+        private const string ConfigFilepath = ".\\JMF\\config.xml";
         //public static readonly Database Database = new Database();
         public static Config Config
         {

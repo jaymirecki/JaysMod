@@ -178,6 +178,6 @@
   <PropertyGroup>
     <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\Plugins"
 copy OOD.Collections.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto-modding"
-xcopy /Y /I /S "JMFBin\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\Plugins\JMF"</PostBuildEvent>
+xcopy /Y /I /S "JMFBin\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF"</PostBuildEvent>
   </PropertyGroup>
 </Project>

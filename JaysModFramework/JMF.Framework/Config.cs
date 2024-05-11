@@ -12,5 +12,6 @@ namespace JMF
         public ModuleSettings FreemodePlayerSettings { get; set; } = new ModuleSettings();
         public ModuleSettings MatterOfTimeSettings { get; set; } = new ModuleSettings();
         public IPLLoaderSettings IPLLoaderSettings { get; set; } = new IPLLoaderSettings();
+        public string DataPath { get; set; } = ".\\JMF\\Data";
     }
 }
