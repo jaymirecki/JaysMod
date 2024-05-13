@@ -16,7 +16,7 @@
     <Enabled>false</Enabled>
   </FreemodePlayerSettings>
   <IPLLoaderSettings>
-    <Enabled>false</Enabled>
+    <Enabled>true</Enabled>
     <AircraftCarrierEnabled>true</AircraftCarrierEnabled>
     <CasinoEnabled>true</CasinoEnabled>
     <FacilityEnabled>true</FacilityEnabled>

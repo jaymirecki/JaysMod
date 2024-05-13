@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <IPLNames>
-    <string>vw_casino_main﻿ </string>
-    <string>vw_casino_garage</string>
-    <string>vw_casino_carpark</string>
-    <string>vw_casino_penthouse</string>
-  </IPLNames>
-  <ID>Casino</ID>
+  <ID>CasinoGarage</ID>
   <Position>
-    <X>1100</X>
-    <Y>220</Y>
-    <Z>-50</Z>
+    <X>2536.276</X>
+    <Y>-278.98</Y>
+    <Z>-64.722</Z>
   </Position>
+  <IPLNames>
+    <string>vw_casino_garage</string>
+  </IPLNames>
 </IPL>

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <ID>CargoShip</ID>
-  <InteriorID>269313</InteriorID>
+  <ID>CasinoPenthouse</ID>
   <Position>
-    <X>-344.4349</X>
-    <Y>-4062.832</Y>
-    <Z>17</Z>
+    <X>976.636</X>
+    <Y>70.295</Y>
+    <Z>115.164</Z>
   </Position>
   <IPLNames>
-    <string>m23_2_cargoship</string>
-    <string>m23_2_cargoship_bridge</string>
+    <string>vw_casino_penthouse</string>
   </IPLNames>
 </IPL>

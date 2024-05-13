@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>FacilityInterior</ID>
+  <InteriorID>269313</InteriorID>
   <Position>
     <X>345</X>
     <Y>4842</Y>
@@ -11,7 +12,7 @@
   </IPLNames>
   <EntitySets>
     <IPLEntitySet>
-      <HumanName>Shell</HumanName>
+      <HumanName>Walls</HumanName>
       <GameName>set_int_02_shell</GameName>
     </IPLEntitySet>
     <IPLEntitySet>
@@ -59,4 +60,11 @@
       <GameName>set_int_02_cannon</GameName>
     </IPLEntitySet>
   </EntitySets>
+  <DefaultEntitySets>
+    <string>Walls</string>
+    <string>LoungeUtility</string>
+    <string>SleepingUtility</string>
+    <string>SecurityOn</string>
+    <string>CannonOn</string>
+  </DefaultEntitySets>
 </IPL>

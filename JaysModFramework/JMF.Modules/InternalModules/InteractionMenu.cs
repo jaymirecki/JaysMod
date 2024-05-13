@@ -18,6 +18,7 @@ namespace JMF.Modules
             _menu = new Menu("Interactions", _pool);
             _menu.Add(ModuleManager.ModuleMenu(_pool));
             _menu.Add(Debug.Menu(_pool));
+            _menu.Add(new IPLLoader().Menu(_pool));
         }
 
         public override void OnControlReleased(Control control) {

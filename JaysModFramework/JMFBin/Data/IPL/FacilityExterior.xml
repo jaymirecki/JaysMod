@@ -17,9 +17,4 @@
     <string>xm_hatches_terrain</string>
     <string>xm_hatches_terrain_lod</string>
   </IPLNames>
-  <Position>
-    <X>345</X>
-    <Y>4842</Y>
-    <Z>-60</Z>
-  </Position>
 </IPL>

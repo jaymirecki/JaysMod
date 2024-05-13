@@ -136,13 +136,22 @@
     <Content Include="JMFBin\Data\IPL\CargoShip.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="JMFBin\Data\IPL\CasinoPenthouse.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\CasinoCarpark.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\CasinoGarage.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="JMFBin\Data\IPL\FacilityInterior.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JMFBin\Data\IPL\FacilityExterior.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\Casino.xml">
+    <Content Include="JMFBin\Data\IPL\CasinoFloor.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JMFBin\Data\IPL\AircraftCarrier.xml">
@@ -195,6 +204,7 @@
   <PropertyGroup>
     <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\Plugins"
 copy OOD.Collections.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding"
+RD /S /Q  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF"
 xcopy /Y /I /S "JMFBin\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF"</PostBuildEvent>
   </PropertyGroup>
 </Project>

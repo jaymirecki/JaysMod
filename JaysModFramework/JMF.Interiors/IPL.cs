@@ -1,7 +1,9 @@
 ﻿using JMF.Math;
+using JMF.Menus;
 using JMF.Native;
-using System.Collections.Generic;
 using OOD.Collections;
+using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace JMF
 {
@@ -10,12 +12,53 @@ namespace JMF
         public class IPL: IXMLDatabaseItem<string>
         {
             public string ID { get; set; }
-            public Vector3 Position { get; set; }
+            public int InteriorID { get; set; } = 0;
+            private Vector3 _position = new Vector3();
+            public Vector3 Position
+            {
+                get { return _position; }
+                set
+                {
+                    _position = value;
+                    InteriorID = Function.Call<int>(Hash.GetInteriorAtCoords, _position.X, _position.Y, _position.Z);
+                }
+            }
             public List<string> IPLNames { get; set; }
-            public List<IPLEntitySet> EntitySets { get; set; }
-            public List<IPLTheme> Themes { get; set; }
-            [System.Xml.Serialization.XmlIgnoreAttribute]
+            public List<IPLEntitySet> EntitySets { get; set; } = new List<IPLEntitySet>();
+            public List<IPLTheme> Themes { get; set; } = new List<IPLTheme>();
+            public List<string> DefaultEntitySets { get; set; } = new List<string>();
+            [XmlIgnore]
             public bool Loaded { get; private set; } = false;
+            [XmlIgnore]
+            private MenuListItem<string> _menuItem = null;
+            public MenuListItem<string> MenuItem
+            {
+                get
+                {
+                    if (_menuItem == null)
+                    {
+                        _menuItem = new MenuListItem<string>(ID, "", "Load", "Load and Teleport", "Unload");
+                        _menuItem.Activated += MenuItemSelected;
+                    }
+                    return _menuItem;
+                }
+            }
+            private void MenuItemSelected(object sender, System.EventArgs e)
+            {
+                switch (_menuItem.SelectedItem)
+                {
+                    case "Load":
+                        LoadDefault();
+                        return;
+                    case "Load and Teleport":
+                        LoadDefault();
+                        Game.Player.Character.Position = Position;
+                        return;
+                    case "Unload":
+                        Unload();
+                        return;
+                }
+            }
             public IPL() { }
 
             public IPL(string id, Vector3 position, List<string> iplNames)
@@ -24,7 +67,10 @@ namespace JMF
                 Position = position;
                 IPLNames = iplNames;
             }
-
+            public void LoadDefault()
+            {
+                Load(DefaultEntitySets);
+            }
             public void Load(List<string> includeEntitySets = null, string selectedTheme = "")
             {
                 int theme = 1;
@@ -36,54 +82,43 @@ namespace JMF
                         break;
                     }
                 }
+                Function.Call(Hash.DisableInterior, InteriorID, false);
                 foreach (string iplName in IPLNames)
                 {
-                    Debug.Log(DebugSeverity.Warning, iplName);
                     Function.Call(Hash.RequestIpl, iplName);
-                    Debug.Log(DebugSeverity.Warning, Function.Call<bool>(Hash.IsIplActive, iplName).ToString());
-                    //while (!Function.Call(Hash.IsIplActive, iplName))
+                    if (!Function.Call<bool>(Hash.IsIplActive, iplName))
+                    {
+                        Debug.Log(DebugSeverity.Warning, iplName + " is not loaded");
+                    }
                 }
-                int interiorID = Function.Call<int>(Hash.GetInteriorAtCoords, Position.X, Position.Y, Position.Z);
-                Function.Call(Hash.DisableInterior, interiorID, false);
-                LoadEntitySets(interiorID, theme, includeEntitySets);
-                Function.Call(Hash.RefreshInterior, interiorID);
+                LoadEntitySets(InteriorID, theme, includeEntitySets);
+                Function.Call(Hash.RefreshInterior, InteriorID);
                 Loaded = true;
             }
             private void LoadEntitySets(int interiorId, int theme, List<string> includeEntitySets)
             {
-                Debug.Log(DebugSeverity.Warning, EntitySets.Count.ToString());
-                Debug.Log(DebugSeverity.Warning, Position.ToString());
-                Debug.Log(DebugSeverity.Warning, interiorId.ToString());
-                Debug.Log(DebugSeverity.Warning, theme.ToString());
                 foreach (IPLEntitySet entitySet in EntitySets)
                 {
                     if (includeEntitySets != null && !includeEntitySets.Contains(entitySet.HumanName))
                     {
-                        Debug.Log(DebugSeverity.Warning, "skipping " + entitySet.HumanName);
                         continue;
                     }
-                    Debug.Log(DebugSeverity.Warning, entitySet.HumanName);
-                    Debug.Log(DebugSeverity.Warning, entitySet.GameName);
-                    Debug.Log(DebugSeverity.Warning, "Function.Call(Hash.ActivateInteriorEntitySet, " + interiorId + ", " + entitySet.GameName + ");");
                     Function.Call(Hash.ActivateInteriorEntitySet, interiorId, entitySet.GameName);
                     Function.Call(Hash.SetInteriorEntitySetColor, interiorId, entitySet.GameName, theme);
                 }
             }
             public void Unload()
             {
-                Debug.Log(DebugSeverity.Warning, "unloading");
                 if (!Loaded)
                 {
                     return;
                 }
-                int interiorID = Function.Call<int>(Hash.GetInteriorAtCoords, Position.X, Position.Y, Position.Z);
                 foreach (IPLEntitySet entitySet in EntitySets)
                 {
-                    Function.Call(Hash.DeactivateInteriorEntitySet, interiorID, entitySet.GameName);
+                    Function.Call(Hash.DeactivateInteriorEntitySet, InteriorID, entitySet.GameName);
                 }
-                Function.Call(Hash.RefreshInterior, interiorID);
-                Function.Call(Hash.DisableInterior, interiorID, true);
-                Function.Call(Hash.RefreshInterior, interiorID);
+                Function.Call(Hash.RefreshInterior, InteriorID);
+                Function.Call(Hash.DisableInterior, InteriorID, true);
                 foreach (string iplName in IPLNames)
                 {
                     Function.Call(Hash.RemoveIpl, iplName);

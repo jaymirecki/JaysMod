@@ -3,6 +3,7 @@ using JMF.Math;
 using JMF.Native;
 using System.Collections.Generic;
 using OOD.Collections;
+using JMF.Menus;
 
 namespace JMF
 {
@@ -15,18 +16,35 @@ namespace JMF
             public override string ModuleDescription { get; } = "Loads IPLs";
             public override IPLLoaderSettings Settings { get { return Global.Config.IPLLoaderSettings; } }
             private XMLDatabaseTable<string, IPL> IPLs { get; set; }
+            private Menu menu = null;
+            public Menu Menu(ObjectPool pool)
+            {
+                if (!IsActive)
+                {
+                    return null;
+                }
+                if (menu == null)
+                {
+                    menu = new Menu("IPLs", "IPLMenu", pool);
+                    foreach(IPL ipl in IPLs)
+                    {
+                        menu.Add(ipl.MenuItem);
+                    }
+                }
+                return menu;
+            }
             public override void OnActivate()
             {
                 Function.Call(Hash.OnEnterMp);
                 IPLs = new MemoryXMLDatabaseTable<string, IPL>(Global.Config.DataPath, "IPL");
-                IPLs.GetValue("FacilityExterior").Load();
-                IPL facility = IPLs.GetValue("FacilityInterior");
-                List<string> entitySets  = new List<string>() { "Shell", "CannonOff", "LoungePrestige" };
-                facility.Load(entitySets, "Utility");
+                //IPLs.GetValue("FacilityExterior").Load();
+                //IPL facility = IPLs.GetValue("FacilityInterior");
+                //List<string> entitySets  = new List<string>() { "Shell", "CannonOff", "LoungePrestige" };
                 //facility.Load(entitySets, "Utility");
-                Vector3 position = facility.Position;
+                //facility.Load(entitySets, "Utility");
+                //Vector3 position = facility.Position;
                 //position.Z = position.Z + 1;
-                Game.Player.Character.Position = position;
+                //Game.Player.Character.Position = position;
                 //Thread.Sleep(5000);
                 //Game.Player.Character.Position = position;
             }
