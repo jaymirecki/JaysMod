@@ -3,7 +3,7 @@ using System;
 
 namespace JMF.Menus
 {
-    interface IMenuItem
+    public interface IMenuItem
     {
         event SelectedEventHandler Selected;
         event EventHandler Activated;

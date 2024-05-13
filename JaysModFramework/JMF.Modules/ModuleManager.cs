@@ -52,10 +52,9 @@ namespace JMF
                 return;
             }
             _moduleMenu.Clear();
-            List<ModuleListItem> itemList = moduleList.ConvertAll((Module m) => m.MenuItem);
-            foreach (ModuleListItem item in itemList)
+            foreach (Module module in moduleList)
             {
-                _moduleMenu.Add(item);
+                _moduleMenu.Add(module.Menu);
             }
         }
         private static int ModuleSorter(Module a, Module b)
@@ -204,7 +203,7 @@ namespace JMF
             new MatterOfTime();
             new FreemodePlayer();
             new Respawner();
-            //new IPLLoader();
+            new IPLLoader();
             while (true)
             {
                 ModuleManager.Tick();

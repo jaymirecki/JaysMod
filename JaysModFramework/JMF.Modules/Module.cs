@@ -17,6 +17,7 @@ namespace JMF
         private string _moduleLogName { get => ModuleName + ":" + Version; }
         public bool IsActive { get; private set; }
         protected List<Type> Dependencies = new List<Type>();
+        protected List<IMenuItem> MenuItems = new List<IMenuItem>();
         public Module()
         {
             ModuleManager.AddModule(this);
@@ -95,32 +96,37 @@ namespace JMF
         }
         #endregion Activation/Deactivation
         #region MenuItem
-        private MenuListItem<string> _menuItem;
-        public MenuListItem<string> MenuItem
+        private Menu _menu;
+        private MenuListItem<string> enabledItem;
+        public Menu Menu
         {
-            get { return GenerateMenuItem(); }
+            get { return GenerateMenu(); }
         }
-        private MenuListItem<string> GenerateMenuItem()
+        private Menu GenerateMenu()
         {
-            if (_menuItem == null)
+            if (_menu == null)
             {
-                _menuItem = new MenuListItem<string>(ModuleName, ModuleDescription, DeactivatedString, ActivatedString);
-                _menuItem.SelectedItem = IsActive ? ActivatedString : DeactivatedString;
-                _menuItem.ItemChanged += ItemChanged;
-                _menuItem.Selected += Selected;
+                _menu = new Menu("Modules", ModuleName, ModuleDescription, Global.ObjectPool);
+                enabledItem = new MenuListItem<string>(ModuleName, ModuleDescription, DeactivatedString, ActivatedString);
+                enabledItem.SelectedItem = IsActive ? ActivatedString : DeactivatedString;
+                enabledItem.ItemChanged += ItemChanged;
+                enabledItem.Selected += Selected;
+                _menu.Add(enabledItem);
+                AddMenuItems();
             }
-            return _menuItem;
+            return _menu;
         }
+        protected virtual void AddMenuItems() { }
 
         private void Selected(object sender, SelectedEventArgs e)
         {
             if (IsActive)
             {
-                _menuItem.SelectedItem = ActivatedString;
+                enabledItem.SelectedItem = ActivatedString;
             }
             else
             {
-                _menuItem.SelectedItem = DeactivatedString;
+                enabledItem.SelectedItem = DeactivatedString;
             }
         }
 

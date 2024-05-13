@@ -17,6 +17,10 @@ namespace JMF.Modules
         {
             menuList.Add(menu);
         }
+        public static bool RemoveMenu(Menu menu)
+        {
+            return menuList.Remove(menu);
+        }
         private Menu _menu;
         public InteractionMenu() : base()
         {
