@@ -148,6 +148,12 @@
     <Content Include="JMFBin\Data\IPL\BunkerInterior.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="JMFBin\Data\IPL\ZancudoLab.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\HighEndHouse1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="JMFBin\Data\IPL\FacilityInterior.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

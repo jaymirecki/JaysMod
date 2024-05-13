@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>ZancudoLab</ID>
+  <InteriorID>292097</InteriorID>
+  <Position>
+    <X>-1916.119</X>
+    <Y>3749.719</Y>
+    <Z>-100.000</Z>
+  </Position>
+  <IPLNames>
+    <string>xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_</string>
+  </IPLNames>
+  <EntitySets>
+    <IPLEntitySet>
+      <HumanName>Levers</HumanName>
+      <GameName>entity_set_levers</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>Crates</HumanName>
+      <GameName>entity_set_crates</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>Weapons</HumanName>
+      <GameName>entity_set_weapons</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>Lights</HumanName>
+      <GameName>entity_set_lift_lights</GameName>
+    </IPLEntitySet>
+  </EntitySets>
+  <DefaultEntitySets>
+  </DefaultEntitySets>
+</IPL>
