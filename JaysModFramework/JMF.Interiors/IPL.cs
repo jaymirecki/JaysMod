@@ -28,8 +28,6 @@ namespace JMF
             public List<IPLTheme> Themes { get; set; } = new List<IPLTheme>();
             public List<string> DefaultEntitySets { get; set; } = new List<string>();
             [XmlIgnore]
-            public bool Loaded { get; private set; } = false;
-            [XmlIgnore]
             private MenuListItem<string> _menuItem = null;
             public MenuListItem<string> MenuItem
             {
@@ -73,6 +71,11 @@ namespace JMF
             }
             public void Load(List<string> includeEntitySets = null, string selectedTheme = "")
             {
+                Unload();
+                if (includeEntitySets == null)
+                {
+                    includeEntitySets = new List<string>();
+                }
                 int theme = 1;
                 foreach (IPLTheme t in Themes)
                 {
@@ -91,28 +94,50 @@ namespace JMF
                         Debug.Log(DebugSeverity.Warning, iplName + " is not loaded");
                     }
                 }
-                LoadEntitySets(InteriorID, theme, includeEntitySets);
+                LoadEntitySets(theme, includeEntitySets);
                 Function.Call(Hash.RefreshInterior, InteriorID);
-                Loaded = true;
             }
-            private void LoadEntitySets(int interiorId, int theme, List<string> includeEntitySets)
+            private void LoadEntitySets(int theme, List<string> includeEntitySets)
             {
+                int loadedEntities = 0;
                 foreach (IPLEntitySet entitySet in EntitySets)
                 {
-                    if (includeEntitySets != null && !includeEntitySets.Contains(entitySet.HumanName))
+                    if (includeEntitySets.Count == 0 || includeEntitySets.Contains(entitySet.HumanName))
                     {
-                        continue;
+                        Function.Call(Hash.ActivateInteriorEntitySet, InteriorID, entitySet.GameName);
+                        Function.Call(Hash.SetInteriorEntitySetColor, InteriorID, entitySet.GameName, theme);
+                        if (Function.Call<bool>(Hash.IsInteriorEntitySetActive, InteriorID, entitySet.GameName))
+                        {
+                            loadedEntities++;
+                        }
                     }
-                    Function.Call(Hash.ActivateInteriorEntitySet, interiorId, entitySet.GameName);
-                    Function.Call(Hash.SetInteriorEntitySetColor, interiorId, entitySet.GameName, theme);
+                }
+                ValidateEntitySets(includeEntitySets, loadedEntities);
+            }
+            private void ValidateEntitySets(List<string> includeEntitySets, int loadedEntities)
+            {
+                if (includeEntitySets.Count > 0 && loadedEntities != includeEntitySets.Count)
+                {
+                    foreach (string name in includeEntitySets)
+                    {
+                        bool found = false;
+                        foreach (IPLEntitySet entitySet in EntitySets)
+                        {
+                            if (entitySet.HumanName == name)
+                            {
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found)
+                        {
+                            Debug.Log(DebugSeverity.Warning, "Entity set " + name + " does not exist for interior " + ID);
+                        }
+                    }
                 }
             }
             public void Unload()
             {
-                if (!Loaded)
-                {
-                    return;
-                }
                 foreach (IPLEntitySet entitySet in EntitySets)
                 {
                     Function.Call(Hash.DeactivateInteriorEntitySet, InteriorID, entitySet.GameName);
@@ -123,7 +148,6 @@ namespace JMF
                 {
                     Function.Call(Hash.RemoveIpl, iplName);
                 }
-                Loaded = false;
             }
             public void Reload()
             {

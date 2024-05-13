@@ -89,6 +89,7 @@
             SetInteriorEntitySetColor = 0xC1F1920BAF281317,
             DeactivateInteriorEntitySet = 0x420BD37289EEE162,
             IsIplActive = 0x88A741E44A2B3495,
+            IsInteriorEntitySetActive = 0x35F7DD45E8C0A16D,
         }
     }
 }
