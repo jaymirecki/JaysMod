@@ -22,11 +22,11 @@ namespace JMF
         private static bool _controlsInitialized = false;
         #region Menu
         private static Menu _moduleMenu;
-        public static Menu ModuleMenu(ObjectPool pool)
+        public static Menu ModuleMenu()
         {
             if (_moduleMenu == null)
             {
-                _moduleMenu = new Menu("Modules", "Modules", pool);
+                _moduleMenu = new Menu("Modules", "Modules", Global.ObjectPool);
                 _moduleMenu.Opening += ModuleMenu_Opening;
             }
             return _moduleMenu;
@@ -196,6 +196,8 @@ namespace JMF
 
         public static void Main()
         {
+            InteractionMenu.AddMenu(ModuleManager.ModuleMenu());
+            InteractionMenu.AddMenu(Debug.Menu());
             new InteractionMenu();
             new SilentSirens();
             new BigMap();

@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Xml.Serialization;
+using JMF.Menus;
 
 namespace JMF
 {
@@ -23,5 +24,6 @@ namespace JMF
                 }
             }
         }
+        public static ObjectPool ObjectPool = new ObjectPool();
     }
 }

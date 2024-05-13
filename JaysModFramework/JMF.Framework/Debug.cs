@@ -60,11 +60,11 @@ namespace JMF
                 Notify(logMessage);
             }
         }
-        public static Menu Menu(ObjectPool pool)
+        public static Menu Menu()
         {
-            _menu = new Menu("Debug", "Debug", "JMF Framework Debug Options", pool);
+            _menu = new Menu("Debug", "Debug", "JMF Framework Debug Options", Global.ObjectPool);
 
-            _menu.Add(InitButton(pool));
+            _menu.Add(InitButton(Global.ObjectPool));
             //AddClosetMenu(pool);
 
             _menu.Opening += Menu_Opening;
