@@ -45,6 +45,11 @@ namespace JMF.Modules
         {
             if (control == Control.CharacterWheel)
             {
+                _menu = new Menu("Interactions", Global.ObjectPool);
+                foreach (Menu menu in menuList)
+                {
+                    _menu.Add(menu);
+                }
                 _menu.Open();
             }
         }

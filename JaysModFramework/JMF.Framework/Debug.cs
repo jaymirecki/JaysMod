@@ -1,4 +1,6 @@
-﻿using JMF.Menus;
+﻿using JMF.Math;
+using JMF.Menus;
+using JMF.Native;
 using System;
 using System.IO;
 
@@ -65,12 +67,31 @@ namespace JMF
             _menu = new Menu("Debug", "Debug", "JMF Framework Debug Options", Global.ObjectPool);
 
             _menu.Add(InitButton(Global.ObjectPool));
+            MenuItem position = new MenuItem("Current Position");
+            position.Activated += (sender, args) =>
+            {
+                Notify("Current Position: " + Game.Player.Character.Position.ToString(), true);
+            };
+            MenuItem heading = new MenuItem("Current Heading");
+            heading.Activated += (sender, args) =>
+            {
+                Notify("Current Heading: " + Game.Player.Character.Heading.ToString(), true);
+            };
+            MenuItem interiorId = new MenuItem("Current InteriorId");
+            interiorId.Activated += (sender, args) =>
+            {
+                Vector3 curPos = Game.Player.Character.Position;
+                Notify("Current InteriorId: " + Function.Call<int>(Hash.GetInteriorAtCoords, curPos.X, curPos.Y, curPos.Z), true);
+            };
+
+            _menu.Add(position);
+            _menu.Add(heading);
+            _menu.Add(interiorId);
             //AddClosetMenu(pool);
 
             _menu.Opening += Menu_Opening;
             return _menu;
         }
-
         private static void Menu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
             CheckInitialization();
