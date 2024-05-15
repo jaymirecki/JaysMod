@@ -59,6 +59,54 @@
       <HumanName>CannonOn</HumanName>
       <GameName>set_int_02_cannon</GameName>
     </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingParamedic</HumanName>
+      <GameName>Set_Int_02_outfit_paramedic</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingMorgue</HumanName>
+      <GameName>Set_Int_02_outfit_morgue</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingServerFarm</HumanName>
+      <GameName>Set_Int_02_outfit_serverfarm</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingIaa</HumanName>
+      <GameName>Set_Int_02_outfit_iaa</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingStealAvenger</HumanName>
+      <GameName>Set_Int_02_outfit_steal_avenger</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingFoundry</HumanName>
+      <GameName>Set_Int_02_outfit_foundry</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingRiot</HumanName>
+      <GameName>Set_Int_02_outfit_riot_van</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingStromberg</HumanName>
+      <GameName>Set_Int_02_outfit_stromberg</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingSubmarine</HumanName>
+      <GameName>Set_Int_02_outfit_sub_finale</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingPredator</HumanName>
+      <GameName>Set_Int_02_outfit_predator</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingKhanjali</HumanName>
+      <GameName>Set_Int_02_outfit_khanjali</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ClothingVolatol</HumanName>
+      <GameName>Set_Int_02_outfit_volato</GameName>
+    </IPLEntitySet>
   </EntitySets>
   <DefaultEntitySets>
     <string>Walls</string>
@@ -66,5 +114,17 @@
     <string>SleepingUtility</string>
     <string>SecurityOn</string>
     <string>CannonOn</string>
+    <string>ClothingParamedic</string>
+    <string>ClothingMorgue</string>
+    <string>ClothingServerFarm</string>
+    <string>ClothingIaa</string>
+    <string>ClothingStealAvenger</string>
+    <string>ClothingFoundry</string>
+    <string>ClothingRiot</string>
+    <string>ClothingStromberg</string>
+    <string>ClothingSubmarine</string>
+    <string>ClothingPredator</string>
+    <string>ClothingKhanjali</string>
+    <string>ClothingVolatol</string>
   </DefaultEntitySets>
 </IPL>

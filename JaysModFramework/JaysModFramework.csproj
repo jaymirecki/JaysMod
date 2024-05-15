@@ -69,6 +69,7 @@
     <Compile Include="JMF.Interiors\IPLTheme.cs" />
     <Compile Include="JMF.Interiors\IPLEntitySet.cs" />
     <Compile Include="JMF.Interiors\IPL.cs" />
+    <Compile Include="JMF.Modules\InternalModules\Yacht.cs" />
     <Compile Include="JMF.Modules\InternalModules\IPLLoader.cs" />
     <Compile Include="JMF.Modules\ModuleSettings.cs" />
     <Compile Include="JMF.Modules\InternalModules\Respawner.cs" />
@@ -131,6 +132,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="JMFBin\config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\Hangar.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\SubmarineKosatka.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPL\Submarine.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JMFBin\Data\IPL\AircraftCarrier.xml">

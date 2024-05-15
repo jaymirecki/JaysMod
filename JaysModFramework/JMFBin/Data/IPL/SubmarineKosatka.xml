@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>SubmarineKosatka</ID>
+  <InteriorID>281345</InteriorID>
+  <Position>
+    <X>1559</X>
+    <Y>386</Y>
+    <Z>-50</Z>
+  </Position>
+  <IPLNames>
+      <string>xm_x17dlc_int_placement_interior_8_x17dlc_int_sub_milo_</string>
+  </IPLNames>
+  <EntitySets>
+    <IPLEntitySet>
+      <HumanName>Kosatka</HumanName>
+      <GameName>xm_x17dlc_int_sub</GameName>
+    </IPLEntitySet>
+  </EntitySets>
+</IPL>

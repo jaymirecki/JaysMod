@@ -121,6 +121,42 @@ namespace JMF
                     p6
                     );
             }
+            public static T Call<T>(Hash hash,
+                InputArgument p0,
+                InputArgument p1,
+                InputArgument p2,
+                InputArgument p3,
+                InputArgument p4,
+                InputArgument p5,
+                InputArgument p6,
+                InputArgument p7,
+                InputArgument p8,
+                InputArgument p9,
+                InputArgument p10,
+                InputArgument p11,
+                InputArgument p12,
+                InputArgument p13
+                )
+            {
+                return (T)Rage.Native.NativeFunction.Call
+                    ((ulong)hash,
+                    typeof(T),
+                    p0,
+                    p1,
+                    p2,
+                    p3,
+                    p4,
+                    p5,
+                    p6,
+                    p7,
+                    p8,
+                    p9,
+                    p10,
+                    p11,
+                    p12,
+                    p13
+                    );
+            }
             public static void Call(Hash hash)
             {
                 Rage.Native.NativeFunction.CallByHash<uint>((ulong)hash);
@@ -226,6 +262,78 @@ namespace JMF
                     p4,
                     p5,
                     p6
+                    );
+            }
+            public static void Call(Hash hash,
+                InputArgument p0,
+                InputArgument p1,
+                InputArgument p2,
+                InputArgument p3,
+                InputArgument p4,
+                InputArgument p5,
+                InputArgument p6,
+                InputArgument p7,
+                InputArgument p8,
+                InputArgument p9,
+                InputArgument p10,
+                InputArgument p11,
+                InputArgument p12,
+                InputArgument p13
+                )
+            {
+                Rage.Native.NativeFunction.CallByHash<uint>(
+                    (ulong)hash,
+                    p0,
+                    p1,
+                    p2,
+                    p3,
+                    p4,
+                    p5,
+                    p6,
+                    p7,
+                    p8,
+                    p9,
+                    p10,
+                    p11,
+                    p12,
+                    p13
+                    );
+            }
+            public static void Call(Hash hash,
+                InputArgument p0,
+                InputArgument p1,
+                InputArgument p2,
+                InputArgument p3,
+                InputArgument p4,
+                InputArgument p5,
+                InputArgument p6,
+                InputArgument p7,
+                InputArgument p8,
+                InputArgument p9,
+                InputArgument p10,
+                InputArgument p11,
+                InputArgument p12,
+                InputArgument p13,
+                InputArgument p14
+                )
+            {
+                Rage.Native.NativeFunction.CallByHash<uint>(
+                    (ulong)hash,
+                    p0,
+                    p1,
+                    p2,
+                    p3,
+                    p4,
+                    p5,
+                    p6,
+                    p7,
+                    p8,
+                    p9,
+                    p10,
+                    p11,
+                    p12,
+                    p13,
+                    p14
                     );
             }
         }

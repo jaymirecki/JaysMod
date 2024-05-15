@@ -20,7 +20,12 @@ namespace JMF
                 set
                 {
                     _position = value;
-                    InteriorID = Function.Call<int>(Hash.GetInteriorAtCoords, _position.X, _position.Y, _position.Z);
+                    int interiorId = Function.Call<int>(Hash.GetInteriorAtCoords, _position.X, _position.Y, _position.Z);
+                    if (interiorId != 0 && interiorId != InteriorID)
+                    {
+                        InteriorID = interiorId;
+                        Debug.Log(DebugSeverity.Info, "Set new InteriorID for IPL " + ID + ": " + interiorId);
+                    }
                 }
             }
             public List<string> IPLNames { get; set; }
@@ -86,6 +91,7 @@ namespace JMF
                     }
                 }
                 Function.Call(Hash.DisableInterior, InteriorID, false);
+                Function.Call(Hash.CapInterior, InteriorID, false);
                 foreach (string iplName in IPLNames)
                 {
                     Function.Call(Hash.RequestIpl, iplName);

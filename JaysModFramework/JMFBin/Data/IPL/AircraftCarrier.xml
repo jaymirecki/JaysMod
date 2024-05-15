@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>AircraftCarrier</ID>
+  <InteriorID>134401</InteriorID>
   <Position>
     <X>3082.3117</X>
     <Y>-4717.1191</Y>

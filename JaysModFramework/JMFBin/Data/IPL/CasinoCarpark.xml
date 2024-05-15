@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>CasinoCarpark</ID>
+  <InteriorID>274945</InteriorID>
   <Position>
     <X>1380</X>
     <Y>200</Y>
