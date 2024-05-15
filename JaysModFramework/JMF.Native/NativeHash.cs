@@ -94,6 +94,9 @@
             CreateObject = 0x509D5878EB39E842,
             AttachEntityToEntity = 0x6B9BBD38AB0796DF,
             GetClosestObjectOfType = 0xE143FA2249364369,
+            GetHashKey = 0xD24D37CC275948CC,
+            SetObjectTextureVariation = 0x971DA0055324D033,
+            DeleteObject = 0x539E0AE3E6634B9F,
         }
     }
 }

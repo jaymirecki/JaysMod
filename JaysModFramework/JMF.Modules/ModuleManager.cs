@@ -204,6 +204,7 @@ namespace JMF
             new FreemodePlayer();
             new Respawner();
             new IPLLoader();
+            new Yacht();
             while (true)
             {
                 ModuleManager.Tick();
