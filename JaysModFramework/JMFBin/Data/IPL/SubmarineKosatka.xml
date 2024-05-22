@@ -8,12 +8,6 @@
     <Z>-50</Z>
   </Position>
   <IPLNames>
-      <string>xm_x17dlc_int_placement_interior_8_x17dlc_int_sub_milo_</string>
+      <string>h4_int_placement_h4_interior_0_int_sub_h4_milo_</string>
   </IPLNames>
-  <EntitySets>
-    <IPLEntitySet>
-      <HumanName>Kosatka</HumanName>
-      <GameName>xm_x17dlc_int_sub</GameName>
-    </IPLEntitySet>
-  </EntitySets>
 </IPL>
