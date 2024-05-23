@@ -1,5 +1,4 @@
-﻿using JMF.Math;
-using InputArgument = Rage.Native.NativeArgument;
+﻿using InputArgument = Rage.Native.NativeArgument;
 
 namespace JMF
 {

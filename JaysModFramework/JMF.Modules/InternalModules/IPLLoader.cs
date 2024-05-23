@@ -1,9 +1,7 @@
 ﻿using JMF.Interiors;
-using JMF.Math;
-using JMF.Native;
-using System.Collections.Generic;
-using OOD.Collections;
 using JMF.Menus;
+using JMF.Native;
+using OOD.Collections;
 
 namespace JMF
 {

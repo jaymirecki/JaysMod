@@ -1,7 +1,4 @@
-﻿using JMF.Math;
-using JMF.Native;
-
-namespace JMF
+﻿namespace JMF
 {
     public enum BlipSprite
     {

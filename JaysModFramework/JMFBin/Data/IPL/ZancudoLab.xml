@@ -2,11 +2,7 @@
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>ZancudoLab</ID>
   <InteriorID>292097</InteriorID>
-  <Position>
-    <X>-1916.119</X>
-    <Y>3749.719</Y>
-    <Z>-100.000</Z>
-  </Position>
+  <Position X="-1916.119" Y="3749.719" Z="-100.000" />
   <IPLNames>
     <string>xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_</string>
   </IPLNames>

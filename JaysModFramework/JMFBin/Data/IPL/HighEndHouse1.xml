@@ -2,11 +2,7 @@
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>HighEndHouse1</ID>
   <InteriorID>207105</InteriorID>
-  <Position>
-    <X>-169.286</X>
-    <Y>486.4938</Y>
-    <Z>137.4436</Z>
-  </Position>
+  <Position X="-169.286" Y="486.4938" Z="137.4436" />
   <IPLNames>
     <string>xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_</string>
   </IPLNames>

@@ -1,6 +1,4 @@
-﻿using JMF.Math;
-
-namespace JMF
+﻿namespace JMF
 {
     namespace Interiors
     {

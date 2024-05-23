@@ -1,7 +1,4 @@
-﻿using JMF.Math;
-using JMF.Native;
-using JMF.UI;
-using System;
+﻿using System;
 
 namespace JMF.Modules
 {

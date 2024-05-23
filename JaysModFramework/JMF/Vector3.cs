@@ -1,4 +1,6 @@
-﻿namespace JMF.Math
+﻿using System.Xml.Serialization;
+
+namespace JMF
 {
     public struct Vector3
     {
@@ -6,8 +8,11 @@
         //                             Properties                            //
         ///////////////////////////////////////////////////////////////////////
         #region Properties
+        [XmlAttribute]
         public float X { get; set; }
+        [XmlAttribute]
         public float Y { get; set; }
+        [XmlAttribute]
         public float Z { get; set; }
         #endregion Properties
         ///////////////////////////////////////////////////////////////////////

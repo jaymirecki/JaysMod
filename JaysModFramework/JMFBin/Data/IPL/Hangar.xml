@@ -2,11 +2,7 @@
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>Hangar</ID>
   <InteriorID>260353</InteriorID>
-  <Position>
-    <X>-1267</X>
-    <Y>-3013</Y>
-    <Z>-49</Z>
-  </Position>
+  <Position X="-1267" Y="-3013" Z="-49" />
   <IPLNames>
     <string>sm_smugdlc_interior_placement_interior_0_smugdlc_int_01_milo_</string>
   </IPLNames>

@@ -2,11 +2,7 @@
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>AircraftCarrier</ID>
   <InteriorID>134401</InteriorID>
-  <Position>
-    <X>3082.3117</X>
-    <Y>-4717.1191</Y>
-    <Z>15.2622</Z>
-  </Position>
+  <Position X="3082.3117" Y="-4717.1191" Z="15.2622" />
   <IPLNames>
     <string>hei_carrier</string>
     <string>hei_carrier_int1</string>
@@ -27,16 +23,8 @@
   <Portals>
     <RoomPortal>
       <ID>One</ID>
-      <InPosition>
-        <X>3096.072</X>
-        <Y>-4708.496</Y>
-        <Z>12.24405</Z>
-      </InPosition>
-      <OutPosition>
-        <X>3095.885</X>
-        <Y>-4707.141</Y>
-        <Z>12.24405</Z>
-      </OutPosition>
+      <InPosition X="3096.072" Y="-4708.496" Z="12.24405" />
+      <OutPosition X="3095.885" Y="-4707.141" Z="12.24405" />
       <OutHeading>6.101664</OutHeading>
       <PortalType>Pedestrian</PortalType>
     </RoomPortal>

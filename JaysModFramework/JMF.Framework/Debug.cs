@@ -1,5 +1,4 @@
-﻿using JMF.Math;
-using JMF.Menus;
+﻿using JMF.Menus;
 using JMF.Native;
 using System;
 using System.IO;

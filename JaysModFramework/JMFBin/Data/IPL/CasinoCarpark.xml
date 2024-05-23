@@ -2,11 +2,7 @@
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>CasinoCarpark</ID>
   <InteriorID>274945</InteriorID>
-  <Position>
-    <X>1380</X>
-    <Y>200</Y>
-    <Z>-50</Z>
-  </Position>
+  <Position X="1380" Y="200" Z="-50" />
   <IPLNames>
     <string>vw_casino_carpark</string>
   </IPLNames>

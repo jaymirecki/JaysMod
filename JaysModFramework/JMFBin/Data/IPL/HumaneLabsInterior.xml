@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>HumaneLabsInterior</ID>
-  <Position>
-    <X>3540</X>
-    <Y>3672</Y>
-    <Z>28.2</Z>
-  </Position>
+  <Position X="3540" Y="3672" Z="28.2" />
 </IPL>

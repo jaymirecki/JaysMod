@@ -2,11 +2,7 @@
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>CargoShip</ID>
   <InteriorID>269313</InteriorID>
-  <Position>
-    <X>-344.4349</X>
-    <Y>-4062.832</Y>
-    <Z>17</Z>
-  </Position>
+  <Position X="-344.4349" Y="-4062.832" Z="17" />
   <IPLNames>
     <string>m23_2_cargoship</string>
     <string>m23_2_cargoship_bridge</string>

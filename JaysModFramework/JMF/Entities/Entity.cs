@@ -1,5 +1,4 @@
-﻿using JMF.Math;
-using JMF.Native;
+﻿using JMF.Native;
 
 namespace JMF
 {

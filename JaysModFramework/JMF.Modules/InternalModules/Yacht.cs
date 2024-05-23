@@ -1,5 +1,4 @@
 ﻿using JMF.Interiors;
-using JMF.Math;
 using JMF.Native;
 using System.Collections.Generic;
 

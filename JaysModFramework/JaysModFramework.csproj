@@ -95,7 +95,7 @@
     <Compile Include="JMF.Game\Game.cs" />
     <Compile Include="JMF.Game\Clock.cs" />
     <Compile Include="JMF.Game\Player.cs" />
-    <Compile Include="JMF.Math\Vector3.cs" />
+    <Compile Include="JMF\Vector3.cs" />
     <Compile Include="Menus\Aliases.cs" />
     <Compile Include="Menus\MenuListItem.cs" />
     <Compile Include="JMF\Entities\Model.cs" />
@@ -229,7 +229,9 @@
       <Name>OOD.Collections</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="JMF.Math\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\Plugins"

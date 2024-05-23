@@ -2,11 +2,7 @@
 <IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>BunkerInterior</ID>
   <InteriorID>258561</InteriorID>
-  <Position>
-    <X>892.6384</X>
-    <Y>-3245.8664</Y>
-    <Z>-98.2645</Z>
-  </Position>
+  <Position X="892.6384" Y="-3245.8664" Z="-98.2645" />
   <IPLNames>
     <string>gr_grdlc_interior_placement_interior_1_grdlc_int_02_milo_</string>
   </IPLNames>
