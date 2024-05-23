@@ -66,9 +66,13 @@
     <Compile Include="Clothing\MaleOutfitPieces.cs" />
     <Compile Include="JMF.Framework\Database.cs" />
     <Compile Include="JMF.Framework\Config.cs" />
+    <Compile Include="JMF.Interiors\Portal.cs" />
+    <Compile Include="JMF.Interiors\RoomPortalType.cs" />
+    <Compile Include="JMF.Interiors\RoomPortal.cs" />
     <Compile Include="JMF.Interiors\IPLTheme.cs" />
     <Compile Include="JMF.Interiors\IPLEntitySet.cs" />
     <Compile Include="JMF.Interiors\IPL.cs" />
+    <Compile Include="JMF.Modules\InternalModules\PortalManager.cs" />
     <Compile Include="JMF.Modules\InternalModules\Yacht.cs" />
     <Compile Include="JMF.Modules\InternalModules\IPLLoader.cs" />
     <Compile Include="JMF.Modules\ModuleSettings.cs" />

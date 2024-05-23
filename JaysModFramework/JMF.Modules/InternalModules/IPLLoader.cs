@@ -15,7 +15,7 @@ namespace JMF
             public override string ModuleName { get; } = "IPL Loader";
             public override string ModuleDescription { get; } = "Loads IPLs";
             public override IPLLoaderSettings Settings { get { return Global.Config.IPLLoaderSettings; } }
-            private XMLDatabaseTable<string, IPL> IPLs { get; set; }
+            public XMLDatabaseTable<string, IPL> IPLs { get; set; }
             public override void OnActivate()
             {
                 Function.Call(Hash.OnEnterMp);

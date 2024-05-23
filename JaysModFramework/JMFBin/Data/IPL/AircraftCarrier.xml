@@ -24,4 +24,21 @@
     <string>hei_carrier_lod</string>
     <string>hei_carrier_slod</string>
   </IPLNames>
+  <Portals>
+    <RoomPortal>
+      <ID>One</ID>
+      <InPosition>
+        <X>3096.072</X>
+        <Y>-4708.496</Y>
+        <Z>12.24405</Z>
+      </InPosition>
+      <OutPosition>
+        <X>3095.885</X>
+        <Y>-4707.141</Y>
+        <Z>12.24405</Z>
+      </OutPosition>
+      <OutHeading>6.101664</OutHeading>
+      <PortalType>Pedestrian</PortalType>
+    </RoomPortal>
+  </Portals>
 </IPL>

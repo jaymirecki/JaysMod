@@ -336,6 +336,61 @@ namespace JMF
                     p14
                     );
             }
+            public static void Call(Hash hash,
+                InputArgument p0,
+                InputArgument p1,
+                InputArgument p2,
+                InputArgument p3,
+                InputArgument p4,
+                InputArgument p5,
+                InputArgument p6,
+                InputArgument p7,
+                InputArgument p8,
+                InputArgument p9,
+                InputArgument p10,
+                InputArgument p11,
+                InputArgument p12,
+                InputArgument p13,
+                InputArgument p14,
+                InputArgument p15,
+                InputArgument p16,
+                InputArgument p17,
+                InputArgument p18,
+                InputArgument p19,
+                InputArgument p20,
+                InputArgument p21,
+                InputArgument p22,
+                InputArgument p23
+                )
+            {
+                Rage.Native.NativeFunction.CallByHash<uint>(
+                    (ulong)hash,
+                    p0,
+                    p1,
+                    p2,
+                    p3,
+                    p4,
+                    p5,
+                    p6,
+                    p7,
+                    p8,
+                    p9,
+                    p10,
+                    p11,
+                    p12,
+                    p13,
+                    p14,
+                    p15,
+                    p16,
+                    p17,
+                    p18,
+                    p19,
+                    p20,
+                    p21,
+                    p22,
+                    p23
+                    );
+            }
         }
     }
 }

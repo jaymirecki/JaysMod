@@ -32,6 +32,7 @@ namespace JMF
             public List<IPLEntitySet> EntitySets { get; set; } = new List<IPLEntitySet>();
             public List<IPLTheme> Themes { get; set; } = new List<IPLTheme>();
             public List<string> DefaultEntitySets { get; set; } = new List<string>();
+            public List<RoomPortal> Portals { get; set; } = new List<RoomPortal>();
             [XmlIgnore]
             private MenuListItem<string> _menuItem = null;
             public MenuListItem<string> MenuItem

@@ -10,4 +10,21 @@
   <IPLNames>
       <string>h4_int_placement_h4_interior_0_int_sub_h4_milo_</string>
   </IPLNames>
+  <Portals>
+    <RoomPortal>
+      <ID>One</ID>
+      <InPosition>
+        <X>1561.552</X>
+        <Y>392.0981</Y>
+        <Z>-49.58736</Z>
+      </InPosition>
+      <OutPosition>
+        <X>1561.47</X>
+        <Y>390.6165</Y>
+        <Z>-49.58736</Z>
+      </OutPosition>
+      <OutHeading>180</OutHeading>
+      <PortalType>Pedestrian</PortalType>
+    </RoomPortal>
+  </Portals>
 </IPL>

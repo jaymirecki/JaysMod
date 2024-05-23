@@ -205,6 +205,7 @@ namespace JMF
             new Respawner();
             new IPLLoader();
             new Yacht();
+            new PortalManager();
             while (true)
             {
                 ModuleManager.Tick();
