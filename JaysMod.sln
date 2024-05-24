@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOD.Collections", "OOD.Coll
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOD.Collections.Tests", "OOD.Collections.Tests\OOD.Collections.Tests.csproj", "{AE0CEE30-1CB5-437D-9943-357E0434CAC6}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DataCreation", "DataCreation\DataCreation.pyproj", "{6CB8136C-A5F3-436E-9FF5-EF5C769622D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +88,12 @@ Global
 		{AE0CEE30-1CB5-437D-9943-357E0434CAC6}.Release|x64.Build.0 = Release|Any CPU
 		{AE0CEE30-1CB5-437D-9943-357E0434CAC6}.Release|x86.ActiveCfg = Release|Any CPU
 		{AE0CEE30-1CB5-437D-9943-357E0434CAC6}.Release|x86.Build.0 = Release|Any CPU
+		{6CB8136C-A5F3-436E-9FF5-EF5C769622D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB8136C-A5F3-436E-9FF5-EF5C769622D9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6CB8136C-A5F3-436E-9FF5-EF5C769622D9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6CB8136C-A5F3-436E-9FF5-EF5C769622D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB8136C-A5F3-436E-9FF5-EF5C769622D9}.Release|x64.ActiveCfg = Release|Any CPU
+		{6CB8136C-A5F3-436E-9FF5-EF5C769622D9}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
