@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Worldspace xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>SanAndreas</ID>
+  <SnowLevel>1.0</SnowLevel>
+  <WeatherTypes>
+    <WeatherType>Clear</WeatherType>
+    <WeatherType>ExtraSunny</WeatherType>
+    <WeatherType>Clouds</WeatherType>
+    <WeatherType>Overcast</WeatherType>
+    <WeatherType>Rain</WeatherType>
+    <WeatherType>Clearing</WeatherType>
+    <WeatherType>Thunder</WeatherType>
+    <WeatherType>Smog</WeatherType>
+    <WeatherType>Foggy</WeatherType>
+  </WeatherTypes>
+</Worldspace>

@@ -99,6 +99,9 @@
             DeleteObject = 0x539E0AE3E6634B9F,
             DrawMarker = 0x28477EC23D892089,
             SetWeatherTypeNowPersist = 0xED712CA327900C8A,
+            GetSnowLevel = 0xC5868A966E5BE3AE,
+            SetSnowLevel = 0x7F06937B0CDCBC1A,
+            RequestNamedPtfxAsset = 0xB80D8756B4668AB6,
         }
     }
 }

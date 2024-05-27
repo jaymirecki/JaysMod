@@ -2,11 +2,16 @@
 
 namespace JMF
 {
-    public class World
+    public static class World
     {
-        public WeatherType Weather
+        public static float SnowLevel
         {
-            set { Function.Call(Hash.SetWeatherTypeNowPersist, value.ToString()); }
+            get { return Function.Call<float>(Hash.GetSnowLevel); }
+            set { Function.Call(Hash.SetSnowLevel, value); }
+        }
+        public static WeatherType Weather
+        {
+            set { Function.Call(Hash.SetWeatherTypeNowPersist, value.ToString().ToUpper()); }
         }
     }
 }

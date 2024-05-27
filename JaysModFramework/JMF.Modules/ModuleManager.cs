@@ -189,6 +189,18 @@ namespace JMF
                 Native.Function.Call<bool>(Native.Hash.IsControlPressed, 1, (int)control);
         }
         #endregion Tick cycle
+        public static T GetModule<T>(Type moduleType) where T: Module
+        {
+
+            foreach (Module module in ModuleManager.Modules)
+            {
+                if (module.GetType() == moduleType)
+                {
+                    return (T)module;
+                }
+            }
+            return null;
+        }
     }
     public class RageModuleScriptRunner
     {
@@ -206,6 +218,7 @@ namespace JMF
             new IPLLoader();
             new Yacht();
             new PortalManager();
+            new WorldspaceLoader();
             while (true)
             {
                 ModuleManager.Tick();
