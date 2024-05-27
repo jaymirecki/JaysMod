@@ -2,10 +2,20 @@
 
 namespace OOD.Collections
 {
+    public struct ValidationState
+    {
+        public bool IsValid;
+        public string ErrorMessage;
+        public ValidationState(bool isValid = true, string errorMessage = "")
+        {
+            IsValid = isValid;
+            ErrorMessage = errorMessage;
+        }
+    }
     public interface IXMLDatabaseItem<TKey>
     {
         TKey ID { get; }
-        bool Validate();
+        ValidationState Validate();
     }
     public abstract class XMLDatabaseTable<TKey, TValue> : IEnumerable where TValue: IXMLDatabaseItem<TKey>
     {

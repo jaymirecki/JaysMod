@@ -1,4 +1,5 @@
 ﻿using JMF.Utilities;
+using OOD.Collections;
 using Rage;
 
 namespace JMF.Clothing.Components
@@ -38,9 +39,9 @@ namespace JMF.Clothing.Components
             Components.SetComponent(ped, Jacket, OutfitComponents.Jacket);
             Components.SetComponent(ped, Badge, OutfitComponents.Badge);
         }
-        public bool Validate()
+        public ValidationState Validate()
         {
-            return true;
+            return new ValidationState();
         }
     }
 }

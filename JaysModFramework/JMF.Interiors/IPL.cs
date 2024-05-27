@@ -161,9 +161,9 @@ namespace JMF
                 Unload();
                 Load();
             }
-            public bool Validate()
+            public ValidationState Validate()
             {
-                return true;
+                return new ValidationState();
             }
         }
     }

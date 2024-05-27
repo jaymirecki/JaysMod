@@ -90,6 +90,8 @@
     <Compile Include="JMF\Blips\BlipColor.cs" />
     <Compile Include="JMF\Blips\BlipSprite.cs" />
     <Compile Include="JMF\Blips\Blip.cs" />
+    <Compile Include="JMF\World.cs" />
+    <Compile Include="JMF\WeatherType.cs" />
     <Compile Include="JMF\Entities\Entity.cs" />
     <Compile Include="JMF\Entities\Ped\PedHash.cs" />
     <Compile Include="JMF\Entities\Thread.cs" />

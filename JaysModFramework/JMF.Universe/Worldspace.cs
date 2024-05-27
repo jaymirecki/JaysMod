@@ -14,9 +14,9 @@ namespace JMF
             public string Name { get; set; }
             public List<TravelPoint> TravelPoints { get; set; } = new List<TravelPoint>();
             public List<WeatherType> WeatherTypes { get; set; } = new List<WeatherType>();
-            public bool Validate()
+            public ValidationState Validate()
             {
-                return true;
+                return new ValidationState();
             }
         }
     }

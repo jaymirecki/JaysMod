@@ -7,7 +7,7 @@
         Clouds,
         Overcast,
         Rain,
-        Clearing
+        Clearing,
         Thunder,
         Smog,
         Foggy,

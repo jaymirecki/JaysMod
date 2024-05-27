@@ -1,4 +1,5 @@
 ﻿using JMF.Utilities;
+using OOD.Collections;
 using Rage;
 
 namespace JMF.Clothing.Components
@@ -35,9 +36,9 @@ namespace JMF.Clothing.Components
             temp.Index = ParachuteComponent.Index + torsoParachuteIndex;
             Components.SetComponent(ped, temp, OutfitComponents.Parachute);
         }
-        public bool Validate()
+        public ValidationState Validate()
         {
-            return true;
+            return new ValidationState();
         }
     }
 }

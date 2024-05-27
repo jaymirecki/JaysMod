@@ -113,9 +113,9 @@ namespace JMF.Clothing
             Ears.SetToPed(ped);
             Wrist.SetToPed(ped);
         }
-        public bool Validate()
+        public ValidationState Validate()
         {
-            return true;
+            return new ValidationState();
         }
     }
 }

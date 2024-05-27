@@ -15,9 +15,9 @@ namespace OOD.Collections.Tests
             ID = id;
             Value = value;
         }
-        public bool Validate()
+        public ValidationState Validate()
         {
-            return true;
+            return new ValidationState();
         }
     }
     [TestClass]
