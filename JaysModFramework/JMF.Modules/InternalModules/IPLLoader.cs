@@ -13,34 +13,20 @@ namespace JMF
             public override string ModuleName { get; } = "IPL Loader";
             public override string ModuleDescription { get; } = "Loads IPLs";
             public override IPLLoaderSettings Settings { get { return Framework.Config.IPLLoaderSettings; } }
-            public XMLDatabaseTable<string, IPL> IPLs { get; set; }
             public override void OnActivate()
             {
                 Function.Call(Hash.OnEnterMp);
-                IPLs = new MemoryXMLDatabaseTable<string, IPL>(Framework.Config.DataPath, "IPLs");
             }
             protected override void AddMenuItems()
             {
-                foreach (IPL ipl in IPLs)
+                foreach (IPL ipl in Framework.Database.IPLs)
                 {
                     Menu.Add(ipl.MenuItem);
                 }
             }
-            public override void OnDeactivate()
-            {
-                if (IPLs == null)
-                {
-                    return;
-                }
-                foreach (IPL ipl in IPLs)
-                {
-                    ipl.Unload();
-                }
-
-            }
             public bool Load(string iplId)
             {
-                if (IPLs != null && IPLs.TryGetValue(iplId, out IPL ipl))
+                if (Framework.Database.IPLs.TryGetValue(iplId, out IPL ipl))
                 {
                     ipl.Load();
                     return true;
