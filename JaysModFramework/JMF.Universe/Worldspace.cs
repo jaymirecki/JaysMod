@@ -13,6 +13,7 @@ namespace JMF
             public string ID { get; set; }
             public string Name { get; set; }
             public List<TravelPoint> TravelPoints { get; set; } = new List<TravelPoint>();
+            public List<WeatherType> WeatherTypes { get; set; } = new List<WeatherType>();
             public bool Validate()
             {
                 return true;

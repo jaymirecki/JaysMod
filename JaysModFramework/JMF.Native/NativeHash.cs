@@ -98,6 +98,7 @@
             SetObjectTextureVariation = 0x971DA0055324D033,
             DeleteObject = 0x539E0AE3E6634B9F,
             DrawMarker = 0x28477EC23D892089,
+            SetWeatherTypeNowPersist = 0xED712CA327900C8A,
         }
     }
 }
