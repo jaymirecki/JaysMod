@@ -45,6 +45,6 @@
     </IPLEntitySet>
   </EntitySets>
   <DefaultEntitySets>
-    <string>null</string>
+    <string>Null</string>
   </DefaultEntitySets>
 </IPL>

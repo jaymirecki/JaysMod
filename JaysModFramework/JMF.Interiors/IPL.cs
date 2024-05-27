@@ -127,7 +127,7 @@ namespace JMF
                     foreach (string name in includeEntitySets)
                     {
                         bool found = false;
-                        if (name == "null") found = true;
+                        if (name == "Null") found = true;
                         foreach (IPLEntitySet entitySet in EntitySets)
                         {
                             if (entitySet.HumanName == name)
