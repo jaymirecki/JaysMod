@@ -46,8 +46,8 @@ namespace JMF
             Ears = new AlwaysEmptyXMLDatabaseTable<string, Ears>();
             Wrists = new AlwaysEmptyXMLDatabaseTable<string, Wrist>();
 
-            IPLs = new MemoryXMLDatabaseTable<string, IPL>(Global.Config.DataPath, "IPL");
-            Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Global.Config.DataPath, "Worldspaces");
+            IPLs = new MemoryXMLDatabaseTable<string, IPL>(Framework.Config.DataPath, "IPL");
+            Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Framework.Config.DataPath, "Worldspaces");
         }
         public void ClearCache()
         {

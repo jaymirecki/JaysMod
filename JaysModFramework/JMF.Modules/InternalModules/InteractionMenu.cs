@@ -11,7 +11,7 @@ namespace JMF.Modules
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         public override string ModuleName { get; } = "Interaction Menu for JMF";
         public override string ModuleDescription { get; } = "Creates an Interaction Menu. WARNING: Disabling this module may prevent correct use of other modules.";
-        public override ModuleSettings Settings { get { return Global.Config.InteractionMenuSettings; } }
+        public override ModuleSettings Settings { get { return Framework.Config.InteractionMenuSettings; } }
         private static List<Menu> menuList = new List<Menu>();
         public static void AddMenu(Menu menu)
         {
@@ -29,7 +29,7 @@ namespace JMF.Modules
         public override void OnControlReleased(Control control) {
             if (control == Control.SelectCharacterMultiplayer)
             {
-                _menu = new Menu("Interactions", Global.ObjectPool);
+                _menu = new Menu("Interactions", Framework.ObjectPool);
                 foreach(Menu menu in menuList)
                 {
                     _menu.Add(menu);
@@ -39,13 +39,13 @@ namespace JMF.Modules
         }
         public override void OnTick() 
         {
-            Global.ObjectPool.Process();
+            Framework.ObjectPool.Process();
         }
         public override void OnControlHeld(Control control)
         {
             if (control == Control.CharacterWheel)
             {
-                _menu = new Menu("Interactions", Global.ObjectPool);
+                _menu = new Menu("Interactions", Framework.ObjectPool);
                 foreach (Menu menu in menuList)
                 {
                     _menu.Add(menu);

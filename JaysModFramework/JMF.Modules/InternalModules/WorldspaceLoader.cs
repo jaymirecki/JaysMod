@@ -23,7 +23,7 @@ namespace JMF
             }
             public override void OnActivate()
             {
-                Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Global.Config.DataPath, "Worldspaces");
+                Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Framework.Config.DataPath, "Worldspaces");
                 Worldspaces.GetValue("SanAndreas").Load();
             }
             public override void OnDeactivate()

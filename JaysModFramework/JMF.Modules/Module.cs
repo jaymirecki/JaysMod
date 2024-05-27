@@ -106,7 +106,7 @@ namespace JMF
         {
             if (_menu == null)
             {
-                _menu = new Menu("Modules", ModuleName, ModuleDescription, Global.ObjectPool);
+                _menu = new Menu("Modules", ModuleName, ModuleDescription, Framework.ObjectPool);
                 enabledItem = new MenuListItem<string>(ModuleName, ModuleDescription, DeactivatedString, ActivatedString);
                 enabledItem.SelectedItem = IsActive ? ActivatedString : DeactivatedString;
                 enabledItem.ItemChanged += ItemChanged;

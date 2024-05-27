@@ -26,7 +26,7 @@ namespace JMF
         {
             if (_moduleMenu == null)
             {
-                _moduleMenu = new Menu("Modules", "Modules", Global.ObjectPool);
+                _moduleMenu = new Menu("Modules", "Modules", Framework.ObjectPool);
                 _moduleMenu.Opening += ModuleMenu_Opening;
             }
             return _moduleMenu;

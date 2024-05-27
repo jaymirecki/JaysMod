@@ -12,12 +12,12 @@ namespace JMF
             internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
             public override string ModuleName { get; } = "IPL Loader";
             public override string ModuleDescription { get; } = "Loads IPLs";
-            public override IPLLoaderSettings Settings { get { return Global.Config.IPLLoaderSettings; } }
+            public override IPLLoaderSettings Settings { get { return Framework.Config.IPLLoaderSettings; } }
             public XMLDatabaseTable<string, IPL> IPLs { get; set; }
             public override void OnActivate()
             {
                 Function.Call(Hash.OnEnterMp);
-                IPLs = new MemoryXMLDatabaseTable<string, IPL>(Global.Config.DataPath, "IPL");
+                IPLs = new MemoryXMLDatabaseTable<string, IPL>(Framework.Config.DataPath, "IPL");
             }
             protected override void AddMenuItems()
             {

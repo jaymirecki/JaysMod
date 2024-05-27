@@ -63,9 +63,8 @@ namespace JMF
         }
         public static Menu Menu()
         {
-            _menu = new Menu("Debug", "Debug", "JMF Framework Debug Options", Global.ObjectPool);
+            _menu = new Menu("Debug", "Debug", "JMF Framework Debug Options", Framework.ObjectPool);
 
-            _menu.Add(InitButton(Global.ObjectPool));
             MenuItem position = new MenuItem("Current Position");
             position.Activated += (sender, args) =>
             {
@@ -86,40 +85,8 @@ namespace JMF
             _menu.Add(position);
             _menu.Add(heading);
             _menu.Add(interiorId);
-            //AddClosetMenu(pool);
 
-            _menu.Opening += Menu_Opening;
             return _menu;
         }
-        private static void Menu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            CheckInitialization();
-        }
-        private static void CheckInitialization()
-        {
-            _initButton.Enabled = !NativeHash.Initialized;
-            if (NativeHash.Initialized)
-            {
-                _closetMenuItem.Enabled = true;
-            }
-        }
-
-        private static MenuItem InitButton(ObjectPool pool)
-        {
-            _initButton = new MenuItem("Initialize Framework", "Initialize JMF components");
-            _initButton.Activated += (sender, args) =>
-            {
-                NativeHash.Initialize();
-                //AddClosetMenu(pool);
-                CheckInitialization();
-            };
-            return _initButton;
-        }
-        //private static void AddClosetMenu(ObjectPool pool)
-        //{
-        //    Closet closet = new Closet();
-        //    Menu closetMenu = closet.Menu(Game.Player.Character, pool);
-        //    _closetMenuItem = _menu.Add(closetMenu);
-        //}
     }
 }

@@ -7,7 +7,7 @@ namespace JMF.Modules
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         public override string ModuleName { get; } = "Freemode Player";
         public override string ModuleDescription { get; } = "Converts the player to male freemode ped";
-        public override ModuleSettings Settings { get { return Global.Config.FreemodePlayerSettings; } }
+        public override ModuleSettings Settings { get { return Framework.Config.FreemodePlayerSettings; } }
         private Vector3 originalPosition;
         private float originalHeading;
         private DateTime originalTime;

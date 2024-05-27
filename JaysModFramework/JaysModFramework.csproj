@@ -87,6 +87,7 @@
     <Compile Include="JMF.UI\Input.cs" />
     <Compile Include="JMF.UI\Help.cs" />
     <Compile Include="JMF.Universe\TravelPoint.cs" />
+    <Compile Include="JMF.Universe\Map.cs" />
     <Compile Include="JMF.Universe\Worldspace.cs" />
     <Compile Include="JMF\Blips\BlipColor.cs" />
     <Compile Include="JMF\Blips\BlipSprite.cs" />
@@ -108,7 +109,6 @@
     <Compile Include="JMF.Modules\ModuleManager.cs" />
     <Compile Include="JMF.Modules\Module.cs" />
     <Compile Include="JMF.Framework\Framework.cs" />
-    <Compile Include="JMF.Framework\Global.cs" />
     <Compile Include="JMF.Framework\Debug.cs" />
     <Compile Include="JMF.Framework\IDGenerator.cs" />
     <Compile Include="JMF.Modules\InternalModules\InteractionMenu.cs" />

@@ -7,7 +7,7 @@ namespace JMF.Modules
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         public override string ModuleName { get; } = "Big Map SP";
         public override string ModuleDescription { get; } = "Enables use of larger radar from MP";
-        public override ModuleSettings Settings { get { return Global.Config.BigMapSettings; } }
+        public override ModuleSettings Settings { get { return Framework.Config.BigMapSettings; } }
         private bool _active = false;
         public BigMap() : base() { }
         public override void OnControlDoublePressed(Control control)

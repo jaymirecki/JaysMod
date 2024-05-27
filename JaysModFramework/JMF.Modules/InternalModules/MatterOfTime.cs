@@ -10,7 +10,7 @@ namespace JMF.Modules
         public override string ModuleName => "A Matter of Time";
 
         public override string ModuleDescription => "Functionality for modifying the flow of time. The Time Stone!";
-        public override ModuleSettings Settings { get { return Global.Config.MatterOfTimeSettings; } }
+        public override ModuleSettings Settings { get { return Framework.Config.MatterOfTimeSettings; } }
 
         public override void OnActivate()
         {

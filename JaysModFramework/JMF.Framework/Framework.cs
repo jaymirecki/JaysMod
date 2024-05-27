@@ -1,25 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JMF.Menus;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace JMF
 {
-    public static class NativeHash
+    public static class Framework
     {
-        public static bool Initialized { get; private set; }
-        public static void Initialize()
+        private const string ConfigFilepath = ".\\JMF\\config.xml";
+        public static Config Config
         {
-            if (!Initialized)
+            get
             {
-                ForceInitialize();
+                if (!File.Exists(ConfigFilepath))
+                {
+                    Debug.Log(DebugSeverity.Warning, "Could not find config.xml.");
+                    return new Config();
+                }
+                using (TextReader reader = new StreamReader(ConfigFilepath))
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(Config));
+                    return (Config)serializer.Deserialize(reader);
+                }
             }
         }
-        public static void ForceInitialize()
-        {
-            //Global.Database.InitializeIfNot();
-            Initialized = true;
-        }
+        public static Database Database = new Database();
+        public static ObjectPool ObjectPool = new ObjectPool();
     }
 }

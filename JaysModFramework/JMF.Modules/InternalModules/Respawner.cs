@@ -9,7 +9,7 @@ namespace JMF.Modules
         internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
         public override string ModuleName { get; } = "Respawner";
         public override string ModuleDescription { get; } = "Handles the respawn cycle for non-SP peds";
-        public override ModuleSettings Settings { get { return Global.Config.RespawnerSettings; } }
+        public override ModuleSettings Settings { get { return Framework.Config.RespawnerSettings; } }
         private bool respawning = false;
         public Respawner() : base() { }
         public override void OnTick()
