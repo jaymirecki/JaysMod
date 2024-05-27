@@ -38,5 +38,9 @@ namespace JMF.Clothing.Components
             Components.SetComponent(ped, Jacket, OutfitComponents.Jacket);
             Components.SetComponent(ped, Badge, OutfitComponents.Badge);
         }
+        public bool Validate()
+        {
+            return true;
+        }
     }
 }

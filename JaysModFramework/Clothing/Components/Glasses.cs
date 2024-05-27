@@ -25,5 +25,9 @@ namespace JMF.Clothing.Components
         {
             Components.SetProp(ped, GlassesComponent, Props.Glasses);
         }
+        public bool Validate()
+        {
+            return true;
+        }
     }
 }

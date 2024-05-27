@@ -5,6 +5,7 @@ namespace OOD.Collections
     public interface IXMLDatabaseItem<TKey>
     {
         TKey ID { get; }
+        bool Validate();
     }
     public abstract class XMLDatabaseTable<TKey, TValue> : IEnumerable where TValue: IXMLDatabaseItem<TKey>
     {

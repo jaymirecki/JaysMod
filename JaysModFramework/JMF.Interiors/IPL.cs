@@ -161,6 +161,10 @@ namespace JMF
                 Unload();
                 Load();
             }
+            public bool Validate()
+            {
+                return true;
+            }
         }
     }
 }

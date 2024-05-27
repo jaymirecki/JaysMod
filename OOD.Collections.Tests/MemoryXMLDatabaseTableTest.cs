@@ -15,6 +15,10 @@ namespace OOD.Collections.Tests
             ID = id;
             Value = value;
         }
+        public bool Validate()
+        {
+            return true;
+        }
     }
     [TestClass]
     public class MemoryXMLDatabaseTableTest

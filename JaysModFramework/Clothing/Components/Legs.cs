@@ -28,5 +28,9 @@ namespace JMF.Clothing.Components
             Components.SetComponent(ped, Lower, OutfitComponents.Lower);
             Components.SetComponent(ped, Shoes, OutfitComponents.Shoes);
         }
+        public bool Validate()
+        {
+            return true;
+        }
     }
 }

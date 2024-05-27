@@ -35,5 +35,9 @@ namespace JMF.Clothing.Components
             temp.Index = ParachuteComponent.Index + torsoParachuteIndex;
             Components.SetComponent(ped, temp, OutfitComponents.Parachute);
         }
+        public bool Validate()
+        {
+            return true;
+        }
     }
 }
