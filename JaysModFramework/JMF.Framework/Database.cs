@@ -1,5 +1,7 @@
 ﻿using JMF.Clothing;
 using JMF.Clothing.Components;
+using JMF.Interiors;
+using JMF.Universe;
 using OOD.Collections;
 using System.IO;
 
@@ -29,6 +31,8 @@ namespace JMF
         #endregion Props
         #endregion Outfits
         //public MemoryXMLDatabaseTable<string, Torso> Hair;
+        public XMLDatabaseTable<string, IPL> IPLs;
+        public XMLDatabaseTable<string, Worldspace> Worldspaces;
         public Database()
         {
             Outfits = new AlwaysEmptyXMLDatabaseTable<string, Outfit>();
@@ -41,6 +45,9 @@ namespace JMF
             Glasses = new AlwaysEmptyXMLDatabaseTable<string, Glasses>();
             Ears = new AlwaysEmptyXMLDatabaseTable<string, Ears>();
             Wrists = new AlwaysEmptyXMLDatabaseTable<string, Wrist>();
+
+            IPLs = new MemoryXMLDatabaseTable<string, IPL>(Global.Config.DataPath, "IPL");
+            Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Global.Config.DataPath, "Worldspaces");
         }
         public void ClearCache()
         {

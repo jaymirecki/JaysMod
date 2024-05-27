@@ -3,6 +3,8 @@ using JMF.Menus;
 using JMF.Native;
 using JMF.Universe;
 using OOD.Collections;
+using System;
+using System.Collections.Generic;
 
 namespace JMF
 {
@@ -15,6 +17,10 @@ namespace JMF
             public override string ModuleDescription { get; } = "Loads worldspaces";
             public override ModuleSettings Settings { get { return new ModuleSettings(); } }
             public XMLDatabaseTable<string, Worldspace> Worldspaces { get; set; }
+            public WorldspaceLoader() : base()
+            {
+                Dependencies.Add(typeof(IPLLoader));
+            }
             public override void OnActivate()
             {
                 Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Global.Config.DataPath, "Worldspaces");
