@@ -11,7 +11,7 @@ app = typer.Typer()
 @app.command()
 def convert_ipl_to_xml(
     source: str = "./ipl.csv",
-    destination: str = "../JaysModFramework/JMFBin/Data/IPL"
+    destination: str = "../JaysModFramework/JMFBin/Data/IPLs"
     ):
     source_path= os.path.abspath(source)
     destination_path = os.path.abspath(destination)
@@ -21,7 +21,7 @@ def convert_ipl_to_xml(
     
 @app.command()
 def convert_ipl_to_csv(
-    source: str = "../JaysModFramework/JMFBin/Data/IPL",
+    source: str = "../JaysModFramework/JMFBin/Data/IPLs",
     destination: str = "./ipl.csv"
     ):
     source_path= os.path.abspath(source)

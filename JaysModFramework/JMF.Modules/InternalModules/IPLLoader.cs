@@ -17,7 +17,7 @@ namespace JMF
             public override void OnActivate()
             {
                 Function.Call(Hash.OnEnterMp);
-                IPLs = new MemoryXMLDatabaseTable<string, IPL>(Framework.Config.DataPath, "IPL");
+                IPLs = new MemoryXMLDatabaseTable<string, IPL>(Framework.Config.DataPath, "IPLs");
             }
             protected override void AddMenuItems()
             {
