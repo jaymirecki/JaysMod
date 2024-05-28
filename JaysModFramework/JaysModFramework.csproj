@@ -188,7 +188,25 @@
     <Content Include="JMFBin\Data\IPLs\HumaneLabsDrainage.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="JMFBin\Data\IPLs\WarehouseLarge.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPLs\WarehouseMedium.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\IPLs\WarehouseSmall.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="JMFBin\Data\IPLs\ZancudoLab.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\Maps\MCUPlayground.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\Maps\MCUDC.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\Worldspaces\MCUDC.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JMFBin\Data\Worldspaces\SanAndreas.xml">

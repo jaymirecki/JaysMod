@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
+  <ID>WarehouseMedium</ID>
+  <DLC>Finance</DLC>
+  <IsOverworld>false</IsOverworld>
+  <Position X="1056" Y="-3106" Z="-40"/>
+  <IPLNames>
+    <string>ex_exec_warehouse_placement_interior_0_int_warehouse_m_dlc_milo_</string>
+  </IPLNames>
+</IPL>

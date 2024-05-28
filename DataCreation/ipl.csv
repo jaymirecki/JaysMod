@@ -14,4 +14,7 @@ HumaneLabsDrainage,GTA,,FALSE,3530:3708:21,,,,,
 HumaneLabsInterior,GTA,,FALSE,3540:3672:28.2,,,,,
 Submarine,Doomsday,271105,FALSE,514:4839:-62.6,xm_x17dlc_int_placement_interior_8_x17dlc_int_sub_milo_,Kosatka/xm_x17dlc_int_sub,,,
 SubmarineKosatka,CayoPerico,281345,FALSE,1559:386:-50,h4_int_placement_h4_interior_0_int_sub_h4_milo_,,,,One/1561.552:392.0981:-49.58736/1561.47:390.6165:-49.58736/180/Pedestrian
-ZancudoLab,,292097,FALSE,-1916:3750:-100,xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_,"Levers/entity_set_levers,Crates/entity_set_crates,Weapons/entity_set_weapons,Lights/entity_set_lift_lights",,,
+WarehouseLarge,Finance,,FALSE,1007:-3102:-40,ex_exec_warehouse_placement_interior_2_int_warehouse_l_dlc_milo_,,,,
+WarehouseMedium,Finance,,FALSE,1056:-3106:-40,ex_exec_warehouse_placement_interior_0_int_warehouse_m_dlc_milo_,,,,
+WarehouseSmall,Finance,,FALSE,1095:-3102:-40,ex_exec_warehouse_placement_interior_1_int_warehouse_s_dlc_milo_,,,,
+ZancudoLab,Other,292097,FALSE,-1916:3750:-100,xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_,"Levers/entity_set_levers,Crates/entity_set_crates,Weapons/entity_set_weapons,Lights/entity_set_lift_lights",,,

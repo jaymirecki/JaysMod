@@ -10,6 +10,7 @@ namespace JMF
         {
             public string ID { get; set; }
             public string Name { get; set; }
+            public List<string> Maps { get; set; } = new List<string>();
             public List<TravelPoint> TravelPoints { get; set; } = new List<TravelPoint>();
             public List<WeatherType> WeatherTypes { get; set; } = new List<WeatherType>();
             private static Random random = new Random();
@@ -23,6 +24,12 @@ namespace JMF
             }
             public void Load()
             {
+                foreach (string m in Maps)
+                {
+                    if (Framework.Database.Maps.TryGetValue(m, out Map map)) {
+                        map.Load();
+                    }
+                }
                 World.Weather = WeatherTypes[random.Next(WeatherTypes.Count)];
             }
             public void Unload()

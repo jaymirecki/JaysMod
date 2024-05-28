@@ -8,17 +8,22 @@ namespace JMF
     {
         public class Map: IXMLDatabaseItem<string>
         {
-            public string ID { get; set; }
-            public string Name { get; set; }
-            public List<IPLSettings> IPLs { get; set; }
-            public List<Portal> Portals { get; set; }
+            public string ID { get; set; } = "";
+            public string Name { get; set; } = "";
+            public bool IsOverworld { get; set; } = true;
+            public List<IPLSettings> IPLs { get; set; } = new List<IPLSettings>();
+            public List<Portal> Portals { get; set; } = new List<Portal>();
             public ValidationState Validate()
             {
                 foreach (IPLSettings iplSettings in IPLs)
                 {
-                    if (!Framework.Database.IPLs.Contains(iplSettings.ID))
+                    if (!Framework.Database.IPLs.TryGetValue(iplSettings.ID, out IPL ipl))
                     {
-                        Debug.Log(DebugSeverity.Error, "Map " + ID + " could not load IPL " + iplSettings.ID);
+                        return new ValidationState(false, "Map " + ID + " could not load IPL " + iplSettings.ID);
+                    }
+                    if (!IsOverworld && ipl.IsOverworld)
+                    {
+                        return new ValidationState(false, "Map " + ID + " is not marked overworld but IPL " + ipl.ID + " is");
                     }
                 }
                 return new ValidationState();
@@ -29,7 +34,7 @@ namespace JMF
                 {
                     if (Framework.Database.IPLs.TryGetValue(iplSettings.ID, out IPL ipl))
                     {
-                        ipl.Load();
+                        ipl.Load(iplSettings.EntitySets, iplSettings.Theme);
                     }
                     else
                     {

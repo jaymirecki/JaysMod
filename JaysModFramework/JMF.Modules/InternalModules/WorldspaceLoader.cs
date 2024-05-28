@@ -18,11 +18,11 @@ namespace JMF
             public override ModuleSettings Settings { get { return new ModuleSettings(); } }
             public override void OnActivate()
             {
-                Framework.Database.Worldspaces.GetValue("SanAndreas").Load();
+                Framework.Database.Worldspaces.GetValue("MCUDC").Load();
             }
             public override void OnDeactivate()
             {
-                Framework.Database.Worldspaces.GetValue("SanAndreas").Unload();
+                Framework.Database.Worldspaces.GetValue("MCUDC").Unload();
             }
         }
     }

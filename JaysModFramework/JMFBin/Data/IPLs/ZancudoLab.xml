@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <IPL>
   <ID>ZancudoLab</ID>
+  <DLC>Other</DLC>
   <InteriorID>292097</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="-1916" Y="3750" Z="-100"/>

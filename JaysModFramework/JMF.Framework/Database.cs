@@ -14,6 +14,7 @@ namespace JMF
         private const string _presetsDirectory = _baseDirectory + "Presets\\";
         private const string _clothingDirectory = _presetsDirectory + "Clothing\\";
         private const string _iplsDirectory = "IPLs";
+        private const string _mapsDirectory = "Maps";
         private const string _worldspacesDirectory = "Worldspaces";
 
         #region Outfits
@@ -35,6 +36,7 @@ namespace JMF
         //public MemoryXMLDatabaseTable<string, Torso> Hair;
         public XMLDatabaseTable<string, IPL> IPLs;
         public XMLDatabaseTable<string, Worldspace> Worldspaces;
+        public XMLDatabaseTable<string, Map> Maps;
         public Database()
         {
             Outfits = new AlwaysEmptyXMLDatabaseTable<string, Outfit>();
@@ -49,6 +51,7 @@ namespace JMF
             Wrists = new AlwaysEmptyXMLDatabaseTable<string, Wrist>();
 
             IPLs = new MemoryXMLDatabaseTable<string, IPL>(Framework.Config.DataPath, _iplsDirectory);
+            Maps = new MemoryXMLDatabaseTable<string, Map>(Framework.Config.DataPath, _mapsDirectory);
             Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Framework.Config.DataPath, _worldspacesDirectory);
         }
         public void ClearCache()
