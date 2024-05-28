@@ -12,7 +12,7 @@ Hangar,Smugglers,260353,FALSE,-1267:-3013:-49,sm_smugdlc_interior_placement_inte
 HighEndHouse1,Executive,207105,FALSE,-169:486:137.5,xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_,"StripA/Apart_Hi_Strip_A,StripB/Apart_Hi_Strip_B,StripC/Apart_Hi_Strip_C,BoozeA/Apart_Hi_Booze_A,BoozeB/Apart_Hi_Booze_B,BoozeC/Apart_Hi_Booze_C,SmokesA/Apart_Hi_Smokes_A,SmokesB/Apart_Hi_Smokes_B,SmokesC/Apart_Hi_Smokes_C",,Null,
 HumaneLabsDrainage,GTA,,FALSE,3530:3708:21,,,,,
 HumaneLabsInterior,GTA,,FALSE,3540:3672:28.2,,,,,
-Submarine,Doomsday,271105,FALSE,514:4839:-62.6,xm_x17dlc_int_placement_interior_8_x17dlc_int_sub_milo_,Kosatka/xm_x17dlc_int_sub,,,
+Submarine,Doomsday,271105,FALSE,514:4839:-62,xm_x17dlc_int_placement_interior_8_x17dlc_int_sub_milo_,Kosatka/xm_x17dlc_int_sub,,,
 SubmarineKosatka,CayoPerico,281345,FALSE,1559:386:-50,h4_int_placement_h4_interior_0_int_sub_h4_milo_,,,,One/1561.552:392.0981:-49.58736/1561.47:390.6165:-49.58736/180/Pedestrian
 WarehouseLarge,Finance,,FALSE,1007:-3102:-40,ex_exec_warehouse_placement_interior_2_int_warehouse_l_dlc_milo_,,,,
 WarehouseMedium,Finance,,FALSE,1056:-3106:-40,ex_exec_warehouse_placement_interior_0_int_warehouse_m_dlc_milo_,,,,

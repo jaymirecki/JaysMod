@@ -4,7 +4,7 @@
   <DLC>Doomsday</DLC>
   <InteriorID>271105</InteriorID>
   <IsOverworld>false</IsOverworld>
-  <Position X="514" Y="4839" Z="-62.6"/>
+  <Position X="514" Y="4839" Z="-62"/>
   <IPLNames>
     <string>xm_x17dlc_int_placement_interior_8_x17dlc_int_sub_milo_</string>
   </IPLNames>
