@@ -13,6 +13,10 @@ namespace JMF
             public override string ModuleName { get; } = "IPL Loader";
             public override string ModuleDescription { get; } = "Loads IPLs";
             public override IPLLoaderSettings Settings { get { return Framework.Config.IPLLoaderSettings; } }
+            public IPLLoader()
+            {
+                Dependencies.Add(typeof(InteractionMenu));
+            }
             public override void OnActivate()
             {
                 Function.Call(Hash.OnEnterMp);

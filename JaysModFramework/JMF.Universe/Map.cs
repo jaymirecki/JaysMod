@@ -1,7 +1,5 @@
 ﻿using JMF.Interiors;
-using JMF.Modules;
 using OOD.Collections;
-using System;
 using System.Collections.Generic;
 
 namespace JMF
@@ -12,30 +10,30 @@ namespace JMF
         {
             public string ID { get; set; }
             public string Name { get; set; }
-            public List<string> IPLs { get; set; }
+            public List<IPLSettings> IPLs { get; set; }
             public List<Portal> Portals { get; set; }
             public ValidationState Validate()
             {
-                foreach (string iplId in IPLs)
+                foreach (IPLSettings iplSettings in IPLs)
                 {
-                    if (!Framework.Database.IPLs.Contains(iplId))
+                    if (!Framework.Database.IPLs.Contains(iplSettings.ID))
                     {
-                        Debug.Log(DebugSeverity.Error, "Map " + ID + " could not load IPL " + iplId);
+                        Debug.Log(DebugSeverity.Error, "Map " + ID + " could not load IPL " + iplSettings.ID);
                     }
                 }
                 return new ValidationState();
             }
             public void Load()
             {
-                foreach (string iplId in IPLs)
+                foreach (IPLSettings iplSettings in IPLs)
                 {
-                    if (Framework.Database.IPLs.TryGetValue(iplId, out IPL ipl))
+                    if (Framework.Database.IPLs.TryGetValue(iplSettings.ID, out IPL ipl))
                     {
                         ipl.Load();
                     }
                     else
                     {
-                        Debug.Log(DebugSeverity.Error, "Map " + ID + " could not load IPL " + iplId);
+                        Debug.Log(DebugSeverity.Error, "Map " + ID + " could not load IPL " + iplSettings.ID);
                     }
                 }
             }

@@ -217,7 +217,6 @@ namespace JMF
             new Respawner();
             new IPLLoader();
             new Yacht();
-            new PortalManager();
             new WorldspaceLoader();
             while (true)
             {
