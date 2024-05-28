@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace OOD.Collections
 {
@@ -17,13 +18,19 @@ namespace OOD.Collections
         TKey ID { get; }
         ValidationState Validate();
     }
-    public abstract class XMLDatabaseTable<TKey, TValue> : IEnumerable where TValue: IXMLDatabaseItem<TKey>
+    public abstract class XMLDatabaseTable: IEnumerable
     {
-        #region Properties
         public string TableName { get; internal set; }
         public string Directory { get; internal set; }
         public abstract bool ReadOnly { get; }
         public abstract int Count { get; }
+        public abstract IEnumerator GetEnumerator();
+        public abstract void ClearCache();
+        public abstract List<ValidationState> Validate(bool throwException = false);
+    }
+    public abstract class XMLDatabaseTable<TKey, TValue> : XMLDatabaseTable where TValue: IXMLDatabaseItem<TKey>
+    {
+        #region Properties
         public TValue this[TKey key]
         {
             get { return GetValue(key); }
@@ -61,7 +68,5 @@ namespace OOD.Collections
             TryRemoveValue(id);
         }
         #endregion RemoveValue
-        public abstract IEnumerator GetEnumerator();
-        public abstract void ClearCache();
     }
 }

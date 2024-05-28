@@ -3,6 +3,7 @@ using JMF.Clothing.Components;
 using JMF.Interiors;
 using JMF.Universe;
 using OOD.Collections;
+using System.Collections.Generic;
 using System.IO;
 
 namespace JMF
@@ -39,6 +40,10 @@ namespace JMF
         public XMLDatabaseTable<string, Map> Maps;
         public Database()
         {
+            Load();
+        }
+        public void Load()
+        {
             Outfits = new AlwaysEmptyXMLDatabaseTable<string, Outfit>();
             Masks = new AlwaysEmptyXMLDatabaseTable<string, Mask>();
             Torsos = new AlwaysEmptyXMLDatabaseTable<string, Torso>();
@@ -53,6 +58,23 @@ namespace JMF
             IPLs = new MemoryXMLDatabaseTable<string, IPL>(Framework.Config.DataPath, _iplsDirectory);
             Maps = new MemoryXMLDatabaseTable<string, Map>(Framework.Config.DataPath, _mapsDirectory);
             Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Framework.Config.DataPath, _worldspacesDirectory);
+        }
+        public void Validate()
+        {
+            ValidateDatabase(IPLs);
+            ValidateDatabase(Maps);
+            ValidateDatabase(Worldspaces);
+        }
+        private void ValidateDatabase(XMLDatabaseTable database)
+        {
+            List<ValidationState> states = database.Validate();
+            foreach (ValidationState s in states)
+            {
+                if (!s.IsValid)
+                {
+                    Debug.Log(DebugSeverity.Error, s.ErrorMessage);
+                }
+            }
         }
         public void ClearCache()
         {

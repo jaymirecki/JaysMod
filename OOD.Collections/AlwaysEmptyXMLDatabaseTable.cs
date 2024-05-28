@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -59,5 +60,9 @@ namespace OOD.Collections
         }
         #endregion IEnumerable
         public override void ClearCache() { }
+        public override List<ValidationState> Validate(bool throwException = false)
+        {
+            return new List<ValidationState>() { new ValidationState() };
+        }
     }
 }

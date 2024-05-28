@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -107,5 +109,31 @@ namespace OOD.Collections
                 }
             }
         }
+        public override List<ValidationState> Validate(bool throwException = false)
+        {
+            List<ValidationState> states = new List<ValidationState>();
+            foreach (TValue v in values.Values)
+            {
+                ValidationState s = v.Validate();
+                if (!s.IsValid)
+                {
+                    if (throwException)
+                    {
+                        throw new InvalidDatabaseItemException(s.ErrorMessage);
+                    }
+                    states.Add(s);
+                }
+            }
+            if (states.Count < 1)
+            {
+                states.Add(new ValidationState(true));
+            }
+            return states;
+        }
+    }
+    public class InvalidDatabaseItemException : Exception
+    {
+        public InvalidDatabaseItemException() { }
+        public InvalidDatabaseItemException(string message) : base(message) { }
     }
 }
