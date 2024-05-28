@@ -18,8 +18,6 @@ namespace JMF
         private static readonly StreamWriter _logWriter = new StreamWriter(_logStream);
         public static bool DEBUG = false;
         private static Menu _menu;
-        private static MenuItem _initButton;
-        private static SubmenuItem _closetMenuItem;
         private static void Notify(string value, bool overrideDebugFlag = false)
         {
             if (DEBUG || overrideDebugFlag)

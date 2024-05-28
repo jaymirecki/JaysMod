@@ -11,7 +11,6 @@ namespace JMF.Modules
         public override string ModuleDescription { get; } = "Enables use of larger radar from MP";
         public override ModuleSettings Settings { get { return new ModuleSettings(true); } }
         private List<Portal> portals = new List<Portal>();
-        private IPLLoader IPLs = new IPLLoader();
         public PortalManager() : base() { }
         public override void OnActivate()
         {
@@ -22,8 +21,8 @@ namespace JMF.Modules
         {
             foreach (Portal portal in portals)
             {
-                RoomPortal inPortal = IPLs.IPLs.GetValue(portal.InPortalIPL).Portals.Find((RoomPortal p) => p.ID == portal.InPortalID);
-                RoomPortal outPortal = IPLs.IPLs.GetValue(portal.OutPortalIPL).Portals.Find((RoomPortal p) => p.ID == portal.OutPortalID);
+                RoomPortal inPortal = Framework.Database.IPLs.GetValue(portal.InPortalIPL).Portals.Find((RoomPortal p) => p.ID == portal.InPortalID);
+                RoomPortal outPortal = Framework.Database.IPLs.GetValue(portal.OutPortalIPL).Portals.Find((RoomPortal p) => p.ID == portal.OutPortalID);
                 Function.Call(Hash.DrawMarker, 1, inPortal.InPosition.X, inPortal.InPosition.Y, inPortal.InPosition.Z - 1, 0f, 0f, 0f, 0f, 0f, 0f, 1f, 1f, 1f, 255, 128, 0, 50, false, false, 2, false, 0, 0, false);
                 Function.Call(Hash.DrawMarker, 1, outPortal.InPosition.X, outPortal.InPosition.Y, outPortal.InPosition.Z - 1, 0f, 0f, 0f, 0f, 0f, 0f, 1f, 1f, 1f, 255, 128, 0, 50, false, false, 2, false, 0, 0, false);
                 if (Game.Player.Character.Position.DistanceTo(inPortal.InPosition) < .5f)

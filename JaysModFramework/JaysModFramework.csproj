@@ -143,52 +143,52 @@
     <Content Include="JMFBin\config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\Hangar.xml">
+    <Content Include="JMFBin\Data\IPLs\Hangar.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\HumaneLabsInterior.xml">
+    <Content Include="JMFBin\Data\IPLs\HumaneLabsInterior.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\SubmarineKosatka.xml">
+    <Content Include="JMFBin\Data\IPLs\SubmarineKosatka.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\Submarine.xml">
+    <Content Include="JMFBin\Data\IPLs\Submarine.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\AircraftCarrier.xml">
+    <Content Include="JMFBin\Data\IPLs\AircraftCarrier.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\BunkerInterior.xml">
+    <Content Include="JMFBin\Data\IPLs\BunkerInterior.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\CargoShip.xml">
+    <Content Include="JMFBin\Data\IPLs\CargoShip.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\CasinoCarpark.xml">
+    <Content Include="JMFBin\Data\IPLs\CasinoCarpark.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\CasinoFloor.xml">
+    <Content Include="JMFBin\Data\IPLs\CasinoFloor.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\CasinoGarage.xml">
+    <Content Include="JMFBin\Data\IPLs\CasinoGarage.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\CasinoPenthouse.xml">
+    <Content Include="JMFBin\Data\IPLs\CasinoPenthouse.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\FacilityExterior.xml">
+    <Content Include="JMFBin\Data\IPLs\FacilityExterior.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\FacilityInterior.xml">
+    <Content Include="JMFBin\Data\IPLs\FacilityInterior.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\HighEndHouse1.xml">
+    <Content Include="JMFBin\Data\IPLs\HighEndHouse1.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\HumaneLabsDrainage.xml">
+    <Content Include="JMFBin\Data\IPLs\HumaneLabsDrainage.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\IPL\ZancudoLab.xml">
+    <Content Include="JMFBin\Data\IPLs\ZancudoLab.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JMFBin\Data\Worldspaces\SanAndreas.xml">
@@ -237,9 +237,7 @@
       <Name>OOD.Collections</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="JMF.Math\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\Plugins"

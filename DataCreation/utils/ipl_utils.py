@@ -6,7 +6,6 @@ import csv
 import sys
 import utils.xml_to_csv as to_csv
 import utils.csv_to_xml as to_xml
-#import xml.etree.ElementTree as ET
 import lxml.etree as ET
 
 def xml_to_csv(root: ET.Element):

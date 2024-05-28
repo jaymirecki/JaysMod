@@ -14,27 +14,34 @@ namespace JMF
             public string Name { get; set; }
             public List<string> IPLs { get; set; }
             public List<Portal> Portals { get; set; }
-            private IPLLoader IPLLoader
-            {
-                get { return ModuleManager.GetModule<IPLLoader>(typeof(IPLLoader)); }
-            }
             public ValidationState Validate()
             {
+                foreach (string iplId in IPLs)
+                {
+                    if (!Framework.Database.IPLs.Contains(iplId))
+                    {
+                        Debug.Log(DebugSeverity.Error, "Map " + ID + " could not load IPL " + iplId);
+                    }
+                }
                 return new ValidationState();
             }
             public void Load()
             {
-                foreach (string ipl in IPLs)
+                foreach (string iplId in IPLs)
                 {
-                    if (!IPLLoader.Load(ipl))
+                    if (Framework.Database.IPLs.TryGetValue(iplId, out IPL ipl))
                     {
-                        Debug.Log(DebugSeverity.Error, "Map " + ID + " could not load IPL " + ipl);
+                        ipl.Load();
+                    }
+                    else
+                    {
+                        Debug.Log(DebugSeverity.Error, "Map " + ID + " could not load IPL " + iplId);
                     }
                 }
             }
             public void Unload()
             {
-                World.Weather = WeatherType.Clear;
+
             }
         }
     }
