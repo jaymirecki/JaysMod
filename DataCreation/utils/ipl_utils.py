@@ -12,6 +12,7 @@ def xml_to_csv(root: ET.Element):
     id = to_csv.element_text_or_default(root, "ID")
     dlc = to_csv.element_text_or_default(root, "DLC")
     interior_id = to_csv.element_text_or_default(root, "InteriorID")
+    is_overworld = to_csv.element_bool_or_default(root, "IsOverworld")
     position = to_csv.vector(root.find("Position"))
     ipl_names = to_csv.element_list(root, "IPLNames")
     entity_sets = to_csv.multipart_list(root, "EntitySets", ["HumanName", "GameName"])
@@ -19,7 +20,7 @@ def xml_to_csv(root: ET.Element):
     default_entity_sets = to_csv.element_list(root, "DefaultEntitySets")
     portals = to_csv.multipart_list(root, "Portals", ["ID", "InPosition", "OutPosition", "OutHeading", "PortalType"])
 
-    return [id, dlc, interior_id,position,ipl_names, entity_sets, themes, default_entity_sets, portals]
+    return [id, dlc, interior_id, is_overworld, position,ipl_names, entity_sets, themes, default_entity_sets, portals]
 
 def csv_to_xml(row, destination_path):
     root = ET.Element("IPL")

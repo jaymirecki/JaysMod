@@ -29,7 +29,7 @@ def convert_ipl_to_csv(
 
     with open(destination_path, "w", newline="") as output:
         csv_writer = csv.writer(output)
-        csv_writer.writerow(["ID", "DLC", "InteriorID","Position","IPLNames","EntitySets", "Themes", "DefaultEntitySets","Portals"])
+        csv_writer.writerow(["ID", "DLC", "InteriorID", "IsOverworld", "Position","IPLNames","EntitySets", "Themes", "DefaultEntitySets","Portals"])
         for file in os.listdir(source_path):
             filepath = os.path.join(source_path, file)
             tree = ET.parse(filepath)

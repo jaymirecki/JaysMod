@@ -9,6 +9,9 @@ import math
 def element_text_or_default(root: ET.Element, tag: str, default: str = ""):
     return root.find(tag).text if not root.find(tag) is None else default
 
+def element_bool_or_default(root: ET.Element, tag: str, default: bool = False):
+    return str(root.find(tag).text).upper() if not root.find(tag) is None else default
+
 def element_children_to_list(root: ET.Element, tag: str):
     elem = root.find(tag)
     content = ""
