@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
   <ID>Submarine</ID>
+  <DLC>Doomsday</DLC>
   <InteriorID>271105</InteriorID>
-  <Position X="514.33" Y="4839.18" Z="-62.59" />
+  <IsOverworld>false</IsOverworld>
+  <Position X="514" Y="4839" Z="-62.6"/>
   <IPLNames>
-      <string>xm_x17dlc_int_placement_interior_8_x17dlc_int_sub_milo_</string>
+    <string>xm_x17dlc_int_placement_interior_8_x17dlc_int_sub_milo_</string>
   </IPLNames>
   <EntitySets>
     <IPLEntitySet>

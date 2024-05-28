@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
   <ID>BunkerInterior</ID>
+  <DLC>Gunrunning</DLC>
   <InteriorID>258561</InteriorID>
-  <Position X="892.6384" Y="-3245.8664" Z="-98.2645" />
+  <IsOverworld>false</IsOverworld>
+  <Position X="893" Y="-3246" Z="-98.2"/>
   <IPLNames>
     <string>gr_grdlc_interior_placement_interior_1_grdlc_int_02_milo_</string>
   </IPLNames>

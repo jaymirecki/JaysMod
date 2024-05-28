@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
   <ID>ZancudoLab</ID>
   <InteriorID>292097</InteriorID>
-  <Position X="-1916.119" Y="3749.719" Z="-100.000" />
+  <IsOverworld>false</IsOverworld>
+  <Position X="-1916" Y="3750" Z="-100"/>
   <IPLNames>
     <string>xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_</string>
   </IPLNames>
@@ -24,6 +25,4 @@
       <GameName>entity_set_lift_lights</GameName>
     </IPLEntitySet>
   </EntitySets>
-  <DefaultEntitySets>
-  </DefaultEntitySets>
 </IPL>

@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
   <ID>SubmarineKosatka</ID>
+  <DLC>CayoPerico</DLC>
   <InteriorID>281345</InteriorID>
-  <Position X="1559" Y="386" Z="-50" />
+  <IsOverworld>false</IsOverworld>
+  <Position X="1559" Y="386" Z="-50"/>
   <IPLNames>
-      <string>h4_int_placement_h4_interior_0_int_sub_h4_milo_</string>
+    <string>h4_int_placement_h4_interior_0_int_sub_h4_milo_</string>
   </IPLNames>
   <Portals>
     <RoomPortal>
       <ID>One</ID>
-      <InPosition X="1561.552" Y="392.0981" Z="-49.58736" />
-      <OutPosition X="1561.47" Y="390.6165" Z="-49.58736" />
+      <InPosition X="1561.552" Y="392.0981" Z="-49.58736"/>
+      <OutPosition X="1561.47" Y="390.6165" Z="-49.58736"/>
       <OutHeading>180</OutHeading>
       <PortalType>Pedestrian</PortalType>
     </RoomPortal>

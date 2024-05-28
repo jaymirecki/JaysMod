@@ -18,6 +18,10 @@ def element_with_int(root, tag, text):
         return element_with_text(root, tag, str(int(float(text))))
     finally:
         return None
+def element_with_bool(root, tag, text):
+    if type(text) is bool:
+        return element_with_text(root, tag, str(text).lower())
+    return None
 
 def vector(root, tag, vector):
     try:

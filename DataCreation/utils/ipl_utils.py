@@ -26,6 +26,7 @@ def csv_to_xml(row, destination_path):
     id = to_xml.element_with_text(root, "ID", row["ID"])
     dlc = to_xml.element_with_text(root, "DLC", row["DLC"])
     interior_id = to_xml.element_with_int(root, "InteriorID", row["InteriorID"])
+    is_overworld = to_xml.element_with_bool(root, "IsOverworld", row["IsOverworld"])
     position = to_xml.vector(root, "Position", row["Position"])
     ipl_names = to_xml.element_list(root, "IPLNames", row["IPLNames"])
     entity_sets = to_xml.multipart_list(root, "EntitySets", row["EntitySets"], "IPLEntitySet", ["HumanName", "GameName"])

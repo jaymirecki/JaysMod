@@ -10,8 +10,10 @@ namespace JMF
     {
         public class IPL: IXMLDatabaseItem<string>
         {
-            public string ID { get; set; }
+            public string ID { get; set; } = "";
+            public string DLC { get; set; } = "";
             public int InteriorID { get; set; } = 0;
+            public bool IsOverworld { get; set; } = false;
             private Vector3 _position = new Vector3();
             public Vector3 Position
             {
@@ -76,6 +78,7 @@ namespace JMF
             }
             public void Load(List<string> includeEntitySets = null, string selectedTheme = "")
             {
+                Debug.Notify(ID + ": " + IsOverworld, true);
                 Unload();
                 if (includeEntitySets == null)
                 {

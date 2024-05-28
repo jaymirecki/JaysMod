@@ -1,49 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
   <ID>Hangar</ID>
+  <DLC>Smugglers</DLC>
   <InteriorID>260353</InteriorID>
-  <Position X="-1267" Y="-3013" Z="-49" />
+  <IsOverworld>false</IsOverworld>
+  <Position X="-1267" Y="-3013" Z="-49"/>
   <IPLNames>
     <string>sm_smugdlc_interior_placement_interior_0_smugdlc_int_01_milo_</string>
   </IPLNames>
-  <Themes>
-    <IPLTheme>
-      <Name>Red</Name>
-      <Index>1</Index>
-    </IPLTheme>
-    <IPLTheme>
-      <Name>White</Name>
-      <Index>2</Index>
-    </IPLTheme>
-    <IPLTheme>
-      <Name>Orange</Name>
-      <Index>3</Index>
-    </IPLTheme>
-    <IPLTheme>
-      <Name>Blue</Name>
-      <Index>4</Index>
-    </IPLTheme>
-    <IPLTheme>
-      <Name>Gray</Name>
-      <Index>5</Index>
-    </IPLTheme>
-    <IPLTheme>
-      <Name>Yellow</Name>
-      <Index>6</Index>
-    </IPLTheme>
-    <IPLTheme>
-      <Name>White</Name>
-      <Index>7</Index>
-    </IPLTheme>
-    <IPLTheme>
-      <Name>Black</Name>
-      <Index>8</Index>
-    </IPLTheme>
-    <IPLTheme>
-      <Name>Gray</Name>
-      <Index>9</Index>
-    </IPLTheme>
-  </Themes>
   <EntitySets>
     <IPLEntitySet>
       <HumanName>Walls</HumanName>
@@ -98,6 +62,44 @@
       <GameName>set_bedroom_blinds_closed</GameName>
     </IPLEntitySet>
   </EntitySets>
+  <Themes>
+    <IPLTheme>
+      <Name>Red</Name>
+      <Index>1</Index>
+    </IPLTheme>
+    <IPLTheme>
+      <Name>White</Name>
+      <Index>2</Index>
+    </IPLTheme>
+    <IPLTheme>
+      <Name>Orange</Name>
+      <Index>3</Index>
+    </IPLTheme>
+    <IPLTheme>
+      <Name>Blue</Name>
+      <Index>4</Index>
+    </IPLTheme>
+    <IPLTheme>
+      <Name>Gray</Name>
+      <Index>5</Index>
+    </IPLTheme>
+    <IPLTheme>
+      <Name>Yellow</Name>
+      <Index>6</Index>
+    </IPLTheme>
+    <IPLTheme>
+      <Name>White</Name>
+      <Index>7</Index>
+    </IPLTheme>
+    <IPLTheme>
+      <Name>Black</Name>
+      <Index>8</Index>
+    </IPLTheme>
+    <IPLTheme>
+      <Name>Gray</Name>
+      <Index>9</Index>
+    </IPLTheme>
+  </Themes>
   <DefaultEntitySets>
     <string>Walls</string>
     <string>Floor1</string>

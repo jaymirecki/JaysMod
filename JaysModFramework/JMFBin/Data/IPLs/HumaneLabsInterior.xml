@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
   <ID>HumaneLabsInterior</ID>
-  <Position X="3540" Y="3672" Z="28.2" />
+  <DLC>GTA</DLC>
+  <IsOverworld>false</IsOverworld>
+  <Position X="3540" Y="3672" Z="28.2"/>
 </IPL>

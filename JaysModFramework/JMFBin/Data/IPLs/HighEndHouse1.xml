@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
   <ID>HighEndHouse1</ID>
+  <DLC>Executive</DLC>
   <InteriorID>207105</InteriorID>
-  <Position X="-169.286" Y="486.4938" Z="137.4436" />
+  <IsOverworld>false</IsOverworld>
+  <Position X="-169" Y="486" Z="137.5"/>
   <IPLNames>
     <string>xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_</string>
   </IPLNames>

@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<IPL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
   <ID>CasinoCarpark</ID>
+  <DLC>Casino</DLC>
   <InteriorID>274945</InteriorID>
-  <Position X="1380" Y="200" Z="-50" />
+  <IsOverworld>false</IsOverworld>
+  <Position X="1383" Y="200" Z="-50"/>
   <IPLNames>
     <string>vw_casino_carpark</string>
   </IPLNames>
