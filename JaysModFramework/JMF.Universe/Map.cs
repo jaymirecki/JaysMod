@@ -1,6 +1,7 @@
 ﻿using JMF.Interiors;
 using OOD.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace JMF
 {
@@ -13,6 +14,8 @@ namespace JMF
             public bool IsOverworld { get; set; } = true;
             public List<IPLSettings> IPLs { get; set; } = new List<IPLSettings>();
             public List<Portal> Portals { get; set; } = new List<Portal>();
+            [XmlIgnore]
+            public Worldspace Worldspace = new Worldspace();
             public ValidationState Validate()
             {
                 foreach (IPLSettings iplSettings in IPLs)
@@ -41,10 +44,38 @@ namespace JMF
                         Debug.Log(DebugSeverity.Error, "Map " + ID + " could not load IPL " + iplSettings.ID);
                     }
                 }
+                for (int i = 0; i < Portals.Count; i++)
+                {
+                    Portal portal = Portals[i];
+                    portal.Map = this;
+                    //Portals[i] = portal;
+                }
             }
             public void Unload()
             {
 
+            }
+            public void ManagePortals()
+            {
+                foreach (Portal portal in Portals)
+                {
+                    portal.Draw();
+                    portal.Teleport();
+                }
+            }
+            public bool TryGetPortal(string portalId, out Portal portal)
+            {
+                foreach (Portal p in Portals)
+                {
+                    if (p.ID == portalId)
+                    {
+                        portal = p;
+                        portal.Map = this;
+                        return true;
+                    }
+                }
+                portal = new Portal();
+                return false;
             }
         }
     }

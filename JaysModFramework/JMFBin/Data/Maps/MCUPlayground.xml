@@ -7,5 +7,24 @@
       <ID>Hangar</ID>
       <Theme>Blue</Theme>
     </IPLSettings>
+    <IPLSettings>
+      <ID>AircraftCarrier</ID>
+    </IPLSettings>
   </IPLs>
+  <Portals>
+    <Portal>
+      <ID>MCUDCPlayground</ID>
+      <Position X="-1267" Y="-2962" Z="-48.4" />
+      <Heading>180</Heading>
+      <ConnectedPortalMap>MCUDC</ConnectedPortalMap>
+      <ConnectedPortalID>MCUDCPlayground</ConnectedPortalID>
+    </Portal>
+    <Portal>
+      <ID>MCUDCCarrier</ID>
+      <IPL>AircraftCarrier</IPL>
+      <RoomPortalID>One</RoomPortalID>
+      <ConnectedPortalMap>MCUDC</ConnectedPortalMap>
+      <ConnectedPortalID>MCUDCCarrier</ConnectedPortalID>
+    </Portal>
+  </Portals>
 </Map>

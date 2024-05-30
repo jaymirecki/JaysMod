@@ -78,7 +78,6 @@ namespace JMF
             }
             public void Load(List<string> includeEntitySets = null, string selectedTheme = "")
             {
-                Debug.Notify(ID + ": " + IsOverworld, true);
                 Unload();
                 if (includeEntitySets == null)
                 {
@@ -167,6 +166,19 @@ namespace JMF
             public ValidationState Validate()
             {
                 return new ValidationState();
+            }
+            public bool TryGetRoomPortal(string portalId, out RoomPortal roomPortal)
+            {
+                foreach (RoomPortal portal in Portals)
+                {
+                    if (portal.ID == portalId)
+                    {
+                        roomPortal = portal;
+                        return true;
+                    }
+                }
+                roomPortal = new RoomPortal();
+                return false;
             }
         }
     }

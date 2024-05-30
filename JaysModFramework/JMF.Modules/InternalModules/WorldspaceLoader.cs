@@ -18,11 +18,16 @@ namespace JMF
             public override ModuleSettings Settings { get { return new ModuleSettings(); } }
             public override void OnActivate()
             {
-                Framework.Database.Worldspaces.GetValue("MCUDC").Load();
+                Framework.Database.Worldspaces.GetValue("MCUDC").LoadWorldspace("MCUDC");
+                Game.Player.Character.Position = new Vector3(2133, 4791, 41);
             }
             public override void OnDeactivate()
             {
                 Framework.Database.Worldspaces.GetValue("MCUDC").Unload();
+            }
+            public override void OnTick()
+            {
+                Framework.Database.Worldspaces.GetValue("MCUDC").ManagePortals();
             }
         }
     }

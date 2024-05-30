@@ -45,7 +45,7 @@ namespace JMF
         public Vector3 Offset(float distance, float heading)
         {
             float theta = GetTheta(heading);
-            float x = (float)(distance * System.Math.Cos(theta)) * (heading < 180 ? 1 : -1);
+            float x = (float)(distance * System.Math.Cos(theta)) * (heading < 180 ? -1 : 1);
             float y = (float)(distance * System.Math.Sin(theta)) * ((heading < 270) && (heading > 90) ? -1 : 1);
             return new Vector3(X + x, Y + y, Z);
         }

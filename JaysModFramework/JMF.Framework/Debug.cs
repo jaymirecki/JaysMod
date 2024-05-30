@@ -22,9 +22,9 @@ namespace JMF
         {
             if (DEBUG || overrideDebugFlag)
             {
-                Native.Function.Call(Native.Hash.BeginTextCommandTheFeedPost, "STRING");
-                Native.Function.Call(Native.Hash.AddTextComponentSubstringPlayerName, value);
-                Native.Function.Call(Native.Hash.EndTextCommandThefeedPostTicker, true, true);
+                Function.Call(Hash.BeginTextCommandTheFeedPost, "STRING");
+                Function.Call(Hash.AddTextComponentSubstringPlayerName, value);
+                Function.Call(Hash.EndTextCommandThefeedPostTicker, true, true);
             }
         }
         public static void Notify<T>(T value, bool overrideDebugFlag = false)
