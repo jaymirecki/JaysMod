@@ -60,7 +60,7 @@ namespace JMF
             private bool GetConnectedPortal(out Portal connectedPortal)
             {
                 if (ConnectedPortalMap != null && ConnectedPortalMap != ""
-                    && Worldspace.LoadMap(ConnectedPortalMap, out Map map)
+                    && Worldspace.GetMap(ConnectedPortalMap, out Map map)
                     && map.TryGetPortal(ConnectedPortalID, out connectedPortal)
                     )
                 {
@@ -132,6 +132,7 @@ namespace JMF
                     {
                         return;
                     }
+                    Worldspace.LoadMap(outPortal.Map.ID, out Map outMap);
                     player.Position = outPortal.Position.Offset(3f, outPortal.Heading);
                     player.Heading = outPortal.Heading;
                 }

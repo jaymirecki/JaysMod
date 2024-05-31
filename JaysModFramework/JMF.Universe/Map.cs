@@ -13,7 +13,19 @@ namespace JMF
             public string Name { get; set; } = "";
             public bool IsOverworld { get; set; } = true;
             public List<IPLSettings> IPLs { get; set; } = new List<IPLSettings>();
-            public List<Portal> Portals { get; set; } = new List<Portal>();
+            private List<Portal> _portals = new List<Portal>();
+            public List<Portal> Portals
+            {
+                get
+                {
+                    foreach (Portal portal in _portals)
+                    {
+                        portal.Map = this;
+                    }
+                    return _portals;
+                }
+                set { _portals = value; }
+            }
             [XmlIgnore]
             public Worldspace Worldspace = new Worldspace();
             public ValidationState Validate()
@@ -29,7 +41,7 @@ namespace JMF
                         return new ValidationState(false, "Map " + ID + " is not marked overworld but IPL " + ipl.ID + " is");
                     }
                 }
-                return new ValidationState();
+                return new ValidationState(true);
             }
             public void Load()
             {

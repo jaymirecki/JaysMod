@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Worldspace xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>MCUDC</ID>
-  <Maps>
+  <MapIDs>
     <string>MCUDC</string>
     <string>MCUPlayground</string>
-  </Maps>
+  </MapIDs>
   <WeatherTypes>
     <WeatherType>Clear</WeatherType>
     <WeatherType>ExtraSunny</WeatherType>

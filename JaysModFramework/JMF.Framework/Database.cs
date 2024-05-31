@@ -59,13 +59,15 @@ namespace JMF
             Maps = new MemoryXMLDatabaseTable<string, Map>(Framework.Config.DataPath, _mapsDirectory);
             Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Framework.Config.DataPath, _worldspacesDirectory);
         }
-        public void Validate()
+        public bool Validate()
         {
-            ValidateDatabase(IPLs);
-            ValidateDatabase(Maps);
-            ValidateDatabase(Worldspaces);
+            bool isValid = true;
+            isValid = ValidateDatabase(IPLs) && isValid;
+            isValid = ValidateDatabase(Maps) && isValid;
+            isValid = ValidateDatabase(Worldspaces) && isValid;
+            return isValid;
         }
-        private void ValidateDatabase(XMLDatabaseTable database)
+        private bool ValidateDatabase(XMLDatabaseTable database)
         {
             List<ValidationState> states = database.Validate();
             foreach (ValidationState s in states)
@@ -73,8 +75,10 @@ namespace JMF
                 if (!s.IsValid)
                 {
                     Debug.Log(DebugSeverity.Error, s.ErrorMessage);
+                    return false;
                 }
             }
+            return true;
         }
         public void ClearCache()
         {

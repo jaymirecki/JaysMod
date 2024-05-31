@@ -165,7 +165,7 @@ namespace JMF
             }
             public ValidationState Validate()
             {
-                return new ValidationState();
+                return new ValidationState(true);
             }
             public bool TryGetRoomPortal(string portalId, out RoomPortal roomPortal)
             {
