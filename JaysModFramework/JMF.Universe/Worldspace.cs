@@ -2,6 +2,7 @@
 using OOD.Collections;
 using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace JMF
 {
@@ -15,6 +16,8 @@ namespace JMF
             private List<Map> _loadedMaps = new List<Map>();
             public List<TravelPoint> TravelPoints { get; set; } = new List<TravelPoint>();
             public List<WeatherType> WeatherTypes { get; set; } = new List<WeatherType>();
+            [XmlIgnore]
+            public string CurrentMap { get; private set; } = "";
             private static Random random = new Random();
             ///////////////////////////////////////////////////////////////////
             //                          Validation                           //
@@ -162,6 +165,7 @@ namespace JMF
                     if (GetMap(m, out Map map) && map.ID == mapId)
                     {
                         UnloadMaps();
+                        CurrentMap = map.ID;
                         outMap = map;
                         if (map.IsOverworld)
                         {

@@ -24,6 +24,7 @@ namespace JMF.Modules
         private Menu _menu;
         public InteractionMenu() : base()
         {
+            AddMenu(Framework.State.LoadMenu);
         }
 
         public override void OnControlReleased(Control control) {

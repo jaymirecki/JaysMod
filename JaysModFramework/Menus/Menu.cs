@@ -58,5 +58,14 @@ namespace JMF.Menus
             add { _nativeMenu.Shown += value; }
             remove { _nativeMenu.Shown -= value; }
         }
+        public MenuItem SelectedItem
+        {
+            get 
+            { 
+                MenuItem item = new MenuItem("placeholder");
+                item._nativeItem = _nativeMenu.SelectedItem;
+                return item;
+            }
+        }
     }
 }

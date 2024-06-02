@@ -6,6 +6,10 @@ namespace JMF
     {
         internal static class Function
         {
+            public static uint GetHashKey(string str)
+            {
+                return Function.Call<uint>(Hash.GetHashKey, str);
+            }
             public static T Call<T>(Hash hash)
             {
                 return (T)Rage.Native.NativeFunction.Call((ulong)hash, typeof(T));

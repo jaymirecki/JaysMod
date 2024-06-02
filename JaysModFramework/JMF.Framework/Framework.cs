@@ -24,6 +24,7 @@ namespace JMF
             }
         }
         public static Database Database = new Database();
+        public static State State = new State();
         public static bool IsDatabaseValid = Database.Validate();
         public static ObjectPool ObjectPool = new ObjectPool();
     }

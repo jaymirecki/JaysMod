@@ -1,4 +1,5 @@
 ﻿using JMF.Native;
+using System;
 
 namespace JMF
 {
@@ -11,6 +12,17 @@ namespace JMF
         }
         public static WeatherType Weather
         {
+            get
+            {
+                foreach (WeatherType weather in Enum.GetValues(typeof(WeatherType)))
+                {
+                    if (Function.Call<uint>(Hash.GetPrevWeatherTypeHashName) == Function.GetHashKey(weather.ToString()))
+                    {
+                        return weather;
+                    }
+                }
+                return WeatherType.Neutral;
+            }
             set { Function.Call(Hash.SetWeatherTypeNowPersist, value.ToString().ToUpper()); }
         }
         public static void DrawMarker(Vector3 position)

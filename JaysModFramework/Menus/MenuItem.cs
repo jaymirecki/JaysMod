@@ -45,5 +45,10 @@ namespace JMF.Menus
             get { return _nativeItem.Enabled; }
             set { _nativeItem.Enabled = value; }
         }
+        public string Title
+        {
+            get { return _nativeItem.Title; }
+            set { _nativeItem.Title = value; }
+        }
     }
 }

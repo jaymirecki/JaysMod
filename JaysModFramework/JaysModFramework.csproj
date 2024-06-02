@@ -86,6 +86,7 @@
     <Compile Include="JMF.UI\TextComponent.cs" />
     <Compile Include="JMF.UI\Input.cs" />
     <Compile Include="JMF.UI\Help.cs" />
+    <Compile Include="JMF.Universe\Truth.cs" />
     <Compile Include="JMF.Universe\TravelPoint.cs" />
     <Compile Include="JMF.Universe\Map.cs" />
     <Compile Include="JMF.Universe\Worldspace.cs" />
