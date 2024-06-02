@@ -169,7 +169,15 @@ namespace JMF
 
         private void SaveGameHandler(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            MenuItem item = _loadMenu.SelectedItem;
+            if (item.Title == "Create New Save")
+            {
+
+            }
+            else
+            {
+                Save(item.Title);
+            }
         }
         #endregion Menus
     }

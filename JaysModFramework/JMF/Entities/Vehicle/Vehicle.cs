@@ -9,18 +9,49 @@ namespace JMF
         //                             Properties                            //
         ///////////////////////////////////////////////////////////////////////
         #region Properties
+        private bool _sirenOn = false;
         public bool SirenOn
         {
-            get { return Function.Call<bool>(Hash.IsVehicleSirenOn, Handle); }
-            set { Function.Call(Hash.SetVehicleSiren, Handle, value); }
+            get
+            {
+                return GetPropertyOrDefault(Hash.IsVehicleSirenOn, _sirenOn);
+            }
+            set
+            {
+                SetProperty(Hash.SetVehicleSiren, value);
+                _sirenOn = value;
+            }
         }
+        private bool _sirenAudioOn = true;
         public bool SirenAudioOn
         {
-            get { return Function.Call<bool>(Hash.IsVehicleSirenAudioOn, Handle); }
-            set { Function.Call(Hash.SetVehicleHasMutedSirens, Handle, !value); }
+            get
+            {
+                return GetPropertyOrDefault(Hash.IsVehicleSirenAudioOn, _sirenAudioOn);
+            }
+            set
+            {
+                SetProperty(Hash.SetVehicleHasMutedSirens, !value);
+                _sirenAudioOn = value;
+            }
         }
         #endregion Properties
         #region Methods
+        public override void Spawn()
+        {
+            Debug.Log(DebugSeverity.Error, World.GetNearbyVehicles(Position, 3f).Count);
+            foreach(Vehicle v in World.GetNearbyVehicles(Position, 3f))
+            {
+                v.Delete();
+            }
+            Model.Request();
+            Handle = Function.Call<int>(Hash.CreateVehicle, Model.Hash, 0, 0, 0, Heading, false, true);
+            Model.NotNeeded();
+            SirenOn = _sirenOn;
+            SirenAudioOn = _sirenAudioOn;
+
+            OnEntitySpawn();
+        }
         public void ToggleSirenNoise()
         {
             if (SirenOn)
@@ -33,6 +64,10 @@ namespace JMF
         public Vehicle(int handle)
         {
             Handle = handle;
+        }
+        public Vehicle() { }
+        public Vehicle(Model model) {
+            Model = model;
         }
         #endregion Constructors
         #region Operators

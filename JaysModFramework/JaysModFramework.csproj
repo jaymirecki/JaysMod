@@ -36,6 +36,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\LemonUI.RagePluginHook.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="RagePluginHookSDK, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V\SDK\RagePluginHookSDK.dll</HintPath>
@@ -261,7 +262,7 @@
   <PropertyGroup>
     <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\Plugins"
 copy OOD.Collections.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding"
-RD /S /Q  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF"
-xcopy /Y /I /S "JMFBin\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF"</PostBuildEvent>
+RD /S /Q  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF\Data"
+xcopy /Y /I /S "JMFBin\Data\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF\Data"</PostBuildEvent>
   </PropertyGroup>
 </Project>

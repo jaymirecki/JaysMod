@@ -2,7 +2,7 @@
 {
     namespace Native
     {
-        internal enum Hash : ulong
+        public enum Hash : ulong
         {
             GetEntityHeading = 0xE83D4F9BA2A38914,
             SetEntityHeading = 0x8E2530AA8ADA980E,
@@ -103,6 +103,10 @@
             SetSnowLevel = 0x7F06937B0CDCBC1A,
             RequestNamedPtfxAsset = 0xB80D8756B4668AB6,
             GetPrevWeatherTypeHashName = 0x564B884A05EC45A3,
+            CreateVehicle = 0xAF35D0D2583051B0,
+            GetAllVehicles = 0x9B8E1BF04B51F2E8,
+            DeleteEntity = 0xAE3CBE5BF394C9C9,
+            DoesEntityExist = 0x7239B21A38F536BA,
         }
     }
 }

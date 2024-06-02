@@ -59,6 +59,10 @@ namespace JMF
                 Notify(logMessage);
             }
         }
+        public static void Log<T>(DebugSeverity severity, T message)
+        {
+            Log(severity, message.ToString());
+        }
         public static Menu Menu()
         {
             _menu = new Menu("Debug", "Debug", "JMF Framework Debug Options", Framework.ObjectPool);

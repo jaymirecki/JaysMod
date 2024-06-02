@@ -81,6 +81,13 @@ namespace JMF
             int duration = 1;
             return Function.Call<bool>(Hash.SetPedToRagdoll, Handle, duration, duration, (int)RagdollType.Relax, false, false, false);
         }
+        public override void Spawn()
+        {
+            Model.Request();
+            Handle = Function.Call<int>(Hash.CreateVehicle, Model.Hash, Position.X, Position.Y, Position.Z, Heading, false, true);
+
+            OnEntitySpawn();
+        }
         #endregion Methods
     }
 }

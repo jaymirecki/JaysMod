@@ -1,31 +1,55 @@
 ﻿using JMF.Native;
+using System;
 
 namespace JMF
 {
     public abstract class Entity
     {
-        public int Handle
-        {
-            get; protected set;
-        }
+        public int Handle { get; protected set; } = -1;
 
         //
-        // Methods implemented by Entity
+        // Properties implemented by Entity
         //
         #region Properties
+        protected T GetPropertyOrDefault<T>(Hash hash, T value)
+        {
+            if (Handle == -1)
+            {
+                return value;
+            }
+            return Function.Call<T>(hash, Handle);
+        }
+        protected bool SetProperty(Hash hash, Rage.Native.NativeArgument value)
+        {
+            if (Handle != -1)
+            {
+                Function.Call(hash, Handle, value);
+                return true;
+            }
+            return false;
+        }
+        private float _heading;
         public float Heading
         {
-            get { return Function.Call<float>(Hash.GetEntityHeading, Handle); }
-            set { Function.Call(Hash.SetEntityHeading, Handle, value); }
+            get
+            {
+                return GetPropertyOrDefault(Hash.GetEntityHeading, _heading);
+            }
+            set
+            {
+                SetProperty(Hash.SetEntityHeading, value);
+                _heading = value;
+            }
         }
-        //public Model Model
-        //{
-        //    get { return Function.Call<uint>(Hash.GetEntityModel, Handle); }
-        //}
+        private Vector3 _position;
         public Vector3 Position
         {
             get 
-            { 
+            {
+                if (Handle == -1)
+                {
+                    return _position;
+                }
                 return new Vector3(
                     (Rage.Vector3)Rage.Native.NativeFunction.Call(
                         (ulong)Hash.GetEntityCoords, 
@@ -34,24 +58,60 @@ namespace JMF
                         )
                     ); 
             }
-            set { Function.Call(Hash.SetEntityCoordsNoOffset, Handle, value.X, value.Y, value.Z, false, false, true); }
+            set
+            {
+                if (Handle != -1)
+                {
+                    Function.Call(Hash.SetEntityCoordsNoOffset, Handle, value.X, value.Y, value.Z, false, false, true);
+                }
+                _position = value;
+            }
         }
+        private uint _model = 0;
         public Model Model
         {
-            get { return new Model(Function.Call<uint>(Hash.GetEntityModel, Handle)); }
+            get 
+            { 
+                return new Model(GetPropertyOrDefault(Hash.GetEntityModel, _model)); 
+            }
+            set
+            {
+                _model = value.Hash;
+                if (Handle != -1)
+                {
+                    Spawn();
+                }
+            }
         }
+        private bool _isInvincible;
         public bool IsInvincible
         {
-            set { Function.Call<bool>(Hash.SetEntityInvincible, Handle, value); }
+            get
+            {
+                return _isInvincible;
+            }
+            set
+            {
+                SetProperty(Hash.SetEntityInvincible, value);
+                _isInvincible = value;
+            }
         }
         public bool IsDead
         {
             get { return Function.Call<bool>(Hash.IsEntityDead, Handle); }
         }
+        private int _health;
         public int Health
         {
-            get { return Function.Call<int>(Hash.GetEntityHealth, Handle); }
-            set { Function.Call(Hash.SetEntityHealth, Handle, value); }
+            get
+            {
+                return GetPropertyOrDefault(Hash.GetEntityHealth, _health);
+            }
+            set
+            {
+                SetProperty(Hash.SetEntityHealth, value);
+                _health = value;
+            }
         }
         public float HeightAboveGround
         {
@@ -71,13 +131,29 @@ namespace JMF
         {
             return Position.DistanceTo2D(position);
         }
+        public void OnEntitySpawn()
+        {
+            Heading = _heading;
+            Position = _position;
+            IsInvincible = _isInvincible;
+            Health = _health;
+        }
+        public void Delete()
+        {
+            if (Function.Call<bool>(Hash.DoesEntityExist, Handle))
+            {
+                Debug.Log(DebugSeverity.Warning, "exists");
+                int handle = Handle;
+                Rage.Native.NativeFunction.Natives.DeleteEntity(ref handle);
+            }
+        }
         #endregion Methods
 
         //
         // Abstract methods implemented by descendant classes
         //
         #region Abstract Methods
-        
+        public abstract void Spawn();
         #endregion Abstract Methods
     }
 }

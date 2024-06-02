@@ -20,6 +20,11 @@ namespace JMF
             {
                 Framework.Database.Worldspaces.GetValue("MCUDC").LoadWorldspace("MCUDC");
                 Game.Player.Character.Position = new Vector3(2133, 4791, 41);
+                Vehicle vehicle = new Vehicle();
+                vehicle.Position = new Vector3(2133, 4820, 42);
+                vehicle.Model = new Model("nimbus");
+                vehicle.Heading = 90;
+                vehicle.Spawn();
             }
             public override void OnDeactivate()
             {

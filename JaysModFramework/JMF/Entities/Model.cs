@@ -13,6 +13,10 @@ namespace JMF
         {
             Hash = hash;
         }
+        public Model(string name)
+        {
+            Hash = Function.GetHashKey(name);
+        }
         public bool Request()
         {
             if (Function.Call<bool>(Native.Hash.IsModelValid, Hash))
@@ -27,6 +31,10 @@ namespace JMF
             }
             Debug.Log(DebugSeverity.Warning, "Model " + Hash + " is not valid");
             return false;
+        }
+        public void NotNeeded()
+        {
+            Function.Call(Native.Hash.SetModelAsNoLongerNeeded, Hash);
         }
     }
 }
