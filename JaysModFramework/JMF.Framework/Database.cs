@@ -55,9 +55,15 @@ namespace JMF
             Ears = new AlwaysEmptyXMLDatabaseTable<string, Ears>();
             Wrists = new AlwaysEmptyXMLDatabaseTable<string, Wrist>();
 
+            Debug.Log(DebugSeverity.Info, "Loading IPLs data");
             IPLs = new MemoryXMLDatabaseTable<string, IPL>(Framework.Config.DataPath, _iplsDirectory);
+            Debug.Log(DebugSeverity.Info, "Done");
+            Debug.Log(DebugSeverity.Info, "Loading Maps data");
             Maps = new MemoryXMLDatabaseTable<string, Map>(Framework.Config.DataPath, _mapsDirectory);
+            Debug.Log(DebugSeverity.Info, "Done");
+            Debug.Log(DebugSeverity.Info, "Loading Worldspaces data");
             Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Framework.Config.DataPath, _worldspacesDirectory);
+            Debug.Log(DebugSeverity.Info, "Done");
         }
         public bool Validate()
         {

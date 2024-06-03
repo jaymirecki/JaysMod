@@ -5,17 +5,15 @@
         public struct RoomPortal
         {
             public string ID;
-            public Vector3 InPosition;
-            public Vector3 OutPosition;
-            public float OutHeading;
+            public Vector3 Position;
+            public float Heading;
             public RoomPortalType PortalType;
 
-            public RoomPortal(string id, Vector3 inPosition, Vector3 outPosition, float outHeading, RoomPortalType portalType)
+            public RoomPortal(string id, Vector3 position, float heading, RoomPortalType portalType)
             {
                 ID = id;
-                InPosition = inPosition;
-                OutPosition = outPosition;
-                OutHeading = outHeading;
+                Position = position;
+                Heading = heading;
                 PortalType = portalType;
             }
         }

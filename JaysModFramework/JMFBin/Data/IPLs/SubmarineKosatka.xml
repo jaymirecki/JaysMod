@@ -11,9 +11,8 @@
   <Portals>
     <RoomPortal>
       <ID>One</ID>
-      <InPosition X="1561.552" Y="392.0981" Z="-49.58736"/>
-      <OutPosition X="1561.47" Y="390.6165" Z="-49.58736"/>
-      <OutHeading>180</OutHeading>
+      <Position X="1562" Y="392" Z="-49.5"/>
+      <Heading>180</Heading>
       <PortalType>Pedestrian</PortalType>
     </RoomPortal>
   </Portals>

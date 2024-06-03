@@ -2,6 +2,7 @@
 <IPL>
   <ID>WarehouseSmall</ID>
   <DLC>Finance</DLC>
+  <InteriorID>235777</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="1095" Y="-3102" Z="-40"/>
   <IPLNames>

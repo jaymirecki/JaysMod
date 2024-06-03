@@ -22,6 +22,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="data_creation.py" />
+    <Compile Include="utils\map_utils.py" />
+    <Compile Include="utils\worldspace_utils.py" />
     <Compile Include="utils\xml_to_csv.py" />
     <Compile Include="utils\csv_to_xml.py" />
     <Compile Include="utils\ipl_utils.py" />
@@ -30,7 +32,7 @@
     <Folder Include="utils\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ipl.csv" />
+    <Content Include="Data - IPLs.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

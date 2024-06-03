@@ -21,7 +21,7 @@ namespace JMF
                         && ipl.TryGetRoomPortal(RoomPortalID, out RoomPortal roomPortal)
                         )
                     {
-                        _position = roomPortal.InPosition;
+                        _position = roomPortal.Position;
                     }
                     return _position;
                 }
@@ -38,7 +38,7 @@ namespace JMF
                         && ipl.TryGetRoomPortal(RoomPortalID, out RoomPortal roomPortal)
                         )
                     {
-                        _heading = roomPortal.OutHeading;
+                        _heading = roomPortal.Heading;
                     }
                     return _heading;
                 }

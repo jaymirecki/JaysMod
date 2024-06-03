@@ -4,7 +4,7 @@
   <IsOverworld>false</IsOverworld>
   <IPLs>
     <IPLSettings>
-      <ID>Hanger</ID>
+      <ID>Hangar</ID>
       <Theme>Blue</Theme>
     </IPLSettings>
     <IPLSettings>
@@ -14,8 +14,6 @@
   <Portals>
     <Portal>
       <ID>MCUDCPlayground</ID>
-      <IPL></IPL>
-      <RoomPortalID></RoomPortalID>
       <Position X="-2167" Y="-2962" Z="-48.4"/>
       <Heading>180</Heading>
       <ConnectedPortalMap>MCUDC</ConnectedPortalMap>
@@ -25,8 +23,6 @@
       <ID>MCUDCCarrier</ID>
       <IPL>AircraftCarrier</IPL>
       <RoomPortalID>One</RoomPortalID>
-      <Position></Position>
-      <Heading></Heading>
       <ConnectedPortalMap>MCUDC</ConnectedPortalMap>
       <ConnectedPortalID>MCUDCCarrier</ConnectedPortalID>
     </Portal>

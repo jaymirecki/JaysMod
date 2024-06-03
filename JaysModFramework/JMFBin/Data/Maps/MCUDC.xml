@@ -5,8 +5,6 @@
   <Portals>
     <Portal>
       <ID>MCUDCPlayground</ID>
-      <IPL></IPL>
-      <RoomPortalID></RoomPortalID>
       <Position X="2131" Y="4788" Z="41"/>
       <Heading>17</Heading>
       <ConnectedPortalMap>MCUPlayground</ConnectedPortalMap>
@@ -14,8 +12,6 @@
     </Portal>
     <Portal>
       <ID>MCUDCCarrier</ID>
-      <IPL></IPL>
-      <RoomPortalID></RoomPortalID>
       <Position X="2131" Y="4798" Z="41"/>
       <Heading>197</Heading>
       <ConnectedPortalMap>MCUPlayground</ConnectedPortalMap>
