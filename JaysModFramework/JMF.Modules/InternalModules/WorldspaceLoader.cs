@@ -18,21 +18,29 @@ namespace JMF
             public override ModuleSettings Settings { get { return new ModuleSettings(); } }
             public override void OnActivate()
             {
-                Framework.Database.Worldspaces.GetValue("MCUDC").LoadWorldspace("MCUDC");
-                Game.Player.Character.Position = new Vector3(2133, 4791, 41);
-                Vehicle vehicle = new Vehicle();
-                vehicle.Position = new Vector3(2133, 4820, 42);
-                vehicle.Model = new Model("nimbus");
-                vehicle.Heading = 90;
-                vehicle.Spawn();
+                //Framework.Database.Worldspaces.GetValue("MCUDC").LoadWorldspace("MCUDC");
+                //Game.Player.Character.Position = new Vector3(2133, 4791, 41);
+                //Vehicle vehicle = new Vehicle();
+                //vehicle.Position = new Vector3(2133, 4820, 42);
+                //vehicle.Model = new Model("nimbus");
+                //vehicle.Heading = 90;
+                //vehicle.Spawn();
             }
             public override void OnDeactivate()
             {
-                Framework.Database.Worldspaces.GetValue("MCUDC").Unload();
+                Worldspace worldspace = Universe.Truth.CurrentWorldspace;
+                if (worldspace != null)
+                {
+                    worldspace.Unload();
+                }
             }
             public override void OnTick()
             {
-                Framework.Database.Worldspaces.GetValue("MCUDC").ManagePortals();
+                Worldspace worldspace = Universe.Truth.CurrentWorldspace;
+                if (worldspace != null)
+                {
+                    worldspace.ManagePortals();
+                }
             }
         }
     }

@@ -19,7 +19,8 @@ namespace JMF
                     {
                         CurrentWorldspace.Unload();
                     }
-                    worldspace.LoadWorldspace(mapId);
+                    CurrentWorldspace = worldspace;
+                    CurrentWorldspace.LoadWorldspace(mapId);
                     return true;
                 }
                 return false;

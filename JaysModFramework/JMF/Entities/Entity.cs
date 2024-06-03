@@ -117,6 +117,8 @@ namespace JMF
         {
             get { return Function.Call<float>(Hash.GetEntityHeightAboveGround, Handle); }
         }
+        public string Worldspace { get; set; } = "";
+        public string Map { get; set; } = "";
         #endregion Properties
 
         //

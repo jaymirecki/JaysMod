@@ -244,6 +244,9 @@
     <Content Include="JMFBin\Presets\Clothing\wrist.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="JMFBin\Templates\MCU2014\state.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Snippets\Python Generation\OutfitProperty.py" />
     <Content Include="Snippets\Python Generation\OutfitPiece.py" />
     <Content Include="Snippets\Snippets\OutfitPiece.xml" />
@@ -263,6 +266,7 @@
     <PostBuildEvent>copy JaysModFramework.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\Plugins"
 copy OOD.Collections.dll "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding"
 RD /S /Q  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF\Data"
-xcopy /Y /I /S "JMFBin\Data\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF\Data"</PostBuildEvent>
+RD /S /Q  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF\Templates"
+xcopy /Y /I /S "JMFBin\*"  "E:\Program Files (x86)\SteamLibrary\steamapps\common\Grand Theft Auto V-modding\JMF"</PostBuildEvent>
   </PropertyGroup>
 </Project>
