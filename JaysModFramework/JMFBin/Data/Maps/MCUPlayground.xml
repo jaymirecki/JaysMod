@@ -14,7 +14,7 @@
   <Portals>
     <Portal>
       <ID>MCUDCPlayground</ID>
-      <Position X="-2167" Y="-2962" Z="-48.4"/>
+      <Position X="-1267" Y="-2962" Z="-48.4"/>
       <Heading>180</Heading>
       <ConnectedPortalMap>MCUDC</ConnectedPortalMap>
       <ConnectedPortalID>MCUDCPlayground</ConnectedPortalID>
