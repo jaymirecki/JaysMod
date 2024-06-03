@@ -1,10 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Worldspace>
-  <ID>MCUDC</ID>
-  <MapIDs>
-    <string>MCUDC</string>
-    <string>MCUPlayground</string>
-  </MapIDs>
+  <ID>GTALS</ID>
   <WeatherTypes>
     <WeatherType>Clear</WeatherType>
     <WeatherType>ExtraSunny</WeatherType>

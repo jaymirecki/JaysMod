@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Worldspace>
+  <ID>GTACP</ID>
+  <WeatherTypes>
+    <WeatherType>Clear</WeatherType>
+    <WeatherType>ExtraSunny</WeatherType>
+    <WeatherType>Clouds</WeatherType>
+    <WeatherType>Thunder</WeatherType>
+  </WeatherTypes>
+</Worldspace>

@@ -36,11 +36,11 @@ def element_if_content(root, tag, content):
         return ET.SubElement(root, tag)
     return None
 
-def element_list(root, tag, content):
+def element_list(root, tag, content, list_tag = "string"):
     elem = element_if_content(root, tag, content)
     try:
         for c in content.split(","):
-            element_with_text(elem, "string", c)
+            element_with_text(elem, list_tag, c)
         return elem
     except AttributeError:
         x = 1

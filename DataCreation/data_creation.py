@@ -5,12 +5,13 @@ import os
 import xml.etree.ElementTree as ET
 import csv
 import utils.ipl_utils as ipl
+import utils.worldspace_utils as worldspace
 
 app = typer.Typer()
 
 @app.command()
 def convert_ipl_to_xml(
-    source: str = "./ipl.csv",
+    source: str = "./Data - IPLs.csv",
     destination: str = "../JaysModFramework/JMFBin/Data/IPLs"
     ):
     source_path= os.path.abspath(source)
@@ -22,7 +23,7 @@ def convert_ipl_to_xml(
 @app.command()
 def convert_ipl_to_csv(
     source: str = "../JaysModFramework/JMFBin/Data/IPLs",
-    destination: str = "./ipl.csv"
+    destination: str = "./Data - IPLs.csv"
     ):
     source_path= os.path.abspath(source)
     destination_path = os.path.abspath(destination)
@@ -35,7 +36,17 @@ def convert_ipl_to_csv(
             tree = ET.parse(filepath)
             root = tree.getroot()
             csv_writer.writerow(ipl.xml_to_csv(root))
-
+            
+@app.command()
+def convert_worldspace_to_xml(
+    source: str = "./Data - Worldspaces.csv",
+    destination: str = "../JaysModFramework/JMFBin/Data/Worldspaces"
+    ):
+    source_path= os.path.abspath(source)
+    destination_path = os.path.abspath(destination)
+    df = pd.read_csv(source_path)
+    for idx, row in df.iterrows():
+        worldspace.csv_to_xml(row, destination_path)
 
 if __name__ == "__main__":
     app()
