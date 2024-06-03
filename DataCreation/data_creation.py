@@ -5,6 +5,7 @@ import os
 import xml.etree.ElementTree as ET
 import csv
 import utils.ipl_utils as ipl
+import utils.map_utils as maps
 import utils.worldspace_utils as worldspace
 
 app = typer.Typer()
@@ -47,6 +48,17 @@ def convert_worldspace_to_xml(
     df = pd.read_csv(source_path)
     for idx, row in df.iterrows():
         worldspace.csv_to_xml(row, destination_path)
+            
+@app.command()
+def convert_map_to_xml(
+    source: str = "./Data - Maps.csv",
+    destination: str = "../JaysModFramework/JMFBin/Data/Maps"
+    ):
+    source_path= os.path.abspath(source)
+    destination_path = os.path.abspath(destination)
+    df = pd.read_csv(source_path)
+    for idx, row in df.iterrows():
+        maps.csv_to_xml(row, destination_path)
 
 if __name__ == "__main__":
     app()

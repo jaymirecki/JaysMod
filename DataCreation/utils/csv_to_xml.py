@@ -52,6 +52,8 @@ def multipart_list(root, tag, content, item_tag, children):
         for e in content.split(","):
             item = ET.SubElement(elem, item_tag)
             for i, c in enumerate(children):
+                if i >= len(e.split("/")):
+                    return elem
                 if ":" in e.split("/")[i]:
                     vector(item, c, e.split("/")[i])
                 else:

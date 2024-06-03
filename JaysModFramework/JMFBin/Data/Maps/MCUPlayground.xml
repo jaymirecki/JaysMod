@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Map xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
   <ID>MCUPlayground</ID>
   <IsOverworld>false</IsOverworld>
   <IPLs>
     <IPLSettings>
-      <ID>Hangar</ID>
+      <ID>Hanger</ID>
       <Theme>Blue</Theme>
     </IPLSettings>
     <IPLSettings>
@@ -14,7 +14,9 @@
   <Portals>
     <Portal>
       <ID>MCUDCPlayground</ID>
-      <Position X="-1267" Y="-2962" Z="-48.4" />
+      <IPL></IPL>
+      <RoomPortalID></RoomPortalID>
+      <Position X="-2167" Y="-2962" Z="-48.4"/>
       <Heading>180</Heading>
       <ConnectedPortalMap>MCUDC</ConnectedPortalMap>
       <ConnectedPortalID>MCUDCPlayground</ConnectedPortalID>
@@ -23,6 +25,8 @@
       <ID>MCUDCCarrier</ID>
       <IPL>AircraftCarrier</IPL>
       <RoomPortalID>One</RoomPortalID>
+      <Position></Position>
+      <Heading></Heading>
       <ConnectedPortalMap>MCUDC</ConnectedPortalMap>
       <ConnectedPortalID>MCUDCCarrier</ConnectedPortalID>
     </Portal>
