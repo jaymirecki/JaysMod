@@ -21,12 +21,6 @@ namespace JMF
                 set
                 {
                     _position = value;
-                    int interiorId = Function.Call<int>(Hash.GetInteriorAtCoords, _position.X, _position.Y, _position.Z);
-                    if (interiorId != 0 && interiorId != InteriorID)
-                    {
-                        InteriorID = interiorId;
-                        Debug.Log(DebugSeverity.Info, "Set new InteriorID for IPL " + ID + ": " + interiorId);
-                    }
                 }
             }
             public List<string> IPLNames { get; set; }
@@ -165,6 +159,19 @@ namespace JMF
             }
             public ValidationState Validate()
             {
+                int interiorId = Function.Call<int>(Hash.GetInteriorAtCoords, Position.X, Position.Y, Position.Z);
+                if (interiorId != InteriorID)
+                {
+                    if (InteriorID == 0)
+                    {
+                        Debug.Log(DebugSeverity.Info, "Calculated new InteriorID for IPL " + ID + ": " + interiorId + ". Replacing " + InteriorID);
+                        InteriorID = interiorId;
+                    }
+                    else
+                    {
+                        return new ValidationState(false, "Calculated new InteriorID for IPL " + ID + ": " + interiorId + ". Does not match " + InteriorID);
+                    }
+                }
                 return new ValidationState(true);
             }
             public bool TryGetRoomPortal(string portalId, out RoomPortal roomPortal)

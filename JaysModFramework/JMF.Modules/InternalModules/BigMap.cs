@@ -27,8 +27,4 @@ namespace JMF.Modules
             SetMapActive(false);
         }
     }
-    public class BigMapSettings: ModuleSettings
-    {
-
-    }
 }
