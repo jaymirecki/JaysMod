@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
+  <ID>OfficeMazeTowerContrast</ID>
+  <DLC>Finance</DLC>
+  <InteriorID>239361</InteriorID>
+  <IsOverworld>false</IsOverworld>
+  <Position X="-78" Y="-830" Z="244"/>
+  <IPLNames>
+    <string>ex_dt1_11_office_02a</string>
+  </IPLNames>
+  <EntitySets>
+    <IPLEntitySet>
+      <HumanName>Chairs</HumanName>
+      <GameName>office_chairs</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>Booze</HumanName>
+      <GameName>office_booze</GameName>
+    </IPLEntitySet>
+  </EntitySets>
+  <DefaultEntitySets>
+    <string>Chairs</string>
+  </DefaultEntitySets>
+</IPL>

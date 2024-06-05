@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
+  <ID>OfficeArcadiusRich</ID>
+  <DLC>Finance</DLC>
+  <InteriorID>237313</InteriorID>
+  <IsOverworld>false</IsOverworld>
+  <Position X="-140" Y="-617" Z="169"/>
+  <IPLNames>
+    <string>ex_dt1_02_office_02b</string>
+  </IPLNames>
+  <EntitySets>
+    <IPLEntitySet>
+      <HumanName>Chairs</HumanName>
+      <GameName>office_chairs</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>Booze</HumanName>
+      <GameName>office_booze</GameName>
+    </IPLEntitySet>
+  </EntitySets>
+  <DefaultEntitySets>
+    <string>Chairs</string>
+  </DefaultEntitySets>
+</IPL>

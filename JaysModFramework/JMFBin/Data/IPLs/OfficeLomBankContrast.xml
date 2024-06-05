@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<IPL>
+  <ID>OfficeLomBankContrast</ID>
+  <DLC>Finance</DLC>
+  <InteriorID>241665</InteriorID>
+  <IsOverworld>false</IsOverworld>
+  <Position X="-1580" Y="-561" Z="109"/>
+  <IPLNames>
+    <string>ex_sm_13_office_02a</string>
+  </IPLNames>
+  <EntitySets>
+    <IPLEntitySet>
+      <HumanName>Chairs</HumanName>
+      <GameName>office_chairs</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>Booze</HumanName>
+      <GameName>office_booze</GameName>
+    </IPLEntitySet>
+  </EntitySets>
+  <DefaultEntitySets>
+    <string>Chairs</string>
+  </DefaultEntitySets>
+</IPL>
