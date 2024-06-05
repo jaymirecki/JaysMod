@@ -2,6 +2,7 @@
 <IPL>
   <ID>Silo</ID>
   <DLC>Doomsday</DLC>
+  <InteriorID>270593</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="367" Y="6309" Z="-160"/>
 </IPL>

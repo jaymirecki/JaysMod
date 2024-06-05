@@ -2,6 +2,7 @@
 <IPL>
   <ID>WarehouseDocuments</ID>
   <DLC>Bikers</DLC>
+  <InteriorID>246785</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="1172" Y="-3197" Z="-39"/>
 </IPL>

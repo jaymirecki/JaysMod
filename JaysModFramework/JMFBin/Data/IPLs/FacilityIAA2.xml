@@ -2,6 +2,7 @@
 <IPL>
   <ID>FacilityIAA2</ID>
   <DLC>Doomsday</DLC>
+  <InteriorID>270337</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="2168" Y="2921" Z="-84"/>
 </IPL>

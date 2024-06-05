@@ -2,6 +2,7 @@
 <IPL>
   <ID>PoliceStation</ID>
   <DLC>GTA</DLC>
+  <InteriorID>137473</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="443" Y="-984" Z="31"/>
 </IPL>

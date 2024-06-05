@@ -2,6 +2,7 @@
 <IPL>
   <ID>NightclubGarage</ID>
   <DLC>Afterhours</DLC>
+  <InteriorID>271873</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="-1510" Y="-2990" Z="-82"/>
 </IPL>

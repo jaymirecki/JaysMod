@@ -2,6 +2,7 @@
 <IPL>
   <ID>CliffordLab</ID>
   <DLC>Doomsday</DLC>
+  <InteriorID>269569</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="244" Y="6163" Z="-159"/>
 </IPL>

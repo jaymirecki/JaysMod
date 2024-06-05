@@ -2,6 +2,7 @@
 <IPL>
   <ID>CasinoTerrace</ID>
   <DLC>Casino</DLC>
+  <InteriorID>274689</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="954" Y="64" Z="113"/>
 </IPL>

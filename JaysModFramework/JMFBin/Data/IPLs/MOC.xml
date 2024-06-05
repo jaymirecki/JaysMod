@@ -2,6 +2,7 @@
 <IPL>
   <ID>MOC</ID>
   <DLC>Gunrunning</DLC>
+  <InteriorID>258305</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="1104" Y="-3007" Z="-39"/>
 </IPL>

@@ -2,6 +2,7 @@
 <IPL>
   <ID>WarehouseMeth</ID>
   <DLC>Bikers</DLC>
+  <InteriorID>247041</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="998" Y="-3200" Z="-36"/>
 </IPL>

@@ -2,6 +2,7 @@
 <IPL>
   <ID>ClubhouseVinewood</ID>
   <DLC>Bikers</DLC>
+  <InteriorID>45826</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="984" Y="-99" Z="75"/>
 </IPL>

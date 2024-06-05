@@ -2,6 +2,7 @@
 <IPL>
   <ID>Terrorbyte</ID>
   <DLC>Afterhours</DLC>
+  <InteriorID>272129</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="-1421" Y="-3013" Z="-79"/>
 </IPL>

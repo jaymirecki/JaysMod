@@ -2,6 +2,7 @@
 <IPL>
   <ID>Arcade</ID>
   <DLC>HeistCasino</DLC>
+  <InteriorID>278273</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="2728" Y="-382" Z="-49"/>
 </IPL>

@@ -2,6 +2,7 @@
 <IPL>
   <ID>DrugwarsHideout</ID>
   <DLC>Drugwars</DLC>
+  <InteriorID>290817</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="570" Y="-415" Z="-69"/>
 </IPL>

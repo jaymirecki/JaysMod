@@ -2,6 +2,7 @@
 <IPL>
   <ID>SiloTunnel</ID>
   <DLC>Doomsday</DLC>
+  <InteriorID>266753</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="1283" Y="4847" Z="-46"/>
 </IPL>

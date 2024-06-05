@@ -2,6 +2,7 @@
 <IPL>
   <ID>WarehouseVehicle</ID>
   <DLC>Import</DLC>
+  <InteriorID>252673</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="977" Y="-3002" Z="-39"/>
 </IPL>
