@@ -45,6 +45,8 @@ namespace JMF
                 Menu other = new Menu("Other", "Other", Framework.ObjectPool);
                 Menu all = new Menu("All", "All", Framework.ObjectPool);
 
+                Debug.Log(DebugSeverity.Error, Framework.Database.IPLs.Count);
+
                 foreach (IPL ipl in Framework.Database.IPLs)
                 {
                     all.Add(ipl.MenuItem);

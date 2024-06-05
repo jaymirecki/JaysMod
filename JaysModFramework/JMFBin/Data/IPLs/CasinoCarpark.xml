@@ -4,7 +4,7 @@
   <DLC>Casino</DLC>
   <InteriorID>274945</InteriorID>
   <IsOverworld>false</IsOverworld>
-  <Position X="1383" Y="200" Z="-50"/>
+  <Position X="1383" Y="200" Z="-49"/>
   <IPLNames>
     <string>vw_casino_carpark</string>
   </IPLNames>
