@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <IPL>
-  <ID>Avenger</ID>
-  <DLC>Mercenaries</DLC>
-  <InteriorID>291585</InteriorID>
+  <ID>AvengerDoomsday</ID>
+  <DLC>Doomsday</DLC>
+  <InteriorID>262145</InteriorID>
   <IsOverworld>false</IsOverworld>
-  <Position X="-880" Y="-2770" Z="-50"/>
+  <Position X="520" Y="4750" Z="-69"/>
   <IPLNames>
-    <string>m23_1_int_placement_m23_1_interior_0_dlc_int_01_m23_1_milo_</string>
+    <string>xm_x17dlc_int_placement_interior_9_x17dlc_int_01_milo_</string>
   </IPLNames>
   <EntitySets>
     <IPLEntitySet>
@@ -36,22 +36,6 @@
     <IPLEntitySet>
       <HumanName>GoldBlink</HumanName>
       <GameName>gold_bling</GameName>
-    </IPLEntitySet>
-    <IPLEntitySet>
-      <HumanName>ControlTable</HumanName>
-      <GameName>screen_control</GameName>
-    </IPLEntitySet>
-    <IPLEntitySet>
-      <HumanName>Thruster</HumanName>
-      <GameName>jetpack_stand</GameName>
-    </IPLEntitySet>
-    <IPLEntitySet>
-      <HumanName>TableSeat</HumanName>
-      <GameName>seat_01</GameName>
-    </IPLEntitySet>
-    <IPLEntitySet>
-      <HumanName>ThrusterSeat</HumanName>
-      <GameName>seat_02</GameName>
     </IPLEntitySet>
   </EntitySets>
   <Themes>
@@ -99,7 +83,5 @@
     <string>RightControls</string>
     <string>WeaponsWorkshop</string>
     <string>VehicleWorkshop</string>
-    <string>ControlTable</string>
-    <string>Thruster</string>
   </DefaultEntitySets>
 </IPL>

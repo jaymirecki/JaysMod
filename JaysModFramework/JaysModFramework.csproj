@@ -175,6 +175,9 @@
     <Content Include="JMFBin\Data\IPLs\Avenger.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="JMFBin\Data\IPLs\AvengerDoomsday.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="JMFBin\Data\IPLs\BunkerInterior.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

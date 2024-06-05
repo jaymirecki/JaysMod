@@ -112,6 +112,10 @@ namespace JMF
                         {
                             loadedEntities++;
                         }
+                        else
+                        {
+                            Debug.Log(DebugSeverity.Warning, "Entity set " + entitySet.GameName + " does not exist for interior " + ID);
+                        }
                     }
                 }
                 ValidateEntitySets(includeEntitySets, loadedEntities);
