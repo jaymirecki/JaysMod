@@ -53,6 +53,18 @@
       <HumanName>ThrusterSeat</HumanName>
       <GameName>seat_02</GameName>
     </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>Fabric</HumanName>
+      <GameName>m23_1_m231_1_tint_fabric_01a</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>Door</HumanName>
+      <GameName>m23_1_m231_1_avenger_door</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>Netting</HumanName>
+      <GameName>m23_1_m231_1_tint_netting_01a</GameName>
+    </IPLEntitySet>
   </EntitySets>
   <Themes>
     <IPLTheme>
@@ -93,13 +105,5 @@
     </IPLTheme>
   </Themes>
   <DefaultEntitySets>
-    <string>Walls</string>
-    <string>BackControls</string>
-    <string>LeftControls</string>
-    <string>RightControls</string>
-    <string>WeaponsWorkshop</string>
-    <string>VehicleWorkshop</string>
-    <string>ControlTable</string>
-    <string>Thruster</string>
   </DefaultEntitySets>
 </IPL>
