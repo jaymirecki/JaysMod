@@ -5,4 +5,7 @@
   <InteriorID>286977</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="-1020" Y="-88" Z="-99"/>
+  <IPLNames>
+    <string>sf_int_placement_sec_interior_1_dlc_studio_sec_milo_</string>
+  </IPLNames>
 </IPL>

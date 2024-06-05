@@ -2,6 +2,76 @@
 <IPL>
   <ID>AgencyHawick</ID>
   <DLC>Contract</DLC>
+  <InteriorID>288257</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="377" Y="-62" Z="104"/>
+  <IPLNames>
+    <string>sf_fixeroffice_hw1_08</string>
+  </IPLNames>
+  <EntitySets>
+    <IPLEntitySet>
+      <HumanName>Armory</HumanName>
+      <GameName>Entity_Set_Armoury</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>Office</HumanName>
+      <GameName>Entity_Set_Standard_Office</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ApartmentBlocker</HumanName>
+      <GameName>Entity_Set_Blocker </GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>WallpaperFloral</HumanName>
+      <GameName>Entity_Set_Wpaper_1</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>WallpaperMarble</HumanName>
+      <GameName>Entity_Set_Wpaper_2</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>WallpaperGeometric</HumanName>
+      <GameName>Entity_Set_Wpaper_3</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>WallpaperDesigner</HumanName>
+      <GameName>Entity_Set_Wpaper_4</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>WallpaperPresidential</HumanName>
+      <GameName>Entity_Set_Wpaper_5</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>WallpaperExotic</HumanName>
+      <GameName>Entity_Set_Wpaper_6</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>WallpaperTiled</HumanName>
+      <GameName>Entity_Set_Wpaper_7</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>WallpaperOrganic</HumanName>
+      <GameName>Entity_Set_Wpaper_8</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>WallpaperRoyal</HumanName>
+      <GameName>Entity_Set_Wpaper_9</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ArtPower</HumanName>
+      <GameName>Entity_Set_Art_1</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ArtPop</HumanName>
+      <GameName>Entity_Set_Art_2</GameName>
+    </IPLEntitySet>
+    <IPLEntitySet>
+      <HumanName>ArtLoyalty</HumanName>
+      <GameName>Entity_Set_Art_3</GameName>
+    </IPLEntitySet>
+  </EntitySets>
+  <DefaultEntitySets>
+    <string>Armory</string>
+    <string>WallpaperMarble</string>
+  </DefaultEntitySets>
 </IPL>

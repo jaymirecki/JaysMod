@@ -2,6 +2,7 @@
 <IPL>
   <ID>AgencyWarehouse</ID>
   <DLC>Contract</DLC>
+  <InteriorID>288513</InteriorID>
   <IsOverworld>false</IsOverworld>
   <Position X="-2919" Y="4472" Z="-99"/>
 </IPL>
