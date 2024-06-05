@@ -67,5 +67,10 @@ namespace JMF.Menus
                 return item;
             }
         }
+
+        public string Name
+        {
+            get { return _nativeMenu.Name; }
+        }
     }
 }
