@@ -451,13 +451,31 @@
     <Content Include="JMFBin\Data\IPLs\ZancudoLab.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="JMFBin\Data\Maps\GTALS.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="JMFBin\Data\Maps\MCUPlayground.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\Maps\MCUDC.xml">
+    <Content Include="JMFBin\Data\Maps\MCUVirginia.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="JMFBin\Data\Worldspaces\MCUDC.xml">
+    <Content Include="JMFBin\Data\Worldspaces\GTACP.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\Worldspaces\GTALS.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\Worldspaces\GTANY.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\Worldspaces\MCUCalifornia.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\Worldspaces\MCUNewMexico.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\Worldspaces\MCUVirginia.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JMFBin\Data\Worldspaces\SanAndreas.xml">

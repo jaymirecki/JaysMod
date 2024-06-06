@@ -1,5 +1,7 @@
 ID,MapIDs,WeatherTypes
-MCUDC,"MCUDC,MCUPlayground","Clear,ExtraSunny,Clouds,Overcast,Rain,Clearing,Thunder,Smog,Foggy"
+MCUVirginia,"MCUVirginia,MCUPlayground","Clear,ExtraSunny,Clouds,Overcast,Rain,Clearing,Thunder,Smog,Foggy"
 GTALS,,"Clear,ExtraSunny,Clouds,Overcast,Rain,Clearing,Thunder,Smog,Foggy"
 GTACP,,"Clear,ExtraSunny,Clouds,Thunder"
 GTANY,,"Clear,Clouds,Overcast,Clearing,Foggy"
+MCUCalifornia,,
+MCUNewMexico,,

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Worldspace>
-  <ID>MCUDC</ID>
+  <ID>MCUVirginia</ID>
   <MapIDs>
-    <string>MCUDC</string>
+    <string>MCUVirginia</string>
     <string>MCUPlayground</string>
   </MapIDs>
   <WeatherTypes>

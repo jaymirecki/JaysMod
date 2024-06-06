@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+  <ID>MCUVirginia</ID>
+  <IsOverworld>true</IsOverworld>
+  <Portals>
+    <Portal>
+      <ID>MCUPlaygroundHangar</ID>
+      <Position X="2131" Y="4788" Z="41"/>
+      <Heading>17</Heading>
+      <ConnectedPortalMap>MCUPlayground</ConnectedPortalMap>
+      <ConnectedPortalID>MCUPlaygroundHangar</ConnectedPortalID>
+    </Portal>
+  </Portals>
+</Map>
