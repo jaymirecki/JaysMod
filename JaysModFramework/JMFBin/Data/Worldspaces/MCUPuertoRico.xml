@@ -1,28 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Worldspace>
-  <ID>MCUVirginia</ID>
-  <MapIDs>
-    <string>MCUVirginia</string>
-    <string>MCUPlayground</string>
-  </MapIDs>
+  <ID>MCUPuertoRico</ID>
   <TravelPoints>
     <TravelPoint>
+      <ID>Virginia</ID>
+      <Position>IslandNorth</Position>
+      <ConnectedWorldspaceID>MCUVirginia</ConnectedWorldspaceID>
+      <ConnectedTravelPointID>PuertoRico</ConnectedTravelPointID>
+    </TravelPoint>
+    <TravelPoint>
       <ID>California</ID>
-      <Position>MainlandWest</Position>
+      <Position>IslandNorthwest</Position>
       <ConnectedWorldspaceID>MCUCalifornia</ConnectedWorldspaceID>
-      <ConnectedTravelPointID>Virginia</ConnectedTravelPointID>
+      <ConnectedTravelPointID>PuertoRico</ConnectedTravelPointID>
     </TravelPoint>
     <TravelPoint>
       <ID>NewMexico</ID>
-      <Position>MainlandSouthwest</Position>
+      <Position>IslandWest</Position>
       <ConnectedWorldspaceID>MCUNewMexico</ConnectedWorldspaceID>
-      <ConnectedTravelPointID>Virginia</ConnectedTravelPointID>
-    </TravelPoint>
-    <TravelPoint>
-      <ID>PuertoRico</ID>
-      <Position>MainlandSouth</Position>
-      <ConnectedWorldspaceID>MCUPuertoRico</ConnectedWorldspaceID>
-      <ConnectedTravelPointID>Virginia</ConnectedTravelPointID>
+      <ConnectedTravelPointID>PuertoRico</ConnectedTravelPointID>
     </TravelPoint>
     <TravelPoint/>
   </TravelPoints>
@@ -34,7 +30,6 @@
     <WeatherType>Rain</WeatherType>
     <WeatherType>Clearing</WeatherType>
     <WeatherType>Thunder</WeatherType>
-    <WeatherType>Smog</WeatherType>
     <WeatherType>Foggy</WeatherType>
   </WeatherTypes>
 </Worldspace>

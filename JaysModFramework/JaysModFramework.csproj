@@ -87,6 +87,7 @@
     <Compile Include="JMF.UI\TextComponent.cs" />
     <Compile Include="JMF.UI\Input.cs" />
     <Compile Include="JMF.UI\Help.cs" />
+    <Compile Include="JMF.Universe\TravelPointPosition.cs" />
     <Compile Include="JMF.Universe\Truth.cs" />
     <Compile Include="JMF.Universe\TravelPoint.cs" />
     <Compile Include="JMF.Universe\Map.cs" />
@@ -95,8 +96,8 @@
     <Compile Include="JMF\Blips\BlipSprite.cs" />
     <Compile Include="JMF\Blips\Blip.cs" />
     <Compile Include="JMF\Entities\Vehicle\VehicleClass.cs" />
-    <Compile Include="JMF\World.cs" />
-    <Compile Include="JMF\WeatherType.cs" />
+    <Compile Include="JMF\World\World.cs" />
+    <Compile Include="JMF\World\WeatherType.cs" />
     <Compile Include="JMF\Entities\Entity.cs" />
     <Compile Include="JMF\Entities\Ped\PedHash.cs" />
     <Compile Include="JMF\Entities\Thread.cs" />
@@ -474,6 +475,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JMFBin\Data\Worldspaces\MCUNewMexico.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\Worldspaces\MCUOntario.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JMFBin\Data\Worldspaces\MCUPuertoRico.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JMFBin\Data\Worldspaces\MCUVirginia.xml">

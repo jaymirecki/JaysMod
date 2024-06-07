@@ -1,7 +1,9 @@
-ID,MapIDs,WeatherTypes
-MCUVirginia,"MCUVirginia,MCUPlayground","Clear,ExtraSunny,Clouds,Overcast,Rain,Clearing,Thunder,Smog,Foggy"
-GTALS,,"Clear,ExtraSunny,Clouds,Overcast,Rain,Clearing,Thunder,Smog,Foggy"
-GTACP,,"Clear,ExtraSunny,Clouds,Thunder"
-GTANY,,"Clear,Clouds,Overcast,Clearing,Foggy"
-MCUCalifornia,,
-MCUNewMexico,,
+ID,MapIDs,TravelPoints,WeatherTypes
+MCUVirginia,"MCUVirginia,MCUPlayground","California/MainlandWest/MCUCalifornia/Virginia,NewMexico/MainlandSouthwest/MCUNewMexico/Virginia,PuertoRico/MainlandSouth/MCUPuertoRico/Virginia,","Clear,ExtraSunny,Clouds,Overcast,Rain,Clearing,Thunder,Smog,Foggy"
+GTALS,,,"Clear,ExtraSunny,Clouds,Overcast,Rain,Clearing,Smog,Foggy"
+GTACP,,,"Clear,ExtraSunny,Clouds,Thunder"
+GTANY,,,"Clear,Clouds,Overcast,Clearing,Foggy"
+MCUCalifornia,,"Virginia/MainlandEast/MCUVirginia/California,NewMexico/MainlandSouth/MCUNewMexico/California,PuertoRico/MainlandSoutheast/MCUPuertoRico/California,","Clear,ExtraSunny,Clouds,Overcast,Rain,Clearing,Smog,Foggy"
+MCUNewMexico,,"Virginia/MainlandNortheast/MCUVirginia/NewMexico,California/MainlandNorth/MCUCalifornia/NewMexico,PuertoRico/MainlandEast/MCUVirginia/NewMexico,","Clear,ExtraSunny"
+MCUPuertoRico,,"Virginia/IslandNorth/MCUVirginia/PuertoRico,California/IslandNorthwest/MCUCalifornia/PuertoRico,NewMexico/IslandWest/MCUNewMexico/PuertoRico,","Clear,ExtraSunny,Clouds,Overcast,Rain,Clearing,Thunder,Foggy"
+MCUOntario,,"Virginia/MainlandSoutheast/MCUVirginia/Ontario,California/MainlandWest/MCUCalifornia/Ontario,NewMexico/MainlandSouthwest/MCUNewMexico/Ontario,PuertoRico/MainlandSouth/MCUPuertoRico/Ontario","Clear,Clouds,Clearing,Xmas,Snow,SnowLight,Blizzard,Neutral"

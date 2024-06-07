@@ -1,40 +1,40 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Worldspace>
-  <ID>MCUVirginia</ID>
-  <MapIDs>
-    <string>MCUVirginia</string>
-    <string>MCUPlayground</string>
-  </MapIDs>
+  <ID>MCUOntario</ID>
   <TravelPoints>
+    <TravelPoint>
+      <ID>Virginia</ID>
+      <Position>MainlandSoutheast</Position>
+      <ConnectedWorldspaceID>MCUVirginia</ConnectedWorldspaceID>
+      <ConnectedTravelPointID>Ontario</ConnectedTravelPointID>
+    </TravelPoint>
     <TravelPoint>
       <ID>California</ID>
       <Position>MainlandWest</Position>
       <ConnectedWorldspaceID>MCUCalifornia</ConnectedWorldspaceID>
-      <ConnectedTravelPointID>Virginia</ConnectedTravelPointID>
+      <ConnectedTravelPointID>Ontario</ConnectedTravelPointID>
     </TravelPoint>
     <TravelPoint>
       <ID>NewMexico</ID>
       <Position>MainlandSouthwest</Position>
       <ConnectedWorldspaceID>MCUNewMexico</ConnectedWorldspaceID>
-      <ConnectedTravelPointID>Virginia</ConnectedTravelPointID>
+      <ConnectedTravelPointID>Ontario</ConnectedTravelPointID>
     </TravelPoint>
     <TravelPoint>
       <ID>PuertoRico</ID>
       <Position>MainlandSouth</Position>
       <ConnectedWorldspaceID>MCUPuertoRico</ConnectedWorldspaceID>
-      <ConnectedTravelPointID>Virginia</ConnectedTravelPointID>
+      <ConnectedTravelPointID>Ontario</ConnectedTravelPointID>
     </TravelPoint>
-    <TravelPoint/>
   </TravelPoints>
   <WeatherTypes>
     <WeatherType>Clear</WeatherType>
-    <WeatherType>ExtraSunny</WeatherType>
     <WeatherType>Clouds</WeatherType>
-    <WeatherType>Overcast</WeatherType>
-    <WeatherType>Rain</WeatherType>
     <WeatherType>Clearing</WeatherType>
-    <WeatherType>Thunder</WeatherType>
-    <WeatherType>Smog</WeatherType>
-    <WeatherType>Foggy</WeatherType>
+    <WeatherType>Xmas</WeatherType>
+    <WeatherType>Snow</WeatherType>
+    <WeatherType>SnowLight</WeatherType>
+    <WeatherType>Blizzard</WeatherType>
+    <WeatherType>Neutral</WeatherType>
   </WeatherTypes>
 </Worldspace>

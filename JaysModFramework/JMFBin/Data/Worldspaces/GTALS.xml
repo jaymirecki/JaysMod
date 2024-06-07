@@ -8,7 +8,6 @@
     <WeatherType>Overcast</WeatherType>
     <WeatherType>Rain</WeatherType>
     <WeatherType>Clearing</WeatherType>
-    <WeatherType>Thunder</WeatherType>
     <WeatherType>Smog</WeatherType>
     <WeatherType>Foggy</WeatherType>
   </WeatherTypes>

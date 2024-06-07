@@ -4,12 +4,32 @@
   <TravelPoints>
     <TravelPoint>
       <ID>Virginia</ID>
-      <Position X="6900" Y="0" Z="200"/>
+      <Position>MainlandEast</Position>
       <ConnectedWorldspaceID>MCUVirginia</ConnectedWorldspaceID>
       <ConnectedTravelPointID>California</ConnectedTravelPointID>
     </TravelPoint>
+    <TravelPoint>
+      <ID>NewMexico</ID>
+      <Position>MainlandSouth</Position>
+      <ConnectedWorldspaceID>MCUNewMexico</ConnectedWorldspaceID>
+      <ConnectedTravelPointID>California</ConnectedTravelPointID>
+    </TravelPoint>
+    <TravelPoint>
+      <ID>PuertoRico</ID>
+      <Position>MainlandSoutheast</Position>
+      <ConnectedWorldspaceID>MCUPuertoRico</ConnectedWorldspaceID>
+      <ConnectedTravelPointID>California</ConnectedTravelPointID>
+    </TravelPoint>
+    <TravelPoint/>
   </TravelPoints>
   <WeatherTypes>
     <WeatherType>Clear</WeatherType>
+    <WeatherType>ExtraSunny</WeatherType>
+    <WeatherType>Clouds</WeatherType>
+    <WeatherType>Overcast</WeatherType>
+    <WeatherType>Rain</WeatherType>
+    <WeatherType>Clearing</WeatherType>
+    <WeatherType>Smog</WeatherType>
+    <WeatherType>Foggy</WeatherType>
   </WeatherTypes>
 </Worldspace>

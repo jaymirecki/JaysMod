@@ -1,4 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Worldspace>
   <ID>MCUNewMexico</ID>
+  <TravelPoints>
+    <TravelPoint>
+      <ID>Virginia</ID>
+      <Position>MainlandNortheast</Position>
+      <ConnectedWorldspaceID>MCUVirginia</ConnectedWorldspaceID>
+      <ConnectedTravelPointID>NewMexico</ConnectedTravelPointID>
+    </TravelPoint>
+    <TravelPoint>
+      <ID>California</ID>
+      <Position>MainlandNorth</Position>
+      <ConnectedWorldspaceID>MCUCalifornia</ConnectedWorldspaceID>
+      <ConnectedTravelPointID>NewMexico</ConnectedTravelPointID>
+    </TravelPoint>
+    <TravelPoint>
+      <ID>PuertoRico</ID>
+      <Position>MainlandEast</Position>
+      <ConnectedWorldspaceID>MCUVirginia</ConnectedWorldspaceID>
+      <ConnectedTravelPointID>NewMexico</ConnectedTravelPointID>
+    </TravelPoint>
+    <TravelPoint/>
+  </TravelPoints>
+  <WeatherTypes>
+    <WeatherType>Clear</WeatherType>
+    <WeatherType>ExtraSunny</WeatherType>
+  </WeatherTypes>
 </Worldspace>
