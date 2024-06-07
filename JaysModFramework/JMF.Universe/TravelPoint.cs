@@ -8,21 +8,8 @@ namespace JMF
         {
             public string ID;
             public Vector3 Position;
-            public Vector3 ConnectedPosition;
-            public string ParentWorldspaceID;
-            private Worldspace _parentWorldspace;
             [XmlIgnore]
-            public Worldspace ParentWorldspace
-            {
-                get
-                {
-                    if (_parentWorldspace == null)
-                    {
-                        _parentWorldspace = new Worldspace();
-                    }
-                    return _parentWorldspace;
-                }
-            }
+            public Worldspace ParentWorldspace;
             public string ConnectedWorldspaceID;
             private Worldspace _connectedWorldspace;
             [XmlIgnore]
@@ -32,27 +19,51 @@ namespace JMF
                 {
                     if (_connectedWorldspace == null)
                     {
-                        _connectedWorldspace = new Worldspace();
+                        Framework.Database.Worldspaces.TryGetValue(ConnectedWorldspaceID, out _connectedWorldspace);
                     }
                     return _connectedWorldspace;
                 }
             }
+            public string ConnectedTravelPointID;
 
             public TravelPoint(
                 string id = "",
                 Vector3 position = new Vector3(),
-                Vector3 connectedPosition = new Vector3(),
                 string parentWorldspaceID = "",
-                string connectWorldspaceID = ""
+                string connectWorldspaceID = "",
+                string connectedTravelPointID = ""
                 )
             {
                 ID = id;
                 Position = position;
-                ConnectedPosition = connectedPosition;
-                ParentWorldspaceID = parentWorldspaceID;
                 ConnectedWorldspaceID = connectWorldspaceID;
-                _parentWorldspace = null;
+                ConnectedTravelPointID = connectedTravelPointID;
+                ParentWorldspace = new Worldspace();
                 _connectedWorldspace = null;
+            }
+
+            public void OnTick()
+            {
+                if (Game.Player.Character.IsInAnyVehicle && Game.Player.Character.CurrentVehicle.Class == VehicleClass.Planes)
+                {
+                    World.DrawMarker(Position);
+                    if (Game.Player.Character.Position.DistanceTo2D(Position) < 50f)
+                    {
+                        Debug.Log(DebugSeverity.Warning, "Player in range");
+                        if (ConnectedWorldspace.TryGetTravelPoint(ConnectedTravelPointID, out TravelPoint connectedTravelPoint))
+                        {
+                            Vehicle vehicle = Game.Player.Character.CurrentVehicle;
+                            float speed = vehicle.Speed;
+                            float heading = connectedTravelPoint.Position.HeadingTo(new Vector3(403));
+                            Debug.Log(DebugSeverity.Error, heading);
+                            vehicle.Heading = heading;
+                            Debug.Log(DebugSeverity.Error, "moving player to " + connectedTravelPoint.Position.Offset(100f, heading).ToString());
+                            Framework.State.Worldspace = ConnectedWorldspaceID;
+                            vehicle.Position = connectedTravelPoint.Position.Offset(100f, heading);
+                            vehicle.Speed = speed;
+                        }
+                    }
+                }
             }
         }
     }

@@ -5,6 +5,14 @@
     <string>MCUVirginia</string>
     <string>MCUPlayground</string>
   </MapIDs>
+  <TravelPoints>
+    <TravelPoint>
+      <ID>California</ID>
+      <Position X="-6100" Y="2024" Z="200"/>
+      <ConnectedWorldspaceID>MCUCalifornia</ConnectedWorldspaceID>
+      <ConnectedTravelPointID>Virginia</ConnectedTravelPointID>
+    </TravelPoint>
+  </TravelPoints>
   <WeatherTypes>
     <WeatherType>Clear</WeatherType>
     <WeatherType>ExtraSunny</WeatherType>

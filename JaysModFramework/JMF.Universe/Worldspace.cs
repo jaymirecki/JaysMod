@@ -125,10 +125,17 @@ namespace JMF
             {
                 if (!LoadMap(mapId, out Map map))
                 {
-                    return false;
+                    LoadOverworld();
                 }
 
-                World.Weather = WeatherTypes[random.Next(WeatherTypes.Count)];
+                if (WeatherTypes.Count > 0)
+                {
+                    World.Weather = WeatherTypes[random.Next(WeatherTypes.Count)];
+                }
+                else
+                {
+                    World.Weather = WeatherType.Clear;
+                }
                 return true;
             }
             private void LoadOverworld()
@@ -212,6 +219,26 @@ namespace JMF
                 {
                     map.ManagePortals();
                 }
+                foreach (TravelPoint t in TravelPoints)
+                {
+                    TravelPoint travelPoint = t;
+                    travelPoint.ParentWorldspace = this;
+                    travelPoint.OnTick();
+                }
+            }
+            public bool TryGetTravelPoint(string id, out TravelPoint travelPoint)
+            {
+                foreach (TravelPoint t in TravelPoints)
+                {
+                    if (t.ID == id)
+                    {
+                        travelPoint = t;
+                        travelPoint.ParentWorldspace = this;
+                        return true;
+                    }
+                }
+                travelPoint = new TravelPoint("");
+                return false;
             }
         }
     }

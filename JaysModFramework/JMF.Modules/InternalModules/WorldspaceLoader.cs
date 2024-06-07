@@ -15,7 +15,7 @@ namespace JMF
             internal override SemanticVersion Version { get; } = new SemanticVersion(1, 0, 0);
             public override string ModuleName { get; } = "Worldspace Loader";
             public override string ModuleDescription { get; } = "Loads worldspaces";
-            public override ModuleSettings Settings { get { return new ModuleSettings(); } }
+            public override ModuleSettings Settings { get { return new ModuleSettings(true); } }
             public override void OnActivate()
             {
                 //Framework.Database.Worldspaces.GetValue("MCUDC").LoadWorldspace("MCUDC");

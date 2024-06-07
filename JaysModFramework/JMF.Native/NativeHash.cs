@@ -107,6 +107,9 @@
             GetAllVehicles = 0x9B8E1BF04B51F2E8,
             DeleteEntity = 0xAE3CBE5BF394C9C9,
             DoesEntityExist = 0x7239B21A38F536BA,
+            GetVehicleClass = 0x29439776AAA00A62,
+            GetEntitySpeed = 0xD5037BA82E12416F,
+            SetVehicleForwardSpeed = 0xAB54A438726D25D5,
         }
     }
 }

@@ -36,7 +36,7 @@ namespace JMF
             set
             {
                 _worldspace = value;
-                if (_worldspace != "" && _map != "")
+                if (_worldspace != "")
                 {
                     Universe.Truth.ChangeWorldspace(_worldspace, _map);
                 }
@@ -56,7 +56,7 @@ namespace JMF
             set
             {
                 _map = value;
-                if (_worldspace != "" && _map != "")
+                if (_worldspace != "")
                 {
                     Universe.Truth.ChangeWorldspace(_worldspace, _map);
                 }

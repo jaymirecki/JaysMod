@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Serialization;
 using JMF.Native;
 
 namespace JMF
@@ -9,6 +10,11 @@ namespace JMF
         //                             Properties                            //
         ///////////////////////////////////////////////////////////////////////
         #region Properties
+        [XmlIgnore]
+        public VehicleClass Class
+        {
+            get { return (VehicleClass)Function.Call<int>(Hash.GetVehicleClass, Handle); }
+        }
         private bool _sirenOn = false;
         public bool SirenOn
         {
@@ -33,6 +39,16 @@ namespace JMF
             {
                 SetProperty(Hash.SetVehicleHasMutedSirens, !value);
                 _sirenAudioOn = value;
+            }
+        }
+        private float _speed = 0;
+        public override float Speed
+        {
+            get { return GetPropertyOrDefault(Hash.GetEntitySpeed, _speed); }
+            set
+            {
+                SetProperty(Hash.SetVehicleForwardSpeed, value);
+                _speed = value;
             }
         }
         #endregion Properties

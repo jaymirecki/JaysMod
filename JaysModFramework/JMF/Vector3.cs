@@ -19,7 +19,7 @@ namespace JMF
         //                            Constructors                           //
         ///////////////////////////////////////////////////////////////////////
         #region Constructors
-        public Vector3(float x, float y, float z)
+        public Vector3(float x = 403, float y = 2024, float z = 113)
         {
             X = x;
             Y = y;
@@ -40,16 +40,29 @@ namespace JMF
         }
         public float HeadingTo(Vector3 destination)
         {
-            return 0;
+            if (destination.X == X && destination.Y > Y)
+            {
+                if (destination.Y > Y)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 180;
+                }
+            }
+
+            float theta = (float)System.Math.Atan(System.Math.Abs((destination.Y - Y) / (destination.X - X)));
+            return GetHeadingFromTheta(theta, this, destination);
         }
         public Vector3 Offset(float distance, float heading)
         {
-            float theta = GetTheta(heading);
+            float theta = GetThetaFromHeading(heading);
             float x = (float)(distance * System.Math.Cos(theta)) * (heading < 180 ? -1 : 1);
             float y = (float)(distance * System.Math.Sin(theta)) * ((heading < 270) && (heading > 90) ? -1 : 1);
             return new Vector3(X + x, Y + y, Z);
         }
-        private float GetTheta(float heading)
+        private static float GetThetaFromHeading(float heading)
         {
             float theta;
             // Calculate angle between heading and X-axis
@@ -61,7 +74,7 @@ namespace JMF
             {
                 theta = heading - 90;
             }
-            else if (heading < 270)
+            else if (heading <= 270)
             {
                 theta = 270 - heading;
             }
@@ -71,6 +84,29 @@ namespace JMF
             }
             // Convert to radians and return
             return (float)(theta * (System.Math.PI / 180));
+        }
+        private static float GetHeadingFromTheta(float theta, Vector3 origin, Vector3 destination)
+        {
+            float thetaDegrees = (float)((theta * 180) / System.Math.PI);
+            Debug.Log(DebugSeverity.Error, thetaDegrees);
+            float heading;
+            if ((destination.X >= origin.X) && (destination.Y >= origin.Y))
+            {
+                heading = 270 + thetaDegrees;
+            }
+            else if ((destination.X >= origin.X) && (destination.Y < origin.Y))
+            {
+                heading = 270 - thetaDegrees;
+            }
+            else if ((destination.X < origin.X) && (destination.Y < origin.Y))
+            {
+                heading = 90 + thetaDegrees;
+            }
+            else
+            {
+                heading = 90 - thetaDegrees;
+            }
+            return heading;
         }
         public Vector3 Offset(Vector3 offset)
         {

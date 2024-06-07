@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <State xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Date>2011-03-11T03:44:08</Date>
+  <Date>2011-03-11T12:44:08</Date>
   <Weather>Clear</Weather>
-  <Worldspace>MCUVirginia</Worldspace>
+  <Worldspace>MCUCalifornia</Worldspace>
   <Map>MCUVirginia</Map>
 </State>

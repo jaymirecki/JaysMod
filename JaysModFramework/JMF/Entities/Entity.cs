@@ -1,5 +1,6 @@
 ﻿using JMF.Native;
 using System;
+using System.Xml.Serialization;
 
 namespace JMF
 {
@@ -116,6 +117,12 @@ namespace JMF
         public float HeightAboveGround
         {
             get { return Function.Call<float>(Hash.GetEntityHeightAboveGround, Handle); }
+        }
+        [XmlIgnore]
+        public virtual float Speed
+        {
+            get { return GetPropertyOrDefault<float>(Hash.GetEntitySpeed, 0); }
+            set { }
         }
         public string Worldspace { get; set; } = "";
         public string Map { get; set; } = "";

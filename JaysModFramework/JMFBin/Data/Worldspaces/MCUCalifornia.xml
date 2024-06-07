@@ -1,4 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Worldspace>
   <ID>MCUCalifornia</ID>
+  <TravelPoints>
+    <TravelPoint>
+      <ID>Virginia</ID>
+      <Position X="6900" Y="0" Z="200"/>
+      <ConnectedWorldspaceID>MCUVirginia</ConnectedWorldspaceID>
+      <ConnectedTravelPointID>California</ConnectedTravelPointID>
+    </TravelPoint>
+  </TravelPoints>
+  <WeatherTypes>
+    <WeatherType>Clear</WeatherType>
+  </WeatherTypes>
 </Worldspace>
