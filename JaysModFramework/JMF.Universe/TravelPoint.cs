@@ -4,7 +4,7 @@ namespace JMF
 {
     namespace Universe
     {
-        public struct TravelPoint
+        public class TravelPoint
         {
             const float MainlandXMed = 403;
             const float MainlandXMax = MainlandXMed + 6500;
@@ -41,6 +41,7 @@ namespace JMF
                 }
             }
             public string ConnectedTravelPointID;
+            public TravelPoint() : this("") { }
 
             public TravelPoint(
                 string id = "",
@@ -56,12 +57,30 @@ namespace JMF
                 ConnectedTravelPointID = connectedTravelPointID;
                 ParentWorldspace = new Worldspace();
                 _connectedWorldspace = null;
+                _blip = null;
+            }
+            private Blip _blip;
+            public void CreateBlip()
+            {
+                if (_blip == null)
+                {
+                    _blip = new Blip(VectorPosition(Position), BlipSprite.RadarLevel, false, BlipColor.Yellow, true, true);
+                }
+            }
+            public void RemoveBlip()
+            {
+                if (_blip != null)
+                {
+                    _blip.Delete();
+                    _blip = null;
+                }
             }
 
             public void OnTick()
             {
                 if (Game.Player.Character.IsInAnyVehicle && Game.Player.Character.CurrentVehicle.Class == VehicleClass.Planes)
                 {
+                    CreateBlip();
                     Vector3 vector = VectorPosition(Position);
                     World.DrawMarker(vector);
                     if (Game.Player.Character.Position.DistanceTo2D(vector) < 50f)
@@ -78,6 +97,10 @@ namespace JMF
                             vehicle.Speed = speed;
                         }
                     }
+                }
+                else
+                {
+                    RemoveBlip();
                 }
             }
             private static Vector3 VectorPosition(TravelPointPosition position)

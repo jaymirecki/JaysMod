@@ -51,13 +51,12 @@ namespace JMF
                 {
                     return _position;
                 }
-                return new Vector3(
-                    (Rage.Vector3)Rage.Native.NativeFunction.Call(
-                        (ulong)Hash.GetEntityCoords, 
+                return
+                    (Vector3)(Rage.Vector3)Rage.Native.NativeFunction.Call(
+                        (ulong)Hash.GetEntityCoords,
                         typeof(Rage.Vector3),
                         Handle
-                        )
-                    ); 
+                        );
             }
             set
             {

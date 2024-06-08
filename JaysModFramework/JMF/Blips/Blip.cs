@@ -2,6 +2,14 @@
 
 namespace JMF
 {
+    public class IntPtr
+    {
+        public int Value;
+        public IntPtr(int value)
+        {
+            Value = value;
+        }
+    }
     public class Blip
     {
         public Blip(
@@ -13,7 +21,7 @@ namespace JMF
             bool displayOnRadar = true
             )
         {
-            Function.Call(Hash.AddBlipForCoord, position.X, position.Y, position.Z);
+            Handle = Function.Call<int>(Hash.AddBlipForCoord, position.X, position.Y, position.Z);
             SetBlipInfo(sprite, showDistance, color, displayonMap, displayOnRadar);
         }
         public Blip(
@@ -25,8 +33,13 @@ namespace JMF
             bool displayOnRadar = true
             )
         {
-            Function.Call(Hash.AddBlipForEntity, entity.Handle);
+            Handle = Function.Call<int>(Hash.AddBlipForEntity, entity.Handle);
             SetBlipInfo(sprite, showDistance, color, displayonMap, displayOnRadar);
+        }
+        public void Delete()
+        {
+            IntPtr handle = new IntPtr(Handle);
+            Rage.Native.NativeFunction.Natives.RemoveBlip(ref handle.Value);
         }
         private void SetBlipInfo(BlipSprite sprite, bool showDistance, BlipColor color, bool displayonMap, bool displayOnRadar)
         {

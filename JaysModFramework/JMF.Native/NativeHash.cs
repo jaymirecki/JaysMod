@@ -110,6 +110,11 @@
             GetVehicleClass = 0x29439776AAA00A62,
             GetEntitySpeed = 0xD5037BA82E12416F,
             SetVehicleForwardSpeed = 0xAB54A438726D25D5,
+            RemoveBlip = 0x86A652570E5F25DD,
+            SetThisScriptCanRemoveBlipsCreatedByAnyScript = 0xB98236CAAECEF897,
+            GetFirstBlipInfoId = 0x1BEDE233E6CD2A1F,
+            GetNextBlipInfoId = 0x14F96AA50D6FBEA7,
+            DoesBlipExist = 0xA6DB27D19ECBB7DA,
         }
     }
 }

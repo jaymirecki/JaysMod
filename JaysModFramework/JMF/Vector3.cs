@@ -127,11 +127,7 @@ namespace JMF
         {
             return X + "," + Y + "," + Z;
         }
-        public Vector3(Rage.Vector3 vector)
-        {
-            X = vector.X;
-            Y = vector.Y;
-            Z = vector.Z;
-        }
+        public static explicit operator Rage.Vector3(Vector3 v) => new Rage.Vector3(v.X, v.Y, v.Z);
+        public static explicit operator Vector3(Rage.Vector3 v) => new Vector3(v.X, v.Y, v.Z);
     }
 }

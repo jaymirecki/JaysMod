@@ -1,4 +1,7 @@
 ﻿using JMF.Interiors;
+using JMF.Menus;
+using JMF.Modules;
+using JMF.Native;
 using OOD.Collections;
 using System;
 using System.Collections.Generic;
@@ -15,6 +18,7 @@ namespace JMF
             public List<string> MapIDs { get; set; } = new List<string>();
             private List<Map> _loadedMaps = new List<Map>();
             public List<TravelPoint> TravelPoints { get; set; } = new List<TravelPoint>();
+            private string _activeTravelPointID = "NewMexico";
             public List<WeatherType> WeatherTypes { get; set; } = new List<WeatherType>();
             [XmlIgnore]
             public string CurrentMap { get; private set; } = "";
@@ -123,9 +127,13 @@ namespace JMF
             #region Loading and Unloading
             public bool LoadWorldspace(string mapId)
             {
-                if (!LoadMap(mapId, out Map map))
+                if (mapId == "")
                 {
                     LoadOverworld();
+                }
+                else if (!LoadMap(mapId, out Map map))
+                {
+                    return false;
                 }
 
                 if (WeatherTypes.Count > 0)
@@ -162,7 +170,6 @@ namespace JMF
             {
                 if (!MapIDs.Contains(mapId))
                 {
-                    Debug.Log(DebugSeverity.Error, "Worldspace " + ID + " does not contain Map " + mapId);
                     outMap = null;
                     return false;
                 }
@@ -213,8 +220,38 @@ namespace JMF
                 World.Weather = WeatherType.Clear;
             }
             #endregion Loading and Unloading
+            ///////////////////////////////////////////////////////////////////
+            //                       Travel Point Menu                       //
+            ///////////////////////////////////////////////////////////////////
+            #region Travel Point Menu
+            private MenuListItem<string> _travelPointMenuButton = null;
+            public MenuListItem<string> TravelPointMenuButton
+            {
+                get
+                {
+                    if (_travelPointMenuButton == null)
+                    {
+                        _travelPointMenuButton = CreateTravelPointMenuButton();
+                    }
+                    return _travelPointMenuButton;
+                }
+            }
+            private MenuListItem<string> CreateTravelPointMenuButton()
+            {
+                List<string> travelPoints = TravelPoints.ConvertAll(t => t.ID);
+                MenuListItem<string> item = new MenuListItem<string>("Travel Point GPS", travelPoints.ToArray());
+                item.Activated += ActivateTravelPoint;
+                return item;
+            }
+
+            private void ActivateTravelPoint(object sender, EventArgs e)
+            {
+                _activeTravelPointID = TravelPointMenuButton.SelectedItem;
+            }
+            #endregion Travel Point Menu
             public void ManagePortals()
             {
+                TravelPointMenuButton.Enabled = (Game.Player.Character.IsInAnyVehicle) && (Game.Player.Character.CurrentVehicle.Class == VehicleClass.Planes);
                 foreach (Map map in _loadedMaps)
                 {
                     map.ManagePortals();
@@ -223,7 +260,10 @@ namespace JMF
                 {
                     TravelPoint travelPoint = t;
                     travelPoint.ParentWorldspace = this;
-                    travelPoint.OnTick();
+                    if (t.ID == _activeTravelPointID)
+                    {
+                        travelPoint.OnTick();
+                    }
                 }
             }
             public bool TryGetTravelPoint(string id, out TravelPoint travelPoint)
