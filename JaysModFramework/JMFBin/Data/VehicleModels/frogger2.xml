@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>frogger2</ID>
+  <Class>Helicopter</Class>
+  <GTAModel>Frogger (TPE)</GTAModel>
+  <RWMake>Eurocopter</RWMake>
+  <RWModel>EC130</RWModel>
+</VehicleModel>

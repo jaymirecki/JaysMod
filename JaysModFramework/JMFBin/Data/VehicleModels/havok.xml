@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>havok</ID>
+  <Class>Helicopter</Class>
+  <GTAModel>Havok</GTAModel>
+  <RWMake>Heli-Sport</RWMake>
+  <RWModel>CH-7</RWModel>
+</VehicleModel>

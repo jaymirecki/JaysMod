@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>rogue</ID>
+  <Class>Planes</Class>
+  <GTAModel>Rogue</GTAModel>
+  <RWMake>Beechcraft</RWMake>
+  <RWModel>T-6 Texan II</RWModel>
+</VehicleModel>

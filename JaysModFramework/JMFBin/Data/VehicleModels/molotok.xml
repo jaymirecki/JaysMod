@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>molotok</ID>
+  <Class>Planes</Class>
+  <GTAModel>V-65 Molotok</GTAModel>
+  <RWMake>Mikoyan-Gurevich</RWMake>
+  <RWModel>MiG-17</RWModel>
+</VehicleModel>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>alkonost</ID>
+  <Class>Planes</Class>
+  <GTAModel>RO-86 Alkonost</GTAModel>
+  <RWMake>Tupolev</RWMake>
+  <RWModel>Tu-160</RWModel>
+</VehicleModel>

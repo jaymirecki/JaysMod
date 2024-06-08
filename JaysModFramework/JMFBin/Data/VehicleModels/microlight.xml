@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>microlight</ID>
+  <Class>Planes</Class>
+  <GTAModel>Ultralight</GTAModel>
+  <RWMake>Air Creation</RWMake>
+  <RWModel>Racer</RWModel>
+</VehicleModel>

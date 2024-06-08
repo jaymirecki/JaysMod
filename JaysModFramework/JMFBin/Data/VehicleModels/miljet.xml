@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>miljet</ID>
+  <Class>Planes</Class>
+  <Subclass>Passenger Jet</Subclass>
+  <GTAMake>Passenger Jet</GTAMake>
+  <GTAModel>Miljet</GTAModel>
+  <RWMake>Northrop Grumman</RWMake>
+  <RWModel>E-11A</RWModel>
+</VehicleModel>

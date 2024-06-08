@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>savage</ID>
+  <Class>Helicopter</Class>
+  <GTAModel>Savage</GTAModel>
+  <RWMake>Mil</RWMake>
+  <RWModel>Mi-24</RWModel>
+</VehicleModel>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>volatus</ID>
+  <Class>Helicopter</Class>
+  <GTAModel>Volatus</GTAModel>
+  <RWMake>Airbus</RWMake>
+  <RWModel>H160</RWModel>
+</VehicleModel>

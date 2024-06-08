@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>shamal</ID>
+  <Class>Planes</Class>
+  <Subclass>Passenger Jet</Subclass>
+  <GTAMake>Passenger Jet</GTAMake>
+  <GTAModel>Shamal</GTAModel>
+  <RWMake>Cessna</RWMake>
+  <RWModel>CitationJet</RWModel>
+</VehicleModel>

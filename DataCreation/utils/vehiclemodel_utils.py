@@ -12,6 +12,7 @@ def csv_to_xml(row, destination_path):
     root = ET.Element("VehicleModel")
     id = to_xml.element_with_text(root, "Hash", row["Hash"])
     id = to_xml.element_with_text(root, "ID", row["ID"])
+    id = to_xml.element_with_text(root, "Class", row["Class"])
     id = to_xml.element_with_text(root, "Subclass", row["Subclass"])
     id = to_xml.element_with_text(root, "GTAMake", row["Subclass"])
     id = to_xml.element_with_text(root, "GTAModel", row["GTAModel"])

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>luxor2</ID>
+  <Class>Planes</Class>
+  <Subclass>Passenger Jet</Subclass>
+  <GTAMake>Passenger Jet</GTAMake>
+  <GTAModel>Luxor Deluxe</GTAModel>
+  <RWMake>Bombardier</RWMake>
+  <RWModel>Learjet 45</RWModel>
+</VehicleModel>

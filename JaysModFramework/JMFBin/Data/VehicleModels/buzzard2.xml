@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>buzzard2</ID>
+  <Class>Helicopter</Class>
+  <GTAModel>Buzzard</GTAModel>
+  <RWMake>McDonnell Douglas</RWMake>
+  <RWModel>MH-6 Little Bird</RWModel>
+</VehicleModel>

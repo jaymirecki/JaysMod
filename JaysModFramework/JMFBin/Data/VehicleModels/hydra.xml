@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>hydra</ID>
+  <Class>Planes</Class>
+  <GTAModel>Hydra</GTAModel>
+  <RWMake>McDonnell Douglas</RWMake>
+  <RWModel>AV-8B Harrier II</RWModel>
+</VehicleModel>

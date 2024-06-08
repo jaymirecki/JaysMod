@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>tractor</ID>
+  <Class>Utilities</Class>
+  <GTAModel>Tractor</GTAModel>
+</VehicleModel>

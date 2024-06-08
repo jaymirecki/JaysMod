@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>titan</ID>
+  <Class>Planes</Class>
+  <GTAModel>Titan</GTAModel>
+  <RWMake>Lockheed Martin</RWMake>
+  <RWModel>C-130 Hercules</RWModel>
+</VehicleModel>

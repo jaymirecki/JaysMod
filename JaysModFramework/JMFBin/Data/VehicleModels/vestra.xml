@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>vestra</ID>
+  <Class>Planes</Class>
+  <GTAModel>Vestra</GTAModel>
+  <RWMake>Cirrus</RWMake>
+  <RWModel>Vision SF50</RWModel>
+</VehicleModel>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>skylift</ID>
+  <Class>Helicopter</Class>
+  <GTAModel>Skylift</GTAModel>
+  <RWMake>Sikorsky</RWMake>
+  <RWModel>S-64 Skycrane</RWModel>
+</VehicleModel>

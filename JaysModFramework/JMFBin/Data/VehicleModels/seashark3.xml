@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>seashark3</ID>
+  <Class>Boats</Class>
+  <Subclass>Jetski</Subclass>
+  <GTAMake>Jetski</GTAMake>
+  <GTAModel>Seashark (yacht)</GTAModel>
+</VehicleModel>

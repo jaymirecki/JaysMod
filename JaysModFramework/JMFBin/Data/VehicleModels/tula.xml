@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>tula</ID>
+  <Class>Planes</Class>
+  <GTAModel>Tula</GTAModel>
+  <RWMake>Kaman</RWMake>
+  <RWModel>K-16B</RWModel>
+</VehicleModel>

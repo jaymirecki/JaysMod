@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>cargoplane</ID>
+  <Class>Planes</Class>
+  <GTAModel>Cargo Plane</GTAModel>
+</VehicleModel>

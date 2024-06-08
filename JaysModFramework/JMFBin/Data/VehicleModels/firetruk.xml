@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>firetruk</ID>
+  <Class>Emergency</Class>
+  <GTAModel>Fire Truck</GTAModel>
+</VehicleModel>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VehicleModel>
+  <ID>tropic2</ID>
+  <Class>Boats</Class>
+  <Subclass>Boat</Subclass>
+  <GTAMake>Boat</GTAMake>
+  <GTAModel>Tropic (yacht)</GTAModel>
+</VehicleModel>
