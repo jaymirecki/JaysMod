@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>penumbra2</ID>
   <Class>Sports</Class>
+  <GTAMake>Maibatsu</GTAMake>
   <GTAModel>Penumbra FF</GTAModel>
+  <MaxSpeed>45.0454369</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

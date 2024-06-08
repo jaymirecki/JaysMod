@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>growler</ID>
   <Class>Sports</Class>
+  <GTAMake>Pfister</GTAMake>
   <GTAModel>Growler</GTAModel>
+  <MaxSpeed>49.75962</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

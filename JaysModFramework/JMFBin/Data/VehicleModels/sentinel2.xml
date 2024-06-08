@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>sentinel2</ID>
   <Class>Coupes</Class>
+  <GTAMake>Ubermach</GTAMake>
   <GTAModel>Sentinel</GTAModel>
+  <MaxSpeed>45.4909</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

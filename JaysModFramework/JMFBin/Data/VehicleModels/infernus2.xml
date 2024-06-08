@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>infernus2</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Pegassi</GTAMake>
   <GTAModel>Infernus Classic</GTAModel>
+  <MaxSpeed>48.0532722</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

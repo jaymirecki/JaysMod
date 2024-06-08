@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>youga4</ID>
   <Class>Vans</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Youga Custom</GTAModel>
+  <MaxSpeed>36.6416626</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

@@ -4,5 +4,8 @@
   <Class>Helicopters</Class>
   <GTAModel>Sea Sparrow</GTAModel>
   <RWMake>Sikorsky</RWMake>
-  <RWModel>S300 </RWModel>
+  <RWModel>S300</RWModel>
+  <MaxSpeed>56.5962219</MaxSpeed>
+  <MaxKnots>951.212769</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

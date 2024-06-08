@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>pbus</ID>
   <Class>Emergency</Class>
+  <GTAMake>Brute</GTAMake>
   <GTAModel>Police Prison Bus</GTAModel>
+  <MaxSpeed>28.2361088</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>11</NumberOfSeats>
 </VehicleModel>

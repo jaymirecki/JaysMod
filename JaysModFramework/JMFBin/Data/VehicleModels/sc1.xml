@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>sc1</ID>
   <Class>Super</Class>
+  <GTAMake>Ubermach</GTAMake>
   <GTAModel>SC1</GTAModel>
+  <MaxSpeed>47.4162178</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

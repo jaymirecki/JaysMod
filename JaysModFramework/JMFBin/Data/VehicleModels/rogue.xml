@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>rogue</ID>
   <Class>Planes</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Rogue</GTAModel>
   <RWMake>Beechcraft</RWMake>
   <RWModel>T-6 Texan II</RWModel>
+  <MaxSpeed>100.0</MaxSpeed>
+  <MaxKnots>3.65866661</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

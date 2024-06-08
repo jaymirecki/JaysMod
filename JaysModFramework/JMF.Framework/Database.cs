@@ -66,7 +66,6 @@ namespace JMF
             Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Framework.Config.DataPath, _worldspacesDirectory);
             Debug.Log(DebugSeverity.Info, "Done");
             VehicleModels = new MemoryXMLDatabaseTable<string, VehicleModel>(Framework.Config.DataPath, "VehicleModels");
-            //VehicleModels.Save();
         }
         public bool Validate()
         {

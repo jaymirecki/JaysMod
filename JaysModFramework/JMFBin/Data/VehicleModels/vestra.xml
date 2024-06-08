@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>vestra</ID>
   <Class>Planes</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Vestra</GTAModel>
   <RWMake>Cirrus</RWMake>
   <RWModel>Vision SF50</RWModel>
+  <MaxSpeed>97.13975</MaxSpeed>
+  <MaxKnots>2.61791635</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

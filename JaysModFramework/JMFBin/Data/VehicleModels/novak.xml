@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>novak</ID>
   <Class>SUVs</Class>
+  <GTAMake>Lampadati</GTAMake>
   <GTAModel>Novak</GTAModel>
+  <MaxSpeed>47.01816</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

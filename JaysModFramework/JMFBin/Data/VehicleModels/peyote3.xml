@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>peyote3</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Peyote Custom</GTAModel>
+  <MaxSpeed>42.7741432</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

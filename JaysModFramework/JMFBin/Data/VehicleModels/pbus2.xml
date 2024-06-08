@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>pbus2</ID>
   <Class>Service</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Festival Bus</GTAModel>
+  <MaxSpeed>23.1177425</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>11</NumberOfSeats>
 </VehicleModel>

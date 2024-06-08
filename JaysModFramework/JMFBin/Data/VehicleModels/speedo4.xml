@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>speedo4</ID>
   <Class>Vans</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Speedo Custom</GTAModel>
+  <MaxSpeed>42.72843</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

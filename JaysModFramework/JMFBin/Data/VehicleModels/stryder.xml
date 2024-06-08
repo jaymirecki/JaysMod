@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>stryder</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Stryder</GTAModel>
+  <MaxSpeed>42.2186928</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

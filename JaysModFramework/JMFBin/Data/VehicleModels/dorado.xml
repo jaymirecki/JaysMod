@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>dorado</ID>
   <Class>Compacts</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Dorado</GTAModel>
+  <MaxSpeed>42.1729774</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

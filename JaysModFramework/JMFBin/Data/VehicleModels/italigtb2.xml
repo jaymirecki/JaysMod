@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>italigtb2</ID>
   <Class>Super</Class>
+  <GTAMake>Progen</GTAMake>
   <GTAModel>Itali GTB Custom</GTAModel>
+  <MaxSpeed>52.4821243</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

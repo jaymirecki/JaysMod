@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>maverick</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Maverick</GTAModel>
   <RWMake>Bell</RWMake>
   <RWModel>407</RWModel>
+  <MaxSpeed>54.0675354</MaxSpeed>
+  <MaxKnots>830.1169</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

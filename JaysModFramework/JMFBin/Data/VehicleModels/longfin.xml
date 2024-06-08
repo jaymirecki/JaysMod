@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>longfin</ID>
   <Class>Boats</Class>
-  <Subclass>Boat</Subclass>
-  <GTAMake>Boat</GTAMake>
+  <SubClass>Boat</SubClass>
+  <GTAMake>Shitzu</GTAMake>
   <GTAModel>Longfin</GTAModel>
+  <MaxSpeed>46.6666679</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

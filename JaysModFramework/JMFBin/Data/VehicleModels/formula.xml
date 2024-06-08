@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>formula</ID>
   <Class>OpenWheel</Class>
+  <GTAMake>Progen</GTAMake>
   <GTAModel>PR4</GTAModel>
+  <MaxSpeed>52.5647354</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

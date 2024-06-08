@@ -3,4 +3,7 @@
   <ID>tribike2</ID>
   <Class>Cycles</Class>
   <GTAModel>Endurex Race Bike</GTAModel>
+  <MaxSpeed>21.0</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

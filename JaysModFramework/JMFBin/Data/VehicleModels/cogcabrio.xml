@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>cogcabrio</ID>
   <Class>Coupes</Class>
+  <GTAMake>Enus</GTAMake>
   <GTAModel>Cognoscenti Cabrio</GTAModel>
+  <MaxSpeed>45.1953163</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

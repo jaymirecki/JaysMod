@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tropos</ID>
   <Class>Sports</Class>
+  <GTAMake>Lampadati</GTAMake>
   <GTAModel>Tropos Rallye</GTAModel>
+  <MaxSpeed>42.93287</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

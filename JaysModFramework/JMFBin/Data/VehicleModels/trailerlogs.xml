@@ -3,4 +3,7 @@
   <ID>trailerlogs</ID>
   <Class>Trailers</Class>
   <GTAModel>Trailer (flatbed; logs)</GTAModel>
+  <MaxSpeed>-0.5051028</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>0</NumberOfSeats>
 </VehicleModel>

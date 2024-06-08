@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>kanjosj</ID>
   <Class>Coupes</Class>
+  <GTAMake>Dinka</GTAMake>
   <GTAModel>Kanjo SJ</GTAModel>
+  <MaxSpeed>44.6583557</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

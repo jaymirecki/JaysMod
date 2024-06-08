@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>hakuchou2</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Shitzu</GTAMake>
   <GTAModel>Hakuchou Drag</GTAModel>
+  <MaxSpeed>52.03867</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

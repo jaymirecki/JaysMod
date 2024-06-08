@@ -52,8 +52,8 @@ def convert_worldspace_to_xml(
             
 @app.command()
 def convert_map_to_xml(
-    source: str = "./Data - Maps.csv",
-    destination: str = "../JaysModFramework/JMFBin/Data/Maps"
+    source: str = "../JaysModFramework/JMFBin/Data/Maps",
+    destination: str = "./Data - Maps.csv"
     ):
     source_path= os.path.abspath(source)
     destination_path = os.path.abspath(destination)
@@ -71,6 +71,23 @@ def convert_vehiclemodel_to_xml(
     df = pd.read_csv(source_path)
     for idx, row in df.iterrows():
         vehiclemodel.csv_to_xml(row, destination_path)
+
+@app.command()
+def convert_vehiclemodel_to_csv(
+    source: str = "../JaysModFramework/JMFBin/Data/VehicleModels",
+    destination: str = "./Data - VehicleModels.csv"
+    ):
+    source_path= os.path.abspath(source)
+    destination_path = os.path.abspath(destination)
+
+    with open(destination_path, "w", newline="") as output:
+        csv_writer = csv.writer(output)
+        csv_writer.writerow(["Hash", "ID", "Class", "SubClass", "GTAMake", "GTAModel", "RWMake", "RWModel", "MaxSpeed", "MaxKnots", "NumberOfSeats"])
+        for file in os.listdir(source_path):
+            filepath = os.path.join(source_path, file)
+            tree = ET.parse(filepath)
+            root = tree.getroot()
+            csv_writer.writerow(vehiclemodel.xml_to_csv(root))
 
 if __name__ == "__main__":
     app()

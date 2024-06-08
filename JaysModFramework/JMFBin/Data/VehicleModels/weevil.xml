@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>weevil</ID>
   <Class>Compacts</Class>
+  <GTAMake>BF</GTAMake>
   <GTAModel>Weevil</GTAModel>
+  <MaxSpeed>32.7237167</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

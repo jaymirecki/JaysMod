@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>stingergt</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Grotti</GTAMake>
   <GTAModel>Stinger GT</GTAModel>
+  <MaxSpeed>45.1953163</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

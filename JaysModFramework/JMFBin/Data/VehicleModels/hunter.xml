@@ -5,4 +5,7 @@
   <GTAModel>FH-1 Hunter</GTAModel>
   <RWMake>Boeing</RWMake>
   <RWModel>AH-64 Apache</RWModel>
+  <MaxSpeed>58.5542564</MaxSpeed>
+  <MaxKnots>956.386169</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

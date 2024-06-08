@@ -3,4 +3,7 @@
   <ID>predator</ID>
   <Class>Emergency</Class>
   <GTAModel>Police Predator</GTAModel>
+  <MaxSpeed>40.0000038</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

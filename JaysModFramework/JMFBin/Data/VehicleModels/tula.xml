@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>tula</ID>
   <Class>Planes</Class>
+  <GTAMake>Mammoth</GTAMake>
   <GTAModel>Tula</GTAModel>
   <RWMake>Kaman</RWMake>
   <RWModel>K-16B</RWModel>
+  <MaxSpeed>69.36756</MaxSpeed>
+  <MaxKnots>2.26600718</MaxKnots>
+  <NumberOfSeats>5</NumberOfSeats>
 </VehicleModel>

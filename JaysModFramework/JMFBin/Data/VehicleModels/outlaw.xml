@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>outlaw</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Outlaw</GTAModel>
+  <MaxSpeed>36.1564674</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

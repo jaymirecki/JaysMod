@@ -1,846 +1,846 @@
-Hash,ID,Class,Subclass,GTAMake,GTAModel,RWMake,RWModel,MaxSpeed,MaxKnots,NumberOfSeats
-,tenf,Sports,,,10F,,,,,
-,tenf2,Sports,,,10F Widebody,,,,,
-,r300,Sports,,,300R,,,,,
-,drafter,Sports,,,8F Drafter,,,,,
-,ninef,Sports,,,9F,,,,,
-,ninef2,Sports,,,9F Cabrio,,,,,
-,alpha,Sports,,,Alpha,,,,,
-,zr380,Sports,,,Apocalypse ZR380,,,,,
-,banshee,Sports,,,Banshee,,,,,
-,bestiagts,Sports,,,Bestia GTS,,,,,
-,blista2,Sports,,,Blista Compact,,,,,
-,blista3,Sports,,,Blista Compact (Go Go Monkey),,,,,
-,buffalo,Sports,,,Buffalo,Dodge,Charger LX,,,
-,buffalo2,Sports,,,Buffalo S,Dodge,Charger SRT8,,,
-,calico,Sports,,,Calico GTF,,,,,
-,carbonizzare,Sports,,,Carbonizzare,,,,,
-,comet2,Sports,,,Comet,,,,,
-,comet3,Sports,,,Comet Retro Custom,,,,,
-,comet4,Sports,,,Comet Safari,,,,,
-,comet6,Sports,,,Comet S2,,,,,
-,comet7,Sports,,,Comet S2 Cabrio,,,,,
-,comet5,Sports,,,Comet SR,,,,,
-,coquette,Sports,,,Coquette,,,,,
-,coquette4,Sports,,,Coquette D10,,,,,
-,corsita,Sports,,,Corsita,,,,,
-,cypher,Sports,,,Cypher,,,,,
-,tampa2,Sports,,,Drift Tampa,,,,,
-,drifttampa,Sports,,,Drift Tampa (drift model),,,,,
-,elegy2,Sports,,,Elegy RH8,,,,,
-,elegy,Sports,,,Elegy Retro Custom,,,,,
-,euros,Sports,,,Euros,,,,,
-,drifteuros,Sports,,,Euros (drift model),,,,,
-,feltzer2,Sports,,,Feltzer,,,,,
-,flashgt,Sports,,,Flash GT,,,,,
-,furoregt,Sports,,,Furore GT,,,,,
-,fusilade,Sports,,,Fusilade,,,,,
-,futo2,Sports,,,Futo GTX,,,,,
-,driftfuto,Sports,,,Futo GTX (drift model),,,,,
-,zr3802,Sports,,,Future Shock ZR380,,,,,
-,futo,Sports,,,Futo,,,,,
-,gb200,Sports,,,GB200,,,,,
-,growler,Sports,,,Growler,,,,,
-,everon2,Sports,,,Hotring Everon,,,,,
-,gauntlet6,Sports,,,Hotring Hellfire,,,,,
-,hotring,Sports,,,Hotring Sabre,,,,,
-,imorgon,Sports,,,Imorgon,,,,,
-,italigto,Sports,,,Itali GTO,,,,,
-,stingertt,Sports,,,Itali GTO Stinger TT,,,,,
-,italirsx,Sports,,,Itali RSX,,,,,
-,issi7,Sports,,,Issi Sport,,,,,
-,jester,Sports,,,Jester,,,,,
-,jester2,Sports,,,Jester (Racecar),,,,,
-,jester3,Sports,,,Jester Classic,,,,,
-,jester4,Sports,,,Jester RR,,,,,
-,driftjester,Sports,,,Jester RR (drift model),,,,,
-,jugular,Sports,,,Jugular,,,,,
-,khamelion,Sports,,,Khamelion,,,,,
-,komoda,Sports,,,Komoda,,,,,
-,kuruma,Sports,,,Kuruma,,,,,
-,kuruma2,Sports,,,Kuruma (Armored),,,,,
-,coureur,Sports,,,La Coureuse,,,,,
-,locust,Sports,,,Locust,,,,,
-,lynx,Sports,,,Lynx,,,,,
-,massacro,Sports,,,Massacro,,,,,
-,massacro2,Sports,,,Massacro (Racecar),,,,,
-,neo,Sports,,,Neo,,,,,
-,neon,Sports,,,Neon,,,,,
-,zr3803,Sports,,,Nightmare ZR380,,,,,
-,omnis,Sports,,,Omnis,,,,,
-,omnisegt,Sports,,,Omnis e-GT,,,,,
-,panthere,Sports,,,Panthere,,,,,
-,paragon,Sports,,,Paragon R,,,,,
-,paragon2,Sports,,,Paragon R (Armored),,,,,
-,pariah,Sports,,,Pariah,,,,,
-,penumbra,Sports,,,Penumbra,,,,,
-,penumbra2,Sports,,,Penumbra FF,,,,,
-,raiden,Sports,,,Raiden,,,,,
-,rapidgt,Sports,,,Rapid GT,,,,,
-,rapidgt2,Sports,,,Rapid GT (cabrio),,,,,
-,raptor,Sports,,,Raptor,,,,,
-,remus,Sports,,,Remus,,,,,
-,driftremus,Sports,,,Remus (drift model),,,,,
-,revolter,Sports,,,Revolter,,,,,
-,rt3000,Sports,,,RT3000,,,,,
-,ruston,Sports,,,Ruston,,,,,
-,schafter4,Sports,,,Schafter LWB,,,,,
-,schafter3,Sports,,,Schafter V12,,,,,
-,schlagen,Sports,,,Schlagen GT,,,,,
-,schwarzer,Sports,,,Schwartzer,,,,,
-,sentinel3,Sports,,,Sentinel Classic,,,,,
-,sentinel4,Sports,,,Sentinel Classic Widebody,,,,,
-,seven70,Sports,,,Seven-70,,,,,
-,sm722,Sports,,,SM722,,,,,
-,specter,Sports,,,Specter,,,,,
-,specter2,Sports,,,Specter Custom,,,,,
-,buffalo3,Sports,,,Sprunk Buffalo,,Charger SRT8,,,
-,streiter,Sports,,,Streiter,,,,,
-,sugoi,Sports,,,Sugoi,,,,,
-,sultan,Sports,,,Sultan,,,,,
-,sultan2,Sports,,,Sultan Classic,,,,,
-,sultan3,Sports,,,Sultan RS Classic,,,,,
-,surano,Sports,,,Surano,,,,,
-,s95,Sports,,,S95,,,,,
-,tropos,Sports,,,Tropos Rallye,,,,,
-,vectre,Sports,,,Vectre,,,,,
-,veto,Sports,,,Veto Classic,,,,,
-,veto2,Sports,,,Veto Modern,,,,,
-,verlierer2,Sports,,,Verlierer,,,,,
-,vstr,Sports,,,V-STR,,,,,
-,zr350,Sports,,,ZR350,,,,,
-,driftzr350,Sports,,,ZR350 (drift model),,,,,
-,dominator4,Muscle,,,Apocalypse Dominator,,,,,
-,impaler2,Muscle,,,Apocalypse Impaler,,,,,
-,imperator,Muscle,,,Apocalypse Imperator,,,,,
-,slamvan4,Muscle,,,Apocalypse Slamvan,,,,,
-,arbitergt,Muscle,,,Arbiter GT,,,,,
-,dukes3,Muscle,,,Beater Dukes,,,,,
-,blade,Muscle,,,Blade,,,,,
-,brigham,Muscle,,,Brigham,,,,,
-,broadway,Muscle,,,Broadway,,,,,
-,buccaneer,Muscle,,,Buccaneer,,,,,
-,buccaneer2,Muscle,,,Buccaneer Custom,,,,,
-,buffalo5,Muscle,,,Buffalo EVX,Dodge,Charger Daytona SRT,,,
-,buffalo4,Muscle,,,Buffalo STX,Dodge,Charger LD,,,
-,stalion2,Muscle,,,Burger Shot Stallion,,,,,
-,chino,Muscle,,,Chino,,,,,
-,chino2,Muscle,,,Chino Custom,,,,,
-,clique,Muscle,,,Clique,,,,,
-,clique2,Muscle,,,Clique Wagon,,,,,
-,coquette3,Muscle,,,Coquette BlackFin,,,,,
-,deviant,Muscle,,,Deviant,,,,,
-,dominator,Muscle,,,Dominator,,,,,
-,dominator7,Muscle,,,Dominator ASP,,,,,
-,dominator9,Muscle,,,Dominator GT,,,,,
-,dominator8,Muscle,,,Dominator GTT,,,,,
-,dominator3,Muscle,,,Dominator GTX,,,,,
-,yosemite2,Muscle,,,Drift Yosemite,,,,,
-,driftyosemite,Muscle,,,Drift Yosemite (drift model),,,,,
-,dukes2,Muscle,,,Duke O'Death,,,,,
-,dukes,Muscle,,,Dukes,,,,,
-,ellie,Muscle,,,Ellie,,,,,
-,eudora,Muscle,,,Eudora,,,,,
-,faction,Muscle,,,Faction,,,,,
-,faction2,Muscle,,,Faction Custom,,,,,
-,faction3,Muscle,,,Faction Custom Donk,,,,,
-,dominator5,Muscle,,,Future Shock Dominator,,,,,
-,impaler3,Muscle,,,Future Shock Impaler,,,,,
-,imperator2,Muscle,,,Future Shock Imperator,,,,,
-,slamvan5,Muscle,,,Future Shock Slamvan,,,,,
-,gauntlet,Muscle,,,Gauntlet,,,,,
-,gauntlet3,Muscle,,,Gauntlet Classic,,,,,
-,gauntlet5,Muscle,,,Gauntlet Classic Custom,,,,,
-,gauntlet4,Muscle,,,Gauntlet Hellfire,,,,,
-,greenwood,Muscle,,,Greenwood,,,,,
-,hermes,Muscle,,,Hermes,,,,,
-,hotknife,Muscle,,,Hotknife,,,,,
-,hustler,Muscle,,,Hustler,,,,,
-,impaler,Muscle,,,Impaler,,,,,
-,impaler6,Muscle,,,Impaler LX,,,,,
-,slamvan2,Muscle,,,Lost Slamvan,,,,,
-,lurcher,Muscle,,,Lurcher,,,,,
-,manana2,Muscle,,,Manana Custom,,,,,
-,moonbeam,Muscle,,,Moonbeam,,,,,
-,moonbeam2,Muscle,,,Moonbeam Custom,,,,,
-,dominator6,Muscle,,,Nightmare Dominator,,,,,
-,impaler4,Muscle,,,Nightmare Impaler,,,,,
-,imperator3,Muscle,,,Nightmare Imperator,,,,,
-,slamvan6,Muscle,,,Nightmare Slamvan,,,,,
-,nightshade,Muscle,,,Nightshade,,,,,
-,peyote2,Muscle,,,Peyote Gasser,,,,,
-,phoenix,Muscle,,,Phoenix,,,,,
-,picador,Muscle,,,Picador,,,,,
-,dominator2,Muscle,,,Pißwasser Dominator,,,,,
-,ratloader,Muscle,,,Rat-Loader,,,,,
-,ratloader2,Muscle,,,Rat-Truck,,,,,
-,gauntlet2,Muscle,,,Redwood Gauntlet,,,,,
-,ruiner,Muscle,,,Ruiner,,,,,
-,ruiner3,Muscle,,,Ruiner (wreck),,,,,
-,ruiner2,Muscle,,,Ruiner 2000,,,,,
-,ruiner4,Muscle,,,Ruiner ZZ-8,,,,,
-,sabregt,Muscle,,,Sabre Turbo,,,,,
-,sabregt2,Muscle,,,Sabre Turbo Custom,,,,,
-,slamvan,Muscle,,,Slamvan,,,,,
-,slamvan3,Muscle,,,Slamvan Custom,,,,,
-,stalion,Muscle,,,Stallion,,,,,
-,tampa,Muscle,,,Tampa,,,,,
-,tahoma,Muscle,,,Tahoma Coupe,,,,,
-,tulip,Muscle,,,Tulip,,,,,
-,tulip2,Muscle,,,Tulip M-100,,,,,
-,vamos,Muscle,,,Vamos,,,,,
-,vigero,Muscle,,,Vigero,,,,,
-,vigero2,Muscle,,,Vigero ZX,,,,,
-,vigero3,Muscle,,,Vigero ZX Convertible,,,,,
-,virgo,Muscle,,,Virgo,,,,,
-,virgo3,Muscle,,,Virgo Classic,,,,,
-,virgo2,Muscle,,,Virgo Classic Custom,,,,,
-,voodoo2,Muscle,,,Voodoo,,,,,
-,voodoo,Muscle,,,Voodoo Custom,,,,,
-,tampa3,Muscle,,,Weaponized Tampa,,,,,
-,weevil2,Muscle,,,Weevil Custom,,,,,
-,yosemite,Muscle,,,Yosemite,,,,,
-,pfister811,Super,,,811,,,,,
-,adder,Super,,,Adder,,,,,
-,autarch,Super,,,Autarch,,,,,
-,banshee2,Super,,,Banshee 900R,,,,,
-,bullet,Super,,,Bullet,,,,,
-,champion,Super,,,Champion,,,,,
-,cheetah,Super,,,Cheetah,,,,,
-,cyclone,Super,,,Cyclone,,,,,
-,cyclone2,Super,,,Cyclone II,,,,,
-,deveste,Super,,,Deveste Eight,,,,,
-,emerus,Super,,,Emerus,,,,,
-,entity3,Super,,,Entity MT,,,,,
-,entityxf,Super,,,Entity XF,,,,,
-,entity2,Super,,,Entity XXR,,,,,
-,sheava,Super,,,ETR1,,,,,
-,fmj,Super,,,FMJ,,,,,
-,furia,Super,,,Furia,,,,,
-,gp1,Super,,,GP1,,,,,
-,ignus,Super,,,Ignus,,,,,
-,infernus,Super,,,Infernus,,,,,
-,italigtb,Super,,,Itali GTB,,,,,
-,italigtb2,Super,,,Itali GTB Custom,,,,,
-,krieger,Super,,,Krieger,,,,,
-,lm87,Super,,,LM87,,,,,
-,nero,Super,,,Nero,,,,,
-,nero2,Super,,,Nero Custom,,,,,
-,osiris,Super,,,Osiris,,,,,
-,penetrator,Super,,,Penetrator,,,,,
-,le7b,Super,,,RE-7B,,,,,
-,reaper,Super,,,Reaper,,,,,
-,voltic2,Super,,,Rocket Voltic,,,,,
-,s80,Super,,,S80RR,,,,,
-,sc1,Super,,,SC1,,,,,
-,scramjet,Super,,,Scramjet,,,,,
-,sultanrs,Super,,,Sultan RS,,,,,
-,t20,Super,,,T20,,,,,
-,taipan,Super,,,Taipan,,,,,
-,tempesta,Super,,,Tempesta,,,,,
-,tezeract,Super,,,Tezeract,,,,,
-,thrax,Super,,,Thrax,,,,,
-,tigon,Super,,,Tigon,,,,,
-,torero2,Super,,,Torero XO,,,,,
-,turismo3,Super,,,Turismo Omaggio,,,,,
-,turismor,Super,,,Turismo R,,,,,
-,tyrant,Super,,,Tyrant,,,,,
-,tyrus,Super,,,Tyrus,,,,,
-,vacca,Super,,,Vacca,,,,,
-,vagner,Super,,,Vagner,,,,,
-,vigilante,Super,,,Vigilante,,,,,
-,virtue,Super,,,Virtue,,,,,
-,visione,Super,,,Visione,,,,,
-,voltic,Super,,,Voltic,,,,,
-,ignus2,Super,,,Weaponized Ignus,,,,,
-,xa21,Super,,,XA-21,,,,,
-,prototipo,Super,,,X80 Proto,,,,,
-,zeno,Super,,,Zeno,,,,,
-,zentorno,Super,,,Zentorno,,,,,
-,zorrusso,Super,,,Zorrusso,,,,,
-,z190,SportsClassics,,,190z,,,,,
-,ardent,SportsClassics,,,Ardent,,,,,
-,casco,SportsClassics,,,Casco,,,,,
-,cheburek,SportsClassics,,,Cheburek,,,,,
-,cheetah2,SportsClassics,,,Cheetah Classic,,,,,
-,coquette2,SportsClassics,,,Coquette Classic,,,,,
-,deluxo,SportsClassics,,,Deluxo,,,,,
-,dynasty,SportsClassics,,,Dynasty,,,,,
-,fagaloa,SportsClassics,,,Fagaloa,,,,,
-,btype2,SportsClassics,,,Fränken Stange,,,,,
-,gt500,SportsClassics,,,GT500,,,,,
-,infernus2,SportsClassics,,,Infernus Classic,,,,,
-,jb700,SportsClassics,,,JB 700,,,,,
-,jb7002,SportsClassics,,,JB 700W,,,,,
-,mamba,SportsClassics,,,Mamba,,,,,
-,manana,SportsClassics,,,Manana,,,,,
-,michelli,SportsClassics,,,Michelli GT,,,,,
-,monroe,SportsClassics,,,Monroe,,,,,
-,nebula,SportsClassics,,,Nebula Turbo,,,,,
-,peyote,SportsClassics,,,Peyote,,,,,
-,peyote3,SportsClassics,,,Peyote Custom,,,,,
-,pigalle,SportsClassics,,,Pigalle,,,,,
-,rapidgt3,SportsClassics,,,Rapid GT Classic,,,,,
-,retinue,SportsClassics,,,Retinue,,,,,
-,retinue2,SportsClassics,,,Retinue Mk II,,,,,
-,btype,SportsClassics,,,Roosevelt,,,,,
-,btype3,SportsClassics,,,Roosevelt Valor,,,,,
-,savestra,SportsClassics,,,Savestra,,,,,
-,stinger,SportsClassics,,,Stinger,,,,,
-,stingergt,SportsClassics,,,Stinger GT,,,,,
-,feltzer3,SportsClassics,,,Stirling GT,,,,,
-,stromberg,SportsClassics,,,Stromberg,,,,,
-,swinger,SportsClassics,,,Swinger,,,,,
-,toreador,SportsClassics,,,Toreador,,,,,
-,torero,SportsClassics,,,Torero,,,,,
-,tornado,SportsClassics,,,Tornado,,,,,
-,tornado2,SportsClassics,,,Tornado (cabrio),,,,,
-,tornado3,SportsClassics,,,Tornado (beater),,,,,
-,tornado4,SportsClassics,,,Tornado (Mariachi),,,,,
-,tornado5,SportsClassics,,,Tornado Custom,,,,,
-,tornado6,SportsClassics,,,Tornado Rat Rod,,,,,
-,turismo2,SportsClassics,,,Turismo Classic,,,,,
-,viseris,SportsClassics,,,Viseris,,,,,
-,zion3,SportsClassics,,,Zion Classic,,,,,
-,ztype,SportsClassics,,,Z-Type,,,,,
-,asea,Sedans,,,Asea,,,,,
-,asea2,Sedans,,,Asea (snow),,,,,
-,asterope,Sedans,,,Asterope,,,,,
-,asterope2,Sedans,,,Asterope GZ,,,,,
-,cinquemila,Sedans,,,Cinquemila,,,,,
-,cognoscenti,Sedans,,,Cognoscenti,,,,,
-,cognoscenti2,Sedans,,,Cognoscenti (Armored),,,,,
-,cog55,Sedans,,,Cognoscenti 55,,,,,
-,cog552,Sedans,,,Cognoscenti 55 (Armored),,,,,
-,deity,Sedans,,,Deity,,,,,
-,emperor,Sedans,,,Emperor,,,,,
-,emperor2,Sedans,,,Emperor (beater),,,,,
-,emperor3,Sedans,,,Emperor (snow),,,,,
-,fugitive,Sedans,,,Fugitive,,,,,
-,glendale,Sedans,,,Glendale,,,,,
-,glendale2,Sedans,,,Glendale Custom,,,,,
-,ingot,Sedans,,,Ingot,,,,,
-,intruder,Sedans,,,Intruder,,,,,
-,impaler5,Sedans,,,Impaler SZ,,,,,
-,premier,Sedans,,,Premier,,,,,
-,primo,Sedans,,,Primo,,,,,
-,primo2,Sedans,,,Primo Custom,,,,,
-,regina,Sedans,,,Regina,,,,,
-,rhinehart,Sedans,,,Rhinehart,,,,,
-,romero,Sedans,,,Romero Hearse,,,,,
-,schafter2,Sedans,,,Schafter,,,,,
-,schafter6,Sedans,,,Schafter LWB (Armored),,,,,
-,schafter5,Sedans,,,Schafter V12 (Armored),,,,,
-,stafford,Sedans,,,Stafford,,,,,
-,stanier,Sedans,,,Stanier,,,,,
-,stratum,Sedans,,,Stratum,,,,,
-,stretch,Sedans,,,Stretch,,,,,
-,superd,Sedans,,,Super Diamond,,,,,
-,surge,Sedans,,,Surge,,,,,
-,tailgater,Sedans,,,Tailgater,,,,,
-,tailgater2,Sedans,,,Tailgater S,,,,,
-,limo2,Sedans,,,Turreted Limo,,,,,
-,warrener,Sedans,,,Warrener,,,,,
-,warrener2,Sedans,,,Warrener HKR,,,,,
-,washington,Sedans,,,Washington,,,,,
-,aleutian,SUVs,,,Aleutian,,,,,
-,astron,SUVs,,,Astron,,,,,
-,astron2,SUVs,,,Astron Custom,,,,,
-,baller,SUVs,,,Baller,,,,,
-,baller2,SUVs,,,Baller (second generation),,,,,
-,baller3,SUVs,,,Baller LE,,,,,
-,baller5,SUVs,,,Baller LE (Armored),,,,,
-,baller4,SUVs,,,Baller LE LWB,,,,,
-,baller6,SUVs,,,Baller LE LWB (Armored),,,,,
-,baller7,SUVs,,,Baller ST,,,,,
-,baller8,SUVs,,,Baller ST-D,,,,,
-,bjxl,SUVs,,,BeeJay XL,,,,,
-,cavalcade,SUVs,,,Cavalcade,,,,,
-,cavalcade2,SUVs,,,Cavalcade (second generation),,,,,
-,cavalcade3,SUVs,,,Cavalcade XL,,,,,
-,contender,SUVs,,,Contender,,,,,
-,dubsta,SUVs,,,Dubsta,,,,,
-,dubsta2,SUVs,,,Dubsta (custom),,,,,
-,fq2,SUVs,,,FQ 2,,,,,
-,granger,SUVs,,,Granger,,,,,
-,granger2,SUVs,,,Granger 3600LX,,,,,
-,gresley,SUVs,,,Gresley,,,,,
-,habanero,SUVs,,,Habanero,,,,,
-,huntley,SUVs,,,Huntley S,,,,,
-,issi8,SUVs,,,Issi Rally,,,,,
-,iwagen,SUVs,,,I-Wagen,,,,,
-,jubilee,SUVs,,,Jubilee,,,,,
-,landstalker,SUVs,,,Landstalker,,,,,
-,landstalker2,SUVs,,,Landstalker XL,,,,,
-,mesa,SUVs,,,Mesa,,,,,
-,mesa2,SUVs,,,Mesa (Snow),,,,,
-,novak,SUVs,,,Novak,,,,,
-,patriot,SUVs,,,Patriot,,,,,
-,patriot2,SUVs,,,Patriot Stretch,,,,,
-,radi,SUVs,,,Radius,,,,,
-,rebla,SUVs,,,Rebla GTS,,,,,
-,rocoto,SUVs,,,Rocoto,,,,,
-,seminole,SUVs,,,Seminole,,,,,
-,seminole2,SUVs,,,Seminole Frontier,,,,,
-,serrano,SUVs,,,Serrano,,,,,
-,squaddie,SUVs,,,Squaddie,,,,,
-,toros,SUVs,,,Toros,,,,,
-,vivanite,SUVs,,,Vivanite,,,,,
-,xls,SUVs,,,XLS,,,,,
-,xls2,SUVs,,,XLS (Armored),,,,,
-,issi4,Compacts,,,Apocalypse Issi,,,,,
-,asbo,Compacts,,,Asbo,,,,,
-,blista,Compacts,,,Blista,,,,,
-,kanjo,Compacts,,,Blista Kanjo,,,,,
-,brioso2,Compacts,,,Brioso 300,,,,,
-,brioso3,Compacts,,,Brioso 300 Widebody,,,,,
-,brioso,Compacts,,,Brioso R/A,,,,,
-,club,Compacts,,,Club,,,,,
-,dilettante,Compacts,,,Dilettante,,,,,
-,dilettante2,Compacts,,,Dilettante (Merryweather Security),,,,,
-,dorado,Compacts,,,Dorado,,,,,
-,issi5,Compacts,,,Future Shock Issi,,,,,
-,issi2,Compacts,,,Issi,,,,,
-,issi3,Compacts,,,Issi Classic,,,,,
-,issi6,Compacts,,,Nightmare Issi,,,,,
-,panto,Compacts,,,Panto,,,,,
-,prairie,Compacts,,,Prairie,,,,,
-,rhapsody,Compacts,,,Rhapsody,,,,,
-,weevil,Compacts,,,Weevil,,,,,
-,cogcabrio,Coupes,,,Cognoscenti Cabrio,,,,,
-,exemplar,Coupes,,,Exemplar,,,,,
-,f620,Coupes,,,F620,,,,,
-,felon,Coupes,,,Felon,,,,,
-,felon2,Coupes,,,Felon GT,,,,,
-,fr36,Coupes,,,FR36,,,,,
-,driftfr36,Coupes,,,FR36 (drift model),,,,,
-,jackal,Coupes,,,Jackal,,,,,
-,kanjosj,Coupes,,,Kanjo SJ,,,,,
-,oracle2,Coupes,,,Oracle,,,,,
-,oracle,Coupes,,,Oracle XS,,,,,
-,previon,Coupes,,,Previon,,,,,
-,postlude,Coupes,,,Postlude,,,,,
-,sentinel2,Coupes,,,Sentinel,,,,,
-,sentinel,Coupes,,,Sentinel XS,,,,,
-,windsor,Coupes,,,Windsor,,,,,
-,windsor2,Coupes,,,Windsor Drop,,,,,
-,zion,Coupes,,,Zion,,,,,
-,zion2,Coupes,,,Zion Cabrio,,,,,
-,akuma,Motorcycles,,,Akuma,,,,,
-,deathbike,Motorcycles,,,Apocalypse Deathbike,,,,,
-,avarus,Motorcycles,,,Avarus,,,,,
-,bagger,Motorcycles,,,Bagger,,,,,
-,bati,Motorcycles,,,Bati 801,,,,,
-,bati2,Motorcycles,,,Bati 801RR,,,,,
-,bf400,Motorcycles,,,BF400,,,,,
-,carbonrs,Motorcycles,,,Carbon RS,,,,,
-,chimera,Motorcycles,,,Chimera,,,,,
-,cliffhanger,Motorcycles,,,Cliffhanger,,,,,
-,daemon,Motorcycles,,,Daemon,,,,,
-,daemon2,Motorcycles,,,Daemon (custom),,,,,
-,defiler,Motorcycles,,,Defiler,,,,,
-,diablous,Motorcycles,,,Diabolus,,,,,
-,diablous2,Motorcycles,,,Diabolus Custom,,,,,
-,double,Motorcycles,,,Double T,,,,,
-,enduro,Motorcycles,,,Enduro,,,,,
-,esskey,Motorcycles,,,Esskey,,,,,
-,faggio2,Motorcycles,,,Faggio,,,,,
-,faggio3,Motorcycles,,,Faggio Mod,,,,,
-,faggio,Motorcycles,,,Faggio Sport,,,,,
-,fcr,Motorcycles,,,FCR 1000,,,,,
-,fcr2,Motorcycles,,,FCR 1000 Custom,,,,,
-,deathbike2,Motorcycles,,,Future Shock Deathbike,,,,,
-,gargoyle,Motorcycles,,,Gargoyle,,,,,
-,hakuchou,Motorcycles,,,Hakuchou,,,,,
-,hakuchou2,Motorcycles,,,Hakuchou Drag,,,,,
-,hexer,Motorcycles,,,Hexer,,,,,
-,innovation,Motorcycles,,,Innovation,,,,,
-,lectro,Motorcycles,,,Lectro,,,,,
-,manchez,Motorcycles,,,Manchez,,,,,
-,manchez2,Motorcycles,,,Manchez Scout,,,,,
-,manchez3,Motorcycles,,,Manchez Scout C,,,,,
-,nemesis,Motorcycles,,,Nemesis,,,,,
-,nightblade,Motorcycles,,,Nightblade,,,,,
-,deathbike3,Motorcycles,,,Nightmare Deathbike,,,,,
-,oppressor,Motorcycles,,,Oppressor,,,,,
-,oppressor2,Motorcycles,,,Oppressor Mk II,,,,,
-,pcj,Motorcycles,,,PCJ 600,,,,,
-,powersurge,Motorcycles,,,Powersurge,,,,,
-,rrocket,Motorcycles,,,Rampant Rocket,,,,,
-,ratbike,Motorcycles,,,Rat Bike,,,,,
-,reever,Motorcycles,,,Reever,,,,,
-,ruffian,Motorcycles,,,Ruffian,,,,,
-,sanchez2,Motorcycles,,,Sanchez,,,,,
-,sanchez,Motorcycles,,,Sanchez (livery),,,,,
-,sanctus,Motorcycles,,,Sanctus,,,,,
-,shinobi,Motorcycles,,,Shinobi,,,,,
-,shotaro,Motorcycles,,,Shotaro,,,,,
-,sovereign,Motorcycles,,,Sovereign,,,,,
-,stryder,Motorcycles,,,Stryder,,,,,
-,thrust,Motorcycles,,,Thrust,,,,,
-,vader,Motorcycles,,,Vader,,,,,
-,vindicator,Motorcycles,,,Vindicator,,,,,
-,vortex,Motorcycles,,,Vortex,,,,,
-,wolfsbane,Motorcycles,,,Wolfsbane,,,,,
-,zombiea,Motorcycles,,,Zombie Bobber,,,,,
-,zombieb,Motorcycles,,,Zombie Chopper,,,,,
-,bruiser,OffRoad,,,Apocalypse Bruiser,,,,,
-,brutus,OffRoad,,,Apocalypse Brutus,,,,,
-,monster3,OffRoad,,,Apocalypse Sasquatch,,,,,
-,bifta,OffRoad,,,Bifta,,,,,
-,blazer,OffRoad,,,Blazer,,,,,
-,blazer5,OffRoad,,,Blazer Aqua,,,,,
-,blazer2,OffRoad,,,Blazer Lifeguard,,,,,
-,bodhi2,OffRoad,,,Bodhi,,,,,
-,boor,OffRoad,,,Boor,,,,,
-,brawler,OffRoad,,,Brawler,,,,,
-,caracara,OffRoad,,,Caracara,,,,,
-,caracara2,OffRoad,,,Caracara 4x4,,,,,
-,trophytruck2,OffRoad,,,Desert Raid,,,,,
-,draugur,OffRoad,,,Draugur,,,,,
-,dubsta3,OffRoad,,,Dubsta 6x6,,,,,
-,dune,OffRoad,,,Dune Buggy,,,,,
-,dune3,OffRoad,,,Dune FAV,,,,,
-,dloader,OffRoad,,,Duneloader,,,,,
-,everon,OffRoad,,,Everon,,,,,
-,freecrawler,OffRoad,,,Freecrawler,,,,,
-,bruiser2,OffRoad,,,Future Shock Bruiser,,,,,
-,brutus2,OffRoad,,,Future Shock Brutus,,,,,
-,monster4,OffRoad,,,Future Shock Sasquatch,,,,,
-,hellion,OffRoad,,,Hellion,,,,,
-,blazer3,OffRoad,,,Hot Rod Blazer,,,,,
-,bfinjection,OffRoad,,,Injection,,,,,
-,insurgent2,OffRoad,,,Insurgent,,,,,
-,insurgent,OffRoad,,,Insurgent Pick-Up,,,,,
-,insurgent3,OffRoad,,,Insurgent Pick-Up Custom,,,,,
-,kalahari,OffRoad,,,Kalahari,,,,,
-,kamacho,OffRoad,,,Kamacho,,,,,
-,marshall,OffRoad,,,Marshall,,,,,
-,menacer,OffRoad,,,Menacer,,,,,
-,mesa3,OffRoad,,,Mesa (off-road),,,,,
-,monstrociti,OffRoad,,,MonstroCiti,,,,,
-,bruiser3,OffRoad,,,Nightmare Bruiser,,,,,
-,brutus3,OffRoad,,,Nightmare Brutus,,,,,
-,monster5,OffRoad,,,Nightmare Sasquatch,,,,,
-,nightshark,OffRoad,,,Nightshark,,,,,
-,outlaw,OffRoad,,,Outlaw,,,,,
-,patriot3,OffRoad,,,Patriot Mil-Spec,,,,,
-,dune4,OffRoad,,,Ramp Buggy,,,,,
-,dune5,OffRoad,,,Ramp Buggy (Spoilerless),,,,,
-,rancherxl,OffRoad,,,Rancher XL,,,,,
-,rancherxl2,OffRoad,,,Rancher XL (Snow),,,,,
-,ratel,OffRoad,,,Ratel,,,,,
-,rcbandito,OffRoad,,,RC Bandito,,,,,
-,rebel2,OffRoad,,,Rebel,,,,,
-,riata,OffRoad,,,Riata,,,,,
-,rebel,OffRoad,,,Rusty Rebel,,,,,
-,sandking2,OffRoad,,,Sandking SWB,,,,,
-,sandking,OffRoad,,,Sandking XL,,,,,
-,dune2,OffRoad,,,Space Docker,,,,,
-,blazer4,OffRoad,,,Street Blazer,,,,,
-,technical,OffRoad,,,Technical,,,,,
-,technical2,OffRoad,,,Technical Aqua,,,,,
-,technical3,OffRoad,,,Technical Custom,,,,,
-,terminus,OffRoad,,,Terminus,,,,,
-,monster,OffRoad,,,Liberator,,,,,
-,trophytruck,OffRoad,,,Trophy Truck,,,,,
-,winky,OffRoad,,,Winky,,,,,
-,vagrant,OffRoad,,,Vagrant,,,,,
-,verus,OffRoad,,,Verus,,,,,
-,l35,OffRoad,,,Walton L35,,,,,
-,yosemite3,OffRoad,,,Yosemite Rancher,,,,,
-,zhaba,OffRoad,,,Zhaba,,,,,
-,openwheel1,OpenWheel,,,BR8,,,,,
-,openwheel2,OpenWheel,,,DR1,,,,,
-,formula,OpenWheel,,,PR4,,,,,
-,formula2,OpenWheel,,,R88,,,,,
-,bmx,Cycles,,,BMX,,,,,
-,cruiser,Cycles,,,Cruiser,,,,,
-,tribike2,Cycles,,,Endurex Race Bike,,,,,
-,inductor,Cycles,,,Inductor,,,,,
-,inductor2,Cycles,,,Junk Energy Inductor,,,,,
-,scorcher,Cycles,,,Scorcher,,,,,
-,tribike3,Cycles,,,Tri-Cycles Race Bike,,,,,
-,tribike,Cycles,,,Whippet Race Bike,,,,,
-,fixter,Cycles,,,Fixter,,,,,
-,boxville5,Vans,,,Armored Boxville,,,,,
-,bison,Vans,,,Bison,,,,,
-,bison2,Vans,,,Bison (McGill-Olsen),,,,,
-,bison3,Vans,,,Bison (The Mighty Bush),,,,,
-,bobcatxl,Vans,,,Bobcat XL,,,,,
-,boxville2,Vans,,,Boxville,,,,,
-,boxville3,Vans,,,Boxville (Humane Labs),,,,,
-,boxville6,Vans,,,Boxville (LSDS),,,,,
-,boxville4,Vans,,,Boxville (Post OP),,,,,
-,boxville,Vans,,,Boxville (utility),,,,,
-,burrito,Vans,,,Burrito,,,,,
-,burrito3,Vans,,,Burrito (second generation),,,,,
-,burrito4,Vans,,,Burrito (McGill-Olsen),,,,,
-,burrito5,Vans,,,Burrito (snow),,,,,
-,burrito2,Vans,,,Bugstars Burrito,,,,,
-,camper,Vans,,,Camper,,,,,
-,speedo2,Vans,,,Clown Van,,,,,
-,gburrito,Vans,,,Gang Burrito,,,,,
-,gburrito2,Vans,,,Gang Burrito (custom),,,,,
-,journey,Vans,,,Journey,,,,,
-,journey2,Vans,,,Journey II,,,,,
-,minivan,Vans,,,Minivan,,,,,
-,minivan2,Vans,,,Minivan Custom,,,,,
-,paradise,Vans,,,Paradise,,,,,
-,pony,Vans,,,Pony,,,,,
-,pony2,Vans,,,Pony (Smoke on the Water),,,,,
-,rumpo,Vans,,,Rumpo,,,,,
-,rumpo2,Vans,,,Rumpo (Deludamol),,,,,
-,rumpo3,Vans,,,Rumpo Custom,,,,,
-,speedo,Vans,,,Speedo,,,,,
-,speedo4,Vans,,,Speedo Custom,,,,,
-,speedo5,Vans,,,Speedo Custom (Personal Vehicle),,,,,
-,surfer,Vans,,,Surfer,,,,,
-,surfer2,Vans,,,Surfer (beater),,,,,
-,surfer3,Vans,,,Surfer Custom,,,,,
-,taco,Vans,,,Taco Van,,,,,
-,youga,Vans,,,Youga,,,,,
-,youga2,Vans,,,Youga Classic,,,,,
-,youga3,Vans,,,Youga Classic 4x4,,,,,
-,youga4,Vans,,,Youga Custom,,,,,
-,airtug,Utility,,,Airtug,,,,,
-,caddy,Utility,,,Caddy,,,,,
-,caddy2,Utility,,,Caddy (civilian),,,,,
-,caddy3,Utility,,,Caddy (bunker),,,,,
-,docktug,Utility,,,Docktug,,,,,
-,tractor2,Utility,,,Fieldmaster,,,,,
-,tractor3,Utility,,,Fieldmaster (Snow),,,,,
-,forklift,Utility,,,Forklift,,,,,
-,mower,Utility,,,Lawn Mower,,,,,
-,ripley,Utility,,,Ripley,,,,,
-,sadler,Utility,,,Sadler,,,,,
-,sadler2,Utility,,,Sadler (snow),,,,,
-,scrap,Utility,,,Scrap Truck,,,,,
-,slamtruck,Utility,,,Slamtruck,,,,,
-,towtruck,Utility,,,Tow Truck,,,,,
-,towtruck2,Utility,,,Tow Truck (yankee),,,,,
-,towtruck3,Utility,,,Tow Truck (Chop Shop beater),,,,,
-,towtruck4,Utility,,,Tow Truck (Chop Shop clean),,,,,
-,tractor,Utility,,,Tractor,,,,,
-,utillitruck2,Utility,,,Utility Truck,,,,,
-,utillitruck,Utility,,,Utility Truck (AWP),,,,,
-,utillitruck3,Utility,,,Utility Truck (Contender-based),,,,,
-,armytanker,Trailers,,,Army Trailer (tanker),,,,,
-,armytrailer,Trailers,,,Army Trailer,,,,,
-,armytrailer2,Trailers,,,Army Trailer (cutter),,,,,
-,boattrailer,Trailers,,,Boat Trailer,,,,,
-,boattrailer2,Trailers,,,Boat Trailer (Dinghy),,,,,
-,boattrailer3,Trailers,,,Boat Trailer (Seasharks),,,,,
-,docktrailer,Trailers,,,Dock Trailer,,,,,
-,trailerlarge,Trailers,,,Mobile Operations Center,,,,,
-,tr2,Trailers,,,"Trailer (car carrier, empty)",,,,,
-,tr3,Trailers,,,Trailer (yacht),,,,,
-,tr4,Trailers,,,"Trailer (car carrier, full)",,,,,
-,trflat,Trailers,,,Trailer (flatbed),,,,,
-,trailerlogs,Trailers,,,Trailer (flatbed; logs),,,,,
-,trailers,Trailers,,,Trailer (container/curtain-side),,,,,
-,trailers4,Trailers,,,Trailer (Gunrunning container),,,,,
-,trailers2,Trailers,,,Trailer (box),,,,,
-,trailers3,Trailers,,,Trailer (ramp-door box),,,,,
-,tvtrailer,Trailers,,,Trailer (Fame or Shame),,,,,
-,tvtrailer2,Trailers,,,Trailer (LS Panic),,,,,
-,trailers5,Trailers,,,Trailer (Happy Holidays),,,,,
-,raketrailer,Trailers,,,Trailer (rake),,,,,
-,trailersmall,Trailers,,,Trailer (small),,,,,
-,tanker,Trailers,,,Trailer (tanker; RON),,,,,
-,tanker2,Trailers,,,Trailer (tanker; heist),,,,,
-,baletrailer,Trailers,,,Bale Trailer,,,,,
-,graintrailer,Trailers,,,Grain Trailer,,,,,
-,handler,Industrial,,,Dock Handler,,,,,
-,bulldozer,Industrial,,,Dozer,,,,,
-,dump,Industrial,,,Dump,,,,,
-,flatbed,Industrial,,,Flatbed,,,,,
-,guardian,Industrial,,,Guardian,,,,,
-,mixer,Industrial,,,Mixer (3-axle),,,,,
-,mixer2,Industrial,,,Mixer (4-axle),,,,,
-,rubble,Industrial,,,Rubble,,,,,
-,tiptruck,Industrial,,,Tipper (2-axle),,,,,
-,tiptruck2,Industrial,,,Tipper (3-axle),,,,,
-,cutter,Industrial,,,Cutter,,,,,
-,airbus,Service,,,Airport Bus,,,,,
-,brickade,Service,,,Brickade,,,,,
-,brickade2,Service,,,Brickade 6x6,,,,,
-,bus,Service,,,Bus,,,,,
-,coach,Service,,,Dashound,,,,,
-,rallytruck,Service,,,Dune,,,,,
-,pbus2,Service,,,Festival Bus,,,,,
-,rentalbus,Service,,,Rental Shuttle Bus,,,,,
-,taxi,Service,,,Taxi,,,,,
-,tourbus,Service,,,Tour Bus,,,,,
-,trash,Service,,,Trashmaster,,,,,
-,trash2,Service,,,Trashmaster (heist),,,,,
-,wastelander,Service,,,Wastelander,,,,,
-,cerberus,Commercial,,,Apocalypse Cerberus,,,,,
-,benson,Commercial,,,Benson,,,,,
-,benson2,Commercial,,,Benson (Cluckin' Bell),,,,,
-,biff,Commercial,,,Biff,,,,,
-,cerberus2,Commercial,,,Future Shock Cerberus,,,,,
-,hauler,Commercial,,,Hauler,,,,,
-,hauler2,Commercial,,,Hauler Custom,,,,,
-,mule,Commercial,,,Mule,,,,,
-,mule2,Commercial,,,Mule (ramp-door),,,,,
-,mule3,Commercial,,,Mule (heist),,,,,
-,mule5,Commercial,,,Mule (Short Trips),,,,,
-,mule4,Commercial,,,Mule Custom,,,,,
-,cerberus3,Commercial,,,Nightmare Cerberus,,,,,
-,packer,Commercial,,,Packer,,,,,
-,phantom,Commercial,,,Phantom,,,,,
-,phantom4,Commercial,,,Phantom (Happy Holidays),,,,,
-,phantom3,Commercial,,,Phantom Custom,,,,,
-,phantom2,Commercial,,,Phantom Wedge,,,,,
-,pounder,Commercial,,,Pounder,,,,,
-,pounder2,Commercial,,,Pounder Custom,,,,,
-,stockade,Commercial,,,Stockade,,,,,
-,stockade3,Commercial,,,Stockade (Snow),,,,,
-,terbyte,Commercial,,,Terrorbyte,,,,,
-,ambulance,Emergency,,,Ambulance,,,,,
-,fbi,Emergency,,,FIB (Buffalo),,,,,
-,fbi2,Emergency,,,FIB (Granger),,,,,
-,firetruk,Emergency,,,Fire Truck,,,,,
-,polgauntlet,Emergency,,,Gauntlet Interceptor,,,,,
-,pranger,Emergency,,,Park Ranger,,,,,
-,lguard,Emergency,,,Lifeguard,,,,,
-,policeb,Emergency,,,Police Bike,,,,,
-,police3,Emergency,,,Police Cruiser (interceptor),,,,,
-,police,Emergency,,,Police Cruiser,,,,,
-,police2,Emergency,,,Police Cruiser (Buffalo),,,,,
-,polmav,Emergency,,,Police Maverick,,,,,
-,riot,Emergency,,,Police Riot,,,,,
-,policet,Emergency,,,Police Transporter,,,,,
-,pbus,Emergency,,,Police Prison Bus,,,,,
-,predator,Emergency,,,Police Predator,,,,,
-,riot2,Emergency,,,RCV,,,,,
-,sheriff,Emergency,,,Sheriff Cruiser,,,,,
-,sheriff2,Emergency,,,Sheriff SUV,,,,,
-,police5,Emergency,,,Stanier LE Cruiser,,,,,
-,police4,Emergency,,,Unmarked Cruiser,,,,,
-,policeold1,Emergency,,,Police Rancher (Snow),,,,,
-,policeold2,Emergency,,,Police Roadcruiser (Snow),,,,,
-,trailersmall2,Military,,,Anti-Aircraft Trailer,,,,,
-,scarab,Military,,,Apocalypse Scarab,,,,,
-,apc,Military,,,APC,,,,,
-,barracks,Military,,,Barracks,,,,,
-,barracks3,Military,,,Barracks (heist),,,,,
-,barracks2,Military,,,Barracks Semi,,,,,
-,barrage,Military,,,Barrage,,,,,
-,chernobog,Military,,,Chernobog,,,,,
-,crusader,Military,,,Crusader,,,,,
-,scarab2,Military,,,Future Shock Scarab,,,,,
-,halftrack,Military,,,Half-track,,,,,
-,minitank,Military,,,Invade and Persuade Tank,,,,,
-,scarab3,Military,,,Nightmare Scarab,,,,,
-,rhino,Military,,,Rhino Tank,,,,,
-,thruster,Military,,,Thruster,,,,,
-,khanjali,Military,,,TM-02 Khanjali,,,,,
-,vetir,Military,,,Vetir,,,,,
-,avisa,Boats,Submarine,,Avisa,,,,,
-,dinghy,Boats,Boat,,Dinghy,,,,,
-,dinghy2,Boats,Boat,,Dinghy (2-seater),,,,,
-,dinghy3,Boats,Boat,,Dinghy (heist),,,,,
-,dinghy4,Boats,Boat,,Dinghy (yacht),,,,,
-,jetmax,Boats,Boat,,Jetmax,,,,,
-,kosatka,Boats,Submarine,,Kosatka,,,,,
-,submersible2,Boats,Submarine,,Kraken,,,,,
-,patrolboat,Boats,Boat,,Kurtz 31 Patrol Boat,,,,,
-,longfin,Boats,Boat,,Longfin,,,,,
-,marquis,Boats,Boat,,Marquis,,,,,
-,seashark,Boats,Jetski,,Seashark,,,,,
-,seashark2,Boats,Jetski,,Seashark (lifeguard),,,,,
-,seashark3,Boats,Jetski,,Seashark (yacht),,,,,
-,speeder,Boats,Boat,,Speeder,,,,,
-,speeder2,Boats,Boat,,Speeder (yacht),,,,,
-,squalo,Boats,Boat,,Squalo,,,,,
-,submersible,Boats,Submarine,,Submersible,,,,,
-,suntrap,Boats,Boat,,Suntrap,,,,,
-,toro,Boats,Boat,,Toro,,,,,
-,toro2,Boats,Boat,,Toro (yacht),,,,,
-,tropic,Boats,Boat,,Tropic,,,,,
-,tropic2,Boats,Boat,,Tropic (yacht),,,,,
-,tug,Boats,Boat,,Tug,,,,,
-,dinghy5,Boats,Boat,,Weaponized Dinghy,,,,,
-,alphaz1,Planes,,,Alpha-Z1,,,,,
-,avenger,Planes,,,Avenger,,,,,
-,avenger2,Planes,,,Avenger (prop),,,,,
-,avenger3,Planes,,,Avenger (upgraded),,,,,
-,avenger4,Planes,,,Avenger (upgraded prop),,,,,
-,strikeforce,Planes,,,B-11 Strikeforce,,,,,
-,besra,Planes,,,Besra,,,,,
-,blimp,Planes,Blimp,,Atomic Blimp,,,,,
-,blimp2,Planes,Blimp,,Xero Blimp,,,,,
-,blimp3,Planes,Blimp,,Blimp,,,,,
-,cargoplane,Planes,,,Cargo Plane,,,,,
-,cargoplane2,Planes,,,Cargo Plane (no decals),,,,,
-,cuban800,Planes,,,Cuban 800,Cessna,310,,,
-,dodo,Planes,,,Dodo,,,,,
-,duster,Planes,,,Duster,,,,,
-,raiju,Planes,,,F-160 Raiju,Lockheed Martin,F-35 Lightning II,,,
-,howard,Planes,,,Howard NX-25,,,,,
-,hydra,Planes,,,Hydra,McDonnell Douglas,AV-8B Harrier II,,,
-,jet,Planes,Passenger Jet,,Jet,Boeing,757-800,,,
-,starling,Planes,,,LF-22 Starling,,,,,
-,luxor,Planes,Passenger Jet,,Luxor,Bombardier,Learjet 45,,,
-,luxor2,Planes,Passenger Jet,,Luxor Deluxe,Bombardier,Learjet 45,,,
-,stunt,Planes,,,Mallard,,,,,
-,mammatus,Planes,,,Mammatus,,,,,
-,miljet,Planes,Passenger Jet,,Miljet,Northrop Grumman,E-11A,,,
-,mogul,Planes,,,Mogul,,,,,
-,nimbus,Planes,Passenger Jet,,Nimbus,Cessna,Citation X,,,
-,nokota,Planes,,,P-45 Nokota,,,,,
-,lazer,Planes,,,P-996 LAZER,Lockheed Martin,F-16C Fighting Falcon,,,
-,pyro,Planes,,,Pyro,,,,,
-,bombushka,Planes,,,RM-10 Bombushka,,,,,
-,alkonost,Planes,,,RO-86 Alkonost,Tupolev,Tu-160,,,
-,rogue,Planes,,,Rogue,Beechcraft,T-6 Texan II,,,
-,seabreeze,Planes,,,Seabreeze,,,,,
-,shamal,Planes,Passenger Jet,,Shamal,Cessna,CitationJet,,,
-,streamer216,Planes,,,Streamer216,de Havilland Canada,DHC-6 Twin Otter,,,
-,titan,Planes,,,Titan,Lockheed Martin,C-130 Hercules,,,
-,tula,Planes,,,Tula,Kaman,K-16B,,,
-,microlight,Planes,,,Ultralight,Air Creation,Racer,,,
-,molotok,Planes,,,V-65 Molotok,Mikoyan-Gurevich,MiG-17,,,
-,velum,Planes,,,Velum,Piper,PA-46,,,
-,velum2,Planes,,,Velum 5-Seater,Piper,PA-46,,,
-,vestra,Planes,,,Vestra,Cirrus,Vision SF50,,,
-,volatol,Planes,,,Volatol,Avro,Vulcan,,,
-,akula,Helicopters,,,Akula,Sikorsky,RAH-66 Comanche,,,
-,annihilator,Helicopters,,,Annihilator,Sikorsky,UH-60 Black Hawk,,,
-,annihilator2,Helicopters,,,Annihilator Stealth,Sikorsky,UH-60 Black Hawk,,,
-,buzzard2,Helicopters,,,Buzzard,McDonnell Douglas,MH-6 Little Bird,,,
-,buzzard,Helicopters,,,Buzzard Attack Chopper,Boeing,AH-6,,,
-,cargobob,Helicopters,,,Cargobob,Boeing,CH-46 Sea Knight,,,
-,cargobob3,Helicopters,,,Cargobob (TPE),Boeing,CH-46 Sea Knight,,,
-,cargobob2,Helicopters,,,Cargobob (Jetsam),Boeing,CH-46 Sea Knight,,,
-,cargobob4,Helicopters,,,Cargobob (Drop Zone),Boeing,CH-46 Sea Knight,,,
-,conada,Helicopters,,,Conada,McDonnell Douglas,MD Explorer,,,
-,hunter,Helicopters,,,FH-1 Hunter,Boeing,AH-64 Apache,,,
-,frogger,Helicopters,,,Frogger,Eurocopter,EC130,,,
-,frogger2,Helicopters,,,Frogger (TPE),Eurocopter,EC130,,,
-,havok,Helicopters,,,Havok,Heli-Sport,CH-7,,,
-,maverick,Helicopters,,,Maverick,Bell,407,,,
-,savage,Helicopters,,,Savage,Mil,Mi-24,,,
-,seasparrow,Helicopters,,,Sea Sparrow,Sikorsky,S300 ,,,
-,skylift,Helicopters,,,Skylift,Sikorsky,S-64 Skycrane,,,
-,seasparrow2,Helicopters,,,Sparrow,Sikorsky,S300 ,,,
-,seasparrow3,Helicopters,,,Sparrow (prop),Sikorsky,S300 ,,,
-,supervolito,Helicopters,,,SuperVolito,Eurocopter,EC145,,,
-,supervolito2,Helicopters,,,SuperVolito Carbon,Eurocopter,EC145,,,
-,swift,Helicopters,,,Swift,AugustaWestland,AW109S Grand,,,
-,swift2,Helicopters,,,Swift Deluxe,AugustaWestland,AW109S Grand,,,
-,valkyrie,Helicopters,,,Valkyrie,Bell,UH-1Y Venom,,,
-,valkyrie2,Helicopters,,,Valkyrie MOD.0,Bell,UH-1Y Venom,,,
-,volatus,Helicopters,,,Volatus,Airbus,H160,,,
-,conada2,Helicopters,,,Weaponized Conada,McDonnell Douglas,MD Explorer,,,
-,freight,Trains,,,Freight Train,,,,,
-,freight2,Trains,,,Freight Train (The Cluckin' Bell Farm Raid),,,,,
-,freightcar,Trains,,,Freight Train (Well Car),,,,,
-,freightcar2,Trains,,,Freight Train (Well Car 2),,,,,
-,freightcont1,Trains,,,Freight Train (Container Car 1),,,,,
-,freightcont2,Trains,,,Freight Train (Container Car 2),,,,,
-,freightgrain,Trains,,,Freight Train (Grain Car),,,,,
-,tankercar,Trains,,,Freight Train (Tanker Car),,,,,
-,metrotrain,Trains,,,Metrotrain,,,,,
+Hash,ID,Class,SubClass,GTAMake,GTAModel,RWMake,RWModel,MaxSpeed,MaxKnots,NumberOfSeats
+2588363614,avisa,Boats,Submarine,Kraken,Avisa,,,25.0000019,0,4
+1033245328,dinghy,Boats,Boat,Nagasaki,Dinghy,,,41.66667,0,4
+276773164,dinghy2,Boats,Boat,Nagasaki,Dinghy (2-seater),,,41.66667,0,2
+509498602,dinghy3,Boats,Boat,Nagasaki,Dinghy (heist),,,41.66667,0,4
+867467158,dinghy4,Boats,Boat,Nagasaki,Dinghy (yacht),,,41.66667,0,4
+861409633,jetmax,Boats,Boat,Shitzu,Jetmax,,,45,0,2
+1336872304,kosatka,Boats,Submarine,RUNE,Kosatka,,,25.0000019,0,1
+3228633070,submersible2,Boats,Submarine,Kraken,Kraken,,,25.0000019,0,1
+4018222598,patrolboat,Boats,Boat,,Kurtz 31 Patrol Boat,,,40.0000038,0,4
+1861786828,longfin,Boats,Boat,Shitzu,Longfin,,,46.6666679,0,4
+3251507587,marquis,Boats,Boat,Dinka,Marquis,,,10.000001,0,4
+3264692260,seashark,Boats,Jetski,Speedophile,Seashark,,,43.33334,0,2
+3678636260,seashark2,Boats,Jetski,Speedophile,Seashark (lifeguard),,,43.33334,0,2
+3983945033,seashark3,Boats,Jetski,Speedophile,Seashark (yacht),,,43.33334,0,2
+231083307,speeder,Boats,Boat,Pegassi,Speeder,,,44.3333359,0,4
+437538602,speeder2,Boats,Boat,Pegassi,Speeder (yacht),,,44.3333359,0,4
+400514754,squalo,Boats,Boat,Shitzu,Squalo,,,36.66667,0,2
+771711535,submersible,Boats,Submarine,Kraken,Submersible,,,25.0000019,0,1
+4012021193,suntrap,Boats,Boat,Shitzu,Suntrap,,,36.66667,0,4
+1070967343,toro,Boats,Boat,Lampadati,Toro,,,44.3333359,0,4
+908897389,toro2,Boats,Boat,Lampadati,Toro (yacht),,,44.3333359,0,4
+290013743,tropic,Boats,Boat,Shitzu,Tropic,,,38.3333359,0,4
+1448677353,tropic2,Boats,Boat,Shitzu,Tropic (yacht),,,38.3333359,0,4
+2194326579,tug,Boats,Boat,Buckingham,Tug,,,6,0,1
+3314393930,dinghy5,Boats,Boat,Nagasaki,Weaponized Dinghy,,,41.66667,0,5
+3493417227,cerberus,Commercial,,MTL,Apocalypse Cerberus,,,37.2116661,0,2
+2053223216,benson,Commercial,,Vapid,Benson,,,36.9471779,0,2
+728350375,benson2,Commercial,,Vapid,Benson (Cluckin' Bell),,,36.9471779,0,2
+850991848,biff,Commercial,,HVY,Biff,,,34.4979019,0,2
+679453769,cerberus2,Commercial,,MTL,Future Shock Cerberus,,,37.2116661,0,2
+1518533038,hauler,Commercial,,Jobuilt,Hauler,,,28.6501465,0,2
+387748548,hauler2,Commercial,,Jobuilt,Hauler Custom,,,41.94424,0,2
+904750859,mule,Commercial,,Maibatsu,Mule,,,28.6960716,0,6
+2242229361,mule3,Commercial,,Maibatsu,Mule (heist),,,31.9046555,0,6
+3244501995,mule2,Commercial,,Maibatsu,Mule (ramp-door),,,28.6960716,0,2
+1343932732,mule5,Commercial,,Maibatsu,Mule (Short Trips),,,31.9046555,0,6
+1945374990,mule4,Commercial,,Maibatsu,Mule Custom,,,28.6960716,0,4
+1909700336,cerberus3,Commercial,,MTL,Nightmare Cerberus,,,37.2116661,0,2
+569305213,packer,Commercial,,MTL,Packer,,,36.3465271,0,2
+2157618379,phantom,Commercial,,Jobuilt,Phantom,,,33.8106079,0,2
+4165683409,phantom4,Commercial,,Jobuilt,Phantom (Happy Holidays),,,33.8106079,0,2
+177270108,phantom3,Commercial,,Jobuilt,Phantom Custom,,,41.7776566,0,5
+2645431192,phantom2,Commercial,,Jobuilt,Phantom Wedge,,,43.3140678,0,5
+2112052861,pounder,Commercial,,MTL,Pounder,,,33.80885,0,2
+1653666139,pounder2,Commercial,,MTL,Pounder Custom,,,36.9471779,0,8
+1747439474,stockade,Commercial,,Brute,Stockade,,,34.4979019,0,4
+4080511798,stockade3,Commercial,,Brute,Stockade (Snow),,,34.4979019,0,4
+2306538597,terbyte,Commercial,,Benefactor,Terrorbyte,,,30.7185459,0,2
+628003514,issi4,Compacts,,Weeny,Apocalypse Issi,,,44.9374657,0,2
+1118611807,asbo,Compacts,,Maxwell,Asbo,,,38.07009,0,2
+3950024287,blista,Compacts,,Dinka,Blista,,,41.917366,0,2
+409049982,kanjo,Compacts,,Dinka,Blista Kanjo,,,44.4041939,0,2
+1429622905,brioso2,Compacts,,Grotti,Brioso 300,,,32.9441528,0,2
+15214558,brioso3,Compacts,,Grotti,Brioso 300 Widebody,,,37.2713776,0,2
+1549126457,brioso,Compacts,,Grotti,Brioso R/A,,,41.5360222,0,2
+2196012677,club,Compacts,,BF,Club,,,41.75986,0,2
+3164157193,dilettante,Compacts,,Karin,Dilettante,,,24.0065823,0,4
+1682114128,dilettante2,Compacts,,Karin,Dilettante (Merryweather Security),,,24.0065823,0,4
+3526923154,dorado,Compacts,,Bravado,Dorado,,,42.1729774,0,4
+1537277726,issi5,Compacts,,Weeny,Future Shock Issi,,,44.9374657,0,2
+3117103977,issi2,Compacts,,Weeny,Issi,,,41.917366,0,2
+931280609,issi3,Compacts,,Weeny,Issi Classic,,,39.7958755,0,2
+1239571361,issi6,Compacts,,Weeny,Nightmare Issi,,,44.9374657,0,2
+3863274624,panto,Compacts,,Benefactor,Panto,,,40.69874,0,2
+2844316578,prairie,Compacts,,Bollokan,Prairie,,,40.7799225,0,2
+841808271,rhapsody,Compacts,,Declasse,Rhapsody,,,41.3257141,0,2
+1644055914,weevil,Compacts,,BF,Weevil,,,32.7237167,0,2
+330661258,cogcabrio,Coupes,,Enus,Cognoscenti Cabrio,,,45.1953163,0,2
+4289813342,exemplar,Coupes,,Dewbauchee,Exemplar,,,48.1321335,0,4
+3703357000,f620,Coupes,,Ocelot,F620,,,47.9948463,0,2
+3903372712,felon,Coupes,,Lampadati,Felon,,,45.7951927,0,4
+4205676014,felon2,Coupes,,Lampadati,Felon GT,,,43.4549675,0,2
+3829141989,fr36,Coupes,,Fathom,FR36,,,47.32507,0,2
+2815031719,driftfr36,Coupes,,Fathom,FR36 (drift model),,,44.3333359,0,2
+3670438162,jackal,Coupes,,Ocelot,Jackal,,,45.9825478,0,4
+4230891418,kanjosj,Coupes,,Dinka,Kanjo SJ,,,44.6583557,0,2
+3783366066,oracle2,Coupes,,Ubermach,Oracle,,,46.2473373,0,4
+1348744438,oracle,Coupes,,Ubermach,Oracle XS,,,45.1953163,0,4
+4000288633,postlude,Coupes,,Dinka,Postlude,,,42.1823158,0,2
+1416471345,previon,Coupes,,Karin,Previon,,,47.0085258,0,2
+873639469,sentinel2,Coupes,,Ubermach,Sentinel,,,45.4909,0,4
+1349725314,sentinel,Coupes,,Ubermach,Sentinel XS,,,45.4909,0,2
+1581459400,windsor,Coupes,,Enus,Windsor,,,47.9991455,0,2
+2364918497,windsor2,Coupes,,Enus,Windsor Drop,,,47.89471,0,4
+3172678083,zion,Coupes,,Ubermach,Zion,,,46.8750534,0,2
+3101863448,zion2,Coupes,,Ubermach,Zion Cabrio,,,46.8750534,0,2
+1131912276,bmx,Cycles,,,BMX,,,14.53347,0,1
+448402357,cruiser,Cycles,,,Cruiser,,,15.0000019,0,1
+3061159916,tribike2,Cycles,,,Endurex Race Bike,,,21,0,1
+3458454463,fixter,Cycles,,,Fixter,,,17.8510456,0,1
+3397143273,inductor,Cycles,,Coil,Inductor,,,10.7824068,0,1
+2311345272,inductor2,Cycles,,Coil,Junk Energy Inductor,,,10.7824068,0,1
+4108429845,scorcher,Cycles,,,Scorcher,,,15.029973,0,1
+3894672200,tribike3,Cycles,,,Tri-Cycles Race Bike,,,21,0,1
+1127861609,tribike,Cycles,,,Whippet Race Bike,,,21,0,1
+1171614426,ambulance,Emergency,,Brute,Ambulance,,,39.9116974,0,4
+1127131465,fbi,Emergency,,Bravado,FIB (Buffalo),,,46.1566124,0,4
+2647026068,fbi2,Emergency,,Declasse,FIB (Granger),,,37.5559425,0,8
+1938952078,firetruk,Emergency,,MTL,Fire Truck,,,39.2958679,0,8
+3061199846,polgauntlet,Emergency,,Bravado,Gauntlet Interceptor,,,49.1011353,0,2
+469291905,lguard,Emergency,,Declasse,Lifeguard,,,37.5559425,0,4
+741586030,pranger,Emergency,,Declasse,Park Ranger,,,37.5559425,0,8
+4260343491,policeb,Emergency,,Western,Police Bike,,,44.1369324,0,1
+2046537925,police,Emergency,,Vapid,Police Cruiser,,,42.72843,0,4
+2667966721,police2,Emergency,,Bravado,Police Cruiser (Buffalo),,,46.1566124,0,4
+1912215274,police3,Emergency,,Vapid,Police Cruiser (interceptor),,,48.1140671,0,4
+353883353,polmav,Emergency,,Buckingham,Police Maverick,,,56.5962219,918.8586,4
+3806844075,predator,Emergency,,,Police Predator,,,40.0000038,0,4
+2287941233,pbus,Emergency,,Brute,Police Prison Bus,,,28.2361088,0,11
+2758042359,policeold1,Emergency,,Declasse,Police Rancher (Snow),,,35.1601067,0,4
+3089277354,riot,Emergency,,Brute,Police Riot,,,34.4979019,0,8
+2515846680,policeold2,Emergency,,Albany,Police Roadcruiser (Snow),,,42.72843,0,4
+456714581,policet,Emergency,,Declasse,Police Transporter,,,36.9471779,0,4
+2601952180,riot2,Emergency,,Brute,RCV,,,35.93409,0,6
+2611638396,sheriff,Emergency,,Vapid,Sheriff Cruiser,,,43.031517,0,4
+1922257928,sheriff2,Emergency,,Declasse,Sheriff SUV,,,37.5559425,0,8
+2620582743,police5,Emergency,,Vapid,Stanier LE Cruiser,,,42.72843,0,4
+2321795001,police4,Emergency,,Vapid,Unmarked Cruiser,,,42.72843,0,4
+1181327175,akula,Helicopters,,Buckingham,Akula,Sikorsky,RAH-66 Comanche,61.0891228,1057.65649,4
+837858166,annihilator,Helicopters,,Western,Annihilator,Sikorsky,UH-60 Black Hawk,47.25649,602.0477,6
+295054921,annihilator2,Helicopters,,Western,Annihilator Stealth,Sikorsky,UH-60 Black Hawk,52.7095528,749.002869,6
+745926877,buzzard2,Helicopters,,Nagasaki,Buzzard,McDonnell Douglas,MH-6 Little Bird,57.9072266,983.650757,4
+788747387,buzzard,Helicopters,,Nagasaki,Buzzard Attack Chopper,Boeing,AH-6,57.9072266,983.650757,4
+4244420235,cargobob,Helicopters,,Western,Cargobob,Boeing,CH-46 Sea Knight,49.91996,627.8267,10
+2025593404,cargobob4,Helicopters,,Western,Cargobob (Drop Zone),Boeing,CH-46 Sea Knight,49.91996,627.8267,2
+1621617168,cargobob2,Helicopters,,Western,Cargobob (Jetsam),Boeing,CH-46 Sea Knight,49.91996,627.8267,10
+1394036463,cargobob3,Helicopters,,Western,Cargobob (TPE),Boeing,CH-46 Sea Knight,49.91996,627.8267,10
+3817135397,conada,Helicopters,,Buckingham,Conada,McDonnell Douglas,MD Explorer,62.16899,1025.5813,4
+4252008158,hunter,Helicopters,,,FH-1 Hunter,Boeing,AH-64 Apache,58.5542564,956.386169,2
+744705981,frogger,Helicopters,,Maibatsu,Frogger,Eurocopter,EC130,56.6681175,844.128357,4
+1949211328,frogger2,Helicopters,,Maibatsu,Frogger (TPE),Eurocopter,EC130,56.6681175,844.128357,4
+2310691317,havok,Helicopters,,Nagasaki,Havok,Heli-Sport,CH-7,57.9072266,983.650757,1
+2634305738,maverick,Helicopters,,Buckingham,Maverick,Bell,407,54.0675354,830.1169,4
+4212341271,savage,Helicopters,,,Savage,Mil,Mi-24,65.1952744,787.9935,4
+3568198617,seasparrow,Helicopters,,,Sea Sparrow,Sikorsky,S300,56.5962219,951.212769,2
+1044954915,skylift,Helicopters,,HVY,Skylift,Sikorsky,S-64 Skycrane,47.9314728,587.1606,2
+1229411063,seasparrow2,Helicopters,,,Sparrow,Sikorsky,S300,69.45439,1368.11267,2
+1593933419,seasparrow3,Helicopters,,,Sparrow (prop),Sikorsky,S300,69.45439,1368.11267,2
+710198397,supervolito,Helicopters,,Buckingham,SuperVolito,Eurocopter,EC145,61.9686127,1008.10547,4
+2623428164,supervolito2,Helicopters,,Buckingham,SuperVolito Carbon,Eurocopter,EC145,61.9686127,1008.10547,4
+3955379698,swift,Helicopters,,Buckingham,Swift,AugustaWestland,AW109S Grand,58.2314377,937.798,4
+1075432268,swift2,Helicopters,,Buckingham,Swift Deluxe,AugustaWestland,AW109S Grand,58.87572,948.17395,4
+2694714877,valkyrie,Helicopters,,Buckingham,Valkyrie,Bell,UH-1Y Venom,54.726162,831.290466,4
+1543134283,valkyrie2,Helicopters,,Buckingham,Valkyrie MOD.0,Bell,UH-1Y Venom,54.726162,831.290466,4
+2449479409,volatus,Helicopters,,Buckingham,Volatus,Airbus,H160,59.2404137,963.723145,4
+2635962482,conada2,Helicopters,,Buckingham,Weaponized Conada,McDonnell Douglas,MD Explorer,61.3213844,996.5747,2
+3288047904,cutter,Industrial,,HVY,Cutter,,,12.761157,0,1
+444583674,handler,Industrial,,HVY,Dock Handler,,,8.333334,0,1
+1886712733,bulldozer,Industrial,,HVY,Dozer,,,5.00000048,0,1
+2164484578,dump,Industrial,,HVY,Dump,,,14.333334,0,1
+1353720154,flatbed,Industrial,,MTL,Flatbed,,,28.2361088,0,2
+2186977100,guardian,Industrial,,Vapid,Guardian,,,39.6176529,0,6
+3510150843,mixer,Industrial,,HVY,Mixer (3-axle),,,32.402092,0,2
+475220373,mixer2,Industrial,,HVY,Mixer (4-axle),,,32.402092,0,2
+2589662668,rubble,Industrial,,Jobuilt,Rubble,,,33.3333359,0,2
+48339065,tiptruck,Industrial,,Brute,Tipper (2-axle),,,28.6960716,0,2
+3347205726,tiptruck2,Industrial,,Brute,Tipper (3-axle),,,28.6960716,0,2
+2413121211,trailersmall2,Military,,Vom Feuer,Anti-Aircraft Trailer,,,-0.513167143,0,1
+562680400,apc,Military,,HVY,APC,,,23.00633,0,4
+3147997943,scarab,Military,,HVY,Apocalypse Scarab,,,23.54772,0,4
+3471458123,barracks,Military,,HVY,Barracks,,,32.402092,0,10
+630371791,barracks3,Military,,HVY,Barracks (heist),,,32.402092,0,10
+1074326203,barracks2,Military,,HVY,Barracks Semi,,,35.70579,0,2
+4081974053,barrage,Military,,HVY,Barrage,,,39.93803,0,4
+3602674979,chernobog,Military,,HVY,Chernobog,,,22.587225,0,2
+321739290,crusader,Military,,Canis,Crusader,,,35.9639053,0,4
+1542143200,scarab2,Military,,HVY,Future Shock Scarab,,,23.54772,0,4
+4262731174,halftrack,Military,,Bravado,Half-track,,,20.93335,0,3
+3040635986,minitank,Military,,,Invade and Persuade Tank,,,9.729744,0,1
+3715219435,scarab3,Military,,HVY,Nightmare Scarab,,,23.54772,0,4
+782665360,rhino,Military,,,Rhino Tank,,,18.3333359,0,2
+1489874736,thruster,Military,,Mammoth,Thruster,,,57.5398865,1005.60541,1
+2859440138,khanjali,Military,,,TM-02 Khanjali,,,18.1220837,0,4
+2014313426,vetir,Military,,HVY,Vetir,,,23.3675842,0,10
+1672195559,akuma,Motorcycles,,Dinka,Akuma,,,48.3333359,0,2
+4267640610,deathbike,Motorcycles,,Western,Apocalypse Deathbike,,,48.2865067,0,1
+2179174271,avarus,Motorcycles,,LCC,Avarus,,,44.1369324,0,1
+2154536131,bagger,Motorcycles,,Western,Bagger,,,37.8686028,0,2
+4180675781,bati,Motorcycles,,Pegassi,Bati 801,,,49.29604,0,2
+3403504941,bati2,Motorcycles,,Pegassi,Bati 801RR,,,49.29604,0,2
+86520421,bf400,Motorcycles,,Nagasaki,BF400,,,44.14795,0,2
+11251904,carbonrs,Motorcycles,,Nagasaki,Carbon RS,,,47.01816,0,2
+6774487,chimera,Motorcycles,,Nagasaki,Chimera,,,35.4248848,0,1
+390201602,cliffhanger,Motorcycles,,Western,Cliffhanger,,,49.12712,0,2
+2006142190,daemon,Motorcycles,,Western,Daemon,,,43.14252,0,2
+2890830793,daemon2,Motorcycles,,Western,Daemon (custom),,,43.3428574,0,2
+822018448,defiler,Motorcycles,,Shitzu,Defiler,,,48.843647,0,1
+4055125828,diablous,Motorcycles,,Principe,Diabolus,,,47.2866669,0,1
+1790834270,diablous2,Motorcycles,,Principe,Diabolus Custom,,,47.53334,0,1
+2623969160,double,Motorcycles,,Dinka,Double T,,,47.9473419,0,2
+1753414259,enduro,Motorcycles,,Dinka,Enduro,,,39.66667,0,2
+2035069708,esskey,Motorcycles,,Pegassi,Esskey,,,44.1063957,0,2
+55628203,faggio2,Motorcycles,,Pegassi,Faggio,,,23.54772,0,2
+3005788552,faggio3,Motorcycles,,Pegassi,Faggio Mod,,,27.4137516,0,2
+2452219115,faggio,Motorcycles,,Pegassi,Faggio Sport,,,28.2826786,0,2
+627535535,fcr,Motorcycles,,Pegassi,FCR 1000,,,46.4525681,0,1
+3537231886,fcr2,Motorcycles,,Pegassi,FCR 1000 Custom,,,46.7333374,0,1
+2482017624,deathbike2,Motorcycles,,Western,Future Shock Deathbike,,,48.2865067,0,1
+741090084,gargoyle,Motorcycles,,Western,Gargoyle,,,48.2865067,0,2
+1265391242,hakuchou,Motorcycles,,Shitzu,Hakuchou,,,49.54116,0,2
+4039289119,hakuchou2,Motorcycles,,Shitzu,Hakuchou Drag,,,52.03867,0,2
+301427732,hexer,Motorcycles,,LCC,Hexer,,,43.14252,0,2
+4135840458,innovation,Motorcycles,,LCC,Innovation,,,45,0,2
+640818791,lectro,Motorcycles,,Principe,Lectro,,,43.23533,0,2
+2771538552,manchez,Motorcycles,,Maibatsu,Manchez,,,44.1063957,0,2
+1086534307,manchez2,Motorcycles,,Maibatsu,Manchez Scout,,,41.38007,0,1
+1384502824,manchez3,Motorcycles,,Maibatsu,Manchez Scout C,,,41.54008,0,1
+3660088182,nemesis,Motorcycles,,Principe,Nemesis,,,45.0454369,0,2
+2688780135,nightblade,Motorcycles,,Western,Nightblade,,,46.9033966,0,2
+2920466844,deathbike3,Motorcycles,,Western,Nightmare Deathbike,,,48.2865067,0,1
+884483972,oppressor,Motorcycles,,Pegassi,Oppressor,,,48.49779,0,1
+2069146067,oppressor2,Motorcycles,,Pegassi,Oppressor Mk II,,,47.09265,0,1
+3385765638,pcj,Motorcycles,,Shitzu,PCJ 600,,,39.7958755,0,2
+2908631255,powersurge,Motorcycles,,Western,Powersurge,,,42.7333336,0,1
+916547552,rrocket,Motorcycles,,Western,Rampant Rocket,,,41.6182747,0,1
+1873600305,ratbike,Motorcycles,,Western,Rat Bike,,,36.8721657,0,2
+1993851908,reever,Motorcycles,,Western,Reever,,,50.04156,0,1
+3401388520,ruffian,Motorcycles,,Pegassi,Ruffian,,,46.6666679,0,2
+2841686334,sanchez2,Motorcycles,,Maibatsu,Sanchez,,,39.3333359,0,2
+788045382,sanchez,Motorcycles,,Maibatsu,Sanchez (livery),,,39.3333359,0,2
+1491277511,sanctus,Motorcycles,,LCC,Sanctus,,,46.5123177,0,1
+1353120668,shinobi,Motorcycles,,Nagasaki,Shinobi,,,52.13334,0,1
+3889340782,shotaro,Motorcycles,,Nagasaki,Shotaro,,,51.2182121,0,1
+743478836,sovereign,Motorcycles,,Western,Sovereign,,,44.1369324,0,1
+301304410,stryder,Motorcycles,,Nagasaki,Stryder,,,42.2186928,0,2
+1836027715,thrust,Motorcycles,,Dinka,Thrust,,,49.3204651,0,2
+4154065143,vader,Motorcycles,,Shitzu,Vader,,,42.30679,0,2
+2941886209,vindicator,Motorcycles,,Dinka,Vindicator,,,49.33334,0,2
+3685342204,vortex,Motorcycles,,Pegassi,Vortex,,,48.8390923,0,1
+3676349299,wolfsbane,Motorcycles,,Western,Wolfsbane,,,36.8721657,0,2
+3285698347,zombiea,Motorcycles,,Western,Zombie Bobber,,,44.6053238,0,1
+3724934023,zombieb,Motorcycles,,Western,Zombie Chopper,,,44.6053238,0,2
+3606777648,dominator4,Muscle,,Vapid,Apocalypse Dominator,,,48.4232635,0,2
+1009171724,impaler2,Muscle,,Declasse,Apocalypse Impaler,,,50.7077942,0,2
+444994115,imperator,Muscle,,Vapid,Apocalypse Imperator,,,48.57513,0,2
+2233918197,slamvan4,Muscle,,Vapid,Apocalypse Slamvan,,,41.47795,0,2
+1549009676,arbitergt,Muscle,,Imponte,Arbiter GT,,,46.19029,0,2
+2134119907,dukes3,Muscle,,Imponte,Beater Dukes,,,47.3507156,0,2
+3089165662,blade,Muscle,,Vapid,Blade,,,42.2470665,0,2
+3640468689,brigham,Muscle,,Albany,Brigham,,,38.71123,0,4
+2361724968,broadway,Muscle,,Classique,Broadway,,,37.47392,0,2
+3612755468,buccaneer,Muscle,,Albany,Buccaneer,,,46.1566124,0,2
+3281516360,buccaneer2,Muscle,,Albany,Buccaneer Custom,,,46.1566124,0,2
+165968051,buffalo5,Muscle,,Bravado,Buffalo EVX,Dodge,Charger Daytona SRT,49.8737144,0,2
+3675036420,buffalo4,Muscle,,Bravado,Buffalo STX,Dodge,Charger LD,48.308033,0,4
+3893323758,stalion2,Muscle,,Declasse,Burger Shot Stallion,,,47.7326279,0,2
+349605904,chino,Muscle,,Vapid,Chino,,,35.2769279,0,2
+2933279331,chino2,Muscle,,Vapid,Chino Custom,,,36.3465271,0,2
+2728360112,clique,Muscle,,Vapid,Clique,,,45.9981346,0,2
+3315674721,clique2,Muscle,,Vapid,Clique Wagon,,,33.1877937,0,2
+784565758,coquette3,Muscle,,Invetero,Coquette BlackFin,,,45.0781479,0,2
+1279262537,deviant,Muscle,,Schyster,Deviant,,,42.4570351,0,2
+80636076,dominator,Muscle,,Vapid,Dominator,,,48.3333359,0,2
+426742808,dominator7,Muscle,,Vapid,Dominator ASP,,,50.0913239,0,2
+3853757601,dominator9,Muscle,,Vapid,Dominator GT,,,49.6897354,0,2
+736672010,dominator8,Muscle,,Vapid,Dominator GTT,,,45.949604,0,2
+3308022675,dominator3,Muscle,,Vapid,Dominator GTX,,,47.11404,0,2
+1693751655,yosemite2,Muscle,,Declasse,Drift Yosemite,,,44.3373337,0,2
+2613313775,driftyosemite,Muscle,,Declasse,Drift Yosemite (drift model),,,41.66667,0,2
+3968823444,dukes2,Muscle,,Imponte,Duke O'Death,,,46.52688,0,2
+723973206,dukes,Muscle,,Imponte,Dukes,,,47.7946053,0,2
+3027423925,ellie,Muscle,,Vapid,Ellie,,,45.83407,0,2
+3045179290,eudora,Muscle,,Willard,Eudora,,,40.72726,0,4
+2175389151,faction,Muscle,,Willard,Faction,,,46.6666679,0,2
+2504420315,faction2,Muscle,,Willard,Faction Custom,,,46.6666679,0,2
+2255212070,faction3,Muscle,,Willard,Faction Custom Donk,,,35.2769279,0,2
+2919906639,dominator5,Muscle,,Vapid,Future Shock Dominator,,,48.4232635,0,2
+2370166601,impaler3,Muscle,,Declasse,Future Shock Impaler,,,50.7077942,0,2
+1637620610,imperator2,Muscle,,Vapid,Future Shock Imperator,,,48.57513,0,2
+373261600,slamvan5,Muscle,,Vapid,Future Shock Slamvan,,,41.47795,0,2
+2494797253,gauntlet,Muscle,,Bravado,Gauntlet,,,47.01816,0,2
+722226637,gauntlet3,Muscle,,Bravado,Gauntlet Classic,,,44.1426659,0,2
+2172320429,gauntlet5,Muscle,,Bravado,Gauntlet Classic Custom,,,48.2967949,0,2
+1934384720,gauntlet4,Muscle,,Bravado,Gauntlet Hellfire,,,48.6553421,0,2
+40817712,greenwood,Muscle,,Bravado,Greenwood,,,47.66667,0,2
+15219735,hermes,Muscle,,Albany,Hermes,,,41.26047,0,2
+37348240,hotknife,Muscle,,Vapid,Hotknife,,,45.0454369,0,2
+600450546,hustler,Muscle,,Vapid,Hustler,,,44.15281,0,2
+2198276962,impaler,Muscle,,Declasse,Impaler,,,45.01528,0,2
+4116524922,impaler6,Muscle,,Declasse,Impaler LX,,,47.01816,0,2
+833469436,slamvan2,Muscle,,Vapid,Lost Slamvan,,,40.3984146,0,4
+2068293287,lurcher,Muscle,,Albany,Lurcher,,,47.1434746,0,2
+1717532765,manana2,Muscle,,Albany,Manana Custom,,,43.56295,0,2
+525509695,moonbeam,Muscle,,Declasse,Moonbeam,,,41.66667,0,4
+1896491931,moonbeam2,Muscle,,Declasse,Moonbeam Custom,,,41.66667,0,4
+3001042683,dominator6,Muscle,,Vapid,Nightmare Dominator,,,48.4232635,0,2
+2550461639,impaler4,Muscle,,Declasse,Nightmare Impaler,,,50.7077942,0,2
+3539435063,imperator3,Muscle,,Vapid,Nightmare Imperator,,,48.57513,0,2
+1742022738,slamvan6,Muscle,,Vapid,Nightmare Slamvan,,,41.47795,0,2
+2351681756,nightshade,Muscle,,Imponte,Nightshade,,,40.3984146,0,2
+2490551588,peyote2,Muscle,,Vapid,Peyote Gasser,,,46.70329,0,2
+2199527893,phoenix,Muscle,,Imponte,Phoenix,,,47.2808533,0,2
+1507916787,picador,Muscle,,Cheval,Picador,,,40.7799225,0,2
+3379262425,dominator2,Muscle,,Vapid,Piswasser Dominator,,,49.0000038,0,2
+3627815886,ratloader,Muscle,,Bravado,Rat-Loader,,,37.3919868,0,2
+3705788919,ratloader2,Muscle,,Bravado,Rat-Truck,,,39.4166,0,2
+349315417,gauntlet2,Muscle,,Bravado,Redwood Gauntlet,,,48.4064941,0,2
+4067225593,ruiner,Muscle,,Imponte,Ruiner,,,48.3333359,0,2
+777714999,ruiner3,Muscle,,Imponte,Ruiner (wreck),,,48.3333359,0,2
+941494461,ruiner2,Muscle,,Imponte,Ruiner 2000,,,49.76318,0,2
+1706945532,ruiner4,Muscle,,Imponte,Ruiner ZZ-8,,,48.46975,0,2
+2609945748,sabregt,Muscle,,Declasse,Sabre Turbo,,,46.6666679,0,2
+223258115,sabregt2,Muscle,,Declasse,Sabre Turbo Custom,,,46.6666679,0,2
+729783779,slamvan,Muscle,,Vapid,Slamvan,,,39.9099159,0,2
+1119641113,slamvan3,Muscle,,Vapid,Slamvan Custom,,,40.3984146,0,2
+1923400478,stalion,Muscle,,Declasse,Stallion,,,45.0781479,0,2
+3833117047,tahoma,Muscle,,Declasse,Tahoma Coupe,,,43.554863,0,2
+972671128,tampa,Muscle,,Declasse,Tampa,,,42.30679,0,2
+1456744817,tulip,Muscle,,Declasse,Tulip,,,48.862133,0,4
+268758436,tulip2,Muscle,,Declasse,Tulip M-100,,,45.0262451,0,2
+4245851645,vamos,Muscle,,Declasse,Vamos,,,45.80494,0,2
+3469130167,vigero,Muscle,,Declasse,Vigero,,,46.6666679,0,2
+2536587772,vigero2,Muscle,,Declasse,Vigero ZX,,,49.20095,0,2
+372621319,vigero3,Muscle,,Declasse,Vigero ZX Convertible,,,49.0273476,0,2
+3796912450,virgo,Muscle,,Albany,Virgo,,,36.3465271,0,2
+16646064,virgo3,Muscle,,Dundreary,Virgo Classic,,,36.3465271,0,2
+3395457658,virgo2,Muscle,,Dundreary,Virgo Classic Custom,,,36.4521255,0,2
+523724515,voodoo2,Muscle,,Declasse,Voodoo,,,38.44937,0,2
+2006667053,voodoo,Muscle,,Declasse,Voodoo Custom,,,39.9116974,0,2
+3084515313,tampa3,Muscle,,Declasse,Weaponized Tampa,,,45.80494,0,2
+3300595976,weevil2,Muscle,,BF,Weevil Custom,,,50.5455132,0,2
+1871995513,yosemite,Muscle,,Declasse,Yosemite,,,41.6362572,0,2
+668439077,bruiser,OffRoad,,Benefactor,Apocalypse Bruiser,,,38.40471,0,4
+2139203625,brutus,OffRoad,,Declasse,Apocalypse Brutus,,,42.30679,0,2
+1721676810,monster3,OffRoad,,Bravado,Apocalypse Sasquatch,,,38.37866,0,2
+3945366167,bifta,OffRoad,,BF,Bifta,,,45.1953163,0,2
+2166734073,blazer,OffRoad,,Nagasaki,Blazer,,,33.9831238,0,1
+2704629607,blazer5,OffRoad,,Nagasaki,Blazer Aqua,,,40.877346,0,1
+4246935337,blazer2,OffRoad,,Nagasaki,Blazer Lifeguard,,,24.7121181,0,1
+2859047862,bodhi2,OffRoad,,Canis,Bodhi,,,35.5073967,0,4
+996383885,boor,OffRoad,,Karin,Boor,,,40.4296036,0,2
+2815302597,brawler,OffRoad,,Coil,Brawler,,,46.6666679,0,2
+1254014755,caracara,OffRoad,,Vapid,Caracara,,,38.613308,0,5
+2945871676,caracara2,OffRoad,,Vapid,Caracara 4x4,,,39.27036,0,4
+3631668194,trophytruck2,OffRoad,,Vapid,Desert Raid,,,43.3666534,0,2
+3526730918,draugur,OffRoad,,Declasse,Draugur,,,43.8399963,0,4
+3057713523,dubsta3,OffRoad,,Benefactor,Dubsta 6x6,,,38.80768,0,6
+2633113103,dune,OffRoad,,BF,Dune Buggy,,,38.87602,0,2
+1897744184,dune3,OffRoad,,BF,Dune FAV,,,38.87602,0,2
+1770332643,dloader,OffRoad,,Bravado,Duneloader,,,33.1998,0,2
+2538945576,everon,OffRoad,,Karin,Everon,,,41.73223,0,4
+4240635011,freecrawler,OffRoad,,Canis,Freecrawler,,,36.623436,0,4
+2600885406,bruiser2,OffRoad,,Benefactor,Future Shock Bruiser,,,38.40471,0,4
+2403970600,brutus2,OffRoad,,Declasse,Future Shock Brutus,,,42.30679,0,2
+840387324,monster4,OffRoad,,Bravado,Future Shock Sasquatch,,,38.37866,0,2
+3932816511,hellion,OffRoad,,Annis,Hellion,,,40.3984146,0,2
+3025077634,blazer3,OffRoad,,Nagasaki,Hot Rod Blazer,,,33.9831238,0,1
+1126868326,bfinjection,OffRoad,,BF,Injection,,,40.7799225,0,2
+2071877360,insurgent2,OffRoad,,HVY,Insurgent,,,35.4436455,0,6
+2434067162,insurgent,OffRoad,,HVY,Insurgent Pick-Up,,,35.4436455,0,9
+2370534026,insurgent3,OffRoad,,HVY,Insurgent Pick-Up Custom,,,35.4436455,0,9
+92612664,kalahari,OffRoad,,Canis,Kalahari,,,35.004,0,2
+4173521127,kamacho,OffRoad,,Canis,Kamacho,,,40.8822174,0,2
+3449006043,monster,OffRoad,,Vapid,Liberator,,,33.9676666,0,2
+1233534620,marshall,OffRoad,,Cheval,Marshall,,,33.9676666,0,2
+2044532910,menacer,OffRoad,,HVY,Menacer,,,31.79404,0,5
+2230595153,mesa3,OffRoad,,Canis,Mesa (off-road),,,34.6831551,0,4
+802856453,monstrociti,OffRoad,,Maibatsu,MonstroCiti,,,41.3981,0,2
+2252616474,bruiser3,OffRoad,,Benefactor,Nightmare Bruiser,,,38.40471,0,4
+2038858402,brutus3,OffRoad,,Declasse,Nightmare Brutus,,,42.30679,0,2
+3579220348,monster5,OffRoad,,Bravado,Nightmare Sasquatch,,,38.37866,0,2
+433954513,nightshark,OffRoad,,HVY,Nightshark,,,36.8330231,0,4
+408825843,outlaw,OffRoad,,Nagasaki,Outlaw,,,36.1564674,0,2
+3624880708,patriot3,OffRoad,,Mammoth,Patriot Mil-Spec,,,37.6762543,0,4
+3467805257,dune4,OffRoad,,BF,Ramp Buggy,,,49.2241631,0,2
+3982671785,dune5,OffRoad,,BF,Ramp Buggy (Spoilerless),,,48.84004,0,2
+1645267888,rancherxl,OffRoad,,Declasse,Rancher XL,,,35.1601067,0,4
+1933662059,rancherxl2,OffRoad,,Declasse,Rancher XL (Snow),,,35.1601067,0,4
+3758861739,ratel,OffRoad,,Vapid,Ratel,,,43.8756065,0,2
+4008920556,rcbandito,OffRoad,,,RC Bandito,,,26.3717728,0,1
+2249373259,rebel2,OffRoad,,Karin,Rebel,,,38.42887,0,2
+2762269779,riata,OffRoad,,Vapid,Riata,,,40.3984146,0,2
+3087195462,rebel,OffRoad,,Karin,Rusty Rebel,,,38.42887,0,2
+989381445,sandking2,OffRoad,,Vapid,Sandking SWB,,,38.42887,0,2
+3105951696,sandking,OffRoad,,Vapid,Sandking XL,,,38.42887,0,4
+534258863,dune2,OffRoad,,BF,Space Docker,,,37.9381866,0,2
+3854198872,blazer4,OffRoad,,Nagasaki,Street Blazer,,,38.87602,0,1
+2198148358,technical,OffRoad,,Karin,Technical,,,38.42887,0,3
+1180875963,technical2,OffRoad,,Karin,Technical Aqua,,,39.61388,0,3
+1356124575,technical3,OffRoad,,Karin,Technical Custom,,,38.42887,0,3
+167522317,terminus,OffRoad,,Canis,Terminus,,,43.2138176,0,4
+101905590,trophytruck,OffRoad,,Vapid,Trophy Truck,,,43.3666534,0,2
+740289177,vagrant,OffRoad,,Maxwell,Vagrant,,,46.8151321,0,2
+298565713,verus,OffRoad,,Dinka,Verus,,,26.6341686,0,2
+2531292011,l35,OffRoad,,Declasse,Walton L35,,,39.09626,0,2
+4084658662,winky,OffRoad,,Vapid,Winky,,,30.0000038,0,3
+67753863,yosemite3,OffRoad,,Declasse,Yosemite Rancher,,,40.4001427,0,2
+1284356689,zhaba,OffRoad,,RUNE,Zhaba,,,30.30405,0,4
+1492612435,openwheel1,OpenWheel,,Benefactor,BR8,,,52.52767,0,1
+1181339704,openwheel2,OpenWheel,,Declasse,DR1,,,53.0537224,0,1
+340154634,formula,OpenWheel,,Progen,PR4,,,52.5647354,0,1
+2334210311,formula2,OpenWheel,,Ocelot,R88,,,52.386055,0,1
+2771347558,alphaz1,Planes,,Buckingham,Alpha-Z1,,,100,3.593334,1
+4143991942,blimp,Planes,Blimp,,Atomic Blimp,,,70,114.333336,4
+2176659152,avenger,Planes,,Mammoth,Avenger,,,95.98338,1.88127446,3
+408970549,avenger2,Planes,,Mammoth,Avenger (prop),,,95.98338,1.88127446,3
+4225674290,avenger4,Planes,,Mammoth,Avenger (upgraded prop),,,95.98338,1.88127446,3
+3868033424,avenger3,Planes,,Mammoth,Avenger (upgraded),,,95.98338,1.88127446,3
+1692272545,strikeforce,Planes,,,B-11 Strikeforce,,,70.71068,2.37917876,1
+1824333165,besra,Planes,,Western,Besra,,,87.7058,3.42374229,1
+3987008919,blimp3,Planes,Blimp,,Blimp,,,70,114.333336,4
+368211810,cargoplane,Planes,,,Cargo Plane,,,78.90234,0.402086377,2
+2336777441,cargoplane2,Planes,,,Cargo Plane (no decals),,,78.90234,0.402086377,2
+3650256867,cuban800,Planes,,Western,Cuban 800,Cessna,310,76.79571,1.73097515,2
+3393804037,dodo,Planes,,Mammoth,Dodo,,,69.36756,2.26600718,4
+970356638,duster,Planes,,Western,Duster,,,69.36756,2.03940654,2
+239897677,raiju,Planes,,Mammoth,F-160 Raiju,Lockheed Martin,F-35 Lightning II,103.975044,4.279613,1
+3287439187,howard,Planes,,Buckingham,Howard NX-25,,,100,3.593334,1
+970385471,hydra,Planes,,Mammoth,Hydra,McDonnell Douglas,AV-8B Harrier II,109.764259,3.94419646,1
+1058115860,jet,Planes,Passenger Jet,,Jet,Boeing,757-800,78.90234,0.5451364,2
+2594093022,starling,Planes,,,LF-22 Starling,,,87.5,4.001667,1
+621481054,luxor,Planes,Passenger Jet,Buckingham,Luxor,Bombardier,Learjet 45,90.6144562,1.1248275,10
+3080673438,luxor2,Planes,Passenger Jet,Buckingham,Luxor Deluxe,Bombardier,Learjet 45,91.22515,1.13240826,8
+2172210288,stunt,Planes,,Western,Mallard,,,79.05694,2.84077978,1
+2548391185,mammatus,Planes,,Jobuilt,Mammatus,,,69.36756,2.26600718,4
+165154707,miljet,Planes,Passenger Jet,Buckingham,Miljet,Northrop Grumman,E-11A,91.83217,1.13994336,16
+3545667823,mogul,Planes,,Mammoth,Mogul,,,76.79571,1.42993629,3
+2999939664,nimbus,Planes,Passenger Jet,Buckingham,Nimbus,Cessna,Citation X,94.5562057,1.17375779,8
+1036591958,nokota,Planes,,,P-45 Nokota,,,87.7058,3.15156221,1
+3013282534,lazer,Planes,,Jobuilt,P-996 LAZER,Lockheed Martin,F-16C Fighting Falcon,91.2870941,3.57845449,1
+2908775872,pyro,Planes,,Buckingham,Pyro,,,100,4.720334,2
+4262088844,bombushka,Planes,,,RM-10 Bombushka,,,36.51484,0.232599527,6
+3929093893,alkonost,Planes,,,RO-86 Alkonost,Tupolev,Tu-160,82.61924,0.6801216,4
+3319621991,rogue,Planes,,Western,Rogue,Beechcraft,T-6 Texan II,100,3.65866661,2
+3902291871,seabreeze,Planes,,Western,Seabreeze,,,81.64966,2.3071475,2
+3080461301,shamal,Planes,Passenger Jet,Buckingham,Shamal,Cessna,CitationJet,90.6144562,1.1248275,10
+191916658,streamer216,Planes,,Mammoth,Streamer216,de Havilland Canada,DHC-6 Twin Otter,76.6965,1.59094119,4
+1981688531,titan,Planes,,,Titan,Lockheed Martin,C-130 Hercules,78.2057648,0.470068783,10
+1043222410,tula,Planes,,Mammoth,Tula,Kaman,K-16B,69.36756,2.26600718,5
+2531412055,microlight,Planes,,Nagasaki,Ultralight,Air Creation,Racer,30.1511345,0.561414242,1
+1565978651,molotok,Planes,,,V-65 Molotok,Mikoyan-Gurevich,MiG-17,91.2870941,3.28025,1
+2621610858,velum,Planes,,Jobuilt,Velum,Piper,PA-46,74.6362457,1.828588,4
+1077420264,velum2,Planes,,Jobuilt,Velum 5-Seater,Piper,PA-46,74.6362457,1.828588,5
+1341619767,vestra,Planes,,Buckingham,Vestra,Cirrus,Vision SF50,97.13975,2.61791635,2
+447548909,volatol,Planes,,,Volatol,Avro,Vulcan,80.27928,1.15388083,4
+3681241380,blimp2,Planes,Blimp,,Xero Blimp,,,70,114.333336,4
+2485144969,asea,Sedans,,Declasse,Asea,,,38.42887,0,4
+2487343317,asea2,Sedans,,Declasse,Asea (snow),,,38.42887,0,4
+2391954683,asterope,Sedans,,Karin,Asterope,,,38.42887,0,4
+3553846961,asterope2,Sedans,,Karin,Asterope GZ,,,42.8104858,0,4
+2767531027,cinquemila,Sedans,,Lampadati,Cinquemila,,,48.2359924,0,4
+2264796000,cognoscenti,Sedans,,Enus,Cognoscenti,,,45.75964,0,4
+3690124666,cognoscenti2,Sedans,,Enus,Cognoscenti (Armored),,,45.21825,0,4
+906642318,cog55,Sedans,,Enus,Cognoscenti 55,,,46.29608,0,4
+704435172,cog552,Sedans,,Enus,Cognoscenti 55 (Armored),,,45.75964,0,4
+1532171089,deity,Sedans,,Enus,Deity,,,44.3737068,0,4
+3609690755,emperor,Sedans,,Albany,Emperor,,,33.80885,0,4
+2411965148,emperor2,Sedans,,Albany,Emperor (beater),,,33.80885,0,4
+3053254478,emperor3,Sedans,,Albany,Emperor (snow),,,33.80885,0,4
+1909141499,fugitive,Sedans,,Cheval,Fugitive,,,40.39331,0,4
+75131841,glendale,Sedans,,Benefactor,Glendale,,,39.7179642,0,4
+3381377750,glendale2,Sedans,,Benefactor,Glendale Custom,,,39.8451042,0,4
+3816328113,impaler5,Sedans,,Declasse,Impaler SZ,,,47.54493,0,4
+3005245074,ingot,Sedans,,Vulcar,Ingot,,,32.0801773,0,4
+886934177,intruder,Sedans,,Karin,Intruder,,,39.3712959,0,4
+2411098011,premier,Sedans,,Declasse,Premier,,,38.42887,0,4
+3144368207,primo,Sedans,,Albany,Primo,,,38.42887,0,4
+2254540506,primo2,Sedans,,Albany,Primo Custom,,,38.42887,0,4
+4280472072,regina,Sedans,,Dundreary,Regina,,,30.6132221,0,4
+2439462158,rhinehart,Sedans,,Ubermacht,Rhinehart,,,46.9795532,0,2
+627094268,romero,Sedans,,Chariot,Romero Hearse,,,32.0112343,0,2
+3039514899,schafter2,Sedans,,Benefactor,Schafter,,,39.3712959,0,4
+1922255844,schafter6,Sedans,,Benefactor,Schafter LWB (Armored),,,37.4778633,0,4
+3406724313,schafter5,Sedans,,Benefactor,Schafter V12 (Armored),,,50.0000038,0,4
+321186144,stafford,Sedans,,Enus,Stafford,,,38.07186,0,2
+2817386317,stanier,Sedans,,Vapid,Stanier,,,42.72843,0,4
+1723137093,stratum,Sedans,,Zirconium,Stratum,,,41.6588669,0,4
+2333339779,stretch,Sedans,,Dundreary,Stretch,,,38.44937,0,6
+1123216662,superd,Sedans,,Enus,Super Diamond,,,45.1953163,0,4
+2400073108,surge,Sedans,,Cheval,Surge,,,24.1986523,0,4
+3286105550,tailgater,Sedans,,Obey,Tailgater,,,38.42887,0,4
+3050505892,tailgater2,Sedans,,Obey,Tailgater S,,,46.56702,0,4
+4180339789,limo2,Sedans,,Benefactor,Turreted Limo,,,39.27036,0,5
+1373123368,warrener,Sedans,,Vulcar,Warrener,,,38.4094162,0,4
+579912970,warrener2,Sedans,,Vulcar,Warrener HKR,,,40.2493668,0,2
+1777363799,washington,Sedans,,Albany,Washington,,,42.72843,0,4
+1283517198,airbus,Service,,,Airport Bus,,,25.5808945,0,16
+3989239879,brickade,Service,,MTL,Brickade,,,32.8302956,0,6
+2718380883,brickade2,Service,,MTL,Brickade 6x6,,,32.8302956,0,6
+3581397346,bus,Service,,,Bus,,,25.5808945,0,16
+2222034228,coach,Service,,,Dashound,,,25.5808945,0,10
+2191146052,rallytruck,Service,,MTL,Dune,,,40.7585678,0,2
+345756458,pbus2,Service,,Vapid,Festival Bus,,,23.1177425,0,11
+3196165219,rentalbus,Service,,Brute,Rental Shuttle Bus,,,25.5808945,0,10
+3338918751,taxi,Service,,Vapid,Taxi,,,42.72843,0,4
+1941029835,tourbus,Service,,Brute,Tour Bus,,,25.5808945,0,10
+1917016601,trash,Service,,Jobuilt,Trashmaster,,,36.52235,0,4
+3039269212,trash2,Service,,Jobuilt,Trashmaster (heist),,,36.52235,0,4
+2382949506,wastelander,Service,,MTL,Wastelander,,,40.7585678,0,6
+3400983137,tenf,Sports,,Obey,10F,,,49.1412849,0,2
+274946574,tenf2,Sports,,Obey,10F Widebody,,,49.46413,0,2
+1076201208,r300,Sports,,Annis,300R,,,47.84967,0,2
+686471183,drafter,Sports,,Obey,8F Drafter,,,47.8783836,0,2
+1032823388,ninef,Sports,,Obey,9F,,,48.6724,0,2
+2833484545,ninef2,Sports,,Obey,9F Cabrio,,,48.6724,0,2
+767087018,alpha,Sports,,Albany,Alpha,,,49.5388069,0,2
+540101442,zr380,Sports,,Annis,Apocalypse ZR380,,,50.39005,0,2
+3253274834,banshee,Sports,,Bravado,Banshee,,,47.5245247,0,2
+1274868363,bestiagts,Sports,,Grotti,Bestia GTS,,,47.7946053,0,2
+1039032026,blista2,Sports,,Dinka,Blista Compact,,,41.917366,0,2
+3703315515,blista3,Sports,,Dinka,Blista Compact (Go Go Monkey),,,41.917366,0,2
+3990165190,buffalo,Sports,,Bravado,Buffalo,Dodge,Charger LX,45.1526527,0,4
+736902334,buffalo2,Sports,,Bravado,Buffalo S,Dodge,Charger SRT8,46.2816048,0,4
+3101054893,calico,Sports,,Karin,Calico GTF,,,49.4621,0,2
+2072687711,carbonizzare,Sports,,Grotti,Carbonizzare,,,48.3367653,0,2
+3249425686,comet2,Sports,,Pfister,Comet,,,50.19611,0,2
+2272483501,comet3,Sports,,Pfister,Comet Retro Custom,,,50.17371,0,2
+2568944644,comet6,Sports,,Pfister,Comet S2,,,50.15962,0,2
+1141395928,comet7,Sports,,Pfister,Comet S2 Cabrio,,,50.3806076,0,2
+1561920505,comet4,Sports,,Pfister,Comet Safari,,,47.165966,0,2
+661493923,comet5,Sports,,Pfister,Comet SR,,,46.8946,0,2
+108773431,coquette,Sports,,Invetero,Coquette,,,50.45626,0,2
+2566281822,coquette4,Sports,,Invetero,Coquette D10,,,48.862133,0,2
+3540279623,corsita,Sports,,Lampadati,Corsita,,,52.2800674,0,2
+1755697647,cypher,Sports,,Ubermacht,Cypher,,,45.5657959,0,2
+3223586949,tampa2,Sports,,Declasse,Drift Tampa,,,45.80494,0,2
+2598648200,drifttampa,Sports,,Declasse,Drift Tampa (drift model),,,46.33334,0,2
+196747873,elegy,Sports,,Annis,Elegy Retro Custom,,,47.1697121,0,2
+3728579874,elegy2,Sports,,Annis,Elegy RH8,,,48.6724,0,2
+2038480341,euros,Sports,,Annis,Euros,,,47.3475266,0,2
+821121576,drifteuros,Sports,,Annis,Euros (drift model),,,44.9500046,0,2
+2299640309,feltzer2,Sports,,Benefactor,Feltzer,,,49.537365,0,2
+3035832600,flashgt,Sports,,Vapid,Flash GT,,,44.16147,0,2
+3205927392,furoregt,Sports,,Lampadati,Furore GT,,,50.66667,0,2
+499169875,fusilade,Sports,,Schyster,Fusilade,,,48.862133,0,2
+2016857647,futo,Sports,,Karin,Futo,,,45,0,2
+2787736776,futo2,Sports,,Karin,Futo GTX,,,45.66667,0,2
+4113404654,driftfuto,Sports,,Karin,Futo GTX (drift model),,,44.3333359,0,2
+3188846534,zr3802,Sports,,Annis,Future Shock ZR380,,,50.39005,0,2
+1909189272,gb200,Sports,,Vapid,GB200,,,44.57395,0,2
+1304459735,growler,Sports,,Pfister,Growler,,,49.75962,0,2
+4163619118,everon2,Sports,,Karin,Hotring Everon,,,48.1576576,0,2
+1336514315,gauntlet6,Sports,,Bravado,Hotring Hellfire,,,48.9926033,0,2
+1115909093,hotring,Sports,,Declasse,Hotring Sabre,,,48.07754,0,2
+3162245632,imorgon,Sports,,Overflod,Imorgon,,,45.4989777,0,2
+1854776567,issi7,Sports,,Weeny,Issi Sport,,,42.0374756,0,2
+3963499524,italigto,Sports,,Grotti,Itali GTO,,,52.3922348,0,2
+1447690049,stingertt,Sports,,Grotti,Itali GTO Stinger TT,,,52.2721977,0,2
+3145241962,italirsx,Sports,,Grotti,Itali RSX,,,52.2691765,0,2
+2997294755,jester,Sports,,Dinka,Jester,,,45.9981346,0,2
+3188613414,jester2,Sports,,Dinka,Jester (Racecar),,,46.9033966,0,2
+4080061290,jester3,Sports,,Dinka,Jester Classic,,,48.31899,0,2
+2712905841,jester4,Sports,,Dinka,Jester RR,,,48.03665,0,2
+2531693357,driftjester,Sports,,Dinka,Jester RR (drift model),,,44.16667,0,2
+4086055493,jugular,Sports,,Ocelot,Jugular,,,48.64662,0,4
+544021352,khamelion,Sports,,Hijak,Khamelion,,,31.7276363,0,2
+3460613305,komoda,Sports,,Lampadati,Komoda,,,49.8918457,0,4
+2922118804,kuruma,Sports,,Karin,Kuruma,,,46.9033966,0,4
+410882957,kuruma2,Sports,,Karin,Kuruma (Armored),,,45.928524,0,4
+610429990,coureur,Sports,,Penaud,La Coureuse,,,46.6166725,0,2
+3353694737,locust,Sports,,Ocelot,Locust,,,48.8089447,0,2
+482197771,lynx,Sports,,Ocelot,Lynx,,,49.0771942,0,2
+4152024626,massacro,Sports,,Dewbauchee,Massacro,,,50.47479,0,2
+3663206819,massacro2,Sports,,Dewbauchee,Massacro (Racecar),,,50.47479,0,2
+2674840994,neo,Sports,,Vysser,Neo,,,51.2066154,0,2
+2445973230,neon,Sports,,Pfister,Neon,,,38.9224358,0,4
+2816263004,zr3803,Sports,,Annis,Nightmare ZR380,,,50.39005,0,2
+3517794615,omnis,Sports,,Obey,Omnis,,,43.73737,0,2
+3789743831,omnisegt,Sports,,Obey,Omnis e-GT,,,47.69437,0,4
+2100457220,panthere,Sports,,Toundra,Panthere,,,49.53232,0,2
+3847255899,paragon,Sports,,Enus,Paragon R,,,44.9969521,0,2
+1416466158,paragon2,Sports,,Enus,Paragon R (Armored),,,44.8279648,0,2
+867799010,pariah,Sports,,Ocelot,Pariah,,,48.7327843,0,2
+3917501776,penumbra,Sports,,Maibatsu,Penumbra,,,40.7799225,0,2
+3663644634,penumbra2,Sports,,Maibatsu,Penumbra FF,,,45.0454369,0,2
+2765724541,raiden,Sports,,Coil,Raiden,,,38.061573,0,4
+2360515092,rapidgt,Sports,,Dewbauchee,Rapid GT,,,50.1498146,0,2
+1737773231,rapidgt2,Sports,,Dewbauchee,Rapid GT (cabrio),,,50.1498146,0,2
+3620039993,raptor,Sports,,BF,Raptor,,,42.8873177,0,2
+1377217886,remus,Sports,,Annis,Remus,,,47.01226,0,2
+2670883828,driftremus,Sports,,Annis,Remus (drift model),,,46.26667,0,2
+3884762073,revolter,Sports,,Ubermach,Revolter,,,44.9150276,0,4
+3842363289,rt3000,Sports,,Dinka,RT3000,,,48.1314278,0,2
+719660200,ruston,Sports,,Hijak,Ruston,,,46.7482567,0,2
+1133471123,s95,Sports,,Karin,S95,,,47.4459152,0,2
+1489967196,schafter4,Sports,,Benefactor,Schafter LWB,,,39.3712959,0,4
+2809443750,schafter3,Sports,,Benefactor,Schafter V12,,,50.0000038,0,4
+3787471536,schlagen,Sports,,Benefactor,Schlagen GT,,,52.06058,0,2
+3548084598,schwarzer,Sports,,Benefactor,Schwartzer,,,48.2967949,0,2
+1104234922,sentinel3,Sports,,Ubermach,Sentinel Classic,,,44.6439629,0,2
+2938086457,sentinel4,Sports,,Ubermach,Sentinel Classic Widebody,,,47.51883,0,2
+2537130571,seven70,Sports,,Dewbauchee,Seven-70,,,50.9091721,0,2
+775514032,sm722,Sports,,Benefactor,SM722,,,48.2165375,0,2
+1886268224,specter,Sports,,Dewbauchee,Specter,,,48.6425476,0,2
+1074745671,specter2,Sports,,Dewbauchee,Specter Custom,,,49.3176041,0,2
+237764926,buffalo3,Sports,,Bravado,Sprunk Buffalo,,Charger SRT8,48.1651764,0,4
+1741861769,streiter,Sports,,Benefactor,Streiter,,,42.8977737,0,4
+987469656,sugoi,Sports,,Dinka,Sugoi,,,45.19332,0,4
+970598228,sultan,Sports,,Karin,Sultan,,,45.1953163,0,4
+872704284,sultan2,Sports,,Karin,Sultan Classic,,,46.70056,0,2
+4003946083,sultan3,Sports,,Karin,Sultan RS Classic,,,47.2149048,0,2
+384071873,surano,Sports,,Benefactor,Surano,,,50.42197,0,2
+1887331236,tropos,Sports,,Lampadati,Tropos Rallye,,,42.93287,0,2
+1456336509,vstr,Sports,,Albany,V-STR,,,48.018177,0,4
+2754593701,vectre,Sports,,Emperor,Vectre,,,44.1235771,0,2
+1102544804,verlierer2,Sports,,Bravado,Verlierer,,,50.0000038,0,2
+3437611258,veto,Sports,,Dinka,Veto Classic,,,25.0000019,0,1
+2802050217,veto2,Sports,,Dinka,Veto Modern,,,26.66667,0,1
+2436313176,zr350,Sports,,Annis,ZR350,,,48.0937729,0,2
+1923534526,driftzr350,Sports,,Annis,ZR350 (drift model),,,44.266674,0,2
+838982985,z190,SportsClassics,,Karin,190z,,,43.94242,0,2
+159274291,ardent,SportsClassics,,Ocelot,Ardent,,,47.79096,0,2
+941800958,casco,SportsClassics,,Lampadati,Casco,,,50.33334,0,2
+3306466016,cheburek,SportsClassics,,RUNE,Cheburek,,,44.6439629,0,2
+223240013,cheetah2,SportsClassics,,Grotti,Cheetah Classic,,,49.9230347,0,2
+1011753235,coquette2,SportsClassics,,Invetero,Coquette Classic,,,49.537365,0,2
+1483171323,deluxo,SportsClassics,,Imponte,Deluxo,,,42.67659,0,2
+310284501,dynasty,SportsClassics,,Weeny,Dynasty,,,35.6352577,0,4
+1617472902,fagaloa,SportsClassics,,Vulcar,Fagaloa,,,34.39128,0,2
+3463132580,btype2,SportsClassics,,Albany,Franken Stange,,,45,0,4
+2215179066,gt500,SportsClassics,,Grotti,GT500,,,45.8691139,0,2
+2889029532,infernus2,SportsClassics,,Pegassi,Infernus Classic,,,48.0532722,0,2
+1051415893,jb700,SportsClassics,,Dewbauchee,JB 700,,,50.0000038,0,2
+394110044,jb7002,SportsClassics,,Dewbauchee,JB 700W,,,50.0000038,0,2
+2634021974,mamba,SportsClassics,,Declasse,Mamba,,,49.33334,0,2
+2170765704,manana,SportsClassics,,Albany,Manana,,,36.9471779,0,2
+1046206681,michelli,SportsClassics,,Lampadati,Michelli GT,,,44.5681152,0,2
+3861591579,monroe,SportsClassics,,Pegassi,Monroe,,,50.0000038,0,2
+3412338231,nebula,SportsClassics,,Vulcar,Nebula Turbo,,,37.9381866,0,2
+1830407356,peyote,SportsClassics,,Vapid,Peyote,,,36.9471779,0,2
+1107404867,peyote3,SportsClassics,,Vapid,Peyote Custom,,,42.7741432,0,2
+1078682497,pigalle,SportsClassics,,Lampadati,Pigalle,,,49.6666679,0,2
+2049897956,rapidgt3,SportsClassics,,Dewbauchee,Rapid GT Classic,,,47.1241837,0,2
+1841130506,retinue,SportsClassics,,Vapid,Retinue,,,42.67659,0,2
+2031587082,retinue2,SportsClassics,,Vapid,Retinue Mk II,,,45.9072647,0,2
+117401876,btype,SportsClassics,,Albany,Roosevelt,,,41.66667,0,6
+3692679425,btype3,SportsClassics,,Albany,Roosevelt Valor,,,41.66667,0,6
+903794909,savestra,SportsClassics,,Annis,Savestra,,,43.83115,0,2
+1545842587,stinger,SportsClassics,,Grotti,Stinger,,,45.1953163,0,2
+2196019706,stingergt,SportsClassics,,Grotti,Stinger GT,,,45.1953163,0,2
+2728226064,feltzer3,SportsClassics,,Benefactor,Stirling GT,,,45.9981346,0,2
+886810209,stromberg,SportsClassics,,Ocelot,Stromberg,,,45.8691139,0,2
+500482303,swinger,SportsClassics,,Ocelot,Swinger,,,48.6413231,0,2
+1455990255,toreador,SportsClassics,,Pegassi,Toreador,,,46.9970474,0,4
+1504306544,torero,SportsClassics,,Pegassi,Torero,,,47.5560341,0,2
+464687292,tornado,SportsClassics,,Declasse,Tornado,,,36.9471779,0,2
+1762279763,tornado3,SportsClassics,,Declasse,Tornado (beater),,,36.9471779,0,2
+1531094468,tornado2,SportsClassics,,Declasse,Tornado (cabrio),,,36.9471779,0,2
+2261744861,tornado4,SportsClassics,,Declasse,Tornado (Mariachi),,,36.9471779,0,2
+2497353967,tornado5,SportsClassics,,Declasse,Tornado Custom,,,37.09929,0,2
+2736567667,tornado6,SportsClassics,,Declasse,Tornado Rat Rod,,,40.12054,0,2
+3312836369,turismo2,SportsClassics,,Grotti,Turismo Classic,,,49.537365,0,2
+3903371924,viseris,SportsClassics,,Lampadati,Viseris,,,47.1241837,0,2
+758895617,ztype,SportsClassics,,Truffade,Z-Type,,,51.3333359,0,2
+1862507111,zion3,SportsClassics,,Ubermach,Zion Classic,,,44.5857658,0,2
+2465164804,pfister811,Super,,Pfister,811,,,53.1000061,0,2
+3078201489,adder,Super,,Truffade,Adder,,,51.77096,0,2
+3981782132,autarch,Super,,Overflod,Autarch,,,51.2899,0,2
+633712403,banshee2,Super,,Bravado,Banshee 900R,,,44.7295,0,2
+2598821281,bullet,Super,,Vapid,Bullet,,,49.76318,0,2
+3379732821,champion,Super,,Dewbauchee,Champion,,,51.86634,0,2
+2983812512,cheetah,Super,,Grotti,Cheetah,,,50.00953,0,2
+1392481335,cyclone,Super,,Coil,Cyclone,,,40.9219,0,2
+386089410,cyclone2,Super,,Coil,Cyclone II,,,43.7121468,0,2
+1591739866,deveste,Super,,Principe,Deveste Eight,,,52.6777878,0,2
+1323778901,emerus,Super,,Progen,Emerus,,,50.8593979,0,2
+1748565021,entity3,Super,,Overflod,Entity MT,,,53.6164627,0,2
+3003014393,entityxf,Super,,Overflod,Entity XF,,,50.9357758,0,2
+2174267100,entity2,Super,,Overflod,Entity XXR,,,53.7140846,0,2
+819197656,sheava,Super,,Emperor,ETR1,,,48.6724,0,2
+1426219628,fmj,Super,,Vapid,FMJ,,,52.8000031,0,2
+960812448,furia,Super,,Grotti,Furia,,,49.8337822,0,2
+1234311532,gp1,Super,,Progen,GP1,,,50.31808,0,2
+2850852987,ignus,Super,,Pegassi,Ignus,,,52.36531,0,2
+418536135,infernus,Super,,Pegassi,Infernus,,,49.1131363,0,2
+2246633323,italigtb,Super,,Progen,Itali GTB,,,52.15954,0,2
+3812247419,italigtb2,Super,,Progen,Itali GTB Custom,,,52.4821243,0,2
+3630826055,krieger,Super,,Benefactor,Krieger,,,52.5740738,0,2
+4284049613,lm87,Super,,Benefactor,LM87,,,50.33531,0,1
+1034187331,nero,Super,,Truffade,Nero,,,52.64204,0,2
+1093792632,nero2,Super,,Truffade,Nero Custom,,,52.8789749,0,2
+1987142870,osiris,Super,,Pegassi,Osiris,,,49.6558723,0,2
+2536829930,penetrator,Super,,Ocelot,Penetrator,,,49.4194221,0,2
+3062131285,le7b,Super,,Annis,RE-7B,,,50.35628,0,2
+234062309,reaper,Super,,Pegassi,Reaper,,,49.6593132,0,2
+989294410,voltic2,Super,,Coil,Rocket Voltic,,,35.9639053,0,2
+3970348707,s80,Super,,Annis,S80RR,,,49.63022,0,1
+1352136073,sc1,Super,,Ubermach,SC1,,,47.4162178,0,2
+3656405053,scramjet,Super,,Declasse,Scramjet,,,49.35356,0,2
+3999278268,sultanrs,Super,,Karin,Sultan RS,,,49.33334,0,2
+1663218586,t20,Super,,Progen,T20,,,49.67927,0,2
+3160260734,taipan,Super,,Cheval,Taipan,,,53.86687,0,2
+272929391,tempesta,Super,,Pegassi,Tempesta,,,49.13776,0,2
+1031562256,tezeract,Super,,Pegassi,Tezeract,,,45.85145,0,2
+1044193113,thrax,Super,,Truffade,Thrax,,,50.19611,0,2
+2936769864,tigon,Super,,Lampadati,Tigon,,,51.71791,0,2
+4129572538,torero2,Super,,Pegassi,Torero XO,,,52.417717,0,2
+4171974011,turismo3,Super,,Grotti,Turismo Omaggio,,,49.9028435,0,2
+408192225,turismor,Super,,Grotti,Turismo R,,,51.0910835,0,2
+3918533058,tyrant,Super,,Overflod,Tyrant,,,53.14107,0,2
+2067820283,tyrus,Super,,Progen,Tyrus,,,50.3972359,0,2
+338562499,vacca,Super,,Pegassi,Vacca,,,50.3117332,0,2
+1939284556,vagner,Super,,Dewbauchee,Vagner,,,52.6404533,0,2
+3052358707,vigilante,Super,,Grotti,Vigilante,,,52.2428551,0,2
+669204833,virtue,Super,,Ocelot,Virtue,,,45.3958435,0,2
+3296789504,visione,Super,,Grotti,Visione,,,51.3755531,0,2
+2672523198,voltic,Super,,Coil,Voltic,,,35.9639053,0,2
+956849991,ignus2,Super,,Pegassi,Weaponized Ignus,,,52.36531,0,2
+2123327359,prototipo,Super,,Grotti,X80 Proto,,,53.05652,0,2
+917809321,xa21,Super,,Ocelot,XA-21,,,49.59993,0,2
+655665811,zeno,Super,,Overflod,Zeno,,,53.6449356,0,2
+2891838741,zentorno,Super,,Pegassi,Zentorno,,,49.65903,0,2
+3612858749,zorrusso,Super,,Pegassi,Zorrusso,,,50.895752,0,2
+4256087847,aleutian,SUVs,,Vapid,Aleutian,,,39.66667,0,4
+629969764,astron,SUVs,,Pfister,Astron,,,49.56667,0,4
+2803699023,astron2,SUVs,,Pfister,Astron Custom,,,49.56667,0,4
+3486135912,baller,SUVs,,Gallivanter,Baller,,,39.6176529,0,4
+142944341,baller2,SUVs,,Gallivanter,Baller (second generation),,,45,0,4
+1878062887,baller3,SUVs,,Gallivanter,Baller LE,,,45,0,4
+470404958,baller5,SUVs,,Gallivanter,Baller LE (Armored),,,45,0,4
+634118882,baller4,SUVs,,Gallivanter,Baller LE LWB,,,45,0,4
+666166960,baller6,SUVs,,Gallivanter,Baller LE LWB (Armored),,,45,0,4
+359875117,baller7,SUVs,,Gallivanter,Baller ST,,,46.5833359,0,4
+3431608412,baller8,SUVs,,Gallivanter,Baller ST-D,,,46.6666679,0,4
+850565707,bjxl,SUVs,,Karin,BeeJay XL,,,36.37293,0,4
+2006918058,cavalcade,SUVs,,Albany,Cavalcade,,,38.42887,0,4
+3505073125,cavalcade2,SUVs,,Albany,Cavalcade (second generation),,,38.42887,0,4
+3265236814,cavalcade3,SUVs,,Albany,Cavalcade XL,,,40.6666679,0,4
+683047626,contender,SUVs,,Vapid,Contender,,,41.36147,0,4
+1177543287,dubsta,SUVs,,Benefactor,Dubsta,,,37.5559425,0,4
+3900892662,dubsta2,SUVs,,Benefactor,Dubsta (custom),,,37.5559425,0,4
+3157435195,fq2,SUVs,,Fathom,FQ 2,,,39.9116974,0,4
+2519238556,granger,SUVs,,Declasse,Granger,,,36.37293,0,8
+4033620423,granger2,SUVs,,Declasse,Granger 3600LX,,,34.0256844,0,8
+2751205197,gresley,SUVs,,Bravado,Gresley,,,38.42887,0,4
+884422927,habanero,SUVs,,Emperor,Habanero,,,39.9116974,0,4
+486987393,huntley,SUVs,,Enus,Huntley S,,,45.3333359,0,4
+662793086,iwagen,SUVs,,Obey,I-Wagen,,,33.31249,0,4
+1550581940,issi8,SUVs,,Weeny,Issi Rally,,,48.20894,0,2
+461465043,jubilee,SUVs,,Enus,Jubilee,,,42.781353,0,4
+1269098716,landstalker,SUVs,,Dundreary,Landstalker,,,36.83084,0,4
+3456868130,landstalker2,SUVs,,Dundreary,Landstalker XL,,,37.655365,0,4
+914654722,mesa,SUVs,,Canis,Mesa,,,34.6831551,0,4
+3546958660,mesa2,SUVs,,Canis,Mesa (Snow),,,34.6831551,0,4
+2465530446,novak,SUVs,,Lampadati,Novak,,,47.01816,0,4
+3486509883,patriot,SUVs,,Mammoth,Patriot,,,38.42887,0,4
+3874056184,patriot2,SUVs,,Mammoth,Patriot Stretch,,,35.9639053,0,6
+2643899483,radi,SUVs,,Vapid,Radius,,,39.3712959,0,4
+83136452,rebla,SUVs,,Ubermacht,Rebla GTS,,,46.5644836,0,4
+2136773105,rocoto,SUVs,,Obey,Rocoto,,,41.3371658,0,4
+1221512915,seminole,SUVs,,Canis,Seminole,,,36.83084,0,4
+2484160806,seminole2,SUVs,,Canis,Seminole Frontier,,,38.9853821,0,2
+1337041428,serrano,SUVs,,Benefactor,Serrano,,,40.39331,0,4
+4192631813,squaddie,SUVs,,Mammoth,Squaddie,,,38.42887,0,4
+3126015148,toros,SUVs,,Pegassi,Toros,,,48.862133,0,4
+2922168362,vivanite,SUVs,,Karin,Vivanite,,,27.47996,0,4
+1203490606,xls,SUVs,,Benefactor,XLS,,,44.0000038,0,4
+3862958888,xls2,SUVs,,Benefactor,XLS (Armored),,,44.0000038,0,4
+2818520053,armytrailer,Trailers,,,Army Trailer,,,-0.513167143,0,0
+2657817814,armytrailer2,Trailers,,,Army Trailer (cutter),,,-0.513167143,0,0
+3087536137,armytanker,Trailers,,,Army Trailer (tanker),,,-0.5051028,0,0
+3895125590,baletrailer,Trailers,,,Bale Trailer,,,-0.513167143,0,0
+524108981,boattrailer,Trailers,,,Boat Trailer,,,-0.513167143,0,0
+1835260592,boattrailer2,Trailers,,,Boat Trailer (Dinghy),,,-0.513167143,0,0
+1539159908,boattrailer3,Trailers,,,Boat Trailer (Seasharks),,,-0.513167143,0,0
+2154757102,docktrailer,Trailers,,,Dock Trailer,,,-0.513167143,0,0
+1019737494,graintrailer,Trailers,,,Grain Trailer,,,-0.513167143,0,0
+1502869817,trailerlarge,Trailers,,,Mobile Operations Center,,,-0.513167143,0,1
+2715434129,trailers2,Trailers,,,Trailer (box),,,-0.513167143,0,0
+2078290630,tr2,Trailers,,,"Trailer (car carrier, empty)",,,-0.5051028,0,0
+2091594960,tr4,Trailers,,,"Trailer (car carrier, full)",,,-0.5051028,0,0
+3417488910,trailers,Trailers,,,Trailer (container/curtain-side),,,-0.513167143,0,0
+2524324030,tvtrailer,Trailers,,,Trailer (Fame or Shame),,,-0.513167143,0,0
+2016027501,trailerlogs,Trailers,,,Trailer (flatbed; logs),,,-0.5051028,0,0
+2942498482,trflat,Trailers,,,Trailer (flatbed),,,-0.513167143,0,0
+3194418602,trailers4,Trailers,,,Trailer (Gunrunning container),,,-0.513167143,0,0
+2960513480,trailers5,Trailers,,,Trailer (Happy Holidays),,,-0.513167143,0,0
+471034616,tvtrailer2,Trailers,,,Trailer (LS Panic),,,-0.513167143,0,0
+390902130,raketrailer,Trailers,,,Trailer (rake),,,-0.513167143,0,0
+2236089197,trailers3,Trailers,,,Trailer (ramp-door box),,,-0.513167143,0,0
+712162987,trailersmall,Trailers,,,Trailer (small),,,-0.513167143,0,0
+1956216962,tanker2,Trailers,,,Trailer (tanker; heist),,,-0.5051028,0,0
+3564062519,tanker,Trailers,,,Trailer (tanker; RON),,,-0.5051028,0,0
+1784254509,tr3,Trailers,,,Trailer (yacht),,,-0.5051028,0,0
+1030400667,freight,Trains,,,Freight Train,,,26.66667,0,2
+920453016,freightcont1,Trains,,,Freight Train (Container Car 1),,,26.66667,0,2
+240201337,freightcont2,Trains,,,Freight Train (Container Car 2),,,26.66667,0,2
+642617954,freightgrain,Trains,,,Freight Train (Grain Car),,,26.66667,0,2
+586013744,tankercar,Trains,,,Freight Train (Tanker Car),,,26.66667,0,2
+3852738056,freight2,Trains,,,Freight Train (The Cluckin' Bell Farm Raid),,,26.66667,0,2
+3186376089,freightcar2,Trains,,,Freight Train (Well Car 2),,,26.66667,0,0
+184361638,freightcar,Trains,,,Freight Train (Well Car),,,26.66667,0,0
+868868440,metrotrain,Trains,,,Metrotrain,,,26.66667,0,4
+1560980623,airtug,Utility,,HVY,Airtug,,,10.9417419,0,2
+1147287684,caddy,Utility,,Nagasaki,Caddy,,,21.66667,0,2
+3525819835,caddy3,Utility,,,Caddy (bunker),,,21.3342037,0,2
+3757070668,caddy2,Utility,,Nagasaki,Caddy (civilian),,,21.66667,0,2
+3410276810,docktug,Utility,,HVY,Docktug,,,24.640646,0,1
+2218488798,tractor2,Utility,,Stanley,Fieldmaster,,,14.45938,0,1
+1445631933,tractor3,Utility,,Stanley,Fieldmaster (Snow),,,14.45938,0,1
+1491375716,forklift,Utility,,HVY,Forklift,,,10.000001,0,1
+1783355638,mower,Utility,,Jack Sheepe,Lawn Mower,,,6.66666746,0,1
+3448987385,ripley,Utility,,HVY,Ripley,,,23.333334,0,2
+3695398481,sadler,Utility,,Vapid,Sadler,,,37.5559425,0,4
+734217681,sadler2,Utility,,Vapid,Sadler (snow),,,37.5559425,0,4
+2594165727,scrap,Utility,,Vapid,Scrap Truck,,,32.16411,0,2
+3249056020,slamtruck,Utility,,Vapid,Slamtruck,,,37.90616,0,2
+2971866336,towtruck,Utility,,Vapid,Tow Truck,,,35.0000038,0,2
+3623402354,towtruck3,Utility,,Vapid,Tow Truck (Chop Shop beater),,,38.3333359,0,2
+3392937977,towtruck4,Utility,,Vapid,Tow Truck (Chop Shop clean),,,38.3333359,0,2
+3852654278,towtruck2,Utility,,Vapid,Tow Truck (yankee),,,33.3333359,0,2
+1641462412,tractor,Utility,,Stanley,Tractor,,,13.3333349,0,1
+887537515,utillitruck2,Utility,,Brute,Utility Truck,,,30.4620018,0,2
+516990260,utillitruck,Utility,,Brute,Utility Truck (AWP),,,30.4620018,0,2
+2132890591,utillitruck3,Utility,,Brute,Utility Truck (Contender-based),,,30.4620018,0,2
+682434785,boxville5,Vans,,Brute,Armored Boxville,,,39.4684029,0,5
+4278019151,bison,Vans,,Bravado,Bison,,,37.5559425,0,6
+2072156101,bison2,Vans,,Bravado,Bison (McGill-Olsen),,,37.5559425,0,4
+1739845664,bison3,Vans,,Bravado,Bison (The Mighty Bush),,,37.5559425,0,4
+1069929536,bobcatxl,Vans,,Vapid,Bobcat XL,,,35.1601067,0,2
+4061868990,boxville2,Vans,,Brute,Boxville,,,28.6960716,0,6
+121658888,boxville3,Vans,,Brute,Boxville (Humane Labs),,,28.6960716,0,4
+3452201761,boxville6,Vans,,Brute,Boxville (LSDS),,,28.6960716,0,6
+444171386,boxville4,Vans,,Brute,Boxville (Post OP),,,28.6960716,0,6
+2307837162,boxville,Vans,,Brute,Boxville (utility),,,28.6960716,0,6
+3387490166,burrito2,Vans,,Declasse,Bugstars Burrito,,,36.9471779,0,4
+2948279460,burrito,Vans,,Declasse,Burrito,,,36.9471779,0,4
+893081117,burrito4,Vans,,Declasse,Burrito (McGill-Olsen),,,36.9471779,0,4
+2551651283,burrito3,Vans,,Declasse,Burrito (second generation),,,36.9471779,0,4
+1132262048,burrito5,Vans,,Declasse,Burrito (snow),,,36.9471779,0,4
+1876516712,camper,Vans,,Brute,Camper,,,30.4620018,0,2
+728614474,speedo2,Vans,,Vapid,Clown Van,,,39.9116974,0,4
+2549763894,gburrito,Vans,,Declasse,Gang Burrito,,,36.9471779,0,4
+296357396,gburrito2,Vans,,Declasse,Gang Burrito (custom),,,39.9116974,0,4
+4174679674,journey,Vans,,Zirconium,Journey,,,32.16411,0,6
+2667889793,journey2,Vans,,Zirconium,Journey II,,,32.16411,0,6
+3984502180,minivan,Vans,,Vapid,Minivan,,,35.4016647,0,4
+3168702960,minivan2,Vans,,Vapid,Minivan Custom,,,35.4016647,0,4
+1488164764,paradise,Vans,,Bravado,Paradise,,,38.44937,0,4
+4175309224,pony,Vans,,Brute,Pony,,,36.9471779,0,4
+943752001,pony2,Vans,,Brute,Pony (Smoke on the Water),,,36.9471779,0,4
+1162065741,rumpo,Vans,,Bravado,Rumpo,,,38.44937,0,4
+2518351607,rumpo2,Vans,,Bravado,Rumpo (Deludamol),,,38.44937,0,2
+1475773103,rumpo3,Vans,,Bravado,Rumpo Custom,,,35.9639053,0,4
+3484649228,speedo,Vans,,Vapid,Speedo,,,39.9116974,0,4
+219613597,speedo4,Vans,,Vapid,Speedo Custom,,,42.72843,0,4
+4250167832,speedo5,Vans,,Vapid,Speedo Custom (Personal Vehicle),,,42.72843,0,4
+699456151,surfer,Vans,,BF,Surfer,,,20.6859474,0,2
+2983726598,surfer2,Vans,,BF,Surfer (beater),,,20.6859474,0,2
+3259477733,surfer3,Vans,,BF,Surfer Custom,,,20.6859474,0,4
+1951180813,taco,Vans,,Brute,Taco Van,,,28.6960716,0,1
+65402552,youga,Vans,,Bravado,Youga,,,33.80885,0,2
+1026149675,youga2,Vans,,Bravado,Youga Classic,,,33.80885,0,4
+1802742206,youga3,Vans,,Bravado,Youga Classic 4x4,,,38.44937,0,4
+1486521356,youga4,Vans,,Vapid,Youga Custom,,,36.6416626,0,4

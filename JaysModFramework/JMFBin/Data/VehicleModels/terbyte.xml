@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>terbyte</ID>
   <Class>Commercial</Class>
+  <GTAMake>Benefactor</GTAMake>
   <GTAModel>Terrorbyte</GTAModel>
+  <MaxSpeed>30.7185459</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

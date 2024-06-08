@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>cargobob4</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Cargobob (Drop Zone)</GTAModel>
   <RWMake>Boeing</RWMake>
   <RWModel>CH-46 Sea Knight</RWModel>
+  <MaxSpeed>49.91996</MaxSpeed>
+  <MaxKnots>627.8267</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

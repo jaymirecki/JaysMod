@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>policeold1</ID>
   <Class>Emergency</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Police Rancher (Snow)</GTAModel>
+  <MaxSpeed>35.1601067</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

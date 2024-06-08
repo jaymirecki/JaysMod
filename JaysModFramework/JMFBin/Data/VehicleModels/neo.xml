@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>neo</ID>
   <Class>Sports</Class>
+  <GTAMake>Vysser</GTAMake>
   <GTAModel>Neo</GTAModel>
+  <MaxSpeed>51.2066154</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

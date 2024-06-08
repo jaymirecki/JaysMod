@@ -3,4 +3,7 @@
   <ID>khanjali</ID>
   <Class>Military</Class>
   <GTAModel>TM-02 Khanjali</GTAModel>
+  <MaxSpeed>18.1220837</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

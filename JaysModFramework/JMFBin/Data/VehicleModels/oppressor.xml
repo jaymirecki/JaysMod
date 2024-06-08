@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>oppressor</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Pegassi</GTAMake>
   <GTAModel>Oppressor</GTAModel>
+  <MaxSpeed>48.49779</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

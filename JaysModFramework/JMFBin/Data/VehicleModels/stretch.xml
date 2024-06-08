@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>stretch</ID>
   <Class>Sedans</Class>
+  <GTAMake>Dundreary</GTAMake>
   <GTAModel>Stretch</GTAModel>
+  <MaxSpeed>38.44937</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>6</NumberOfSeats>
 </VehicleModel>

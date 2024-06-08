@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tahoma</ID>
   <Class>Muscle</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Tahoma Coupe</GTAModel>
+  <MaxSpeed>43.554863</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

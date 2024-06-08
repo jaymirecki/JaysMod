@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>deity</ID>
   <Class>Sedans</Class>
+  <GTAMake>Enus</GTAMake>
   <GTAModel>Deity</GTAModel>
+  <MaxSpeed>44.3737068</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

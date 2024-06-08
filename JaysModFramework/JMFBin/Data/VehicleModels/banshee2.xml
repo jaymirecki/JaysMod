@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>banshee2</ID>
   <Class>Super</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Banshee 900R</GTAModel>
+  <MaxSpeed>44.7295</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

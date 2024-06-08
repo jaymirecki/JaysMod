@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>schafter2</ID>
   <Class>Sedans</Class>
+  <GTAMake>Benefactor</GTAMake>
   <GTAModel>Schafter</GTAModel>
+  <MaxSpeed>39.3712959</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

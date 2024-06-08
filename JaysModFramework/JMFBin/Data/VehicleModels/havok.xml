@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>havok</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Havok</GTAModel>
   <RWMake>Heli-Sport</RWMake>
   <RWModel>CH-7</RWModel>
+  <MaxSpeed>57.9072266</MaxSpeed>
+  <MaxKnots>983.650757</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

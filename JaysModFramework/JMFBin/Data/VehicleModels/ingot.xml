@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>ingot</ID>
   <Class>Sedans</Class>
+  <GTAMake>Vulcar</GTAMake>
   <GTAModel>Ingot</GTAModel>
+  <MaxSpeed>32.0801773</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

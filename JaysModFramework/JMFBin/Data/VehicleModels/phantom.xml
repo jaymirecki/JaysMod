@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>phantom</ID>
   <Class>Commercial</Class>
+  <GTAMake>Jobuilt</GTAMake>
   <GTAModel>Phantom</GTAModel>
+  <MaxSpeed>33.8106079</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

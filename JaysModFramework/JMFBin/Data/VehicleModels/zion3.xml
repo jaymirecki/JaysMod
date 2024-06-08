@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>zion3</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Ubermach</GTAMake>
   <GTAModel>Zion Classic</GTAModel>
+  <MaxSpeed>44.5857658</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

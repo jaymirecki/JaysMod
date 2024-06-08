@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>riot2</ID>
   <Class>Emergency</Class>
+  <GTAMake>Brute</GTAMake>
   <GTAModel>RCV</GTAModel>
+  <MaxSpeed>35.93409</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>6</NumberOfSeats>
 </VehicleModel>

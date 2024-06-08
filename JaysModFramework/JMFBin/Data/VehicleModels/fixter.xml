@@ -3,4 +3,7 @@
   <ID>fixter</ID>
   <Class>Cycles</Class>
   <GTAModel>Fixter</GTAModel>
+  <MaxSpeed>17.8510456</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

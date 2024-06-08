@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>powersurge</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Powersurge</GTAModel>
+  <MaxSpeed>42.7333336</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

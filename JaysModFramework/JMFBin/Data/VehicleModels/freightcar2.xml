@@ -3,4 +3,7 @@
   <ID>freightcar2</ID>
   <Class>Trains</Class>
   <GTAModel>Freight Train (Well Car 2)</GTAModel>
+  <MaxSpeed>26.66667</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>0</NumberOfSeats>
 </VehicleModel>

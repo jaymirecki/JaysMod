@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>rancherxl</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Rancher XL</GTAModel>
+  <MaxSpeed>35.1601067</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

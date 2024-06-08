@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>ruston</ID>
   <Class>Sports</Class>
+  <GTAMake>Hijak</GTAMake>
   <GTAModel>Ruston</GTAModel>
+  <MaxSpeed>46.7482567</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

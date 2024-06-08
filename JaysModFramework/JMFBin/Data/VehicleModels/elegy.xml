@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>elegy</ID>
   <Class>Sports</Class>
+  <GTAMake>Annis</GTAMake>
   <GTAModel>Elegy Retro Custom</GTAModel>
+  <MaxSpeed>47.1697121</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

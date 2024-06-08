@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>coureur</ID>
   <Class>Sports</Class>
+  <GTAMake>Penaud</GTAMake>
   <GTAModel>La Coureuse</GTAModel>
+  <MaxSpeed>46.6166725</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

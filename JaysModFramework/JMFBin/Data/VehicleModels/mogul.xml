@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>mogul</ID>
   <Class>Planes</Class>
+  <GTAMake>Mammoth</GTAMake>
   <GTAModel>Mogul</GTAModel>
+  <MaxSpeed>76.79571</MaxSpeed>
+  <MaxKnots>1.42993629</MaxKnots>
+  <NumberOfSeats>3</NumberOfSeats>
 </VehicleModel>

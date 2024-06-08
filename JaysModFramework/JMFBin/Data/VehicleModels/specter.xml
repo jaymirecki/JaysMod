@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>specter</ID>
   <Class>Sports</Class>
+  <GTAMake>Dewbauchee</GTAMake>
   <GTAModel>Specter</GTAModel>
+  <MaxSpeed>48.6425476</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

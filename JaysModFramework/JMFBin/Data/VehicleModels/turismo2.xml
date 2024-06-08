@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>turismo2</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Grotti</GTAMake>
   <GTAModel>Turismo Classic</GTAModel>
+  <MaxSpeed>49.537365</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

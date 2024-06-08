@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>frogger2</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Maibatsu</GTAMake>
   <GTAModel>Frogger (TPE)</GTAModel>
   <RWMake>Eurocopter</RWMake>
   <RWModel>EC130</RWModel>
+  <MaxSpeed>56.6681175</MaxSpeed>
+  <MaxKnots>844.128357</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>taipan</ID>
   <Class>Super</Class>
+  <GTAMake>Cheval</GTAMake>
   <GTAModel>Taipan</GTAModel>
+  <MaxSpeed>53.86687</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

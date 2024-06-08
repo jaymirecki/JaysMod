@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>velum2</ID>
   <Class>Planes</Class>
+  <GTAMake>Jobuilt</GTAMake>
   <GTAModel>Velum 5-Seater</GTAModel>
   <RWMake>Piper</RWMake>
   <RWModel>PA-46</RWModel>
+  <MaxSpeed>74.6362457</MaxSpeed>
+  <MaxKnots>1.828588</MaxKnots>
+  <NumberOfSeats>5</NumberOfSeats>
 </VehicleModel>

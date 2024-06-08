@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>monstrociti</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Maibatsu</GTAMake>
   <GTAModel>MonstroCiti</GTAModel>
+  <MaxSpeed>41.3981</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

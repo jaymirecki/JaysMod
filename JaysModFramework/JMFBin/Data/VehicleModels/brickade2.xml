@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>brickade2</ID>
   <Class>Service</Class>
+  <GTAMake>MTL</GTAMake>
   <GTAModel>Brickade 6x6</GTAModel>
+  <MaxSpeed>32.8302956</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>6</NumberOfSeats>
 </VehicleModel>

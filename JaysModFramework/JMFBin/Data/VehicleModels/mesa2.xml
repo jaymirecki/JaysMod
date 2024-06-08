@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>mesa2</ID>
   <Class>SUVs</Class>
+  <GTAMake>Canis</GTAMake>
   <GTAModel>Mesa (Snow)</GTAModel>
+  <MaxSpeed>34.6831551</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

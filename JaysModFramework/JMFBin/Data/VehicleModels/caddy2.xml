@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>caddy2</ID>
   <Class>Utility</Class>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Caddy (civilian)</GTAModel>
+  <MaxSpeed>21.66667</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

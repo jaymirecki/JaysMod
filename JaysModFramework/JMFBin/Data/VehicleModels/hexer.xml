@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>hexer</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>LCC</GTAMake>
   <GTAModel>Hexer</GTAModel>
+  <MaxSpeed>43.14252</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

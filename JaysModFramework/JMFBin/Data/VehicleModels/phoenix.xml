@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>phoenix</ID>
   <Class>Muscle</Class>
+  <GTAMake>Imponte</GTAMake>
   <GTAModel>Phoenix</GTAModel>
+  <MaxSpeed>47.2808533</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

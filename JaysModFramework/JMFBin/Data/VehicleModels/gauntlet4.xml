@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>gauntlet4</ID>
   <Class>Muscle</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Gauntlet Hellfire</GTAModel>
+  <MaxSpeed>48.6553421</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

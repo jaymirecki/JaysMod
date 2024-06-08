@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>omnisegt</ID>
   <Class>Sports</Class>
+  <GTAMake>Obey</GTAMake>
   <GTAModel>Omnis e-GT</GTAModel>
+  <MaxSpeed>47.69437</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

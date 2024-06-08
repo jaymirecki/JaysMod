@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>docktug</ID>
   <Class>Utility</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Docktug</GTAModel>
+  <MaxSpeed>24.640646</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

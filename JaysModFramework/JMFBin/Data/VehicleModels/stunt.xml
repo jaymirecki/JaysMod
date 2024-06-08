@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>stunt</ID>
   <Class>Planes</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Mallard</GTAModel>
+  <MaxSpeed>79.05694</MaxSpeed>
+  <MaxKnots>2.84077978</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

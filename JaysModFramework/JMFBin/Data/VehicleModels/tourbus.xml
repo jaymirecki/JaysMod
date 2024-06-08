@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tourbus</ID>
   <Class>Service</Class>
+  <GTAMake>Brute</GTAMake>
   <GTAModel>Tour Bus</GTAModel>
+  <MaxSpeed>25.5808945</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>10</NumberOfSeats>
 </VehicleModel>

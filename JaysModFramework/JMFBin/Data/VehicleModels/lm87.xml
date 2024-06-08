@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>lm87</ID>
   <Class>Super</Class>
+  <GTAMake>Benefactor</GTAMake>
   <GTAModel>LM87</GTAModel>
+  <MaxSpeed>50.33531</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

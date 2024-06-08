@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>vstr</ID>
   <Class>Sports</Class>
+  <GTAMake>Albany</GTAMake>
   <GTAModel>V-STR</GTAModel>
+  <MaxSpeed>48.018177</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

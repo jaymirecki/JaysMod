@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>windsor2</ID>
   <Class>Coupes</Class>
+  <GTAMake>Enus</GTAMake>
   <GTAModel>Windsor Drop</GTAModel>
+  <MaxSpeed>47.89471</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

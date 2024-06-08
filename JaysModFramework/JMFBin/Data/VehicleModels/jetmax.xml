@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>jetmax</ID>
   <Class>Boats</Class>
-  <Subclass>Boat</Subclass>
-  <GTAMake>Boat</GTAMake>
+  <SubClass>Boat</SubClass>
+  <GTAMake>Shitzu</GTAMake>
   <GTAModel>Jetmax</GTAModel>
+  <MaxSpeed>45.0</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

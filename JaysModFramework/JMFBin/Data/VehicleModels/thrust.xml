@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>thrust</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Dinka</GTAMake>
   <GTAModel>Thrust</GTAModel>
+  <MaxSpeed>49.3204651</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

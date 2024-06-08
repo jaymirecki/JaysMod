@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>hauler2</ID>
   <Class>Commercial</Class>
+  <GTAMake>Jobuilt</GTAMake>
   <GTAModel>Hauler Custom</GTAModel>
+  <MaxSpeed>41.94424</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

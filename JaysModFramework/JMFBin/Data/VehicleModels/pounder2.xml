@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>pounder2</ID>
   <Class>Commercial</Class>
+  <GTAMake>MTL</GTAMake>
   <GTAModel>Pounder Custom</GTAModel>
+  <MaxSpeed>36.9471779</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>8</NumberOfSeats>
 </VehicleModel>

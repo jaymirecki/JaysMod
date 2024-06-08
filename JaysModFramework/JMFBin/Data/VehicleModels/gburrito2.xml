@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>gburrito2</ID>
   <Class>Vans</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Gang Burrito (custom)</GTAModel>
+  <MaxSpeed>39.9116974</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

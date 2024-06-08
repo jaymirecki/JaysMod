@@ -3,4 +3,7 @@
   <ID>nokota</ID>
   <Class>Planes</Class>
   <GTAModel>P-45 Nokota</GTAModel>
+  <MaxSpeed>87.7058</MaxSpeed>
+  <MaxKnots>3.15156221</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

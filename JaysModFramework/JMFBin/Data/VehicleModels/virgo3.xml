@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>virgo3</ID>
   <Class>Muscle</Class>
+  <GTAMake>Dundreary</GTAMake>
   <GTAModel>Virgo Classic</GTAModel>
+  <MaxSpeed>36.3465271</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

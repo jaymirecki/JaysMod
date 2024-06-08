@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>turismor</ID>
   <Class>Super</Class>
+  <GTAMake>Grotti</GTAMake>
   <GTAModel>Turismo R</GTAModel>
+  <MaxSpeed>51.0910835</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

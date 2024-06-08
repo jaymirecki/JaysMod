@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>fugitive</ID>
   <Class>Sedans</Class>
+  <GTAMake>Cheval</GTAMake>
   <GTAModel>Fugitive</GTAModel>
+  <MaxSpeed>40.39331</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

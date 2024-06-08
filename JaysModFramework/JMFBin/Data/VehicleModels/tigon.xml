@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tigon</ID>
   <Class>Super</Class>
+  <GTAMake>Lampadati</GTAMake>
   <GTAModel>Tigon</GTAModel>
+  <MaxSpeed>51.71791</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

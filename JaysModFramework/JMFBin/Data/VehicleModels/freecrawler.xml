@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>freecrawler</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Canis</GTAMake>
   <GTAModel>Freecrawler</GTAModel>
+  <MaxSpeed>36.623436</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

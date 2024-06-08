@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tenf2</ID>
   <Class>Sports</Class>
+  <GTAMake>Obey</GTAMake>
   <GTAModel>10F Widebody</GTAModel>
+  <MaxSpeed>49.46413</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>ruffian</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Pegassi</GTAMake>
   <GTAModel>Ruffian</GTAModel>
+  <MaxSpeed>46.6666679</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

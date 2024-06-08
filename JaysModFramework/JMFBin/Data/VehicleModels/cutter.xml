@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>cutter</ID>
   <Class>Industrial</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Cutter</GTAModel>
+  <MaxSpeed>12.761157</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

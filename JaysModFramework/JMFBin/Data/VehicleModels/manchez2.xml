@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>manchez2</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Maibatsu</GTAMake>
   <GTAModel>Manchez Scout</GTAModel>
+  <MaxSpeed>41.38007</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>landstalker</ID>
   <Class>SUVs</Class>
+  <GTAMake>Dundreary</GTAMake>
   <GTAModel>Landstalker</GTAModel>
+  <MaxSpeed>36.83084</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>penetrator</ID>
   <Class>Super</Class>
+  <GTAMake>Ocelot</GTAMake>
   <GTAModel>Penetrator</GTAModel>
+  <MaxSpeed>49.4194221</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

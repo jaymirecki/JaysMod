@@ -5,4 +5,7 @@
   <GTAModel>Titan</GTAModel>
   <RWMake>Lockheed Martin</RWMake>
   <RWModel>C-130 Hercules</RWModel>
+  <MaxSpeed>78.2057648</MaxSpeed>
+  <MaxKnots>0.470068783</MaxKnots>
+  <NumberOfSeats>10</NumberOfSeats>
 </VehicleModel>

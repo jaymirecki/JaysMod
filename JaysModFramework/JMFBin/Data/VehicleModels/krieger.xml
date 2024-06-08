@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>krieger</ID>
   <Class>Super</Class>
+  <GTAMake>Benefactor</GTAMake>
   <GTAModel>Krieger</GTAModel>
+  <MaxSpeed>52.5740738</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

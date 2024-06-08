@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>zhaba</ID>
   <Class>OffRoad</Class>
+  <GTAMake>RUNE</GTAMake>
   <GTAModel>Zhaba</GTAModel>
+  <MaxSpeed>30.30405</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

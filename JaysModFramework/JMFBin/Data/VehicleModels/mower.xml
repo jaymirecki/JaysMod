@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>mower</ID>
   <Class>Utility</Class>
+  <GTAMake>Jack Sheepe</GTAMake>
   <GTAModel>Lawn Mower</GTAModel>
+  <MaxSpeed>6.66666746</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

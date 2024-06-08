@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>brutus</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Apocalypse Brutus</GTAModel>
+  <MaxSpeed>42.30679</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

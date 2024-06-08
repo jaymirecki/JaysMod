@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>pcj</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Shitzu</GTAMake>
   <GTAModel>PCJ 600</GTAModel>
+  <MaxSpeed>39.7958755</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

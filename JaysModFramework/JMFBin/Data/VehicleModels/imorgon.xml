@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>imorgon</ID>
   <Class>Sports</Class>
+  <GTAMake>Overflod</GTAMake>
   <GTAModel>Imorgon</GTAModel>
+  <MaxSpeed>45.4989777</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

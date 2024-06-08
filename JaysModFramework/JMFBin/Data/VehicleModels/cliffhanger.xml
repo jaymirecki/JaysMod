@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>cliffhanger</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Cliffhanger</GTAModel>
+  <MaxSpeed>49.12712</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

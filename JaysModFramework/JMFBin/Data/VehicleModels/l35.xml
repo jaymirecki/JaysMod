@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>l35</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Walton L35</GTAModel>
+  <MaxSpeed>39.09626</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>massacro2</ID>
   <Class>Sports</Class>
+  <GTAMake>Dewbauchee</GTAMake>
   <GTAModel>Massacro (Racecar)</GTAModel>
+  <MaxSpeed>50.47479</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

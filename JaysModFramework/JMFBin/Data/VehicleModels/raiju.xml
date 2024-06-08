@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>raiju</ID>
   <Class>Planes</Class>
+  <GTAMake>Mammoth</GTAMake>
   <GTAModel>F-160 Raiju</GTAModel>
   <RWMake>Lockheed Martin</RWMake>
   <RWModel>F-35 Lightning II</RWModel>
+  <MaxSpeed>103.975044</MaxSpeed>
+  <MaxKnots>4.279613</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

@@ -3,4 +3,7 @@
   <ID>bus</ID>
   <Class>Service</Class>
   <GTAModel>Bus</GTAModel>
+  <MaxSpeed>25.5808945</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>16</NumberOfSeats>
 </VehicleModel>

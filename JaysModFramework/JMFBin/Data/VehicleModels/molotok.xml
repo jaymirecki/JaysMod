@@ -5,4 +5,7 @@
   <GTAModel>V-65 Molotok</GTAModel>
   <RWMake>Mikoyan-Gurevich</RWMake>
   <RWModel>MiG-17</RWModel>
+  <MaxSpeed>91.2870941</MaxSpeed>
+  <MaxKnots>3.28025</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

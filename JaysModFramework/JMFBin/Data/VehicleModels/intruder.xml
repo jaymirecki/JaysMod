@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>intruder</ID>
   <Class>Sedans</Class>
+  <GTAMake>Karin</GTAMake>
   <GTAModel>Intruder</GTAModel>
+  <MaxSpeed>39.3712959</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

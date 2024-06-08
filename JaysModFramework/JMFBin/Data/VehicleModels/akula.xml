@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>akula</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Akula</GTAModel>
   <RWMake>Sikorsky</RWMake>
   <RWModel>RAH-66 Comanche</RWModel>
+  <MaxSpeed>61.0891228</MaxSpeed>
+  <MaxKnots>1057.65649</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

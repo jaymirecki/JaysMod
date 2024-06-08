@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>halftrack</ID>
   <Class>Military</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Half-track</GTAModel>
+  <MaxSpeed>20.93335</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>3</NumberOfSeats>
 </VehicleModel>

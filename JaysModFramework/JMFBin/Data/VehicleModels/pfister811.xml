@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>pfister811</ID>
   <Class>Super</Class>
+  <GTAMake>Pfister</GTAMake>
   <GTAModel>811</GTAModel>
+  <MaxSpeed>53.1000061</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

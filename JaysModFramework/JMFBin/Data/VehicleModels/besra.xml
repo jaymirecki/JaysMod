@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>besra</ID>
   <Class>Planes</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Besra</GTAModel>
+  <MaxSpeed>87.7058</MaxSpeed>
+  <MaxKnots>3.42374229</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

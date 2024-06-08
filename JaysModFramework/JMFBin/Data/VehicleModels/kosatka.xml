@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>kosatka</ID>
   <Class>Boats</Class>
-  <Subclass>Submarine</Subclass>
-  <GTAMake>Submarine</GTAMake>
+  <SubClass>Submarine</SubClass>
+  <GTAMake>RUNE</GTAMake>
   <GTAModel>Kosatka</GTAModel>
+  <MaxSpeed>25.0000019</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

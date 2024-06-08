@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>jugular</ID>
   <Class>Sports</Class>
+  <GTAMake>Ocelot</GTAMake>
   <GTAModel>Jugular</GTAModel>
+  <MaxSpeed>48.64662</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

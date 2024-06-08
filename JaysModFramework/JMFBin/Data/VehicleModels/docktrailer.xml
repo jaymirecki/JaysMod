@@ -3,4 +3,7 @@
   <ID>docktrailer</ID>
   <Class>Trailers</Class>
   <GTAModel>Dock Trailer</GTAModel>
+  <MaxSpeed>-0.513167143</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>0</NumberOfSeats>
 </VehicleModel>

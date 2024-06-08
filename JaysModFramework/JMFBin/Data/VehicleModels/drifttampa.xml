@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>drifttampa</ID>
   <Class>Sports</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Drift Tampa (drift model)</GTAModel>
+  <MaxSpeed>46.33334</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

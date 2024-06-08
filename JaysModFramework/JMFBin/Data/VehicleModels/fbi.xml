@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>fbi</ID>
   <Class>Emergency</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>FIB (Buffalo)</GTAModel>
+  <MaxSpeed>46.1566124</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

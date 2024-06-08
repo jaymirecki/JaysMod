@@ -2,9 +2,12 @@
 <VehicleModel>
   <ID>luxor2</ID>
   <Class>Planes</Class>
-  <Subclass>Passenger Jet</Subclass>
-  <GTAMake>Passenger Jet</GTAMake>
+  <SubClass>Passenger Jet</SubClass>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Luxor Deluxe</GTAModel>
   <RWMake>Bombardier</RWMake>
   <RWModel>Learjet 45</RWModel>
+  <MaxSpeed>91.22515</MaxSpeed>
+  <MaxKnots>1.13240826</MaxKnots>
+  <NumberOfSeats>8</NumberOfSeats>
 </VehicleModel>

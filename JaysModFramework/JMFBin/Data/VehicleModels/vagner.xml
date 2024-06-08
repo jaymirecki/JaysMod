@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>vagner</ID>
   <Class>Super</Class>
+  <GTAMake>Dewbauchee</GTAMake>
   <GTAModel>Vagner</GTAModel>
+  <MaxSpeed>52.6404533</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

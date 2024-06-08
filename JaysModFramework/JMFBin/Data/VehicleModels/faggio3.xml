@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>faggio3</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Pegassi</GTAMake>
   <GTAModel>Faggio Mod</GTAModel>
+  <MaxSpeed>27.4137516</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

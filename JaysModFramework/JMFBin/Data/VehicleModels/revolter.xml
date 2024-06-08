@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>revolter</ID>
   <Class>Sports</Class>
+  <GTAMake>Ubermach</GTAMake>
   <GTAModel>Revolter</GTAModel>
+  <MaxSpeed>44.9150276</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

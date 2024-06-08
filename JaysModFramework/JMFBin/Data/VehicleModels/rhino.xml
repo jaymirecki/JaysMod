@@ -3,4 +3,7 @@
   <ID>rhino</ID>
   <Class>Military</Class>
   <GTAModel>Rhino Tank</GTAModel>
+  <MaxSpeed>18.3333359</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

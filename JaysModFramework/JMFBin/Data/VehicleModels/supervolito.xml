@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>supervolito</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>SuperVolito</GTAModel>
   <RWMake>Eurocopter</RWMake>
   <RWModel>EC145</RWModel>
+  <MaxSpeed>61.9686127</MaxSpeed>
+  <MaxKnots>1008.10547</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

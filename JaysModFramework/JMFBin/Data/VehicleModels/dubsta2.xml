@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>dubsta2</ID>
   <Class>SUVs</Class>
+  <GTAMake>Benefactor</GTAMake>
   <GTAModel>Dubsta (custom)</GTAModel>
+  <MaxSpeed>37.5559425</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

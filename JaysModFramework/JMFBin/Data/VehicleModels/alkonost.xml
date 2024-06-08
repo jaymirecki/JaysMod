@@ -5,4 +5,7 @@
   <GTAModel>RO-86 Alkonost</GTAModel>
   <RWMake>Tupolev</RWMake>
   <RWModel>Tu-160</RWModel>
+  <MaxSpeed>82.61924</MaxSpeed>
+  <MaxKnots>0.6801216</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

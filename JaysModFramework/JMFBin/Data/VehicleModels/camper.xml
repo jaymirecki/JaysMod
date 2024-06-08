@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>camper</ID>
   <Class>Vans</Class>
+  <GTAMake>Brute</GTAMake>
   <GTAModel>Camper</GTAModel>
+  <MaxSpeed>30.4620018</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

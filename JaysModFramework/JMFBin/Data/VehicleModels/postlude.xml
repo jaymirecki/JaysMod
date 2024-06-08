@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>postlude</ID>
   <Class>Coupes</Class>
+  <GTAMake>Dinka</GTAMake>
   <GTAModel>Postlude</GTAModel>
+  <MaxSpeed>42.1823158</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

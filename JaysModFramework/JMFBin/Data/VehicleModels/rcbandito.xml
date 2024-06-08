@@ -3,4 +3,7 @@
   <ID>rcbandito</ID>
   <Class>OffRoad</Class>
   <GTAModel>RC Bandito</GTAModel>
+  <MaxSpeed>26.3717728</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

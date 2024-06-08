@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>contender</ID>
   <Class>SUVs</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Contender</GTAModel>
+  <MaxSpeed>41.36147</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

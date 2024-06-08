@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>winky</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Winky</GTAModel>
+  <MaxSpeed>30.0000038</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>3</NumberOfSeats>
 </VehicleModel>

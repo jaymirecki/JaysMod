@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>reaper</ID>
   <Class>Super</Class>
+  <GTAMake>Pegassi</GTAMake>
   <GTAModel>Reaper</GTAModel>
+  <MaxSpeed>49.6593132</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

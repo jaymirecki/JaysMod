@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>caracara2</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Caracara 4x4</GTAModel>
+  <MaxSpeed>39.27036</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

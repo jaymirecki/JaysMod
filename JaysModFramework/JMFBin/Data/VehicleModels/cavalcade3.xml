@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>cavalcade3</ID>
   <Class>SUVs</Class>
+  <GTAMake>Albany</GTAMake>
   <GTAModel>Cavalcade XL</GTAModel>
+  <MaxSpeed>40.6666679</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

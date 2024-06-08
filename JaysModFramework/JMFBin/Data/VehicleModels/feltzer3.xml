@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>feltzer3</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Benefactor</GTAMake>
   <GTAModel>Stirling GT</GTAModel>
+  <MaxSpeed>45.9981346</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

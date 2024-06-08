@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>verlierer2</ID>
   <Class>Sports</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Verlierer</GTAModel>
+  <MaxSpeed>50.0000038</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

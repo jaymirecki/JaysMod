@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>stockade</ID>
   <Class>Commercial</Class>
+  <GTAMake>Brute</GTAMake>
   <GTAModel>Stockade</GTAModel>
+  <MaxSpeed>34.4979019</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

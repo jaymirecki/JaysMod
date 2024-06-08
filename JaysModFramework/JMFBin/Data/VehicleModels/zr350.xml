@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>zr350</ID>
   <Class>Sports</Class>
+  <GTAMake>Annis</GTAMake>
   <GTAModel>ZR350</GTAModel>
+  <MaxSpeed>48.0937729</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

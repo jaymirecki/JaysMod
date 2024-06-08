@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>buffalo2</ID>
   <Class>Sports</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Buffalo S</GTAModel>
   <RWMake>Dodge</RWMake>
   <RWModel>Charger SRT8</RWModel>
+  <MaxSpeed>46.2816048</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

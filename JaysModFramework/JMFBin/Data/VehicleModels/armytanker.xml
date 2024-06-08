@@ -3,4 +3,7 @@
   <ID>armytanker</ID>
   <Class>Trailers</Class>
   <GTAModel>Army Trailer (tanker)</GTAModel>
+  <MaxSpeed>-0.5051028</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>0</NumberOfSeats>
 </VehicleModel>

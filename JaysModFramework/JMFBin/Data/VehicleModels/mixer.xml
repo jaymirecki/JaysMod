@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>mixer</ID>
   <Class>Industrial</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Mixer (3-axle)</GTAModel>
+  <MaxSpeed>32.402092</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

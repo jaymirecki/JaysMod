@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>prairie</ID>
   <Class>Compacts</Class>
+  <GTAMake>Bollokan</GTAMake>
   <GTAModel>Prairie</GTAModel>
+  <MaxSpeed>40.7799225</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

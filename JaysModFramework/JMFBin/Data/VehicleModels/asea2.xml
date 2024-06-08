@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>asea2</ID>
   <Class>Sedans</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Asea (snow)</GTAModel>
+  <MaxSpeed>38.42887</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

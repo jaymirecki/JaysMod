@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>furia</ID>
   <Class>Super</Class>
+  <GTAMake>Grotti</GTAMake>
   <GTAModel>Furia</GTAModel>
+  <MaxSpeed>49.8337822</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>panthere</ID>
   <Class>Sports</Class>
+  <GTAMake>Toundra</GTAMake>
   <GTAModel>Panthere</GTAModel>
+  <MaxSpeed>49.53232</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

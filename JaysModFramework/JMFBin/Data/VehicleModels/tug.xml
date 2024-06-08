@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>tug</ID>
   <Class>Boats</Class>
-  <Subclass>Boat</Subclass>
-  <GTAMake>Boat</GTAMake>
+  <SubClass>Boat</SubClass>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Tug</GTAModel>
+  <MaxSpeed>6.0</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>cinquemila</ID>
   <Class>Sedans</Class>
+  <GTAMake>Lampadati</GTAMake>
   <GTAModel>Cinquemila</GTAModel>
+  <MaxSpeed>48.2359924</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

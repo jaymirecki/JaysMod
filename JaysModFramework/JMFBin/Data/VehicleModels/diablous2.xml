@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>diablous2</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Principe</GTAMake>
   <GTAModel>Diabolus Custom</GTAModel>
+  <MaxSpeed>47.53334</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

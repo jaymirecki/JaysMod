@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>streiter</ID>
   <Class>Sports</Class>
+  <GTAMake>Benefactor</GTAMake>
   <GTAModel>Streiter</GTAModel>
+  <MaxSpeed>42.8977737</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

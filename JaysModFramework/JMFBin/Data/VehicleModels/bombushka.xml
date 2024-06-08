@@ -3,4 +3,7 @@
   <ID>bombushka</ID>
   <Class>Planes</Class>
   <GTAModel>RM-10 Bombushka</GTAModel>
+  <MaxSpeed>36.51484</MaxSpeed>
+  <MaxKnots>0.232599527</MaxKnots>
+  <NumberOfSeats>6</NumberOfSeats>
 </VehicleModel>

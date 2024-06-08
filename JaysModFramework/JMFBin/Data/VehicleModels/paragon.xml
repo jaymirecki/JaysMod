@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>paragon</ID>
   <Class>Sports</Class>
+  <GTAMake>Enus</GTAMake>
   <GTAModel>Paragon R</GTAModel>
+  <MaxSpeed>44.9969521</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

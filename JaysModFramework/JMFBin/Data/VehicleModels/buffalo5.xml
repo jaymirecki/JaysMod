@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>buffalo5</ID>
   <Class>Muscle</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Buffalo EVX</GTAModel>
   <RWMake>Dodge</RWMake>
   <RWModel>Charger Daytona SRT</RWModel>
+  <MaxSpeed>49.8737144</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

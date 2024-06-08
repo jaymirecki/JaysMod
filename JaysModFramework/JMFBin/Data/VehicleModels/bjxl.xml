@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>bjxl</ID>
   <Class>SUVs</Class>
+  <GTAMake>Karin</GTAMake>
   <GTAModel>BeeJay XL</GTAModel>
+  <MaxSpeed>36.37293</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

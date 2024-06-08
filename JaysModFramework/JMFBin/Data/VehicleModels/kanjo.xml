@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>kanjo</ID>
   <Class>Compacts</Class>
+  <GTAMake>Dinka</GTAMake>
   <GTAModel>Blista Kanjo</GTAModel>
+  <MaxSpeed>44.4041939</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

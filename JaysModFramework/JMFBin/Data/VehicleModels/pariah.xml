@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>pariah</ID>
   <Class>Sports</Class>
+  <GTAMake>Ocelot</GTAMake>
   <GTAModel>Pariah</GTAModel>
+  <MaxSpeed>48.7327843</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -22,6 +22,11 @@ def element_with_bool(root, tag, text):
     if type(text) is bool:
         return element_with_text(root, tag, str(text).lower())
     return None
+def element_with_float(root, tag, text):
+    try:
+        return element_with_text(root, tag, str(float(text)))
+    finally:
+        return None
 
 def vector(root, tag, vector):
     try:

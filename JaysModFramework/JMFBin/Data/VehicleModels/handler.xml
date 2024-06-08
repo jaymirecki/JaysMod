@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>handler</ID>
   <Class>Industrial</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Dock Handler</GTAModel>
+  <MaxSpeed>8.333334</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

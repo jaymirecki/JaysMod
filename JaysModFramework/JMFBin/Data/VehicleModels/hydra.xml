@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>hydra</ID>
   <Class>Planes</Class>
+  <GTAMake>Mammoth</GTAMake>
   <GTAModel>Hydra</GTAModel>
   <RWMake>McDonnell Douglas</RWMake>
   <RWModel>AV-8B Harrier II</RWModel>
+  <MaxSpeed>109.764259</MaxSpeed>
+  <MaxKnots>3.94419646</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

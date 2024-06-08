@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>faction3</ID>
   <Class>Muscle</Class>
+  <GTAMake>Willard</GTAMake>
   <GTAModel>Faction Custom Donk</GTAModel>
+  <MaxSpeed>35.2769279</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

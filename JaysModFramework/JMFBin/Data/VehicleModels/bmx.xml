@@ -3,4 +3,7 @@
   <ID>bmx</ID>
   <Class>Cycles</Class>
   <GTAModel>BMX</GTAModel>
+  <MaxSpeed>14.53347</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

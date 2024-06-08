@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>shotaro</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Shotaro</GTAModel>
+  <MaxSpeed>51.2182121</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

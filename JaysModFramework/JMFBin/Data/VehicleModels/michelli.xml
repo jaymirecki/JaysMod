@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>michelli</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Lampadati</GTAMake>
   <GTAModel>Michelli GT</GTAModel>
+  <MaxSpeed>44.5681152</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>barrage</ID>
   <Class>Military</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Barrage</GTAModel>
+  <MaxSpeed>39.93803</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

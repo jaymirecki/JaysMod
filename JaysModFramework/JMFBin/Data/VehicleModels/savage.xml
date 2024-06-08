@@ -5,4 +5,7 @@
   <GTAModel>Savage</GTAModel>
   <RWMake>Mil</RWMake>
   <RWModel>Mi-24</RWModel>
+  <MaxSpeed>65.1952744</MaxSpeed>
+  <MaxKnots>787.9935</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

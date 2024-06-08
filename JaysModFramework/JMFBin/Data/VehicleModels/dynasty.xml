@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>dynasty</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Weeny</GTAMake>
   <GTAModel>Dynasty</GTAModel>
+  <MaxSpeed>35.6352577</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

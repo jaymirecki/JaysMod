@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>volatus</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Volatus</GTAModel>
   <RWMake>Airbus</RWMake>
   <RWModel>H160</RWModel>
+  <MaxSpeed>59.2404137</MaxSpeed>
+  <MaxKnots>963.723145</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

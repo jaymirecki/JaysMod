@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>carbonrs</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Carbon RS</GTAModel>
+  <MaxSpeed>47.01816</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

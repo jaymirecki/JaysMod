@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>lurcher</ID>
   <Class>Muscle</Class>
+  <GTAMake>Albany</GTAMake>
   <GTAModel>Lurcher</GTAModel>
+  <MaxSpeed>47.1434746</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

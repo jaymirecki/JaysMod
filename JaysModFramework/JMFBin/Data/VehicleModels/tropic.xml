@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>tropic</ID>
   <Class>Boats</Class>
-  <Subclass>Boat</Subclass>
-  <GTAMake>Boat</GTAMake>
+  <SubClass>Boat</SubClass>
+  <GTAMake>Shitzu</GTAMake>
   <GTAModel>Tropic</GTAModel>
+  <MaxSpeed>38.3333359</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

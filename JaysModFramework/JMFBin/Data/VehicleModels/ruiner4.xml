@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>ruiner4</ID>
   <Class>Muscle</Class>
+  <GTAMake>Imponte</GTAMake>
   <GTAModel>Ruiner ZZ-8</GTAModel>
+  <MaxSpeed>48.46975</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>hotring</ID>
   <Class>Sports</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Hotring Sabre</GTAModel>
+  <MaxSpeed>48.07754</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

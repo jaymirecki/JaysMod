@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>chimera</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Chimera</GTAModel>
+  <MaxSpeed>35.4248848</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

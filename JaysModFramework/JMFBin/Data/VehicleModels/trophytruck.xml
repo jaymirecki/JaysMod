@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>trophytruck</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Trophy Truck</GTAModel>
+  <MaxSpeed>43.3666534</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

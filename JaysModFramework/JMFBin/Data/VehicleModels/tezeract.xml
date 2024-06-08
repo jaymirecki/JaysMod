@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tezeract</ID>
   <Class>Super</Class>
+  <GTAMake>Pegassi</GTAMake>
   <GTAModel>Tezeract</GTAModel>
+  <MaxSpeed>45.85145</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

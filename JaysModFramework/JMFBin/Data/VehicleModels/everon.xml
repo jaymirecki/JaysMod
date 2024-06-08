@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>everon</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Karin</GTAMake>
   <GTAModel>Everon</GTAModel>
+  <MaxSpeed>41.73223</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

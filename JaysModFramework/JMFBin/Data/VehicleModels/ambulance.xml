@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>ambulance</ID>
   <Class>Emergency</Class>
+  <GTAMake>Brute</GTAMake>
   <GTAModel>Ambulance</GTAModel>
+  <MaxSpeed>39.9116974</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

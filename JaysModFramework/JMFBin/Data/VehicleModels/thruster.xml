@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>thruster</ID>
   <Class>Military</Class>
+  <GTAMake>Mammoth</GTAMake>
   <GTAModel>Thruster</GTAModel>
+  <MaxSpeed>57.5398865</MaxSpeed>
+  <MaxKnots>1005.60541</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

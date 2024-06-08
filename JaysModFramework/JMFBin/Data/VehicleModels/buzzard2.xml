@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>buzzard2</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Buzzard</GTAModel>
   <RWMake>McDonnell Douglas</RWMake>
   <RWModel>MH-6 Little Bird</RWModel>
+  <MaxSpeed>57.9072266</MaxSpeed>
+  <MaxKnots>983.650757</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

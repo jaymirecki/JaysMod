@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>rrocket</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Rampant Rocket</GTAModel>
+  <MaxSpeed>41.6182747</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

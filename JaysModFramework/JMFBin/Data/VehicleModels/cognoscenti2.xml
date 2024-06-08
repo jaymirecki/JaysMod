@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>cognoscenti2</ID>
   <Class>Sedans</Class>
+  <GTAMake>Enus</GTAMake>
   <GTAModel>Cognoscenti (Armored)</GTAModel>
+  <MaxSpeed>45.21825</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

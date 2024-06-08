@@ -2,9 +2,12 @@
 <VehicleModel>
   <ID>miljet</ID>
   <Class>Planes</Class>
-  <Subclass>Passenger Jet</Subclass>
-  <GTAMake>Passenger Jet</GTAMake>
+  <SubClass>Passenger Jet</SubClass>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Miljet</GTAModel>
   <RWMake>Northrop Grumman</RWMake>
   <RWModel>E-11A</RWModel>
+  <MaxSpeed>91.83217</MaxSpeed>
+  <MaxKnots>1.13994336</MaxKnots>
+  <NumberOfSeats>16</NumberOfSeats>
 </VehicleModel>

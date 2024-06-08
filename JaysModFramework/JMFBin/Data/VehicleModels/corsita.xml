@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>corsita</ID>
   <Class>Sports</Class>
+  <GTAMake>Lampadati</GTAMake>
   <GTAModel>Corsita</GTAModel>
+  <MaxSpeed>52.2800674</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

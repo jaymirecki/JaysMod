@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>bodhi2</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Canis</GTAMake>
   <GTAModel>Bodhi</GTAModel>
+  <MaxSpeed>35.5073967</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

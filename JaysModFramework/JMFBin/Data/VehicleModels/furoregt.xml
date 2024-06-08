@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>furoregt</ID>
   <Class>Sports</Class>
+  <GTAMake>Lampadati</GTAMake>
   <GTAModel>Furore GT</GTAModel>
+  <MaxSpeed>50.66667</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

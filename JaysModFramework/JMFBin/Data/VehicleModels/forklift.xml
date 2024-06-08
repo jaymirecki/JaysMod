@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>forklift</ID>
   <Class>Utility</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Forklift</GTAModel>
+  <MaxSpeed>10.000001</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

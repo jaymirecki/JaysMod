@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>cheburek</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>RUNE</GTAMake>
   <GTAModel>Cheburek</GTAModel>
+  <MaxSpeed>44.6439629</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

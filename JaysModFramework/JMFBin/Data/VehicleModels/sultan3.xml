@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>sultan3</ID>
   <Class>Sports</Class>
+  <GTAMake>Karin</GTAMake>
   <GTAModel>Sultan RS Classic</GTAModel>
+  <MaxSpeed>47.2149048</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

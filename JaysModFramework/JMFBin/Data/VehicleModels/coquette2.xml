@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>coquette2</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Invetero</GTAMake>
   <GTAModel>Coquette Classic</GTAModel>
+  <MaxSpeed>49.537365</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

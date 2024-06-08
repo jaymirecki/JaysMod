@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>monster4</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Future Shock Sasquatch</GTAModel>
+  <MaxSpeed>38.37866</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

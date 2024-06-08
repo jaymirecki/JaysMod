@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>wastelander</ID>
   <Class>Service</Class>
+  <GTAMake>MTL</GTAMake>
   <GTAModel>Wastelander</GTAModel>
+  <MaxSpeed>40.7585678</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>6</NumberOfSeats>
 </VehicleModel>

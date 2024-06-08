@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>sheriff</ID>
   <Class>Emergency</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Sheriff Cruiser</GTAModel>
+  <MaxSpeed>43.031517</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

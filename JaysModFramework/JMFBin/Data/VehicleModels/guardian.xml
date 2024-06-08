@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>guardian</ID>
   <Class>Industrial</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Guardian</GTAModel>
+  <MaxSpeed>39.6176529</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>6</NumberOfSeats>
 </VehicleModel>

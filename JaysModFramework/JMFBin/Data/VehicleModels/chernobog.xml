@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>chernobog</ID>
   <Class>Military</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Chernobog</GTAModel>
+  <MaxSpeed>22.587225</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

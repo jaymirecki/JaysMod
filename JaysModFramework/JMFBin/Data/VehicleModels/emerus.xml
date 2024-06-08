@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>emerus</ID>
   <Class>Super</Class>
+  <GTAMake>Progen</GTAMake>
   <GTAModel>Emerus</GTAModel>
+  <MaxSpeed>50.8593979</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

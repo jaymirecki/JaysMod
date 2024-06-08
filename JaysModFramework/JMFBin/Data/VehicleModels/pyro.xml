@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>pyro</ID>
   <Class>Planes</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Pyro</GTAModel>
+  <MaxSpeed>100.0</MaxSpeed>
+  <MaxKnots>4.720334</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

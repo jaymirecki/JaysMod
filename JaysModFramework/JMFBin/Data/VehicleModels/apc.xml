@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>apc</ID>
   <Class>Military</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>APC</GTAModel>
+  <MaxSpeed>23.00633</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

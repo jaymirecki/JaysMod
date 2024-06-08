@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>emperor</ID>
   <Class>Sedans</Class>
+  <GTAMake>Albany</GTAMake>
   <GTAModel>Emperor</GTAModel>
+  <MaxSpeed>33.80885</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

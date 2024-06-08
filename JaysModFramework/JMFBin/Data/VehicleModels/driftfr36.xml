@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>driftfr36</ID>
   <Class>Coupes</Class>
+  <GTAMake>Fathom</GTAMake>
   <GTAModel>FR36 (drift model)</GTAModel>
+  <MaxSpeed>44.3333359</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

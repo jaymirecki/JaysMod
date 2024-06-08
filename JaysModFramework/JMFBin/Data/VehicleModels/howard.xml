@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>howard</ID>
   <Class>Planes</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Howard NX-25</GTAModel>
+  <MaxSpeed>100.0</MaxSpeed>
+  <MaxKnots>3.593334</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

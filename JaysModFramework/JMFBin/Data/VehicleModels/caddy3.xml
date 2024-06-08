@@ -3,4 +3,7 @@
   <ID>caddy3</ID>
   <Class>Utility</Class>
   <GTAModel>Caddy (bunker)</GTAModel>
+  <MaxSpeed>21.3342037</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>annihilator2</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Annihilator Stealth</GTAModel>
   <RWMake>Sikorsky</RWMake>
   <RWModel>UH-60 Black Hawk</RWModel>
+  <MaxSpeed>52.7095528</MaxSpeed>
+  <MaxKnots>749.002869</MaxKnots>
+  <NumberOfSeats>6</NumberOfSeats>
 </VehicleModel>

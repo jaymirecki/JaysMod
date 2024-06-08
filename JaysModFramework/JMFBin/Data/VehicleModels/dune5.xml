@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>dune5</ID>
   <Class>OffRoad</Class>
+  <GTAMake>BF</GTAMake>
   <GTAModel>Ramp Buggy (Spoilerless)</GTAModel>
+  <MaxSpeed>48.84004</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

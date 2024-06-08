@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>lazer</ID>
   <Class>Planes</Class>
+  <GTAMake>Jobuilt</GTAMake>
   <GTAModel>P-996 LAZER</GTAModel>
   <RWMake>Lockheed Martin</RWMake>
   <RWModel>F-16C Fighting Falcon</RWModel>
+  <MaxSpeed>91.2870941</MaxSpeed>
+  <MaxKnots>3.57845449</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

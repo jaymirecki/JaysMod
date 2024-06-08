@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>brigham</ID>
   <Class>Muscle</Class>
+  <GTAMake>Albany</GTAMake>
   <GTAModel>Brigham</GTAModel>
+  <MaxSpeed>38.71123</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

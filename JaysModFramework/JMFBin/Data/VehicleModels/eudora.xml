@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>eudora</ID>
   <Class>Muscle</Class>
+  <GTAMake>Willard</GTAMake>
   <GTAModel>Eudora</GTAModel>
+  <MaxSpeed>40.72726</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

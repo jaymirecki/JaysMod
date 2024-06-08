@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>rumpo3</ID>
   <Class>Vans</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Rumpo Custom</GTAModel>
+  <MaxSpeed>35.9639053</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>microlight</ID>
   <Class>Planes</Class>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Ultralight</GTAModel>
   <RWMake>Air Creation</RWMake>
   <RWModel>Racer</RWModel>
+  <MaxSpeed>30.1511345</MaxSpeed>
+  <MaxKnots>0.561414242</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>airtug</ID>
   <Class>Utility</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Airtug</GTAModel>
+  <MaxSpeed>10.9417419</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

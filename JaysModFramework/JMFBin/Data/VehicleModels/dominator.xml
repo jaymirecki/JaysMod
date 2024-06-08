@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>dominator</ID>
   <Class>Muscle</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Dominator</GTAModel>
+  <MaxSpeed>48.3333359</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,7 +2,9 @@
 <VehicleModel>
   <ID>blimp3</ID>
   <Class>Planes</Class>
-  <Subclass>Blimp</Subclass>
-  <GTAMake>Blimp</GTAMake>
+  <SubClass>Blimp</SubClass>
   <GTAModel>Blimp</GTAModel>
+  <MaxSpeed>70.0</MaxSpeed>
+  <MaxKnots>114.333336</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

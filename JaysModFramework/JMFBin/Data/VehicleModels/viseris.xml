@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>viseris</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Lampadati</GTAMake>
   <GTAModel>Viseris</GTAModel>
+  <MaxSpeed>47.1241837</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

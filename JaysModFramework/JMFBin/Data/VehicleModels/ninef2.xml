@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>ninef2</ID>
   <Class>Sports</Class>
+  <GTAMake>Obey</GTAMake>
   <GTAModel>9F Cabrio</GTAModel>
+  <MaxSpeed>48.6724</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

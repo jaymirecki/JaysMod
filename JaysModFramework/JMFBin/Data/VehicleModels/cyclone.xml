@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>cyclone</ID>
   <Class>Super</Class>
+  <GTAMake>Coil</GTAMake>
   <GTAModel>Cyclone</GTAModel>
+  <MaxSpeed>40.9219</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

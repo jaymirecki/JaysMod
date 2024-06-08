@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>komoda</ID>
   <Class>Sports</Class>
+  <GTAMake>Lampadati</GTAMake>
   <GTAModel>Komoda</GTAModel>
+  <MaxSpeed>49.8918457</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

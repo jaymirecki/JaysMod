@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tractor2</ID>
   <Class>Utility</Class>
+  <GTAMake>Stanley</GTAMake>
   <GTAModel>Fieldmaster</GTAModel>
+  <MaxSpeed>14.45938</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

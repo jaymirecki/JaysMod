@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>rhapsody</ID>
   <Class>Compacts</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Rhapsody</GTAModel>
+  <MaxSpeed>41.3257141</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

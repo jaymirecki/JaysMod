@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>suntrap</ID>
   <Class>Boats</Class>
-  <Subclass>Boat</Subclass>
-  <GTAMake>Boat</GTAMake>
+  <SubClass>Boat</SubClass>
+  <GTAMake>Shitzu</GTAMake>
   <GTAModel>Suntrap</GTAModel>
+  <MaxSpeed>36.66667</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

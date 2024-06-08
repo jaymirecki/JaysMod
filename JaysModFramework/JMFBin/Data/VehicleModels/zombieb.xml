@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>zombieb</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Zombie Chopper</GTAModel>
+  <MaxSpeed>44.6053238</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

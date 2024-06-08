@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>conada</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Conada</GTAModel>
   <RWMake>McDonnell Douglas</RWMake>
   <RWModel>MD Explorer</RWModel>
+  <MaxSpeed>62.16899</MaxSpeed>
+  <MaxKnots>1025.5813</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

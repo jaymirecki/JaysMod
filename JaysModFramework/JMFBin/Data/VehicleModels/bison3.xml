@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>bison3</ID>
   <Class>Vans</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Bison (The Mighty Bush)</GTAModel>
+  <MaxSpeed>37.5559425</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>draugur</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Draugur</GTAModel>
+  <MaxSpeed>43.8399963</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>scramjet</ID>
   <Class>Super</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Scramjet</GTAModel>
+  <MaxSpeed>49.35356</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

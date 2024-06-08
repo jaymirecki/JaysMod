@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>gp1</ID>
   <Class>Super</Class>
+  <GTAMake>Progen</GTAMake>
   <GTAModel>GP1</GTAModel>
+  <MaxSpeed>50.31808</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

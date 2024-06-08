@@ -3,4 +3,7 @@
   <ID>trailers3</ID>
   <Class>Trailers</Class>
   <GTAModel>Trailer (ramp-door box)</GTAModel>
+  <MaxSpeed>-0.513167143</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>0</NumberOfSeats>
 </VehicleModel>

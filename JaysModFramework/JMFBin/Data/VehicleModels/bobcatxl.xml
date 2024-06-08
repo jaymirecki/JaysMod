@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>bobcatxl</ID>
   <Class>Vans</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Bobcat XL</GTAModel>
+  <MaxSpeed>35.1601067</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

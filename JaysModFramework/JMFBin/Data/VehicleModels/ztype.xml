@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>ztype</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Truffade</GTAMake>
   <GTAModel>Z-Type</GTAModel>
+  <MaxSpeed>51.3333359</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

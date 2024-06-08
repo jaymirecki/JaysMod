@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>sugoi</ID>
   <Class>Sports</Class>
+  <GTAMake>Dinka</GTAMake>
   <GTAModel>Sugoi</GTAModel>
+  <MaxSpeed>45.19332</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>surfer3</ID>
   <Class>Vans</Class>
+  <GTAMake>BF</GTAMake>
   <GTAModel>Surfer Custom</GTAModel>
+  <MaxSpeed>20.6859474</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

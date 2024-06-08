@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>rhinehart</ID>
   <Class>Sedans</Class>
+  <GTAMake>Ubermacht</GTAMake>
   <GTAModel>Rhinehart</GTAModel>
+  <MaxSpeed>46.9795532</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

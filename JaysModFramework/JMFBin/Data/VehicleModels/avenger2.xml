@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>avenger2</ID>
   <Class>Planes</Class>
+  <GTAMake>Mammoth</GTAMake>
   <GTAModel>Avenger (prop)</GTAModel>
+  <MaxSpeed>95.98338</MaxSpeed>
+  <MaxKnots>1.88127446</MaxKnots>
+  <NumberOfSeats>3</NumberOfSeats>
 </VehicleModel>

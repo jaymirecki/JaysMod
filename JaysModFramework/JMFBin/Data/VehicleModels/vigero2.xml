@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>vigero2</ID>
   <Class>Muscle</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Vigero ZX</GTAModel>
+  <MaxSpeed>49.20095</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

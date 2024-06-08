@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>deluxo</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Imponte</GTAMake>
   <GTAModel>Deluxo</GTAModel>
+  <MaxSpeed>42.67659</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

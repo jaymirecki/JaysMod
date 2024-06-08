@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>skylift</ID>
   <Class>Helicopters</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Skylift</GTAModel>
   <RWMake>Sikorsky</RWMake>
   <RWModel>S-64 Skycrane</RWModel>
+  <MaxSpeed>47.9314728</MaxSpeed>
+  <MaxKnots>587.1606</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>retinue2</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Retinue Mk II</GTAModel>
+  <MaxSpeed>45.9072647</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

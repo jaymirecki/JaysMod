@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>inductor</ID>
   <Class>Cycles</Class>
+  <GTAMake>Coil</GTAMake>
   <GTAModel>Inductor</GTAModel>
+  <MaxSpeed>10.7824068</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

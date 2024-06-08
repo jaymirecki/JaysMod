@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>iwagen</ID>
   <Class>SUVs</Class>
+  <GTAMake>Obey</GTAMake>
   <GTAModel>I-Wagen</GTAModel>
+  <MaxSpeed>33.31249</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

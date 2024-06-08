@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>brioso</ID>
   <Class>Compacts</Class>
+  <GTAMake>Grotti</GTAMake>
   <GTAModel>Brioso R/A</GTAModel>
+  <MaxSpeed>41.5360222</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

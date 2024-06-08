@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>mammatus</ID>
   <Class>Planes</Class>
+  <GTAMake>Jobuilt</GTAMake>
   <GTAModel>Mammatus</GTAModel>
+  <MaxSpeed>69.36756</MaxSpeed>
+  <MaxKnots>2.26600718</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

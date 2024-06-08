@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>polmav</ID>
   <Class>Emergency</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Police Maverick</GTAModel>
+  <MaxSpeed>56.5962219</MaxSpeed>
+  <MaxKnots>918.8586</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

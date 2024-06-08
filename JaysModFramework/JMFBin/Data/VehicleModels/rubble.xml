@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>rubble</ID>
   <Class>Industrial</Class>
+  <GTAMake>Jobuilt</GTAMake>
   <GTAModel>Rubble</GTAModel>
+  <MaxSpeed>33.3333359</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

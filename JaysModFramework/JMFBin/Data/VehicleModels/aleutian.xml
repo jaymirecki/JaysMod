@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>aleutian</ID>
   <Class>SUVs</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Aleutian</GTAModel>
+  <MaxSpeed>39.66667</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

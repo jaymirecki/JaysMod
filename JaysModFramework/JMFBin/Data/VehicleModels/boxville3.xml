@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>boxville3</ID>
   <Class>Vans</Class>
+  <GTAMake>Brute</GTAMake>
   <GTAModel>Boxville (Humane Labs)</GTAModel>
+  <MaxSpeed>28.6960716</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

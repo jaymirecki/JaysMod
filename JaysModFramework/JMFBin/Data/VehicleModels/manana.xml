@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>manana</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Albany</GTAMake>
   <GTAModel>Manana</GTAModel>
+  <MaxSpeed>36.9471779</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

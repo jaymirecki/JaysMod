@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>habanero</ID>
   <Class>SUVs</Class>
+  <GTAMake>Emperor</GTAMake>
   <GTAModel>Habanero</GTAModel>
+  <MaxSpeed>39.9116974</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>scarab2</ID>
   <Class>Military</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Future Shock Scarab</GTAModel>
+  <MaxSpeed>23.54772</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

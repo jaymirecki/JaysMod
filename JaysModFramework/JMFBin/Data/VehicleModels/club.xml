@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>club</ID>
   <Class>Compacts</Class>
+  <GTAMake>BF</GTAMake>
   <GTAModel>Club</GTAModel>
+  <MaxSpeed>41.75986</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

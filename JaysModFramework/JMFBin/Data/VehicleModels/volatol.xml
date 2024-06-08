@@ -5,4 +5,7 @@
   <GTAModel>Volatol</GTAModel>
   <RWMake>Avro</RWMake>
   <RWModel>Vulcan</RWModel>
+  <MaxSpeed>80.27928</MaxSpeed>
+  <MaxKnots>1.15388083</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

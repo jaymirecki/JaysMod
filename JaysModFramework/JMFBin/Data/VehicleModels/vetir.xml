@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>vetir</ID>
   <Class>Military</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Vetir</GTAModel>
+  <MaxSpeed>23.3675842</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>10</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>biff</ID>
   <Class>Commercial</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Biff</GTAModel>
+  <MaxSpeed>34.4979019</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>bruiser</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Benefactor</GTAMake>
   <GTAModel>Apocalypse Bruiser</GTAModel>
+  <MaxSpeed>38.40471</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

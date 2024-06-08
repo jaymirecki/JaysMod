@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>flatbed</ID>
   <Class>Industrial</Class>
+  <GTAMake>MTL</GTAMake>
   <GTAModel>Flatbed</GTAModel>
+  <MaxSpeed>28.2361088</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

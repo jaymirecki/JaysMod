@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>blazer5</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Blazer Aqua</GTAModel>
+  <MaxSpeed>40.877346</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

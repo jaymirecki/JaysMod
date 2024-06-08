@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>lectro</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Principe</GTAMake>
   <GTAModel>Lectro</GTAModel>
+  <MaxSpeed>43.23533</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

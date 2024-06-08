@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>formula2</ID>
   <Class>OpenWheel</Class>
+  <GTAMake>Ocelot</GTAMake>
   <GTAModel>R88</GTAModel>
+  <MaxSpeed>52.386055</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>rocoto</ID>
   <Class>SUVs</Class>
+  <GTAMake>Obey</GTAMake>
   <GTAModel>Rocoto</GTAModel>
+  <MaxSpeed>41.3371658</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

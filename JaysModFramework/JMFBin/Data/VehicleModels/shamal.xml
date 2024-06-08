@@ -2,9 +2,12 @@
 <VehicleModel>
   <ID>shamal</ID>
   <Class>Planes</Class>
-  <Subclass>Passenger Jet</Subclass>
-  <GTAMake>Passenger Jet</GTAMake>
+  <SubClass>Passenger Jet</SubClass>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Shamal</GTAModel>
   <RWMake>Cessna</RWMake>
   <RWModel>CitationJet</RWModel>
+  <MaxSpeed>90.6144562</MaxSpeed>
+  <MaxKnots>1.1248275</MaxKnots>
+  <NumberOfSeats>10</NumberOfSeats>
 </VehicleModel>

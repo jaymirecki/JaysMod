@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>polgauntlet</ID>
   <Class>Emergency</Class>
+  <GTAMake>Bravado</GTAMake>
   <GTAModel>Gauntlet Interceptor</GTAModel>
+  <MaxSpeed>49.1011353</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

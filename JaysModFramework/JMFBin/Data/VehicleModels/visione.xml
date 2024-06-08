@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>visione</ID>
   <Class>Super</Class>
+  <GTAMake>Grotti</GTAMake>
   <GTAModel>Visione</GTAModel>
+  <MaxSpeed>51.3755531</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

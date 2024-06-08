@@ -3,4 +3,7 @@
   <ID>strikeforce</ID>
   <Class>Planes</Class>
   <GTAModel>B-11 Strikeforce</GTAModel>
+  <MaxSpeed>70.71068</MaxSpeed>
+  <MaxKnots>2.37917876</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

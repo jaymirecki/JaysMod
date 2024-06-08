@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>seashark</ID>
   <Class>Boats</Class>
-  <Subclass>Jetski</Subclass>
-  <GTAMake>Jetski</GTAMake>
+  <SubClass>Jetski</SubClass>
+  <GTAMake>Speedophile</GTAMake>
   <GTAModel>Seashark</GTAModel>
+  <MaxSpeed>43.33334</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

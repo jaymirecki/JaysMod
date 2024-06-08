@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>picador</ID>
   <Class>Muscle</Class>
+  <GTAMake>Cheval</GTAMake>
   <GTAModel>Picador</GTAModel>
+  <MaxSpeed>40.7799225</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

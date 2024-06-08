@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>buccaneer2</ID>
   <Class>Muscle</Class>
+  <GTAMake>Albany</GTAMake>
   <GTAModel>Buccaneer Custom</GTAModel>
+  <MaxSpeed>46.1566124</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

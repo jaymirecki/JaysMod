@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>valkyrie2</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Valkyrie MOD.0</GTAModel>
   <RWMake>Bell</RWMake>
   <RWModel>UH-1Y Venom</RWModel>
+  <MaxSpeed>54.726162</MaxSpeed>
+  <MaxKnots>831.290466</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

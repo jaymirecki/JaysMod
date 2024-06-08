@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>driftfuto</ID>
   <Class>Sports</Class>
+  <GTAMake>Karin</GTAMake>
   <GTAModel>Futo GTX (drift model)</GTAModel>
+  <MaxSpeed>44.3333359</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

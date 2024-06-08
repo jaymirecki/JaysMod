@@ -3,4 +3,7 @@
   <ID>coach</ID>
   <Class>Service</Class>
   <GTAModel>Dashound</GTAModel>
+  <MaxSpeed>25.5808945</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>10</NumberOfSeats>
 </VehicleModel>

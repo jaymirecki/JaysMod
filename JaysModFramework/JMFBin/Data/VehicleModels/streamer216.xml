@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>streamer216</ID>
   <Class>Planes</Class>
+  <GTAMake>Mammoth</GTAMake>
   <GTAModel>Streamer216</GTAModel>
   <RWMake>de Havilland Canada</RWMake>
   <RWModel>DHC-6 Twin Otter</RWModel>
+  <MaxSpeed>76.6965</MaxSpeed>
+  <MaxKnots>1.59094119</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

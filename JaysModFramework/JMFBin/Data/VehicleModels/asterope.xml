@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>asterope</ID>
   <Class>Sedans</Class>
+  <GTAMake>Karin</GTAMake>
   <GTAModel>Asterope</GTAModel>
+  <MaxSpeed>38.42887</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

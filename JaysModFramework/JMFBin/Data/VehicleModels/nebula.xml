@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>nebula</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Vulcar</GTAMake>
   <GTAModel>Nebula Turbo</GTAModel>
+  <MaxSpeed>37.9381866</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

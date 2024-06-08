@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>trash2</ID>
   <Class>Service</Class>
+  <GTAMake>Jobuilt</GTAMake>
   <GTAModel>Trashmaster (heist)</GTAModel>
+  <MaxSpeed>36.52235</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

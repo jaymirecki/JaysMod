@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>lynx</ID>
   <Class>Sports</Class>
+  <GTAMake>Ocelot</GTAMake>
   <GTAModel>Lynx</GTAModel>
+  <MaxSpeed>49.0771942</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

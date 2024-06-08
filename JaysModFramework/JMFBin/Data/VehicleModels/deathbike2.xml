@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>deathbike2</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Future Shock Deathbike</GTAModel>
+  <MaxSpeed>48.2865067</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

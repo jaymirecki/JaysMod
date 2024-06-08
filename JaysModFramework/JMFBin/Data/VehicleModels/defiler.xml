@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>defiler</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Shitzu</GTAMake>
   <GTAModel>Defiler</GTAModel>
+  <MaxSpeed>48.843647</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

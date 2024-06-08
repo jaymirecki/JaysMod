@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>washington</ID>
   <Class>Sedans</Class>
+  <GTAMake>Albany</GTAMake>
   <GTAModel>Washington</GTAModel>
+  <MaxSpeed>42.72843</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

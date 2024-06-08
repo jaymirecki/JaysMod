@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>stafford</ID>
   <Class>Sedans</Class>
+  <GTAMake>Enus</GTAMake>
   <GTAModel>Stafford</GTAModel>
+  <MaxSpeed>38.07186</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

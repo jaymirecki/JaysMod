@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>insurgent</ID>
   <Class>OffRoad</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Insurgent Pick-Up</GTAModel>
+  <MaxSpeed>35.4436455</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>9</NumberOfSeats>
 </VehicleModel>

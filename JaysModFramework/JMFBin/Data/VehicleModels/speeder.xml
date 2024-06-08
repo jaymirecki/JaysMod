@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>speeder</ID>
   <Class>Boats</Class>
-  <Subclass>Boat</Subclass>
-  <GTAMake>Boat</GTAMake>
+  <SubClass>Boat</SubClass>
+  <GTAMake>Pegassi</GTAMake>
   <GTAModel>Speeder</GTAModel>
+  <MaxSpeed>44.3333359</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

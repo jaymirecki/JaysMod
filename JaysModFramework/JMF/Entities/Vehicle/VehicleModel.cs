@@ -1,17 +1,37 @@
 ﻿using JMF.Native;
 using OOD.Collections;
+using System.Globalization;
 
 namespace JMF
 {
     public class VehicleModel: IXMLDatabaseItem<string>
     {
-        public int Hash = 0;
-        public string ID { get; set; } = "";
+        public uint Hash = 0;
+        private string _modelName;
+        public string ModelName
+        {
+            get { return _modelName; }
+            set
+            {
+                _modelName = value;
+                Hash = Function.GetHashKey(_modelName);
+            }
+        }
+        public string ID
+        {
+            get { return ModelName; }
+            set { ModelName = value; }
+        }
         public VehicleClass Class = VehicleClass.Sedans;
         public string Subclass = "";
         public string GTAMake
         {
-            get { return Function.Call<string>(Native.Hash.GetMakeNameFromVehicleModel, Hash); }
+            get
+            {
+                TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+                string make = Function.Call<string>(Native.Hash.GetMakeNameFromVehicleModel, Hash);
+                return textInfo.ToTitleCase(make.ToLower());
+            }
             set { }
         }
         public string GTAModel = "";

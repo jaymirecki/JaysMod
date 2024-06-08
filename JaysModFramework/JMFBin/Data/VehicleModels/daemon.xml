@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>daemon</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Daemon</GTAModel>
+  <MaxSpeed>43.14252</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

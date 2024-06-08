@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>avisa</ID>
   <Class>Boats</Class>
-  <Subclass>Submarine</Subclass>
-  <GTAMake>Submarine</GTAMake>
+  <SubClass>Submarine</SubClass>
+  <GTAMake>Kraken</GTAMake>
   <GTAModel>Avisa</GTAModel>
+  <MaxSpeed>25.0000019</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

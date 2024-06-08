@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>rebla</ID>
   <Class>SUVs</Class>
+  <GTAMake>Ubermacht</GTAMake>
   <GTAModel>Rebla GTS</GTAModel>
+  <MaxSpeed>46.5644836</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

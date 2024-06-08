@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>granger</ID>
   <Class>SUVs</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Granger</GTAModel>
+  <MaxSpeed>36.37293</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>8</NumberOfSeats>
 </VehicleModel>

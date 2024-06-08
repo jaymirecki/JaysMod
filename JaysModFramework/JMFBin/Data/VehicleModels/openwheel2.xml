@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>openwheel2</ID>
   <Class>OpenWheel</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>DR1</GTAModel>
+  <MaxSpeed>53.0537224</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

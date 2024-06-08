@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>seabreeze</ID>
   <Class>Planes</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Seabreeze</GTAModel>
+  <MaxSpeed>81.64966</MaxSpeed>
+  <MaxKnots>2.3071475</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

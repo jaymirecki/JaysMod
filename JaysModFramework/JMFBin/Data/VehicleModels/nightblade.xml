@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>nightblade</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Western</GTAMake>
   <GTAModel>Nightblade</GTAModel>
+  <MaxSpeed>46.9033966</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,9 +2,12 @@
 <VehicleModel>
   <ID>nimbus</ID>
   <Class>Planes</Class>
-  <Subclass>Passenger Jet</Subclass>
-  <GTAMake>Passenger Jet</GTAMake>
+  <SubClass>Passenger Jet</SubClass>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Nimbus</GTAModel>
   <RWMake>Cessna</RWMake>
   <RWModel>Citation X</RWModel>
+  <MaxSpeed>94.5562057</MaxSpeed>
+  <MaxKnots>1.17375779</MaxKnots>
+  <NumberOfSeats>8</NumberOfSeats>
 </VehicleModel>

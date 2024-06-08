@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>italirsx</ID>
   <Class>Sports</Class>
+  <GTAMake>Grotti</GTAMake>
   <GTAModel>Itali RSX</GTAModel>
+  <MaxSpeed>52.2691765</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

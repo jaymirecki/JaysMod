@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>dinghy5</ID>
   <Class>Boats</Class>
-  <Subclass>Boat</Subclass>
-  <GTAMake>Boat</GTAMake>
+  <SubClass>Boat</SubClass>
+  <GTAMake>Nagasaki</GTAMake>
   <GTAModel>Weaponized Dinghy</GTAModel>
+  <MaxSpeed>41.66667</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>5</NumberOfSeats>
 </VehicleModel>

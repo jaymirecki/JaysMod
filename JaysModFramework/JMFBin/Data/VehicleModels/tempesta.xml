@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tempesta</ID>
   <Class>Super</Class>
+  <GTAMake>Pegassi</GTAMake>
   <GTAModel>Tempesta</GTAModel>
+  <MaxSpeed>49.13776</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

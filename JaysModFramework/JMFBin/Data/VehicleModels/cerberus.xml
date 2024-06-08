@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>cerberus</ID>
   <Class>Commercial</Class>
+  <GTAMake>MTL</GTAMake>
   <GTAModel>Apocalypse Cerberus</GTAModel>
+  <MaxSpeed>37.2116661</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

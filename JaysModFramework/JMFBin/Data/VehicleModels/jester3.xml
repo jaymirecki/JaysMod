@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>jester3</ID>
   <Class>Sports</Class>
+  <GTAMake>Dinka</GTAMake>
   <GTAModel>Jester Classic</GTAModel>
+  <MaxSpeed>48.31899</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

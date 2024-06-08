@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>surge</ID>
   <Class>Sedans</Class>
+  <GTAMake>Cheval</GTAMake>
   <GTAModel>Surge</GTAModel>
+  <MaxSpeed>24.1986523</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

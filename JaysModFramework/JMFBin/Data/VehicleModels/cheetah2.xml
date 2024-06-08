@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>cheetah2</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Grotti</GTAMake>
   <GTAModel>Cheetah Classic</GTAModel>
+  <MaxSpeed>49.9230347</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

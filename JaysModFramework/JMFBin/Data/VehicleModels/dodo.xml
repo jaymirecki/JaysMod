@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>dodo</ID>
   <Class>Planes</Class>
+  <GTAMake>Mammoth</GTAMake>
   <GTAModel>Dodo</GTAModel>
+  <MaxSpeed>69.36756</MaxSpeed>
+  <MaxKnots>2.26600718</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

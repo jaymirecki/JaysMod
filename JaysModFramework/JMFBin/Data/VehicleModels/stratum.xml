@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>stratum</ID>
   <Class>Sedans</Class>
+  <GTAMake>Zirconium</GTAMake>
   <GTAModel>Stratum</GTAModel>
+  <MaxSpeed>41.6588669</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

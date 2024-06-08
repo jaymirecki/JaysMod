@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>rapidgt3</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Dewbauchee</GTAMake>
   <GTAModel>Rapid GT Classic</GTAModel>
+  <MaxSpeed>47.1241837</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

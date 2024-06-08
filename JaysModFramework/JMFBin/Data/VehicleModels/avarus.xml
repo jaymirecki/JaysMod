@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>avarus</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>LCC</GTAMake>
   <GTAModel>Avarus</GTAModel>
+  <MaxSpeed>44.1369324</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>vortex</ID>
   <Class>Motorcycles</Class>
+  <GTAMake>Pegassi</GTAMake>
   <GTAModel>Vortex</GTAModel>
+  <MaxSpeed>48.8390923</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

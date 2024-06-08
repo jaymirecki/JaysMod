@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>khamelion</ID>
   <Class>Sports</Class>
+  <GTAMake>Hijak</GTAMake>
   <GTAModel>Khamelion</GTAModel>
+  <MaxSpeed>31.7276363</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

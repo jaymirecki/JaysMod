@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>towtruck2</ID>
   <Class>Utility</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Tow Truck (yankee)</GTAModel>
+  <MaxSpeed>33.3333359</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

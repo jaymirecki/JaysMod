@@ -2,7 +2,9 @@
 <VehicleModel>
   <ID>patrolboat</ID>
   <Class>Boats</Class>
-  <Subclass>Boat</Subclass>
-  <GTAMake>Boat</GTAMake>
+  <SubClass>Boat</SubClass>
   <GTAModel>Kurtz 31 Patrol Boat</GTAModel>
+  <MaxSpeed>40.0000038</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

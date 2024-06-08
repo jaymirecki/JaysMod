@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>submersible2</ID>
   <Class>Boats</Class>
-  <Subclass>Submarine</Subclass>
-  <GTAMake>Submarine</GTAMake>
+  <SubClass>Submarine</SubClass>
+  <GTAMake>Kraken</GTAMake>
   <GTAModel>Kraken</GTAModel>
+  <MaxSpeed>25.0000019</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

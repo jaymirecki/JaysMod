@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tornado5</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Tornado Custom</GTAModel>
+  <MaxSpeed>37.09929</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

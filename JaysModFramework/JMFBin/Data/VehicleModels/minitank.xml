@@ -3,4 +3,7 @@
   <ID>minitank</ID>
   <Class>Military</Class>
   <GTAModel>Invade and Persuade Tank</GTAModel>
+  <MaxSpeed>9.729744</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

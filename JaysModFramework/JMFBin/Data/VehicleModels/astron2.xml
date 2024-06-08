@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>astron2</ID>
   <Class>SUVs</Class>
+  <GTAMake>Pfister</GTAMake>
   <GTAModel>Astron Custom</GTAModel>
+  <MaxSpeed>49.56667</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

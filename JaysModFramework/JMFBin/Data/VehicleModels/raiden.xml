@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>raiden</ID>
   <Class>Sports</Class>
+  <GTAMake>Coil</GTAMake>
   <GTAModel>Raiden</GTAModel>
+  <MaxSpeed>38.061573</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

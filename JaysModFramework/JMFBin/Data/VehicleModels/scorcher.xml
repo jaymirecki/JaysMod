@@ -3,4 +3,7 @@
   <ID>scorcher</ID>
   <Class>Cycles</Class>
   <GTAModel>Scorcher</GTAModel>
+  <MaxSpeed>15.029973</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

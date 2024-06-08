@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tampa3</ID>
   <Class>Muscle</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Weaponized Tampa</GTAModel>
+  <MaxSpeed>45.80494</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

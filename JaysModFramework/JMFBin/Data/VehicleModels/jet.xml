@@ -2,9 +2,11 @@
 <VehicleModel>
   <ID>jet</ID>
   <Class>Planes</Class>
-  <Subclass>Passenger Jet</Subclass>
-  <GTAMake>Passenger Jet</GTAMake>
+  <SubClass>Passenger Jet</SubClass>
   <GTAModel>Jet</GTAModel>
   <RWMake>Boeing</RWMake>
   <RWModel>757-800</RWModel>
+  <MaxSpeed>78.90234</MaxSpeed>
+  <MaxKnots>0.5451364</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

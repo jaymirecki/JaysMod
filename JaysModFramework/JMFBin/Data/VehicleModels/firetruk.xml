@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>firetruk</ID>
   <Class>Emergency</Class>
+  <GTAMake>MTL</GTAMake>
   <GTAModel>Fire Truck</GTAModel>
+  <MaxSpeed>39.2958679</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>8</NumberOfSeats>
 </VehicleModel>

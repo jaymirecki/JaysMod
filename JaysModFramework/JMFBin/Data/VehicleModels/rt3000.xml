@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>rt3000</ID>
   <Class>Sports</Class>
+  <GTAMake>Dinka</GTAMake>
   <GTAModel>RT3000</GTAModel>
+  <MaxSpeed>48.1314278</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

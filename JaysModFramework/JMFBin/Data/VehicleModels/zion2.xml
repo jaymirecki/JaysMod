@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>zion2</ID>
   <Class>Coupes</Class>
+  <GTAMake>Ubermach</GTAMake>
   <GTAModel>Zion Cabrio</GTAModel>
+  <MaxSpeed>46.8750534</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

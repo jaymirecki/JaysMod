@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>jb7002</ID>
   <Class>SportsClassics</Class>
+  <GTAMake>Dewbauchee</GTAMake>
   <GTAModel>JB 700W</GTAModel>
+  <MaxSpeed>50.0000038</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

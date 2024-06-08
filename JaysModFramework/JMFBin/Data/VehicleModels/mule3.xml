@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>mule3</ID>
   <Class>Commercial</Class>
+  <GTAMake>Maibatsu</GTAMake>
   <GTAModel>Mule (heist)</GTAModel>
+  <MaxSpeed>31.9046555</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>6</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>tailgater2</ID>
   <Class>Sedans</Class>
+  <GTAMake>Obey</GTAMake>
   <GTAModel>Tailgater S</GTAModel>
+  <MaxSpeed>46.56702</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>surano</ID>
   <Class>Sports</Class>
+  <GTAMake>Benefactor</GTAMake>
   <GTAModel>Surano</GTAModel>
+  <MaxSpeed>50.42197</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

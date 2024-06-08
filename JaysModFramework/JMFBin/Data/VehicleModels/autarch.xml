@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>autarch</ID>
   <Class>Super</Class>
+  <GTAMake>Overflod</GTAMake>
   <GTAModel>Autarch</GTAModel>
+  <MaxSpeed>51.2899</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

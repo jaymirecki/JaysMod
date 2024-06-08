@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>packer</ID>
   <Class>Commercial</Class>
+  <GTAMake>MTL</GTAMake>
   <GTAModel>Packer</GTAModel>
+  <MaxSpeed>36.3465271</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

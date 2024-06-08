@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>yosemite3</ID>
   <Class>OffRoad</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Yosemite Rancher</GTAModel>
+  <MaxSpeed>40.4001427</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>baller4</ID>
   <Class>SUVs</Class>
+  <GTAMake>Gallivanter</GTAMake>
   <GTAModel>Baller LE LWB</GTAModel>
+  <MaxSpeed>45.0</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>huntley</ID>
   <Class>SUVs</Class>
+  <GTAMake>Enus</GTAMake>
   <GTAModel>Huntley S</GTAModel>
+  <MaxSpeed>45.3333359</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

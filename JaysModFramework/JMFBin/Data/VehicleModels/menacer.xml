@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>menacer</ID>
   <Class>OffRoad</Class>
+  <GTAMake>HVY</GTAMake>
   <GTAModel>Menacer</GTAModel>
+  <MaxSpeed>31.79404</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>5</NumberOfSeats>
 </VehicleModel>

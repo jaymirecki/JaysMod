@@ -2,7 +2,10 @@
 <VehicleModel>
   <ID>squalo</ID>
   <Class>Boats</Class>
-  <Subclass>Boat</Subclass>
-  <GTAMake>Boat</GTAMake>
+  <SubClass>Boat</SubClass>
+  <GTAMake>Shitzu</GTAMake>
   <GTAModel>Squalo</GTAModel>
+  <MaxSpeed>36.66667</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>broadway</ID>
   <Class>Muscle</Class>
+  <GTAMake>Classique</GTAMake>
   <GTAModel>Broadway</GTAModel>
+  <MaxSpeed>37.47392</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

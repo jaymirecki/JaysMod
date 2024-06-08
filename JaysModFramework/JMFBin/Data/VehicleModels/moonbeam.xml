@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>moonbeam</ID>
   <Class>Muscle</Class>
+  <GTAMake>Declasse</GTAMake>
   <GTAModel>Moonbeam</GTAModel>
+  <MaxSpeed>41.66667</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

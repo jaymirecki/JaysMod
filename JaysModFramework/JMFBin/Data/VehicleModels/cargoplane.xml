@@ -3,4 +3,7 @@
   <ID>cargoplane</ID>
   <Class>Planes</Class>
   <GTAModel>Cargo Plane</GTAModel>
+  <MaxSpeed>78.90234</MaxSpeed>
+  <MaxKnots>0.402086377</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

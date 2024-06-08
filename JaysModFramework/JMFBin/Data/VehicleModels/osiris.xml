@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>osiris</ID>
   <Class>Super</Class>
+  <GTAMake>Pegassi</GTAMake>
   <GTAModel>Osiris</GTAModel>
+  <MaxSpeed>49.6558723</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>comet7</ID>
   <Class>Sports</Class>
+  <GTAMake>Pfister</GTAMake>
   <GTAModel>Comet S2 Cabrio</GTAModel>
+  <MaxSpeed>50.3806076</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

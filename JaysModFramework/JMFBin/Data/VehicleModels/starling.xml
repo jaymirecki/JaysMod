@@ -3,4 +3,7 @@
   <ID>starling</ID>
   <Class>Planes</Class>
   <GTAModel>LF-22 Starling</GTAModel>
+  <MaxSpeed>87.5</MaxSpeed>
+  <MaxKnots>4.001667</MaxKnots>
+  <NumberOfSeats>1</NumberOfSeats>
 </VehicleModel>

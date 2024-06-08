@@ -2,7 +2,11 @@
 <VehicleModel>
   <ID>swift</ID>
   <Class>Helicopters</Class>
+  <GTAMake>Buckingham</GTAMake>
   <GTAModel>Swift</GTAModel>
   <RWMake>AugustaWestland</RWMake>
   <RWModel>AW109S Grand</RWModel>
+  <MaxSpeed>58.2314377</MaxSpeed>
+  <MaxKnots>937.798</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

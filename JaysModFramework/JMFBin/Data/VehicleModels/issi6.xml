@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>issi6</ID>
   <Class>Compacts</Class>
+  <GTAMake>Weeny</GTAMake>
   <GTAModel>Nightmare Issi</GTAModel>
+  <MaxSpeed>44.9374657</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

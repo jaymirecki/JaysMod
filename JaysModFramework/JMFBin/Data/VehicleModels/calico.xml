@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>calico</ID>
   <Class>Sports</Class>
+  <GTAMake>Karin</GTAMake>
   <GTAModel>Calico GTF</GTAModel>
+  <MaxSpeed>49.4621</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

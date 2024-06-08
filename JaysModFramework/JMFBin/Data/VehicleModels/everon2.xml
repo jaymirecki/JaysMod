@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>everon2</ID>
   <Class>Sports</Class>
+  <GTAMake>Karin</GTAMake>
   <GTAModel>Hotring Everon</GTAModel>
+  <MaxSpeed>48.1576576</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>2</NumberOfSeats>
 </VehicleModel>

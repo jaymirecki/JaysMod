@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>btype2</ID>
   <Class>SportsClassics</Class>
-  <GTAModel>Fränken Stange</GTAModel>
+  <GTAMake>Albany</GTAMake>
+  <GTAModel>Franken Stange</GTAModel>
+  <MaxSpeed>45.0</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>

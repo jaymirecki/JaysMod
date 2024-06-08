@@ -2,5 +2,9 @@
 <VehicleModel>
   <ID>police5</ID>
   <Class>Emergency</Class>
+  <GTAMake>Vapid</GTAMake>
   <GTAModel>Stanier LE Cruiser</GTAModel>
+  <MaxSpeed>42.72843</MaxSpeed>
+  <MaxKnots>0.0</MaxKnots>
+  <NumberOfSeats>4</NumberOfSeats>
 </VehicleModel>
