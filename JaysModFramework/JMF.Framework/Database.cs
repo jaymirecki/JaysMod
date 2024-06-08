@@ -38,6 +38,7 @@ namespace JMF
         public XMLDatabaseTable<string, IPL> IPLs;
         public XMLDatabaseTable<string, Worldspace> Worldspaces;
         public XMLDatabaseTable<string, Map> Maps;
+        public XMLDatabaseTable<string, VehicleModel> VehicleModels;
         public Database()
         {
             Load();
@@ -64,6 +65,7 @@ namespace JMF
             Debug.Log(DebugSeverity.Info, "Loading Worldspaces data");
             Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Framework.Config.DataPath, _worldspacesDirectory);
             Debug.Log(DebugSeverity.Info, "Done");
+            VehicleModels = new MemoryXMLDatabaseTable<string, VehicleModel>(Framework.Config.DataPath, "VehicleModels");
         }
         public bool Validate()
         {

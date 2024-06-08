@@ -115,6 +115,10 @@
             GetFirstBlipInfoId = 0x1BEDE233E6CD2A1F,
             GetNextBlipInfoId = 0x14F96AA50D6FBEA7,
             DoesBlipExist = 0xA6DB27D19ECBB7DA,
+            GetMakeNameFromVehicleModel = 0xF7AF4F159FF99F97,
+            GetVehicleModelEstimatedMaxSpeed = 0xF417C2502FFFED43,
+            GetVehicleModelMaxKnots = 0xC6AD107DDC9054CC,
+            GetVehicleModelNumberOfSeats = 0x2AD93716F184EDA4,
         }
     }
 }
