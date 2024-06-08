@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>annihilator2</ID>
-  <Class>Helicopter</Class>
+  <Class>Helicopters</Class>
   <GTAModel>Annihilator Stealth</GTAModel>
   <RWMake>Sikorsky</RWMake>
   <RWModel>UH-60 Black Hawk</RWModel>

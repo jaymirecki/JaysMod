@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>akula</ID>
-  <Class>Helicopter</Class>
+  <Class>Helicopters</Class>
   <GTAModel>Akula</GTAModel>
   <RWMake>Sikorsky</RWMake>
   <RWModel>RAH-66 Comanche</RWModel>

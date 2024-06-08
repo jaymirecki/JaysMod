@@ -23,6 +23,7 @@
   <ItemGroup>
     <Compile Include="data_creation.py" />
     <Compile Include="utils\map_utils.py" />
+    <Compile Include="utils\vehiclemodel_utils.py" />
     <Compile Include="utils\worldspace_utils.py" />
     <Compile Include="utils\xml_to_csv.py" />
     <Compile Include="utils\csv_to_xml.py" />

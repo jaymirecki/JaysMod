@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>swift</ID>
-  <Class>Helicopter</Class>
+  <Class>Helicopters</Class>
   <GTAModel>Swift</GTAModel>
   <RWMake>AugustaWestland</RWMake>
   <RWModel>AW109S Grand</RWModel>

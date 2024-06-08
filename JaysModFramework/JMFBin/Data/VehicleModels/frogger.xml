@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>frogger</ID>
-  <Class>Helicopter</Class>
+  <Class>Helicopters</Class>
   <GTAModel>Frogger</GTAModel>
   <RWMake>Eurocopter</RWMake>
   <RWModel>EC130</RWModel>

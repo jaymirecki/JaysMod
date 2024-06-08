@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>formula</ID>
-  <Class>Open Wheel</Class>
+  <Class>OpenWheel</Class>
   <GTAModel>PR4</GTAModel>
 </VehicleModel>

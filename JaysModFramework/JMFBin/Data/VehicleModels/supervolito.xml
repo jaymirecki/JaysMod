@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>supervolito</ID>
-  <Class>Helicopter</Class>
+  <Class>Helicopters</Class>
   <GTAModel>SuperVolito</GTAModel>
   <RWMake>Eurocopter</RWMake>
   <RWModel>EC145</RWModel>

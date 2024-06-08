@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>buzzard</ID>
-  <Class>Helicopter</Class>
+  <Class>Helicopters</Class>
   <GTAModel>Buzzard Attack Chopper</GTAModel>
   <RWMake>Boeing</RWMake>
   <RWModel>AH-6</RWModel>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>conada</ID>
-  <Class>Helicopter</Class>
+  <Class>Helicopters</Class>
   <GTAModel>Conada</GTAModel>
   <RWMake>McDonnell Douglas</RWMake>
   <RWModel>MD Explorer</RWModel>

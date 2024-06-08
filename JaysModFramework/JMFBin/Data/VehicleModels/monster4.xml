@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>monster4</ID>
-  <Class>Off-Road</Class>
+  <Class>OffRoad</Class>
   <GTAModel>Future Shock Sasquatch</GTAModel>
 </VehicleModel>

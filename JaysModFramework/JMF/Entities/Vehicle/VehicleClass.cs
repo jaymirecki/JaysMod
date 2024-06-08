@@ -25,5 +25,6 @@
         Commercial = 20,
         Trains = 21,
         OpenWheel = 22,
+        Trailers = 23,
     }
 }

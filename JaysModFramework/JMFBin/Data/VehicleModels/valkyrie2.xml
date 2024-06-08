@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>valkyrie2</ID>
-  <Class>Helicopter</Class>
+  <Class>Helicopters</Class>
   <GTAModel>Valkyrie MOD.0</GTAModel>
   <RWMake>Bell</RWMake>
   <RWModel>UH-1Y Venom</RWModel>

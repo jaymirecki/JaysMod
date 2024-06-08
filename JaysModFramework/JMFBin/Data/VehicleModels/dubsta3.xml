@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>dubsta3</ID>
-  <Class>Off-Road</Class>
+  <Class>OffRoad</Class>
   <GTAModel>Dubsta 6x6</GTAModel>
 </VehicleModel>

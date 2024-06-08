@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>tractor3</ID>
-  <Class>Utilities</Class>
+  <Class>Utility</Class>
   <GTAModel>Fieldmaster (Snow)</GTAModel>
 </VehicleModel>

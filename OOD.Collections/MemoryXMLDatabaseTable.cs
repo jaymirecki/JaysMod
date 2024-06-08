@@ -93,7 +93,7 @@ namespace OOD.Collections
                 }
             }
         }
-        private void Save()
+        public void Save()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(TValue));
             string directoryPath = Path.Combine(Directory, TableName);

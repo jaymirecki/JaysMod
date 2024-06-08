@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <VehicleModel>
   <ID>cargobob4</ID>
-  <Class>Helicopter</Class>
+  <Class>Helicopters</Class>
   <GTAModel>Cargobob (Drop Zone)</GTAModel>
   <RWMake>Boeing</RWMake>
   <RWModel>CH-46 Sea Knight</RWModel>

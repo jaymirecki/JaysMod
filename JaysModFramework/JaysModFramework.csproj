@@ -96,6 +96,7 @@
     <Compile Include="JMF\Blips\BlipSprite.cs" />
     <Compile Include="JMF\Blips\Blip.cs" />
     <Compile Include="JMF\Entities\Vehicle\VehicleClass.cs" />
+    <Compile Include="JMF\Entities\Vehicle\VehicleModel.cs" />
     <Compile Include="JMF\World\World.cs" />
     <Compile Include="JMF\World\WeatherType.cs" />
     <Compile Include="JMF\Entities\Entity.cs" />
