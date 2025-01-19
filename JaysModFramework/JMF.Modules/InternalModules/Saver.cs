@@ -1,9 +1,7 @@
 ﻿using JMF.Menus;
-using JMF.Native;
 using JMF.UI;
 using System;
 using System.IO;
-using System.Xml;
 using System.Xml.Serialization;
 
 namespace JMF.Modules
@@ -59,7 +57,7 @@ namespace JMF.Modules
             string templateId = item.Title;
             if (!LoadGame(Path.Combine(BaseTemplateDirectory, templateId)))
             {
-                Debug.Log(DebugSeverity.Error, "Failed to load template " + templateId);
+                Debug.Error("Failed to load template " + templateId);
             }
         }
         private void LoadGameHandler(object sender, EventArgs e)
@@ -68,14 +66,13 @@ namespace JMF.Modules
             string saveId = item.Title;
             if (!LoadGame(Path.Combine(BaseSaveDirectory, saveId)))
             {
-                Debug.Log(DebugSeverity.Error, "Failed to load game " + saveId);
+                Debug.Error("Failed to load game " + saveId);
             }
         }
         private void SaveGameHandler(object sender, EventArgs e)
         {
             MenuItem item = SaveMenu.SelectedItem;
             string saveId;
-            Debug.Log(DebugSeverity.Error, item.Title);
             if (item == NewSave)
             {
                 KeyboardResult result = Screen.GetKeyboardInput();
@@ -89,11 +86,10 @@ namespace JMF.Modules
             {
                 saveId = item.Title;
             }
-            Debug.Log(DebugSeverity.Error, saveId);
 
             if (!SaveGame(Path.Combine(BaseSaveDirectory, saveId)))
             {
-                Debug.Log(DebugSeverity.Error, "Failed to save game " + saveId);
+                Debug.Error("Failed to save game " + saveId);
             }
             SaveMenu.Visible = false;
         }
@@ -101,15 +97,15 @@ namespace JMF.Modules
         {
             if (!Directory.Exists(path))
             {
-                Debug.Log(DebugSeverity.Error, $"Save game does not exist at {path}");
+                Debug.Error($"Save game does not exist at {path}");
             }
             try
             {
                 Framework.State = Deserialize<State>(path, "World");
             } catch (Exception ex)
             {
-                Debug.Log(DebugSeverity.Error, $"Failed loading game: {path}");
-                Debug.Log(DebugSeverity.Error, ex);
+                Debug.Error($"Failed loading game: {path}");
+                Debug.Error(ex);
                 return false;
             }
             return true;
@@ -127,7 +123,7 @@ namespace JMF.Modules
             }
             catch (Exception ex)
             {
-                Debug.Log(DebugSeverity.Error, ex);
+                Debug.Error(ex);
                 return false;
             }
             return true;
@@ -147,7 +143,7 @@ namespace JMF.Modules
                 return (T)serializer.Deserialize(stream);
             } catch (Exception ex)
             {
-                Debug.Log(DebugSeverity.Error, $"Deserialization failed for {Path.Combine(path, filename)}.xml");
+                Debug.Error($"Deserialization failed for {Path.Combine(path, filename)}.xml");
                 throw ex;
             }
         }

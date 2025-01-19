@@ -56,15 +56,15 @@ namespace JMF
             Ears = new AlwaysEmptyXMLDatabaseTable<string, Ears>();
             Wrists = new AlwaysEmptyXMLDatabaseTable<string, Wrist>();
 
-            Debug.Log(DebugSeverity.Info, "Loading IPLs data");
+            Debug.Info("Loading IPLs data");
             IPLs = new MemoryXMLDatabaseTable<string, IPL>(Framework.Config.DataPath, _iplsDirectory);
-            Debug.Log(DebugSeverity.Info, "Done");
-            Debug.Log(DebugSeverity.Info, "Loading Maps data");
+            Debug.Info("Done");
+            Debug.Info("Loading Maps data");
             Maps = new MemoryXMLDatabaseTable<string, Map>(Framework.Config.DataPath, _mapsDirectory);
-            Debug.Log(DebugSeverity.Info, "Done");
-            Debug.Log(DebugSeverity.Info, "Loading Worldspaces data");
+            Debug.Info("Done");
+            Debug.Info("Loading Worldspaces data");
             Worldspaces = new MemoryXMLDatabaseTable<string, Worldspace>(Framework.Config.DataPath, _worldspacesDirectory);
-            Debug.Log(DebugSeverity.Info, "Done");
+            Debug.Info("Done");
             VehicleModels = new MemoryXMLDatabaseTable<string, VehicleModel>(Framework.Config.DataPath, "VehicleModels");
         }
         public bool Validate()
@@ -82,7 +82,7 @@ namespace JMF
             {
                 if (!s.IsValid)
                 {
-                    Debug.Log(DebugSeverity.Error, s.ErrorMessage);
+                    Debug.Error(s.ErrorMessage);
                     return false;
                 }
             }
@@ -128,7 +128,7 @@ namespace JMF
 
             // Outfit table needs to load after components, since it is dependent on their IDs
             Outfits = new MemoryXMLDatabaseTable<string, Outfit>(_clothingDirectory, "outfit", true);
-            Debug.Log(DebugSeverity.Info, "Outfits database loaded with " + Outfits.Count + " items");
+            Debug.Info("Outfits database loaded with " + Outfits.Count + " items");
         }
     }
 }

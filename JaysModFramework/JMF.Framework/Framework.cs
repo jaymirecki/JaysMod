@@ -13,7 +13,7 @@ namespace JMF
             {
                 if (!File.Exists(ConfigFilepath))
                 {
-                    Debug.Log(DebugSeverity.Warning, "Could not find config.xml.");
+                    Debug.Warning("Could not find config.xml.");
                     return new Config();
                 }
                 using (TextReader reader = new StreamReader(ConfigFilepath))

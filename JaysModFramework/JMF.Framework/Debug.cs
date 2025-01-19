@@ -63,6 +63,18 @@ namespace JMF
         {
             Log(severity, message.ToString());
         }
+        public static void Info<T>(T message)
+        {
+            Log(DebugSeverity.Info, message);
+        }
+        public static void Warning<T>(T message)
+        {
+            Log(DebugSeverity.Warning, message);
+        }
+        public static void Error<T>(T message)
+        {
+            Log(DebugSeverity.Error, message);
+        }
         public static Menu Menu()
         {
             _menu = new Menu("Debug", "Debug", "JMF Framework Debug Options");

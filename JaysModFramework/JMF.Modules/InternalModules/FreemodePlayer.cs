@@ -21,7 +21,7 @@ namespace JMF.Modules
             originalModel = playerPed.Model;
             originalPosition = playerPed.Position;
             originalHeading = playerPed.Heading;
-            Debug.Log(DebugSeverity.Info, "time: " + Game.Clock.Date);
+            Debug.Info("time: " + Game.Clock.Date);
             originalTime = Game.Clock.Date;
             Game.Player.SetModel(PedHash.FreemodeMale01);
             Game.Player.SpecialAbilityEnabled = false;
