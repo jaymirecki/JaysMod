@@ -95,10 +95,24 @@ namespace JMF.Modules
             {
                 Debug.Log(DebugSeverity.Error, "Failed to save game " + saveId);
             }
+            SaveMenu.Visible = false;
         }
         private bool LoadGame(string path)
         {
-            return false;
+            if (!Directory.Exists(path))
+            {
+                Debug.Log(DebugSeverity.Error, $"Save game does not exist at {path}");
+            }
+            try
+            {
+                Framework.State = Deserialize<State>(path, "World");
+            } catch (Exception ex)
+            {
+                Debug.Log(DebugSeverity.Error, $"Failed loading game: {path}");
+                Debug.Log(DebugSeverity.Error, ex);
+                return false;
+            }
+            return true;
         }
         private bool SaveGame(string path)
         {
@@ -123,6 +137,19 @@ namespace JMF.Modules
             FileStream stream = File.Create(Path.Combine(path, filename + ".xml"));
             XmlSerializer serializer = new XmlSerializer(typeof(T));
             serializer.Serialize(stream, value);
+        }
+        private T Deserialize<T>(string path, string filename)
+        {
+            FileStream stream = File.OpenRead(Path.Combine(path, filename + ".xml"));
+            XmlSerializer serializer = new XmlSerializer(typeof(T));
+            try
+            {
+                return (T)serializer.Deserialize(stream);
+            } catch (Exception ex)
+            {
+                Debug.Log(DebugSeverity.Error, $"Deserialization failed for {Path.Combine(path, filename)}.xml");
+                throw ex;
+            }
         }
     }
 }

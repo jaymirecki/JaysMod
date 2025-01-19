@@ -106,8 +106,8 @@
     <Compile Include="JMF.Game\Clock.cs" />
     <Compile Include="JMF.Game\Player.cs" />
     <Compile Include="JMF\Vector3.cs" />
-    <Compile Include="Menus\Aliases.cs" />
-    <Compile Include="Menus\MenuListItem.cs" />
+    <Compile Include="JMF.Menus\Aliases.cs" />
+    <Compile Include="JMF.Menus\MenuListItem.cs" />
     <Compile Include="JMF\Entities\Model.cs" />
     <Compile Include="JMF.Modules\InternalModule.cs" />
     <Compile Include="JMF.Modules\ModuleManager.cs" />
@@ -121,9 +121,9 @@
     <Compile Include="JMF.Modules\InternalModules\MatterOfTime.cs" />
     <Compile Include="Managers\RespawnManager.cs" />
     <Compile Include="Managers\RestrictedAreasManager.cs" />
-    <Compile Include="Menus\SubmenuItem.cs" />
-    <Compile Include="Menus\MenuItem.cs" />
-    <Compile Include="Menus\Menu.cs" />
+    <Compile Include="JMF.Menus\SubmenuItem.cs" />
+    <Compile Include="JMF.Menus\MenuItem.cs" />
+    <Compile Include="JMF.Menus\Menu.cs" />
     <Compile Include="JMF.Modules\InternalModules\BigMap.cs" />
     <Compile Include="JMF.Native\NativeFunction.cs" />
     <Compile Include="JMF.Native\NativeHash.cs" />
