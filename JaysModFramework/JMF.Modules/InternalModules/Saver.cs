@@ -120,6 +120,7 @@ namespace JMF.Modules
                 }
                 Directory.CreateDirectory(path);
                 Serialize(path, "World", new State());
+                Serialize(path, "Player", Game.Player);
             }
             catch (Exception ex)
             {

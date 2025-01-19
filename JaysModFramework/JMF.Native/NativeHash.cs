@@ -123,6 +123,7 @@
             AddTextEntry = 0x32CA01C3,
             UpdateOnscreenKeyboard = 0x0CF2B696BBF945AE,
             GetOnscreenKeyboardResult = 0x8362B09B91893647,
+            ChangePlayerPed = 0x048189FAC643DEEE,
         }
     }
 }

@@ -1,11 +1,11 @@
 ﻿using JMF.Native;
-using System;
 using System.Xml.Serialization;
 
 namespace JMF
 {
     public abstract class Entity
     {
+        [XmlIgnore]
         public int Handle { get; protected set; } = -1;
 
         //

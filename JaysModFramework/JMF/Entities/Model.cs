@@ -1,14 +1,22 @@
 ﻿using JMF.Native;
+using System;
+using System.Xml.Serialization;
 
 namespace JMF
 {
     public class Model
     {
-        public uint Hash { get; }
+        [XmlAttribute]
+        public uint Hash { get; set; }
         public bool IsLoaded
         {
             get { return Function.Call<bool>(Native.Hash.HasModelLoaded, Hash); }
         }
+        [Obsolete(
+            "Paramterless constructor is strictly for XML serialization, " +
+            "please use parameterized constructor instead.",
+            true)]
+        public Model() : this(1) { }
         public Model(uint hash)
         {
             Hash = hash;

@@ -9,6 +9,11 @@ namespace JMF
         //                            Constructors                           //
         ///////////////////////////////////////////////////////////////////////
         #region Constructors
+        [Obsolete(
+            "Paramterless constructor is strictly for XML serialization, " +
+            "please use parameterized constructor instead.", 
+            true)]
+        public Ped() : this(-1) { }
         public Ped(int handle)
         {
             Handle = handle;

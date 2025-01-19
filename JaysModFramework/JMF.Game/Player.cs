@@ -1,4 +1,6 @@
 ﻿using JMF.Native;
+using System;
+using System.Xml.Serialization;
 
 namespace JMF
 {
@@ -8,6 +10,7 @@ namespace JMF
         //                             Properties                            //
         ///////////////////////////////////////////////////////////////////////
         #region Properties
+        [XmlAttribute]
         public int Handle;
         private Ped _character;
         public Ped Character
@@ -20,6 +23,11 @@ namespace JMF
                     _character = new Ped(handle);
                 }
                 return _character;
+            }
+            set
+            {
+                int currentHandle = Function.Call<int>(Hash.GetPlayerPed, Handle);
+                Function.Call(Hash.ChangePlayerPed, Handle, value.Handle, true, false);
             }
         }
         public bool IsDead
@@ -40,6 +48,11 @@ namespace JMF
         //                            Constructors                           //
         ///////////////////////////////////////////////////////////////////////
         #region Constructors
+        [Obsolete(
+            "Paramterless constructor is strictly for XML serialization, " +
+            "please use parameterized constructor instead.",
+            true)]
+        public Player() : this(-1) { }
         public Player(int handle)
         {
             Handle = handle;
