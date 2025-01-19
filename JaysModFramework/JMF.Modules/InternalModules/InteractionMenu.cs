@@ -1,7 +1,4 @@
-﻿using JMF.Menus;
-using System;
-using System.Windows.Forms;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace JMF.Modules
 {
@@ -24,20 +21,17 @@ namespace JMF.Modules
         private Menu _menu;
         public InteractionMenu() : base()
         {
-            AddMenu(Framework.State.LoadMenu);
-            AddMenu(Framework.State.SaveMenu);
-            AddMenu(Framework.State.NewMenu);
         }
 
         public override void OnControlReleased(Control control) {
             if (control == Control.SelectCharacterMultiplayer)
             {
-                _menu = new Menu("Interactions", Framework.ObjectPool);
+                _menu = new Menu("Interactions");
                 foreach(Menu menu in menuList)
                 {
                     _menu.Add(menu);
                 }
-                _menu.Open();
+                _menu.Visible = true;
             }
         }
         public override void OnTick() 
@@ -48,12 +42,12 @@ namespace JMF.Modules
         {
             if (control == Control.CharacterWheel)
             {
-                _menu = new Menu("Interactions", Framework.ObjectPool);
+                _menu = new Menu("Interactions");
                 foreach (Menu menu in menuList)
                 {
                     _menu.Add(menu);
                 }
-                _menu.Open();
+                _menu.Visible = true;
             }
         }
     }

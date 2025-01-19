@@ -1,5 +1,6 @@
 ﻿using JMF.Menus;
 using JMF.Modules;
+using LemonUI.Menus;
 using Rage;
 using System;
 using System.Collections.Generic;
@@ -106,7 +107,7 @@ namespace JMF
         {
             if (_menu == null)
             {
-                _menu = new Menu("Modules", ModuleName, ModuleDescription, Framework.ObjectPool);
+                _menu = new Menu("Modules", ModuleName, ModuleDescription);
                 enabledItem = new MenuListItem<string>(ModuleName, ModuleDescription, DeactivatedString, ActivatedString);
                 enabledItem.SelectedItem = IsActive ? ActivatedString : DeactivatedString;
                 enabledItem.ItemChanged += ItemChanged;

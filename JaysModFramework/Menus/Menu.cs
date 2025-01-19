@@ -1,76 +1,32 @@
 ﻿using LemonUI.Menus;
-using System;
-using System.ComponentModel;
 
 namespace JMF.Menus
 {
-    public class Menu
+    public class Menu: NativeMenu
     {
-        internal NativeMenu _nativeMenu;
-
-        public Menu(string title, ObjectPool pool)
+        public Menu(string title): base(title)
         {
-            _nativeMenu = new NativeMenu(title);
-            pool.Add(_nativeMenu);
+            AddToPool(Framework.ObjectPool);
         }
-        public Menu(string title, string subtitle, ObjectPool pool)
+        public Menu(string bannerText, string name): base(bannerText, name)
         {
-            _nativeMenu = new NativeMenu(title, subtitle);
-            pool.Add(_nativeMenu);
+            AddToPool(Framework.ObjectPool);
         }
-        public Menu(string title, string subtitle, string description, ObjectPool pool)
+        public Menu(string bannerText, string name, string description) : base(bannerText, name, description)
         {
-            _nativeMenu = new NativeMenu(title, subtitle, description);
-            pool.Add(_nativeMenu);
+            AddToPool(Framework.ObjectPool);
         }
-        public void Add(MenuItem menuItem)
+        public Menu(string bannerText, string name, string description, LemonUI.Elements.I2Dimensional banner) : base(bannerText, name, description, banner)
         {
-            _nativeMenu.Add(menuItem._nativeItem);
+            AddToPool(Framework.ObjectPool);
         }
-        public void Add<T>(MenuListItem<T> menuItem)
+        private void AddToPool(LemonUI.ObjectPool pool)
         {
-            _nativeMenu.Add(menuItem._nativeItem);
+            pool.Add(this);
         }
-        public SubmenuItem Add(Menu menu)
+        public new MenuItem SelectedItem
         {
-            return new SubmenuItem(_nativeMenu.AddSubMenu(menu._nativeMenu));
-        }
-        public void Open()
-        {
-            Visible = true;
-        }
-        public void Clear()
-        {
-            _nativeMenu.Clear();
-        }
-        public event CancelEventHandler Opening
-        {
-            add { _nativeMenu.Opening += value; }
-            remove { _nativeMenu.Opening -= value; }
-        }
-        public bool Visible
-        {
-            get { return _nativeMenu.Visible; }
-            set { _nativeMenu.Visible = value; }
-        }
-        public event EventHandler Shown
-        {
-            add { _nativeMenu.Shown += value; }
-            remove { _nativeMenu.Shown -= value; }
-        }
-        public MenuItem SelectedItem
-        {
-            get 
-            { 
-                MenuItem item = new MenuItem("placeholder");
-                item._nativeItem = _nativeMenu.SelectedItem;
-                return item;
-            }
-        }
-
-        public string Name
-        {
-            get { return _nativeMenu.Name; }
+            get { return (MenuItem)base.SelectedItem; }
         }
     }
 }

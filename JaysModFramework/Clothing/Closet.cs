@@ -16,7 +16,7 @@ namespace JMF.Clothing
         {
             _pool = pool;
             _ped = ped;
-            ClosetMenu = new Menu(Title, Subtitle, Description, _pool);
+            ClosetMenu = new Menu(Title, Subtitle, Description);
             AddMenuItems();
 
             return ClosetMenu;
@@ -29,7 +29,7 @@ namespace JMF.Clothing
 
         private Menu OutfitMenu()
         {
-            Menu outfitMenu = new Menu("Outfits", "subtitle", "description", _pool);
+            Menu outfitMenu = new Menu("Outfits", "subtitle", "description");
             //foreach (Outfit outfit in Global.Database.Outfits)
             //{
             //    MenuItem outfitItem = new MenuItem(outfit.Name);

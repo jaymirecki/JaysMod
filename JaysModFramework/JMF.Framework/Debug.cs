@@ -65,7 +65,7 @@ namespace JMF
         }
         public static Menu Menu()
         {
-            _menu = new Menu("Debug", "Debug", "JMF Framework Debug Options", Framework.ObjectPool);
+            _menu = new Menu("Debug", "Debug", "JMF Framework Debug Options");
 
             MenuItem position = new MenuItem("Current Position");
             position.Activated += (sender, args) =>

@@ -5,50 +5,21 @@ namespace JMF.Menus
 {
     public interface IMenuItem
     {
-        event SelectedEventHandler Selected;
         event EventHandler Activated;
         bool Enabled { get; set; }
     }
-    public class MenuItem: IMenuItem
+    public class MenuItem : NativeItem, IMenuItem
     {
-        internal NativeItem _nativeItem;
-        public MenuItem(string title)
+        public MenuItem(string title) : base(title)
         {
-            _nativeItem = new NativeItem(title);
-        }
-        public MenuItem(string title, string description)
-        {
-            _nativeItem = new NativeItem(title, description);
-        }
-        public MenuItem(string title, string description, string subtitle)
-        {
-            _nativeItem = new NativeItem(title, description, subtitle);
-        }
-        public event SelectedEventHandler Selected
-        {
-            add { _nativeItem.Selected += (object sender, LemonUI.Menus.SelectedEventArgs e) => value(sender, (SelectedEventArgs)e); }
-            remove { _nativeItem.Selected -= (object sender, LemonUI.Menus.SelectedEventArgs e) => value(sender, (SelectedEventArgs)e); }
         }
 
-        private void _nativeItem_Selected(object sender, SelectedEventArgs e)
+        public MenuItem(string title, string description) : base(title, description)
         {
-            throw new NotImplementedException();
         }
 
-        public event EventHandler Activated
+        public MenuItem(string title, string description, string altTitle) : base(title, description, altTitle)
         {
-            add { _nativeItem.Activated += value; }
-            remove { _nativeItem.Activated -= value; }
-        }
-        public bool Enabled
-        {
-            get { return _nativeItem.Enabled; }
-            set { _nativeItem.Enabled = value; }
-        }
-        public string Title
-        {
-            get { return _nativeItem.Title; }
-            set { _nativeItem.Title = value; }
         }
     }
 }

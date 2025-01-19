@@ -26,7 +26,7 @@ namespace JMF
         {
             if (_moduleMenu == null)
             {
-                _moduleMenu = new Menu("Modules", "Modules", Framework.ObjectPool);
+                _moduleMenu = new Menu("Modules", "Modules");
                 _moduleMenu.Opening += ModuleMenu_Opening;
             }
             return _moduleMenu;
@@ -210,6 +210,7 @@ namespace JMF
             InteractionMenu.AddMenu(ModuleManager.ModuleMenu());
             InteractionMenu.AddMenu(Debug.Menu());
             new InteractionMenu();
+            new Saver();
             new SilentSirens();
             new BigMap();
             new MatterOfTime();

@@ -119,6 +119,10 @@
             GetVehicleModelEstimatedMaxSpeed = 0xF417C2502FFFED43,
             GetVehicleModelMaxKnots = 0xC6AD107DDC9054CC,
             GetVehicleModelNumberOfSeats = 0x2AD93716F184EDA4,
+            DisplayOnscreenKeyboard = 0x00DC833F2568DBF6,
+            AddTextEntry = 0x32CA01C3,
+            UpdateOnscreenKeyboard = 0x0CF2B696BBF945AE,
+            GetOnscreenKeyboardResult = 0x8362B09B91893647,
         }
     }
 }

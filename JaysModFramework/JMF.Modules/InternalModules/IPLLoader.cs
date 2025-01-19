@@ -25,25 +25,25 @@ namespace JMF
             protected override void AddMenuItems()
             {
                 List<Menu> dlcMenus = new List<Menu>();
-                dlcMenus.Add(new Menu("Afterhours", "Afterhours", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Bikers", "Bikers", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Casino", "Casino", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("CayoPerico", "CayoPerico", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("ChopShop", "ChopShop", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Contract", "Contract", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Doomsday", "Doomsday", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Drugwars", "Drugwars", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Executive", "Executive", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Finance", "Finance", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("GTA", "GTA", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Gunrunning", "Gunrunning", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("HeistCasino", "HeistCasino", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Heists", "Heists", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Import", "Import", Framework.ObjectPool));
-                dlcMenus.Add(new Menu("Smugglers", "Smugglers", Framework.ObjectPool));
+                dlcMenus.Add(new Menu("Afterhours", "Afterhours"));
+                dlcMenus.Add(new Menu("Bikers", "Bikers"));
+                dlcMenus.Add(new Menu("Casino", "Casino"));
+                dlcMenus.Add(new Menu("CayoPerico", "CayoPerico"));
+                dlcMenus.Add(new Menu("ChopShop", "ChopShop"));
+                dlcMenus.Add(new Menu("Contract", "Contract"));
+                dlcMenus.Add(new Menu("Doomsday", "Doomsday"));
+                dlcMenus.Add(new Menu("Drugwars", "Drugwars"));
+                dlcMenus.Add(new Menu("Executive", "Executive"));
+                dlcMenus.Add(new Menu("Finance", "Finance"));
+                dlcMenus.Add(new Menu("GTA", "GTA"));
+                dlcMenus.Add(new Menu("Gunrunning", "Gunrunning"));
+                dlcMenus.Add(new Menu("HeistCasino", "HeistCasino"));
+                dlcMenus.Add(new Menu("Heists", "Heists"));
+                dlcMenus.Add(new Menu("Import", "Import"));
+                dlcMenus.Add(new Menu("Smugglers", "Smugglers"));
 
-                Menu other = new Menu("Other", "Other", Framework.ObjectPool);
-                Menu all = new Menu("All", "All", Framework.ObjectPool);
+                Menu other = new Menu("Other", "Other");
+                Menu all = new Menu("All", "All");
 
                 Debug.Log(DebugSeverity.Error, Framework.Database.IPLs.Count);
 

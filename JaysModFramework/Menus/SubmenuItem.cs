@@ -1,29 +1,15 @@
 ﻿using LemonUI.Menus;
-using System;
 
 namespace JMF.Menus
 {
-    public class SubmenuItem: IMenuItem
+    public class SubmenuItem : NativeSubmenuItem, IMenuItem
     {
-        internal NativeSubmenuItem _nativeItem;
-        public SubmenuItem(NativeSubmenuItem nativeItem)
+        public SubmenuItem(NativeMenu menu, NativeMenu parent) : base(menu, parent)
         {
-            _nativeItem = nativeItem;
         }
-        public event SelectedEventHandler Selected
+
+        public SubmenuItem(NativeMenu menu, NativeMenu parent, string endLabel) : base(menu, parent, endLabel)
         {
-            add { _nativeItem.Selected += (object sender, LemonUI.Menus.SelectedEventArgs e) => value(sender, (SelectedEventArgs)e); }
-            remove { _nativeItem.Selected -= (object sender, LemonUI.Menus.SelectedEventArgs e) => value(sender, (SelectedEventArgs)e); }
-        }
-        public event EventHandler Activated
-        {
-            add { _nativeItem.Activated += value; }
-            remove { _nativeItem.Activated -= value; }
-        }
-        public bool Enabled
-        {
-            get { return _nativeItem.Enabled; }
-            set { _nativeItem.Enabled = value; }
         }
     }
 }
