@@ -6,6 +6,7 @@ namespace JMF
 
     {
         public ModuleSettings InteractionMenuSettings { get; set; } = new ModuleSettings();
+        public ModuleSettings ExampleModuleSettings { get; set; } = new ModuleSettings();
         public ModuleSettings BigMapSettings { get; set; } = new ModuleSettings();
         public ModuleSettings SilentSirensSettings { get; set; } = new ModuleSettings();
         public ModuleSettings RespawnerSettings { get; set; } = new ModuleSettings();

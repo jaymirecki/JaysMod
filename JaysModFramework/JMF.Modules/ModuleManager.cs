@@ -70,7 +70,14 @@ namespace JMF
             {
                 if (module.IsActive)
                 {
-                    module.OnTick();
+                    try
+                    {
+                        module.OnTick();
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error($"OnTick error for {module.ModuleName}: {ex}");
+                    }
                 }
             }
         }
@@ -80,7 +87,14 @@ namespace JMF
             {
                 if (module.IsActive)
                 {
-                    module.OnControlReleased(control);
+                    try
+                    {
+                        module.OnControlReleased(control);
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error($"OnTick error for {module.ModuleName}: {ex}");
+                    }
                 }
             }
         }
@@ -90,7 +104,14 @@ namespace JMF
             {
                 if (module.IsActive)
                 {
-                    module.OnControlHeld(control);
+                    try
+                    {
+                        module.OnControlHeld(control);
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error($"OnTick error for {module.ModuleName}: {ex}");
+                    }
                 }
             }
         }
@@ -100,7 +121,14 @@ namespace JMF
             {
                 if (module.IsActive)
                 {
-                    module.OnControlDoublePressed(control);
+                    try
+                    {
+                        module.OnControlDoublePressed(control);
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error($"OnTick error for {module.ModuleName}: {ex}");
+                    }
                 }
             }
         }
@@ -210,6 +238,7 @@ namespace JMF
             InteractionMenu.AddMenu(ModuleManager.ModuleMenu());
             InteractionMenu.AddMenu(Debug.Menu());
             new InteractionMenu();
+            new ExampleModule();
             new Saver();
             new SilentSirens();
             new BigMap();

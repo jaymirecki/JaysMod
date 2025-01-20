@@ -66,6 +66,7 @@
     <Compile Include="JMF.Framework\Database.cs" />
     <Compile Include="JMF.Framework\Config.cs" />
     <Compile Include="JMF.Interiors\IPLSettings.cs" />
+    <Compile Include="JMF.Modules\InternalModules\ExampleModule.cs" />
     <Compile Include="JMF.Modules\InternalModules\Saver.cs" />
     <Compile Include="JMF.Universe\Portal.cs" />
     <Compile Include="JMF.Interiors\RoomPortalType.cs" />

@@ -3,6 +3,9 @@
   <InteractionMenuSettings>
     <Enabled>true</Enabled>
   </InteractionMenuSettings>
+  <ExampleModuleSettings>
+    <Enabled>false</Enabled>
+  </ExampleModuleSettings>
   <BigMapSettings>
     <Enabled>true</Enabled>
   </BigMapSettings>
